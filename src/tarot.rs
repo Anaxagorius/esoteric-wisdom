@@ -19,6 +19,12 @@ pub enum DeckType {
     Rws,
     Marseille,
     Thoth,
+    ModernWitch,
+    LightSeers,
+    EverydayTarot,
+    MysticMondays,
+    GoodTarot,
+    MorganGreer,
 }
 
 impl DeckType {
@@ -26,6 +32,12 @@ impl DeckType {
         match s {
             "marseille" => DeckType::Marseille,
             "thoth" => DeckType::Thoth,
+            "modern_witch" => DeckType::ModernWitch,
+            "light_seers" => DeckType::LightSeers,
+            "everyday_tarot" => DeckType::EverydayTarot,
+            "mystic_mondays" => DeckType::MysticMondays,
+            "good_tarot" => DeckType::GoodTarot,
+            "morgan_greer" => DeckType::MorganGreer,
             _ => DeckType::Rws,
         }
     }
@@ -35,6 +47,12 @@ impl DeckType {
             DeckType::Rws => "rws",
             DeckType::Marseille => "marseille",
             DeckType::Thoth => "thoth",
+            DeckType::ModernWitch => "modern_witch",
+            DeckType::LightSeers => "light_seers",
+            DeckType::EverydayTarot => "everyday_tarot",
+            DeckType::MysticMondays => "mystic_mondays",
+            DeckType::GoodTarot => "good_tarot",
+            DeckType::MorganGreer => "morgan_greer",
         }
     }
 
@@ -43,6 +61,12 @@ impl DeckType {
             DeckType::Rws => "Rider-Waite-Smith",
             DeckType::Marseille => "Tarot de Marseille",
             DeckType::Thoth => "Thoth Tarot",
+            DeckType::ModernWitch => "Modern Witch Tarot",
+            DeckType::LightSeers => "Light Seer's Tarot",
+            DeckType::EverydayTarot => "Everyday Tarot",
+            DeckType::MysticMondays => "Mystic Mondays Tarot",
+            DeckType::GoodTarot => "The Good Tarot",
+            DeckType::MorganGreer => "Morgan-Greer Tarot",
         }
     }
 
@@ -51,6 +75,12 @@ impl DeckType {
             DeckType::Rws => "data/tarot_cards_rws.json",
             DeckType::Marseille => "data/tarot_cards_marseille.json",
             DeckType::Thoth => "data/tarot_cards_thoth.json",
+            DeckType::ModernWitch => "data/tarot_cards_modern_witch.json",
+            DeckType::LightSeers => "data/tarot_cards_light_seers.json",
+            DeckType::EverydayTarot => "data/tarot_cards_everyday_tarot.json",
+            DeckType::MysticMondays => "data/tarot_cards_mystic_mondays.json",
+            DeckType::GoodTarot => "data/tarot_cards_good_tarot.json",
+            DeckType::MorganGreer => "data/tarot_cards_morgan_greer.json",
         }
     }
 }

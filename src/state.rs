@@ -26,7 +26,19 @@ pub struct User {
 impl AppState {
     pub async fn new() -> anyhow::Result<Self> {
         let mut decks: HashMap<String, Vec<TarotCard>> = HashMap::new();
-        for deck_type in [DeckType::Rws, DeckType::Marseille, DeckType::Thoth] {
+        let all_decks = [
+            DeckType::Rws,
+            DeckType::Marseille,
+            DeckType::Thoth,
+            DeckType::ModernWitch,
+            DeckType::LightSeers,
+            DeckType::EverydayTarot,
+            DeckType::MysticMondays,
+            DeckType::GoodTarot,
+            DeckType::MorganGreer,
+        ];
+        let deck_count = all_decks.len();
+        for deck_type in all_decks {
             let cards = load_deck(&deck_type).await?;
             decks.insert(deck_type.as_str().to_string(), cards);
         }
@@ -38,7 +50,7 @@ impl AppState {
             jwt_secret: Arc::new("change_me_super_secret".to_string()),
         };
 
-        info!("AppState initialized with {} tarot decks", 3);
+        info!("AppState initialized with {} tarot decks", deck_count);
         Ok(state)
     }
 }
