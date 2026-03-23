@@ -1,16 +1,17 @@
 use std::sync::Arc;
+use std::collections::HashMap;
 use tokio::sync::RwLock;
 use tracing::info;
 use uuid::Uuid;
 use serde::{Serialize, Deserialize};
 
-use crate::tarot::TarotCard;
+use crate::tarot::{TarotCard, DeckType, load_deck};
 use crate::journal::JournalEntry;
 
 #[derive(Clone)]
 pub struct AppState {
     pub users: Arc<RwLock<Vec<User>>>,
-    pub tarot_deck: Arc<RwLock<Vec<TarotCard>>>,
+    pub tarot_decks: Arc<RwLock<HashMap<String, Vec<TarotCard>>>>,
     pub journal_entries: Arc<RwLock<Vec<JournalEntry>>>,
     pub jwt_secret: Arc<String>,
 }
@@ -24,16 +25,20 @@ pub struct User {
 
 impl AppState {
     pub async fn new() -> anyhow::Result<Self> {
-        let tarot_deck = crate::tarot::load_tarot_deck().await?;
+        let mut decks: HashMap<String, Vec<TarotCard>> = HashMap::new();
+        for deck_type in [DeckType::Rws, DeckType::Marseille, DeckType::Thoth] {
+            let cards = load_deck(&deck_type).await?;
+            decks.insert(deck_type.as_str().to_string(), cards);
+        }
 
         let state = AppState {
             users: Arc::new(RwLock::new(Vec::new())),
-            tarot_deck: Arc::new(RwLock::new(tarot_deck)),
+            tarot_decks: Arc::new(RwLock::new(decks)),
             journal_entries: Arc::new(RwLock::new(Vec::new())),
             jwt_secret: Arc::new("change_me_super_secret".to_string()),
         };
 
-        info!("AppState initialized");
+        info!("AppState initialized with {} tarot decks", 3);
         Ok(state)
     }
 }

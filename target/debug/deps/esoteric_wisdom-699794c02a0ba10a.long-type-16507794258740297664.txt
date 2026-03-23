@@ -1,2 +1,0 @@
-fn() -> impl std::future::Future<Output = HtmlTemplate<LandingTemplate>> {landing}
-fn() -> impl std::future::Future<Output = HtmlTemplate<LandingTemplate>> {landing}: Handler<_, _>
