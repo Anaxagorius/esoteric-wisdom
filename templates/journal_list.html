@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Journal — Esoteric Wisdom</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+    <style>
+      body {
+        background: radial-gradient(ellipse at top, #022c22 0%, #1e1b4b 30%, #020617 70%, #000000 100%);
+        font-family: 'Raleway', sans-serif;
+      }
+      .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+      @keyframes twinkle { 0%,100% { opacity: 0.2; } 50% { opacity: 1; } }
+      .star { position: absolute; border-radius: 50%; background: white; animation: twinkle var(--dur,3s) ease-in-out infinite; animation-delay: var(--delay,0s); }
+      @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+      .floating { animation: float 5s ease-in-out infinite; }
+      @keyframes fade-in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+      .entry-card { animation: fade-in 0.4s ease-out; transition: all 0.3s; }
+      .entry-card:hover { transform: translateY(-2px); box-shadow: 0 10px 40px rgba(16,185,129,0.2); }
+      #compose-area { transition: all 0.4s ease; }
+    </style>
+  </head>
+  <body class="min-h-screen text-white px-4 py-8">
+    <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+
+    <div class="relative z-10 max-w-4xl mx-auto space-y-8">
+      <!-- Navigation -->
+      <nav class="flex items-center justify-between bg-black/30 backdrop-blur-md rounded-2xl px-6 py-3 border border-emerald-500/20">
+        <a href="/" class="font-cinzel text-amber-300 text-sm tracking-widest">✦ Esoteric Wisdom</a>
+        <div class="flex gap-6 text-xs text-violet-200">
+          <a href="/astrology" class="hover:text-amber-300 transition-colors">Astrology</a>
+          <a href="/meditation" class="hover:text-amber-300 transition-colors">Meditation</a>
+          <a href="/tarot/draw" class="hover:text-amber-300 transition-colors">Tarot</a>
+          <a href="/journal" class="text-amber-300 font-semibold">Journal</a>
+        </div>
+      </nav>
+
+      <!-- Header -->
+      <div class="text-center py-2">
+        <div class="floating text-5xl mb-3">📔</div>
+        <h1 class="font-cinzel text-4xl font-bold mb-2" style="text-shadow: 0 0 40px rgba(16,185,129,0.7);">Your Journal</h1>
+        <p class="text-emerald-200/70 max-w-md mx-auto">A sacred, private space for your reflections, dreams, and inner truth. Log in to unlock your entries.</p>
+      </div>
+
+      <!-- Auth Gate -->
+      {% if !is_authenticated %}
+      <div class="bg-black/50 border border-amber-500/40 rounded-3xl p-8 text-center backdrop-blur-xl shadow-2xl">
+        <div class="text-4xl mb-4">🔐</div>
+        <h2 class="font-cinzel text-xl text-amber-300 mb-3">Your Journal is Protected</h2>
+        <p class="text-violet-200/80 text-sm mb-6">Sign in to access your private journal entries. Your words are sacred and secure.</p>
+        <div class="flex flex-col sm:flex-row gap-3 justify-center">
+          <a href="/auth/login" class="px-8 py-3 rounded-full bg-gradient-to-r from-amber-400 to-emerald-500 font-semibold hover:scale-105 transition-transform">
+            🔑 Sign In
+          </a>
+          <a href="/auth/signup" class="px-8 py-3 rounded-full border border-emerald-400/50 text-emerald-200 hover:bg-emerald-500/10 transition-all">
+            ✨ Create Account
+          </a>
+        </div>
+      </div>
+      {% else %}
+
+      <!-- New Entry Composer -->
+      <div class="bg-black/50 border border-emerald-500/40 rounded-3xl p-6 backdrop-blur-xl shadow-2xl">
+        <button onclick="toggleCompose()" class="flex items-center gap-2 text-emerald-300 hover:text-emerald-200 transition-colors mb-4 font-semibold">
+          <span id="compose-toggle-icon">✏️</span>
+          <span id="compose-toggle-label">Write a New Entry</span>
+        </button>
+        <div id="compose-area" class="hidden">
+          <form method="post" action="/journal/new" class="space-y-4">
+            <div>
+              <input type="text" name="title" placeholder="Entry title (optional)..."
+                class="w-full rounded-xl bg-black/60 border border-emerald-500/30 px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-emerald-400/50 transition-all text-sm"
+                maxlength="120" />
+            </div>
+            <div>
+              <textarea name="body" rows="6" required placeholder="Pour your heart out here... This is your sacred space."
+                class="w-full rounded-xl bg-black/60 border border-emerald-500/30 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-400/50 transition-all text-sm resize-none leading-relaxed"
+                maxlength="10000"></textarea>
+            </div>
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <label class="flex items-center gap-2 text-xs text-violet-200/70 cursor-pointer">
+                  <input type="checkbox" name="mood_happy" class="accent-emerald-400" />
+                  😊 Grateful
+                </label>
+                <label class="flex items-center gap-2 text-xs text-violet-200/70 cursor-pointer">
+                  <input type="checkbox" name="mood_reflective" class="accent-indigo-400" />
+                  🌙 Reflective
+                </label>
+                <label class="flex items-center gap-2 text-xs text-violet-200/70 cursor-pointer">
+                  <input type="checkbox" name="mood_hopeful" class="accent-amber-400" />
+                  ✨ Hopeful
+                </label>
+              </div>
+              <button type="submit"
+                class="px-6 py-2 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 font-semibold text-sm hover:scale-105 hover:shadow-lg hover:shadow-emerald-500/30 transition-all">
+                Save Entry 🌱
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Error Message -->
+      {% if error.is_some() %}
+      <div class="text-sm text-red-300 bg-red-900/30 border border-red-500/40 rounded-xl p-3 flex items-center gap-2">
+        <span>⚠️</span> {{ error.as_ref().unwrap() }}
+      </div>
+      {% endif %}
+
+      <!-- Journal Entries -->
+      {% if entries.is_empty() %}
+      <div class="text-center py-12 text-violet-200/50">
+        <div class="text-5xl mb-4">🌱</div>
+        <p class="font-cinzel text-lg text-emerald-400/60">Your journal awaits its first word.</p>
+        <p class="text-sm mt-2">Begin writing above to plant the first seed of your inner garden.</p>
+      </div>
+      {% else %}
+      <div class="space-y-4">
+        <h2 class="font-cinzel text-lg text-emerald-300">Your Entries <span class="text-sm text-emerald-300/50">({{ entries.len() }})</span></h2>
+        {% for entry in entries %}
+        <div class="entry-card bg-black/40 border border-emerald-500/20 rounded-2xl p-5 backdrop-blur-md hover:border-emerald-400/40">
+          <div class="flex items-start justify-between gap-4">
+            <div class="flex-1 min-w-0">
+              {% if !entry.title.is_empty() %}
+              <h3 class="font-semibold text-emerald-300 mb-1 truncate">{{ entry.title }}</h3>
+              {% endif %}
+              <p class="text-sm text-violet-100/80 leading-relaxed line-clamp-3">{{ entry.body }}</p>
+              <div class="flex items-center gap-3 mt-3">
+                <span class="text-xs text-violet-300/50">{{ entry.created_at }}</span>
+                {% if entry.mood_happy %}<span class="text-sm" title="Grateful">😊</span>{% endif %}
+                {% if entry.mood_reflective %}<span class="text-sm" title="Reflective">🌙</span>{% endif %}
+                {% if entry.mood_hopeful %}<span class="text-sm" title="Hopeful">✨</span>{% endif %}
+              </div>
+            </div>
+            <form method="post" action="/journal/delete/{{ entry.id }}" class="flex-shrink-0">
+              <button type="submit" onclick="return confirm('Delete this entry?')"
+                class="text-xs text-red-400/50 hover:text-red-300 transition-colors px-2 py-1 rounded hover:bg-red-900/20"
+                title="Delete entry">✕</button>
+            </form>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      {% endif %}
+
+      <!-- Logout option -->
+      <div class="text-center pt-4">
+        <a href="/auth/logout" class="text-xs text-violet-300/40 hover:text-violet-300 transition-colors">Sign out →</a>
+      </div>
+
+      {% endif %}
+    </div>
+
+    <script>
+      const sf = document.getElementById('starfield');
+      for (let i = 0; i < 180; i++) {
+        const s = document.createElement('div');
+        s.className = 'star';
+        const size = Math.random() * 2 + 0.5;
+        s.style.cssText = `width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--dur:${2+Math.random()*5}s;--delay:${Math.random()*6}s;`;
+        sf.appendChild(s);
+      }
+
+      function toggleCompose() {
+        const area = document.getElementById('compose-area');
+        const icon = document.getElementById('compose-toggle-icon');
+        const label = document.getElementById('compose-toggle-label');
+        const isHidden = area.classList.contains('hidden');
+        area.classList.toggle('hidden');
+        icon.textContent = isHidden ? '✖️' : '✏️';
+        label.textContent = isHidden ? 'Close' : 'Write a New Entry';
+      }
+    </script>
+  </body>
+</html>

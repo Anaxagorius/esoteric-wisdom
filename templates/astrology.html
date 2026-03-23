@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Astrology — Esoteric Wisdom</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+    <style>
+      body {
+        background: radial-gradient(ellipse at top, #3b0764 0%, #1e1b4b 30%, #020617 70%, #000000 100%);
+        font-family: 'Raleway', sans-serif;
+      }
+      .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+      @keyframes twinkle { 0%, 100% { opacity: 0.2; } 50% { opacity: 1; } }
+      .star { position: absolute; border-radius: 50%; background: white; animation: twinkle var(--dur,3s) ease-in-out infinite; animation-delay: var(--delay,0s); }
+      @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+      .floating { animation: float 5s ease-in-out infinite; }
+      .zodiac-card {
+        transition: all 0.3s ease;
+        cursor: default;
+      }
+      .zodiac-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 20px 60px rgba(167,139,250,0.3);
+      }
+      .constellation-card:hover {
+        transform: scale(1.02);
+        border-color: rgba(251,191,36,0.6) !important;
+      }
+      .constellation-card { transition: all 0.3s ease; }
+    </style>
+  </head>
+  <body class="min-h-screen text-white px-4 py-8">
+    <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+
+    <div class="relative z-10 max-w-6xl mx-auto space-y-10">
+      <!-- Navigation -->
+      <nav class="flex items-center justify-between bg-black/30 backdrop-blur-md rounded-2xl px-6 py-3 border border-violet-500/20">
+        <a href="/" class="font-cinzel text-amber-300 text-sm tracking-widest">✦ Esoteric Wisdom</a>
+        <div class="flex gap-6 text-xs text-violet-200">
+          <a href="/astrology" class="text-amber-300 font-semibold">Astrology</a>
+          <a href="/meditation" class="hover:text-amber-300 transition-colors">Meditation</a>
+          <a href="/tarot/draw" class="hover:text-amber-300 transition-colors">Tarot</a>
+          <a href="/journal" class="hover:text-amber-300 transition-colors">Journal</a>
+        </div>
+      </nav>
+
+      <!-- Hero -->
+      <header class="text-center py-6">
+        <div class="floating text-6xl mb-4">🌌</div>
+        <h1 class="font-cinzel text-4xl md:text-5xl font-bold mb-3" style="text-shadow: 0 0 40px rgba(167,139,250,0.8);">
+          Astrology
+        </h1>
+        <p class="text-violet-200/80 text-lg max-w-2xl mx-auto">
+          Ancient wisdom written in the stars. Explore the zodiac archetypes, constellation mythology, and the celestial patterns that have guided humanity for millennia.
+        </p>
+      </header>
+
+      <!-- Ancient Philosophy -->
+      <section class="bg-gradient-to-br from-purple-900/40 to-indigo-900/40 border border-purple-500/40 rounded-3xl p-8 backdrop-blur-md shadow-2xl">
+        <h2 class="font-cinzel text-2xl font-semibold mb-4 text-amber-300">✦ The Ancient Art of Astrology</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <p class="text-violet-100/90 text-sm leading-relaxed mb-4">
+              Astrology is one of humanity's oldest symbolic languages, spanning over 4,000 years across Babylon, Egypt, Greece, and beyond. Ancient astrologers observed that the cycles of celestial bodies mirrored patterns of human experience — not as rigid fate, but as archetypal poetry written in the sky.
+            </p>
+            <p class="text-violet-100/90 text-sm leading-relaxed">
+              In Hellenistic astrology, the seven traditional planets — Sun, Moon, Mercury, Venus, Mars, Jupiter, and Saturn — were seen as divine messengers. Each ruled specific domains of human life, and their transits through the twelve zodiac signs created an ever-changing cosmic symphony.
+            </p>
+          </div>
+          <div>
+            <p class="text-violet-100/90 text-sm leading-relaxed mb-4">
+              The <strong class="text-amber-300">Four Elements</strong> — Fire, Earth, Air, and Water — form the foundation of astrological temperament. Each element governs three signs, reflecting fundamental modes of engaging with the world: passion, stability, thought, and feeling.
+            </p>
+            <p class="text-violet-100/90 text-sm leading-relaxed">
+              The <strong class="text-emerald-300">Three Modalities</strong> — Cardinal, Fixed, and Mutable — describe how each sign initiates, sustains, or transforms energy. Together, the elements and modalities create a rich, interconnected cosmology that illuminates the full spectrum of human experience.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Zodiac Signs Grid -->
+      <section>
+        <h2 class="font-cinzel text-2xl font-semibold mb-6 text-amber-300 text-center">The Twelve Signs of the Zodiac</h2>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+
+          <div class="zodiac-card bg-gradient-to-br from-red-900/50 to-orange-900/50 border border-red-500/40 rounded-2xl p-4 backdrop-blur-md">
+            <div class="text-3xl mb-2">♈</div>
+            <h3 class="font-cinzel font-semibold text-red-300 mb-1">Aries</h3>
+            <p class="text-xs text-violet-200/70 mb-2">Mar 21 – Apr 19 · Fire · Cardinal</p>
+            <p class="text-xs text-violet-100/80 leading-relaxed">The Pioneer. Bold, courageous, and fiercely independent. Ruled by Mars, Aries embodies the spark of new beginnings and the warrior's spirit.</p>
+          </div>
+
+          <div class="zodiac-card bg-gradient-to-br from-green-900/50 to-emerald-900/50 border border-green-500/40 rounded-2xl p-4 backdrop-blur-md">
+            <div class="text-3xl mb-2">♉</div>
+            <h3 class="font-cinzel font-semibold text-green-300 mb-1">Taurus</h3>
+            <p class="text-xs text-violet-200/70 mb-2">Apr 20 – May 20 · Earth · Fixed</p>
+            <p class="text-xs text-violet-100/80 leading-relaxed">The Sensualist. Grounded, patient, and devoted to beauty. Ruled by Venus, Taurus savors the richness of the physical world and the art of abundance.</p>
+          </div>
+
+          <div class="zodiac-card bg-gradient-to-br from-yellow-900/50 to-amber-900/50 border border-yellow-500/40 rounded-2xl p-4 backdrop-blur-md">
+            <div class="text-3xl mb-2">♊</div>
+            <h3 class="font-cinzel font-semibold text-yellow-300 mb-1">Gemini</h3>
+            <p class="text-xs text-violet-200/70 mb-2">May 21 – Jun 20 · Air · Mutable</p>
+            <p class="text-xs text-violet-100/80 leading-relaxed">The Communicator. Curious, witty, and endlessly adaptable. Ruled by Mercury, Gemini bridges worlds with language, ideas, and quicksilver intelligence.</p>
+          </div>
+
+          <div class="zodiac-card bg-gradient-to-br from-blue-900/50 to-cyan-900/50 border border-blue-500/40 rounded-2xl p-4 backdrop-blur-md">
+            <div class="text-3xl mb-2">♋</div>
+            <h3 class="font-cinzel font-semibold text-blue-300 mb-1">Cancer</h3>
+            <p class="text-xs text-violet-200/70 mb-2">Jun 21 – Jul 22 · Water · Cardinal</p>
+            <p class="text-xs text-violet-100/80 leading-relaxed">The Nurturer. Deeply intuitive, empathic, and protective of loved ones. Ruled by the Moon, Cancer is the keeper of memory, home, and emotional wisdom.</p>
+          </div>
+
+          <div class="zodiac-card bg-gradient-to-br from-orange-900/50 to-yellow-900/50 border border-orange-500/40 rounded-2xl p-4 backdrop-blur-md">
+            <div class="text-3xl mb-2">♌</div>
+            <h3 class="font-cinzel font-semibold text-orange-300 mb-1">Leo</h3>
+            <p class="text-xs text-violet-200/70 mb-2">Jul 23 – Aug 22 · Fire · Fixed</p>
+            <p class="text-xs text-violet-100/80 leading-relaxed">The Sovereign. Radiant, generous, and magnetically creative. Ruled by the Sun, Leo embodies the light of self-expression and the heart's royalty.</p>
+          </div>
+
+          <div class="zodiac-card bg-gradient-to-br from-teal-900/50 to-green-900/50 border border-teal-500/40 rounded-2xl p-4 backdrop-blur-md">
+            <div class="text-3xl mb-2">♍</div>
+            <h3 class="font-cinzel font-semibold text-teal-300 mb-1">Virgo</h3>
+            <p class="text-xs text-violet-200/70 mb-2">Aug 23 – Sep 22 · Earth · Mutable</p>
+            <p class="text-xs text-violet-100/80 leading-relaxed">The Healer. Discerning, devoted, and masterful in craft. Ruled by Mercury, Virgo seeks wholeness through service, precision, and the sacred in the everyday.</p>
+          </div>
+
+          <div class="zodiac-card bg-gradient-to-br from-pink-900/50 to-rose-900/50 border border-pink-500/40 rounded-2xl p-4 backdrop-blur-md">
+            <div class="text-3xl mb-2">♎</div>
+            <h3 class="font-cinzel font-semibold text-pink-300 mb-1">Libra</h3>
+            <p class="text-xs text-violet-200/70 mb-2">Sep 23 – Oct 22 · Air · Cardinal</p>
+            <p class="text-xs text-violet-100/80 leading-relaxed">The Diplomat. Graceful, fair-minded, and devoted to beauty and harmony. Ruled by Venus, Libra seeks balance in all things and the art of true partnership.</p>
+          </div>
+
+          <div class="zodiac-card bg-gradient-to-br from-red-900/50 to-purple-900/50 border border-red-600/40 rounded-2xl p-4 backdrop-blur-md">
+            <div class="text-3xl mb-2">♏</div>
+            <h3 class="font-cinzel font-semibold text-red-300 mb-1">Scorpio</h3>
+            <p class="text-xs text-violet-200/70 mb-2">Oct 23 – Nov 21 · Water · Fixed</p>
+            <p class="text-xs text-violet-100/80 leading-relaxed">The Transformer. Intense, perceptive, and fearlessly drawn to depth. Ruled by Pluto and Mars, Scorpio navigates the mysteries of power, desire, and rebirth.</p>
+          </div>
+
+          <div class="zodiac-card bg-gradient-to-br from-purple-900/50 to-violet-900/50 border border-purple-500/40 rounded-2xl p-4 backdrop-blur-md">
+            <div class="text-3xl mb-2">♐</div>
+            <h3 class="font-cinzel font-semibold text-purple-300 mb-1">Sagittarius</h3>
+            <p class="text-xs text-violet-200/70 mb-2">Nov 22 – Dec 21 · Fire · Mutable</p>
+            <p class="text-xs text-violet-100/80 leading-relaxed">The Philosopher. Adventurous, optimistic, and forever seeking meaning. Ruled by Jupiter, Sagittarius is the cosmic archer aiming for the highest truth.</p>
+          </div>
+
+          <div class="zodiac-card bg-gradient-to-br from-slate-900/50 to-blue-900/50 border border-slate-500/40 rounded-2xl p-4 backdrop-blur-md">
+            <div class="text-3xl mb-2">♑</div>
+            <h3 class="font-cinzel font-semibold text-slate-300 mb-1">Capricorn</h3>
+            <p class="text-xs text-violet-200/70 mb-2">Dec 22 – Jan 19 · Earth · Cardinal</p>
+            <p class="text-xs text-violet-100/80 leading-relaxed">The Architect. Disciplined, ambitious, and wise beyond years. Ruled by Saturn, Capricorn builds legacies through patience, mastery, and integrity of purpose.</p>
+          </div>
+
+          <div class="zodiac-card bg-gradient-to-br from-cyan-900/50 to-sky-900/50 border border-cyan-500/40 rounded-2xl p-4 backdrop-blur-md">
+            <div class="text-3xl mb-2">♒</div>
+            <h3 class="font-cinzel font-semibold text-cyan-300 mb-1">Aquarius</h3>
+            <p class="text-xs text-violet-200/70 mb-2">Jan 20 – Feb 18 · Air · Fixed</p>
+            <p class="text-xs text-violet-100/80 leading-relaxed">The Visionary. Innovative, humanitarian, and delightfully eccentric. Ruled by Uranus and Saturn, Aquarius carries the lightning bolt of collective awakening.</p>
+          </div>
+
+          <div class="zodiac-card bg-gradient-to-br from-indigo-900/50 to-violet-900/50 border border-indigo-500/40 rounded-2xl p-4 backdrop-blur-md">
+            <div class="text-3xl mb-2">♓</div>
+            <h3 class="font-cinzel font-semibold text-indigo-300 mb-1">Pisces</h3>
+            <p class="text-xs text-violet-200/70 mb-2">Feb 19 – Mar 20 · Water · Mutable</p>
+            <p class="text-xs text-violet-100/80 leading-relaxed">The Mystic. Compassionate, imaginative, and at home in the liminal. Ruled by Neptune and Jupiter, Pisces dwells where the ocean meets the infinite.</p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Constellation Images -->
+      <section>
+        <h2 class="font-cinzel text-2xl font-semibold mb-6 text-amber-300 text-center">✦ Constellation Gallery</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+
+          <div class="constellation-card bg-black/50 border border-violet-500/30 rounded-2xl overflow-hidden backdrop-blur-md shadow-xl">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Orion_Belt_and_Orion_Nebula%2C_surrounded_by_Orion%27s_other_notable_stars_and_objects.jpg/640px-Orion_Belt_and_Orion_Nebula%2C_surrounded_by_Orion%27s_other_notable_stars_and_objects.jpg"
+                 alt="Orion Constellation" class="w-full h-48 object-cover" loading="lazy"
+                 onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Orion_Belt_and_Orion_Nebula%2C_surrounded_by_Orion%27s_other_notable_stars_and_objects.jpg/320px-Orion_Belt_and_Orion_Nebula%2C_surrounded_by_Orion%27s_other_notable_stars_and_objects.jpg'" />
+            <div class="p-4">
+              <h3 class="font-cinzel font-semibold text-amber-300 mb-1">Orion the Hunter</h3>
+              <p class="text-xs text-violet-100/80 leading-relaxed">One of the most prominent and recognizable constellations. The ancient Greeks saw the mighty hunter Orion, forever battling the Scorpion across the sky.</p>
+              <a href="https://www.nasa.gov/image-article/orions-belt/" target="_blank" rel="noopener" class="text-xs text-amber-300 hover:underline mt-2 inline-block">NASA: Orion's Belt →</a>
+            </div>
+          </div>
+
+          <div class="constellation-card bg-black/50 border border-violet-500/30 rounded-2xl overflow-hidden backdrop-blur-md shadow-xl">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Scorpius_constellation_map.svg/640px-Scorpius_constellation_map.svg.png"
+                 alt="Scorpius Constellation" class="w-full h-48 object-cover bg-indigo-900/40" loading="lazy" />
+            <div class="p-4">
+              <h3 class="font-cinzel font-semibold text-amber-300 mb-1">Scorpius the Scorpion</h3>
+              <p class="text-xs text-violet-100/80 leading-relaxed">A magnificent constellation of the southern sky, Scorpius contains the red supergiant Antares — the "rival of Mars" — at its heart. Associated with transformation and depth.</p>
+              <a href="https://science.nasa.gov/skywatching/constellations/scorpius/" target="_blank" rel="noopener" class="text-xs text-amber-300 hover:underline mt-2 inline-block">NASA: Scorpius →</a>
+            </div>
+          </div>
+
+          <div class="constellation-card bg-black/50 border border-violet-500/30 rounded-2xl overflow-hidden backdrop-blur-md shadow-xl">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Ursa_Major_constellation_map.svg/640px-Ursa_Major_constellation_map.svg.png"
+                 alt="Ursa Major" class="w-full h-48 object-cover bg-indigo-900/40" loading="lazy" />
+            <div class="p-4">
+              <h3 class="font-cinzel font-semibold text-amber-300 mb-1">Ursa Major — The Great Bear</h3>
+              <p class="text-xs text-violet-100/80 leading-relaxed">Home of the Big Dipper, Ursa Major has guided navigators for millennia. In myth, Zeus transformed Callisto into this bear and set her among the eternal stars.</p>
+              <a href="https://science.nasa.gov/skywatching/constellations/ursa-major/" target="_blank" rel="noopener" class="text-xs text-amber-300 hover:underline mt-2 inline-block">NASA: Ursa Major →</a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Official Resources -->
+      <section class="bg-gradient-to-br from-indigo-900/30 to-purple-900/30 border border-indigo-500/30 rounded-3xl p-8 backdrop-blur-md">
+        <h2 class="font-cinzel text-xl font-semibold mb-6 text-amber-300">✦ Official Celestial Gateways</h2>
+        <div class="grid md:grid-cols-2 gap-4">
+          <a href="https://science.nasa.gov/skywatching/constellations/" target="_blank" rel="noopener"
+             class="flex items-center gap-3 bg-black/30 rounded-xl p-4 border border-violet-500/20 hover:border-amber-400/40 hover:bg-black/50 transition-all group">
+            <span class="text-2xl">🔭</span>
+            <div>
+              <div class="font-semibold text-sm text-violet-100 group-hover:text-amber-300 transition-colors">NASA — Constellations Overview</div>
+              <div class="text-xs text-violet-300/60 mt-0.5">Official NASA guide to all 88 recognized constellations</div>
+            </div>
+          </a>
+          <a href="https://apod.nasa.gov/apod/" target="_blank" rel="noopener"
+             class="flex items-center gap-3 bg-black/30 rounded-xl p-4 border border-violet-500/20 hover:border-amber-400/40 hover:bg-black/50 transition-all group">
+            <span class="text-2xl">🌠</span>
+            <div>
+              <div class="font-semibold text-sm text-violet-100 group-hover:text-amber-300 transition-colors">Astronomy Picture of the Day</div>
+              <div class="text-xs text-violet-300/60 mt-0.5">Daily stunning images from NASA's APOD archive</div>
+            </div>
+          </a>
+          <a href="https://hubblesite.org/images/gallery" target="_blank" rel="noopener"
+             class="flex items-center gap-3 bg-black/30 rounded-xl p-4 border border-violet-500/20 hover:border-amber-400/40 hover:bg-black/50 transition-all group">
+            <span class="text-2xl">🌌</span>
+            <div>
+              <div class="font-semibold text-sm text-violet-100 group-hover:text-amber-300 transition-colors">Hubble Space Telescope Gallery</div>
+              <div class="text-xs text-violet-300/60 mt-0.5">Breathtaking deep-space imagery from the Hubble telescope</div>
+            </div>
+          </a>
+          <a href="https://starchild.gsfc.nasa.gov/docs/StarChild/questions/88constellations.html" target="_blank" rel="noopener"
+             class="flex items-center gap-3 bg-black/30 rounded-xl p-4 border border-violet-500/20 hover:border-amber-400/40 hover:bg-black/50 transition-all group">
+            <span class="text-2xl">⭐</span>
+            <div>
+              <div class="font-semibold text-sm text-violet-100 group-hover:text-amber-300 transition-colors">All 88 Constellations — NASA</div>
+              <div class="text-xs text-violet-300/60 mt-0.5">Complete list of officially recognized constellations</div>
+            </div>
+          </a>
+          <a href="https://www.iau.org/public/themes/constellations/" target="_blank" rel="noopener"
+             class="flex items-center gap-3 bg-black/30 rounded-xl p-4 border border-violet-500/20 hover:border-amber-400/40 hover:bg-black/50 transition-all group">
+            <span class="text-2xl">🏛️</span>
+            <div>
+              <div class="font-semibold text-sm text-violet-100 group-hover:text-amber-300 transition-colors">IAU — International Astronomical Union</div>
+              <div class="text-xs text-violet-300/60 mt-0.5">Official astronomical organization constellation resources</div>
+            </div>
+          </a>
+          <a href="https://images.nasa.gov/" target="_blank" rel="noopener"
+             class="flex items-center gap-3 bg-black/30 rounded-xl p-4 border border-violet-500/20 hover:border-amber-400/40 hover:bg-black/50 transition-all group">
+            <span class="text-2xl">📸</span>
+            <div>
+              <div class="font-semibold text-sm text-violet-100 group-hover:text-amber-300 transition-colors">NASA Image & Video Library</div>
+              <div class="text-xs text-violet-300/60 mt-0.5">The full NASA archive of astronomical imagery</div>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <footer class="text-center py-4 text-violet-300/40 text-xs">
+        <p>"We are all made of star-stuff." — Carl Sagan</p>
+      </footer>
+    </div>
+
+    <script>
+      const sf = document.getElementById('starfield');
+      for (let i = 0; i < 200; i++) {
+        const s = document.createElement('div');
+        s.className = 'star';
+        const size = Math.random() * 2.5 + 0.5;
+        s.style.cssText = `width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--dur:${2+Math.random()*5}s;--delay:${Math.random()*6}s;`;
+        sf.appendChild(s);
+      }
+    </script>
+  </body>
+</html>

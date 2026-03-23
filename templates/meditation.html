@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Meditation — Esoteric Wisdom</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+    <style>
+      body {
+        background: radial-gradient(ellipse at top, #0c4a6e 0%, #1e1b4b 30%, #020617 70%, #000000 100%);
+        font-family: 'Raleway', sans-serif;
+      }
+      .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+      @keyframes twinkle { 0%,100% { opacity: 0.2; } 50% { opacity: 1; } }
+      .star { position: absolute; border-radius: 50%; background: white; animation: twinkle var(--dur,3s) ease-in-out infinite; animation-delay: var(--delay,0s); }
+      @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+      .floating { animation: float 5s ease-in-out infinite; }
+      @keyframes breathe {
+        0%,100% { transform: scale(1); opacity: 0.7; }
+        50% { transform: scale(1.15); opacity: 1; }
+      }
+      @keyframes rotate-slow { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+      .breathe-circle {
+        animation: breathe var(--breathe-dur, 8s) ease-in-out infinite;
+        border-radius: 50%;
+        background: radial-gradient(circle at 30% 30%, rgba(99,102,241,0.8), rgba(59,130,246,0.4), transparent 70%);
+        box-shadow: 0 0 60px rgba(99,102,241,0.6), 0 0 120px rgba(59,130,246,0.3);
+      }
+      .orbit {
+        animation: rotate-slow 20s linear infinite;
+        transform-origin: center;
+      }
+      #timer-display {
+        font-size: 4rem;
+        font-variant-numeric: tabular-nums;
+        text-shadow: 0 0 40px rgba(99,102,241,0.8);
+      }
+      .mode-btn.active {
+        background: linear-gradient(135deg, rgba(99,102,241,0.5), rgba(139,92,246,0.5));
+        border-color: rgba(167,139,250,0.8);
+      }
+      .track-option:checked + label {
+        background: rgba(99,102,241,0.3);
+        border-color: rgba(167,139,250,0.8);
+      }
+    </style>
+  </head>
+  <body class="min-h-screen text-white px-4 py-8">
+    <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+
+    <div class="relative z-10 max-w-4xl mx-auto space-y-8">
+      <!-- Navigation -->
+      <nav class="flex items-center justify-between bg-black/30 backdrop-blur-md rounded-2xl px-6 py-3 border border-indigo-500/20">
+        <a href="/" class="font-cinzel text-amber-300 text-sm tracking-widest">✦ Esoteric Wisdom</a>
+        <div class="flex gap-6 text-xs text-violet-200">
+          <a href="/astrology" class="hover:text-amber-300 transition-colors">Astrology</a>
+          <a href="/meditation" class="text-amber-300 font-semibold">Meditation</a>
+          <a href="/tarot/draw" class="hover:text-amber-300 transition-colors">Tarot</a>
+          <a href="/journal" class="hover:text-amber-300 transition-colors">Journal</a>
+        </div>
+      </nav>
+
+      <!-- Hero -->
+      <div class="text-center py-4">
+        <div class="floating text-6xl mb-4">🧘</div>
+        <h1 class="font-cinzel text-4xl font-bold mb-3" style="text-shadow: 0 0 40px rgba(99,102,241,0.8);">Meditation</h1>
+        <p class="text-indigo-200/80 max-w-xl mx-auto">Find stillness in the present moment. Choose your practice, set your intention, and let the universe hold you.</p>
+      </div>
+
+      <!-- Main Meditation UI -->
+      <div class="grid md:grid-cols-2 gap-8">
+
+        <!-- Left: Controls -->
+        <div class="bg-black/50 border border-indigo-500/40 rounded-3xl p-6 backdrop-blur-xl space-y-6 shadow-2xl">
+          <h2 class="font-cinzel text-xl text-indigo-300">Configure Your Journey</h2>
+
+          <!-- Mode Selection -->
+          <div>
+            <label class="text-sm text-indigo-200 mb-2 block">Practice Mode</label>
+            <div class="flex gap-3">
+              <button onclick="setMode('guided')" id="btn-guided"
+                class="mode-btn active flex-1 py-2 rounded-xl border border-indigo-400/40 text-sm transition-all hover:bg-indigo-500/20"
+                data-mode="guided">🎙️ Guided</button>
+              <button onclick="setMode('unguided')" id="btn-unguided"
+                class="mode-btn flex-1 py-2 rounded-xl border border-indigo-400/40 text-sm transition-all hover:bg-indigo-500/20"
+                data-mode="unguided">🌙 Unguided</button>
+            </div>
+          </div>
+
+          <!-- Duration -->
+          <div>
+            <label class="text-sm text-indigo-200 mb-2 block">Duration: <span id="dur-display" class="text-amber-300 font-semibold">10 minutes</span></label>
+            <input type="range" id="duration-slider" min="1" max="60" value="10"
+              oninput="document.getElementById('dur-display').textContent = this.value + ' minutes'; totalSeconds = this.value * 60;"
+              class="w-full accent-indigo-400" />
+            <div class="flex justify-between text-xs text-violet-300/50 mt-1">
+              <span>1 min</span><span>30 min</span><span>60 min</span>
+            </div>
+          </div>
+
+          <!-- Music Selection -->
+          <div>
+            <label class="text-sm text-indigo-200 mb-3 block">Soundscape</label>
+            <div class="space-y-2" id="track-list">
+              <label class="flex items-center gap-3 bg-black/40 border border-indigo-400/30 rounded-xl p-3 cursor-pointer hover:border-indigo-400/60 transition-all has-[:checked]:border-indigo-400/80 has-[:checked]:bg-indigo-900/30">
+                <input type="radio" name="track" value="tibetan" checked class="accent-indigo-400" onchange="selectTrack(this)" />
+                <span class="text-xl">🎵</span>
+                <div>
+                  <div class="text-sm text-violet-100">Tibetan Singing Bowls</div>
+                  <div class="text-xs text-violet-300/60">Deep resonance, ancient healing tones</div>
+                </div>
+              </label>
+              <label class="flex items-center gap-3 bg-black/40 border border-indigo-400/30 rounded-xl p-3 cursor-pointer hover:border-indigo-400/60 transition-all has-[:checked]:border-indigo-400/80 has-[:checked]:bg-indigo-900/30">
+                <input type="radio" name="track" value="binaural" class="accent-indigo-400" onchange="selectTrack(this)" />
+                <span class="text-xl">🧠</span>
+                <div>
+                  <div class="text-sm text-violet-100">Theta Binaural Beats</div>
+                  <div class="text-xs text-violet-300/60">4–7 Hz for deep meditative states</div>
+                </div>
+              </label>
+              <label class="flex items-center gap-3 bg-black/40 border border-indigo-400/30 rounded-xl p-3 cursor-pointer hover:border-indigo-400/60 transition-all has-[:checked]:border-indigo-400/80 has-[:checked]:bg-indigo-900/30">
+                <input type="radio" name="track" value="nature" class="accent-indigo-400" onchange="selectTrack(this)" />
+                <span class="text-xl">🌿</span>
+                <div>
+                  <div class="text-sm text-violet-100">Forest Rain &amp; Nature</div>
+                  <div class="text-xs text-violet-300/60">Gentle rain, birdsong, rustling leaves</div>
+                </div>
+              </label>
+              <label class="flex items-center gap-3 bg-black/40 border border-indigo-400/30 rounded-xl p-3 cursor-pointer hover:border-indigo-400/60 transition-all has-[:checked]:border-indigo-400/80 has-[:checked]:bg-indigo-900/30">
+                <input type="radio" name="track" value="silence" class="accent-indigo-400" onchange="selectTrack(this)" />
+                <span class="text-xl">🤫</span>
+                <div>
+                  <div class="text-sm text-violet-100">Sacred Silence</div>
+                  <div class="text-xs text-violet-300/60">Pure stillness, no music</div>
+                </div>
+              </label>
+            </div>
+            <p class="text-xs text-violet-300/50 mt-2">
+              Free music sources:
+              <a href="https://pixabay.com/music/search/meditation/" target="_blank" rel="noopener" class="text-amber-300 hover:underline">Pixabay</a> ·
+              <a href="https://mixkit.co/free-stock-music/tag/meditation/" target="_blank" rel="noopener" class="text-amber-300 hover:underline">Mixkit</a>
+            </p>
+          </div>
+
+          <!-- Start Button -->
+          <button onclick="toggleSession()"
+            id="start-btn"
+            class="w-full py-3 rounded-full bg-gradient-to-r from-indigo-500 to-violet-600 font-semibold hover:scale-105 hover:shadow-lg hover:shadow-indigo-500/40 transition-all duration-300 text-lg">
+            ▶ Begin Session
+          </button>
+        </div>
+
+        <!-- Right: Timer Visual -->
+        <div class="flex flex-col items-center justify-center bg-black/40 border border-indigo-500/30 rounded-3xl p-8 backdrop-blur-xl shadow-2xl space-y-6">
+          <!-- Breathing circle -->
+          <div class="relative flex items-center justify-center" style="width:200px;height:200px;">
+            <div class="breathe-circle absolute inset-0" id="breathe-anim" style="--breathe-dur:8s;"></div>
+            <div class="absolute text-center">
+              <div id="timer-display" class="font-mono font-bold text-indigo-200">10:00</div>
+              <div id="timer-status" class="text-xs text-indigo-300/70 mt-1">Ready</div>
+            </div>
+          </div>
+
+          <!-- Guided meditation text -->
+          <div id="guided-text" class="text-center max-w-xs">
+            <p class="text-sm text-indigo-200/80 italic leading-relaxed" id="meditation-instruction">
+              "Close your eyes. Take a slow, deep breath in through your nose… and release gently through your mouth. Let your body soften into stillness."
+            </p>
+          </div>
+
+          <!-- Breathe indicator -->
+          <div id="breathe-guide" class="hidden text-center">
+            <div class="text-2xl font-cinzel text-indigo-300" id="breathe-label">Breathe In</div>
+            <div class="w-32 h-1.5 rounded-full bg-indigo-900/50 mt-2 overflow-hidden">
+              <div id="breathe-bar" class="h-full bg-gradient-to-r from-indigo-400 to-violet-400 rounded-full transition-all duration-[4000ms]" style="width:0%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Guided Meditation Script (shown when in guided mode during session) -->
+      <div id="guided-section" class="hidden bg-gradient-to-br from-indigo-900/30 to-purple-900/30 border border-indigo-500/30 rounded-3xl p-8 backdrop-blur-md">
+        <h2 class="font-cinzel text-lg text-indigo-300 mb-4">✦ Guided Journey</h2>
+        <div class="space-y-4 text-sm text-violet-100/90 leading-relaxed" id="guided-script">
+          <p class="transition-opacity duration-1000" id="gstep-0">
+            <strong class="text-amber-300">Ground yourself.</strong> Feel the weight of your body, fully supported. Let your spine be long and easy. Place one hand on your heart.
+          </p>
+          <p class="transition-opacity duration-1000 opacity-40" id="gstep-1">
+            <strong class="text-teal-300">Breathe with intention.</strong> Inhale for 4 counts… hold for 4… exhale slowly for 6. Let each breath release what no longer serves you.
+          </p>
+          <p class="transition-opacity duration-1000 opacity-40" id="gstep-2">
+            <strong class="text-pink-300">Visualize a golden light</strong> at the center of your chest. With each inhale, it grows brighter. With each exhale, it radiates outward — filling your entire body.
+          </p>
+          <p class="transition-opacity duration-1000 opacity-40" id="gstep-3">
+            <strong class="text-violet-300">You are safe. You are held.</strong> There is nothing to do, nowhere to be. Simply rest in the vast, loving stillness that has always been here.
+          </p>
+          <p class="transition-opacity duration-1000 opacity-40" id="gstep-4">
+            <strong class="text-emerald-300">Return gently.</strong> Begin to deepen your breath. Wiggle your fingers. When you are ready, softly open your eyes, carrying this peace with you.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const sf = document.getElementById('starfield');
+      for (let i = 0; i < 180; i++) {
+        const s = document.createElement('div');
+        s.className = 'star';
+        const size = Math.random() * 2 + 0.5;
+        s.style.cssText = `width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--dur:${2+Math.random()*5}s;--delay:${Math.random()*6}s;`;
+        sf.appendChild(s);
+      }
+
+      let totalSeconds = 600;
+      let remaining = 0;
+      let timerInterval = null;
+      let breathInterval = null;
+      let guidedInterval = null;
+      let isRunning = false;
+      let currentMode = 'guided';
+      let guidedStep = 0;
+
+      const instructions = [
+        "\"Close your eyes. Take a slow, deep breath in... and release gently. Let your body soften into stillness.\"",
+        "\"Notice where you feel tension. Invite each area to relax, one by one, starting from your toes upward.\"",
+        "\"Visualize a star of golden light above your head. With each breath, draw that light down through your crown.\"",
+        "\"You are ancient stardust, briefly aware. Rest in the wonder of simply being here, in this moment.\"",
+        "\"Let thoughts pass like clouds. You are the sky — vast, clear, and undisturbed.\""
+      ];
+      let instrIdx = 0;
+
+      function setMode(mode) {
+        currentMode = mode;
+        document.querySelectorAll('.mode-btn').forEach(b => b.classList.remove('active'));
+        document.getElementById('btn-' + mode).classList.add('active');
+        document.getElementById('guided-section').classList.toggle('hidden', mode !== 'guided');
+      }
+
+      function selectTrack(el) { /* Music selection tracked by radio value */ }
+
+      function formatTime(s) {
+        const m = Math.floor(s / 60);
+        const sec = s % 60;
+        return String(m).padStart(2, '0') + ':' + String(sec).padStart(2, '0');
+      }
+
+      function startBreatheGuide() {
+        const guide = document.getElementById('breathe-guide');
+        const label = document.getElementById('breathe-label');
+        const bar = document.getElementById('breathe-bar');
+        guide.classList.remove('hidden');
+        let phase = 0; // 0=in, 1=hold, 2=out
+        const phases = ['Breathe In 🌬️', 'Hold ✨', 'Breathe Out 🍃'];
+        const durations = [4000, 4000, 6000];
+        function cycle() {
+          label.textContent = phases[phase];
+          bar.style.transitionDuration = durations[phase] + 'ms';
+          bar.style.width = (phase === 0 ? '100%' : phase === 1 ? '100%' : '0%');
+          breathInterval = setTimeout(() => {
+            phase = (phase + 1) % 3;
+            cycle();
+          }, durations[phase]);
+        }
+        cycle();
+      }
+
+      function stopBreatheGuide() {
+        clearTimeout(breathInterval);
+        document.getElementById('breathe-guide').classList.add('hidden');
+      }
+
+      function updateGuidedStep() {
+        if (currentMode !== 'guided') return;
+        const total = 5;
+        for (let i = 0; i < total; i++) {
+          const el = document.getElementById('gstep-' + i);
+          if (el) el.style.opacity = (i === guidedStep) ? '1' : '0.3';
+        }
+        guidedStep = (guidedStep + 1) % total;
+      }
+
+      function cycleInstruction() {
+        const el = document.getElementById('meditation-instruction');
+        el.style.opacity = '0';
+        setTimeout(() => {
+          el.textContent = instructions[instrIdx % instructions.length];
+          el.style.transition = 'opacity 1s';
+          el.style.opacity = '1';
+          instrIdx++;
+        }, 500);
+      }
+
+      function toggleSession() {
+        if (isRunning) {
+          stopSession();
+        } else {
+          startSession();
+        }
+      }
+
+      function startSession() {
+        remaining = totalSeconds || (parseInt(document.getElementById('duration-slider').value) * 60);
+        isRunning = true;
+        document.getElementById('start-btn').textContent = '⏹ End Session';
+        document.getElementById('start-btn').classList.add('from-red-500', 'to-pink-600');
+        document.getElementById('timer-status').textContent = 'In session...';
+        document.getElementById('breathe-anim').style.animationDuration = '8s';
+        startBreatheGuide();
+
+        if (currentMode === 'guided') {
+          document.getElementById('guided-section').classList.remove('hidden');
+          updateGuidedStep();
+          guidedInterval = setInterval(() => {
+            updateGuidedStep();
+            cycleInstruction();
+          }, 30000); // update every 30 seconds
+        }
+
+        timerInterval = setInterval(() => {
+          remaining--;
+          document.getElementById('timer-display').textContent = formatTime(remaining);
+          if (remaining <= 0) {
+            completeSession();
+          }
+        }, 1000);
+      }
+
+      function stopSession() {
+        clearInterval(timerInterval);
+        clearInterval(guidedInterval);
+        stopBreatheGuide();
+        isRunning = false;
+        document.getElementById('start-btn').textContent = '▶ Begin Session';
+        document.getElementById('start-btn').classList.remove('from-red-500', 'to-pink-600');
+        document.getElementById('timer-status').textContent = 'Ready';
+        totalSeconds = parseInt(document.getElementById('duration-slider').value) * 60;
+        document.getElementById('timer-display').textContent = formatTime(totalSeconds);
+      }
+
+      function completeSession() {
+        stopSession();
+        document.getElementById('timer-status').textContent = '✨ Complete';
+        document.getElementById('meditation-instruction').textContent =
+          '"Your session is complete. Take a moment to honor the stillness you have cultivated. Namaste. 🙏"';
+      }
+
+      // Initialize display
+      document.getElementById('timer-display').textContent = formatTime(totalSeconds);
+    </script>
+  </body>
+</html>

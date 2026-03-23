@@ -1,4 +1,5 @@
 use askama::Template;
+use crate::journal::JournalEntry;
 
 #[derive(Template)]
 #[template(path = "landing.html")]
@@ -33,4 +34,8 @@ pub struct TarotDrawTemplate<'a> {
 
 #[derive(Template)]
 #[template(path = "journal_list.html")]
-pub struct JournalListTemplate;
+pub struct JournalListTemplate {
+    pub is_authenticated: bool,
+    pub entries: Vec<JournalEntry>,
+    pub error: Option<String>,
+}

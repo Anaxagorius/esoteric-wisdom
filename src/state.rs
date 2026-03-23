@@ -5,11 +5,13 @@ use uuid::Uuid;
 use serde::{Serialize, Deserialize};
 
 use crate::tarot::TarotCard;
+use crate::journal::JournalEntry;
 
 #[derive(Clone)]
 pub struct AppState {
     pub users: Arc<RwLock<Vec<User>>>,
     pub tarot_deck: Arc<RwLock<Vec<TarotCard>>>,
+    pub journal_entries: Arc<RwLock<Vec<JournalEntry>>>,
     pub jwt_secret: Arc<String>,
 }
 
@@ -27,6 +29,7 @@ impl AppState {
         let state = AppState {
             users: Arc::new(RwLock::new(Vec::new())),
             tarot_deck: Arc::new(RwLock::new(tarot_deck)),
+            journal_entries: Arc::new(RwLock::new(Vec::new())),
             jwt_secret: Arc::new("change_me_super_secret".to_string()),
         };
 

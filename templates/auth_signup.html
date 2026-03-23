@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Create Sanctuary — Esoteric Wisdom</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+    <style>
+      body {
+        background: radial-gradient(ellipse at top, #064e3b 0%, #1e1b4b 30%, #020617 70%, #000000 100%);
+        font-family: 'Raleway', sans-serif;
+      }
+      .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+      @keyframes twinkle {
+        0%, 100% { opacity: 0.2; }
+        50% { opacity: 1; }
+      }
+      .star { position: absolute; border-radius: 50%; background: white; animation: twinkle var(--dur, 3s) ease-in-out infinite; animation-delay: var(--delay, 0s); }
+      @keyframes float {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-10px) rotate(-5deg); }
+      }
+      .floating { animation: float 4s ease-in-out infinite; }
+    </style>
+  </head>
+  <body class="min-h-screen text-white flex items-center justify-center px-4">
+    <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+
+    <div class="relative z-10 w-full max-w-md">
+      <!-- Logo -->
+      <div class="text-center mb-8">
+        <div class="floating inline-block text-5xl mb-3">🌱</div>
+        <h1 class="font-cinzel text-2xl text-emerald-300">Esoteric Wisdom</h1>
+        <p class="text-violet-300/70 text-sm mt-1">Begin your sacred journey</p>
+      </div>
+
+      <div class="bg-black/60 border border-emerald-500/60 rounded-3xl p-8 shadow-2xl backdrop-blur-xl" style="box-shadow: 0 0 60px rgba(16,185,129,0.15);">
+        <h2 class="text-xl font-semibold mb-6 text-center">Create Your Sanctuary</h2>
+
+        {% if error.is_some() %}
+        <div class="mb-4 text-sm text-red-300 bg-red-900/30 border border-red-500/50 rounded-xl p-3 flex items-center gap-2">
+          <span>⚠️</span> {{ error.as_ref().unwrap() }}
+        </div>
+        {% endif %}
+
+        <form method="post" action="/auth/signup" class="space-y-4">
+          <div>
+            <label class="block text-sm mb-1.5 text-emerald-200">Email Address</label>
+            <input type="email" name="email" required
+              class="w-full rounded-xl bg-black/70 border border-emerald-500/40 px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-amber-400/60 focus:border-amber-400/60 transition-all text-sm"
+              placeholder="your@email.com" />
+          </div>
+          <div>
+            <label class="block text-sm mb-1.5 text-emerald-200">Password</label>
+            <input type="password" name="password" required minlength="8"
+              class="w-full rounded-xl bg-black/70 border border-emerald-500/40 px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-amber-400/60 focus:border-amber-400/60 transition-all text-sm"
+              placeholder="Minimum 8 characters" />
+          </div>
+          <button type="submit"
+            class="w-full mt-2 py-3 rounded-full bg-gradient-to-r from-emerald-400 to-violet-600 font-semibold hover:scale-105 hover:shadow-lg hover:shadow-emerald-500/30 transition-all duration-300">
+            🌟 Create Sanctuary
+          </button>
+        </form>
+
+        <div class="mt-6 pt-6 border-t border-emerald-500/20 text-center">
+          <p class="text-sm text-violet-200/70">
+            Already have a portal key?
+            <a href="/auth/login" class="text-amber-300 hover:text-amber-200 hover:underline ml-1">Sign in →</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="text-center mt-6">
+        <a href="/" class="text-xs text-violet-300/50 hover:text-violet-300 transition-colors">← Back to Landing</a>
+      </div>
+    </div>
+
+    <script>
+      const sf = document.getElementById('starfield');
+      for (let i = 0; i < 150; i++) {
+        const s = document.createElement('div');
+        s.className = 'star';
+        const size = Math.random() * 2 + 0.5;
+        s.style.cssText = `width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--dur:${2+Math.random()*4}s;--delay:${Math.random()*5}s;`;
+        sf.appendChild(s);
+      }
+    </script>
+  </body>
+</html>

@@ -1,4 +1,4 @@
-use axum::{routing::{get, post}, Form, Router, extract::State, response::{IntoResponse, Response}, http::{StatusCode, header}};
+use axum::{routing::get, Form, Router, extract::State, response::{IntoResponse, Response}, http::{StatusCode, header}};
 use serde::Deserialize;
 use tower_cookies::{Cookie, Cookies};
 use argon2::{Argon2, PasswordHasher, PasswordVerifier};
@@ -15,15 +15,16 @@ pub struct AuthForm {
 }
 
 #[derive(Debug, Serialize, SerdeDeserialize)]
-struct Claims {
-    sub: String,
-    exp: usize,
+pub struct Claims {
+    pub sub: String,
+    pub exp: usize,
 }
 
 pub fn routes() -> Router<AppState> {
     Router::new()
         .route("/login", get(login_page).post(login_post))
         .route("/signup", get(signup_page).post(signup_post))
+        .route("/logout", get(logout))
 }
 
 pub async fn login_page() -> impl IntoResponse {
@@ -69,7 +70,7 @@ pub async fn signup_post(State(state): State<AppState>, Form(form): Form<AuthFor
     users.push(user);
 
     let tpl = LoginTemplate { error: Some("Account created. Please log in.".into()) };
-    HtmlTemplate(tpl)
+    HtmlTemplate(tpl).into_response()
 }
 
 pub async fn login_post(State(state): State<AppState>, cookies: Cookies, Form(form): Form<AuthForm>) -> impl IntoResponse {
@@ -95,10 +96,10 @@ pub async fn login_post(State(state): State<AppState>, cookies: Cookies, Form(fo
     let token = encode(&Header::default(), &claims, &EncodingKey::from_secret(state.jwt_secret.as_bytes())).unwrap();
 
     cookies.add(
-        Cookie::build("esoteric_session", token)
+        Cookie::build(("esoteric_session", token))
             .path("/")
             .http_only(true)
-            .finish(),
+            .build(),
     );
 
     (StatusCode::FOUND, [(header::LOCATION, "/".to_string())]).into_response()
@@ -112,4 +113,12 @@ pub fn decode_token(state: &AppState, token: &str) -> Option<Claims> {
     )
     .ok()
     .map(|data| data.claims)
+}
+
+pub async fn logout(cookies: Cookies) -> impl IntoResponse {
+    let mut removal = Cookie::new("esoteric_session", "");
+    removal.set_path("/");
+    removal.make_removal();
+    cookies.add(removal);
+    (StatusCode::FOUND, [(header::LOCATION, "/")]).into_response()
 }
