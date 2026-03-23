@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Esoteric Wisdom</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body { background: radial-gradient(circle at top, #3b0764 0, #020617 50%, #000000 100%); }
+      .starfield {
+        background-image: radial-gradient(circle, rgba(255,255,255,0.4) 1px, transparent 1px);
+        background-size: 3px 3px;
+        opacity: 0.3;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen text-white px-4 py-8">
+    <div class="fixed inset-0 starfield pointer-events-none"></div>
+    <div class="relative max-w-4xl mx-auto space-y-6 bg-black/60 border border-emerald-500/70 rounded-3xl p-6 backdrop-blur-xl shadow-2xl">
+      <header class="flex items-center justify-between">
+        <h1 class="text-3xl font-bold">Journal</h1>
+        <a href="/" class="text-sm text-violet-200 hover:underline">Back to Portal</a>
+      </header>
+      <p class="text-sm text-violet-100/90">This is where your private reflections will live. The starter version only shows a placeholder.</p>
+      <div class="bg-black/60 border border-emerald-300/60 rounded-2xl p-4 text-sm text-emerald-100/90">
+        <p>TODO: implement persistent journal entries stored per user.</p>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Esoteric Wisdom</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body { background: radial-gradient(circle at top, #3b0764 0, #020617 50%, #000000 100%); }
+      .starfield {
+        background-image: radial-gradient(circle, rgba(255,255,255,0.4) 1px, transparent 1px);
+        background-size: 3px 3px;
+        opacity: 0.3;
+      }
+    </style>
+    <style>
+      .card-flip {{
+        perspective: 1000px;
+      }}
+      .card-inner {{
+        position: relative;
+        width: 260px;
+        height: 430px;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+        cursor: pointer;
+      }}
+      .card-inner.flipped {{
+        transform: rotateY(180deg);
+      }}
+      .card-face {{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        border-radius: 1rem;
+      }}
+      .card-back {{
+        background: radial-gradient(circle at 20% 20%, #f97316, #4c1d95 50%, #020617 100%);
+      }}
+      .card-front {{
+        transform: rotateY(180deg);
+        overflow: hidden;
+      }}
+    </style>
+  </head>
+  <body class="min-h-screen text-white flex items-center justify-center px-4">
+    <div class="fixed inset-0 starfield pointer-events-none"></div>
+    <div class="relative flex flex-col items-center space-y-6">
+      <h1 class="text-2xl font-bold">Your Card</h1>
+      <div class="card-flip" onclick="document.querySelector('.card-inner').classList.toggle('flipped');">
+        <div class="card-inner">
+          <div class="card-face card-back border border-amber-400/80 shadow-2xl"></div>
+          <div class="card-face card-front bg-black border border-violet-500/80 shadow-2xl">
+            <img src="{{{{ card.image_url }}}}" alt="{{{{ card.name }}}}" class="w-full h-full object-cover" />
+          </div>
+        </div>
+      </div>
+      <div class="max-w-md text-center bg-black/70 border border-violet-500/60 rounded-3xl p-4 backdrop-blur-xl">
+        <h2 class="text-xl font-semibold mb-1">
+          {{{{ card.name }}}}{{% if reversed %}} (Reversed){{% endif %}}
+        </h2>
+        <p class="text-sm text-violet-100/90 mt-2">
+          {{% if reversed %}}
+            {{{{ card.meaning_reversed }}}}
+          {{% else %}}
+            {{{{ card.meaning_upright }}}}
+          {{% endif %}}
+        </p>
+      </div>
+      <a href="/tarot/draw" class="px-4 py-2 rounded-full bg-gradient-to-r from-amber-400 to-pink-500 font-semibold hover:scale-105 transition-transform">Draw Another</a>
+      <a href="/" class="text-sm text-violet-200 hover:underline">Return to Portal</a>
+    </div>
+  </body>
+</html>

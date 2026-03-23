@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Esoteric Wisdom</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body { background: radial-gradient(circle at top, #3b0764 0, #020617 50%, #000000 100%); }
+      .starfield {
+        background-image: radial-gradient(circle, rgba(255,255,255,0.4) 1px, transparent 1px);
+        background-size: 3px 3px;
+        opacity: 0.3;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen text-white flex flex-col">
+    <div class="fixed inset-0 starfield pointer-events-none"></div>
+    <main class="relative flex-1 flex flex-col items-center justify-center px-4">
+      <div class="max-w-4xl mx-auto text-center space-y-10">
+        <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight drop-shadow-2xl">
+          Esoteric Wisdom
+        </h1>
+        <p class="text-lg md:text-2xl text-violet-100/90 max-w-2xl mx-auto">
+          A luminous portal into astrology, meditation, tarot and your private inner journal.
+          Crafted with love, built in Rust.
+        </p>
+        <div class="flex flex-wrap gap-4 justify-center mt-4">
+          <a href="/auth/signup" class="px-6 py-3 rounded-full bg-gradient-to-r from-amber-400 via-pink-500 to-violet-600 font-semibold shadow-lg shadow-amber-500/40 hover:scale-105 transition-transform">
+            Create Your Sanctuary
+          </a>
+          <a href="/auth/login" class="px-6 py-3 rounded-full border border-violet-400/80 bg-black/40 backdrop-blur-md font-semibold hover:bg-violet-500/20 hover:scale-105 transition-transform">
+            Enter Esoteric Wisdom
+          </a>
+        </div>
+        <div class="grid md:grid-cols-4 gap-4 mt-10">
+          <div class="bg-white/5 border border-purple-500/40 rounded-2xl p-4 backdrop-blur-md shadow-lg">
+            <h2 class="font-semibold mb-2">Astrology</h2>
+            <p class="text-sm text-violet-100/80">Ancient archetypes, modern stars. Explore the constellations.</p>
+          </div>
+          <div class="bg-white/5 border border-indigo-500/40 rounded-2xl p-4 backdrop-blur-md shadow-lg">
+            <h2 class="font-semibold mb-2">Meditation</h2>
+            <p class="text-sm text-violet-100/80">Guided and unguided journeys with celestial soundscapes.</p>
+          </div>
+          <div class="bg-white/5 border border-pink-500/40 rounded-2xl p-4 backdrop-blur-md shadow-lg">
+            <h2 class="font-semibold mb-2">Tarot</h2>
+            <p class="text-sm text-violet-100/80">Flip cards, receive symbols, write your own meaning.</p>
+          </div>
+          <div class="bg-white/5 border border-emerald-500/40 rounded-2xl p-4 backdrop-blur-md shadow-lg">
+            <h2 class="font-semibold mb-2">Journal</h2>
+            <p class="text-sm text-violet-100/80">A private log of your inner sky, protected behind your password.</p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

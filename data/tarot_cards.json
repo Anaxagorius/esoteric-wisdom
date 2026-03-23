@@ -1,0 +1,29 @@
+[
+  {
+    "id": "major_0",
+    "name": "The Fool",
+    "arcana": "Major",
+    "suit": null,
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/55/RWS_Tarot_00_Fool.jpg",
+    "meaning_upright": "New beginnings, innocence, trust in the universe, a leap of faith.",
+    "meaning_reversed": "Recklessness, naivety, hesitation, fear of the unknown."
+  },
+  {
+    "id": "major_17",
+    "name": "The Star",
+    "arcana": "Major",
+    "suit": null,
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/db/RWS_Tarot_17_Star.jpg",
+    "meaning_upright": "Hope, renewal, spiritual connection, inner calm, guidance.",
+    "meaning_reversed": "Doubt, lack of faith, discouragement, feeling disconnected."
+  },
+  {
+    "id": "cups_ace",
+    "name": "Ace of Cups",
+    "arcana": "Minor",
+    "suit": "Cups",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/36/Cups01.jpg",
+    "meaning_upright": "Emotional opening, new love, intuition, creative flow.",
+    "meaning_reversed": "Emotional block, holding back feelings, creative drought."
+  }
+]

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Esoteric Wisdom</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body { background: radial-gradient(circle at top, #3b0764 0, #020617 50%, #000000 100%); }
+      .starfield {
+        background-image: radial-gradient(circle, rgba(255,255,255,0.4) 1px, transparent 1px);
+        background-size: 3px 3px;
+        opacity: 0.3;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen text-white px-4 py-8">
+    <div class="fixed inset-0 starfield pointer-events-none"></div>
+    <div class="relative max-w-3xl mx-auto space-y-6 bg-black/60 border border-indigo-500/60 rounded-3xl p-6 backdrop-blur-xl shadow-2xl">
+      <header class="flex items-center justify-between">
+        <h1 class="text-3xl font-bold">Meditation</h1>
+        <a href="/" class="text-sm text-violet-200 hover:underline">Back to Portal</a>
+      </header>
+      <p class="text-sm text-violet-100/90">Choose your journey, your duration, and your soundscape.</p>
+      <form class="space-y-4" method="get" action="/meditation">
+        <div>
+          <label class="block text-sm mb-1">Mode</label>
+          <select name="mode" class="w-full rounded-xl bg-black/70 border border-indigo-400/70 px-3 py-2">
+            <option value="guided">Guided</option>
+            <option value="unguided">Unguided</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-sm mb-1">Duration (minutes)</label>
+          <input type="number" name="minutes" value="10" min="1" max="90" class="w-full rounded-xl bg-black/70 border border-indigo-400/70 px-3 py-2" />
+        </div>
+        <div>
+          <label class="block text-sm mb-1">Music</label>
+          <select name="track" class="w-full rounded-xl bg-black/70 border border-indigo-400/70 px-3 py-2">
+            <option value="pixabay_example">Pixabay – Deep Meditation Track</option>
+            <option value="mixkit_example">Mixkit – Calm Ambient Meditation</option>
+          </select>
+        </div>
+        <button type="submit" class="w-full py-2 rounded-full bg-gradient-to-r from-indigo-400 to-emerald-500 font-semibold hover:scale-105 transition-transform">
+          Start Session (Mockup)</button>
+      </form>
+      <p class="text-xs text-violet-100/80">
+        Example free sources you can wire in:
+        <br/>- Pixabay Meditation music – https://pixabay.com/music/search/meditation/
+        <br/>- Mixkit Meditation tracks – https://mixkit.co/free-stock-music/tag/meditation/
+      </p>
+    </div>
+  </body>
+</html>

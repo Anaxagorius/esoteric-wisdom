@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Esoteric Wisdom</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body { background: radial-gradient(circle at top, #3b0764 0, #020617 50%, #000000 100%); }
+      .starfield {
+        background-image: radial-gradient(circle, rgba(255,255,255,0.4) 1px, transparent 1px);
+        background-size: 3px 3px;
+        opacity: 0.3;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen text-white flex items-center justify-center px-4">
+    <div class="fixed inset-0 starfield pointer-events-none"></div>
+    <div class="relative w-full max-w-md bg-black/60 border border-emerald-400/80 rounded-3xl p-8 shadow-2xl backdrop-blur-xl">
+      <h1 class="text-2xl font-bold mb-6 text-center">Create Your Sanctuary</h1>
+      {{% if error.is_some() %}}
+      <div class="mb-4 text-sm text-red-300 bg-red-900/40 border border-red-500/60 rounded-lg p-3">
+        {{{{ error.as_ref().unwrap() }}}}
+      </div>
+      {{% endif %}}
+      <form method="post" action="/auth/signup" class="space-y-4">
+        <div>
+          <label class="block text-sm mb-1">Email</label>
+          <input type="email" name="email" required class="w-full rounded-xl bg-black/70 border border-emerald-400/70 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-amber-400" />
+        </div>
+        <div>
+          <label class="block text-sm mb-1">Password</label>
+          <input type="password" name="password" required class="w-full rounded-xl bg-black/70 border border-emerald-400/70 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-amber-400" />
+        </div>
+        <button type="submit" class="w-full mt-4 py-2 rounded-full bg-gradient-to-r from-emerald-400 to-violet-600 font-semibold hover:scale-105 transition-transform">Sign Up</button>
+      </form>
+      <p class="mt-4 text-center text-sm text-violet-100/80">
+        Already have a portal key? <a href="/auth/login" class="text-amber-300 hover:underline">Log in</a>
+      </p>
+    </div>
+  </body>
+</html>

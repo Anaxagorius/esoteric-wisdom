@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Esoteric Wisdom</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body { background: radial-gradient(circle at top, #3b0764 0, #020617 50%, #000000 100%); }
+      .starfield {
+        background-image: radial-gradient(circle, rgba(255,255,255,0.4) 1px, transparent 1px);
+        background-size: 3px 3px;
+        opacity: 0.3;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen text-white px-4 py-8">
+    <div class="fixed inset-0 starfield pointer-events-none"></div>
+    <div class="relative max-w-5xl mx-auto space-y-8">
+      <header class="flex items-center justify-between">
+        <h1 class="text-3xl font-bold">Astrology</h1>
+        <a href="/" class="text-sm text-violet-200 hover:underline">Back to Portal</a>
+      </header>
+      <section class="bg-black/60 border border-purple-500/60 rounded-3xl p-6 backdrop-blur-xl shadow-2xl">
+        <h2 class="text-xl font-semibold mb-2">Ancient Archetypes</h2>
+        <p class="text-sm text-violet-100/90">
+          In Esoteric Wisdom, astrology is treated as a poetic mirror rather than fixed destiny.
+          Each sign is an archetype; each planet, a pattern; each constellation, a story in the sky.
+        </p>
+      </section>
+      <section class="space-y-4">
+        <h2 class="text-xl font-semibold">Constellation Gateways</h2>
+        <p class="text-sm text-violet-100/80">
+          Explore official NASA resources for the constellations and night sky:
+        </p>
+        <ul class="space-y-2 text-sm list-disc list-inside">
+          <li><a class="text-amber-300 hover:underline" href="https://www.nasa.gov/solar-system/skywatching/constellations/" target="_blank">NASA – Constellations Overview</a></li>
+          <li><a class="text-amber-300 hover:underline" href="https://starchild.gsfc.nasa.gov/docs/StarChild/questions/88constellations.html" target="_blank">NASA – 88 Officially Recognized Constellations</a></li>
+          <li><a class="text-amber-300 hover:underline" href="https://images.nasa.gov/" target="_blank">NASA Image & Video Library</a></li>
+          <li><a class="text-amber-300 hover:underline" href="https://apod.nasa.gov/apod/" target="_blank">Astronomy Picture of the Day</a></li>
+        </ul>
+      </section>
+    </div>
+  </body>
+</html>

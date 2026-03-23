@@ -1,0 +1,31 @@
+[package]
+name = "esoteric_wisdom"
+version = "0.1.0"
+edition = "2021"
+
+description = "Esoteric Wisdom - A spiritual portal with astrology, meditation, tarot, and journaling built in Rust with Axum."
+authors = ["You <you@example.com>"]
+license = "MIT"
+
+[dependencies]
+axum = { version = "0.7", features = ["macros"] }
+tokio = { version = "1", features = ["full"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tower = "0.5"
+tower-cookies = "0.10"
+argon2 = "0.5"
+uuid = { version = "1", features = ["v4", "serde"] }
+jsonwebtoken = "9"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+askama = "0.12"
+rand = "0.8"
+anyhow = "1"
+chrono = { version = "0.4", features = ["serde"] }
+
+[profile.dev]
+opt-level = 0
+
+[profile.release]
+opt-level = 3
