@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Choose Your Tarot Deck — Esoteric Wisdom</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+    <style>
+      body {
+        background: radial-gradient(ellipse at top, #4c0519 0%, #1e1b4b 30%, #020617 70%, #000000 100%);
+        font-family: 'Raleway', sans-serif;
+      }
+      .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+      @keyframes twinkle { 0%,100% { opacity: 0.2; } 50% { opacity: 1; } }
+      .star { position: absolute; border-radius: 50%; background: white; animation: twinkle var(--dur,3s) ease-in-out infinite; animation-delay: var(--delay,0s); }
+      @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+      .floating { animation: float 5s ease-in-out infinite; }
+      @keyframes shimmer {
+        0% { background-position: -200% center; }
+        100% { background-position: 200% center; }
+      }
+      .aurora-text {
+        background: linear-gradient(90deg, #f59e0b, #ec4899, #a78bfa, #34d399, #f59e0b);
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        animation: shimmer 4s linear infinite;
+      }
+      .deck-card {
+        transition: all 0.35s cubic-bezier(0.4,0,0.2,1);
+        cursor: pointer;
+      }
+      .deck-card:hover {
+        transform: translateY(-10px) scale(1.03);
+      }
+      @keyframes fade-in {
+        from { opacity: 0; transform: translateY(24px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .fade-in { animation: fade-in 0.7s ease-out both; }
+      .fade-in-2 { animation: fade-in 0.7s ease-out 0.15s both; }
+      .fade-in-3 { animation: fade-in 0.7s ease-out 0.3s both; }
+    </style>
+  </head>
+  <body class="min-h-screen text-white px-4 py-8">
+    <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+
+    <div class="relative z-10 max-w-5xl mx-auto">
+      <!-- Navigation -->
+      <nav class="flex items-center justify-between bg-black/30 backdrop-blur-md rounded-2xl px-6 py-3 border border-pink-500/20 mb-10">
+        <a href="/" class="font-cinzel text-amber-300 text-sm tracking-widest">✦ Esoteric Wisdom</a>
+        <div class="flex gap-6 text-xs text-violet-200">
+          <a href="/astrology" class="hover:text-amber-300 transition-colors">Astrology</a>
+          <a href="/meditation" class="hover:text-amber-300 transition-colors">Meditation</a>
+          <a href="/tarot/select" class="text-amber-300 font-semibold">Tarot</a>
+          <a href="/journal" class="hover:text-amber-300 transition-colors">Journal</a>
+        </div>
+      </nav>
+
+      <!-- Header -->
+      <div class="text-center mb-12">
+        <div class="floating text-5xl mb-4">🃏</div>
+        <h1 class="font-cinzel text-4xl font-bold aurora-text mb-3">Choose Your Deck</h1>
+        <p class="text-pink-200/70 text-sm max-w-xl mx-auto">
+          Three great tarot traditions await. Select the lineage whose symbols speak to your soul.
+        </p>
+      </div>
+
+      <!-- Deck Cards -->
+      <div class="grid md:grid-cols-3 gap-8 mb-12">
+
+        <!-- Rider-Waite-Smith -->
+        <a href="/tarot/draw?deck=rws"
+           class="deck-card fade-in bg-gradient-to-br from-amber-900/50 to-orange-900/50 border border-amber-500/50 rounded-3xl p-7 backdrop-blur-xl shadow-2xl shadow-amber-500/20 flex flex-col items-center text-center">
+          <div class="text-6xl mb-4">🌟</div>
+          <h2 class="font-cinzel text-xl font-bold text-amber-300 mb-1">Rider–Waite–Smith</h2>
+          <div class="text-xs text-amber-400/70 uppercase tracking-widest mb-4">1909 · Arthur E. Waite &amp; Pamela Colman Smith</div>
+          <p class="text-sm text-violet-100/80 leading-relaxed mb-5">
+            The world's most widely used tarot deck. Introduced fully illustrated Minor Arcana,
+            making intuitive reading accessible to all. A revolution in Western esoteric thought.
+          </p>
+          <div class="mt-auto w-full border-t border-amber-500/20 pt-4">
+            <div class="flex flex-wrap gap-2 justify-center text-xs">
+              <span class="px-2 py-1 bg-amber-900/50 border border-amber-500/30 rounded-full text-amber-300">Illustrated Pips</span>
+              <span class="px-2 py-1 bg-amber-900/50 border border-amber-500/30 rounded-full text-amber-300">Intuitive</span>
+              <span class="px-2 py-1 bg-amber-900/50 border border-amber-500/30 rounded-full text-amber-300">Most Popular</span>
+            </div>
+          </div>
+          <div class="mt-5 px-6 py-2.5 rounded-full bg-gradient-to-r from-amber-400 to-orange-500 text-white text-sm font-semibold hover:opacity-90 transition-opacity">
+            Draw from RWS →
+          </div>
+        </a>
+
+        <!-- Tarot de Marseille -->
+        <a href="/tarot/draw?deck=marseille"
+           class="deck-card fade-in-2 bg-gradient-to-br from-rose-900/50 to-red-900/50 border border-rose-500/50 rounded-3xl p-7 backdrop-blur-xl shadow-2xl shadow-rose-500/20 flex flex-col items-center text-center">
+          <div class="text-6xl mb-4">⚜️</div>
+          <h2 class="font-cinzel text-xl font-bold text-rose-300 mb-1">Tarot de Marseille</h2>
+          <div class="text-xs text-rose-400/70 uppercase tracking-widest mb-4">15th–17th Century · The Original Lineage</div>
+          <p class="text-sm text-violet-100/80 leading-relaxed mb-5">
+            The OG lineage of Western tarot. Bold woodcut imagery rooted in medieval symbolism.
+            The backbone of European tarot tradition and one of the most historically dominant styles.
+          </p>
+          <div class="mt-auto w-full border-t border-rose-500/20 pt-4">
+            <div class="flex flex-wrap gap-2 justify-center text-xs">
+              <span class="px-2 py-1 bg-rose-900/50 border border-rose-500/30 rounded-full text-rose-300">Woodcut Style</span>
+              <span class="px-2 py-1 bg-rose-900/50 border border-rose-500/30 rounded-full text-rose-300">Historical</span>
+              <span class="px-2 py-1 bg-rose-900/50 border border-rose-500/30 rounded-full text-rose-300">French Names</span>
+            </div>
+          </div>
+          <div class="mt-5 px-6 py-2.5 rounded-full bg-gradient-to-r from-rose-400 to-red-500 text-white text-sm font-semibold hover:opacity-90 transition-opacity">
+            Draw from Marseille →
+          </div>
+        </a>
+
+        <!-- Thoth Tarot -->
+        <a href="/tarot/draw?deck=thoth"
+           class="deck-card fade-in-3 bg-gradient-to-br from-violet-900/50 to-indigo-900/50 border border-violet-500/50 rounded-3xl p-7 backdrop-blur-xl shadow-2xl shadow-violet-500/20 flex flex-col items-center text-center">
+          <div class="text-6xl mb-4">🔯</div>
+          <h2 class="font-cinzel text-xl font-bold text-violet-300 mb-1">Thoth Tarot</h2>
+          <div class="text-xs text-violet-400/70 uppercase tracking-widest mb-4">1944 · Aleister Crowley &amp; Lady Frieda Harris</div>
+          <p class="text-sm text-violet-100/80 leading-relaxed mb-5">
+            A symbolic powerhouse — deeply rooted in Kabbalah, astrology, and Thelema.
+            Considered one of the three major tarot traditions. For the serious student of esotericism.
+          </p>
+          <div class="mt-auto w-full border-t border-violet-500/20 pt-4">
+            <div class="flex flex-wrap gap-2 justify-center text-xs">
+              <span class="px-2 py-1 bg-violet-900/50 border border-violet-500/30 rounded-full text-violet-300">Kabbalah</span>
+              <span class="px-2 py-1 bg-violet-900/50 border border-violet-500/30 rounded-full text-violet-300">Astrology</span>
+              <span class="px-2 py-1 bg-violet-900/50 border border-violet-500/30 rounded-full text-violet-300">Thelema</span>
+            </div>
+          </div>
+          <div class="mt-5 px-6 py-2.5 rounded-full bg-gradient-to-r from-violet-400 to-indigo-500 text-white text-sm font-semibold hover:opacity-90 transition-opacity">
+            Draw from Thoth →
+          </div>
+        </a>
+
+      </div>
+
+      <!-- Tradition info -->
+      <div class="bg-black/40 border border-violet-500/20 rounded-2xl p-6 backdrop-blur-md text-center max-w-2xl mx-auto">
+        <p class="text-xs text-violet-300/50 uppercase tracking-widest mb-2">Three Great Traditions</p>
+        <p class="text-sm text-violet-100/70 italic leading-relaxed">
+          Each tradition carries centuries of wisdom. Marseille is the ancestral root, RWS brought the image-rich revolution, and Thoth synthesized the Western esoteric current. Choose with intention.
+        </p>
+      </div>
+
+      <!-- Back link -->
+      <div class="text-center mt-8">
+        <a href="/" class="text-xs text-violet-300/50 hover:text-violet-300 transition-colors">← Return to Portal</a>
+      </div>
+    </div>
+
+    <script>
+      const sf = document.getElementById('starfield');
+      for (let i = 0; i < 180; i++) {
+        const s = document.createElement('div');
+        s.className = 'star';
+        const size = Math.random() * 2.5 + 0.5;
+        s.style.cssText = `width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--dur:${2+Math.random()*5}s;--delay:${Math.random()*6}s;`;
+        sf.appendChild(s);
+      }
+    </script>
+  </body>
+</html>

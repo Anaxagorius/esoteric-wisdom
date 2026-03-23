@@ -26,10 +26,16 @@ pub struct AstrologyTemplate;
 pub struct MeditationTemplate;
 
 #[derive(Template)]
+#[template(path = "tarot_select.html")]
+pub struct TarotSelectTemplate;
+
+#[derive(Template)]
 #[template(path = "tarot_draw.html")]
 pub struct TarotDrawTemplate<'a> {
     pub card: &'a crate::tarot::TarotCard,
     pub reversed: bool,
+    pub deck_name: &'a str,
+    pub deck_key: &'a str,
 }
 
 #[derive(Template)]

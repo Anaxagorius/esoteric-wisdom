@@ -97,7 +97,7 @@
         <div class="flex gap-6 text-xs text-violet-200">
           <a href="/astrology" class="hover:text-amber-300 transition-colors">Astrology</a>
           <a href="/meditation" class="hover:text-amber-300 transition-colors">Meditation</a>
-          <a href="/tarot/draw" class="text-amber-300 font-semibold">Tarot</a>
+          <a href="/tarot/select" class="text-amber-300 font-semibold">Tarot</a>
           <a href="/journal" class="hover:text-amber-300 transition-colors">Journal</a>
         </div>
       </nav>
@@ -164,7 +164,7 @@
 
         <!-- Actions -->
         <div class="flex flex-col sm:flex-row gap-4 items-center">
-          <a href="/tarot/draw"
+          <a href="/tarot/draw?deck={{ deck_key }}"
              class="px-8 py-3 rounded-full bg-gradient-to-r from-amber-400 via-pink-500 to-violet-600 font-semibold hover:scale-105 hover:shadow-lg hover:shadow-pink-500/30 transition-all duration-300">
             🔀 Draw Another Card
           </a>
@@ -175,11 +175,13 @@
         </div>
 
         <!-- Deck source credit -->
-        <p class="text-xs text-violet-300/40 text-center">
-          Rider-Waite-Smith Tarot · Images via
-          <a href="https://commons.wikimedia.org/wiki/Category:Rider-Waite_tarot_card_images" target="_blank" rel="noopener" class="hover:text-violet-300 underline">Wikimedia Commons</a>
-          (Public Domain)
-        </p>
+        <div class="flex flex-col items-center gap-2">
+          <p class="font-cinzel text-xs text-violet-300/50 text-center tracking-widest">{{ deck_name }}</p>
+          <a href="/tarot/select"
+             class="text-xs text-violet-300/40 hover:text-amber-300 transition-colors underline">
+            ✦ Change Deck
+          </a>
+        </div>
       </div>
     </div>
 
