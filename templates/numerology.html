@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Numerology — Esoteric Wisdom</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+    <style>
+      body {
+        background: radial-gradient(ellipse at top, #312e81 0%, #1e1b4b 30%, #020617 70%, #000000 100%);
+        font-family: 'Raleway', sans-serif;
+      }
+      .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+      @keyframes twinkle { 0%, 100% { opacity: 0.2; } 50% { opacity: 1; } }
+      .star { position: absolute; border-radius: 50%; background: white; animation: twinkle var(--dur,3s) ease-in-out infinite; animation-delay: var(--delay,0s); }
+      @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+      .floating { animation: float 5s ease-in-out infinite; }
+      @keyframes pulse-number {
+        0%, 100% { text-shadow: 0 0 20px rgba(251,191,36,0.5); }
+        50% { text-shadow: 0 0 40px rgba(251,191,36,0.9), 0 0 80px rgba(251,191,36,0.4); }
+      }
+      .number-glow { animation: pulse-number 3s ease-in-out infinite; }
+      .number-card { transition: all 0.3s ease; cursor: default; }
+      .number-card:hover { transform: translateY(-6px); box-shadow: 0 20px 60px rgba(99,102,241,0.3); }
+      .karmic-card { transition: all 0.3s ease; }
+      .karmic-card:hover { transform: translateY(-4px); border-color: rgba(239,68,68,0.6) !important; box-shadow: 0 16px 48px rgba(239,68,68,0.2); }
+      .master-card { transition: all 0.3s ease; }
+      .master-card:hover { transform: translateY(-4px); border-color: rgba(251,191,36,0.7) !important; box-shadow: 0 16px 48px rgba(251,191,36,0.25); }
+      .calc-input {
+        background: rgba(0,0,0,0.5);
+        border: 1px solid rgba(99,102,241,0.4);
+        color: white;
+        transition: border-color 0.3s;
+      }
+      .calc-input:focus { outline: none; border-color: rgba(251,191,36,0.7); box-shadow: 0 0 0 3px rgba(251,191,36,0.1); }
+      #calc-result { transition: all 0.4s ease; }
+    </style>
+  </head>
+  <body class="min-h-screen text-white px-4 py-8">
+    <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+
+    <div class="relative z-10 max-w-6xl mx-auto space-y-12">
+
+      <!-- Navigation -->
+      <nav class="flex items-center justify-between bg-black/30 backdrop-blur-md rounded-2xl px-6 py-3 border border-indigo-500/20">
+        <a href="/" class="font-cinzel text-amber-300 text-sm tracking-widest">✦ Esoteric Wisdom</a>
+        <div class="flex gap-6 text-xs text-violet-200">
+          <a href="/astrology" class="hover:text-amber-300 transition-colors">Astrology</a>
+          <a href="/meditation" class="hover:text-amber-300 transition-colors">Meditation</a>
+          <a href="/tarot/select" class="hover:text-amber-300 transition-colors">Tarot</a>
+          <a href="/numerology" class="text-amber-300 font-semibold">Numerology</a>
+          <a href="/journal" class="hover:text-amber-300 transition-colors">Journal</a>
+        </div>
+      </nav>
+
+      <!-- Hero -->
+      <header class="text-center py-6">
+        <div class="floating text-6xl mb-4">🔢</div>
+        <h1 class="font-cinzel text-4xl md:text-5xl font-bold mb-3" style="text-shadow: 0 0 40px rgba(99,102,241,0.9);">
+          Numerology
+        </h1>
+        <p class="text-indigo-200/80 text-lg max-w-2xl mx-auto leading-relaxed">
+          The ancient science of numbers. Every soul arrives coded in vibration — your birth date and name are not coincidences but a precise celestial signature, a cosmic fingerprint waiting to be decoded.
+        </p>
+      </header>
+
+      <!-- History & Philosophy -->
+      <section class="bg-gradient-to-br from-indigo-900/40 to-violet-900/40 border border-indigo-500/40 rounded-3xl p-8 backdrop-blur-md shadow-2xl">
+        <h2 class="font-cinzel text-2xl font-semibold mb-5 text-amber-300">✦ The Ancient Science of Numbers</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <p class="text-violet-100/90 text-sm leading-relaxed mb-4">
+              Numerology is one of the oldest metaphysical sciences, predating modern mathematics itself. The Greek philosopher <strong class="text-amber-300">Pythagoras</strong> — who lived around 570–495 BCE — taught that numbers are the fundamental nature of all reality. "All is number," he declared, believing the universe vibrates at distinct numerical frequencies that shape fate, character, and destiny.
+            </p>
+            <p class="text-violet-100/90 text-sm leading-relaxed mb-4">
+              Yet Pythagoras did not invent numerology; he refined it. Ancient Babylonians, Egyptians, Chinese, and Hebrew mystics each developed rich numerological traditions thousands of years earlier. The <strong class="text-amber-300">Kabbalah</strong> gave rise to Gematria — assigning numerical values to Hebrew letters to reveal hidden meanings in sacred texts. In Vedic India, <em>Ankashastra</em> mapped planets to numbers in an astrological numerology still practised today.
+            </p>
+            <p class="text-violet-100/90 text-sm leading-relaxed">
+              The <strong class="text-amber-300">Chaldean system</strong>, developed in ancient Mesopotamia, assigns numbers based on vibrational sound rather than alphabetical order, and is considered by many practitioners to be the more spiritually precise system. The <strong class="text-amber-300">Pythagorean (Western) system</strong> assigns letters sequentially (A=1, B=2, C=3…) and is the most widely used in contemporary practice.
+            </p>
+          </div>
+          <div>
+            <p class="text-violet-100/90 text-sm leading-relaxed mb-4">
+              Numerology operates on a single foundational principle: <em>every multi-digit number can be reduced to a single digit</em> by summing its components repeatedly — a process called <strong class="text-amber-300">digit summing</strong> or <em>theosophical reduction</em>. The exception to this rule is the three Master Numbers — <strong class="text-amber-300">11, 22, and 33</strong> — which carry such concentrated spiritual power they are never reduced further.
+            </p>
+            <div class="bg-black/40 rounded-2xl p-4 border border-amber-500/20">
+              <h3 class="font-cinzel text-sm text-amber-300 mb-3">Example Reduction</h3>
+              <p class="text-xs text-violet-200/80 leading-relaxed">
+                Birth date: <strong class="text-white">September 29, 1989</strong><br/>
+                Month: 9 → <strong class="text-amber-300">9</strong><br/>
+                Day: 29 → 2+9 = <strong class="text-amber-300">11</strong> → Master Number — do not reduce<br/>
+                Year: 1989 → 1+9+8+9 = 27 → 2+7 = <strong class="text-amber-300">9</strong><br/>
+                Sum: 9+11+9 = 29 → 2+9 = <strong class="text-amber-300">11</strong> → Master Number! (do not reduce)<br/>
+                <span class="text-emerald-300 font-semibold">Life Path: 11</span>
+              </p>
+            </div>
+            <p class="text-violet-100/90 text-sm leading-relaxed mt-4">
+              Beyond birth dates, numerology also reads the name given at birth, translating each letter into its numerical value using the Pythagorean chart. Different calculations within the name reveal different layers of the soul — the outer expression, the inner longing, and the hidden karmic patterns woven across lifetimes.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pythagorean Letter Chart -->
+      <section class="bg-gradient-to-br from-violet-900/30 to-indigo-900/30 border border-violet-500/30 rounded-3xl p-8 backdrop-blur-md">
+        <h2 class="font-cinzel text-xl font-semibold mb-5 text-amber-300">✦ The Pythagorean Alphabet Chart</h2>
+        <p class="text-violet-100/80 text-sm mb-6 max-w-3xl">In the Pythagorean system, each letter of the alphabet maps to a number 1–9. This is the key you use to translate your name into numbers for Soul Urge, Expression, and Personality readings.</p>
+        <div class="overflow-x-auto">
+          <table class="w-full text-center text-sm">
+            <thead>
+              <tr class="border-b border-violet-500/30">
+                <th class="py-2 px-3 text-amber-300 font-cinzel text-xs">1</th>
+                <th class="py-2 px-3 text-amber-300 font-cinzel text-xs">2</th>
+                <th class="py-2 px-3 text-amber-300 font-cinzel text-xs">3</th>
+                <th class="py-2 px-3 text-amber-300 font-cinzel text-xs">4</th>
+                <th class="py-2 px-3 text-amber-300 font-cinzel text-xs">5</th>
+                <th class="py-2 px-3 text-amber-300 font-cinzel text-xs">6</th>
+                <th class="py-2 px-3 text-amber-300 font-cinzel text-xs">7</th>
+                <th class="py-2 px-3 text-amber-300 font-cinzel text-xs">8</th>
+                <th class="py-2 px-3 text-amber-300 font-cinzel text-xs">9</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="py-2 px-3 text-violet-200">A J S</td>
+                <td class="py-2 px-3 text-violet-200">B K T</td>
+                <td class="py-2 px-3 text-violet-200">C L U</td>
+                <td class="py-2 px-3 text-violet-200">D M V</td>
+                <td class="py-2 px-3 text-violet-200">E N W</td>
+                <td class="py-2 px-3 text-violet-200">F O X</td>
+                <td class="py-2 px-3 text-violet-200">G P Y</td>
+                <td class="py-2 px-3 text-violet-200">H Q Z</td>
+                <td class="py-2 px-3 text-violet-200">I R</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-violet-300/60 text-xs mt-4">Vowels: A, E, I, O, U — used for Soul Urge / Heart's Desire. Consonants — used for Personality Number. All letters together — used for Expression / Destiny Number.</p>
+      </section>
+
+      <!-- Interactive Calculator -->
+      <section class="bg-gradient-to-br from-amber-900/20 to-indigo-900/30 border border-amber-500/30 rounded-3xl p-8 backdrop-blur-md shadow-2xl">
+        <h2 class="font-cinzel text-xl font-semibold mb-2 text-amber-300">✦ Numerology Calculator</h2>
+        <p class="text-violet-200/70 text-sm mb-6">Enter your birth date and full birth name to reveal your core numbers instantly.</p>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="space-y-4">
+            <div>
+              <label class="text-xs text-violet-300 uppercase tracking-widest mb-1 block">Full Birth Date</label>
+              <input id="calc-dob" type="date" class="calc-input w-full rounded-xl px-4 py-2.5 text-sm" />
+            </div>
+            <div>
+              <label class="text-xs text-violet-300 uppercase tracking-widest mb-1 block">Full Name at Birth</label>
+              <input id="calc-name" type="text" placeholder="e.g. Eleanor Rose Thompson" class="calc-input w-full rounded-xl px-4 py-2.5 text-sm" maxlength="80" />
+            </div>
+            <button onclick="calculateNumerology()"
+              class="w-full py-3 rounded-xl bg-gradient-to-r from-amber-500 to-indigo-600 font-semibold text-sm hover:scale-105 hover:shadow-lg hover:shadow-amber-500/30 transition-all">
+              ✨ Reveal My Numbers
+            </button>
+          </div>
+          <div id="calc-result" class="hidden bg-black/40 rounded-2xl p-5 border border-indigo-500/30 space-y-3">
+            <h3 class="font-cinzel text-sm text-amber-300 mb-3">Your Core Numbers</h3>
+            <div class="grid grid-cols-2 gap-3 text-xs">
+              <div class="bg-black/30 rounded-xl p-3">
+                <div class="text-violet-300/60 mb-1">Life Path</div>
+                <div id="res-lifepath" class="text-2xl font-bold text-amber-300 number-glow">—</div>
+              </div>
+              <div class="bg-black/30 rounded-xl p-3">
+                <div class="text-violet-300/60 mb-1">Expression</div>
+                <div id="res-expression" class="text-2xl font-bold text-indigo-300 number-glow">—</div>
+              </div>
+              <div class="bg-black/30 rounded-xl p-3">
+                <div class="text-violet-300/60 mb-1">Soul Urge</div>
+                <div id="res-soul" class="text-2xl font-bold text-emerald-300 number-glow">—</div>
+              </div>
+              <div class="bg-black/30 rounded-xl p-3">
+                <div class="text-violet-300/60 mb-1">Personality</div>
+                <div id="res-personality" class="text-2xl font-bold text-pink-300 number-glow">—</div>
+              </div>
+              <div class="bg-black/30 rounded-xl p-3">
+                <div class="text-violet-300/60 mb-1">Birthday</div>
+                <div id="res-birthday" class="text-2xl font-bold text-cyan-300 number-glow">—</div>
+              </div>
+              <div class="bg-black/30 rounded-xl p-3">
+                <div class="text-violet-300/60 mb-1">Personal Year</div>
+                <div id="res-personalyear" class="text-2xl font-bold text-rose-300 number-glow">—</div>
+              </div>
+            </div>
+            <p id="res-lifepath-desc" class="text-xs text-violet-200/70 leading-relaxed pt-2 border-t border-violet-500/20"></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Life Path Numbers -->
+      <section>
+        <h2 class="font-cinzel text-2xl font-semibold mb-3 text-amber-300 text-center">✦ Life Path Numbers</h2>
+        <p class="text-center text-violet-200/70 text-sm max-w-2xl mx-auto mb-8">The Life Path Number is the most important number in your chart. Calculated from your full birth date, it reveals the overarching theme of your earthly journey — your greatest gifts, your deepest lessons, and the path your soul chose to walk in this lifetime.</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
+          <div class="number-card bg-gradient-to-br from-red-900/40 to-orange-900/40 border border-red-500/30 rounded-2xl p-5 backdrop-blur-md">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="font-cinzel text-3xl font-bold text-red-300 number-glow">1</span>
+              <span class="font-cinzel text-sm text-red-200">The Pioneer</span>
+            </div>
+            <p class="text-xs text-violet-100/80 leading-relaxed mb-3">Born to lead, initiate, and forge new paths. You are independent, ambitious, and driven by an inner fire that refuses to be extinguished. The world needs your originality.</p>
+            <div class="text-xs text-red-300/70"><strong>Gifts:</strong> Leadership, innovation, courage, willpower</div>
+            <div class="text-xs text-red-300/70 mt-1"><strong>Lessons:</strong> Collaboration, humility, patience with others</div>
+            <div class="text-xs text-violet-300/50 mt-2 italic">Famous 1s: Tesla, Martin Luther King Jr., Steve Jobs</div>
+          </div>
+
+          <div class="number-card bg-gradient-to-br from-blue-900/40 to-cyan-900/40 border border-blue-500/30 rounded-2xl p-5 backdrop-blur-md">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="font-cinzel text-3xl font-bold text-blue-300 number-glow">2</span>
+              <span class="font-cinzel text-sm text-blue-200">The Peacemaker</span>
+            </div>
+            <p class="text-xs text-violet-100/80 leading-relaxed mb-3">Your soul's medicine is harmony. You are a bridge between worlds — sensitive, diplomatic, and profoundly attuned to the emotional undercurrents others miss entirely.</p>
+            <div class="text-xs text-blue-300/70"><strong>Gifts:</strong> Empathy, diplomacy, intuition, collaboration</div>
+            <div class="text-xs text-blue-300/70 mt-1"><strong>Lessons:</strong> Boundaries, self-worth, speaking your truth</div>
+            <div class="text-xs text-violet-300/50 mt-2 italic">Famous 2s: Barack Obama, Diana Princess of Wales</div>
+          </div>
+
+          <div class="number-card bg-gradient-to-br from-yellow-900/40 to-amber-900/40 border border-yellow-500/30 rounded-2xl p-5 backdrop-blur-md">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="font-cinzel text-3xl font-bold text-yellow-300 number-glow">3</span>
+              <span class="font-cinzel text-sm text-yellow-200">The Creative</span>
+            </div>
+            <p class="text-xs text-violet-100/80 leading-relaxed mb-3">Joy, self-expression, and creative abundance radiate from you. You are a natural communicator — words, art, music, and laughter flow through you as divine channels of light.</p>
+            <div class="text-xs text-yellow-300/70"><strong>Gifts:</strong> Creativity, optimism, communication, charisma</div>
+            <div class="text-xs text-yellow-300/70 mt-1"><strong>Lessons:</strong> Focus, emotional depth, completion of goals</div>
+            <div class="text-xs text-violet-300/50 mt-2 italic">Famous 3s: David Bowie, Cate Blanchett, Snoop Dogg</div>
+          </div>
+
+          <div class="number-card bg-gradient-to-br from-green-900/40 to-teal-900/40 border border-green-500/30 rounded-2xl p-5 backdrop-blur-md">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="font-cinzel text-3xl font-bold text-green-300 number-glow">4</span>
+              <span class="font-cinzel text-sm text-green-200">The Builder</span>
+            </div>
+            <p class="text-xs text-violet-100/80 leading-relaxed mb-3">You are the architect of the material world — disciplined, reliable, and blessed with the patience to build lasting structures from the ground up. Your word is your bond.</p>
+            <div class="text-xs text-green-300/70"><strong>Gifts:</strong> Discipline, loyalty, practicality, endurance</div>
+            <div class="text-xs text-green-300/70 mt-1"><strong>Lessons:</strong> Flexibility, joy, releasing rigidity</div>
+            <div class="text-xs text-violet-300/50 mt-2 italic">Famous 4s: Oprah Winfrey, Arnold Schwarzenegger</div>
+          </div>
+
+          <div class="number-card bg-gradient-to-br from-orange-900/40 to-red-900/40 border border-orange-500/30 rounded-2xl p-5 backdrop-blur-md">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="font-cinzel text-3xl font-bold text-orange-300 number-glow">5</span>
+              <span class="font-cinzel text-sm text-orange-200">The Adventurer</span>
+            </div>
+            <p class="text-xs text-violet-100/80 leading-relaxed mb-3">Freedom is your oxygen. Magnetic, versatile, and thrillingly unpredictable, you are here to experience the full spectrum of life — to taste every flavour the universe offers.</p>
+            <div class="text-xs text-orange-300/70"><strong>Gifts:</strong> Adaptability, magnetism, resourcefulness, curiosity</div>
+            <div class="text-xs text-orange-300/70 mt-1"><strong>Lessons:</strong> Commitment, groundedness, moderation</div>
+            <div class="text-xs text-violet-300/50 mt-2 italic">Famous 5s: Abraham Lincoln, Angelina Jolie</div>
+          </div>
+
+          <div class="number-card bg-gradient-to-br from-pink-900/40 to-rose-900/40 border border-pink-500/30 rounded-2xl p-5 backdrop-blur-md">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="font-cinzel text-3xl font-bold text-pink-300 number-glow">6</span>
+              <span class="font-cinzel text-sm text-pink-200">The Nurturer</span>
+            </div>
+            <p class="text-xs text-violet-100/80 leading-relaxed mb-3">Love is your purpose and your power. Responsible, compassionate, and naturally gifted at healing, you create sanctuary wherever you go. Home, family, and community are your sacred ground.</p>
+            <div class="text-xs text-pink-300/70"><strong>Gifts:</strong> Unconditional love, healing, responsibility, beauty</div>
+            <div class="text-xs text-pink-300/70 mt-1"><strong>Lessons:</strong> Self-care, releasing control, healthy boundaries</div>
+            <div class="text-xs text-violet-300/50 mt-2 italic">Famous 6s: John Lennon, Albert Einstein, Frida Kahlo</div>
+          </div>
+
+          <div class="number-card bg-gradient-to-br from-violet-900/40 to-purple-900/40 border border-violet-500/30 rounded-2xl p-5 backdrop-blur-md">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="font-cinzel text-3xl font-bold text-violet-300 number-glow">7</span>
+              <span class="font-cinzel text-sm text-violet-200">The Seeker</span>
+            </div>
+            <p class="text-xs text-violet-100/80 leading-relaxed mb-3">You are the mystic, the philosopher, the one who gazes at the stars and wonders why. Introspective, analytical, and deeply spiritual, you are driven by an insatiable hunger for truth beyond the veil of appearances.</p>
+            <div class="text-xs text-violet-300/70"><strong>Gifts:</strong> Wisdom, intuition, research, spiritual depth</div>
+            <div class="text-xs text-violet-300/70 mt-1"><strong>Lessons:</strong> Trust, vulnerability, connection with others</div>
+            <div class="text-xs text-violet-300/50 mt-2 italic">Famous 7s: Marilyn Monroe, Bruce Lee, Princess Diana</div>
+          </div>
+
+          <div class="number-card bg-gradient-to-br from-slate-800/60 to-indigo-900/40 border border-slate-400/30 rounded-2xl p-5 backdrop-blur-md">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="font-cinzel text-3xl font-bold text-slate-300 number-glow">8</span>
+              <span class="font-cinzel text-sm text-slate-200">The Powerhouse</span>
+            </div>
+            <p class="text-xs text-violet-100/80 leading-relaxed mb-3">You are here to master the material plane — to wield authority, build empires, and demonstrate that spiritual and worldly success are one and the same. Your number vibrates at the frequency of karma made manifest.</p>
+            <div class="text-xs text-slate-300/70"><strong>Gifts:</strong> Authority, ambition, financial mastery, resilience</div>
+            <div class="text-xs text-slate-300/70 mt-1"><strong>Lessons:</strong> Generosity, balance between giving and receiving</div>
+            <div class="text-xs text-violet-300/50 mt-2 italic">Famous 8s: Pablo Picasso, 50 Cent, Sandra Bullock</div>
+          </div>
+
+          <div class="number-card bg-gradient-to-br from-emerald-900/40 to-teal-900/40 border border-emerald-500/30 rounded-2xl p-5 backdrop-blur-md">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="font-cinzel text-3xl font-bold text-emerald-300 number-glow">9</span>
+              <span class="font-cinzel text-sm text-emerald-200">The Humanitarian</span>
+            </div>
+            <p class="text-xs text-violet-100/80 leading-relaxed mb-3">The highest single digit — 9 embodies the completion of a grand cycle. You are the old soul, here to serve humanity with compassion, wisdom, and an unconditional love vast enough to encompass the whole world.</p>
+            <div class="text-xs text-emerald-300/70"><strong>Gifts:</strong> Compassion, wisdom, artistry, universal love</div>
+            <div class="text-xs text-emerald-300/70 mt-1"><strong>Lessons:</strong> Releasing attachments, embracing endings, forgiveness</div>
+            <div class="text-xs text-violet-300/50 mt-2 italic">Famous 9s: Mahatma Gandhi, Mother Teresa, Bob Marley</div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Master Numbers -->
+      <section>
+        <h2 class="font-cinzel text-2xl font-semibold mb-3 text-amber-300 text-center">✦ Master Numbers</h2>
+        <p class="text-center text-violet-200/70 text-sm max-w-2xl mx-auto mb-8">Master Numbers — 11, 22, and 33 — are the most spiritually potent vibrations in numerology. They carry double the power of their single-digit counterparts, along with double the challenges. These are the numbers of the highly evolved soul sent here with a specific mission.</p>
+        <div class="grid md:grid-cols-3 gap-6">
+
+          <div class="master-card bg-gradient-to-br from-indigo-900/50 to-violet-900/50 border border-indigo-400/40 rounded-2xl p-6 backdrop-blur-md shadow-xl">
+            <div class="text-center mb-4">
+              <span class="font-cinzel text-5xl font-bold text-indigo-300 number-glow">11</span>
+              <p class="font-cinzel text-sm text-indigo-200 mt-1">The Illuminator</p>
+              <p class="text-xs text-violet-300/50 mt-1">Master of Intuition &amp; Spiritual Vision</p>
+            </div>
+            <p class="text-xs text-violet-100/80 leading-relaxed mb-3">
+              Called the "psychic number," 11 is the bridge between the conscious and unconscious realms. Those born with this vibration arrive with an extraordinary pipeline to the divine — they perceive, feel, and know things that ordinary logic cannot explain.
+            </p>
+            <p class="text-xs text-violet-100/80 leading-relaxed mb-3">
+              The 11 path is not an easy one. The same sensitivity that grants visionary insight also makes the world feel overwhelming. Nervous anxiety, self-doubt, and an almost painful empathy are the shadow companions of this master number.
+            </p>
+            <div class="bg-black/30 rounded-xl p-3 text-xs">
+              <div class="text-indigo-300 font-semibold mb-1">Core Purpose</div>
+              <p class="text-violet-200/70">To be a channel of light — to inspire, uplift, and hold the spiritual torch for others, even when your own darkness feels all-consuming.</p>
+            </div>
+            <div class="text-xs text-violet-300/50 mt-3 italic">Famous 11s: Edgar Allan Poe, Michelle Obama, Mozart</div>
+          </div>
+
+          <div class="master-card bg-gradient-to-br from-amber-900/50 to-orange-900/50 border border-amber-400/40 rounded-2xl p-6 backdrop-blur-md shadow-xl">
+            <div class="text-center mb-4">
+              <span class="font-cinzel text-5xl font-bold text-amber-300 number-glow">22</span>
+              <p class="font-cinzel text-sm text-amber-200 mt-1">The Master Builder</p>
+              <p class="text-xs text-violet-300/50 mt-1">Master of Manifestation &amp; Legacy</p>
+            </div>
+            <p class="text-xs text-violet-100/80 leading-relaxed mb-3">
+              The most powerful number in numerology. 22 combines the intuition of 11 with the disciplined practicality of 4, creating a soul capable of turning the most ambitious spiritual visions into tangible, world-changing reality.
+            </p>
+            <p class="text-xs text-violet-100/80 leading-relaxed mb-3">
+              The 22 carries the weight of immense potential. These souls often feel the pressure of a grand mission pressing down upon them. The shadow side is paralysis — the fear of failure when so much is possible can be utterly immobilising.
+            </p>
+            <div class="bg-black/30 rounded-xl p-3 text-xs">
+              <div class="text-amber-300 font-semibold mb-1">Core Purpose</div>
+              <p class="text-violet-200/70">To construct lasting systems, organisations, or works that uplift civilisation itself — the true master architect of the human world.</p>
+            </div>
+            <div class="text-xs text-violet-300/50 mt-3 italic">Famous 22s: Bill Gates, Tina Turner, Hu Jintao</div>
+          </div>
+
+          <div class="master-card bg-gradient-to-br from-rose-900/50 to-pink-900/50 border border-rose-400/40 rounded-2xl p-6 backdrop-blur-md shadow-xl">
+            <div class="text-center mb-4">
+              <span class="font-cinzel text-5xl font-bold text-rose-300 number-glow">33</span>
+              <p class="font-cinzel text-sm text-rose-200 mt-1">The Master Teacher</p>
+              <p class="text-xs text-violet-300/50 mt-1">Master of Unconditional Love &amp; Service</p>
+            </div>
+            <p class="text-xs text-violet-100/80 leading-relaxed mb-3">
+              The rarest and most spiritually evolved of the Master Numbers, 33 is only truly active when it appears as the pure sum of a birth date (not as a reduced step along the way). It combines the creativity of 3 with the nurturing of 6, elevated to universal scale.
+            </p>
+            <p class="text-xs text-violet-100/80 leading-relaxed mb-3">
+              A true 33 life path is here to embody Christ-consciousness — selfless, unconditional, sacrificial love in its most elevated expression. Their very presence transforms suffering into grace.
+            </p>
+            <div class="bg-black/30 rounded-xl p-3 text-xs">
+              <div class="text-rose-300 font-semibold mb-1">Core Purpose</div>
+              <p class="text-violet-200/70">To uplift the entire human family through healing, teaching, and the radiant example of love lived without conditions or limits.</p>
+            </div>
+            <div class="text-xs text-violet-300/50 mt-3 italic">Famous 33s: Francis of Assisi, Meryl Streep</div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Core Numbers Deep-Dive -->
+      <section class="bg-gradient-to-br from-indigo-900/30 to-purple-900/30 border border-indigo-500/30 rounded-3xl p-8 backdrop-blur-md shadow-2xl">
+        <h2 class="font-cinzel text-2xl font-semibold mb-8 text-amber-300 text-center">✦ The Five Core Numbers</h2>
+        <div class="space-y-8">
+
+          <!-- Soul Urge -->
+          <div class="bg-black/30 rounded-2xl p-6 border border-emerald-500/20">
+            <div class="flex items-start gap-4 mb-4">
+              <span class="text-3xl">💚</span>
+              <div>
+                <h3 class="font-cinzel text-lg text-emerald-300">Soul Urge Number <span class="text-sm text-emerald-300/60">(Heart's Desire)</span></h3>
+                <p class="text-xs text-violet-300/60 mt-0.5">Calculated from the <strong class="text-emerald-300/80">vowels</strong> in your full birth name · A=1, E=5, I=9, O=6, U=3, Y=7</p>
+              </div>
+            </div>
+            <p class="text-sm text-violet-100/80 leading-relaxed mb-3">
+              The Soul Urge Number — also called the Heart's Desire — is perhaps the most intimate number in your chart. It is the number no-one else sees, the silent hunger that pulses beneath every decision you make and every dream you harbour in the privacy of your own soul.
+            </p>
+            <p class="text-sm text-violet-100/80 leading-relaxed mb-4">
+              While the Life Path describes the road you walk, the Soul Urge describes <em>why</em> you are walking it — the inner longing, the deepest motivation, the thing that, if given freely, would make you feel most fully alive. When your outer life aligns with your Soul Urge, you experience what mystics call <em>dharma</em> — a life lived in perfect resonance with the soul's authentic frequency.
+            </p>
+            <div class="bg-black/30 rounded-xl p-4 border border-emerald-500/15">
+              <p class="text-xs text-violet-300 font-semibold mb-2">Example Calculation</p>
+              <p class="text-xs text-violet-200/70 leading-relaxed">Name: <strong class="text-white">ELEANOR</strong> → Vowels: E(5) + E(5) + A(1) + O(6) = 17 → 1+7 = <strong class="text-emerald-300">8</strong> → Soul Urge 8: a deep hunger for achievement, authority, and lasting impact.</p>
+            </div>
+          </div>
+
+          <!-- Expression Number -->
+          <div class="bg-black/30 rounded-2xl p-6 border border-indigo-500/20">
+            <div class="flex items-start gap-4 mb-4">
+              <span class="text-3xl">💜</span>
+              <div>
+                <h3 class="font-cinzel text-lg text-indigo-300">Expression Number <span class="text-sm text-indigo-300/60">(Destiny Number)</span></h3>
+                <p class="text-xs text-violet-300/60 mt-0.5">Calculated from <strong class="text-indigo-300/80">all letters</strong> in your full birth name</p>
+              </div>
+            </div>
+            <p class="text-sm text-violet-100/80 leading-relaxed mb-3">
+              The Expression Number — also known as the Destiny Number — describes the gifts and abilities you were born with, the tools your soul packed for this incarnation. Where the Life Path is the terrain, the Expression Number is the unique set of equipment you carry to navigate it.
+            </p>
+            <p class="text-sm text-violet-100/80 leading-relaxed mb-4">
+              This number reveals your natural talents — the things that come easily to you, that others may even take for granted in you, but which carry enormous power when consciously directed. It also illuminates the area of life through which your destiny seeks expression: the stage upon which your soul's drama will most richly unfold.
+            </p>
+            <div class="bg-black/30 rounded-xl p-4 border border-indigo-500/15">
+              <p class="text-xs text-violet-300 font-semibold mb-2">Example Calculation</p>
+              <p class="text-xs text-violet-200/70 leading-relaxed">Name: <strong class="text-white">JOHN</strong> → J(1) + O(6) + H(8) + N(5) = 20 → 2+0 = <strong class="text-indigo-300">2</strong> → Expression 2: gifted in diplomacy, partnership, and bringing harmony into complex situations.</p>
+            </div>
+          </div>
+
+          <!-- Birthday / Soul Purpose -->
+          <div class="bg-black/30 rounded-2xl p-6 border border-cyan-500/20">
+            <div class="flex items-start gap-4 mb-4">
+              <span class="text-3xl">🔵</span>
+              <div>
+                <h3 class="font-cinzel text-lg text-cyan-300">Birthday Number <span class="text-sm text-cyan-300/60">(Soul Purpose)</span></h3>
+                <p class="text-xs text-violet-300/60 mt-0.5">The <strong class="text-cyan-300/80">day of the month</strong> on which you were born, reduced to a single digit</p>
+              </div>
+            </div>
+            <p class="text-sm text-violet-100/80 leading-relaxed mb-3">
+              The Birthday Number, sometimes called the Soul Purpose or Gift Number, is a specific talent or gift the universe endowed you with at the precise moment of your arrival. It is the most precise number in the chart, pointing directly to a specific capacity or quality that is uniquely and powerfully yours.
+            </p>
+            <p class="text-sm text-violet-100/80 leading-relaxed mb-4">
+              Unlike the Life Path's broad theme or the Expression's full toolkit, the Birthday Number is like a single, brilliant gemstone in the crown — a very specific jewel that, when recognised and polished, elevates everything else in your chart. Born on the 29th? 2+9=11 — you carry the Master Number gift of intuitive illumination woven into your very birthdate.
+            </p>
+            <div class="bg-black/30 rounded-xl p-4 border border-cyan-500/15">
+              <p class="text-xs text-violet-300 font-semibold mb-2">Birthday Number Quick Reference</p>
+              <div class="grid grid-cols-3 gap-1 text-xs text-violet-200/70">
+                <span>Day 1 → Leadership</span><span>Day 2 → Diplomacy</span><span>Day 3 → Creativity</span>
+                <span>Day 4 → Structure</span><span>Day 5 → Freedom</span><span>Day 6 → Nurturing</span>
+                <span>Day 7 → Wisdom</span><span>Day 8 → Power</span><span>Day 9 → Compassion</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Personality Number -->
+          <div class="bg-black/30 rounded-2xl p-6 border border-pink-500/20">
+            <div class="flex items-start gap-4 mb-4">
+              <span class="text-3xl">🌸</span>
+              <div>
+                <h3 class="font-cinzel text-lg text-pink-300">Personality Number</h3>
+                <p class="text-xs text-violet-300/60 mt-0.5">Calculated from the <strong class="text-pink-300/80">consonants</strong> in your full birth name</p>
+              </div>
+            </div>
+            <p class="text-sm text-violet-100/80 leading-relaxed mb-3">
+              The Personality Number describes the mask — the face you show the world before people know you well. It governs first impressions, outer mannerisms, and the part of yourself you feel comfortable revealing to strangers. It is neither false nor superficial; it is simply the portal through which others first encounter your soul.
+            </p>
+            <p class="text-sm text-violet-100/80 leading-relaxed">
+              Understanding your Personality Number can be profoundly liberating: it explains why people sometimes misread you, why certain energies are projected onto you, and how to consciously use your natural outer presence as a gift rather than experiencing it as a mask.
+            </p>
+          </div>
+
+          <!-- Personal Year -->
+          <div class="bg-black/30 rounded-2xl p-6 border border-rose-500/20">
+            <div class="flex items-start gap-4 mb-4">
+              <span class="text-3xl">📅</span>
+              <div>
+                <h3 class="font-cinzel text-lg text-rose-300">Personal Year Number</h3>
+                <p class="text-xs text-violet-300/60 mt-0.5">Birth month + birth day + <strong class="text-rose-300/80">current year</strong>, all reduced</p>
+              </div>
+            </div>
+            <p class="text-sm text-violet-100/80 leading-relaxed mb-3">
+              Life unfolds in nine-year cycles. The Personal Year Number tells you exactly where you are in your current cycle and what the cosmic curriculum of this particular year holds. This is your numerological weather forecast — not fate, but a deep map of the energies available to you.
+            </p>
+            <div class="grid grid-cols-3 md:grid-cols-9 gap-2 my-4">
+              <div class="bg-black/40 rounded-lg p-2 text-center text-xs"><div class="text-rose-300 font-bold text-sm">1</div><div class="text-violet-300/60 mt-1">New Beginnings · Plant seeds</div></div>
+              <div class="bg-black/40 rounded-lg p-2 text-center text-xs"><div class="text-rose-300 font-bold text-sm">2</div><div class="text-violet-300/60 mt-1">Gestation · Patience &amp; wait</div></div>
+              <div class="bg-black/40 rounded-lg p-2 text-center text-xs"><div class="text-rose-300 font-bold text-sm">3</div><div class="text-violet-300/60 mt-1">Growth · Express &amp; socialise</div></div>
+              <div class="bg-black/40 rounded-lg p-2 text-center text-xs"><div class="text-rose-300 font-bold text-sm">4</div><div class="text-violet-300/60 mt-1">Foundation · Work &amp; build</div></div>
+              <div class="bg-black/40 rounded-lg p-2 text-center text-xs"><div class="text-rose-300 font-bold text-sm">5</div><div class="text-violet-300/60 mt-1">Freedom · Change &amp; travel</div></div>
+              <div class="bg-black/40 rounded-lg p-2 text-center text-xs"><div class="text-rose-300 font-bold text-sm">6</div><div class="text-violet-300/60 mt-1">Responsibility · Home &amp; love</div></div>
+              <div class="bg-black/40 rounded-lg p-2 text-center text-xs"><div class="text-rose-300 font-bold text-sm">7</div><div class="text-violet-300/60 mt-1">Reflection · Rest &amp; study</div></div>
+              <div class="bg-black/40 rounded-lg p-2 text-center text-xs"><div class="text-rose-300 font-bold text-sm">8</div><div class="text-violet-300/60 mt-1">Harvest · Achieve &amp; prosper</div></div>
+              <div class="bg-black/40 rounded-lg p-2 text-center text-xs"><div class="text-rose-300 font-bold text-sm">9</div><div class="text-violet-300/60 mt-1">Completion · Release &amp; end</div></div>
+            </div>
+            <div class="bg-black/30 rounded-xl p-4 border border-rose-500/15">
+              <p class="text-xs text-violet-300 font-semibold mb-2">Example: Personal Year for 2026</p>
+              <p class="text-xs text-violet-200/70 leading-relaxed">Born November 15: 11 + 15 + 2026 → (1+1) + (1+5) + (2+0+2+6) = 2 + 6 + 10 = 18 → 1+8 = <strong class="text-rose-300">9</strong> → A year of completion, release, and powerful endings making way for transformation.</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Karmic Numbers -->
+      <section>
+        <h2 class="font-cinzel text-2xl font-semibold mb-3 text-amber-300 text-center">✦ Karmic Debt Numbers</h2>
+        <p class="text-center text-violet-200/70 text-sm max-w-2xl mx-auto mb-8">Karmic Debt Numbers arise when a specific number appears during calculation before reduction — 13, 14, 16, or 19. They indicate areas where the soul has unfinished business from previous incarnations, lessons that were left incomplete, and patterns that now demand resolution in this lifetime.</p>
+        <div class="grid md:grid-cols-2 gap-6">
+
+          <div class="karmic-card bg-gradient-to-br from-red-900/30 to-orange-900/30 border border-red-500/30 rounded-2xl p-6 backdrop-blur-md">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="font-cinzel text-3xl font-bold text-red-400">13/4</span>
+              <div>
+                <p class="font-cinzel text-sm text-red-300">Karmic Debt of Laziness</p>
+                <p class="text-xs text-red-400/60">The lesson of disciplined effort</p>
+              </div>
+            </div>
+            <p class="text-sm text-violet-100/80 leading-relaxed mb-3">
+              In a past life, this soul chose the path of least resistance — shirking responsibilities, taking shortcuts, and allowing others to bear the burdens that belonged to them. The karmic echo of this choice now manifests as a life where ease is never granted without effort, where every worthwhile thing must be built through sustained, disciplined work.
+            </p>
+            <p class="text-sm text-violet-100/80 leading-relaxed mb-3">
+              Those with 13/4 may find themselves repeatedly frustrated when things fall apart or reset — as though the universe keeps demolishing their foundations. This is not punishment; it is the precise teaching: learn to build with integrity, consistency, and patience, and the structure will finally hold.
+            </p>
+            <div class="bg-black/30 rounded-xl p-3 text-xs border border-red-500/15">
+              <strong class="text-red-300">The Medicine:</strong> <span class="text-violet-200/70">Embrace hard work as spiritual practice. Stop looking for shortcuts. Every effort invested with full presence and integrity rewrites the karmic ledger, one honest hour at a time.</span>
+            </div>
+          </div>
+
+          <div class="karmic-card bg-gradient-to-br from-orange-900/30 to-amber-900/30 border border-orange-500/30 rounded-2xl p-6 backdrop-blur-md">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="font-cinzel text-3xl font-bold text-orange-400">14/5</span>
+              <div>
+                <p class="font-cinzel text-sm text-orange-300">Karmic Debt of Misused Freedom</p>
+                <p class="text-xs text-orange-400/60">The lesson of healthy boundaries</p>
+              </div>
+            </div>
+            <p class="text-sm text-violet-100/80 leading-relaxed mb-3">
+              The 14/5 indicates a soul who, in previous incarnations, abused personal freedom — perhaps through excessive indulgence, addiction, manipulation of others, or the reckless pursuit of pleasure without regard for consequence. The karmic wound runs deep: trust, particularly in oneself, is compromised.
+            </p>
+            <p class="text-sm text-violet-100/80 leading-relaxed mb-3">
+              The hallmark of 14/5 in this life is the magnetic pull toward excess — substances, relationships, sensation, adrenaline — and the painful education that comes when freedom without wisdom destroys the very things one loves most.
+            </p>
+            <div class="bg-black/30 rounded-xl p-3 text-xs border border-orange-500/15">
+              <strong class="text-orange-300">The Medicine:</strong> <span class="text-violet-200/70">True freedom is found not in the absence of limits but in the wisdom to choose limits that honour the soul. Cultivate consistency, moderation, and the sacred discipline of presence.</span>
+            </div>
+          </div>
+
+          <div class="karmic-card bg-gradient-to-br from-violet-900/30 to-purple-900/30 border border-violet-500/30 rounded-2xl p-6 backdrop-blur-md">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="font-cinzel text-3xl font-bold text-violet-400">16/7</span>
+              <div>
+                <p class="font-cinzel text-sm text-violet-300">Karmic Debt of Ego &amp; Pride</p>
+                <p class="text-xs text-violet-400/60">The lesson of spiritual humility</p>
+              </div>
+            </div>
+            <p class="text-sm text-violet-100/80 leading-relaxed mb-3">
+              The most intense of the Karmic Debts, 16/7 speaks of a soul that once wielded spiritual power or knowledge with arrogance — perhaps a past-life priest, seer, or teacher who used sacred wisdom for personal glorification rather than divine service. The fall of the ego is the central theme.
+            </p>
+            <p class="text-sm text-violet-100/80 leading-relaxed mb-3">
+              Life with 16/7 often involves dramatic upheavals — the collapse of carefully constructed self-images, unexpected loss, or humbling experiences precisely in areas where pride was greatest. These are not catastrophes; they are the universe performing surgery on the ego.
+            </p>
+            <div class="bg-black/30 rounded-xl p-3 text-xs border border-violet-500/15">
+              <strong class="text-violet-300">The Medicine:</strong> <span class="text-violet-200/70">Surrender what you think you know. Approach each moment with the open hands of the true seeker — not the closed fists of the one who believes they have already arrived.</span>
+            </div>
+          </div>
+
+          <div class="karmic-card bg-gradient-to-br from-pink-900/30 to-rose-900/30 border border-pink-500/30 rounded-2xl p-6 backdrop-blur-md">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="font-cinzel text-3xl font-bold text-pink-400">19/1</span>
+              <div>
+                <p class="font-cinzel text-sm text-pink-300">Karmic Debt of Selfishness</p>
+                <p class="text-xs text-pink-400/60">The lesson of interdependence</p>
+              </div>
+            </div>
+            <p class="text-sm text-violet-100/80 leading-relaxed mb-3">
+              The 19/1 points to a soul that, in previous incarnations, misused personal power — taking from others, refusing help, or wielding authority in ways that disregarded the dignity and needs of those around them. In this life, the karma demands a reckoning with isolation.
+            </p>
+            <p class="text-sm text-violet-100/80 leading-relaxed mb-3">
+              Those with 19/1 often feel intensely independent — even compulsively so — and may discover repeatedly that the very independence they cling to leaves them isolated, unsupported, and exhausted. The universe, with infinite patience, keeps delivering the same invitation: <em>ask for help. Let others in.</em>
+            </p>
+            <div class="bg-black/30 rounded-xl p-3 text-xs border border-pink-500/15">
+              <strong class="text-pink-300">The Medicine:</strong> <span class="text-violet-200/70">True strength includes the courage to be vulnerable. Allowing others to support you is not weakness — it is the highest expression of the 1 energy, transformed into its divine form through love.</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Repeating & Angel Numbers -->
+      <section class="bg-gradient-to-br from-amber-900/20 to-violet-900/30 border border-amber-500/25 rounded-3xl p-8 backdrop-blur-md">
+        <h2 class="font-cinzel text-xl font-semibold mb-5 text-amber-300">✦ Repeating Numbers &amp; Synchronicity</h2>
+        <p class="text-violet-100/80 text-sm leading-relaxed mb-6 max-w-3xl">When you notice the same number appearing repeatedly in your daily life — on clocks, licence plates, receipts, page numbers — it is often interpreted as a message from the universe, your higher self, or guiding spirits. These are sometimes called <em>Angel Numbers</em>. Each repeating sequence carries a specific vibrational transmission.</p>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div class="bg-black/30 rounded-xl p-4 text-center border border-amber-500/20">
+            <div class="font-cinzel text-2xl text-amber-300 mb-1">111</div>
+            <p class="text-xs text-violet-200/70">Alignment. Your thoughts are manifesting rapidly. Guard your mind — what you focus on now is seeds being planted.</p>
+          </div>
+          <div class="bg-black/30 rounded-xl p-4 text-center border border-blue-500/20">
+            <div class="font-cinzel text-2xl text-blue-300 mb-1">222</div>
+            <p class="text-xs text-violet-200/70">Trust the process. What you've planted is growing beneath the surface. Have faith and maintain balance.</p>
+          </div>
+          <div class="bg-black/30 rounded-xl p-4 text-center border border-yellow-500/20">
+            <div class="font-cinzel text-2xl text-yellow-300 mb-1">333</div>
+            <p class="text-xs text-violet-200/70">Ascended masters are near. Your creative energy is supercharged. Express yourself without holding back.</p>
+          </div>
+          <div class="bg-black/30 rounded-xl p-4 text-center border border-green-500/20">
+            <div class="font-cinzel text-2xl text-green-300 mb-1">444</div>
+            <p class="text-xs text-violet-200/70">You are surrounded and protected. Angels and ancestors stand with you. You are not alone in this.</p>
+          </div>
+          <div class="bg-black/30 rounded-xl p-4 text-center border border-orange-500/20">
+            <div class="font-cinzel text-2xl text-orange-300 mb-1">555</div>
+            <p class="text-xs text-violet-200/70">Major change is imminent. Release what no longer serves you — transformation rushes toward you on every wind.</p>
+          </div>
+          <div class="bg-black/30 rounded-xl p-4 text-center border border-pink-500/20">
+            <div class="font-cinzel text-2xl text-pink-300 mb-1">666</div>
+            <p class="text-xs text-violet-200/70">Rebalance. You have drifted too far into material concerns. Return to your spiritual centre and higher values.</p>
+          </div>
+          <div class="bg-black/30 rounded-xl p-4 text-center border border-violet-500/20">
+            <div class="font-cinzel text-2xl text-violet-300 mb-1">777</div>
+            <p class="text-xs text-violet-200/70">Divine alignment. You are on the right path. The universe is affirming your direction — trust the magic unfolding.</p>
+          </div>
+          <div class="bg-black/30 rounded-xl p-4 text-center border border-slate-400/20">
+            <div class="font-cinzel text-2xl text-slate-300 mb-1">888</div>
+            <p class="text-xs text-violet-200/70">Abundance flows. Financial and material blessings are on their way. An important cycle is completing itself.</p>
+          </div>
+        </div>
+      </section>
+
+      <footer class="text-center py-4 text-violet-300/40 text-xs">
+        <p>"Numbers are the highest degree of knowledge. It is knowledge itself." — Plato</p>
+      </footer>
+    </div>
+
+    <script>
+      // Starfield
+      const sf = document.getElementById('starfield');
+      for (let i = 0; i < 200; i++) {
+        const s = document.createElement('div');
+        s.className = 'star';
+        const size = Math.random() * 2.5 + 0.5;
+        s.style.cssText = `width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--dur:${2+Math.random()*5}s;--delay:${Math.random()*6}s;`;
+        sf.appendChild(s);
+      }
+
+      // Pythagorean letter values
+      const PYTH = {
+        a:1,b:2,c:3,d:4,e:5,f:6,g:7,h:8,i:9,
+        j:1,k:2,l:3,m:4,n:5,o:6,p:7,q:8,r:9,
+        s:1,t:2,u:3,v:4,w:5,x:6,y:7,z:8
+      };
+      const VOWELS = new Set(['a','e','i','o','u','y']);
+
+      function digitSum(n) {
+        while (n > 9 && n !== 11 && n !== 22 && n !== 33) {
+          n = String(n).split('').reduce((a,c) => a + parseInt(c), 0);
+        }
+        return n;
+      }
+
+      function nameNumber(name, onlyVowels, onlyConsonants) {
+        const letters = name.toLowerCase().replace(/[^a-z]/g, '');
+        let total = 0;
+        for (const ch of letters) {
+          if (onlyVowels && !VOWELS.has(ch)) continue;
+          if (onlyConsonants && VOWELS.has(ch)) continue;
+          total += PYTH[ch] || 0;
+        }
+        return digitSum(total);
+      }
+
+      const LP_DESC = {
+        1: "Life Path 1 — The Pioneer: born to lead, initiate, and forge new paths with courage and originality.",
+        2: "Life Path 2 — The Peacemaker: gifted with empathy, diplomacy, and an extraordinary ability to harmonise.",
+        3: "Life Path 3 — The Creative: a natural communicator radiating joy, artistry, and luminous self-expression.",
+        4: "Life Path 4 — The Builder: disciplined, reliable, and destined to create lasting structures in the world.",
+        5: "Life Path 5 — The Adventurer: freedom-loving, magnetic, and here to experience the full spectrum of life.",
+        6: "Life Path 6 — The Nurturer: a healer of homes and hearts, devoted to love, beauty, and sacred responsibility.",
+        7: "Life Path 7 — The Seeker: the mystic philosopher, driven by an insatiable hunger for truth beyond appearances.",
+        8: "Life Path 8 — The Powerhouse: here to master the material plane through authority, ambition, and resilience.",
+        9: "Life Path 9 — The Humanitarian: the wise old soul, here to serve humanity with compassion and universal love.",
+        11: "Life Path 11 — The Illuminator (Master Number): a bridge between worlds, carrying visionary spiritual insight.",
+        22: "Life Path 22 — The Master Builder: able to turn the grandest visions into world-changing, lasting reality.",
+        33: "Life Path 33 — The Master Teacher: embodying selfless, unconditional love as the highest spiritual service."
+      };
+
+      function calculateNumerology() {
+        const dob = document.getElementById('calc-dob').value;
+        const fullName = document.getElementById('calc-name').value.trim();
+
+        if (!dob && !fullName) {
+          alert('Please enter at least your birth date or name.');
+          return;
+        }
+
+        let lifePath = '—', birthday = '—', personalYear = '—';
+        let expression = '—', soulUrge = '—', personality = '—';
+
+        if (dob) {
+          const [year, month, day] = dob.split('-').map(Number);
+          const mReduced = digitSum(month);
+          const dReduced = digitSum(day);
+          const yReduced = digitSum(year);
+          const lpRaw = mReduced + dReduced + yReduced;
+          lifePath = digitSum(lpRaw);
+          birthday = digitSum(day);
+          const currentYear = new Date().getFullYear();
+          const pyRaw = digitSum(month) + digitSum(day) + digitSum(currentYear);
+          personalYear = digitSum(pyRaw);
+        }
+
+        if (fullName) {
+          expression = nameNumber(fullName, false, false);
+          soulUrge   = nameNumber(fullName, true,  false);
+          personality = nameNumber(fullName, false, true);
+        }
+
+        document.getElementById('res-lifepath').textContent    = lifePath;
+        document.getElementById('res-expression').textContent  = expression;
+        document.getElementById('res-soul').textContent        = soulUrge;
+        document.getElementById('res-personality').textContent = personality;
+        document.getElementById('res-birthday').textContent    = birthday;
+        document.getElementById('res-personalyear').textContent = personalYear;
+
+        const desc = LP_DESC[lifePath] || '';
+        document.getElementById('res-lifepath-desc').textContent = desc;
+
+        const result = document.getElementById('calc-result');
+        result.classList.remove('hidden');
+        result.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    </script>
+  </body>
+</html>
