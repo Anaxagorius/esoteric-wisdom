@@ -34,9 +34,15 @@ async fn main() -> anyhow::Result<()> {
         .with_state(state);
 
     let addr = std::net::SocketAddr::from(([127, 0, 0, 1], 3000));
-    println!("✨ Esoteric Wisdom running at http://{addr}");
+    let url = format!("http://{addr}");
+    println!("✨ Esoteric Wisdom running at {url}");
 
-    axum::serve(tokio::net::TcpListener::bind(addr).await?, app).await?;
+    let listener = tokio::net::TcpListener::bind(addr).await?;
+    if let Err(e) = open::that(&url) {
+        tracing::warn!("Could not open browser automatically: {e}");
+    }
+
+    axum::serve(listener, app).await?;
 
     Ok(())
 }
