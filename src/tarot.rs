@@ -25,6 +25,7 @@ pub enum DeckType {
     MysticMondays,
     GoodTarot,
     MorganGreer,
+    RealTalk,
 }
 
 impl DeckType {
@@ -38,6 +39,7 @@ impl DeckType {
             "mystic_mondays" => DeckType::MysticMondays,
             "good_tarot" => DeckType::GoodTarot,
             "morgan_greer" => DeckType::MorganGreer,
+            "real_talk" => DeckType::RealTalk,
             _ => DeckType::Rws,
         }
     }
@@ -53,6 +55,7 @@ impl DeckType {
             DeckType::MysticMondays => "mystic_mondays",
             DeckType::GoodTarot => "good_tarot",
             DeckType::MorganGreer => "morgan_greer",
+            DeckType::RealTalk => "real_talk",
         }
     }
 
@@ -67,6 +70,7 @@ impl DeckType {
             DeckType::MysticMondays => "Mystic Mondays Tarot",
             DeckType::GoodTarot => "The Good Tarot",
             DeckType::MorganGreer => "Morgan-Greer Tarot",
+            DeckType::RealTalk => "Real Talk Tarot",
         }
     }
 
@@ -81,6 +85,7 @@ impl DeckType {
             DeckType::MysticMondays => "data/tarot_cards_mystic_mondays.json",
             DeckType::GoodTarot => "data/tarot_cards_good_tarot.json",
             DeckType::MorganGreer => "data/tarot_cards_morgan_greer.json",
+            DeckType::RealTalk => "data/tarot_cards_real_talk.json",
         }
     }
 }

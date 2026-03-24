@@ -36,6 +36,7 @@ impl AppState {
             DeckType::MysticMondays,
             DeckType::GoodTarot,
             DeckType::MorganGreer,
+            DeckType::RealTalk,
         ];
         let deck_count = all_decks.len();
         for deck_type in all_decks {

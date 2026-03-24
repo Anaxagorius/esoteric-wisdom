@@ -1,0 +1,704 @@
+[
+  {
+    "id": "major_0",
+    "name": "The Fool",
+    "arcana": "Major",
+    "suit": null,
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=The+Fool",
+    "meaning_upright": "Starting fresh, taking a leap of faith, trusting the journey, embracing the unknown with excitement.",
+    "meaning_reversed": "Acting recklessly, ignoring red flags, being naive, holding yourself back out of fear."
+  },
+  {
+    "id": "major_1",
+    "name": "The Magician",
+    "arcana": "Major",
+    "suit": null,
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=The+Magician",
+    "meaning_upright": "You have everything you need. Use your skills, speak up, and make things happen.",
+    "meaning_reversed": "Feeling out of your depth, second-guessing yourself, or someone is not being straight with you."
+  },
+  {
+    "id": "major_2",
+    "name": "The High Priestess",
+    "arcana": "Major",
+    "suit": null,
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=The+High+Priestess",
+    "meaning_upright": "Trust your gut. There is more going on beneath the surface \u2014 be patient and listen within.",
+    "meaning_reversed": "Ignoring your intuition, secrets being kept, or disconnecting from what you truly know."
+  },
+  {
+    "id": "major_3",
+    "name": "The Empress",
+    "arcana": "Major",
+    "suit": null,
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=The+Empress",
+    "meaning_upright": "Abundance, creativity, nurturing energy. Take care of yourself and others. Invest in what grows.",
+    "meaning_reversed": "Burnout from giving too much, creative blocks, neglecting self-care or personal needs."
+  },
+  {
+    "id": "major_4",
+    "name": "The Emperor",
+    "arcana": "Major",
+    "suit": null,
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=The+Emperor",
+    "meaning_upright": "Structure, authority, and stability. Set boundaries, take charge, and build a solid foundation.",
+    "meaning_reversed": "Too rigid, domineering, losing control, or lacking structure in an important area of life."
+  },
+  {
+    "id": "major_5",
+    "name": "The Hierophant",
+    "arcana": "Major",
+    "suit": null,
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=The+Hierophant",
+    "meaning_upright": "Following an established path, seeking guidance or mentorship, honoring tradition and community.",
+    "meaning_reversed": "Breaking from tradition, questioning authority, going your own way instead of the expected route."
+  },
+  {
+    "id": "major_6",
+    "name": "The Lovers",
+    "arcana": "Major",
+    "suit": null,
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=The+Lovers",
+    "meaning_upright": "A meaningful choice, alignment of values, deep connection, and relationships built on honesty.",
+    "meaning_reversed": "Conflict in a relationship, misaligned values, avoiding a difficult decision, or a messy split."
+  },
+  {
+    "id": "major_7",
+    "name": "The Chariot",
+    "arcana": "Major",
+    "suit": null,
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=The+Chariot",
+    "meaning_upright": "Forward momentum \u2014 you are driven, focused, and on your way to winning. Stay in the driver's seat.",
+    "meaning_reversed": "Losing direction, forcing outcomes, or letting competing priorities pull you off course."
+  },
+  {
+    "id": "major_8",
+    "name": "Strength",
+    "arcana": "Major",
+    "suit": null,
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=Strength",
+    "meaning_upright": "Inner strength, courage, and calm confidence. Handle things with grace, not force.",
+    "meaning_reversed": "Self-doubt, fear taking over, or using aggression instead of calm resilience."
+  },
+  {
+    "id": "major_9",
+    "name": "The Hermit",
+    "arcana": "Major",
+    "suit": null,
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=The+Hermit",
+    "meaning_upright": "Time alone to reflect, soul-search, and find your own answers. Wisdom comes from within.",
+    "meaning_reversed": "Isolation that is harming you, refusing help, or being so withdrawn you are missing connections."
+  },
+  {
+    "id": "major_10",
+    "name": "Wheel of Fortune",
+    "arcana": "Major",
+    "suit": null,
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=Wheel+of+Fortune",
+    "meaning_upright": "Things are shifting \u2014 in your favor. Cycles turning, timing clicking, luck and momentum building.",
+    "meaning_reversed": "Bad timing, things spinning out of control, or resisting an inevitable change in your situation."
+  },
+  {
+    "id": "major_11",
+    "name": "Justice",
+    "arcana": "Major",
+    "suit": null,
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=Justice",
+    "meaning_upright": "Accountability, fairness, and balance. What is done comes back around. Decisions made with clarity.",
+    "meaning_reversed": "Unfair outcomes, avoiding responsibility, or a situation lacking honesty and proper accountability."
+  },
+  {
+    "id": "major_12",
+    "name": "The Hanged Man",
+    "arcana": "Major",
+    "suit": null,
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=The+Hanged+Man",
+    "meaning_upright": "Pause, surrender, shift your perspective. The delay is the lesson. Let things unfold in their time.",
+    "meaning_reversed": "Stalling because you are scared, martyrdom, or refusing to see things from another angle."
+  },
+  {
+    "id": "major_13",
+    "name": "Death",
+    "arcana": "Major",
+    "suit": null,
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=Death",
+    "meaning_upright": "A chapter is ending so something better can begin. Let go \u2014 transformation is happening right now.",
+    "meaning_reversed": "Resisting change, clinging to what has already ended, or fear of moving on and starting over."
+  },
+  {
+    "id": "major_14",
+    "name": "Temperance",
+    "arcana": "Major",
+    "suit": null,
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=Temperance",
+    "meaning_upright": "Balance, patience, moderation. Take the middle road. Flow between extremes and find your equilibrium.",
+    "meaning_reversed": "Excess, imbalance, rushing a process that needs time, or extremes pulling you off center."
+  },
+  {
+    "id": "major_15",
+    "name": "The Devil",
+    "arcana": "Major",
+    "suit": null,
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=The+Devil",
+    "meaning_upright": "Patterns and habits that hold you back. Facing what keeps you stuck is the first step to freedom.",
+    "meaning_reversed": "Breaking free from a toxic cycle, reclaiming your power, or finally stepping out of a shadow."
+  },
+  {
+    "id": "major_16",
+    "name": "The Tower",
+    "arcana": "Major",
+    "suit": null,
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=The+Tower",
+    "meaning_upright": "A sudden shakeup, revelation, or breakdown of something that was not built to last. Honesty arrives hard.",
+    "meaning_reversed": "Avoiding necessary disruption, fearing change that would actually help, or delaying an inevitable collapse."
+  },
+  {
+    "id": "major_17",
+    "name": "The Star",
+    "arcana": "Major",
+    "suit": null,
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=The+Star",
+    "meaning_upright": "Hope, healing, and calm after a storm. You are being guided and supported. Trust the path forward.",
+    "meaning_reversed": "Loss of hope, despair, or disconnecting from the belief that things will actually get better."
+  },
+  {
+    "id": "major_18",
+    "name": "The Moon",
+    "arcana": "Major",
+    "suit": null,
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=The+Moon",
+    "meaning_upright": "Something is unclear \u2014 do not rush. Intuition is high but illusions are too. Navigate the fog carefully.",
+    "meaning_reversed": "Confusion lifting, hidden things coming to light, or anxiety easing as clarity finally arrives."
+  },
+  {
+    "id": "major_19",
+    "name": "The Sun",
+    "arcana": "Major",
+    "suit": null,
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=The+Sun",
+    "meaning_upright": "Joy, confidence, success, and clarity. Things are going great and you deserve to enjoy every bit of it.",
+    "meaning_reversed": "Temporary setbacks blocking your joy, or struggling to feel good even when things are actually going well."
+  },
+  {
+    "id": "major_20",
+    "name": "Judgement",
+    "arcana": "Major",
+    "suit": null,
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=Judgement",
+    "meaning_upright": "A major call to action, self-evaluation, and rising to your next level. You are ready for what is next.",
+    "meaning_reversed": "Self-doubt holding you back, fear of being judged, ignoring the call to evolve and step up."
+  },
+  {
+    "id": "major_21",
+    "name": "The World",
+    "arcana": "Major",
+    "suit": null,
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=The+World",
+    "meaning_upright": "Completion, achievement, and fulfillment. A major cycle closes successfully \u2014 celebrate and integrate the win.",
+    "meaning_reversed": "Unfinished business, rushing to the next thing before honoring this completion, or feeling stuck at the finish line."
+  },
+  {
+    "id": "wands_ace",
+    "name": "Ace of Wands",
+    "arcana": "Minor",
+    "suit": "Wands",
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=Ace+of+Wands",
+    "meaning_upright": "A spark of inspiration hitting. New creative energy, a bold idea, or the drive to start something exciting.",
+    "meaning_reversed": "Creative block, false starts, or that big idea not quite taking off the way you hoped."
+  },
+  {
+    "id": "wands_2",
+    "name": "2 of Wands",
+    "arcana": "Minor",
+    "suit": "Wands",
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=2+of+Wands",
+    "meaning_upright": "You are planning your next move. Ambition and vision are strong \u2014 step outside your comfort zone.",
+    "meaning_reversed": "Overthinking your options, fear of commitment, or playing it too safe when you should be moving."
+  },
+  {
+    "id": "wands_3",
+    "name": "3 of Wands",
+    "arcana": "Minor",
+    "suit": "Wands",
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=3+of+Wands",
+    "meaning_upright": "Expansion is underway. You launched something and now you wait for returns \u2014 keep your vision wide.",
+    "meaning_reversed": "Setbacks in plans, delays in results, or unexpected obstacles slowing down your progress."
+  },
+  {
+    "id": "wands_4",
+    "name": "4 of Wands",
+    "arcana": "Minor",
+    "suit": "Wands",
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=4+of+Wands",
+    "meaning_upright": "Celebration, stability, and milestones worth marking. Gather the people you love and enjoy the moment.",
+    "meaning_reversed": "Disruption in a happy environment, family tension, or a celebration that feels incomplete or off."
+  },
+  {
+    "id": "wands_5",
+    "name": "5 of Wands",
+    "arcana": "Minor",
+    "suit": "Wands",
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=5+of+Wands",
+    "meaning_upright": "Competing ideas, friction, and a bit of chaos. Navigate conflict productively \u2014 this energy can spark growth.",
+    "meaning_reversed": "Avoiding conflict that needs addressing, or internal struggle between your own competing desires."
+  },
+  {
+    "id": "wands_6",
+    "name": "6 of Wands",
+    "arcana": "Minor",
+    "suit": "Wands",
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=6+of+Wands",
+    "meaning_upright": "Victory and recognition \u2014 your effort is paying off and people see it. Own this win confidently.",
+    "meaning_reversed": "Success going unrecognized, setbacks to your reputation, or ego getting in the way of real achievement."
+  },
+  {
+    "id": "wands_7",
+    "name": "7 of Wands",
+    "arcana": "Minor",
+    "suit": "Wands",
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=7+of+Wands",
+    "meaning_upright": "Hold your ground. You are in a competitive spot but you have the advantage \u2014 do not back down.",
+    "meaning_reversed": "Caving to pressure, abandoning your position, or overwhelming opposition making you doubt yourself."
+  },
+  {
+    "id": "wands_8",
+    "name": "8 of Wands",
+    "arcana": "Minor",
+    "suit": "Wands",
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=8+of+Wands",
+    "meaning_upright": "Everything is moving fast \u2014 messages, travel, momentum. Quick action is needed and things are taking off.",
+    "meaning_reversed": "Delays and miscommunication, plans hitting a wall, or energy scattered in too many directions."
+  },
+  {
+    "id": "wands_9",
+    "name": "9 of Wands",
+    "arcana": "Minor",
+    "suit": "Wands",
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=9+of+Wands",
+    "meaning_upright": "You are tired but almost there. Stay resilient \u2014 one more push and you will cross the finish line.",
+    "meaning_reversed": "Burnout, paranoia, or refusing to keep going when you actually have more capacity than you think."
+  },
+  {
+    "id": "wands_10",
+    "name": "10 of Wands",
+    "arcana": "Minor",
+    "suit": "Wands",
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=10+of+Wands",
+    "meaning_upright": "Carrying too much. You may need to delegate, set boundaries, or drop something that is weighing you down.",
+    "meaning_reversed": "Finally releasing a burden, or being crushed under responsibilities you refuse to let go of."
+  },
+  {
+    "id": "wands_page",
+    "name": "Page of Wands",
+    "arcana": "Minor",
+    "suit": "Wands",
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=Page+of+Wands",
+    "meaning_upright": "Enthusiastic new energy, a curious beginner spirit, fresh creative ideas, and bold first moves.",
+    "meaning_reversed": "Immaturity, half-baked ideas, or lots of enthusiasm with no follow-through."
+  },
+  {
+    "id": "wands_knight",
+    "name": "Knight of Wands",
+    "arcana": "Minor",
+    "suit": "Wands",
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=Knight+of+Wands",
+    "meaning_upright": "Fast-moving, passionate, adventurous. Acting on impulse and chasing goals with full energy.",
+    "meaning_reversed": "Reckless, impulsive, scattered energy, or burning out before the goal is reached."
+  },
+  {
+    "id": "wands_queen",
+    "name": "Queen of Wands",
+    "arcana": "Minor",
+    "suit": "Wands",
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=Queen+of+Wands",
+    "meaning_upright": "Confident, magnetic, and creative. She knows her worth and leads with energy and warmth.",
+    "meaning_reversed": "Insecurity masked as arrogance, jealousy, or dimming your light because of what others might think."
+  },
+  {
+    "id": "wands_king",
+    "name": "King of Wands",
+    "arcana": "Minor",
+    "suit": "Wands",
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=King+of+Wands",
+    "meaning_upright": "Visionary leadership, bold action, and charismatic authority. Lead with purpose and inspire others.",
+    "meaning_reversed": "Domineering, impatient, or using your influence in ways that harm rather than help."
+  },
+  {
+    "id": "cups_ace",
+    "name": "Ace of Cups",
+    "arcana": "Minor",
+    "suit": "Cups",
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=Ace+of+Cups",
+    "meaning_upright": "New emotional beginnings \u2014 a new love, a creative burst, compassion, and emotional openness.",
+    "meaning_reversed": "Emotional walls, blocked feelings, or an opportunity for connection that you are not ready to receive."
+  },
+  {
+    "id": "cups_2",
+    "name": "2 of Cups",
+    "arcana": "Minor",
+    "suit": "Cups",
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=2+of+Cups",
+    "meaning_upright": "Mutual connection, partnership, and attraction. Two people on the same page \u2014 romantic or otherwise.",
+    "meaning_reversed": "Imbalance in a relationship, one-sided feelings, or a connection falling apart."
+  },
+  {
+    "id": "cups_3",
+    "name": "3 of Cups",
+    "arcana": "Minor",
+    "suit": "Cups",
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=3+of+Cups",
+    "meaning_upright": "Friendship, celebration, and community joy. A time to gather, laugh, and appreciate your people.",
+    "meaning_reversed": "Gossip, overindulgence, or feeling left out of a group you want to be part of."
+  },
+  {
+    "id": "cups_4",
+    "name": "4 of Cups",
+    "arcana": "Minor",
+    "suit": "Cups",
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=4+of+Cups",
+    "meaning_upright": "Feeling bored, withdrawn, or unmotivated. Something is being offered \u2014 are you open enough to see it?",
+    "meaning_reversed": "Snapping out of apathy, accepting an opportunity, or finally reconnecting with what matters to you."
+  },
+  {
+    "id": "cups_5",
+    "name": "5 of Cups",
+    "arcana": "Minor",
+    "suit": "Cups",
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=5+of+Cups",
+    "meaning_upright": "Grief, disappointment, or loss. It is okay to mourn \u2014 but do not forget what is still standing behind you.",
+    "meaning_reversed": "Moving through grief, accepting loss, and beginning to shift focus toward healing and what remains."
+  },
+  {
+    "id": "cups_6",
+    "name": "6 of Cups",
+    "arcana": "Minor",
+    "suit": "Cups",
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=6+of+Cups",
+    "meaning_upright": "Nostalgia, childhood memories, or reconnecting with someone or something from your past.",
+    "meaning_reversed": "Living too much in the past, being unable to move forward, or an unhealthy attachment to how things were."
+  },
+  {
+    "id": "cups_7",
+    "name": "7 of Cups",
+    "arcana": "Minor",
+    "suit": "Cups",
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=7+of+Cups",
+    "meaning_upright": "Too many options and daydreams clouding your judgment. Get grounded and make a real decision.",
+    "meaning_reversed": "Cutting through illusion, getting clear on priorities, or finally choosing a direction."
+  },
+  {
+    "id": "cups_8",
+    "name": "8 of Cups",
+    "arcana": "Minor",
+    "suit": "Cups",
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=8+of+Cups",
+    "meaning_upright": "Walking away from something that no longer serves you \u2014 even if it is hard. Emotional evolution.",
+    "meaning_reversed": "Staying in something out of fear, avoiding the necessary goodbye, or returning to what you left."
+  },
+  {
+    "id": "cups_9",
+    "name": "9 of Cups",
+    "arcana": "Minor",
+    "suit": "Cups",
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=9+of+Cups",
+    "meaning_upright": "Your wish is coming true. Emotional satisfaction, contentment, and getting exactly what you wanted.",
+    "meaning_reversed": "Overindulgence, complacency, or realizing the thing you wanted does not actually make you happy."
+  },
+  {
+    "id": "cups_10",
+    "name": "10 of Cups",
+    "arcana": "Minor",
+    "suit": "Cups",
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=10+of+Cups",
+    "meaning_upright": "Emotional fulfillment, family harmony, and lasting happiness. This is the good life \u2014 enjoy it.",
+    "meaning_reversed": "Disconnection from loved ones, family conflict, or a picture-perfect life masking real struggles."
+  },
+  {
+    "id": "cups_page",
+    "name": "Page of Cups",
+    "arcana": "Minor",
+    "suit": "Cups",
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=Page+of+Cups",
+    "meaning_upright": "Creative, intuitive, and emotionally curious. Good news or a gentle, imaginative invitation to open up.",
+    "meaning_reversed": "Emotional immaturity, wearing your heart on your sleeve in risky situations, or a message not landing well."
+  },
+  {
+    "id": "cups_knight",
+    "name": "Knight of Cups",
+    "arcana": "Minor",
+    "suit": "Cups",
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=Knight+of+Cups",
+    "meaning_upright": "Romantic, idealistic, and following the heart. Riding in with charm and emotional intensity.",
+    "meaning_reversed": "Moody, unrealistic, or someone whose charm is not backed up by genuine follow-through."
+  },
+  {
+    "id": "cups_queen",
+    "name": "Queen of Cups",
+    "arcana": "Minor",
+    "suit": "Cups",
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=Queen+of+Cups",
+    "meaning_upright": "Empathetic, nurturing, intuitive. She holds space beautifully and leads from an emotionally wise place.",
+    "meaning_reversed": "Over-giving, co-dependency, or losing yourself in others' emotions to the point of emotional exhaustion."
+  },
+  {
+    "id": "cups_king",
+    "name": "King of Cups",
+    "arcana": "Minor",
+    "suit": "Cups",
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=King+of+Cups",
+    "meaning_upright": "Emotionally mature, compassionate, and steady. Leads with empathy and handles hard situations with grace.",
+    "meaning_reversed": "Emotional volatility masked by a calm exterior, manipulation, or emotional suppression and withdrawal."
+  },
+  {
+    "id": "swords_ace",
+    "name": "Ace of Swords",
+    "arcana": "Minor",
+    "suit": "Swords",
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=Ace+of+Swords",
+    "meaning_upright": "A breakthrough \u2014 clear thinking, raw truth, and mental clarity cutting through the noise. Say it out loud.",
+    "meaning_reversed": "Confusion, bad information, or a truth that is hard to receive or deliver right now."
+  },
+  {
+    "id": "swords_2",
+    "name": "2 of Swords",
+    "arcana": "Minor",
+    "suit": "Swords",
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=2+of+Swords",
+    "meaning_upright": "Stuck at a crossroads, avoiding a decision, or trying to stay neutral when you really need to choose.",
+    "meaning_reversed": "Indecision breaking open, facing what you were avoiding, or information emerging to help you decide."
+  },
+  {
+    "id": "swords_3",
+    "name": "3 of Swords",
+    "arcana": "Minor",
+    "suit": "Swords",
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=3+of+Swords",
+    "meaning_upright": "Heartbreak, grief, or a painful truth hitting hard. Let yourself feel it \u2014 healing starts by facing it.",
+    "meaning_reversed": "Moving through grief, releasing pain, or a wound that is finally beginning to heal."
+  },
+  {
+    "id": "swords_4",
+    "name": "4 of Swords",
+    "arcana": "Minor",
+    "suit": "Swords",
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=4+of+Swords",
+    "meaning_upright": "Rest is non-negotiable right now. Step back, restore your energy, and give your mind a break.",
+    "meaning_reversed": "Burnout because you refuse to rest, restlessness, or returning to action before you are ready."
+  },
+  {
+    "id": "swords_5",
+    "name": "5 of Swords",
+    "arcana": "Minor",
+    "suit": "Swords",
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=5+of+Swords",
+    "meaning_upright": "A hollow win \u2014 someone loses and no one feels great about it. Not every battle is worth fighting.",
+    "meaning_reversed": "Letting go of conflict, seeking reconciliation, or walking away from a power struggle for good."
+  },
+  {
+    "id": "swords_6",
+    "name": "6 of Swords",
+    "arcana": "Minor",
+    "suit": "Swords",
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=6+of+Swords",
+    "meaning_upright": "Moving away from turmoil toward calmer waters. Transition, recovery, and things slowly getting better.",
+    "meaning_reversed": "Resistance to leaving a difficult situation, or being forced to stay when you are ready to move on."
+  },
+  {
+    "id": "swords_7",
+    "name": "7 of Swords",
+    "arcana": "Minor",
+    "suit": "Swords",
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=7+of+Swords",
+    "meaning_upright": "Someone is being sneaky or dishonest \u2014 maybe even you. Watch for hidden agendas and half-truths.",
+    "meaning_reversed": "Coming clean, a deception being uncovered, or finally being fully honest with yourself or others."
+  },
+  {
+    "id": "swords_8",
+    "name": "8 of Swords",
+    "arcana": "Minor",
+    "suit": "Swords",
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=8+of+Swords",
+    "meaning_upright": "Feeling trapped by your own mind. The cage is mostly mental \u2014 you have more freedom than you think.",
+    "meaning_reversed": "Breaking free from limiting beliefs, seeing your way out, or finally removing the mental blindfold."
+  },
+  {
+    "id": "swords_9",
+    "name": "9 of Swords",
+    "arcana": "Minor",
+    "suit": "Swords",
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=9+of+Swords",
+    "meaning_upright": "Anxiety, overthinking, and worst-case-scenario spiraling at 3am. Your mind is in overdrive \u2014 breathe.",
+    "meaning_reversed": "Anxiety easing, getting support for mental health, or realizing the fears were worse than the reality."
+  },
+  {
+    "id": "swords_10",
+    "name": "10 of Swords",
+    "arcana": "Minor",
+    "suit": "Swords",
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=10+of+Swords",
+    "meaning_upright": "Rock bottom \u2014 a painful ending that is also the final blow. The sun is rising even if it does not feel like it.",
+    "meaning_reversed": "Refusing to accept an ending, or starting to rise from a really rough rock-bottom moment."
+  },
+  {
+    "id": "swords_page",
+    "name": "Page of Swords",
+    "arcana": "Minor",
+    "suit": "Swords",
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=Page+of+Swords",
+    "meaning_upright": "Curious, sharp, and eager for information. Watch out for gossip \u2014 this energy can cut both ways.",
+    "meaning_reversed": "Spreading rumors, acting before thinking, or using sharp words in a way that creates more damage than good."
+  },
+  {
+    "id": "swords_knight",
+    "name": "Knight of Swords",
+    "arcana": "Minor",
+    "suit": "Swords",
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=Knight+of+Swords",
+    "meaning_upright": "Fast-moving, direct, and decisive \u2014 charging toward a goal with intense focus and no time for detours.",
+    "meaning_reversed": "Rushing in recklessly, aggression, or bulldozing over people in pursuit of what you want."
+  },
+  {
+    "id": "swords_queen",
+    "name": "Queen of Swords",
+    "arcana": "Minor",
+    "suit": "Swords",
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=Queen+of+Swords",
+    "meaning_upright": "Sharp, direct, and clear-minded. She tells it like it is and does not let emotions cloud smart judgment.",
+    "meaning_reversed": "Cold, cutting, or using sharp intelligence to wound rather than clarify and protect."
+  },
+  {
+    "id": "swords_king",
+    "name": "King of Swords",
+    "arcana": "Minor",
+    "suit": "Swords",
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=King+of+Swords",
+    "meaning_upright": "Intellectual authority, strategic thinking, and fair-minded leadership. Think before you speak and lead with truth.",
+    "meaning_reversed": "Tyrant thinking, manipulating with words, or letting cold logic override much-needed compassion."
+  },
+  {
+    "id": "pentacles_ace",
+    "name": "Ace of Pentacles",
+    "arcana": "Minor",
+    "suit": "Pentacles",
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=Ace+of+Pentacles",
+    "meaning_upright": "A new financial opportunity, job offer, or practical seed worth planting. This one is real \u2014 take it.",
+    "meaning_reversed": "A promising opportunity falling through, poor timing on financial decisions, or greed blocking growth."
+  },
+  {
+    "id": "pentacles_2",
+    "name": "2 of Pentacles",
+    "arcana": "Minor",
+    "suit": "Pentacles",
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=2+of+Pentacles",
+    "meaning_upright": "Juggling priorities and keeping the balance. You are managing \u2014 but something may need to give soon.",
+    "meaning_reversed": "Overwhelmed and dropping the ball, poor financial management, or taking on way more than you can handle."
+  },
+  {
+    "id": "pentacles_3",
+    "name": "3 of Pentacles",
+    "arcana": "Minor",
+    "suit": "Pentacles",
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=3+of+Pentacles",
+    "meaning_upright": "Teamwork and skilled collaboration. Working with others toward a shared goal \u2014 and doing it well.",
+    "meaning_reversed": "Poor teamwork, taking all the credit, or a project stalling because of lack of coordination."
+  },
+  {
+    "id": "pentacles_4",
+    "name": "4 of Pentacles",
+    "arcana": "Minor",
+    "suit": "Pentacles",
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=4+of+Pentacles",
+    "meaning_upright": "Financial security being guarded carefully \u2014 savings, stability, but watch for hoarding energy.",
+    "meaning_reversed": "Loosening a grip on finances or control, letting things flow more freely, or financial insecurity emerging."
+  },
+  {
+    "id": "pentacles_5",
+    "name": "5 of Pentacles",
+    "arcana": "Minor",
+    "suit": "Pentacles",
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=5+of+Pentacles",
+    "meaning_upright": "Hard times \u2014 financial strain, feeling left out in the cold. Support exists if you are willing to ask for it.",
+    "meaning_reversed": "Recovery from hardship, finding support after struggle, or regaining financial and material stability."
+  },
+  {
+    "id": "pentacles_6",
+    "name": "6 of Pentacles",
+    "arcana": "Minor",
+    "suit": "Pentacles",
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=6+of+Pentacles",
+    "meaning_upright": "Generosity and fair exchange. Giving and receiving in balanced measure \u2014 check the power dynamic here.",
+    "meaning_reversed": "Strings attached to generosity, power imbalances in giving, or charity with expectations attached."
+  },
+  {
+    "id": "pentacles_7",
+    "name": "7 of Pentacles",
+    "arcana": "Minor",
+    "suit": "Pentacles",
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=7+of+Pentacles",
+    "meaning_upright": "Stepping back to assess your progress. You have been working hard \u2014 is the investment paying off?",
+    "meaning_reversed": "Impatience with slow returns, doubt in long-term strategy, or feeling like the work is not worth it."
+  },
+  {
+    "id": "pentacles_8",
+    "name": "8 of Pentacles",
+    "arcana": "Minor",
+    "suit": "Pentacles",
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=8+of+Pentacles",
+    "meaning_upright": "Dedicated skill-building and mastery. Do the work, hone the craft, and keep improving every single day.",
+    "meaning_reversed": "Working without direction, perfectionism getting in the way, or burning out on repetitive, unrewarding tasks."
+  },
+  {
+    "id": "pentacles_9",
+    "name": "9 of Pentacles",
+    "arcana": "Minor",
+    "suit": "Pentacles",
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=9+of+Pentacles",
+    "meaning_upright": "Financial independence, self-sufficiency, and luxury earned through your own hard work. Enjoy it.",
+    "meaning_reversed": "Overworking for status, losing yourself in material success, or financial comfort hiding inner emptiness."
+  },
+  {
+    "id": "pentacles_10",
+    "name": "10 of Pentacles",
+    "arcana": "Minor",
+    "suit": "Pentacles",
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=10+of+Pentacles",
+    "meaning_upright": "Long-term security, family legacy, and generational wealth and stability. The full life, built together.",
+    "meaning_reversed": "Family conflict over money or inheritance, instability in what seemed secure, or trading soul for status."
+  },
+  {
+    "id": "pentacles_page",
+    "name": "Page of Pentacles",
+    "arcana": "Minor",
+    "suit": "Pentacles",
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=Page+of+Pentacles",
+    "meaning_upright": "A motivated learner starting out on a practical path \u2014 studying, planning, and building foundations.",
+    "meaning_reversed": "Procrastination, lacking follow-through on practical goals, or all planning with zero execution."
+  },
+  {
+    "id": "pentacles_knight",
+    "name": "Knight of Pentacles",
+    "arcana": "Minor",
+    "suit": "Pentacles",
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=Knight+of+Pentacles",
+    "meaning_upright": "Steady, reliable, and hardworking. Slow and methodical but gets results \u2014 the tortoise winning the race.",
+    "meaning_reversed": "Stuck in routine, being overly cautious, or a stubborn refusal to adapt even when flexibility is needed."
+  },
+  {
+    "id": "pentacles_queen",
+    "name": "Queen of Pentacles",
+    "arcana": "Minor",
+    "suit": "Pentacles",
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=Queen+of+Pentacles",
+    "meaning_upright": "Grounded, generous, and practical. She builds comfort, nurtures her people, and manages resources brilliantly.",
+    "meaning_reversed": "Work-life imbalance, neglecting home or self-care, or letting financial anxiety override abundance."
+  },
+  {
+    "id": "pentacles_king",
+    "name": "King of Pentacles",
+    "arcana": "Minor",
+    "suit": "Pentacles",
+    "image_url": "https://placehold.co/260x430/1a1a2e/fb923c?text=King+of+Pentacles",
+    "meaning_upright": "Abundance, prosperity, security, and disciplined success. Built it from scratch and made it look easy.",
+    "meaning_reversed": "Financially obsessed, stubbornly materialistic, or letting wealth define your worth and every decision."
+  }
+]
