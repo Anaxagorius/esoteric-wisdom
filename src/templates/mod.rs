@@ -45,3 +45,7 @@ pub struct JournalListTemplate {
     pub entries: Vec<JournalEntry>,
     pub error: Option<String>,
 }
+
+#[derive(Template)]
+#[template(path = "numerology.html")]
+pub struct NumerologyTemplate;
