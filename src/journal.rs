@@ -4,7 +4,7 @@ use axum::{
     extract::{State, Path},
     response::IntoResponse,
     Form,
-    http::{StatusCode, header},
+    http::{StatusCode, header, HeaderMap},
 };
 use serde::{Serialize, Deserialize};
 use tower_cookies::Cookies;
@@ -37,6 +37,7 @@ pub struct NewEntryForm {
 pub fn routes() -> Router<AppState> {
     Router::new()
         .route("/", get(journal_home))
+        .route("/export", get(export_journal))
         .route("/new", post(create_entry))
         .route("/delete/{id}", post(delete_entry))
 }
@@ -119,4 +120,72 @@ async fn delete_entry(
     entries.retain(|e| !(e.id == entry_id && e.user_id == user_id));
 
     (StatusCode::FOUND, [(header::LOCATION, "/journal")]).into_response()
+}
+
+async fn export_journal(
+    State(state): State<AppState>,
+    cookies: Cookies,
+) -> impl IntoResponse {
+    let user_id = match current_user_id(&state, &cookies) {
+        Some(id) => id,
+        None => {
+            return (StatusCode::FOUND, [(header::LOCATION, "/auth/login")]).into_response();
+        }
+    };
+
+    let entries: Vec<JournalEntry> = {
+        let all = state.journal_entries.read().await;
+        all.iter()
+            .filter(|e| e.user_id == user_id)
+            .cloned()
+            .collect()
+    };
+
+    let now = chrono::Utc::now().format("%B %d, %Y · %H:%M UTC").to_string();
+    let divider = "=".repeat(48);
+
+    let mut output = format!(
+        "\u{2726} Esoteric Wisdom \u{2014} Personal Journal \u{2726}\n\
+         {divider}\n\
+         Exported: {now}\n\
+         Total entries: {}\n\n",
+        entries.len()
+    );
+
+    for (i, entry) in entries.iter().enumerate() {
+        output.push_str(&format!("{divider}\n"));
+        output.push_str(&format!("Entry {} of {}\n", i + 1, entries.len()));
+        output.push_str(&format!("Date: {}\n", entry.created_at));
+
+        let mut moods: Vec<&str> = Vec::new();
+        if entry.mood_happy { moods.push("Grateful"); }
+        if entry.mood_reflective { moods.push("Reflective"); }
+        if entry.mood_hopeful { moods.push("Hopeful"); }
+        if !moods.is_empty() {
+            output.push_str(&format!("Mood: {}\n", moods.join(", ")));
+        }
+
+        if !entry.title.is_empty() {
+            output.push_str(&format!("Title: {}\n", entry.title));
+        }
+
+        output.push('\n');
+        output.push_str(&entry.body);
+        output.push_str("\n\n");
+    }
+
+    output.push_str(&format!("{divider}\n"));
+    output.push_str("\u{2726} End of Journal \u{2726}\n");
+
+    let mut headers = HeaderMap::new();
+    headers.insert(
+        header::CONTENT_TYPE,
+        "text/plain; charset=utf-8".parse().unwrap(),
+    );
+    headers.insert(
+        header::CONTENT_DISPOSITION,
+        "attachment; filename=\"esoteric-journal.txt\"".parse().unwrap(),
+    );
+
+    (StatusCode::OK, headers, output).into_response()
 }
