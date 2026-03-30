@@ -1,0 +1,704 @@
+[
+  {
+    "id": "major_0",
+    "name": "The Fool",
+    "arcana": "Major",
+    "suit": null,
+    "image_url": "https://placehold.co/260x430/1c1004/fbbf24?text=The+Fool",
+    "meaning_upright": "A young woman standing at a mountain cliff edge, arms open to the sky. Fresh starts, optimism, openness to experience.",
+    "meaning_reversed": "Naivety, poor judgment, recklessness, ignoring good advice."
+  },
+  {
+    "id": "major_1",
+    "name": "The Magician",
+    "arcana": "Major",
+    "suit": null,
+    "image_url": "https://placehold.co/260x430/1c1004/fbbf24?text=The+Magician",
+    "meaning_upright": "A man at a table outdoors with natural tools and elements. Ability, resourcefulness, making the most of what you have.",
+    "meaning_reversed": "Untapped talent, manipulation, poor planning, unrealized potential."
+  },
+  {
+    "id": "major_2",
+    "name": "The High Priestess",
+    "arcana": "Major",
+    "suit": null,
+    "image_url": "https://placehold.co/260x430/1c1004/fbbf24?text=The+High+Priestess",
+    "meaning_upright": "A woman sitting quietly by a moonlit lake. Inner wisdom, patience, trusting inner guidance, quiet knowing.",
+    "meaning_reversed": "Ignoring intuition, surface thinking, hidden truths unexplored."
+  },
+  {
+    "id": "major_3",
+    "name": "The Empress",
+    "arcana": "Major",
+    "suit": null,
+    "image_url": "https://placehold.co/260x430/1c1004/fbbf24?text=The+Empress",
+    "meaning_upright": "A pregnant woman in a lush garden, relaxed and powerful. Fertility, abundance, sensuality, the body's wisdom.",
+    "meaning_reversed": "Dependence, smothering, blocked creativity, disconnection from body."
+  },
+  {
+    "id": "major_4",
+    "name": "The Emperor",
+    "arcana": "Major",
+    "suit": null,
+    "image_url": "https://placehold.co/260x430/1c1004/fbbf24?text=The+Emperor",
+    "meaning_upright": "A middle-aged man surveying land from a position of authority. Leadership, stability, structure, practical mastery.",
+    "meaning_reversed": "Rigidity, domination, over-control, inflexibility."
+  },
+  {
+    "id": "major_5",
+    "name": "The Hierophant",
+    "arcana": "Major",
+    "suit": null,
+    "image_url": "https://placehold.co/260x430/1c1004/fbbf24?text=The+Hierophant",
+    "meaning_upright": "An elder teaching a small gathered group outdoors. Mentorship, tradition, shared wisdom, guidance.",
+    "meaning_reversed": "Conformity, dogma, closed-mindedness, blind obedience."
+  },
+  {
+    "id": "major_6",
+    "name": "The Lovers",
+    "arcana": "Major",
+    "suit": null,
+    "image_url": "https://placehold.co/260x430/1c1004/fbbf24?text=The+Lovers",
+    "meaning_upright": "A couple sharing an intimate moment in a beautiful natural setting. Relationship harmony, aligned values, meaningful choice.",
+    "meaning_reversed": "Disharmony, poor choices, misaligned values, temptation."
+  },
+  {
+    "id": "major_7",
+    "name": "The Chariot",
+    "arcana": "Major",
+    "suit": null,
+    "image_url": "https://placehold.co/260x430/1c1004/fbbf24?text=The+Chariot",
+    "meaning_upright": "A person driving confidently through challenging terrain. Determination, focused effort, overcoming obstacles, willpower.",
+    "meaning_reversed": "Aggression, loss of control, scattered focus, defeat."
+  },
+  {
+    "id": "major_8",
+    "name": "Strength",
+    "arcana": "Major",
+    "suit": null,
+    "image_url": "https://placehold.co/260x430/1c1004/fbbf24?text=Strength",
+    "meaning_upright": "A person calmly and gently handling a large nervous animal. Patience, inner courage, compassion, quiet confidence.",
+    "meaning_reversed": "Self-doubt, harshness, inner weakness, losing patience."
+  },
+  {
+    "id": "major_9",
+    "name": "The Hermit",
+    "arcana": "Major",
+    "suit": null,
+    "image_url": "https://placehold.co/260x430/1c1004/fbbf24?text=The+Hermit",
+    "meaning_upright": "An older person walking alone on a mountain path in mist. Reflection, solitude, wisdom from experience, inner search.",
+    "meaning_reversed": "Excessive isolation, loneliness, withdrawal, missing connection."
+  },
+  {
+    "id": "major_10",
+    "name": "Wheel of Fortune",
+    "arcana": "Major",
+    "suit": null,
+    "image_url": "https://placehold.co/260x430/1c1004/fbbf24?text=Wheel+of+Fortune",
+    "meaning_upright": "A turning fairground wheel lit up at dusk. Fate, cycles, lucky breaks, the turning of circumstances.",
+    "meaning_reversed": "Bad luck, misfortune, resisting change, stuck in cycles."
+  },
+  {
+    "id": "major_11",
+    "name": "Justice",
+    "arcana": "Major",
+    "suit": null,
+    "image_url": "https://placehold.co/260x430/1c1004/fbbf24?text=Justice",
+    "meaning_upright": "A judge-like figure with scales in a real courtroom setting. Fairness, truth, accountability, legal matters.",
+    "meaning_reversed": "Injustice, bias, dishonesty, legal problems."
+  },
+  {
+    "id": "major_12",
+    "name": "The Hanged Man",
+    "arcana": "Major",
+    "suit": null,
+    "image_url": "https://placehold.co/260x430/1c1004/fbbf24?text=The+Hanged+Man",
+    "meaning_upright": "A person hanging upside down from a tree branch, calm and accepting. Willing pause, surrender, new perspective, letting go.",
+    "meaning_reversed": "Stubbornness, wasted sacrifice, resistance to surrender."
+  },
+  {
+    "id": "major_13",
+    "name": "Death",
+    "arcana": "Major",
+    "suit": null,
+    "image_url": "https://placehold.co/260x430/1c1004/fbbf24?text=Death",
+    "meaning_upright": "An autumn forest, bare trees, something ending naturally. Change, endings, release, the natural cycle of life.",
+    "meaning_reversed": "Resistance to change, fear of endings, stagnation."
+  },
+  {
+    "id": "major_14",
+    "name": "Temperance",
+    "arcana": "Major",
+    "suit": null,
+    "image_url": "https://placehold.co/260x430/1c1004/fbbf24?text=Temperance",
+    "meaning_upright": "A person mixing colors in a natural, flowing creative process. Balance, moderation, combining influences, patience.",
+    "meaning_reversed": "Excess, imbalance, impatience, poor mixing of energies."
+  },
+  {
+    "id": "major_15",
+    "name": "The Devil",
+    "arcana": "Major",
+    "suit": null,
+    "image_url": "https://placehold.co/260x430/1c1004/fbbf24?text=The+Devil",
+    "meaning_upright": "A person consumed by a screen or substance in a darkened room. Addiction, unhealthy attachment, materialism, the trap.",
+    "meaning_reversed": "Breaking free, recognizing chains, reclaiming power."
+  },
+  {
+    "id": "major_16",
+    "name": "The Tower",
+    "arcana": "Major",
+    "suit": null,
+    "image_url": "https://placehold.co/260x430/1c1004/fbbf24?text=The+Tower",
+    "meaning_upright": "A building damaged by storm, people running from the rubble. Sudden upheaval, unexpected change, forced dismantling.",
+    "meaning_reversed": "Averting disaster, postponed chaos, fear of change."
+  },
+  {
+    "id": "major_17",
+    "name": "The Star",
+    "arcana": "Major",
+    "suit": null,
+    "image_url": "https://placehold.co/260x430/1c1004/fbbf24?text=The+Star",
+    "meaning_upright": "A woman at a peaceful lake at night, stars reflected in the water. Hope, renewal, trust in the future, calm healing.",
+    "meaning_reversed": "Despair, lost hope, disconnected from healing, discouragement."
+  },
+  {
+    "id": "major_18",
+    "name": "The Moon",
+    "arcana": "Major",
+    "suit": null,
+    "image_url": "https://placehold.co/260x430/1c1004/fbbf24?text=The+Moon",
+    "meaning_upright": "A moonlit forest path disappearing into deep shadow. Uncertainty, the unconscious, confusion, hidden fears.",
+    "meaning_reversed": "Clarity emerging, releasing fear, dispelling illusions."
+  },
+  {
+    "id": "major_19",
+    "name": "The Sun",
+    "arcana": "Major",
+    "suit": null,
+    "image_url": "https://placehold.co/260x430/1c1004/fbbf24?text=The+Sun",
+    "meaning_upright": "Children playing freely in a sunlit garden. Joy, success, vitality, simplicity, radiant wellbeing.",
+    "meaning_reversed": "Blocked joy, overconfidence, delays, clouded outlook."
+  },
+  {
+    "id": "major_20",
+    "name": "Judgement",
+    "arcana": "Major",
+    "suit": null,
+    "image_url": "https://placehold.co/260x430/1c1004/fbbf24?text=Judgement",
+    "meaning_upright": "A person hearing something meaningful that calls them to action. Awakening, a calling heard, second chances, absolution.",
+    "meaning_reversed": "Self-doubt, ignoring the call, fear of judgment, stagnation."
+  },
+  {
+    "id": "major_21",
+    "name": "The World",
+    "arcana": "Major",
+    "suit": null,
+    "image_url": "https://placehold.co/260x430/1c1004/fbbf24?text=The+World",
+    "meaning_upright": "A traveler arriving at a destination, a complete journey. Fulfillment, completion, wholeness, achievement.",
+    "meaning_reversed": "Incompletion, loose ends, avoiding closure, unfulfilled journey."
+  },
+  {
+    "id": "wands_ace",
+    "name": "Ace of Wands",
+    "arcana": "Minor",
+    "suit": "Wands",
+    "image_url": "https://placehold.co/260x430/1c1004/fbbf24?text=Ace+of+Wands",
+    "meaning_upright": "Ace of Wands card. A new creative spark, inspired beginning, untapped potential, pure fire of initiative.",
+    "meaning_reversed": "Blocked inspiration, missed opportunities, delays in starting, lack of motivation."
+  },
+  {
+    "id": "wands_2",
+    "name": "Two of Wands",
+    "arcana": "Minor",
+    "suit": "Wands",
+    "image_url": "https://placehold.co/260x430/1c1004/fbbf24?text=Two+of+Wands",
+    "meaning_upright": "Two of Wands card. Planning and vision; standing at a crossroads, mapping the journey ahead, personal power.",
+    "meaning_reversed": "Poor planning, impatience, not seeing the big picture, fear of change."
+  },
+  {
+    "id": "wands_3",
+    "name": "Three of Wands",
+    "arcana": "Minor",
+    "suit": "Wands",
+    "image_url": "https://placehold.co/260x430/1c1004/fbbf24?text=Three+of+Wands",
+    "meaning_upright": "Three of Wands card. Expansion and foresight; looking ahead with confidence, early success, exploring horizons.",
+    "meaning_reversed": "Delays, lack of foresight, obstacles to growth, arrogance."
+  },
+  {
+    "id": "wands_4",
+    "name": "Four of Wands",
+    "arcana": "Minor",
+    "suit": "Wands",
+    "image_url": "https://placehold.co/260x430/1c1004/fbbf24?text=Four+of+Wands",
+    "meaning_upright": "Four of Wands card. Celebration and community; homecoming, harmony, foundation built, festive rest.",
+    "meaning_reversed": "Lack of harmony, cancelled celebration, instability in foundations."
+  },
+  {
+    "id": "wands_5",
+    "name": "Five of Wands",
+    "arcana": "Minor",
+    "suit": "Wands",
+    "image_url": "https://placehold.co/260x430/1c1004/fbbf24?text=Five+of+Wands",
+    "meaning_upright": "Five of Wands card. Conflict and competition; creative tension, rivalry, learning through challenge.",
+    "meaning_reversed": "Avoiding conflict, unnecessary arguments, aggression, lack of challenge."
+  },
+  {
+    "id": "wands_6",
+    "name": "Six of Wands",
+    "arcana": "Minor",
+    "suit": "Wands",
+    "image_url": "https://placehold.co/260x430/1c1004/fbbf24?text=Six+of+Wands",
+    "meaning_upright": "Six of Wands card. Victory and public recognition; success acknowledged, leadership, overcoming obstacles.",
+    "meaning_reversed": "Delayed success, fall from grace, arrogance, failed recognition."
+  },
+  {
+    "id": "wands_7",
+    "name": "Seven of Wands",
+    "arcana": "Minor",
+    "suit": "Wands",
+    "image_url": "https://placehold.co/260x430/1c1004/fbbf24?text=Seven+of+Wands",
+    "meaning_upright": "Seven of Wands card. Courage under pressure; standing your ground, defensive strength, perseverance.",
+    "meaning_reversed": "Giving up, running away, overwhelming odds, losing ground."
+  },
+  {
+    "id": "wands_8",
+    "name": "Eight of Wands",
+    "arcana": "Minor",
+    "suit": "Wands",
+    "image_url": "https://placehold.co/260x430/1c1004/fbbf24?text=Eight+of+Wands",
+    "meaning_upright": "Eight of Wands card. Swift action and movement; fast developments, momentum, messages traveling quickly.",
+    "meaning_reversed": "Delays, frustration, canceled plans, resisting necessary speed."
+  },
+  {
+    "id": "wands_9",
+    "name": "Nine of Wands",
+    "arcana": "Minor",
+    "suit": "Wands",
+    "image_url": "https://placehold.co/260x430/1c1004/fbbf24?text=Nine+of+Wands",
+    "meaning_upright": "Nine of Wands card. Resilience and persistence; wounded but holding on, inner reserves, preparedness.",
+    "meaning_reversed": "Paranoia, stubbornness, not healing from wounds, defensive excess."
+  },
+  {
+    "id": "wands_10",
+    "name": "Ten of Wands",
+    "arcana": "Minor",
+    "suit": "Wands",
+    "image_url": "https://placehold.co/260x430/1c1004/fbbf24?text=Ten+of+Wands",
+    "meaning_upright": "Ten of Wands card. Burden and completion; the weight of accumulated responsibilities, near the finish.",
+    "meaning_reversed": "Carrying too much, inability to delegate, near collapse, oppressive burden."
+  },
+  {
+    "id": "wands_page",
+    "name": "Page of Wands",
+    "arcana": "Minor",
+    "suit": "Wands",
+    "image_url": "https://placehold.co/260x430/1c1004/fbbf24?text=Page+of+Wands",
+    "meaning_upright": "Page of Wands card. Curiosity and enthusiasm; a beginner's energy, fresh perspectives, eager learning.",
+    "meaning_reversed": "Creative blocks, scattered energy, immaturity, undeveloped ideas."
+  },
+  {
+    "id": "wands_knight",
+    "name": "Knight of Wands",
+    "arcana": "Minor",
+    "suit": "Wands",
+    "image_url": "https://placehold.co/260x430/1c1004/fbbf24?text=Knight+of+Wands",
+    "meaning_upright": "Knight of Wands card. Passionate action; bold advance, impulsive drive, adventurous spirit, courage.",
+    "meaning_reversed": "Recklessness, impatience, haste making waste, scattered fire."
+  },
+  {
+    "id": "wands_queen",
+    "name": "Queen of Wands",
+    "arcana": "Minor",
+    "suit": "Wands",
+    "image_url": "https://placehold.co/260x430/1c1004/fbbf24?text=Queen+of+Wands",
+    "meaning_upright": "Queen of Wands card. Confidence and authority; natural leadership, magnetic presence, creativity in command.",
+    "meaning_reversed": "Bossy, volatile, demanding, using power poorly, creative drought."
+  },
+  {
+    "id": "wands_king",
+    "name": "King of Wands",
+    "arcana": "Minor",
+    "suit": "Wands",
+    "image_url": "https://placehold.co/260x430/1c1004/fbbf24?text=King+of+Wands",
+    "meaning_upright": "King of Wands card. Mastery and vision; inspired authority, bold vision, the fire that guides others.",
+    "meaning_reversed": "Arrogance, impulsiveness, ruthlessness, using fire to burn others."
+  },
+  {
+    "id": "cups_ace",
+    "name": "Ace of Cups",
+    "arcana": "Minor",
+    "suit": "Cups",
+    "image_url": "https://placehold.co/260x430/030a18/60a5fa?text=Ace+of+Cups",
+    "meaning_upright": "Ace of Cups card. New emotional beginning, overflowing love, opening the heart, spiritual gift.",
+    "meaning_reversed": "Blocked emotions, closed heart, missed spiritual opportunity, emotional immaturity."
+  },
+  {
+    "id": "cups_2",
+    "name": "Two of Cups",
+    "arcana": "Minor",
+    "suit": "Cups",
+    "image_url": "https://placehold.co/260x430/030a18/60a5fa?text=Two+of+Cups",
+    "meaning_upright": "Two of Cups card. Partnership and mutual feeling; connection, attraction, coming together in love.",
+    "meaning_reversed": "Imbalance in relationship, codependency, crossed signals, bad communication."
+  },
+  {
+    "id": "cups_3",
+    "name": "Three of Cups",
+    "arcana": "Minor",
+    "suit": "Cups",
+    "image_url": "https://placehold.co/260x430/030a18/60a5fa?text=Three+of+Cups",
+    "meaning_upright": "Three of Cups card. Celebration and friendship; joy shared among community, abundance of feeling.",
+    "meaning_reversed": "Overindulgence, cancelled celebration, isolation, jealousy among friends."
+  },
+  {
+    "id": "cups_4",
+    "name": "Four of Cups",
+    "arcana": "Minor",
+    "suit": "Cups",
+    "image_url": "https://placehold.co/260x430/030a18/60a5fa?text=Four+of+Cups",
+    "meaning_upright": "Four of Cups card. Contemplation; stillness, introspection, boredom with what is offered, inner restlessness.",
+    "meaning_reversed": "Emotional withdrawal, missing what's in front of you, boredom, depression."
+  },
+  {
+    "id": "cups_5",
+    "name": "Five of Cups",
+    "arcana": "Minor",
+    "suit": "Cups",
+    "image_url": "https://placehold.co/260x430/030a18/60a5fa?text=Five+of+Cups",
+    "meaning_upright": "Five of Cups card. Loss and grief; mourning what was, regret, focusing on what is gone.",
+    "meaning_reversed": "Acceptance and moving on, focusing on what remains, releasing grief."
+  },
+  {
+    "id": "cups_6",
+    "name": "Six of Cups",
+    "arcana": "Minor",
+    "suit": "Cups",
+    "image_url": "https://placehold.co/260x430/030a18/60a5fa?text=Six+of+Cups",
+    "meaning_upright": "Six of Cups card. Nostalgia and kindness; childhood memories, innocence, generosity, simple joy.",
+    "meaning_reversed": "Living in the past, naivety, unresolved childhood issues, lost innocence."
+  },
+  {
+    "id": "cups_7",
+    "name": "Seven of Cups",
+    "arcana": "Minor",
+    "suit": "Cups",
+    "image_url": "https://placehold.co/260x430/030a18/60a5fa?text=Seven+of+Cups",
+    "meaning_upright": "Seven of Cups card. Fantasy and wishful thinking; many possibilities, temptation, dreams awaiting discernment.",
+    "meaning_reversed": "Clarity about illusions, temptation resisted, facing reality, disillusion."
+  },
+  {
+    "id": "cups_8",
+    "name": "Eight of Cups",
+    "arcana": "Minor",
+    "suit": "Cups",
+    "image_url": "https://placehold.co/260x430/030a18/60a5fa?text=Eight+of+Cups",
+    "meaning_upright": "Eight of Cups card. Moving on with purpose; leaving behind the comfortable to seek something greater.",
+    "meaning_reversed": "Fear of moving on, staying in a comfort zone, unable to let go."
+  },
+  {
+    "id": "cups_9",
+    "name": "Nine of Cups",
+    "arcana": "Minor",
+    "suit": "Cups",
+    "image_url": "https://placehold.co/260x430/030a18/60a5fa?text=Nine+of+Cups",
+    "meaning_upright": "Nine of Cups card. Contentment and satisfaction; wishes fulfilled, emotional abundance, quiet happiness.",
+    "meaning_reversed": "Materialism, greed, smug self-satisfaction, unhappiness with abundance."
+  },
+  {
+    "id": "cups_10",
+    "name": "Ten of Cups",
+    "arcana": "Minor",
+    "suit": "Cups",
+    "image_url": "https://placehold.co/260x430/030a18/60a5fa?text=Ten+of+Cups",
+    "meaning_upright": "Ten of Cups card. Emotional fulfillment; family bliss, community joy, long-term happiness, love.",
+    "meaning_reversed": "Broken home, conflict within family, misaligned values, joyless community."
+  },
+  {
+    "id": "cups_page",
+    "name": "Page of Cups",
+    "arcana": "Minor",
+    "suit": "Cups",
+    "image_url": "https://placehold.co/260x430/030a18/60a5fa?text=Page+of+Cups",
+    "meaning_upright": "Page of Cups card. Sensitivity and new emotional awareness; curiosity of the heart, messages from the intuitive.",
+    "meaning_reversed": "Emotional immaturity, false visions, unreliable intuition, escapism."
+  },
+  {
+    "id": "cups_knight",
+    "name": "Knight of Cups",
+    "arcana": "Minor",
+    "suit": "Cups",
+    "image_url": "https://placehold.co/260x430/030a18/60a5fa?text=Knight+of+Cups",
+    "meaning_upright": "Knight of Cups card. Romance and intuition; following the heart, dreamy pursuit, emotional quest.",
+    "meaning_reversed": "Moodiness, poor emotional decisions, jealousy, romantic disappointment."
+  },
+  {
+    "id": "cups_queen",
+    "name": "Queen of Cups",
+    "arcana": "Minor",
+    "suit": "Cups",
+    "image_url": "https://placehold.co/260x430/030a18/60a5fa?text=Queen+of+Cups",
+    "meaning_upright": "Queen of Cups card. Emotional depth and nurturing; the caring heart, intuitive wisdom, compassionate leadership.",
+    "meaning_reversed": "Moodiness, emotional manipulation, self-pity, smothering love."
+  },
+  {
+    "id": "cups_king",
+    "name": "King of Cups",
+    "arcana": "Minor",
+    "suit": "Cups",
+    "image_url": "https://placehold.co/260x430/030a18/60a5fa?text=King+of+Cups",
+    "meaning_upright": "King of Cups card. Emotional mastery and wisdom; calm authority over feeling, healing presence, deep compassion.",
+    "meaning_reversed": "Emotional coldness, manipulation, unresolved wounds, abuse of empathy."
+  },
+  {
+    "id": "swords_ace",
+    "name": "Ace of Swords",
+    "arcana": "Minor",
+    "suit": "Swords",
+    "image_url": "https://placehold.co/260x430/08080f/e2e8f0?text=Ace+of+Swords",
+    "meaning_upright": "Ace of Swords card. Mental clarity and breakthrough; truth cutting through confusion, the sword of discernment.",
+    "meaning_reversed": "Mental confusion, clouded thinking, poor decisions, misused truth."
+  },
+  {
+    "id": "swords_2",
+    "name": "Two of Swords",
+    "arcana": "Minor",
+    "suit": "Swords",
+    "image_url": "https://placehold.co/260x430/08080f/e2e8f0?text=Two+of+Swords",
+    "meaning_upright": "Two of Swords card. Difficult choice; stalemate, avoidance, temporary peace through willful blindness.",
+    "meaning_reversed": "Indecision, information overload, stalemate broken badly, forced choice."
+  },
+  {
+    "id": "swords_3",
+    "name": "Three of Swords",
+    "arcana": "Minor",
+    "suit": "Swords",
+    "image_url": "https://placehold.co/260x430/08080f/e2e8f0?text=Three+of+Swords",
+    "meaning_upright": "Three of Swords card. Heartbreak and sorrow; grief, betrayal, necessary pain that opens the heart.",
+    "meaning_reversed": "Healing from heartbreak, releasing pain, forgiveness, mending."
+  },
+  {
+    "id": "swords_4",
+    "name": "Four of Swords",
+    "arcana": "Minor",
+    "suit": "Swords",
+    "image_url": "https://placehold.co/260x430/08080f/e2e8f0?text=Four+of+Swords",
+    "meaning_upright": "Four of Swords card. Rest and recovery; retreat, convalescence, peaceful contemplation after conflict.",
+    "meaning_reversed": "Restlessness, inability to rest, recovery avoided, stagnation."
+  },
+  {
+    "id": "swords_5",
+    "name": "Five of Swords",
+    "arcana": "Minor",
+    "suit": "Swords",
+    "image_url": "https://placehold.co/260x430/08080f/e2e8f0?text=Five+of+Swords",
+    "meaning_upright": "Five of Swords card. Defeat and loss; hollow victory, conflict with lasting damage, humiliation.",
+    "meaning_reversed": "Recovery from conflict, cutting losses, reconciliation, moving past defeat."
+  },
+  {
+    "id": "swords_6",
+    "name": "Six of Swords",
+    "arcana": "Minor",
+    "suit": "Swords",
+    "image_url": "https://placehold.co/260x430/08080f/e2e8f0?text=Six+of+Swords",
+    "meaning_upright": "Six of Swords card. Transition and passage; moving through difficulty, guided crossing, journey.",
+    "meaning_reversed": "Stuck in the past, refusal to move on, resistance to guidance."
+  },
+  {
+    "id": "swords_7",
+    "name": "Seven of Swords",
+    "arcana": "Minor",
+    "suit": "Swords",
+    "image_url": "https://placehold.co/260x430/08080f/e2e8f0?text=Seven+of+Swords",
+    "meaning_upright": "Seven of Swords card. Deception and cunning; strategy, theft of ideas, getting away with something.",
+    "meaning_reversed": "Conscience, facing deception, caught in a lie, reconsideration."
+  },
+  {
+    "id": "swords_8",
+    "name": "Eight of Swords",
+    "arcana": "Minor",
+    "suit": "Swords",
+    "image_url": "https://placehold.co/260x430/08080f/e2e8f0?text=Eight+of+Swords",
+    "meaning_upright": "Eight of Swords card. Restriction and self-limiting beliefs; feeling trapped, mind as prison, victim thinking.",
+    "meaning_reversed": "Freedom from self-limiting beliefs, release from restriction, emerging."
+  },
+  {
+    "id": "swords_9",
+    "name": "Nine of Swords",
+    "arcana": "Minor",
+    "suit": "Swords",
+    "image_url": "https://placehold.co/260x430/08080f/e2e8f0?text=Nine+of+Swords",
+    "meaning_upright": "Nine of Swords card. Anxiety and nightmares; fear spiraling in the dark, worry, mental anguish.",
+    "meaning_reversed": "Shame and despair released, slowly healing, worries diminishing."
+  },
+  {
+    "id": "swords_10",
+    "name": "Ten of Swords",
+    "arcana": "Minor",
+    "suit": "Swords",
+    "image_url": "https://placehold.co/260x430/08080f/e2e8f0?text=Ten+of+Swords",
+    "meaning_upright": "Ten of Swords card. Ending and crisis; the nadir, rock bottom, painful conclusion, surrender to truth.",
+    "meaning_reversed": "Recovery from crisis, survival, the darkest night passing, rising again."
+  },
+  {
+    "id": "swords_page",
+    "name": "Page of Swords",
+    "arcana": "Minor",
+    "suit": "Swords",
+    "image_url": "https://placehold.co/260x430/08080f/e2e8f0?text=Page+of+Swords",
+    "meaning_upright": "Page of Swords card. Intellectual curiosity; sharp mind, message received, new information, observant wit.",
+    "meaning_reversed": "Scatteredness, gossip, impulsive talk, superficial curiosity, poor planning."
+  },
+  {
+    "id": "swords_knight",
+    "name": "Knight of Swords",
+    "arcana": "Minor",
+    "suit": "Swords",
+    "image_url": "https://placehold.co/260x430/08080f/e2e8f0?text=Knight+of+Swords",
+    "meaning_upright": "Knight of Swords card. Swift intelligence; charging toward truth, decisive action, impatience for resolution.",
+    "meaning_reversed": "Recklessness, scattered aggression, too much haste, destructive impulse."
+  },
+  {
+    "id": "swords_queen",
+    "name": "Queen of Swords",
+    "arcana": "Minor",
+    "suit": "Swords",
+    "image_url": "https://placehold.co/260x430/08080f/e2e8f0?text=Queen+of+Swords",
+    "meaning_upright": "Queen of Swords card. Sharp discernment; clear judgment, honest assessment, decisive wisdom, perceptive authority.",
+    "meaning_reversed": "Cruelty, cold judgment, harsh words used as weapons, cutting too deep."
+  },
+  {
+    "id": "swords_king",
+    "name": "King of Swords",
+    "arcana": "Minor",
+    "suit": "Swords",
+    "image_url": "https://placehold.co/260x430/08080f/e2e8f0?text=King+of+Swords",
+    "meaning_upright": "King of Swords card. Mental mastery; keen intellect, fair judgment, cool analysis, ethical clarity.",
+    "meaning_reversed": "Cruelty, abuse of intellect, tyrannical coldness, manipulative logic."
+  },
+  {
+    "id": "pentacles_ace",
+    "name": "Ace of Pentacles",
+    "arcana": "Minor",
+    "suit": "Pentacles",
+    "image_url": "https://placehold.co/260x430/020f07/6ee7b7?text=Ace+of+Pentacles",
+    "meaning_upright": "Ace of Pentacles card. Material opportunity, new financial beginning, manifestation of potential, gift of the earth.",
+    "meaning_reversed": "Missed opportunities, poor financial decisions, lack of manifestation, squandered potential."
+  },
+  {
+    "id": "pentacles_2",
+    "name": "Two of Pentacles",
+    "arcana": "Minor",
+    "suit": "Pentacles",
+    "image_url": "https://placehold.co/260x430/020f07/6ee7b7?text=Two+of+Pentacles",
+    "meaning_upright": "Two of Pentacles card. Adaptability and balance; juggling priorities, flexibility, managing resources.",
+    "meaning_reversed": "Imbalance, disorganization, financial instability, inability to juggle demands."
+  },
+  {
+    "id": "pentacles_3",
+    "name": "Three of Pentacles",
+    "arcana": "Minor",
+    "suit": "Pentacles",
+    "image_url": "https://placehold.co/260x430/020f07/6ee7b7?text=Three+of+Pentacles",
+    "meaning_upright": "Three of Pentacles card. Teamwork and skilled craftsmanship; collaboration, mastery through effort, recognized work.",
+    "meaning_reversed": "Lack of teamwork, poor craftsmanship, unacknowledged work, creative blocks."
+  },
+  {
+    "id": "pentacles_4",
+    "name": "Four of Pentacles",
+    "arcana": "Minor",
+    "suit": "Pentacles",
+    "image_url": "https://placehold.co/260x430/020f07/6ee7b7?text=Four+of+Pentacles",
+    "meaning_upright": "Four of Pentacles card. Financial security and conservation; holding onto resources, stability, but possible hoarding.",
+    "meaning_reversed": "Materialism, greed, hoarding, financial obsession, fear of loss."
+  },
+  {
+    "id": "pentacles_5",
+    "name": "Five of Pentacles",
+    "arcana": "Minor",
+    "suit": "Pentacles",
+    "image_url": "https://placehold.co/260x430/020f07/6ee7b7?text=Five+of+Pentacles",
+    "meaning_upright": "Five of Pentacles card. Material hardship; poverty, exclusion, asking for help, enduring difficulty.",
+    "meaning_reversed": "Recovery from hardship, seeking support, charity accepted, isolation ending."
+  },
+  {
+    "id": "pentacles_6",
+    "name": "Six of Pentacles",
+    "arcana": "Minor",
+    "suit": "Pentacles",
+    "image_url": "https://placehold.co/260x430/020f07/6ee7b7?text=Six+of+Pentacles",
+    "meaning_upright": "Six of Pentacles card. Generosity and sharing; giving and receiving, fair distribution, charity.",
+    "meaning_reversed": "Greed, debt, selfishness, poor financial management, imbalanced giving."
+  },
+  {
+    "id": "pentacles_7",
+    "name": "Seven of Pentacles",
+    "arcana": "Minor",
+    "suit": "Pentacles",
+    "image_url": "https://placehold.co/260x430/020f07/6ee7b7?text=Seven+of+Pentacles",
+    "meaning_upright": "Seven of Pentacles card. Patience and assessment; taking stock of progress, long-term investment, waiting for harvest.",
+    "meaning_reversed": "Impatience, poor investment, lack of foresight, abandoned projects."
+  },
+  {
+    "id": "pentacles_8",
+    "name": "Eight of Pentacles",
+    "arcana": "Minor",
+    "suit": "Pentacles",
+    "image_url": "https://placehold.co/260x430/020f07/6ee7b7?text=Eight+of+Pentacles",
+    "meaning_upright": "Eight of Pentacles card. Focused skill and improvement; diligence, craftsmanship, incremental mastery.",
+    "meaning_reversed": "Perfectionism, poor quality, lack of focus, amateur effort."
+  },
+  {
+    "id": "pentacles_9",
+    "name": "Nine of Pentacles",
+    "arcana": "Minor",
+    "suit": "Pentacles",
+    "image_url": "https://placehold.co/260x430/020f07/6ee7b7?text=Nine+of+Pentacles",
+    "meaning_upright": "Nine of Pentacles card. Independence and material comfort; self-sufficiency, enjoying the fruits of labor.",
+    "meaning_reversed": "Overwork, isolation, all work no play, financial security at cost of living."
+  },
+  {
+    "id": "pentacles_10",
+    "name": "Ten of Pentacles",
+    "arcana": "Minor",
+    "suit": "Pentacles",
+    "image_url": "https://placehold.co/260x430/020f07/6ee7b7?text=Ten+of+Pentacles",
+    "meaning_upright": "Ten of Pentacles card. Legacy and family prosperity; ancestral wealth, long-term security, generational roots.",
+    "meaning_reversed": "Financial dysfunction, family debt, broken legacy, lost inheritance."
+  },
+  {
+    "id": "pentacles_page",
+    "name": "Page of Pentacles",
+    "arcana": "Minor",
+    "suit": "Pentacles",
+    "image_url": "https://placehold.co/260x430/020f07/6ee7b7?text=Page+of+Pentacles",
+    "meaning_upright": "Page of Pentacles card. Practicality and learning; earthy curiosity, new skills, enthusiastic study of material world.",
+    "meaning_reversed": "Immaturity with money, naivety, wasted learning, lazy approach."
+  },
+  {
+    "id": "pentacles_knight",
+    "name": "Knight of Pentacles",
+    "arcana": "Minor",
+    "suit": "Pentacles",
+    "image_url": "https://placehold.co/260x430/020f07/6ee7b7?text=Knight+of+Pentacles",
+    "meaning_upright": "Knight of Pentacles card. Reliable effort; steadfast persistence, methodical approach, patient progress.",
+    "meaning_reversed": "Stubbornness, laziness, dull persistence without progress."
+  },
+  {
+    "id": "pentacles_queen",
+    "name": "Queen of Pentacles",
+    "arcana": "Minor",
+    "suit": "Pentacles",
+    "image_url": "https://placehold.co/260x430/020f07/6ee7b7?text=Queen+of+Pentacles",
+    "meaning_upright": "Queen of Pentacles card. Nurturing abundance; the fertile ground of care, generosity, practical wisdom.",
+    "meaning_reversed": "Overprotective, smothering with money, financial control, neglect."
+  },
+  {
+    "id": "pentacles_king",
+    "name": "King of Pentacles",
+    "arcana": "Minor",
+    "suit": "Pentacles",
+    "image_url": "https://placehold.co/260x430/020f07/6ee7b7?text=King+of+Pentacles",
+    "meaning_upright": "King of Pentacles card. Material mastery; prosperity through patience, stable authority, practical leadership.",
+    "meaning_reversed": "Corruption, greed, financial mismanagement, abuse of material power."
+  }
+]

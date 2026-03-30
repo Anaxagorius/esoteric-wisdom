@@ -37,6 +37,11 @@ impl AppState {
             DeckType::GoodTarot,
             DeckType::MorganGreer,
             DeckType::RealTalk,
+            DeckType::WildUnknown,
+            DeckType::Shadowscapes,
+            DeckType::Aquarian,
+            DeckType::DeviantMoon,
+            DeckType::AnnaK,
         ];
         let deck_count = all_decks.len();
         for deck_type in all_decks {
