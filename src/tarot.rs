@@ -26,6 +26,11 @@ pub enum DeckType {
     GoodTarot,
     MorganGreer,
     RealTalk,
+    WildUnknown,
+    Shadowscapes,
+    Aquarian,
+    DeviantMoon,
+    AnnaK,
 }
 
 impl DeckType {
@@ -40,6 +45,11 @@ impl DeckType {
             "good_tarot" => DeckType::GoodTarot,
             "morgan_greer" => DeckType::MorganGreer,
             "real_talk" => DeckType::RealTalk,
+            "wild_unknown" => DeckType::WildUnknown,
+            "shadowscapes" => DeckType::Shadowscapes,
+            "aquarian" => DeckType::Aquarian,
+            "deviant_moon" => DeckType::DeviantMoon,
+            "anna_k" => DeckType::AnnaK,
             _ => DeckType::Rws,
         }
     }
@@ -56,6 +66,11 @@ impl DeckType {
             DeckType::GoodTarot => "good_tarot",
             DeckType::MorganGreer => "morgan_greer",
             DeckType::RealTalk => "real_talk",
+            DeckType::WildUnknown => "wild_unknown",
+            DeckType::Shadowscapes => "shadowscapes",
+            DeckType::Aquarian => "aquarian",
+            DeckType::DeviantMoon => "deviant_moon",
+            DeckType::AnnaK => "anna_k",
         }
     }
 
@@ -71,6 +86,11 @@ impl DeckType {
             DeckType::GoodTarot => "The Good Tarot",
             DeckType::MorganGreer => "Morgan-Greer Tarot",
             DeckType::RealTalk => "Real Talk Tarot",
+            DeckType::WildUnknown => "The Wild Unknown Tarot",
+            DeckType::Shadowscapes => "Shadowscapes Tarot",
+            DeckType::Aquarian => "Aquarian Tarot",
+            DeckType::DeviantMoon => "Deviant Moon Tarot",
+            DeckType::AnnaK => "Anna K Tarot",
         }
     }
 
@@ -86,6 +106,11 @@ impl DeckType {
             DeckType::GoodTarot => "data/tarot_cards_good_tarot.json",
             DeckType::MorganGreer => "data/tarot_cards_morgan_greer.json",
             DeckType::RealTalk => "data/tarot_cards_real_talk.json",
+            DeckType::WildUnknown => "data/tarot_cards_wild_unknown.json",
+            DeckType::Shadowscapes => "data/tarot_cards_shadowscapes.json",
+            DeckType::Aquarian => "data/tarot_cards_aquarian.json",
+            DeckType::DeviantMoon => "data/tarot_cards_deviant_moon.json",
+            DeckType::AnnaK => "data/tarot_cards_anna_k.json",
         }
     }
 }

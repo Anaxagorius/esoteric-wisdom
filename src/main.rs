@@ -28,7 +28,7 @@ async fn main() -> anyhow::Result<()> {
         .nest("/astrology", astrology::routes())
         .nest("/meditation", meditation::routes())
         .nest("/tarot", tarot::routes())
-        .nest("/journal", journal::routes())
+        // journal disabled
         .nest("/numerology", numerology::routes())
         .layer(CookieManagerLayer::new())
         .with_state(state);
