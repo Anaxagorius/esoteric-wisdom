@@ -33,13 +33,23 @@ async fn main() -> anyhow::Result<()> {
         .layer(CookieManagerLayer::new())
         .with_state(state);
 
-    let addr = std::net::SocketAddr::from(([127, 0, 0, 1], 3000));
-    let url = format!("http://{addr}");
+    let port_env = std::env::var("PORT");
+    let port: u16 = match &port_env {
+        Ok(val) => val.parse().unwrap_or_else(|_| {
+            tracing::warn!("Invalid PORT value '{val}', falling back to 3000");
+            3000
+        }),
+        Err(_) => 3000,
+    };
+    let addr = std::net::SocketAddr::from(([0, 0, 0, 0], port));
+    let url = format!("http://127.0.0.1:{port}");
     println!("✨ Esoteric Wisdom running at {url}");
 
     let listener = tokio::net::TcpListener::bind(addr).await?;
-    if let Err(e) = open::that(&url) {
-        tracing::warn!("Could not open browser automatically: {e}");
+    if port_env.is_err() {
+        if let Err(e) = open::that(&url) {
+            tracing::warn!("Could not open browser automatically: {e}");
+        }
     }
 
     axum::serve(listener, app).await?;
