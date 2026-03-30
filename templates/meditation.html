@@ -103,7 +103,7 @@
           <!-- Music Selection -->
           <div>
             <label class="text-sm text-indigo-200 mb-3 block">Soundscape</label>
-            <div class="space-y-2" id="track-list">
+            <div class="space-y-2 max-h-72 overflow-y-auto pr-1" id="track-list">
               <label class="flex items-center gap-3 bg-black/40 border border-indigo-400/30 rounded-xl p-3 cursor-pointer hover:border-indigo-400/60 transition-all has-[:checked]:border-indigo-400/80 has-[:checked]:bg-indigo-900/30">
                 <input type="radio" name="track" value="tibetan" checked class="accent-indigo-400" onchange="selectTrack(this)" />
                 <span class="text-xl">🎵</span>
@@ -113,11 +113,43 @@
                 </div>
               </label>
               <label class="flex items-center gap-3 bg-black/40 border border-indigo-400/30 rounded-xl p-3 cursor-pointer hover:border-indigo-400/60 transition-all has-[:checked]:border-indigo-400/80 has-[:checked]:bg-indigo-900/30">
+                <input type="radio" name="track" value="crystal" class="accent-indigo-400" onchange="selectTrack(this)" />
+                <span class="text-xl">💎</span>
+                <div>
+                  <div class="text-sm text-violet-100">Crystal Singing Bowl</div>
+                  <div class="text-xs text-violet-300/60">High-frequency crystal tones, 528 Hz</div>
+                </div>
+              </label>
+              <label class="flex items-center gap-3 bg-black/40 border border-indigo-400/30 rounded-xl p-3 cursor-pointer hover:border-indigo-400/60 transition-all has-[:checked]:border-indigo-400/80 has-[:checked]:bg-indigo-900/30">
+                <input type="radio" name="track" value="om" class="accent-indigo-400" onchange="selectTrack(this)" />
+                <span class="text-xl">🕉️</span>
+                <div>
+                  <div class="text-sm text-violet-100">Sacred OM Drone</div>
+                  <div class="text-xs text-violet-300/60">136.1 Hz — the cosmic OM frequency</div>
+                </div>
+              </label>
+              <label class="flex items-center gap-3 bg-black/40 border border-indigo-400/30 rounded-xl p-3 cursor-pointer hover:border-indigo-400/60 transition-all has-[:checked]:border-indigo-400/80 has-[:checked]:bg-indigo-900/30">
                 <input type="radio" name="track" value="binaural" class="accent-indigo-400" onchange="selectTrack(this)" />
                 <span class="text-xl">🧠</span>
                 <div>
                   <div class="text-sm text-violet-100">Theta Binaural Beats</div>
-                  <div class="text-xs text-violet-300/60">4–7 Hz for deep meditative states</div>
+                  <div class="text-xs text-violet-300/60">6 Hz — deep meditative states</div>
+                </div>
+              </label>
+              <label class="flex items-center gap-3 bg-black/40 border border-indigo-400/30 rounded-xl p-3 cursor-pointer hover:border-indigo-400/60 transition-all has-[:checked]:border-indigo-400/80 has-[:checked]:bg-indigo-900/30">
+                <input type="radio" name="track" value="alpha" class="accent-indigo-400" onchange="selectTrack(this)" />
+                <span class="text-xl">✨</span>
+                <div>
+                  <div class="text-sm text-violet-100">Alpha Binaural Beats</div>
+                  <div class="text-xs text-violet-300/60">10 Hz — relaxed focus &amp; clarity</div>
+                </div>
+              </label>
+              <label class="flex items-center gap-3 bg-black/40 border border-indigo-400/30 rounded-xl p-3 cursor-pointer hover:border-indigo-400/60 transition-all has-[:checked]:border-indigo-400/80 has-[:checked]:bg-indigo-900/30">
+                <input type="radio" name="track" value="delta" class="accent-indigo-400" onchange="selectTrack(this)" />
+                <span class="text-xl">🌙</span>
+                <div>
+                  <div class="text-sm text-violet-100">Delta Binaural Beats</div>
+                  <div class="text-xs text-violet-300/60">2 Hz — deep sleep &amp; restoration</div>
                 </div>
               </label>
               <label class="flex items-center gap-3 bg-black/40 border border-indigo-400/30 rounded-xl p-3 cursor-pointer hover:border-indigo-400/60 transition-all has-[:checked]:border-indigo-400/80 has-[:checked]:bg-indigo-900/30">
@@ -125,7 +157,23 @@
                 <span class="text-xl">🌿</span>
                 <div>
                   <div class="text-sm text-violet-100">Forest Rain &amp; Nature</div>
-                  <div class="text-xs text-violet-300/60">Gentle rain, birdsong, rustling leaves</div>
+                  <div class="text-xs text-violet-300/60">Gentle rain, rustling leaves</div>
+                </div>
+              </label>
+              <label class="flex items-center gap-3 bg-black/40 border border-indigo-400/30 rounded-xl p-3 cursor-pointer hover:border-indigo-400/60 transition-all has-[:checked]:border-indigo-400/80 has-[:checked]:bg-indigo-900/30">
+                <input type="radio" name="track" value="ocean" class="accent-indigo-400" onchange="selectTrack(this)" />
+                <span class="text-xl">🌊</span>
+                <div>
+                  <div class="text-sm text-violet-100">Ocean Waves</div>
+                  <div class="text-xs text-violet-300/60">Rhythmic tidal swells, deep calm</div>
+                </div>
+              </label>
+              <label class="flex items-center gap-3 bg-black/40 border border-indigo-400/30 rounded-xl p-3 cursor-pointer hover:border-indigo-400/60 transition-all has-[:checked]:border-indigo-400/80 has-[:checked]:bg-indigo-900/30">
+                <input type="radio" name="track" value="pink" class="accent-indigo-400" onchange="selectTrack(this)" />
+                <span class="text-xl">🌸</span>
+                <div>
+                  <div class="text-sm text-violet-100">Pink Noise</div>
+                  <div class="text-xs text-violet-300/60">Balanced 1/f noise, soothing focus</div>
                 </div>
               </label>
               <label class="flex items-center gap-3 bg-black/40 border border-indigo-400/30 rounded-xl p-3 cursor-pointer hover:border-indigo-400/60 transition-all has-[:checked]:border-indigo-400/80 has-[:checked]:bg-indigo-900/30">
@@ -137,11 +185,6 @@
                 </div>
               </label>
             </div>
-            <p class="text-xs text-violet-300/50 mt-2">
-              Free music sources:
-              <a href="https://pixabay.com/music/search/meditation/" target="_blank" rel="noopener" class="text-amber-300 hover:underline">Pixabay</a> ·
-              <a href="https://mixkit.co/free-stock-music/tag/meditation/" target="_blank" rel="noopener" class="text-amber-300 hover:underline">Mixkit</a>
-            </p>
           </div>
 
           <!-- Start Button -->
@@ -231,6 +274,258 @@
       ];
       let instrIdx = 0;
 
+      // ─── Audio Engine ─────────────────────────────────────────────────────────
+      const AUDIO_FADE_IN = 2;    // seconds for volume fade-in on session start
+      const AUDIO_FADE_IN_LONG = 3; // seconds for slower fade-in (bowls/crystal)
+      const AUDIO_FADE_IN_OM  = 4;  // seconds for OM drone fade-in
+      const BINAURAL_VOLUME   = 0.18;
+      const BOWL_VOICE_VOLUME = 0.08;
+      let audioCtx = null;
+      let activeAudioNodes = [];
+
+      function getAudioCtx() {
+        if (!audioCtx) {
+          audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        }
+        if (audioCtx.state === 'suspended') audioCtx.resume();
+        return audioCtx;
+      }
+
+      function stopAudio() {
+        // Nodes may already be stopped or disconnected during cleanup — ignore those errors
+        activeAudioNodes.forEach(n => { try { n.stop(); } catch(e) {} });
+        activeAudioNodes = [];
+      }
+
+      /** Create a looping white-noise buffer source */
+      function makeNoise(ctx) {
+        const len = ctx.sampleRate * 2;
+        const buf = ctx.createBuffer(1, len, ctx.sampleRate);
+        const data = buf.getChannelData(0);
+        for (let i = 0; i < len; i++) data[i] = Math.random() * 2 - 1;
+        const src = ctx.createBufferSource();
+        src.buffer = buf;
+        src.loop = true;
+        return src;
+      }
+
+      /** Fade a GainNode to a target value */
+      function fadeGain(gainNode, target, ctx, duration) {
+        gainNode.gain.setTargetAtTime(target, ctx.currentTime, duration);
+      }
+
+      /** Binaural beats: two sine waves panned to opposite ears */
+      function startBinaural(baseHz, beatHz) {
+        const ctx = getAudioCtx();
+        const masterGain = ctx.createGain();
+        masterGain.gain.setValueAtTime(0, ctx.currentTime);
+        masterGain.gain.linearRampToValueAtTime(BINAURAL_VOLUME, ctx.currentTime + AUDIO_FADE_IN);
+        masterGain.connect(ctx.destination);
+
+        [[-1, baseHz], [1, baseHz + beatHz]].forEach(([pan, freq]) => {
+          const osc = ctx.createOscillator();
+          const panner = ctx.createStereoPanner();
+          osc.type = 'sine';
+          osc.frequency.value = freq;
+          panner.pan.value = pan;
+          osc.connect(panner);
+          panner.connect(masterGain);
+          osc.start();
+          activeAudioNodes.push(osc);
+        });
+      }
+
+      /** Tibetan singing bowls: Solfeggio harmonics with amplitude LFOs */
+      function startTibetan(freqs) {
+        const ctx = getAudioCtx();
+        freqs.forEach((freq, i) => {
+          const osc = ctx.createOscillator();
+          const gainNode = ctx.createGain();
+          const lfo = ctx.createOscillator();
+          const lfoGain = ctx.createGain();
+
+          osc.type = 'sine';
+          osc.frequency.value = freq;
+
+          lfo.type = 'sine';
+          lfo.frequency.value = 0.2 + i * 0.07;
+          lfoGain.gain.value = 0.06;
+
+          gainNode.gain.setValueAtTime(0, ctx.currentTime);
+          gainNode.gain.linearRampToValueAtTime(BOWL_VOICE_VOLUME, ctx.currentTime + AUDIO_FADE_IN_LONG);
+
+          lfo.connect(lfoGain);
+          lfoGain.connect(gainNode.gain);
+          osc.connect(gainNode);
+          gainNode.connect(ctx.destination);
+
+          osc.start();
+          lfo.start();
+          activeAudioNodes.push(osc, lfo);
+        });
+      }
+
+      /** Rain: bandpass-filtered white noise with gentle modulation */
+      function startRain() {
+        const ctx = getAudioCtx();
+        const noise = makeNoise(ctx);
+        const bandpass = ctx.createBiquadFilter();
+        bandpass.type = 'bandpass';
+        bandpass.frequency.value = 1200;
+        bandpass.Q.value = 0.8;
+
+        const gainNode = ctx.createGain();
+        gainNode.gain.setValueAtTime(0, ctx.currentTime);
+        gainNode.gain.linearRampToValueAtTime(0.55, ctx.currentTime + AUDIO_FADE_IN);
+
+        noise.connect(bandpass);
+        bandpass.connect(gainNode);
+        gainNode.connect(ctx.destination);
+        noise.start();
+        activeAudioNodes.push(noise);
+      }
+
+      /** Ocean waves: low-pass filtered noise with slow LFO amplitude swell */
+      function startOcean() {
+        const ctx = getAudioCtx();
+        const noise = makeNoise(ctx);
+        const lowpass = ctx.createBiquadFilter();
+        lowpass.type = 'lowpass';
+        lowpass.frequency.value = 600;
+        lowpass.Q.value = 0.5;
+
+        const gainNode = ctx.createGain();
+        gainNode.gain.value = 0;
+
+        const lfo = ctx.createOscillator();
+        const lfoGain = ctx.createGain();
+        lfo.type = 'sine';
+        lfo.frequency.value = 0.1; // ~10 s per wave
+        lfoGain.gain.value = 0.25;
+
+        gainNode.gain.setValueAtTime(0.2, ctx.currentTime);
+        lfo.connect(lfoGain);
+        lfoGain.connect(gainNode.gain);
+
+        noise.connect(lowpass);
+        lowpass.connect(gainNode);
+        gainNode.connect(ctx.destination);
+
+        noise.start();
+        lfo.start();
+        activeAudioNodes.push(noise, lfo);
+      }
+
+      /** Pink noise: white noise shaped by a series of lowpass filters */
+      function startPinkNoise() {
+        const ctx = getAudioCtx();
+        const bufLen = ctx.sampleRate * 4;
+        const buf = ctx.createBuffer(1, bufLen, ctx.sampleRate);
+        const data = buf.getChannelData(0);
+        // Voss-McCartney pink noise approximation
+        let b0=0,b1=0,b2=0,b3=0,b4=0,b5=0,b6=0;
+        for (let i = 0; i < bufLen; i++) {
+          const white = Math.random() * 2 - 1;
+          b0 = 0.99886*b0 + white*0.0555179;
+          b1 = 0.99332*b1 + white*0.0750759;
+          b2 = 0.96900*b2 + white*0.1538520;
+          b3 = 0.86650*b3 + white*0.3104856;
+          b4 = 0.55000*b4 + white*0.5329522;
+          b5 = -0.7616*b5 - white*0.0168980;
+          data[i] = (b0+b1+b2+b3+b4+b5+b6+white*0.5362) * 0.11;
+          b6 = white * 0.115926;
+        }
+        const src = ctx.createBufferSource();
+        src.buffer = buf;
+        src.loop = true;
+        const gainNode = ctx.createGain();
+        gainNode.gain.setValueAtTime(0, ctx.currentTime);
+        gainNode.gain.linearRampToValueAtTime(0.6, ctx.currentTime + AUDIO_FADE_IN);
+        src.connect(gainNode);
+        gainNode.connect(ctx.destination);
+        src.start();
+        activeAudioNodes.push(src);
+      }
+
+      /** OM Drone: 136.1 Hz fundamental with 2nd/3rd harmonics */
+      function startOM() {
+        const ctx = getAudioCtx();
+        [[136.1, 'sine', 0.20], [272.2, 'sine', 0.09], [408.3, 'sine', 0.04]].forEach(([freq, type, vol]) => {
+          const osc = ctx.createOscillator();
+          const gainNode = ctx.createGain();
+          osc.type = type;
+          osc.frequency.value = freq;
+          gainNode.gain.setValueAtTime(0, ctx.currentTime);
+          gainNode.gain.linearRampToValueAtTime(vol, ctx.currentTime + AUDIO_FADE_IN_OM);
+          osc.connect(gainNode);
+          gainNode.connect(ctx.destination);
+          osc.start();
+          activeAudioNodes.push(osc);
+        });
+      }
+
+      /** Crystal bowl: 528 Hz (Love frequency) with shimmer */
+      function startCrystal() {
+        const ctx = getAudioCtx();
+        [[528, 0.18], [1056, 0.06], [1584, 0.02]].forEach(([freq, vol], i) => {
+          const osc = ctx.createOscillator();
+          const gainNode = ctx.createGain();
+          const lfo = ctx.createOscillator();
+          const lfoGain = ctx.createGain();
+          osc.type = 'sine';
+          osc.frequency.value = freq;
+          lfo.type = 'sine';
+          lfo.frequency.value = 0.15 + i * 0.05;
+          lfoGain.gain.value = 0.04;
+          gainNode.gain.setValueAtTime(0, ctx.currentTime);
+          gainNode.gain.linearRampToValueAtTime(vol, ctx.currentTime + AUDIO_FADE_IN_LONG);
+          lfo.connect(lfoGain);
+          lfoGain.connect(gainNode.gain);
+          osc.connect(gainNode);
+          gainNode.connect(ctx.destination);
+          osc.start();
+          lfo.start();
+          activeAudioNodes.push(osc, lfo);
+        });
+      }
+
+      function startAudioForTrack(track) {
+        stopAudio();
+        switch (track) {
+          case 'tibetan':
+            startTibetan([174, 285, 396, 528, 639]);
+            break;
+          case 'crystal':
+            startCrystal();
+            break;
+          case 'om':
+            startOM();
+            break;
+          case 'binaural':
+            startBinaural(200, 6);   // Theta: 6 Hz beat
+            break;
+          case 'alpha':
+            startBinaural(200, 10);  // Alpha: 10 Hz beat
+            break;
+          case 'delta':
+            startBinaural(200, 2);   // Delta: 2 Hz beat
+            break;
+          case 'nature':
+            startRain();
+            break;
+          case 'ocean':
+            startOcean();
+            break;
+          case 'pink':
+            startPinkNoise();
+            break;
+          case 'silence':
+          default:
+            break;
+        }
+      }
+      // ─────────────────────────────────────────────────────────────────────────
+
       function setMode(mode) {
         currentMode = mode;
         document.querySelectorAll('.mode-btn').forEach(b => b.classList.remove('active'));
@@ -238,7 +533,13 @@
         document.getElementById('guided-section').classList.toggle('hidden', mode !== 'guided');
       }
 
-      function selectTrack(el) { /* Music selection tracked by radio value */ }
+      function selectTrack(el) {
+        // When a session is active, switch audio immediately.
+        // Otherwise the selection is stored in the radio button and picked up when the session starts.
+        if (isRunning) {
+          startAudioForTrack(el.value);
+        }
+      }
 
       function formatTime(s) {
         const m = Math.floor(s / 60);
@@ -309,6 +610,10 @@
         document.getElementById('breathe-anim').style.animationDuration = '8s';
         startBreatheGuide();
 
+        // Start audio for selected track
+        const trackEl = document.querySelector('input[name="track"]:checked');
+        if (trackEl) startAudioForTrack(trackEl.value);
+
         if (currentMode === 'guided') {
           document.getElementById('guided-section').classList.remove('hidden');
           updateGuidedStep();
@@ -331,6 +636,7 @@
         clearInterval(timerInterval);
         clearInterval(guidedInterval);
         stopBreatheGuide();
+        stopAudio();
         isRunning = false;
         document.getElementById('start-btn').textContent = '▶ Begin Session';
         document.getElementById('start-btn').classList.remove('from-red-500', 'to-pink-600');
