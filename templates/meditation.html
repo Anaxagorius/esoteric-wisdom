@@ -244,6 +244,183 @@
           </p>
         </div>
       </div>
+
+      <!-- ✦ Therapeutic Sound Stacks ✦ -->
+      <div class="bg-black/50 border border-violet-500/40 rounded-3xl p-6 backdrop-blur-xl shadow-2xl">
+        <div class="mb-5">
+          <h2 class="font-cinzel text-xl text-violet-300">🔹 Therapeutic Sound Stacks</h2>
+          <p class="text-xs text-violet-200/60 mt-1">Curated multi-layer soundscapes — each stack combines binaural beats, solfeggio tones and ambient textures tuned for a specific nervous-system state. Click <em>Launch Stack</em> to configure and begin automatically.</p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 mb-5">
+
+          <!-- Stack 1 — Stress Relief -->
+          <div class="bg-black/40 border border-teal-500/30 rounded-2xl p-4 space-y-2">
+            <div class="flex items-center gap-2">
+              <span class="text-2xl">🌿</span>
+              <div>
+                <div class="text-sm font-semibold text-teal-200">Stress Relief</div>
+                <div class="text-xs text-teal-300/60">Alpha · Calm &amp; Grounded</div>
+              </div>
+            </div>
+            <div class="text-xs text-violet-200/70 space-y-0.5">
+              <div>🎵 Alpha 10 Hz · 432 Hz · Soft pink noise</div>
+              <div>🎯 Anxiety, overwhelm, daytime reset</div>
+              <div>⏱ 10–25 min</div>
+            </div>
+            <button onclick="launchStack('stack1', 15)"
+              class="w-full py-1.5 rounded-xl bg-teal-800/40 border border-teal-500/50 text-xs text-teal-200 hover:bg-teal-700/50 transition-all">
+              ▶ Launch Stack
+            </button>
+          </div>
+
+          <!-- Stack 2 — Deep Meditation -->
+          <div class="bg-black/40 border border-indigo-500/30 rounded-2xl p-4 space-y-2">
+            <div class="flex items-center gap-2">
+              <span class="text-2xl">🧘</span>
+              <div>
+                <div class="text-sm font-semibold text-indigo-200">Deep Meditation</div>
+                <div class="text-xs text-indigo-300/60">Theta · Inner Stillness</div>
+              </div>
+            </div>
+            <div class="text-xs text-violet-200/70 space-y-0.5">
+              <div>🎵 Theta 6 Hz · 528 Hz · Low drone</div>
+              <div>🎯 Long sits, visualization, insight</div>
+              <div>⏱ 20–45 min</div>
+            </div>
+            <button onclick="launchStack('stack2', 30)"
+              class="w-full py-1.5 rounded-xl bg-indigo-800/40 border border-indigo-500/50 text-xs text-indigo-200 hover:bg-indigo-700/50 transition-all">
+              ▶ Launch Stack
+            </button>
+          </div>
+
+          <!-- Stack 3 — Healing & Reset -->
+          <div class="bg-black/40 border border-emerald-500/30 rounded-2xl p-4 space-y-2">
+            <div class="flex items-center gap-2">
+              <span class="text-2xl">💚</span>
+              <div>
+                <div class="text-sm font-semibold text-emerald-200">Healing &amp; Reset</div>
+                <div class="text-xs text-emerald-300/60">Low Theta→Delta · Restoration</div>
+              </div>
+            </div>
+            <div class="text-xs text-violet-200/70 space-y-0.5">
+              <div>🎵 Delta 3 Hz · 174 Hz · Brown noise</div>
+              <div>🎯 Burnout, illness recovery, rest</div>
+              <div>⏱ 30–60 min</div>
+            </div>
+            <button onclick="launchStack('stack3', 45)"
+              class="w-full py-1.5 rounded-xl bg-emerald-800/40 border border-emerald-500/50 text-xs text-emerald-200 hover:bg-emerald-700/50 transition-all">
+              ▶ Launch Stack
+            </button>
+          </div>
+
+          <!-- Stack 4 — Sleep -->
+          <div class="bg-black/40 border border-blue-500/30 rounded-2xl p-4 space-y-2">
+            <div class="flex items-center gap-2">
+              <span class="text-2xl">🌙</span>
+              <div>
+                <div class="text-sm font-semibold text-blue-200">Sleep</div>
+                <div class="text-xs text-blue-300/60">Delta Descent · Letting Go</div>
+              </div>
+            </div>
+            <div class="text-xs text-violet-200/70 space-y-0.5">
+              <div>🎵 4 Hz→1 Hz ramp · 285 Hz · Pink noise</div>
+              <div>🎯 Insomnia, night anxiety</div>
+              <div>⏱ 45–90 min</div>
+            </div>
+            <button onclick="launchStack('stack4', 60)"
+              class="w-full py-1.5 rounded-xl bg-blue-800/40 border border-blue-500/50 text-xs text-blue-200 hover:bg-blue-700/50 transition-all">
+              ▶ Launch Stack
+            </button>
+          </div>
+
+          <!-- Stack 5 — Emotional Balance -->
+          <div class="bg-black/40 border border-pink-500/30 rounded-2xl p-4 space-y-2">
+            <div class="flex items-center gap-2">
+              <span class="text-2xl">💜</span>
+              <div>
+                <div class="text-sm font-semibold text-pink-200">Emotional Balance</div>
+                <div class="text-xs text-pink-300/60">Alpha→Theta · Openness</div>
+              </div>
+            </div>
+            <div class="text-xs text-violet-200/70 space-y-0.5">
+              <div>🎵 7 Hz · 639 Hz · Harmonic pad</div>
+              <div>🎯 Grief, emotional processing</div>
+              <div>⏱ 20–40 min</div>
+            </div>
+            <button onclick="launchStack('stack5', 30)"
+              class="w-full py-1.5 rounded-xl bg-pink-800/40 border border-pink-500/50 text-xs text-pink-200 hover:bg-pink-700/50 transition-all">
+              ▶ Launch Stack
+            </button>
+          </div>
+
+          <!-- Stack 6 — Spiritual Awareness -->
+          <div class="bg-black/40 border border-amber-500/30 rounded-2xl p-4 space-y-2">
+            <div class="flex items-center gap-2">
+              <span class="text-2xl">🌌</span>
+              <div>
+                <div class="text-sm font-semibold text-amber-200">Spiritual Awareness</div>
+                <div class="text-xs text-amber-300/60">Theta→Gamma · Expansive</div>
+              </div>
+            </div>
+            <div class="text-xs text-violet-200/70 space-y-0.5">
+              <div>🎵 8 Hz+40 Hz overlay · 852 Hz · Silence windows</div>
+              <div>🎯 Advanced meditation, transcendence</div>
+              <div>⏱ 30–60 min</div>
+            </div>
+            <button onclick="launchStack('stack6', 45)"
+              class="w-full py-1.5 rounded-xl bg-amber-800/40 border border-amber-500/50 text-xs text-amber-200 hover:bg-amber-700/50 transition-all">
+              ▶ Launch Stack
+            </button>
+          </div>
+
+          <!-- Stack 7 — Sound Bath -->
+          <div class="bg-black/40 border border-violet-500/30 rounded-2xl p-4 space-y-2 sm:col-span-2 lg:col-span-1">
+            <div class="flex items-center gap-2">
+              <span class="text-2xl">🎵</span>
+              <div>
+                <div class="text-sm font-semibold text-violet-200">Sound Bath</div>
+                <div class="text-xs text-violet-300/60">Multi-State · Full Resonance</div>
+              </div>
+            </div>
+            <div class="text-xs text-violet-200/70 space-y-0.5">
+              <div>🎵 Bowls C→B · Theta 6 Hz · Spatial FX</div>
+              <div>🎯 Deep immersion, ceremonial use</div>
+              <div>⏱ 45–90 min</div>
+            </div>
+            <button onclick="launchStack('stack7', 60)"
+              class="w-full py-1.5 rounded-xl bg-violet-800/40 border border-violet-500/50 text-xs text-violet-200 hover:bg-violet-700/50 transition-all">
+              ▶ Launch Stack
+            </button>
+          </div>
+
+        </div>
+
+        <!-- Master Flow: daytime journey through stacks 1–3 + 5–7. Stack 4 (Sleep) is intentionally
+             excluded — it is designed to be used on its own as a standalone wind-down, not embedded
+             in a daytime arc. -->
+        <div class="border border-amber-500/30 rounded-2xl p-5 bg-gradient-to-r from-amber-900/20 to-violet-900/20">
+          <div class="flex items-start justify-between mb-3 gap-3">
+            <div>
+              <h3 class="font-cinzel text-amber-300 text-sm">🧭 Master Flow — Full Journey</h3>
+              <p class="text-xs text-amber-200/60 mt-1">A complete nervous-system arc: calm → depth → repair → transcendence → rest (~2.5 hrs)</p>
+            </div>
+            <div id="master-stage-badge" class="hidden shrink-0 px-2 py-1 rounded-full bg-amber-500/20 border border-amber-400/40 text-xs text-amber-300 whitespace-nowrap"></div>
+          </div>
+          <div class="flex flex-wrap items-center gap-1 text-xs text-violet-200/50 mb-4">
+            <span>🌿 Relief</span><span class="text-violet-400/30">→</span>
+            <span>💜 Balance</span><span class="text-violet-400/30">→</span>
+            <span>🧘 Meditation</span><span class="text-violet-400/30">→</span>
+            <span>💚 Healing</span><span class="text-violet-400/30">→</span>
+            <span>🌌 Spiritual</span><span class="text-violet-400/30">→</span>
+            <span>🎵 Sound Bath</span>
+          </div>
+          <button onclick="startMasterFlow()"
+            class="w-full py-3 rounded-full bg-gradient-to-r from-amber-600 to-violet-600 font-semibold text-sm hover:scale-105 hover:shadow-lg hover:shadow-amber-500/30 transition-all duration-300">
+            ✦ Begin Full Journey
+          </button>
+        </div>
+      </div>
     </div>
 
     <script>
@@ -264,6 +441,8 @@
       let isRunning = false;
       let currentMode = 'guided';
       let guidedStep = 0;
+      let isMasterFlow = false;
+      let masterFlowStage = -1;
 
       const instructions = [
         "\"Close your eyes. Take a slow, deep breath in... and release gently. Let your body soften into stillness.\"",
@@ -489,6 +668,282 @@
         });
       }
 
+      // ─── New Audio Helpers ─────────────────────────────────────────────────────
+
+      /** Single solfeggio / harmonic tone with subtle shimmer LFO */
+      function startHarmonicTone(freq, vol) {
+        const ctx = getAudioCtx();
+        [[freq, vol], [freq * 2, vol * 0.25], [freq * 3, vol * 0.08]].forEach(([f, v], i) => {
+          const osc = ctx.createOscillator();
+          const gain = ctx.createGain();
+          const lfo = ctx.createOscillator();
+          const lfoGain = ctx.createGain();
+          osc.type = 'sine';
+          osc.frequency.value = f;
+          lfo.type = 'sine';
+          lfo.frequency.value = 0.08 + i * 0.03;
+          lfoGain.gain.value = 0.025;
+          gain.gain.setValueAtTime(0, ctx.currentTime);
+          gain.gain.linearRampToValueAtTime(v, ctx.currentTime + AUDIO_FADE_IN_LONG);
+          lfo.connect(lfoGain);
+          lfoGain.connect(gain.gain);
+          osc.connect(gain);
+          gain.connect(ctx.destination);
+          osc.start();
+          lfo.start();
+          activeAudioNodes.push(osc, lfo);
+        });
+      }
+
+      /** Brown (Brownian) noise — deeper bass than pink noise, felt in the body */
+      function startBrownNoise() {
+        const ctx = getAudioCtx();
+        const bufLen = ctx.sampleRate * 4;
+        const buf = ctx.createBuffer(1, bufLen, ctx.sampleRate);
+        const data = buf.getChannelData(0);
+        let lastOut = 0;
+        for (let i = 0; i < bufLen; i++) {
+          const white = Math.random() * 2 - 1;
+          data[i] = (lastOut + 0.02 * white) / 1.02;
+          lastOut = data[i];
+          data[i] *= 3.5; // empirically tuned to match perceived loudness of pink/white noise after integration reduces RMS
+        }
+        const src = ctx.createBufferSource();
+        src.buffer = buf;
+        src.loop = true;
+        const gain = ctx.createGain();
+        gain.gain.setValueAtTime(0, ctx.currentTime);
+        gain.gain.linearRampToValueAtTime(0.35, ctx.currentTime + AUDIO_FADE_IN);
+        src.connect(gain);
+        gain.connect(ctx.destination);
+        src.start();
+        activeAudioNodes.push(src);
+      }
+
+      /** Low harmonic drone — sub-bass and low-mid overtones for depth */
+      function startLowDrone() {
+        const ctx = getAudioCtx();
+        [[80, 0.05], [120, 0.07], [160, 0.04], [240, 0.02]].forEach(([f, v]) => {
+          const osc = ctx.createOscillator();
+          const gain = ctx.createGain();
+          const lp = ctx.createBiquadFilter();
+          lp.type = 'lowpass';
+          lp.frequency.value = 400;
+          osc.type = 'sine';
+          osc.frequency.value = f;
+          gain.gain.setValueAtTime(0, ctx.currentTime);
+          gain.gain.linearRampToValueAtTime(v, ctx.currentTime + AUDIO_FADE_IN_LONG);
+          osc.connect(lp);
+          lp.connect(gain);
+          gain.connect(ctx.destination);
+          osc.start();
+          activeAudioNodes.push(osc);
+        });
+      }
+
+      /** Harmonic pad — warm mid-range overtone series for emotional resonance */
+      function startHarmonicPad(fund) {
+        const ctx = getAudioCtx();
+        [1, 1.5, 2, 2.5, 3].forEach((r, i) => {
+          const osc = ctx.createOscillator();
+          const gain = ctx.createGain();
+          const lfo = ctx.createOscillator();
+          const lfoGain = ctx.createGain();
+          osc.type = 'sine';
+          osc.frequency.value = fund * r;
+          lfo.type = 'sine';
+          lfo.frequency.value = 0.07 + i * 0.02;
+          lfoGain.gain.value = 0.03;
+          const vol = 0.07 / (i + 1);
+          gain.gain.setValueAtTime(0, ctx.currentTime);
+          gain.gain.linearRampToValueAtTime(vol, ctx.currentTime + AUDIO_FADE_IN_LONG);
+          lfo.connect(lfoGain);
+          lfoGain.connect(gain.gain);
+          osc.connect(gain);
+          gain.connect(ctx.destination);
+          osc.start();
+          lfo.start();
+          activeAudioNodes.push(osc, lfo);
+        });
+      }
+
+      /** Descending binaural — right-ear frequency ramps from base+fromHz down to base+toHz */
+      function startDescentBinaural(base, fromHz, toHz, durationSecs) {
+        const ctx = getAudioCtx();
+        const masterGain = ctx.createGain();
+        masterGain.gain.setValueAtTime(0, ctx.currentTime);
+        masterGain.gain.linearRampToValueAtTime(BINAURAL_VOLUME, ctx.currentTime + AUDIO_FADE_IN);
+        masterGain.connect(ctx.destination);
+        const oscL = ctx.createOscillator();
+        const oscR = ctx.createOscillator();
+        const panL = ctx.createStereoPanner();
+        const panR = ctx.createStereoPanner();
+        oscL.type = 'sine';
+        oscL.frequency.value = base;
+        oscR.type = 'sine';
+        oscR.frequency.setValueAtTime(base + fromHz, ctx.currentTime);
+        oscR.frequency.linearRampToValueAtTime(base + toHz, ctx.currentTime + durationSecs);
+        panL.pan.value = -1;
+        panR.pan.value = 1;
+        oscL.connect(panL); panL.connect(masterGain);
+        oscR.connect(panR); panR.connect(masterGain);
+        oscL.start(); oscR.start();
+        activeAudioNodes.push(oscL, oscR);
+      }
+
+      /** Sound bath — C→B singing bowl sequence with slow stereo spatial movement */
+      function startSoundBathBowls() {
+        const ctx = getAudioCtx();
+        // Just-intonation C to B (Hz): C D E F G A B
+        const bowlNotes = [256, 288, 320, 341.3, 384, 426.7, 480];
+        bowlNotes.forEach((freq, i) => {
+          const gain = ctx.createGain();
+          const lfo = ctx.createOscillator();
+          const lfoGain = ctx.createGain();
+          const panner = ctx.createStereoPanner();
+          const panLfo = ctx.createOscillator();
+          const panLfoGain = ctx.createGain();
+          // Fundamental + octave harmonic
+          [freq, freq * 2].forEach((f, hi) => {
+            const osc = ctx.createOscillator();
+            const hGain = ctx.createGain();
+            osc.type = 'sine';
+            osc.frequency.value = f;
+            hGain.gain.value = hi === 0 ? 1.0 : 0.3;
+            osc.connect(hGain);
+            hGain.connect(gain);
+            osc.start();
+            activeAudioNodes.push(osc);
+          });
+          // Shimmer LFO
+          lfo.type = 'sine';
+          lfo.frequency.value = 0.1 + i * 0.04;
+          lfoGain.gain.value = 0.04;
+          lfo.connect(lfoGain);
+          lfoGain.connect(gain.gain);
+          // Slow stereo pan LFO
+          panLfo.type = 'sine';
+          panLfo.frequency.value = 0.04 + i * 0.008;
+          panLfoGain.gain.value = 0.65;
+          panLfo.connect(panLfoGain);
+          panLfoGain.connect(panner.pan);
+
+          gain.gain.setValueAtTime(0, ctx.currentTime);
+          gain.gain.linearRampToValueAtTime(BOWL_VOICE_VOLUME, ctx.currentTime + AUDIO_FADE_IN_LONG + i * 0.8);
+          gain.connect(panner);
+          panner.connect(ctx.destination);
+          lfo.start();
+          panLfo.start();
+          activeAudioNodes.push(lfo, panLfo);
+        });
+      }
+
+      // ─── Sound Stack Functions ─────────────────────────────────────────────────
+
+      /** Stack 1 — Stress Relief: Alpha 10 Hz + 432 Hz + soft pink noise */
+      function startStack1() {
+        const ctx = getAudioCtx();
+        startBinaural(200, 10);
+        startHarmonicTone(432, 0.10);
+        // Soft pink noise at reduced volume
+        const bufLen = ctx.sampleRate * 4;
+        const buf = ctx.createBuffer(1, bufLen, ctx.sampleRate);
+        const data = buf.getChannelData(0);
+        let b0=0,b1=0,b2=0,b3=0,b4=0,b5=0,b6=0;
+        for (let i = 0; i < bufLen; i++) {
+          const w = Math.random() * 2 - 1;
+          b0=0.99886*b0+w*0.0555179; b1=0.99332*b1+w*0.0750759;
+          b2=0.96900*b2+w*0.1538520; b3=0.86650*b3+w*0.3104856;
+          b4=0.55000*b4+w*0.5329522; b5=-0.7616*b5-w*0.0168980;
+          data[i]=(b0+b1+b2+b3+b4+b5+b6+w*0.5362)*0.11; b6=w*0.115926;
+        }
+        const src = ctx.createBufferSource();
+        src.buffer = buf; src.loop = true;
+        const gain = ctx.createGain();
+        gain.gain.setValueAtTime(0, ctx.currentTime);
+        gain.gain.linearRampToValueAtTime(0.25, ctx.currentTime + AUDIO_FADE_IN);
+        src.connect(gain); gain.connect(ctx.destination);
+        src.start(); activeAudioNodes.push(src);
+      }
+
+      /** Stack 2 — Deep Meditation: Theta 6 Hz + 528 Hz + low drone */
+      function startStack2() {
+        startBinaural(200, 6);
+        startHarmonicTone(528, 0.10);
+        startLowDrone();
+      }
+
+      /** Stack 3 — Healing & Nervous System Reset: Delta 3 Hz + 174 Hz + brown noise */
+      function startStack3() {
+        startBinaural(200, 3);
+        startHarmonicTone(174, 0.12);
+        startBrownNoise();
+      }
+
+      /** Stack 4 — Sleep: 4 Hz→1 Hz descent + 285 Hz + pink noise */
+      function startStack4() {
+        startDescentBinaural(200, 4, 1, totalSeconds);
+        startHarmonicTone(285, 0.09);
+        startPinkNoise();
+      }
+
+      /** Stack 5 — Emotional Balance: 7 Hz + 639 Hz harmonic pad */
+      function startStack5() {
+        startBinaural(200, 7);
+        startHarmonicPad(639);
+      }
+
+      /** Stack 6 — Spiritual Awareness: Theta 8 Hz + subtle Gamma overlay + 852 Hz
+       *  Uses a very slow LFO on the 852 Hz tone to create contemplative quiet windows */
+      function startStack6() {
+        const ctx = getAudioCtx();
+        // Theta binaural (8 Hz)
+        startBinaural(200, 8);
+        // Subtle gamma overlay (40 Hz beat: 200 Hz left vs 240 Hz right) at low volume
+        const gammaGain = ctx.createGain();
+        gammaGain.gain.setValueAtTime(0, ctx.currentTime);
+        gammaGain.gain.linearRampToValueAtTime(BINAURAL_VOLUME * 0.25, ctx.currentTime + AUDIO_FADE_IN);
+        gammaGain.connect(ctx.destination);
+        [[-1, 200], [1, 240]].forEach(([pan, freq]) => {
+          const osc = ctx.createOscillator();
+          const panner = ctx.createStereoPanner();
+          osc.type = 'sine';
+          osc.frequency.value = freq;
+          panner.pan.value = pan;
+          osc.connect(panner);
+          panner.connect(gammaGain);
+          osc.start();
+          activeAudioNodes.push(osc);
+        });
+        // 852 Hz upper harmonic with very slow contemplative LFO (period ~3 min)
+        // creating natural silence windows as volume ebbs to near-zero periodically
+        [[852, 0.06], [1704, 0.015]].forEach(([f, v], i) => {
+          const osc = ctx.createOscillator();
+          const gain = ctx.createGain();
+          const lfo = ctx.createOscillator();
+          const lfoGain = ctx.createGain();
+          osc.type = 'sine';
+          osc.frequency.value = f;
+          lfo.type = 'sine';
+          lfo.frequency.value = 1 / 180; // ~3-minute period
+          lfoGain.gain.value = v * 0.9;  // swings nearly to zero
+          gain.gain.setValueAtTime(0, ctx.currentTime);
+          gain.gain.linearRampToValueAtTime(v, ctx.currentTime + AUDIO_FADE_IN_LONG);
+          lfo.connect(lfoGain);
+          lfoGain.connect(gain.gain);
+          osc.connect(gain);
+          gain.connect(ctx.destination);
+          osc.start(); lfo.start();
+          activeAudioNodes.push(osc, lfo);
+        });
+      }
+
+      /** Stack 7 — Sound Bath: C→B singing bowls + Theta 6 Hz + spatial movement */
+      function startStack7() {
+        startSoundBathBowls();
+        startBinaural(200, 6);
+      }
+
       function startAudioForTrack(track) {
         stopAudio();
         switch (track) {
@@ -519,6 +974,14 @@
           case 'pink':
             startPinkNoise();
             break;
+          // ── Sound Stacks ──────────────────────────────────────────────────────
+          case 'stack1': startStack1(); break;
+          case 'stack2': startStack2(); break;
+          case 'stack3': startStack3(); break;
+          case 'stack4': startStack4(); break;
+          case 'stack5': startStack5(); break;
+          case 'stack6': startStack6(); break;
+          case 'stack7': startStack7(); break;
           case 'silence':
           default:
             break;
@@ -601,7 +1064,7 @@
         }
       }
 
-      function startSession() {
+      function startSession(overrideTrack) {
         remaining = totalSeconds || (parseInt(document.getElementById('duration-slider').value) * 60);
         isRunning = true;
         document.getElementById('start-btn').textContent = '⏹ End Session';
@@ -610,9 +1073,9 @@
         document.getElementById('breathe-anim').style.animationDuration = '8s';
         startBreatheGuide();
 
-        // Start audio for selected track
-        const trackEl = document.querySelector('input[name="track"]:checked');
-        if (trackEl) startAudioForTrack(trackEl.value);
+        // Start audio for selected track (or override from launchStack / Master Flow)
+        const track = overrideTrack || document.querySelector('input[name="track"]:checked')?.value;
+        if (track) startAudioForTrack(track);
 
         if (currentMode === 'guided') {
           document.getElementById('guided-section').classList.remove('hidden');
@@ -638,6 +1101,10 @@
         stopBreatheGuide();
         stopAudio();
         isRunning = false;
+        isMasterFlow = false;
+        masterFlowStage = -1;
+        const badge = document.getElementById('master-stage-badge');
+        if (badge) badge.classList.add('hidden');
         document.getElementById('start-btn').textContent = '▶ Begin Session';
         document.getElementById('start-btn').classList.remove('from-red-500', 'to-pink-600');
         document.getElementById('timer-status').textContent = 'Ready';
@@ -650,6 +1117,80 @@
         document.getElementById('timer-status').textContent = '✨ Complete';
         document.getElementById('meditation-instruction').textContent =
           '"Your session is complete. Take a moment to honor the stillness you have cultivated. Namaste. 🙏"';
+      }
+
+      // ─── Sound Stack Launchers & Master Flow ──────────────────────────────────
+
+      /** Configures duration, updates the slider UI, then starts the session with the given stack track.
+       *  Duration is capped at 60 minutes to match the slider's maximum value. For longer stack
+       *  durations (e.g. Sleep at 45–90 min, Sound Bath at 45–90 min) users can manually extend
+       *  the slider after launching. */
+      function launchStack(track, midDurationMin) {
+        if (isRunning) stopSession();
+        const mins = Math.min(60, midDurationMin); // slider max is 60 min
+        totalSeconds = mins * 60;
+        document.getElementById('duration-slider').value = mins;
+        document.getElementById('dur-display').textContent = mins + ' minutes';
+        document.getElementById('timer-display').textContent = formatTime(totalSeconds);
+        startSession(track);
+      }
+
+      const MASTER_FLOW_STAGES = [
+        { name: 'Stress Relief',       emoji: '🌿', track: 'stack1', duration: 15 * 60 },
+        { name: 'Emotional Balance',   emoji: '💜', track: 'stack5', duration: 20 * 60 },
+        { name: 'Deep Meditation',     emoji: '🧘', track: 'stack2', duration: 25 * 60 },
+        { name: 'Healing & Reset',     emoji: '💚', track: 'stack3', duration: 30 * 60 },
+        { name: 'Spiritual Awareness', emoji: '🌌', track: 'stack6', duration: 30 * 60 },
+        { name: 'Sound Bath',          emoji: '🎵', track: 'stack7', duration: 45 * 60 },
+      ];
+
+      function startMasterFlow() {
+        if (isRunning) stopSession();
+        isMasterFlow = true;
+        masterFlowStage = 0;
+        enterMasterFlowStage();
+      }
+
+      function enterMasterFlowStage() {
+        const stage = MASTER_FLOW_STAGES[masterFlowStage];
+        if (!stage) {
+          isMasterFlow = false;
+          masterFlowStage = -1;
+          const badge = document.getElementById('master-stage-badge');
+          if (badge) badge.classList.add('hidden');
+          completeSession();
+          return;
+        }
+        stopAudio();
+        remaining = stage.duration;
+        totalSeconds = stage.duration;
+
+        const badge = document.getElementById('master-stage-badge');
+        if (badge) { badge.textContent = stage.emoji + ' ' + stage.name; badge.classList.remove('hidden'); }
+        document.getElementById('timer-display').textContent = formatTime(remaining);
+        document.getElementById('timer-status').textContent = stage.emoji + ' ' + stage.name;
+
+        startAudioForTrack(stage.track);
+
+        if (!isRunning) {
+          isRunning = true;
+          document.getElementById('start-btn').textContent = '⏹ End Session';
+          document.getElementById('start-btn').classList.add('from-red-500', 'to-pink-600');
+          document.getElementById('breathe-anim').style.animationDuration = '8s';
+          startBreatheGuide();
+        }
+
+        clearInterval(timerInterval);
+        timerInterval = setInterval(() => {
+          remaining--;
+          document.getElementById('timer-display').textContent = formatTime(remaining);
+          if (remaining <= 0) {
+            clearInterval(timerInterval);
+            timerInterval = null;
+            masterFlowStage++;
+            enterMasterFlowStage();
+          }
+        }, 1000);
       }
 
       // Initialize display
