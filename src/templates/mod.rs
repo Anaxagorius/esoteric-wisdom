@@ -6,6 +6,12 @@ use crate::journal::JournalEntry;
 pub struct LandingTemplate;
 
 #[derive(Template)]
+#[template(path = "app_landing.html")]
+pub struct AppLandingTemplate {
+    pub is_admin: bool,
+}
+
+#[derive(Template)]
 #[template(path = "auth_login.html")]
 pub struct LoginTemplate {
     pub error: Option<String>,
@@ -15,6 +21,19 @@ pub struct LoginTemplate {
 #[template(path = "auth_signup.html")]
 pub struct SignupTemplate {
     pub error: Option<String>,
+}
+
+#[derive(Template)]
+#[template(path = "admin_login.html")]
+pub struct AdminLoginTemplate {
+    pub error: Option<String>,
+}
+
+#[derive(Template)]
+#[template(path = "admin_change_password.html")]
+pub struct AdminChangePasswordTemplate {
+    pub error: Option<String>,
+    pub forced: bool,
 }
 
 #[derive(Template)]
@@ -44,6 +63,19 @@ pub struct JournalListTemplate {
     pub is_authenticated: bool,
     pub entries: Vec<JournalEntry>,
     pub error: Option<String>,
+}
+
+#[derive(Template)]
+#[template(path = "journal_admin.html")]
+pub struct AdminJournalTemplate {
+    pub entries: Vec<JournalEntry>,
+    pub error: Option<String>,
+}
+
+#[derive(Template)]
+#[template(path = "journal_guest.html")]
+pub struct GuestJournalTemplate {
+    pub entries: Vec<JournalEntry>,
 }
 
 #[derive(Template)]

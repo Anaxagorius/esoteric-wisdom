@@ -1,5 +1,6 @@
 mod state;
 mod auth;
+mod admin;
 mod astrology;
 mod meditation;
 mod tarot;
@@ -7,12 +8,12 @@ mod journal;
 mod numerology;
 mod templates;
 
-use axum::{Router, routing::get};
-use tower_cookies::CookieManagerLayer;
+use axum::{Router, routing::get, extract::State, response::IntoResponse, http::{StatusCode, header}};
+use tower_cookies::{CookieManagerLayer, Cookies};
 use tracing_subscriber::EnvFilter;
 use state::AppState;
 use auth::HtmlTemplate;
-use templates::LandingTemplate;
+use templates::{LandingTemplate, AppLandingTemplate};
 
 #[tokio::main]
 async fn main() -> anyhow::Result<()> {
@@ -24,11 +25,13 @@ async fn main() -> anyhow::Result<()> {
 
     let app = Router::new()
         .route("/", get(landing))
+        .route("/home", get(app_landing))
+        .nest("/admin", admin::routes())
         .nest("/auth", auth::routes())
         .nest("/astrology", astrology::routes())
         .nest("/meditation", meditation::routes())
         .nest("/tarot", tarot::routes())
-        // journal disabled
+        .nest("/journal", journal::routes())
         .nest("/numerology", numerology::routes())
         .layer(CookieManagerLayer::new())
         .with_state(state);
@@ -59,4 +62,18 @@ async fn main() -> anyhow::Result<()> {
 
 async fn landing() -> HtmlTemplate<LandingTemplate> {
     HtmlTemplate(LandingTemplate)
+}
+
+async fn app_landing(
+    State(state): State<AppState>,
+    cookies: Cookies,
+) -> impl IntoResponse {
+    let admin_claims = admin::get_admin_claims(&state, &cookies);
+    if let Some(ref claims) = admin_claims {
+        if claims.must_change_password {
+            return (StatusCode::FOUND, [(header::LOCATION, "/admin/change-password")]).into_response();
+        }
+    }
+    let is_admin = admin_claims.is_some();
+    HtmlTemplate(AppLandingTemplate { is_admin }).into_response()
 }
