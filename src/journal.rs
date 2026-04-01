@@ -92,7 +92,7 @@ async fn create_entry(
 
     let entry = JournalEntry {
         id: Uuid::new_v4(),
-        user_id: Uuid::nil(),
+        user_id: Uuid::nil(), // Admin is the sole author; nil UUID used as a placeholder
         title: form.title.unwrap_or_default().trim().to_string(),
         body: form.body.trim().to_string(),
         mood_happy: form.mood_happy.is_some(),

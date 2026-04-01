@@ -5,7 +5,7 @@ use axum::{
     response::IntoResponse,
     http::{StatusCode, header},
 };
-use serde::{Deserialize, Serialize, Deserialize as SerdeDeserialize};
+use serde::{Deserialize, Serialize};
 use tower_cookies::{Cookie, Cookies};
 use argon2::{Argon2, PasswordHasher, PasswordVerifier};
 use argon2::password_hash::{SaltString, PasswordHash};
@@ -28,7 +28,7 @@ pub struct ChangePasswordForm {
     pub confirm_password: String,
 }
 
-#[derive(Debug, Serialize, SerdeDeserialize)]
+#[derive(Debug, Serialize, Deserialize)]
 pub struct AdminClaims {
     pub sub: String,
     pub exp: usize,
@@ -71,6 +71,7 @@ pub async fn admin_login_post(
         Cookie::build((ADMIN_COOKIE, token))
             .path("/")
             .http_only(true)
+            .secure(true)
             .build(),
     );
 
@@ -118,10 +119,15 @@ pub async fn admin_change_password_post(
 
     let salt = SaltString::generate(&mut rand::thread_rng());
     let argon2 = Argon2::default();
-    let new_hash = argon2
-        .hash_password(form.new_password.as_bytes(), &salt)
-        .unwrap()
-        .to_string();
+    let new_hash = match argon2.hash_password(form.new_password.as_bytes(), &salt) {
+        Ok(h) => h.to_string(),
+        Err(_) => {
+            return HtmlTemplate(AdminChangePasswordTemplate {
+                error: Some("Failed to hash password — please try again".into()),
+                forced,
+            }).into_response();
+        }
+    };
 
     *state.admin_password_hash.write().await = new_hash;
     *state.admin_must_change_password.write().await = false;
@@ -131,6 +137,7 @@ pub async fn admin_change_password_post(
         Cookie::build((ADMIN_COOKIE, token))
             .path("/")
             .http_only(true)
+            .secure(true)
             .build(),
     );
 
