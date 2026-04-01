@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Esoteric Wisdom — Your Spiritual Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+    <style>
+      body {
+        background: radial-gradient(ellipse at top, #4c1d95 0%, #1e1b4b 30%, #020617 70%, #000000 100%);
+        font-family: 'Raleway', sans-serif;
+      }
+      .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+      @keyframes twinkle {
+        0%, 100% { opacity: 0.2; transform: scale(1); }
+        50% { opacity: 1; transform: scale(1.4); }
+      }
+      @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-12px); }
+      }
+      @keyframes shimmer {
+        0% { background-position: -200% center; }
+        100% { background-position: 200% center; }
+      }
+      @keyframes pulse-glow {
+        0%, 100% { box-shadow: 0 0 20px rgba(167,139,250,0.4), 0 0 40px rgba(167,139,250,0.2); }
+        50% { box-shadow: 0 0 40px rgba(251,191,36,0.6), 0 0 80px rgba(251,191,36,0.3); }
+      }
+      .star {
+        position: absolute; border-radius: 50%; background: white;
+        animation: twinkle var(--dur, 3s) ease-in-out infinite;
+        animation-delay: var(--delay, 0s);
+      }
+      .aurora-text {
+        background: linear-gradient(90deg, #f59e0b, #ec4899, #a78bfa, #34d399, #f59e0b);
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        animation: shimmer 4s linear infinite;
+      }
+      .floating { animation: float 4s ease-in-out infinite; }
+      .nav-link { position: relative; transition: all 0.3s; }
+      .nav-link::after {
+        content: ''; position: absolute; bottom: -2px; left: 0;
+        width: 0; height: 2px;
+        background: linear-gradient(90deg, #f59e0b, #a78bfa);
+        transition: width 0.3s;
+      }
+      .nav-link:hover::after { width: 100%; }
+      .section-card { transition: all 0.3s ease; cursor: pointer; }
+      .section-card:hover {
+        transform: translateY(-8px) scale(1.02);
+        border-color: rgba(251,191,36,0.6);
+      }
+      .hero-glow {
+        text-shadow: 0 0 60px rgba(167,139,250,0.8), 0 0 120px rgba(167,139,250,0.4);
+      }
+    </style>
+  </head>
+  <body class="min-h-screen text-white overflow-x-hidden">
+
+    <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+
+    <div class="fixed inset-0 pointer-events-none z-0 opacity-30"
+         style="background: radial-gradient(ellipse at 20% 50%, rgba(139,92,246,0.3) 0%, transparent 60%),
+                           radial-gradient(ellipse at 80% 20%, rgba(236,72,153,0.2) 0%, transparent 50%),
+                           radial-gradient(ellipse at 60% 80%, rgba(16,185,129,0.15) 0%, transparent 40%);">
+    </div>
+
+    <!-- Navigation -->
+    <nav class="relative z-10 flex items-center justify-between px-6 py-4 bg-black/20 backdrop-blur-md border-b border-violet-500/20">
+      <span class="font-cinzel text-lg text-amber-300 tracking-widest">✦ Esoteric Wisdom ✦</span>
+      <div class="flex items-center gap-4 text-sm flex-wrap justify-end">
+        <a href="/astrology" class="nav-link text-violet-200 hover:text-amber-300">Astrology</a>
+        <a href="/meditation" class="nav-link text-violet-200 hover:text-amber-300">Meditation</a>
+        <a href="/tarot/select" class="nav-link text-violet-200 hover:text-amber-300">Tarot</a>
+        <a href="/numerology" class="nav-link text-violet-200 hover:text-amber-300">Numerology</a>
+        <a href="/journal/reflections" class="nav-link text-emerald-300 hover:text-emerald-200">✨ Reflections</a>
+        {% if is_admin %}
+        <a href="/journal" class="nav-link text-amber-300 hover:text-amber-200 font-semibold">📔 Journal</a>
+        <a href="/admin/change-password" class="nav-link text-violet-300 hover:text-violet-200 text-xs">🔒 Change PW</a>
+        <a href="/admin/logout" class="text-xs text-red-400/70 hover:text-red-300 transition-colors">Sign out</a>
+        {% endif %}
+        <a href="https://ko-fi.com/esotericwisdom" target="_blank" rel="noopener noreferrer"
+           class="px-4 py-1.5 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-white font-semibold hover:scale-105 transition-transform text-xs">☕ Support</a>
+      </div>
+    </nav>
+
+    {% if is_admin %}
+    <!-- Admin welcome banner -->
+    <div class="relative z-10 bg-amber-900/30 border-b border-amber-500/30 px-6 py-2 text-center">
+      <span class="text-xs text-amber-300/80">🔑 Admin Mode — You have full access including Journal write &amp; management.</span>
+    </div>
+    {% endif %}
+
+    <!-- Hero Section -->
+    <main class="relative z-10 flex flex-col items-center justify-center min-h-[80vh] px-6 text-center">
+      <div class="floating">
+        <div class="text-8xl mb-6 filter drop-shadow-2xl">🌙</div>
+      </div>
+
+      <h1 class="font-cinzel text-5xl md:text-7xl font-bold mb-4 hero-glow">
+        <span class="aurora-text">Esoteric Wisdom</span>
+      </h1>
+
+      <p class="text-xl md:text-2xl text-violet-100/90 max-w-2xl mx-auto mb-3 font-light tracking-wide">
+        A luminous sanctuary for the soul's journey.
+      </p>
+      <p class="text-sm md:text-base text-violet-200/70 max-w-xl mx-auto mb-10">
+        Explore the ancient stars, still your mind, consult the cards, and write your inner truth.
+        A sacred space crafted with love — built in Rust, woven in starlight.
+      </p>
+
+      <!-- Feature Cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-{% if is_admin %}6{% else %}5{% endif %} gap-5 max-w-6xl w-full justify-items-center">
+
+        <a href="/astrology" class="section-card bg-gradient-to-br from-purple-900/60 to-indigo-900/60 border border-purple-500/50 rounded-2xl p-6 backdrop-blur-md shadow-xl shadow-purple-500/20 w-full">
+          <div class="text-4xl mb-3">♈</div>
+          <h2 class="font-cinzel text-base font-semibold mb-2 text-amber-300">Astrology</h2>
+          <p class="text-xs text-violet-100/80 leading-relaxed">Ancient archetypes meet modern skies. Explore the zodiac and celestial wisdom.</p>
+          <div class="mt-4 text-xs text-violet-300/70">→ Explore the Stars</div>
+        </a>
+
+        <a href="/meditation" class="section-card bg-gradient-to-br from-indigo-900/60 to-teal-900/60 border border-indigo-500/50 rounded-2xl p-6 backdrop-blur-md shadow-xl shadow-indigo-500/20 w-full">
+          <div class="text-4xl mb-3">🧘</div>
+          <h2 class="font-cinzel text-base font-semibold mb-2 text-teal-300">Meditation</h2>
+          <p class="text-xs text-violet-100/80 leading-relaxed">Guided journeys with celestial soundscapes. Find your stillness.</p>
+          <div class="mt-4 text-xs text-teal-300/70">→ Begin Session</div>
+        </a>
+
+        <a href="/tarot/select" class="section-card bg-gradient-to-br from-pink-900/60 to-rose-900/60 border border-pink-500/50 rounded-2xl p-6 backdrop-blur-md shadow-xl shadow-pink-500/20 w-full">
+          <div class="text-4xl mb-3">🃏</div>
+          <h2 class="font-cinzel text-base font-semibold mb-2 text-pink-300">Tarot</h2>
+          <p class="text-xs text-violet-100/80 leading-relaxed">Choose from traditions — Rider-Waite-Smith, Marseille, Thoth and more. Trust the universe.</p>
+          <div class="mt-4 text-xs text-pink-300/70">→ Choose Your Deck</div>
+        </a>
+
+        <a href="/numerology" class="section-card bg-gradient-to-br from-amber-900/60 to-indigo-900/60 border border-amber-500/50 rounded-2xl p-6 backdrop-blur-md shadow-xl shadow-amber-500/20 w-full">
+          <div class="text-4xl mb-3">🔢</div>
+          <h2 class="font-cinzel text-base font-semibold mb-2 text-amber-300">Numerology</h2>
+          <p class="text-xs text-violet-100/80 leading-relaxed">Decode numbers hidden in your name and birth date — Life Path, Soul Urge &amp; more.</p>
+          <div class="mt-4 text-xs text-amber-300/70">→ Discover Your Numbers</div>
+        </a>
+
+        <a href="/journal/reflections" class="section-card bg-gradient-to-br from-emerald-900/60 to-teal-900/60 border border-emerald-500/50 rounded-2xl p-6 backdrop-blur-md shadow-xl shadow-emerald-500/20 w-full">
+          <div class="text-4xl mb-3">🌿</div>
+          <h2 class="font-cinzel text-base font-semibold mb-2 text-emerald-300">Esoteric Reflections</h2>
+          <p class="text-xs text-violet-100/80 leading-relaxed">Read curated journal reflections shared from the inner sanctum. Wisdom made visible.</p>
+          <div class="mt-4 text-xs text-emerald-300/70">→ Read Reflections</div>
+        </a>
+
+        {% if is_admin %}
+        <a href="/journal" class="section-card bg-gradient-to-br from-amber-800/60 to-yellow-900/60 border border-amber-400/60 rounded-2xl p-6 backdrop-blur-md shadow-xl shadow-amber-500/20 w-full">
+          <div class="text-4xl mb-3">📔</div>
+          <h2 class="font-cinzel text-base font-semibold mb-2 text-amber-200">Admin Journal</h2>
+          <p class="text-xs text-amber-100/80 leading-relaxed">Write, manage and publish your private journal entries. Mark entries for guests to read.</p>
+          <div class="mt-4 text-xs text-amber-300/70">→ Open Journal</div>
+        </a>
+        {% endif %}
+
+      </div>
+    </main>
+
+    <footer class="relative z-10 text-center py-8 text-violet-300/50 text-xs">
+      <p class="italic">"The cosmos is within us. We are made of star-stuff." — Carl Sagan</p>
+      <p class="mt-2">Esoteric Wisdom · Built with ✨ in Rust</p>
+      <p class="mt-2"><a href="/" class="hover:text-violet-300 transition-colors">← Back to Portal Entrance</a></p>
+      <p class="mt-3">
+        <a href="https://ko-fi.com/esotericwisdom" target="_blank" rel="noopener noreferrer"
+           class="inline-block px-5 py-2 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-white font-semibold text-xs hover:scale-105 transition-transform shadow-lg shadow-orange-500/30">
+          ☕ Support Esoteric Wisdom on Ko-fi
+        </a>
+      </p>
+    </footer>
+
+    <script>
+      const sf = document.getElementById('starfield');
+      for (let i = 0; i < 200; i++) {
+        const s = document.createElement('div');
+        s.className = 'star';
+        const size = Math.random() * 2.5 + 0.5;
+        s.style.cssText = `width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--dur:${2+Math.random()*4}s;--delay:${Math.random()*5}s;opacity:${0.2+Math.random()*0.8};`;
+        sf.appendChild(s);
+      }
+    </script>
+  </body>
+</html>

@@ -4,9 +4,15 @@ use tokio::sync::RwLock;
 use tracing::info;
 use uuid::Uuid;
 use serde::{Serialize, Deserialize};
+use argon2::{Argon2, PasswordHasher};
+use argon2::password_hash::SaltString;
 
 use crate::tarot::{TarotCard, DeckType, load_deck};
 use crate::journal::JournalEntry;
+
+pub const ADMIN_USERNAME: &str = "AngieMaidment#1";
+// Initial credential — admin is prompted to set a new password on first login
+const ADMIN_INITIAL_PASSWORD: &str = "Loveadored69$";
 
 #[derive(Clone)]
 pub struct AppState {
@@ -14,6 +20,8 @@ pub struct AppState {
     pub tarot_decks: Arc<RwLock<HashMap<String, Vec<TarotCard>>>>,
     pub journal_entries: Arc<RwLock<Vec<JournalEntry>>>,
     pub jwt_secret: Arc<String>,
+    pub admin_password_hash: Arc<RwLock<String>>,
+    pub admin_must_change_password: Arc<RwLock<bool>>,
 }
 
 #[derive(Clone, Debug, Serialize, Deserialize)]
@@ -49,11 +57,20 @@ impl AppState {
             decks.insert(deck_type.as_str().to_string(), cards);
         }
 
+        let salt = SaltString::generate(&mut rand::thread_rng());
+        let argon2 = Argon2::default();
+        let admin_hash = argon2
+            .hash_password(ADMIN_INITIAL_PASSWORD.as_bytes(), &salt)
+            .map_err(|e| anyhow::anyhow!("Failed to hash admin password: {e}"))?
+            .to_string();
+
         let state = AppState {
             users: Arc::new(RwLock::new(Vec::new())),
             tarot_decks: Arc::new(RwLock::new(decks)),
             journal_entries: Arc::new(RwLock::new(Vec::new())),
             jwt_secret: Arc::new("change_me_super_secret".to_string()),
+            admin_password_hash: Arc::new(RwLock::new(admin_hash)),
+            admin_must_change_password: Arc::new(RwLock::new(true)),
         };
 
         info!("AppState initialized with {} tarot decks", deck_count);

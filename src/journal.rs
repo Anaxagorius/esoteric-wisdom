@@ -9,9 +9,10 @@ use axum::{
 use serde::{Serialize, Deserialize};
 use tower_cookies::Cookies;
 use uuid::Uuid;
-use crate::auth::{HtmlTemplate, decode_token};
-use crate::templates::JournalListTemplate;
+use crate::auth::HtmlTemplate;
+use crate::templates::{AdminJournalTemplate, GuestJournalTemplate};
 use crate::state::AppState;
+use crate::admin;
 
 #[derive(Clone, Debug, Serialize, Deserialize)]
 pub struct JournalEntry {
@@ -22,6 +23,7 @@ pub struct JournalEntry {
     pub mood_happy: bool,
     pub mood_reflective: bool,
     pub mood_hopeful: bool,
+    pub visible_to_guests: bool,
     pub created_at: String,
 }
 
@@ -37,38 +39,40 @@ pub struct NewEntryForm {
 pub fn routes() -> Router<AppState> {
     Router::new()
         .route("/", get(journal_home))
+        .route("/reflections", get(guest_reflections))
         .route("/export", get(export_journal))
         .route("/new", post(create_entry))
         .route("/delete/{id}", post(delete_entry))
-}
-
-fn current_user_id(state: &AppState, cookies: &Cookies) -> Option<Uuid> {
-    let token = cookies.get("esoteric_session")?.value().to_string();
-    let claims = decode_token(state, &token)?;
-    claims.sub.parse::<Uuid>().ok()
+        .route("/toggle/{id}", post(toggle_visibility))
 }
 
 async fn journal_home(State(state): State<AppState>, cookies: Cookies) -> impl IntoResponse {
-    let user_id = current_user_id(&state, &cookies);
-    let is_authenticated = user_id.is_some();
-
-    let entries = if let Some(uid) = user_id {
-        let all = state.journal_entries.read().await;
-        all.iter()
-            .filter(|e| e.user_id == uid)
-            .cloned()
-            .rev()
-            .collect::<Vec<_>>()
-    } else {
-        vec![]
+    let claims = match admin::get_admin_claims(&state, &cookies) {
+        Some(c) => c,
+        None => return (StatusCode::FOUND, [(header::LOCATION, "/admin/login")]).into_response(),
     };
+    if claims.must_change_password {
+        return (StatusCode::FOUND, [(header::LOCATION, "/admin/change-password")]).into_response();
+    }
 
-    let tpl = JournalListTemplate {
-        is_authenticated,
-        entries,
-        error: None,
-    };
-    HtmlTemplate(tpl)
+    let entries: Vec<JournalEntry> = state.journal_entries.read().await
+        .iter()
+        .cloned()
+        .rev()
+        .collect();
+
+    HtmlTemplate(AdminJournalTemplate { entries, error: None }).into_response()
+}
+
+async fn guest_reflections(State(state): State<AppState>) -> impl IntoResponse {
+    let entries: Vec<JournalEntry> = state.journal_entries.read().await
+        .iter()
+        .filter(|e| e.visible_to_guests)
+        .cloned()
+        .rev()
+        .collect();
+
+    HtmlTemplate(GuestJournalTemplate { entries })
 }
 
 async fn create_entry(
@@ -76,12 +80,9 @@ async fn create_entry(
     cookies: Cookies,
     Form(form): Form<NewEntryForm>,
 ) -> impl IntoResponse {
-    let user_id = match current_user_id(&state, &cookies) {
-        Some(id) => id,
-        None => {
-            return (StatusCode::FOUND, [(header::LOCATION, "/auth/login")]).into_response();
-        }
-    };
+    if !admin::is_admin(&state, &cookies) {
+        return (StatusCode::FOUND, [(header::LOCATION, "/admin/login")]).into_response();
+    }
 
     if form.body.trim().is_empty() {
         return (StatusCode::FOUND, [(header::LOCATION, "/journal")]).into_response();
@@ -91,12 +92,13 @@ async fn create_entry(
 
     let entry = JournalEntry {
         id: Uuid::new_v4(),
-        user_id,
+        user_id: Uuid::nil(),
         title: form.title.unwrap_or_default().trim().to_string(),
         body: form.body.trim().to_string(),
         mood_happy: form.mood_happy.is_some(),
         mood_reflective: form.mood_reflective.is_some(),
         mood_hopeful: form.mood_hopeful.is_some(),
+        visible_to_guests: false,
         created_at: now,
     };
 
@@ -109,15 +111,27 @@ async fn delete_entry(
     cookies: Cookies,
     Path(entry_id): Path<Uuid>,
 ) -> impl IntoResponse {
-    let user_id = match current_user_id(&state, &cookies) {
-        Some(id) => id,
-        None => {
-            return (StatusCode::FOUND, [(header::LOCATION, "/auth/login")]).into_response();
-        }
-    };
+    if !admin::is_admin(&state, &cookies) {
+        return (StatusCode::FOUND, [(header::LOCATION, "/admin/login")]).into_response();
+    }
+
+    state.journal_entries.write().await.retain(|e| e.id != entry_id);
+    (StatusCode::FOUND, [(header::LOCATION, "/journal")]).into_response()
+}
+
+async fn toggle_visibility(
+    State(state): State<AppState>,
+    cookies: Cookies,
+    Path(entry_id): Path<Uuid>,
+) -> impl IntoResponse {
+    if !admin::is_admin(&state, &cookies) {
+        return (StatusCode::FOUND, [(header::LOCATION, "/admin/login")]).into_response();
+    }
 
     let mut entries = state.journal_entries.write().await;
-    entries.retain(|e| !(e.id == entry_id && e.user_id == user_id));
+    if let Some(entry) = entries.iter_mut().find(|e| e.id == entry_id) {
+        entry.visible_to_guests = !entry.visible_to_guests;
+    }
 
     (StatusCode::FOUND, [(header::LOCATION, "/journal")]).into_response()
 }
@@ -126,20 +140,11 @@ async fn export_journal(
     State(state): State<AppState>,
     cookies: Cookies,
 ) -> impl IntoResponse {
-    let user_id = match current_user_id(&state, &cookies) {
-        Some(id) => id,
-        None => {
-            return (StatusCode::FOUND, [(header::LOCATION, "/auth/login")]).into_response();
-        }
-    };
+    if !admin::is_admin(&state, &cookies) {
+        return (StatusCode::FOUND, [(header::LOCATION, "/admin/login")]).into_response();
+    }
 
-    let entries: Vec<JournalEntry> = {
-        let all = state.journal_entries.read().await;
-        all.iter()
-            .filter(|e| e.user_id == user_id)
-            .cloned()
-            .collect()
-    };
+    let entries: Vec<JournalEntry> = state.journal_entries.read().await.clone();
 
     let now = chrono::Utc::now().format("%B %d, %Y · %H:%M UTC").to_string();
     let divider = "=".repeat(48);
@@ -189,3 +194,4 @@ async fn export_journal(
 
     (StatusCode::OK, headers, output).into_response()
 }
+
