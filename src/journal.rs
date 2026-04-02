@@ -42,8 +42,8 @@ pub fn routes() -> Router<AppState> {
         .route("/reflections", get(guest_reflections))
         .route("/export", get(export_journal))
         .route("/new", post(create_entry))
-        .route("/delete/{id}", post(delete_entry))
-        .route("/toggle/{id}", post(toggle_visibility))
+        .route("/delete/:id", post(delete_entry))
+        .route("/toggle/:id", post(toggle_visibility))
 }
 
 async fn journal_home(State(state): State<AppState>, cookies: Cookies) -> impl IntoResponse {
