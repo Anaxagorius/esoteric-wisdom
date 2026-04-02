@@ -10,6 +10,25 @@ use argon2::password_hash::SaltString;
 use crate::tarot::{TarotCard, DeckType, load_deck};
 use crate::journal::JournalEntry;
 
+pub fn journal_data_path() -> String {
+    std::env::var("JOURNAL_DATA_FILE").unwrap_or_else(|_| "data/journal_entries.json".to_string())
+}
+
+async fn load_journal_entries() -> Vec<JournalEntry> {
+    let path = journal_data_path();
+    match tokio::fs::read_to_string(&path).await {
+        Ok(contents) => serde_json::from_str(&contents).unwrap_or_else(|e| {
+            tracing::warn!("Failed to parse journal data from {path}: {e}");
+            Vec::new()
+        }),
+        Err(e) if e.kind() == std::io::ErrorKind::NotFound => Vec::new(),
+        Err(e) => {
+            tracing::warn!("Could not read journal data from {path}: {e}");
+            Vec::new()
+        }
+    }
+}
+
 pub const ADMIN_USERNAME: &str = "AngieMaidment#1";
 // Initial credential — admin is prompted to set a new password on first login
 const ADMIN_INITIAL_PASSWORD: &str = "Loveadored69$";
@@ -64,16 +83,19 @@ impl AppState {
             .map_err(|e| anyhow::anyhow!("Failed to hash admin password: {e}"))?
             .to_string();
 
+        let journal_entries = load_journal_entries().await;
+        let journal_count = journal_entries.len();
+
         let state = AppState {
             users: Arc::new(RwLock::new(Vec::new())),
             tarot_decks: Arc::new(RwLock::new(decks)),
-            journal_entries: Arc::new(RwLock::new(Vec::new())),
+            journal_entries: Arc::new(RwLock::new(journal_entries)),
             jwt_secret: Arc::new("change_me_super_secret".to_string()),
             admin_password_hash: Arc::new(RwLock::new(admin_hash)),
             admin_must_change_password: Arc::new(RwLock::new(true)),
         };
 
-        info!("AppState initialized with {} tarot decks", deck_count);
+        info!("AppState initialized with {} tarot decks, {} journal entries", deck_count, journal_count);
         Ok(state)
     }
 }

@@ -11,8 +11,23 @@ use tower_cookies::Cookies;
 use uuid::Uuid;
 use crate::auth::HtmlTemplate;
 use crate::templates::{AdminJournalTemplate, GuestJournalTemplate};
-use crate::state::AppState;
+use crate::state::{AppState, journal_data_path};
 use crate::admin;
+
+async fn save_journal(entries: &[JournalEntry]) {
+    let path = journal_data_path();
+    match serde_json::to_string(entries) {
+        Ok(json) => {
+            if let Some(parent) = std::path::Path::new(&path).parent() {
+                let _ = tokio::fs::create_dir_all(parent).await;
+            }
+            if let Err(e) = tokio::fs::write(&path, json).await {
+                tracing::warn!("Failed to save journal to {path}: {e}");
+            }
+        }
+        Err(e) => tracing::warn!("Failed to serialize journal entries: {e}"),
+    }
+}
 
 #[derive(Clone, Debug, Serialize, Deserialize)]
 pub struct JournalEntry {
@@ -103,6 +118,8 @@ async fn create_entry(
     };
 
     state.journal_entries.write().await.push(entry);
+    let snapshot = state.journal_entries.read().await.clone();
+    save_journal(&snapshot).await;
     (StatusCode::FOUND, [(header::LOCATION, "/journal")]).into_response()
 }
 
@@ -115,7 +132,11 @@ async fn delete_entry(
         return (StatusCode::FOUND, [(header::LOCATION, "/admin/login")]).into_response();
     }
 
-    state.journal_entries.write().await.retain(|e| e.id != entry_id);
+    let mut entries = state.journal_entries.write().await;
+    entries.retain(|e| e.id != entry_id);
+    let snapshot = entries.clone();
+    drop(entries);
+    save_journal(&snapshot).await;
     (StatusCode::FOUND, [(header::LOCATION, "/journal")]).into_response()
 }
 
@@ -132,6 +153,9 @@ async fn toggle_visibility(
     if let Some(entry) = entries.iter_mut().find(|e| e.id == entry_id) {
         entry.visible_to_guests = !entry.visible_to_guests;
     }
+    let snapshot = entries.clone();
+    drop(entries);
+    save_journal(&snapshot).await;
 
     (StatusCode::FOUND, [(header::LOCATION, "/journal")]).into_response()
 }
