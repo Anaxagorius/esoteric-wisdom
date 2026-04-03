@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Indigenous &amp; Shamanic Esotericism — Esoteric Wisdom</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <meta property="og:title" content="Indigenous &amp; Shamanic Esotericism — Esoteric Wisdom" />
+  <meta property="og:description" content="The world's oldest spiritual technologies — shamanism, indigenous vision traditions, Andean cosmology, Aboriginal Dreamtime, Hawaiian Huna, and the initiatory wisdom of the world's first peoples." />
+  <meta property="og:type" content="website" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <style>
+    body { font-family: 'Raleway', sans-serif; }
+    .font-cinzel { font-family: 'Cinzel Decorative', cursive; }
+    @keyframes twinkle { 0%,100%{opacity:0.2;transform:scale(1);} 50%{opacity:1;transform:scale(1.4);} }
+    @keyframes float { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-12px);} }
+    @keyframes shimmer { 0%{background-position:0% 50%;} 100%{background-position:200% 50%;} }
+    .star { position:absolute; width:2px; height:2px; background:white; border-radius:50%; animation:twinkle 3s infinite; }
+    .aurora-text {
+      background: linear-gradient(90deg, #4ade80, #a3e635, #d4a017, #86efac, #4ade80, #a3e635);
+      background-size: 300% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 6s linear infinite;
+    }
+    .floating { animation: float 4s ease-in-out infinite; }
+    .nav-link { position:relative; transition:all 0.3s; }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: #f59e0b;
+      transition: width 0.3s;
+    }
+    .nav-link:hover::after { width: 100%; }
+    .ie-card {
+      background: linear-gradient(135deg, rgba(20,80,20,0.18), rgba(10,50,10,0.10));
+      border: 1px solid rgba(74,222,128,0.25);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      transition: all 0.3s;
+    }
+    .ie-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 0 24px rgba(74,222,128,0.18);
+      border-color: rgba(74,222,128,0.5);
+    }
+  </style>
+</head>
+<body class="min-h-screen text-green-100 overflow-x-hidden"
+      style="background: radial-gradient(ellipse at top, #0a1a0a 0%, #1a2d10 25%, #050a04 60%, #000000 100%);">
+
+  <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+
+  <!-- NAV -->
+  <nav class="sticky top-0 z-50 flex items-center justify-between px-6 py-3 bg-black/40 backdrop-blur-md border-b border-green-500/20 flex-wrap gap-y-2">
+    <a href="/home" class="font-cinzel text-amber-300 text-sm tracking-widest shrink-0">✦ Esoteric Wisdom ✦</a>
+    <div class="flex items-center gap-x-3 gap-y-1 text-xs text-green-200 flex-wrap justify-end">
+      <a href="/astrology" class="nav-link hover:text-amber-300 transition-colors">Astrology</a>
+      <a href="/meditation" class="nav-link hover:text-amber-300 transition-colors">Meditation</a>
+      <a href="/tarot/select" class="nav-link hover:text-amber-300 transition-colors">Tarot</a>
+      <a href="/numerology" class="nav-link hover:text-amber-300 transition-colors">Numerology</a>
+      <a href="/crystals" class="nav-link hover:text-amber-300 transition-colors">Crystals</a>
+      <a href="/runes" class="nav-link hover:text-amber-300 transition-colors">Runes</a>
+      <a href="/shamanism" class="nav-link hover:text-amber-300 transition-colors">Shamanism</a>
+      <a href="/druidism" class="nav-link hover:text-amber-300 transition-colors">Druidism</a>
+      <a href="/akashic-records" class="nav-link hover:text-amber-300 transition-colors">Akashic Records</a>
+      <a href="/wicca" class="nav-link hover:text-amber-300 transition-colors">Wicca</a>
+      <a href="/alchemy" class="nav-link hover:text-amber-300 transition-colors">Alchemy</a>
+      <a href="/gateway-process" class="nav-link hover:text-amber-300 transition-colors">Gateway Process</a>
+      <a href="/remote-viewing" class="nav-link hover:text-amber-300 transition-colors">Remote Viewing</a>
+      <a href="/khasarov-mirror" class="nav-link hover:text-amber-300 transition-colors">Khasarov Mirror</a>
+      <a href="/western-esotericism" class="nav-link hover:text-amber-300 transition-colors">Western Esotericism</a>
+      <a href="/eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Eastern Esotericism</a>
+      <a href="/indigenous-esotericism" class="nav-link text-amber-300 font-semibold">Indigenous Esotericism</a>
+      <a href="/journal/reflections" class="nav-link text-emerald-300 hover:text-emerald-200 transition-colors">✨ Reflections</a>
+      <a href="https://ko-fi.com/esotericwisdom" target="_blank" rel="noopener noreferrer"
+         class="px-3 py-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-white font-semibold hover:scale-105 transition-transform shrink-0">☕ Support</a>
+    </div>
+  </nav>
+
+  <!-- CONTENT WRAPPER -->
+  <div class="relative z-10 max-w-6xl mx-auto space-y-10 pt-6 px-4 pb-12">
+
+    <!-- HERO -->
+    <section class="text-center py-16 space-y-6">
+      <div class="text-7xl floating">🌿</div>
+      <h1 class="font-cinzel text-4xl md:text-6xl font-bold aurora-text leading-tight">
+        Indigenous &amp; Shamanic Esotericism
+      </h1>
+      <p class="max-w-3xl mx-auto text-green-200/80 text-lg leading-relaxed">
+        Humanity's oldest spiritual technologies — born in the deep time before writing, before temples, before
+        organised religion — preserved in story, ceremony, and the living bodies of initiated practitioners
+        across every inhabited continent on Earth.
+      </p>
+    </section>
+
+    <!-- SECTION 1: WHAT IS INDIGENOUS & SHAMANIC ESOTERICISM? -->
+    <section class="rounded-2xl p-8 space-y-6"
+             style="background: linear-gradient(135deg, rgba(20,80,20,0.15), rgba(10,50,10,0.08));">
+      <h2 class="font-cinzel text-2xl text-emerald-300 text-center tracking-wide">
+        What Is Indigenous &amp; Shamanic Esotericism?
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm text-green-100/80 leading-relaxed">
+        <div class="space-y-4">
+          <p>
+            Indigenous spiritual traditions span the full breadth of the human world — from the
+            <strong class="text-emerald-300">Arctic tundra</strong> of Siberia and northern Canada to the
+            <strong class="text-emerald-300">Amazon rainforest</strong>, from the red desert of
+            <strong class="text-emerald-300">central Australia</strong> to the
+            <strong class="text-emerald-300">West African forest</strong>, from the high Andes to the plains of
+            North America. These are not primitive forerunners of later religion, nor immature approximations
+            of what would eventually become philosophy or theology. They are sophisticated, complete cosmologies
+            developed and refined over tens of thousands of years of intimate, sustained relationship between
+            human communities and the specific landscapes they inhabit. At the foundation of virtually all of
+            them lies <strong class="text-emerald-300">animism</strong> — the ontological conviction that all
+            things possess spirit, interiority, or inner life: that the world is not a collection of objects
+            but a community of subjects.
+          </p>
+          <p>
+            The <strong class="text-emerald-300">oral transmission tradition</strong> is the defining
+            epistemological feature of indigenous spirituality. Where the great literate traditions —
+            Christianity, Islam, Hinduism, Buddhism — organised their sacred knowledge into texts, indigenous
+            traditions carry their wisdom in story, song, ceremony, and the bodies of living practitioners.
+            The initiated elder is the living library; the ceremony is the living scripture. This is not a
+            deficiency. It represents a fundamentally different relationship to knowledge itself — one in
+            which understanding cannot be separated from the person who embodies it, the community that
+            sustains it, or the land that grounds it. The distinction between <em>insider knowledge</em>
+            (what is transmitted to initiates) and <em>outsider knowledge</em> (what may be shared with
+            strangers) is universal and rigorously maintained.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <p>
+            <strong class="text-emerald-300">Initiatory practices</strong> are the structural mechanism by
+            which all indigenous traditions effect genuine transformation. Whether the Lakota vision quest, the
+            Amazonian plant-medicine initiation, the Aboriginal walkabout, or the West African secret society
+            rite, these traditions share a common architecture: the novice is separated from the ordinary
+            community, subjected to a period of ordeal, seclusion, symbolic death, and eventual rebirth, and
+            returned to the community as a fundamentally different person — one who has crossed a threshold
+            that cannot be uncrossed. This is not metaphor. The initiation is understood as spiritual surgery:
+            the reorganisation of the person at the deepest level, the installation of new capacities and
+            responsibilities. The shaman who returns from their initiatory crisis is not the person who
+            entered it.
+          </p>
+          <p>
+            The most fundamental ontological difference between indigenous cosmologies and modern Western
+            materialism is the conviction that the
+            <strong class="text-emerald-300">world is alive, conscious, and relational</strong>. The shaman
+            does not merely visualise a spirit journey; they actually journey. The ancestors are not metaphors
+            or psychological projections; they are present, active, and capable of communication. The land is
+            not a substrate on which human life occurs; it is a living partner in an ongoing conversation.
+            These cosmologies precede writing, temples, and organised religion by tens of thousands of years.
+            They are, in the most literal sense, the world's oldest esoteric lineages — and the most
+            geographically widespread, having been present in every human culture in every part of the world
+            before the advent of modernity.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: THE TRADITIONS -->
+    <section class="space-y-6">
+      <h2 class="font-cinzel text-2xl text-emerald-300 text-center tracking-wide">The Traditions</h2>
+      <p class="text-center text-green-200/60 text-sm max-w-2xl mx-auto">
+        Seven streams of living wisdom — each rooted in a specific land and people, each a complete world
+        of practice and cosmology, united by the oldest spiritual impulse in human history.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+        <a href="/shamanism" class="ie-card block no-underline group">
+          <div class="text-4xl mb-3">🥁</div>
+          <h3 class="font-cinzel text-lg text-emerald-300 mb-2 group-hover:text-emerald-200 transition-colors">
+            Shamanism
+          </h3>
+          <p class="text-green-100/70 text-sm leading-relaxed mb-3">
+            Humanity's oldest spiritual technology — trance, spirit journeys, power animals, and the healing
+            bridge between worlds across Siberia, the Americas, Central Asia, and beyond. The shaman is the
+            specialist of the sacred, the one who can consciously enter altered states to travel to other
+            realms and return with healing or knowledge for the community.
+          </p>
+          <span class="text-green-400 text-xs font-semibold tracking-wider">Explore →</span>
+        </a>
+
+        <a href="/indigenous-esotericism/andean-cosmology" class="ie-card block no-underline group">
+          <div class="text-4xl mb-3">🏔️</div>
+          <h3 class="font-cinzel text-lg text-emerald-300 mb-2 group-hover:text-emerald-200 transition-colors">
+            Andean Cosmology
+          </h3>
+          <p class="text-green-100/70 text-sm leading-relaxed mb-3">
+            The living wisdom of the Andes — Pachamama, Apus, Ayni, and the cosmic vision of the Q'ero and
+            Inca spiritual lineages. A tradition that survived conquest by retreating into the high mountains,
+            maintained by the <em>paqos</em> — the initiated healers of the Andean path — through to the
+            present day.
+          </p>
+          <span class="text-green-400 text-xs font-semibold tracking-wider">Explore →</span>
+        </a>
+
+        <a href="/indigenous-esotericism/native-american-vision" class="ie-card block no-underline group">
+          <div class="text-4xl mb-3">🦅</div>
+          <h3 class="font-cinzel text-lg text-emerald-300 mb-2 group-hover:text-emerald-200 transition-colors">
+            Native American Vision Traditions
+          </h3>
+          <p class="text-green-100/70 text-sm leading-relaxed mb-3">
+            The vision quest, sweat lodge, sacred pipe, and medicine wheel — initiatory pathways of the First
+            Peoples of North America. Rooted in a profound relationship with the natural world, these
+            traditions understand spiritual development as inseparable from one's responsibilities to the
+            community, the ancestors, and the land.
+          </p>
+          <span class="text-green-400 text-xs font-semibold tracking-wider">Explore →</span>
+        </a>
+
+        <a href="/indigenous-esotericism/african-initiatory" class="ie-card block no-underline group">
+          <div class="text-4xl mb-3">🌍</div>
+          <h3 class="font-cinzel text-lg text-emerald-300 mb-2 group-hover:text-emerald-200 transition-colors">
+            African Initiatory Traditions
+          </h3>
+          <p class="text-green-100/70 text-sm leading-relaxed mb-3">
+            The deep initiatory wisdom of sub-Saharan Africa — ancestral veneration, spirit possession,
+            secret societies, and the living transmission of sacred knowledge. From the Yoruba orisha
+            tradition to the Sangoma healers of southern Africa, these are among the world's most
+            sophisticated and enduring systems of initiatory spirituality.
+          </p>
+          <span class="text-green-400 text-xs font-semibold tracking-wider">Explore →</span>
+        </a>
+
+        <a href="/indigenous-esotericism/aboriginal-dreamtime" class="ie-card block no-underline group">
+          <div class="text-4xl mb-3">🌏</div>
+          <h3 class="font-cinzel text-lg text-emerald-300 mb-2 group-hover:text-emerald-200 transition-colors">
+            Australian Aboriginal Dreamtime
+          </h3>
+          <p class="text-green-100/70 text-sm leading-relaxed mb-3">
+            The Dreaming — Australia's oldest spiritual technology, a cosmology in which the sacred past
+            saturates every feature of the landscape and every act of daily life. The song lines of Aboriginal
+            Australia constitute perhaps the world's oldest continuous cultural and spiritual tradition,
+            preserving knowledge more than 50,000 years old in living ceremony and song.
+          </p>
+          <span class="text-green-400 text-xs font-semibold tracking-wider">Explore →</span>
+        </a>
+
+        <a href="/indigenous-esotericism/hawaiian-huna" class="ie-card block no-underline group">
+          <div class="text-4xl mb-3">🌺</div>
+          <h3 class="font-cinzel text-lg text-emerald-300 mb-2 group-hover:text-emerald-200 transition-colors">
+            Hawaiian Huna
+          </h3>
+          <p class="text-green-100/70 text-sm leading-relaxed mb-3">
+            The esoteric philosophy of ancient Hawai'i — the three selves, mana, the High Self, and the
+            hidden science behind traditional Hawaiian healing and spiritual practice. Huna articulates a
+            complete model of human consciousness and its relationship to the divine that is both practically
+            applicable and cosmologically profound.
+          </p>
+          <span class="text-green-400 text-xs font-semibold tracking-wider">Explore →</span>
+        </a>
+
+        <a href="/indigenous-esotericism/inuit-angakkuq" class="ie-card block no-underline group">
+          <div class="text-4xl mb-3">❄️</div>
+          <h3 class="font-cinzel text-lg text-emerald-300 mb-2 group-hover:text-emerald-200 transition-colors">
+            Inuit Angakkuq
+          </h3>
+          <p class="text-green-100/70 text-sm leading-relaxed mb-3">
+            The shaman-healers of the Arctic — their extraordinary cosmology, spirit helpers, trance journeys
+            beneath the sea, and the world of Sedna and the Inua. Developed in one of the most demanding
+            environments on Earth, Inuit shamanism reflects a spiritual vision shaped by the vast, silent,
+            brutal beauty of the Arctic world.
+          </p>
+          <span class="text-green-400 text-xs font-semibold tracking-wider">Explore →</span>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- SECTION 3: LIVING ROOTS -->
+    <section class="rounded-2xl p-8 space-y-5"
+             style="background: linear-gradient(135deg, rgba(15,60,15,0.18), rgba(8,40,8,0.10));">
+      <h2 class="font-cinzel text-2xl text-emerald-300 text-center tracking-wide">Living Roots</h2>
+      <div class="max-w-4xl mx-auto space-y-5 text-sm text-green-100/80 leading-relaxed">
+        <p>
+          <strong class="text-emerald-300">Animism as the first philosophy</strong> — long before Plato or
+          the Upanishads, before the first temple was built or the first symbol pressed into clay, human beings
+          related to the world as a community of persons. Rivers were persons. Mountains were persons. Animals,
+          plants, winds, and storms were all possessed of interiority, will, and the capacity for relationship.
+          This is not naïveté or confusion; it is a coherent and ancient ontology with radical implications for
+          ecology, ethics, and cosmology. If the river is a person, then fouling it is not merely environmental
+          damage — it is a moral violation, a breach of relationship with a living being. Indigenous animism
+          models a way of being in the world that is fundamentally participatory: the human being is not the
+          master of nature but one person among many in an ongoing, reciprocal conversation with the whole
+          community of life.
+        </p>
+        <p>
+          <strong class="text-emerald-300">Oral transmission and the living library</strong> — the precision
+          and longevity of oral traditions is one of the most remarkable and under-appreciated facts in the
+          study of human culture. Australian Aboriginal song lines preserve cosmological, geographical, and
+          ecological knowledge that is now confirmed, through geological and archaeological research, to be
+          more than <em>50,000 years old</em> — making them the oldest continuous cultural tradition on Earth.
+          This is possible because oral tradition is not simply memory; it is living transmission, maintained
+          through ceremony, song, dance, and the ongoing relationship between initiated elders and their
+          communities. The ceremony is not a commemoration of something that happened long ago; it is the
+          continued performance of a reality that must be actively maintained. When an elder dies without
+          passing on their knowledge, it is, in the words of the West African griot tradition, "the burning
+          of a library."
+        </p>
+        <p>
+          <strong class="text-emerald-300">Reciprocity with the land</strong> is not merely a cultural
+          preference in indigenous traditions — it is a cosmic obligation. The Andean concept of <em>ayni</em>
+          (sacred reciprocity) names what virtually every indigenous culture on Earth recognises: the land
+          gives to the people, and the people must give back. Hunting rituals express gratitude to the animal
+          who gives its life; planting ceremonies honour the earth that receives the seed; harvest celebrations
+          return something of the gift to the source. This reciprocity is not merely symbolic. It is understood
+          as the mechanism by which the cosmic order is maintained. When the ceremony stops, the relationship
+          breaks down; when the relationship breaks down, the world suffers. Indigenous people are not romantic
+          environmentalists — they are, by the logic of their own cosmologies, <em>custodians of a living
+          covenant</em>.
+        </p>
+        <p>
+          <strong class="text-emerald-300">Initiation as transformation</strong> — the anthropologist Arnold
+          van Gennep identified the universal structure of rites of passage in 1909: separation from the
+          ordinary community, a liminal period of threshold-crossing, and reincorporation into the community
+          in a new status. This three-part structure is found in every initiatory tradition on Earth, from
+          the Lakota vision quest to the Siberian shaman's initiatory illness, from the Aboriginal male
+          initiation to the Congolese Lemba society's healing rites. In all these contexts, the liminal period
+          is characterised by symbolic death: the initiate temporarily ceases to be who they were, exists in
+          an in-between state outside ordinary social categories, and is eventually reborn into a new identity
+          with new capacities and responsibilities. Initiation is not a ceremony that marks a change that has
+          already occurred; it is the mechanism that produces the change itself.
+        </p>
+        <p>
+          <strong class="text-emerald-300">Why these traditions matter for contemporary seekers</strong> is
+          not primarily because they offer techniques to be extracted and practised in isolation. They are not
+          objects of appropriation but mirrors. What they reveal, when encountered with appropriate respect and
+          context, is what human spirituality looks like when it has been rooted in land, community, and direct
+          experience for tens of thousands of years — when it has not been separated from the body, the earth,
+          the ancestors, or the living community of non-human persons. They model a relationship to the sacred
+          that is embodied, ecological, and alive. For those formed in traditions that have severed these
+          connections — or in a secular modernity that denies their existence altogether — indigenous
+          esotericism offers the most profound possible reminder of what becomes possible when the human being
+          is fully, reverently at home in the world.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION 4: RECOMMENDED SCHOLARS & PRACTITIONERS -->
+    <section class="space-y-6">
+      <h2 class="font-cinzel text-2xl text-emerald-300 text-center tracking-wide">
+        Recommended Scholars &amp; Practitioners
+      </h2>
+      <p class="text-center text-green-200/60 text-sm max-w-2xl mx-auto">
+        Six voices — academic, indigenous, and practitioner — whose works illuminate the depth and breadth
+        of the world's indigenous esoteric traditions.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+        <div class="ie-card">
+          <h3 class="font-cinzel text-base text-emerald-300 mb-1">Mircea Eliade</h3>
+          <p class="text-green-300/70 text-xs mb-2 tracking-wide">1907–1986 · Comparative Religion Scholar</p>
+          <p class="text-green-100/70 text-sm leading-relaxed">
+            Romanian-born historian of religions and professor at the University of Chicago, Eliade was the
+            first scholar to bring systematic academic attention to shamanism as a cross-cultural phenomenon.
+            His foundational work established shamanism as a legitimate subject of scholarly inquiry and
+            introduced the concept to generations of Western readers. His approach has since been critiqued
+            for over-generalisation and for imposing a universal structure on traditions that resist it, but
+            his contribution to the field remains irreplaceable and his book the essential starting point.
+          </p>
+          <p class="text-green-200/50 text-xs mt-3 italic">
+            Key work: <em>Shamanism: Archaic Techniques of Ecstasy</em> (1951)
+          </p>
+        </div>
+
+        <div class="ie-card">
+          <h3 class="font-cinzel text-base text-emerald-300 mb-1">Michael Harner</h3>
+          <p class="text-green-300/70 text-xs mb-2 tracking-wide">1929–2018 · Anthropologist &amp; Shamanic Practitioner</p>
+          <p class="text-green-100/70 text-sm leading-relaxed">
+            Anthropologist and founder of Core Shamanism, Harner conducted fieldwork with the Jívaro and
+            Conibo peoples of South America before developing a distilled, cross-cultural framework for
+            shamanic practice accessible to Western students. He founded the Foundation for Shamanic Studies
+            and is the figure most responsible for bringing structured shamanic practice to Western audiences.
+            His approach — separating the core techniques from specific cultural contexts — remains both
+            influential and contested among scholars and practitioners alike.
+          </p>
+          <p class="text-green-200/50 text-xs mt-3 italic">
+            Key work: <em>The Way of the Shaman</em> (1980)
+          </p>
+        </div>
+
+        <div class="ie-card">
+          <h3 class="font-cinzel text-base text-emerald-300 mb-1">Joseph Campbell</h3>
+          <p class="text-green-300/70 text-xs mb-2 tracking-wide">1904–1987 · Comparative Mythologist</p>
+          <p class="text-green-100/70 text-sm leading-relaxed">
+            Professor at Sarah Lawrence College and one of the 20th century's most widely read scholars of
+            mythology, Campbell dedicated his career to demonstrating the underlying unity of indigenous
+            mythologies across cultures. His concept of the monomyth — the universal hero's journey — drew
+            heavily on indigenous and shamanic narrative structures. His work has introduced millions of
+            readers to the symbolic richness of the world's first peoples and remains an essential gateway
+            into deeper study of indigenous cosmology, myth, and ritual.
+          </p>
+          <p class="text-green-200/50 text-xs mt-3 italic">
+            Key work: <em>The Hero with a Thousand Faces</em> (1949)
+          </p>
+        </div>
+
+        <div class="ie-card">
+          <h3 class="font-cinzel text-base text-emerald-300 mb-1">Robin Wall Kimmerer</h3>
+          <p class="text-green-300/70 text-xs mb-2 tracking-wide">Contemporary · Botanist &amp; Potawatomi Scholar</p>
+          <p class="text-green-100/70 text-sm leading-relaxed">
+            Citizen of the Citizen Potawatomi Nation, botanist, and professor at SUNY College of
+            Environmental Science and Forestry, Kimmerer has done more than perhaps any other contemporary
+            writer to articulate the philosophical depth of indigenous animism for mainstream audiences. Her
+            concept of "the grammar of animacy" — the Potawatomi linguistic practice of addressing living
+            beings as subjects rather than objects — offers one of the most precise and beautiful accounts of
+            the animist ontology available in English, bridging indigenous plant knowledge with Western
+            botanical science.
+          </p>
+          <p class="text-green-200/50 text-xs mt-3 italic">
+            Key work: <em>Braiding Sweetgrass</em> (2013)
+          </p>
+        </div>
+
+        <div class="ie-card">
+          <h3 class="font-cinzel text-base text-emerald-300 mb-1">Alberto Villoldo</h3>
+          <p class="text-green-300/70 text-xs mb-2 tracking-wide">Contemporary · Medical Anthropologist &amp; Practitioner</p>
+          <p class="text-green-100/70 text-sm leading-relaxed">
+            Medical anthropologist, psychologist, and founder of the Four Winds Society, Villoldo spent
+            decades studying with Q'ero <em>paqos</em> (shamanic healers) in the high Andes of Peru. He has
+            done more than perhaps any other figure to bring the living wisdom of Andean shamanism — including
+            the luminous energy body, the Inca chakra system, and the practice of <em>ayni</em> — to Western
+            students. His work is both practically oriented and grounded in extended fieldwork with living
+            lineage holders of the Andean tradition.
+          </p>
+          <p class="text-green-200/50 text-xs mt-3 italic">
+            Key works: <em>The Four Winds</em>, <em>Shaman, Healer, Sage</em>
+          </p>
+        </div>
+
+        <div class="ie-card">
+          <h3 class="font-cinzel text-base text-emerald-300 mb-1">Vine Deloria Jr.</h3>
+          <p class="text-green-300/70 text-xs mb-2 tracking-wide">1933–2005 · Standing Rock Sioux Author &amp; Activist</p>
+          <p class="text-green-100/70 text-sm leading-relaxed">
+            One of the most formidable Native American intellectual voices of the 20th century, Deloria
+            combined rigorous philosophical argument with passionate advocacy for indigenous rights and
+            cosmologies. His critique of Western scientific materialism — conducted from within an explicitly
+            Lakota framework — remains one of the most intellectually serious defences of indigenous ways of
+            knowing ever written. He insisted, with formidable erudition, that indigenous cosmologies are not
+            primitive superstition but coherent, sophisticated systems from which Western thought has
+            much to learn.
+          </p>
+          <p class="text-green-200/50 text-xs mt-3 italic">
+            Key works: <em>God Is Red</em> (1973), <em>Custer Died for Your Sins</em> (1969)
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <section class="text-center py-10 space-y-6 border-t border-green-500/20">
+      <blockquote class="max-w-2xl mx-auto">
+        <p class="text-green-200/70 text-base italic leading-relaxed">
+          "The land is not a resource. It is a relative. And when we forget that, we forget who we are."
+        </p>
+        <footer class="text-green-300/50 text-xs mt-3 tracking-wide">
+          — Robin Wall Kimmerer, <em>Braiding Sweetgrass</em>
+        </footer>
+      </blockquote>
+      <div>
+        <a href="/home" class="inline-flex items-center gap-2 text-sm text-green-300/70 hover:text-emerald-300 transition-colors">
+          ← Back to Portal
+        </a>
+      </div>
+    </section>
+
+  </div>
+
+  <script>
+  const sf = document.getElementById('starfield');
+  for (let i = 0; i < 200; i++) {
+    const s = document.createElement('div');
+    s.className = 'star';
+    s.style.left = Math.random() * 100 + '%';
+    s.style.top = Math.random() * 100 + '%';
+    s.style.animationDelay = Math.random() * 3 + 's';
+    s.style.animationDuration = (2 + Math.random() * 3) + 's';
+    sf.appendChild(s);
+  }
+  </script>
+</body>
+</html>
