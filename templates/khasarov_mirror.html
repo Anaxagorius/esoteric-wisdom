@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Khasarov Mirror — Esoteric Wisdom</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+    <style>
+      body {
+        background: radial-gradient(ellipse at top, #0a0a0f 0%, #111118 25%, #080810 60%, #000000 100%);
+        font-family: 'Raleway', sans-serif;
+      }
+      .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+      @keyframes twinkle { 0%,100% { opacity: 0.2; } 50% { opacity: 1; } }
+      .star { position: absolute; border-radius: 50%; background: white; animation: twinkle var(--dur,3s) ease-in-out infinite; animation-delay: var(--delay,0s); }
+      @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+      .floating { animation: float 5s ease-in-out infinite; }
+      @keyframes shimmer {
+        0% { background-position: -200% center; }
+        100% { background-position: 200% center; }
+      }
+      @keyframes mirror-pulse {
+        0%, 100% { box-shadow: 0 0 20px rgba(148,163,184,0.2), 0 0 40px rgba(148,163,184,0.08); }
+        50% { box-shadow: 0 0 40px rgba(203,213,225,0.35), 0 0 80px rgba(148,163,184,0.15); }
+      }
+      @keyframes shimmer-bg {
+        0% { background-position: -200% 0; }
+        100% { background-position: 200% 0; }
+      }
+      .aurora-text {
+        background: linear-gradient(90deg, #cbd5e1, #94a3b8, #e2e8f0, #64748b, #cbd5e1);
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        animation: shimmer 5s linear infinite;
+      }
+      .mirror-card {
+        transition: all 0.35s ease;
+        cursor: default;
+      }
+      .mirror-card:hover {
+        transform: translateY(-7px) scale(1.01);
+        box-shadow: 0 24px 64px rgba(148,163,184,0.15);
+        border-color: rgba(203,213,225,0.45) !important;
+      }
+      .glow-card { animation: mirror-pulse 4s ease-in-out infinite; }
+      .shimmer-border {
+        background: linear-gradient(90deg, rgba(148,163,184,0.1), rgba(203,213,225,0.25), rgba(148,163,184,0.1));
+        background-size: 200% 100%;
+        animation: shimmer-bg 3s linear infinite;
+      }
+      .nav-link { position: relative; transition: all 0.3s; }
+      .nav-link::after {
+        content: ''; position: absolute; bottom: -2px; left: 0;
+        width: 0; height: 2px;
+        background: linear-gradient(90deg, #f59e0b, #a78bfa);
+        transition: width 0.3s;
+      }
+      .nav-link:hover::after { width: 100%; }
+    </style>
+  </head>
+  <body class="min-h-screen text-white px-4 py-8">
+    <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 flex items-center justify-between px-6 py-3 bg-black/40 backdrop-blur-md border-b border-violet-500/20 flex-wrap gap-y-2">
+      <a href="/home" class="font-cinzel text-amber-300 text-sm tracking-widest shrink-0">✦ Esoteric Wisdom ✦</a>
+      <div class="flex items-center gap-x-3 gap-y-1 text-xs text-violet-200 flex-wrap justify-end">
+        <a href="/astrology" class="nav-link hover:text-amber-300 transition-colors">Astrology</a>
+        <a href="/meditation" class="nav-link hover:text-amber-300 transition-colors">Meditation</a>
+        <a href="/tarot/select" class="nav-link hover:text-amber-300 transition-colors">Tarot</a>
+        <a href="/numerology" class="nav-link hover:text-amber-300 transition-colors">Numerology</a>
+        <a href="/crystals" class="nav-link hover:text-amber-300 transition-colors">Crystals</a>
+        <a href="/runes" class="nav-link hover:text-amber-300 transition-colors">Runes</a>
+        <a href="/shamanism" class="nav-link hover:text-amber-300 transition-colors">Shamanism</a>
+        <a href="/druidism" class="nav-link hover:text-amber-300 transition-colors">Druidism</a>
+        <a href="/akashic-records" class="nav-link hover:text-amber-300 transition-colors">Akashic Records</a>
+        <a href="/wicca" class="nav-link hover:text-amber-300 transition-colors">Wicca</a>
+        <a href="/gateway-process" class="nav-link hover:text-amber-300 transition-colors">Gateway Process</a>
+        <a href="/remote-viewing" class="nav-link hover:text-amber-300 transition-colors">Remote Viewing</a>
+        <a href="/khasarov-mirror" class="nav-link text-amber-300 font-semibold">Khasarov Mirror</a>
+        <a href="/journal/reflections" class="nav-link text-emerald-300 hover:text-emerald-200 transition-colors">✨ Reflections</a>
+        <a href="https://ko-fi.com/esotericwisdom" target="_blank" rel="noopener noreferrer"
+           class="px-3 py-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-white font-semibold hover:scale-105 transition-transform shrink-0">☕ Support</a>
+      </div>
+    </nav>
+    <div class="relative z-10 max-w-6xl mx-auto space-y-10 pt-6">
+
+      <!-- Hero -->
+      <header class="text-center py-6">
+        <div class="floating text-7xl mb-4">🪞</div>
+        <h1 class="font-cinzel text-4xl md:text-5xl font-bold mb-3">
+          <span class="aurora-text">The Khasarov Mirror</span>
+        </h1>
+        <p class="text-slate-100/80 text-lg max-w-2xl mx-auto leading-relaxed">
+          A reflective chamber from Russian consciousness research — rooted in Nikolai Kozyrev's torsion field theory and explored by Soviet and post-Soviet scientists as a tool for altering perception, time experience, and non-local awareness.
+        </p>
+      </header>
+
+      <!-- Section 1: Disclaimer -->
+      <section class="bg-gradient-to-br from-amber-950/50 to-red-950/40 border border-amber-700/50 rounded-3xl p-8 backdrop-blur-md shadow-2xl">
+        <h2 class="font-cinzel text-2xl font-semibold mb-5 text-amber-300">✦ Important Disclaimer</h2>
+        <div class="bg-black/40 rounded-2xl p-6 border border-amber-600/40">
+          <div class="flex items-start gap-4 mb-4">
+            <span class="text-3xl flex-shrink-0">⚠️</span>
+            <div>
+              <h3 class="font-cinzel text-base font-semibold text-amber-200 mb-2">For Educational &amp; Informational Purposes Only</h3>
+              <p class="text-amber-100/85 text-sm leading-relaxed mb-3">
+                The information on this page is provided solely for educational and informational purposes. It is not medical, psychological, or therapeutic advice. The Khasarov/Kozyrev mirror is an experimental device from Russian parapsychology research that has not been validated by peer-reviewed mainstream science. Extended use of enclosed reflective chambers can produce sensory deprivation effects, altered states of consciousness, and in rare cases disorientation, anxiety, or panic. Please read the following carefully before proceeding.
+              </p>
+            </div>
+          </div>
+          <div class="grid md:grid-cols-2 gap-5">
+            <div class="bg-black/30 rounded-xl p-4 border border-amber-800/30">
+              <h4 class="text-amber-300 font-semibold text-sm mb-2">⛔ Do NOT Use If You Have:</h4>
+              <ul class="text-amber-100/80 text-xs leading-relaxed space-y-1 list-disc list-inside">
+                <li>Claustrophobia (fear of enclosed spaces)</li>
+                <li>PTSD or a history of significant trauma</li>
+                <li>Psychosis, schizophrenia, or a family history thereof</li>
+                <li>Dissociative disorders (DID, depersonalisation, derealisation)</li>
+                <li>Significant anxiety disorder or panic disorder</li>
+                <li>Cardiovascular or respiratory conditions</li>
+              </ul>
+            </div>
+            <div class="bg-black/30 rounded-xl p-4 border border-amber-800/30">
+              <h4 class="text-amber-300 font-semibold text-sm mb-2">🔒 Essential Safety Rules</h4>
+              <ul class="text-amber-100/80 text-xs leading-relaxed space-y-1 list-disc list-inside">
+                <li><strong class="text-amber-200">NEVER use alone.</strong> Always have another person present outside the chamber who can assist you.</li>
+                <li>Establish a pre-agreed signal (e.g., three knocks) to indicate you want to exit immediately.</li>
+                <li>Keep initial sessions to 15–20 minutes maximum.</li>
+                <li>Medical supervision is strongly recommended for extended use.</li>
+                <li>Do not use while taking medication that affects perception, consciousness, or cardiovascular function.</li>
+              </ul>
+            </div>
+          </div>
+          <p class="text-amber-100/60 text-xs mt-4 italic leading-relaxed">
+            The research described on this page comes primarily from Russian-language sources and has not been replicated in Western peer-reviewed contexts. Treat all reported effects with appropriate critical perspective.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 2: What Is the Khasarov Mirror -->
+      <section class="bg-gradient-to-br from-slate-900/50 to-gray-950/40 border border-slate-600/30 rounded-3xl p-8 backdrop-blur-md shadow-2xl">
+        <h2 class="font-cinzel text-2xl font-semibold mb-5 text-slate-300">✦ What Is the Khasarov Mirror?</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <p class="text-slate-100/90 text-sm leading-relaxed mb-4">
+              The device known in Russian consciousness research as the <strong class="text-slate-200">Khasarov mirror</strong> is a variant of the broader category of <strong class="text-gray-200">Kozyrev mirrors</strong> — a family of reflective structures developed in Soviet and post-Soviet scientific research into consciousness, torsion fields, and non-local information transfer. The two names are often used interchangeably in Western literature, though they refer to slightly different designs and research lineages.
+            </p>
+            <p class="text-slate-100/90 text-sm leading-relaxed mb-4">
+              The name <strong class="text-slate-300">Kozyrev mirror</strong> derives from <strong class="text-slate-200">Nikolai Aleksandrovich Kozyrev</strong> (1908–1983), a Soviet astrophysicist who proposed that time is not merely a dimension of measurement but a <em>physical substance</em> — a carrier of energy and information that flows through the universe and can be focused, reflected, and concentrated, much like light. Kozyrev hypothesised the existence of a form of energy he called <strong class="text-gray-200">torsion radiation</strong> — a spiral, rotating field carried by the medium of time itself — which he believed could be detected, reflected, and concentrated using specially shaped metallic structures.
+            </p>
+            <p class="text-slate-100/90 text-sm leading-relaxed mb-4">
+              Based on Kozyrev's theoretical framework, later researchers — most notably <strong class="text-slate-200">Alexander Trofimov</strong> and <strong class="text-slate-200">Vlail Kaznacheev</strong> at the Institute of Clinical and Experimental Medicine in Novosibirsk — developed the cylindrical and spiral reflective chambers that became known as Kozyrev mirrors. These structures are typically made of <strong class="text-gray-200">aluminium sheets</strong> rolled into a cylinder or spiral approximately 0.7–1 metre in diameter and 1.4–2 metres tall — large enough for a person to sit inside.
+            </p>
+          </div>
+          <div>
+            <p class="text-slate-100/90 text-sm leading-relaxed mb-4">
+              The theoretical purpose of the mirror structure is to <strong class="text-gray-200">focus and amplify torsion radiation</strong> — creating an altered electromagnetic and informational environment inside the chamber. Proponents claim that this environment can affect human consciousness in measurable ways: altering EEG brainwave patterns, enhancing extrasensory perception, modifying the subjective experience of time, and facilitating what researchers describe as non-local consciousness phenomena.
+            </p>
+            <p class="text-slate-100/90 text-sm leading-relaxed mb-4">
+              It is worth noting that <strong class="text-amber-200">torsion field theory is not accepted by mainstream physics</strong>. Kozyrev's original papers generated significant controversy in the Soviet scientific community, and torsion radiation as he described it has not been confirmed by independent experiment. The effects reported in Trofimov and Kaznacheev's studies — while intriguing — come from non-blinded, non-peer-reviewed research, many publications existing only in Russian.
+            </p>
+            <div class="bg-black/30 rounded-2xl p-4 border border-slate-700/30">
+              <h3 class="font-cinzel text-base font-semibold text-slate-300 mb-3">🔑 Key Concepts at a Glance</h3>
+              <div class="grid grid-cols-2 gap-3">
+                <div>
+                  <h4 class="text-slate-200 font-semibold text-xs mb-1">🌀 Torsion Field</h4>
+                  <p class="text-slate-100/60 text-xs leading-relaxed">Kozyrev's proposed form of physical energy carried by time itself — not accepted by mainstream physics.</p>
+                </div>
+                <div>
+                  <h4 class="text-slate-200 font-semibold text-xs mb-1">🪞 Reflective Chamber</h4>
+                  <p class="text-slate-100/60 text-xs leading-relaxed">An aluminium cylinder or spiral structure designed to focus torsion radiation around a seated occupant.</p>
+                </div>
+                <div>
+                  <h4 class="text-slate-200 font-semibold text-xs mb-1">🧠 EEG Coherence</h4>
+                  <p class="text-slate-100/60 text-xs leading-relaxed">Reported increase in inter-hemispheric brainwave synchronisation observed in some Russian studies.</p>
+                </div>
+                <div>
+                  <h4 class="text-slate-200 font-semibold text-xs mb-1">⏱️ Time Perception</h4>
+                  <p class="text-slate-100/60 text-xs leading-relaxed">Altered subjective experience of time — both dilation and compression — reported by some subjects.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: History & People -->
+      <section class="bg-gradient-to-br from-gray-900/50 to-slate-950/40 border border-gray-700/30 rounded-3xl p-8 backdrop-blur-md shadow-2xl">
+        <h2 class="font-cinzel text-2xl font-semibold mb-5 text-gray-300">✦ History &amp; The People Behind It</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <h3 class="font-cinzel text-base font-semibold text-slate-200 mb-3">Nikolai Kozyrev (1908–1983)</h3>
+            <p class="text-slate-100/90 text-sm leading-relaxed mb-4">
+              Nikolai Aleksandrovich Kozyrev was one of the Soviet Union's most unconventional and brilliant astrophysicists. Born in Saint Petersburg, he survived the Stalinist purges, spent years in the Gulag, and emerged to make genuine contributions to astrophysics — most notably his 1958 observation of volcanic activity on the Moon (confirming the Moon is not geologically dead) and his work on stellar energy generation.
+            </p>
+            <p class="text-slate-100/90 text-sm leading-relaxed mb-4">
+              Kozyrev's most controversial work concerned <strong class="text-gray-200">the physical properties of time</strong>. He proposed that time is not a passive background dimension but an active, causal force — a physical substance with a "density" that can vary, and that flows through the universe in a directional, asymmetric manner. He believed this property of time could be detected by sensitive instruments and that certain physical processes (including human consciousness) were sensitive to the local "density" or "flow rate" of time.
+            </p>
+            <p class="text-slate-100/90 text-sm leading-relaxed mb-4">
+              Kozyrev designed experiments using gyroscopes, sensitive torsion balances, and vibrating strings to detect and measure what he called torsion radiation — the medium through which time's physical properties propagated. His results, published in Soviet academic journals during the 1960s–1970s, were contested but attracted serious attention from a minority of Russian physicists and eventually from researchers interested in consciousness.
+            </p>
+          </div>
+          <div>
+            <h3 class="font-cinzel text-base font-semibold text-slate-200 mb-3">Trofimov &amp; Kaznacheev — The Novosibirsk Research</h3>
+            <p class="text-slate-100/90 text-sm leading-relaxed mb-4">
+              The development of Kozyrev mirrors as tools for consciousness research is primarily associated with <strong class="text-gray-200">Alexander V. Trofimov</strong> and <strong class="text-gray-200">Vlail P. Kaznacheev</strong>, working at the Institute of Clinical and Experimental Medicine in Novosibirsk, Siberia, from the 1980s through the 2000s.
+            </p>
+            <p class="text-slate-100/90 text-sm leading-relaxed mb-4">
+              Kaznacheev, a prominent Soviet biomedical researcher known for his earlier work on cellular communication, became interested in non-local biological and informational effects in the 1970s. Together with Trofimov, he developed the hypothesis that aluminium reflective chambers — by focusing Kozyrev's proposed torsion fields — could create conditions favourable to non-local information transfer and altered states of consciousness.
+            </p>
+            <p class="text-slate-100/90 text-sm leading-relaxed mb-4">
+              Their reported experiments, conducted at the Arctic Biomedical Research Centre and later at various Siberian facilities, claimed remarkable results: subjects seated inside Kozyrev mirrors showed altered EEG patterns (increased inter-hemispheric coherence), reported vivid non-ordinary experiences (visions of distant locations or historical events), and in some cases appeared to receive verifiable information about distant targets. These were described as part of a broader programme of Russian government-funded parapsychological research.
+            </p>
+            <p class="text-slate-100/90 text-sm leading-relaxed">
+              It should be noted that <strong class="text-amber-200">these results have not been independently replicated in controlled Western research</strong>, and the primary literature remains largely in Russian without full English translations. They are presented here as a historical and cultural phenomenon, not as established science.
+            </p>
+          </div>
+        </div>
+
+        <!-- Timeline -->
+        <div class="mt-6 bg-black/30 rounded-2xl p-6 border border-slate-700/30">
+          <h3 class="font-cinzel text-base font-semibold text-slate-300 mb-4">📅 Key Dates</h3>
+          <div class="space-y-3">
+            <div class="flex gap-4 items-start">
+              <span class="text-slate-400 font-semibold text-xs w-16 shrink-0">1950s–60s</span>
+              <p class="text-slate-100/80 text-xs leading-relaxed">Kozyrev develops his theory of time as a physical substance and begins experiments to detect torsion radiation using precision instruments.</p>
+            </div>
+            <div class="flex gap-4 items-start">
+              <span class="text-slate-400 font-semibold text-xs w-16 shrink-0">1970s</span>
+              <p class="text-slate-100/80 text-xs leading-relaxed">Kaznacheev's non-local cellular communication research attracts Soviet scientific attention. Government interest in parapsychology research increases, partly in response to US research into psychical phenomena.</p>
+            </div>
+            <div class="flex gap-4 items-start">
+              <span class="text-slate-400 font-semibold text-xs w-16 shrink-0">1983</span>
+              <p class="text-slate-100/80 text-xs leading-relaxed">Nikolai Kozyrev dies in Leningrad. His theoretical framework is taken up by a new generation of Russian researchers interested in its applications to consciousness and information.</p>
+            </div>
+            <div class="flex gap-4 items-start">
+              <span class="text-slate-400 font-semibold text-xs w-16 shrink-0">1980s–90s</span>
+              <p class="text-slate-100/80 text-xs leading-relaxed">Trofimov and Kaznacheev at the Novosibirsk Institute begin experiments with aluminium reflective chambers. Reports emerge of altered consciousness, non-local perception, and contact experiences.</p>
+            </div>
+            <div class="flex gap-4 items-start">
+              <span class="text-slate-400 font-semibold text-xs w-16 shrink-0">2000s</span>
+              <p class="text-slate-100/80 text-xs leading-relaxed">Interest in Kozyrev/Khasarov mirrors spreads into Western esoteric and fringe science communities through translated summaries. DIY versions begin appearing in consciousness research and alternative spirituality circles.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4: The Theory -->
+      <section class="bg-gradient-to-br from-slate-900/40 to-gray-900/40 border border-slate-600/30 rounded-3xl p-8 backdrop-blur-md shadow-2xl">
+        <h2 class="font-cinzel text-2xl font-semibold mb-5 text-slate-300">✦ The Theory</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <h3 class="font-cinzel text-base font-semibold text-gray-200 mb-3">Kozyrev's Torsion Field Hypothesis</h3>
+            <p class="text-slate-100/90 text-sm leading-relaxed mb-4">
+              Kozyrev's central hypothesis was that <strong class="text-gray-200">time is a physical substance</strong> — not merely a dimension of measurement — possessing properties such as density, viscosity, and a directional flow. He argued that the asymmetry of time (its apparent one-directionality — past to future, not future to past) was a physical property caused by this substance's structure, and that physical processes that produce or absorb energy also interact with the local density of time.
+            </p>
+            <p class="text-slate-100/90 text-sm leading-relaxed mb-4">
+              The corollary was that torsion radiation — the rotating, spiralling energetic disturbance created when time's flow interacts with rotating physical objects (including astronomical bodies, turbines, gyroscopes, and even DNA, which has a helical structure) — should be detectable and manipulable. Kozyrev believed that aluminium was particularly effective at reflecting and concentrating torsion radiation because of its specific electromagnetic and crystalline properties.
+            </p>
+            <p class="text-slate-100/90 text-sm leading-relaxed mb-4">
+              Trofimov and Kaznacheev extended this to argue that <strong class="text-slate-200">human consciousness itself generates and is sensitive to torsion fields</strong>. The brain, they hypothesised, is not merely a receiver and processor of electrochemical information but a torsion field generator — and the human nervous system is therefore potentially sensitive to torsion radiation from distant sources. This theoretical leap provided the framework for the Kozyrev mirror as a tool for enhancing non-local perception.
+            </p>
+          </div>
+          <div>
+            <h3 class="font-cinzel text-base font-semibold text-gray-200 mb-3">Reported Mechanisms &amp; Effects</h3>
+            <p class="text-slate-100/90 text-sm leading-relaxed mb-4">
+              Russian researchers reported that subjects seated inside Kozyrev mirrors showed distinctive changes in EEG measurements. Specifically, they claimed increased <strong class="text-gray-200">inter-hemispheric coherence</strong> — a synchronisation of alpha and theta wave activity between the left and right brain hemispheres similar to that observed in experienced meditators and some altered states. This was interpreted as evidence that the mirror environment was affecting the brain's electromagnetic field.
+            </p>
+            <p class="text-slate-100/90 text-sm leading-relaxed mb-4">
+              Subjects also reported <strong class="text-gray-200">altered time perception</strong> — a subjective sense that time was passing unusually slowly or quickly, or that temporal boundaries between past, present, and future became less defined. Some subjects reported experiences interpreted as access to historical events or future impressions.
+            </p>
+            <p class="text-slate-100/90 text-sm leading-relaxed mb-4">
+              A significant confounding factor in all this research — acknowledged by critical reviewers — is that <strong class="text-amber-200">enclosed reflective spaces naturally produce sensory deprivation effects</strong> regardless of any torsion field involvement. Reduced sensory input, visual distortion from reflective surfaces, and mild hypoxia in poorly ventilated chambers can all produce altered states, unusual perceptions, and vivid imagery through entirely conventional neurological mechanisms.
+            </p>
+            <div class="bg-black/30 rounded-2xl p-4 border border-slate-700/30">
+              <h3 class="font-cinzel text-sm font-semibold text-slate-300 mb-2">🔬 Scientific Status</h3>
+              <p class="text-slate-100/70 text-xs leading-relaxed">
+                Torsion field theory as proposed by Kozyrev is not accepted by mainstream physics. It is classified as a fringe science claim. Some Russian and post-Soviet researchers continue to publish work on torsion fields, but this research has not been replicated under Western peer-review conditions. The consciousness effects of Kozyrev mirrors remain scientifically unexplained and unconfirmed.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 5: How Researchers Used It -->
+      <section class="bg-gradient-to-br from-gray-900/50 to-slate-900/30 border border-gray-600/30 rounded-3xl p-8 backdrop-blur-md shadow-2xl">
+        <h2 class="font-cinzel text-2xl font-semibold mb-5 text-gray-300">✦ How Researchers Used It</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <h3 class="font-cinzel text-base font-semibold text-slate-200 mb-3">Research Session Protocol</h3>
+            <p class="text-slate-100/90 text-sm leading-relaxed mb-4">
+              In the Novosibirsk research framework, sessions with Kozyrev mirrors were conducted under clinical conditions with medical monitoring. The protocol described in available Russian sources typically proceeded as follows:
+            </p>
+            <ol class="space-y-3 mb-4">
+              <li class="flex items-start gap-3">
+                <span class="text-slate-400 font-bold text-sm shrink-0">1.</span>
+                <p class="text-slate-100/80 text-xs leading-relaxed">The subject was seated inside or positioned near the reflective aluminium cylinder. Some experimental designs used a half-cylinder behind the subject (open to the front) rather than a fully enclosing structure.</p>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-slate-400 font-bold text-sm shrink-0">2.</span>
+                <p class="text-slate-100/80 text-xs leading-relaxed">EEG electrodes were attached to monitor brainwave activity in real time. Some sessions included heart rate, skin conductance, and other physiological monitoring.</p>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-slate-400 font-bold text-sm shrink-0">3.</span>
+                <p class="text-slate-100/80 text-xs leading-relaxed">Sessions typically lasted 20–90 minutes. Subjects were instructed to relax, close their eyes, and allow impressions to arise without directing them. Some protocols involved specific meditative or attentional instructions.</p>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-slate-400 font-bold text-sm shrink-0">4.</span>
+                <p class="text-slate-100/80 text-xs leading-relaxed">Post-session, subjects were interviewed about their experiences: any visions, emotional states, time distortion, unusual perceptions, or apparent non-local impressions. These were correlated with the EEG data.</p>
+              </li>
+            </ol>
+          </div>
+          <div>
+            <h3 class="font-cinzel text-base font-semibold text-slate-200 mb-3">Reported Experimental Results</h3>
+            <p class="text-slate-100/90 text-sm leading-relaxed mb-4">
+              Among the results reported (but not independently replicated) from Russian mirror research:
+            </p>
+            <div class="space-y-3">
+              <div class="bg-black/30 rounded-xl p-3 border border-gray-700/30">
+                <h4 class="text-gray-200 font-semibold text-xs mb-1">Apparent Remote Perception</h4>
+                <p class="text-slate-100/70 text-xs leading-relaxed">Some subjects reported vivid, detailed impressions of distant locations that researchers claimed correlated with actual places or events. These reports were not conducted under the double-blind conditions required for scientific validity.</p>
+              </div>
+              <div class="bg-black/30 rounded-xl p-3 border border-gray-700/30">
+                <h4 class="text-gray-200 font-semibold text-xs mb-1">Apparent Contact with Deceased Individuals</h4>
+                <p class="text-slate-100/70 text-xs leading-relaxed">Several subjects reported experiences interpreted as contact with deceased people, including the reception of seemingly verifiable information. These reports are anecdotal and cannot be assessed for accuracy without controlled methodology.</p>
+              </div>
+              <div class="bg-black/30 rounded-xl p-3 border border-gray-700/30">
+                <h4 class="text-gray-200 font-semibold text-xs mb-1">Historical &amp; Future Impressions</h4>
+                <p class="text-slate-100/70 text-xs leading-relaxed">Consistent with Kozyrev's theory that the mirror affects time perception, some subjects reported impressions interpreted as historical events or future scenarios. These are among the most difficult claims to evaluate scientifically.</p>
+              </div>
+              <div class="bg-black/30 rounded-xl p-3 border border-gray-700/30">
+                <h4 class="text-gray-200 font-semibold text-xs mb-1">Measurable EEG Changes</h4>
+                <p class="text-slate-100/70 text-xs leading-relaxed">The most potentially replicable finding — reported changes in inter-hemispheric EEG coherence — is also the most easily attributed to sensory deprivation and relaxation response, independent of any torsion field effect.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 6: DIY Version -->
+      <section class="bg-gradient-to-br from-slate-900/50 to-gray-900/30 border border-slate-600/30 rounded-3xl p-8 backdrop-blur-md shadow-2xl">
+        <h2 class="font-cinzel text-2xl font-semibold mb-5 text-slate-300">✦ How Enthusiasts Attempt It — A Simplified Version</h2>
+        <div class="bg-amber-950/20 border border-amber-800/30 rounded-2xl p-4 mb-6">
+          <p class="text-amber-100/80 text-xs leading-relaxed">
+            <strong class="text-amber-300">Reminder:</strong> The following describes how enthusiasts have attempted DIY versions of the Kozyrev mirror at home. This is provided for informational completeness only. Always prioritise safety. Never attempt alone. Keep sessions short, especially as a beginner.
+          </p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <h3 class="font-cinzel text-base font-semibold text-slate-200 mb-3">🛠️ Basic DIY Construction</h3>
+            <p class="text-slate-100/90 text-sm leading-relaxed mb-4">
+              The most common DIY approach involves creating a simple cylindrical or spiral reflective chamber from aluminium foil wrapped around a lightweight frame. The dimensions described in Russian research suggest a diameter of approximately <strong class="text-gray-200">70 cm (28 inches)</strong> and a height of approximately <strong class="text-gray-200">140 cm (55 inches)</strong> — sufficient to seat a person cross-legged or on a low stool inside.
+            </p>
+            <div class="space-y-3">
+              <div class="flex items-start gap-3">
+                <span class="text-slate-400 text-lg shrink-0">📐</span>
+                <div>
+                  <h4 class="text-gray-200 font-semibold text-xs mb-0.5">Frame</h4>
+                  <p class="text-slate-100/70 text-xs leading-relaxed">A cylinder of PVC pipe or cardboard tubing, or a frame of lightweight bamboo canes, forms the structure. The cylinder approach (as opposed to spiral) is simpler to construct.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="text-slate-400 text-lg shrink-0">🪙</span>
+                <div>
+                  <h4 class="text-gray-200 font-semibold text-xs mb-0.5">Reflective Surface</h4>
+                  <p class="text-slate-100/70 text-xs leading-relaxed">Heavy-duty aluminium foil (or thin aluminium sheet) is attached to the frame with the reflective side facing inward. Ensure adequate ventilation — a fully sealed chamber is dangerous. Leave the top open or use a mesh top.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="text-slate-400 text-lg shrink-0">🪑</span>
+                <div>
+                  <h4 class="text-gray-200 font-semibold text-xs mb-0.5">Seating</h4>
+                  <p class="text-slate-100/70 text-xs leading-relaxed">A low stool, cushion, or meditation pillow placed inside the cylinder for comfort. Ensure you can stand and exit quickly without difficulty.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3 class="font-cinzel text-base font-semibold text-slate-200 mb-3">📋 Session Guidelines for Beginners</h3>
+            <ol class="space-y-3 mb-4">
+              <li class="flex items-start gap-3">
+                <span class="text-slate-400 font-bold text-sm shrink-0">1.</span>
+                <p class="text-slate-100/80 text-xs leading-relaxed"><strong class="text-gray-200">Ensure safety.</strong> Your companion must be seated immediately outside the chamber, able to see or hear you at all times. Agree on an exit signal (three knocks on the frame) before you begin.</p>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-slate-400 font-bold text-sm shrink-0">2.</span>
+                <p class="text-slate-100/80 text-xs leading-relaxed"><strong class="text-gray-200">Set a timer.</strong> For beginners: 15–20 minutes maximum. Your companion should check in verbally every 5 minutes. Do not exceed 30 minutes for any session without prior experience.</p>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-slate-400 font-bold text-sm shrink-0">3.</span>
+                <p class="text-slate-100/80 text-xs leading-relaxed"><strong class="text-gray-200">Enter with relaxed, open intention.</strong> Sit comfortably, close your eyes, and breathe slowly. Allow impressions to arise without forcing them. No specific goal or outcome is required.</p>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-slate-400 font-bold text-sm shrink-0">4.</span>
+                <p class="text-slate-100/80 text-xs leading-relaxed"><strong class="text-gray-200">Exit calmly.</strong> When the timer sounds or you are ready to exit, take a moment before standing. Ground yourself with slow, deliberate breaths before stepping out.</p>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-slate-400 font-bold text-sm shrink-0">5.</span>
+                <p class="text-slate-100/80 text-xs leading-relaxed"><strong class="text-gray-200">Journal immediately.</strong> Write down everything you experienced — physical sensations, emotional states, visual impressions, time perception, thoughts — while the memory is fresh. This is valuable data regardless of its interpretation.</p>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 7: What To Expect -->
+      <section class="bg-gradient-to-br from-gray-900/40 to-slate-900/30 border border-gray-700/20 rounded-3xl p-8 backdrop-blur-md shadow-2xl">
+        <h2 class="font-cinzel text-2xl font-semibold mb-5 text-gray-300">✦ What To Expect</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <p class="text-slate-100/90 text-sm leading-relaxed mb-4">
+              The most commonly reported effects of sitting inside a reflective chamber are the predictable consequences of <strong class="text-gray-200">mild sensory deprivation</strong>. The visual field is dominated by the reflective surfaces, which create unusual patterns of light and shadow. Ambient sound is reduced and slightly distorted by the aluminium walls. The physical enclosure creates a sense of separation from ordinary environmental stimuli.
+            </p>
+            <p class="text-slate-100/90 text-sm leading-relaxed mb-4">
+              Under these conditions — which are present regardless of any torsion field effect — the brain's pattern-recognition systems naturally become more active and "inward-directed." <strong class="text-slate-200">Phosphenes</strong> (visual patterns generated by the visual cortex in the absence of external light input) become more pronounced. Mild hypnagogic imagery may arise. Introspective states deepen. The subjective sense of the passage of time frequently changes.
+            </p>
+            <p class="text-slate-100/90 text-sm leading-relaxed mb-4">
+              Practitioners who go beyond these baseline sensory deprivation effects and experience something more striking — vivid imagery, apparent non-local impressions, or unusual temporal experiences — may be experiencing enhanced access to the hypnagogic state, placebo and expectation effects, or (if one accepts the theoretical framework) genuine torsion field effects. These possibilities cannot be distinguished without controlled experimental conditions.
+            </p>
+          </div>
+          <div>
+            <div class="space-y-3">
+              <div class="bg-black/30 rounded-xl p-3 border border-slate-700/30">
+                <h4 class="text-slate-200 font-semibold text-xs mb-1">👁️ Visual Effects</h4>
+                <p class="text-slate-100/70 text-xs leading-relaxed">Phosphenes, geometric patterns, shifting colours, or more complex imagery as visual cortex activity increases in reduced external input. Some practitioners report vivid scenes, faces, or landscapes.</p>
+              </div>
+              <div class="bg-black/30 rounded-xl p-3 border border-slate-700/30">
+                <h4 class="text-slate-200 font-semibold text-xs mb-1">⏱️ Time Distortion</h4>
+                <p class="text-slate-100/70 text-xs leading-relaxed">Both time dilation (sessions feeling much shorter than they are) and time compression (sessions feeling much longer) are reported. Some subjects describe a complete loss of temporal orientation.</p>
+              </div>
+              <div class="bg-black/30 rounded-xl p-3 border border-slate-700/30">
+                <h4 class="text-slate-200 font-semibold text-xs mb-1">🔮 Heightened Introspection</h4>
+                <p class="text-slate-100/70 text-xs leading-relaxed">Deep meditative states with unusually vivid internal experience. Enhanced access to memories, emotional material, or creative insight.</p>
+              </div>
+              <div class="bg-black/30 rounded-xl p-3 border border-slate-700/30">
+                <h4 class="text-slate-200 font-semibold text-xs mb-1">🌡️ Physical Sensations</h4>
+                <p class="text-slate-100/70 text-xs leading-relaxed">Mild tingling, warmth, or unusual pressure sensations reported by some practitioners. These are consistent with sensory deprivation and heightened somatic awareness.</p>
+              </div>
+              <div class="bg-black/30 rounded-xl p-3 border border-slate-700/30">
+                <h4 class="text-slate-200 font-semibold text-xs mb-1">💭 Apparent Non-Local Impressions</h4>
+                <p class="text-slate-100/70 text-xs leading-relaxed">A minority of practitioners report vivid impressions interpreted as perception of distant events, deceased individuals, or non-ordinary states of awareness. These should be treated with critical reflection rather than literal belief.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 8: What To Avoid -->
+      <section class="bg-gradient-to-br from-red-950/30 to-slate-950/40 border border-red-900/30 rounded-3xl p-8 backdrop-blur-md shadow-2xl">
+        <h2 class="font-cinzel text-2xl font-semibold mb-5 text-red-300">✦ What To Avoid</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <div class="space-y-4">
+              <div class="flex items-start gap-4">
+                <span class="text-2xl shrink-0">🚫</span>
+                <div>
+                  <h3 class="text-red-300 font-semibold text-sm mb-1">Using the Mirror Alone</h3>
+                  <p class="text-slate-100/80 text-xs leading-relaxed">This is the most important rule. If you experience any difficulty — panic, disorientation, nausea, chest tightness — while alone inside the chamber, there is no one to assist you. Never enter without a companion physically present outside.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <span class="text-2xl shrink-0">🚫</span>
+                <div>
+                  <h3 class="text-red-300 font-semibold text-sm mb-1">Exceeding Recommended Time Without Check-Ins</h3>
+                  <p class="text-slate-100/80 text-xs leading-relaxed">Sensory deprivation effects become more pronounced and harder to manage after 30 minutes. Do not attempt extended sessions until you have multiple short sessions under your belt. Always maintain regular verbal check-ins with your companion.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <span class="text-2xl shrink-0">🚫</span>
+                <div>
+                  <h3 class="text-red-300 font-semibold text-sm mb-1">Using When Claustrophobic</h3>
+                  <p class="text-slate-100/80 text-xs leading-relaxed">Even mild claustrophobia can become acute inside an enclosed reflective chamber. Do not minimise this risk. If you have any history of discomfort in enclosed spaces, the Kozyrev mirror is not an appropriate practice.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="space-y-4">
+              <div class="flex items-start gap-4">
+                <span class="text-2xl shrink-0">🚫</span>
+                <div>
+                  <h3 class="text-red-300 font-semibold text-sm mb-1">Using Medication That Affects Perception</h3>
+                  <p class="text-slate-100/80 text-xs leading-relaxed">Psychoactive medications, benzodiazepines, antidepressants, sleep aids, and many other common medications can alter the sensory deprivation experience in unpredictable ways. Always consult your prescribing physician before attempting any practice that induces altered states.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <span class="text-2xl shrink-0">🚫</span>
+                <div>
+                  <h3 class="text-red-300 font-semibold text-sm mb-1">Interpreting Visions as Literal Reality</h3>
+                  <p class="text-slate-100/80 text-xs leading-relaxed">Whatever you experience inside the chamber — however vivid or compelling — requires critical reflection before being treated as factual information about the world. Vivid imagery and apparent knowledge can be generated by the brain in altered states without any paranormal mechanism. Maintain the observer's distance.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <span class="text-2xl shrink-0">🚫</span>
+                <div>
+                  <h3 class="text-red-300 font-semibold text-sm mb-1">Poorly Ventilated Chambers</h3>
+                  <p class="text-slate-100/80 text-xs leading-relaxed">A fully sealed enclosure with a person inside will accumulate CO₂ rapidly. Ensure your chamber has an open top or adequate ventilation at all times. Mild hypoxia can produce altered states that mimic genuinely interesting effects — but it is simply oxygen deprivation and is potentially dangerous.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 9: When To Stop -->
+      <section class="bg-gradient-to-br from-amber-950/30 to-red-950/30 border border-amber-800/30 rounded-3xl p-6 backdrop-blur-md shadow-xl">
+        <h2 class="font-cinzel text-xl font-semibold mb-4 text-amber-300">✦ When To Stop — Exit Immediately If:</h2>
+        <div class="grid md:grid-cols-3 gap-4">
+          <div class="bg-black/30 rounded-xl p-4 border border-red-900/30">
+            <h3 class="text-red-300 font-semibold text-xs mb-2">🛑 Panic or Chest Tightness</h3>
+            <p class="text-slate-100/70 text-xs leading-relaxed">Any experience of panic, chest tightness, difficulty breathing, or heart palpitations is a clear signal to exit immediately. Use your pre-agreed signal and exit calmly but promptly.</p>
+          </div>
+          <div class="bg-black/30 rounded-xl p-4 border border-red-900/30">
+            <h3 class="text-red-300 font-semibold text-xs mb-2">🛑 Nausea or Disorientation</h3>
+            <p class="text-slate-100/70 text-xs leading-relaxed">Nausea, dizziness, or significant disorientation (inability to re-orient yourself after exiting) should be taken seriously. Rest, drink water, and seek medical assessment if symptoms persist.</p>
+          </div>
+          <div class="bg-black/30 rounded-xl p-4 border border-red-900/30">
+            <h3 class="text-red-300 font-semibold text-xs mb-2">🛑 Persistent Paranoia or Intrusive Thoughts</h3>
+            <p class="text-slate-100/70 text-xs leading-relaxed">If sessions consistently produce paranoid thinking, intrusive imagery, or thoughts that persist after you exit the chamber, stop the practice entirely and speak with a mental health professional.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 10: Resources -->
+      <section class="bg-gradient-to-br from-slate-900/50 to-gray-900/30 border border-slate-700/30 rounded-3xl p-8 backdrop-blur-md shadow-2xl">
+        <h2 class="font-cinzel text-2xl font-semibold mb-5 text-slate-300">✦ Resources &amp; Further Study</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <h3 class="font-cinzel text-base font-semibold text-gray-200 mb-4">📚 Primary Sources</h3>
+            <div class="space-y-3">
+              <div class="bg-black/30 rounded-xl p-4 border border-slate-700/30 mirror-card">
+                <h4 class="text-slate-200 font-semibold text-sm mb-1">Nikolai Kozyrev — Original Papers</h4>
+                <p class="text-slate-300/70 text-xs mb-1">1950s–1970s (in Russian)</p>
+                <p class="text-slate-100/70 text-xs leading-relaxed">Kozyrev's original research papers on torsion radiation and the physical properties of time are held in Russian scientific archives and have been partially translated by various researchers. Search for "Kozyrev, N.A. — Causal or Asymmetrical Mechanics in the Linear Approximation" for one of his more accessible theoretical papers.</p>
+              </div>
+              <div class="bg-black/30 rounded-xl p-4 border border-slate-700/30 mirror-card">
+                <h4 class="text-slate-200 font-semibold text-sm mb-1">Trofimov &amp; Kaznacheev — Mirror Research Papers</h4>
+                <p class="text-slate-300/70 text-xs mb-1">Institute of Clinical and Experimental Medicine, Novosibirsk</p>
+                <p class="text-slate-100/70 text-xs leading-relaxed">Published primarily in Russian-language journals and institutional reports. English-language summaries and secondary sources exist in some esoteric and fringe science publications. The International Institute of Cosmic Anthropo-Ecology (Trofimov's institute) has published some English-language material.</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3 class="font-cinzel text-base font-semibold text-gray-200 mb-4">🌐 Secondary Sources &amp; Context</h3>
+            <div class="space-y-3">
+              <div class="bg-black/30 rounded-xl p-4 border border-slate-700/30 mirror-card">
+                <h4 class="text-slate-200 font-semibold text-sm mb-1">Russian &amp; Soviet Parapsychology — Historical Context</h4>
+                <p class="text-slate-100/70 text-xs leading-relaxed">For the broader context of Soviet-era research into consciousness, psychical phenomena, and parapsychology, Loren Graham's work on Soviet science and Oleg Sarin's writings on Russian consciousness research provide accessible English-language overviews. The Soviet government funded significant parapsychology research, partly as a strategic response to perceived US interest in psychical intelligence applications.</p>
+              </div>
+              <div class="bg-black/30 rounded-xl p-4 border border-slate-700/30 mirror-card">
+                <h4 class="text-slate-200 font-semibold text-sm mb-1">Sensory Deprivation Research — Western Counterpart</h4>
+                <p class="text-slate-100/70 text-xs leading-relaxed">For the scientifically validated effects of enclosed, low-stimulus environments on consciousness, Western research on floatation REST (Restricted Environmental Stimulation Technique) — notably John C. Lilly's foundational work and more recent clinical research — provides a rigorous, peer-reviewed framework for understanding the baseline effects of sensory deprivation, independent of any torsion field hypothesis.</p>
+              </div>
+            </div>
+
+            <div class="mt-4 bg-black/30 rounded-2xl p-4 border border-amber-800/20">
+              <h3 class="font-cinzel text-sm font-semibold text-amber-300 mb-2">📋 A Note on Sources</h3>
+              <p class="text-slate-100/70 text-xs leading-relaxed">
+                The majority of primary literature on Kozyrev mirrors and torsion field consciousness research exists in Russian and has not been peer-reviewed in Western academic contexts. Much of what circulates in English is secondary summaries of varying reliability. Approach all claims about torsion fields, consciousness effects, and non-local perception with the same critical standards you would apply to any extraordinary claim — extraordinary evidence is required for extraordinary conclusions.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="text-center py-6 text-slate-400/40 text-xs">
+        <p class="italic">"The universe is a mirror — what you bring to it is reflected back." </p>
+        <p class="mt-2">Esoteric Wisdom · Built with ✨ in Rust</p>
+        <p class="mt-2"><a href="/home" class="hover:text-slate-300 transition-colors">← Back to Portal</a></p>
+        <p class="mt-3">
+          <a href="https://ko-fi.com/esotericwisdom" target="_blank" rel="noopener noreferrer"
+             class="inline-block px-5 py-2 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-white font-semibold text-xs hover:scale-105 transition-transform shadow-lg shadow-orange-500/30">
+            ☕ Support Esoteric Wisdom on Ko-fi
+          </a>
+        </p>
+      </footer>
+
+    </div>
+    <script>
+      const sf = document.getElementById('starfield');
+      for (let i = 0; i < 200; i++) {
+        const s = document.createElement('div');
+        s.className = 'star';
+        const size = Math.random() * 2.5 + 0.5;
+        s.style.cssText = `width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--dur:${2+Math.random()*4}s;--delay:${Math.random()*5}s;opacity:${0.2+Math.random()*0.8};`;
+        sf.appendChild(s);
+      }
+    </script>
+  </body>
+</html>

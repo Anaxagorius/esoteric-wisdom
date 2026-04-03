@@ -12,6 +12,9 @@ mod shamanism;
 mod druidism;
 mod akashic_records;
 mod wicca;
+mod gateway_process;
+mod remote_viewing;
+mod khasarov_mirror;
 mod templates;
 
 use axum::{Router, routing::get, extract::State, response::IntoResponse, http::{StatusCode, header}};
@@ -45,6 +48,9 @@ async fn main() -> anyhow::Result<()> {
         .nest("/druidism", druidism::routes())
         .nest("/akashic-records", akashic_records::routes())
         .nest("/wicca", wicca::routes())
+        .nest("/gateway-process", gateway_process::routes())
+        .nest("/remote-viewing", remote_viewing::routes())
+        .nest("/khasarov-mirror", khasarov_mirror::routes())
         .layer(CookieManagerLayer::new())
         .with_state(state);
 

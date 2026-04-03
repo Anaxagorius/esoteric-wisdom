@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Remote Viewing — Esoteric Wisdom</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+    <style>
+      body {
+        background: radial-gradient(ellipse at top, #020c1a 0%, #050f28 25%, #030814 60%, #000000 100%);
+        font-family: 'Raleway', sans-serif;
+      }
+      .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+      @keyframes twinkle { 0%,100% { opacity: 0.2; } 50% { opacity: 1; } }
+      .star { position: absolute; border-radius: 50%; background: white; animation: twinkle var(--dur,3s) ease-in-out infinite; animation-delay: var(--delay,0s); }
+      @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+      .floating { animation: float 5s ease-in-out infinite; }
+      @keyframes shimmer {
+        0% { background-position: -200% center; }
+        100% { background-position: 200% center; }
+      }
+      @keyframes rv-pulse {
+        0%, 100% { box-shadow: 0 0 20px rgba(96,165,250,0.25), 0 0 40px rgba(96,165,250,0.1); }
+        50% { box-shadow: 0 0 40px rgba(148,163,184,0.5), 0 0 80px rgba(96,165,250,0.2); }
+      }
+      .aurora-text {
+        background: linear-gradient(90deg, #93c5fd, #cbd5e1, #67e8f9, #94a3b8, #93c5fd);
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        animation: shimmer 5s linear infinite;
+      }
+      .rv-card {
+        transition: all 0.35s ease;
+        cursor: default;
+      }
+      .rv-card:hover {
+        transform: translateY(-7px) scale(1.01);
+        box-shadow: 0 24px 64px rgba(96,165,250,0.18);
+        border-color: rgba(96,165,250,0.55) !important;
+      }
+      .glow-card { animation: rv-pulse 4s ease-in-out infinite; }
+      .nav-link { position: relative; transition: all 0.3s; }
+      .nav-link::after {
+        content: ''; position: absolute; bottom: -2px; left: 0;
+        width: 0; height: 2px;
+        background: linear-gradient(90deg, #f59e0b, #a78bfa);
+        transition: width 0.3s;
+      }
+      .nav-link:hover::after { width: 100%; }
+    </style>
+  </head>
+  <body class="min-h-screen text-white px-4 py-8">
+    <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 flex items-center justify-between px-6 py-3 bg-black/40 backdrop-blur-md border-b border-violet-500/20 flex-wrap gap-y-2">
+      <a href="/home" class="font-cinzel text-amber-300 text-sm tracking-widest shrink-0">✦ Esoteric Wisdom ✦</a>
+      <div class="flex items-center gap-x-3 gap-y-1 text-xs text-violet-200 flex-wrap justify-end">
+        <a href="/astrology" class="nav-link hover:text-amber-300 transition-colors">Astrology</a>
+        <a href="/meditation" class="nav-link hover:text-amber-300 transition-colors">Meditation</a>
+        <a href="/tarot/select" class="nav-link hover:text-amber-300 transition-colors">Tarot</a>
+        <a href="/numerology" class="nav-link hover:text-amber-300 transition-colors">Numerology</a>
+        <a href="/crystals" class="nav-link hover:text-amber-300 transition-colors">Crystals</a>
+        <a href="/runes" class="nav-link hover:text-amber-300 transition-colors">Runes</a>
+        <a href="/shamanism" class="nav-link hover:text-amber-300 transition-colors">Shamanism</a>
+        <a href="/druidism" class="nav-link hover:text-amber-300 transition-colors">Druidism</a>
+        <a href="/akashic-records" class="nav-link hover:text-amber-300 transition-colors">Akashic Records</a>
+        <a href="/wicca" class="nav-link hover:text-amber-300 transition-colors">Wicca</a>
+        <a href="/gateway-process" class="nav-link hover:text-amber-300 transition-colors">Gateway Process</a>
+        <a href="/remote-viewing" class="nav-link text-amber-300 font-semibold">Remote Viewing</a>
+        <a href="/khasarov-mirror" class="nav-link hover:text-amber-300 transition-colors">Khasarov Mirror</a>
+        <a href="/journal/reflections" class="nav-link text-emerald-300 hover:text-emerald-200 transition-colors">✨ Reflections</a>
+        <a href="https://ko-fi.com/esotericwisdom" target="_blank" rel="noopener noreferrer"
+           class="px-3 py-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-white font-semibold hover:scale-105 transition-transform shrink-0">☕ Support</a>
+      </div>
+    </nav>
+    <div class="relative z-10 max-w-6xl mx-auto space-y-10 pt-6">
+
+      <!-- Hero -->
+      <header class="text-center py-6">
+        <div class="floating text-7xl mb-4">👁️</div>
+        <h1 class="font-cinzel text-4xl md:text-5xl font-bold mb-3">
+          <span class="aurora-text">Remote Viewing</span>
+        </h1>
+        <p class="text-blue-100/80 text-lg max-w-2xl mx-auto leading-relaxed">
+          A structured, protocol-based discipline for perceiving distant or hidden targets through extrasensory means — developed through classified CIA and Stanford Research Institute programmes and practised worldwide today.
+        </p>
+      </header>
+
+      <!-- Section 1: Disclaimer -->
+      <section class="bg-gradient-to-br from-amber-950/50 to-red-950/40 border border-amber-700/50 rounded-3xl p-8 backdrop-blur-md shadow-2xl">
+        <h2 class="font-cinzel text-2xl font-semibold mb-5 text-amber-300">✦ Important Disclaimer</h2>
+        <div class="bg-black/40 rounded-2xl p-6 border border-amber-600/40">
+          <div class="flex items-start gap-4 mb-4">
+            <span class="text-3xl flex-shrink-0">⚠️</span>
+            <div>
+              <h3 class="font-cinzel text-base font-semibold text-amber-200 mb-2">For Educational &amp; Informational Purposes Only</h3>
+              <p class="text-amber-100/85 text-sm leading-relaxed mb-3">
+                The information on this page is provided solely for educational and informational purposes. It is not a substitute for professional training, medical advice, or psychological support. Remote viewing programmes were classified military intelligence projects; the techniques can induce unusual perceptual states that may be disorienting for some individuals.
+              </p>
+            </div>
+          </div>
+          <div class="grid md:grid-cols-2 gap-5">
+            <div class="bg-black/30 rounded-xl p-4 border border-amber-800/30">
+              <h4 class="text-amber-300 font-semibold text-sm mb-2">⛔ Consult a Mental Health Professional First If You Have:</h4>
+              <ul class="text-amber-100/80 text-xs leading-relaxed space-y-1 list-disc list-inside">
+                <li>Dissociative disorders (DID, depersonalisation, derealisation)</li>
+                <li>PTSD or a history of significant trauma</li>
+                <li>Psychosis, schizophrenia, or a family history thereof</li>
+                <li>Severe anxiety disorder or panic disorder</li>
+                <li>Any active psychiatric condition under treatment</li>
+              </ul>
+            </div>
+            <div class="bg-black/30 rounded-xl p-4 border border-amber-800/30">
+              <h4 class="text-amber-300 font-semibold text-sm mb-2">🔒 Additional Precautions</h4>
+              <ul class="text-amber-100/80 text-xs leading-relaxed space-y-1 list-disc list-inside">
+                <li>Never attempt remote viewing while driving or operating machinery</li>
+                <li>If you cannot distinguish RV impressions from ordinary perception, stop immediately and seek professional support</li>
+                <li>No specific outcome or accuracy is guaranteed — treat all impressions as unverified until blinded feedback is received</li>
+                <li>Minors should not practise without parental consent and adult supervision</li>
+              </ul>
+            </div>
+          </div>
+          <p class="text-amber-100/60 text-xs mt-4 italic leading-relaxed">
+            The International Remote Viewing Association (IRVA) and accredited trainers provide structured courses for those who wish to learn remote viewing responsibly. Formal training is strongly recommended over self-directed practice.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 2: What Is Remote Viewing -->
+      <section class="bg-gradient-to-br from-blue-950/40 to-slate-900/30 border border-blue-800/40 rounded-3xl p-8 backdrop-blur-md shadow-2xl">
+        <h2 class="font-cinzel text-2xl font-semibold mb-5 text-blue-300">✦ What Is Remote Viewing?</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <p class="text-blue-100/90 text-sm leading-relaxed mb-4">
+              <strong class="text-blue-300">Remote viewing (RV)</strong> is the practice of perceiving information about a distant, hidden, or otherwise inaccessible target using means beyond ordinary sensory channels. Unlike casual psychic impressions, remote viewing as developed in government programmes is a <em>structured, protocol-driven discipline</em> — one that emphasises controlled conditions, blinding procedures, and the systematic collection of impressions before any feedback is given.
+            </p>
+            <p class="text-blue-100/90 text-sm leading-relaxed mb-4">
+              The central concept in remote viewing is the <strong class="text-blue-200">signal line</strong> — a theoretical carrier of information from the target to the viewer's subconscious. The viewer's task is not to force a clear image of the target but to tune in to this signal line, capturing raw sensory impressions (textures, colours, shapes, temperatures, emotional tones) before the analytical mind can construct a story or interpretation. This process of suppressing interpretation is called avoiding <strong class="text-slate-200">analytical overlay (AOL)</strong>.
+            </p>
+            <p class="text-blue-100/90 text-sm leading-relaxed mb-4">
+              Remote viewing is distinct from astral projection or out-of-body experiences (OBEs) in an important way: the viewer's consciousness does not "travel" to the target. Rather, information about the target appears to arise in the viewer's awareness through a process that remains scientifically unexplained — but one that is repeatable, trainable, and documentable under controlled conditions.
+            </p>
+          </div>
+          <div>
+            <p class="text-blue-100/90 text-sm leading-relaxed mb-4">
+              Remote viewing takes two main forms. <strong class="text-cyan-300">Controlled Remote Viewing (CRV)</strong> — also called Coordinate Remote Viewing, the name under which it was developed — is a highly structured, stage-based protocol developed by artist and psychic researcher Ingo Swann in collaboration with SRI scientists. CRV breaks the viewing session into six discrete stages, each probing progressively deeper layers of target information. It is the most rigorously documented form of remote viewing.
+            </p>
+            <p class="text-blue-100/90 text-sm leading-relaxed mb-4">
+              <strong class="text-cyan-300">Extended Remote Viewing (ERV)</strong> is a more free-form, hypnagogic approach in which the viewer enters a deeply relaxed state and narrates impressions to a monitor in real time. ERV was used in the early days of Project STARGATE and tends to produce richer narrative detail, though it is generally considered harder to control for analytical overlay.
+            </p>
+            <div class="bg-black/30 rounded-2xl p-4 border border-blue-800/30 mt-4">
+              <h3 class="font-cinzel text-base font-semibold text-blue-300 mb-3">🔑 Key Concepts at a Glance</h3>
+              <div class="grid grid-cols-2 gap-3">
+                <div>
+                  <h4 class="text-blue-200 font-semibold text-xs mb-1">📡 Signal Line</h4>
+                  <p class="text-blue-100/70 text-xs leading-relaxed">Theoretical carrier of target information to the viewer's subconscious.</p>
+                </div>
+                <div>
+                  <h4 class="text-blue-200 font-semibold text-xs mb-1">🧠 AOL</h4>
+                  <p class="text-blue-100/70 text-xs leading-relaxed">Analytical Overlay — the mind's attempt to interpret raw impressions before they are fully captured.</p>
+                </div>
+                <div>
+                  <h4 class="text-blue-200 font-semibold text-xs mb-1">🎯 Blind Target</h4>
+                  <p class="text-blue-100/70 text-xs leading-relaxed">A target the viewer has no prior knowledge of — essential for valid results.</p>
+                </div>
+                <div>
+                  <h4 class="text-blue-200 font-semibold text-xs mb-1">📋 CRV</h4>
+                  <p class="text-blue-100/70 text-xs leading-relaxed">Controlled Remote Viewing — the six-stage structured protocol developed by Ingo Swann.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: History & People -->
+      <section class="bg-gradient-to-br from-indigo-950/40 to-blue-900/20 border border-indigo-700/40 rounded-3xl p-8 backdrop-blur-md shadow-2xl">
+        <h2 class="font-cinzel text-2xl font-semibold mb-5 text-indigo-300">✦ History &amp; The People Behind It</h2>
+        <div class="grid md:grid-cols-2 gap-6 mb-6">
+          <div>
+            <h3 class="font-cinzel text-base font-semibold text-indigo-300 mb-3">Origins at Stanford Research Institute (1972)</h3>
+            <p class="text-blue-100/90 text-sm leading-relaxed mb-4">
+              Remote viewing as a formal scientific discipline was born in the early 1970s at <strong class="text-indigo-300">Stanford Research Institute (SRI)</strong> in Menlo Park, California. Physicists <strong class="text-indigo-300">Russell Targ</strong> and <strong class="text-indigo-300">Hal Puthoff</strong> — both credentialed laser physicists with an interest in parapsychology — began a series of rigorous experiments into extrasensory perception. Their early subjects included former police commissioner <strong class="text-slate-200">Pat Price</strong> and New York artist and psychic <strong class="text-indigo-300">Ingo Swann</strong>.
+            </p>
+            <p class="text-blue-100/90 text-sm leading-relaxed mb-4">
+              Initial experiments produced surprising results under controlled conditions. In one celebrated early test, Swann appeared to accurately perceive details of a magnetometer sealed inside a concrete vault at Stanford, producing sketches that engineers confirmed were accurate. The CIA, closely monitoring the research, moved quickly to fund the programme, and SRI's work formally became a classified government intelligence project.
+            </p>
+            <p class="text-blue-100/90 text-sm leading-relaxed mb-4">
+              Targ and Puthoff published their early findings in the prestigious journal <em>Nature</em> in 1974 — a remarkable achievement for parapsychological research — and later in their book <em>Mind-Reach</em> (1977). Despite fierce scepticism from mainstream scientists, the peer-reviewed publication gave the field a legitimacy it had never previously enjoyed.
+            </p>
+          </div>
+          <div>
+            <h3 class="font-cinzel text-base font-semibold text-indigo-300 mb-3">Ingo Swann — The Father of Remote Viewing</h3>
+            <p class="text-blue-100/90 text-sm leading-relaxed mb-4">
+              <strong class="text-indigo-300">Ingo Swann</strong> (1933–2013) is the single most important figure in the development of remote viewing as a discipline. A prolific author, painter, and self-described natural psychic, Swann was recruited as a research subject by Targ and Puthoff in 1972 and quickly became a research collaborator. His most lasting contribution was the development of the <strong class="text-indigo-300">Controlled Remote Viewing (CRV)</strong> protocol.
+            </p>
+            <p class="text-blue-100/90 text-sm leading-relaxed mb-4">
+              Swann recognised that raw psychic ability was not enough for practical intelligence applications. What was needed was a rigorous, teachable methodology — one that could be learned by ordinary people without special gifts, providing consistent, structured results. Working with SRI over several years, Swann developed the CRV protocol's six-stage structure, which remains the gold standard of remote viewing methodology to this day.
+            </p>
+            <p class="text-blue-100/90 text-sm leading-relaxed">
+              Swann's book <em>Penetration</em> (1998) is among his most controversial works, describing alleged remote viewing of classified extraterrestrial locations. His theoretical writings on the "Cosmological Nature of Psi" propose that remote viewing taps into a biologically evolved capacity for non-local information acquisition that predates language.
+            </p>
+          </div>
+        </div>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <h3 class="font-cinzel text-base font-semibold text-indigo-300 mb-3">Project STARGATE (1972–1995)</h3>
+            <p class="text-blue-100/90 text-sm leading-relaxed mb-4">
+              The classified US government remote viewing programme passed through several names — GONDOLA WISH, GRILL FLAME, CENTER LANE, SUN STREAK — before being consolidated under the name <strong class="text-indigo-300">STARGATE</strong> in 1991. Spanning 23 years and funded by the CIA, DIA (Defense Intelligence Agency), and other intelligence agencies, STARGATE employed trained remote viewers at Fort Meade, Maryland, and tasked them with operational intelligence targets: missing persons, weapons sites, Soviet military installations, and hostage locations.
+            </p>
+            <p class="text-blue-100/90 text-sm leading-relaxed mb-4">
+              The programme was declassified and publicly disclosed in 1995, following an evaluation by the American Institutes for Research (AIR). The AIR review concluded that while remote viewing had demonstrated statistically significant effects under controlled conditions, the operational intelligence value had not been proven. The programme was terminated — though many participants and observers dispute the AIR evaluation's methodology and conclusions.
+            </p>
+          </div>
+          <div>
+            <h3 class="font-cinzel text-base font-semibold text-indigo-300 mb-3">Key People</h3>
+            <div class="space-y-3">
+              <div class="bg-black/30 rounded-xl p-3 border border-indigo-900/30">
+                <h4 class="text-slate-200 font-semibold text-xs mb-1">Joseph McMoneagle — Remote Viewer No. 001</h4>
+                <p class="text-blue-100/70 text-xs leading-relaxed">The most decorated remote viewer in the programme's history, McMoneagle received the Legion of Merit award for his contributions to US intelligence. His book <em>The Seventh Sense</em> is a definitive account of operational remote viewing.</p>
+              </div>
+              <div class="bg-black/30 rounded-xl p-3 border border-indigo-900/30">
+                <h4 class="text-slate-200 font-semibold text-xs mb-1">Paul H. Smith</h4>
+                <p class="text-blue-100/70 text-xs leading-relaxed">Former STARGATE programme officer and author of <em>Reading the Enemy's Mind</em>. Now runs Remote Viewing Instructional Services (RVIS) and is a leading trainer of CRV.</p>
+              </div>
+              <div class="bg-black/30 rounded-xl p-3 border border-indigo-900/30">
+                <h4 class="text-slate-200 font-semibold text-xs mb-1">Lyn Buchanan</h4>
+                <p class="text-blue-100/70 text-xs leading-relaxed">Former STARGATE programme manager and CRV trainer. Runs Problems&gt;Solutions&gt;Innovations (P&gt;S&gt;I) and authored <em>The Seventh Sense</em>-era accounts of operational remote viewing applications.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline -->
+        <div class="mt-6 bg-black/30 rounded-2xl p-6 border border-indigo-800/30">
+          <h3 class="font-cinzel text-base font-semibold text-indigo-300 mb-4">📅 Key Dates</h3>
+          <div class="space-y-3">
+            <div class="flex gap-4 items-start">
+              <span class="text-indigo-400 font-semibold text-xs w-12 shrink-0">1972</span>
+              <p class="text-blue-100/80 text-xs leading-relaxed">Targ and Puthoff begin remote viewing research at SRI with Ingo Swann and Pat Price. CIA begins funding.</p>
+            </div>
+            <div class="flex gap-4 items-start">
+              <span class="text-indigo-400 font-semibold text-xs w-12 shrink-0">1974</span>
+              <p class="text-blue-100/80 text-xs leading-relaxed">Targ and Puthoff publish remote viewing results in <em>Nature</em>. Pat Price attempts to remote-view Soviet weapons sites.</p>
+            </div>
+            <div class="flex gap-4 items-start">
+              <span class="text-indigo-400 font-semibold text-xs w-12 shrink-0">1977</span>
+              <p class="text-blue-100/80 text-xs leading-relaxed"><em>Mind-Reach</em> published. Army involvement begins; the military programme GONDOLA WISH is established at Fort Meade.</p>
+            </div>
+            <div class="flex gap-4 items-start">
+              <span class="text-indigo-400 font-semibold text-xs w-12 shrink-0">1983</span>
+              <p class="text-blue-100/80 text-xs leading-relaxed">Ingo Swann completes the formal CRV training protocol. Swann trains the first cohort of military remote viewers including McMoneagle and Smith.</p>
+            </div>
+            <div class="flex gap-4 items-start">
+              <span class="text-indigo-400 font-semibold text-xs w-12 shrink-0">1991</span>
+              <p class="text-blue-100/80 text-xs leading-relaxed">Programme renamed STARGATE. Operations continue during Gulf War intelligence efforts.</p>
+            </div>
+            <div class="flex gap-4 items-start">
+              <span class="text-indigo-400 font-semibold text-xs w-12 shrink-0">1995</span>
+              <p class="text-blue-100/80 text-xs leading-relaxed">Programme declassified and publicly disclosed. AIR evaluation leads to programme termination. Former viewers go public.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4: Protocols Explained -->
+      <section class="bg-gradient-to-br from-slate-900/50 to-blue-950/30 border border-slate-700/40 rounded-3xl p-8 backdrop-blur-md shadow-2xl">
+        <h2 class="font-cinzel text-2xl font-semibold mb-5 text-slate-300">✦ The Protocols Explained</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <h3 class="font-cinzel text-base font-semibold text-slate-200 mb-3">Controlled Remote Viewing (CRV) — Six Stages</h3>
+            <p class="text-blue-100/90 text-sm leading-relaxed mb-4">
+              CRV is the most rigorous and widely taught remote viewing protocol. Developed by Ingo Swann, it breaks a session into six discrete stages, each probing progressively deeper layers of target information. A key principle throughout is <strong class="text-slate-200">blinding</strong>: the viewer receives only a meaningless coordinate number or alphanumeric tag as a target reference — no other information. This prevents front-loading (unconsciously knowing the target before the session).
+            </p>
+            <div class="space-y-3">
+              <div class="bg-black/30 rounded-xl p-3 border border-slate-700/30">
+                <h4 class="text-cyan-300 font-semibold text-xs mb-1">Stage I — Ideogram</h4>
+                <p class="text-slate-100/70 text-xs leading-relaxed">The viewer writes the target coordinate and immediately makes an automatic pen stroke on paper — the ideogram. This is an unconscious gesture that captures the most basic gestalt of the target (land, water, structure, life form, etc.). The stage is completed in seconds.</p>
+              </div>
+              <div class="bg-black/30 rounded-xl p-3 border border-slate-700/30">
+                <h4 class="text-cyan-300 font-semibold text-xs mb-1">Stage II — Sensory Data</h4>
+                <p class="text-slate-100/70 text-xs leading-relaxed">The viewer writes down basic sensory impressions: colours, temperatures, textures, sounds, smells, tastes, and dimensional qualities (hard/soft, rough/smooth, large/small). No interpretation or naming of objects. Data is listed in columns.</p>
+              </div>
+              <div class="bg-black/30 rounded-xl p-3 border border-slate-700/30">
+                <h4 class="text-cyan-300 font-semibold text-xs mb-1">Stage III — Sketch</h4>
+                <p class="text-slate-100/70 text-xs leading-relaxed">The viewer produces an automatic sketch of the target's rough spatial layout and dimensional features. Sketching is considered one of the most reliable elements of CRV — drawings often match target photographs even when verbal descriptions diverge.</p>
+              </div>
+              <div class="bg-black/30 rounded-xl p-3 border border-slate-700/30">
+                <h4 class="text-cyan-300 font-semibold text-xs mb-1">Stage IV — Analytical/Emotional Data</h4>
+                <p class="text-slate-100/70 text-xs leading-relaxed">More complex data: aesthetics (beauty, starkness, chaos), emotional impressions (awe, fear, tranquility), and beginning dimensional exploration. Concepts may emerge but are treated as potential AOL and handled carefully.</p>
+              </div>
+              <div class="bg-black/30 rounded-xl p-3 border border-slate-700/30">
+                <h4 class="text-cyan-300 font-semibold text-xs mb-1">Stage V — Dimensional Probing</h4>
+                <p class="text-slate-100/70 text-xs leading-relaxed">Detailed exploration of the target's spatial dimensions — heights, widths, interior/exterior spaces, materials, architectural features. The viewer mentally "moves through" the target space.</p>
+              </div>
+              <div class="bg-black/30 rounded-xl p-3 border border-slate-700/30">
+                <h4 class="text-cyan-300 font-semibold text-xs mb-1">Stage VI — Advanced Probing &amp; Synthesis</h4>
+                <p class="text-slate-100/70 text-xs leading-relaxed">The deepest stage — exploring purpose, function, activity, and the human/operational context of the target. Complex concept matrices and modelling are used. Only experienced CRV practitioners work at this stage.</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3 class="font-cinzel text-base font-semibold text-slate-200 mb-3">Extended Remote Viewing (ERV)</h3>
+            <p class="text-blue-100/90 text-sm leading-relaxed mb-4">
+              ERV differs from CRV in its approach to the viewer's state of consciousness. Rather than working in a structured, pen-to-paper format, ERV uses a deeply relaxed, near-hypnagogic state — comparable to the edge of sleep. The viewer lies down or reclines comfortably while a <strong class="text-slate-200">monitor</strong> guides them gently toward the target and records their spoken impressions.
+            </p>
+            <p class="text-blue-100/90 text-sm leading-relaxed mb-4">
+              ERV tends to produce richer narrative descriptions and more vivid imagery, but also carries a higher risk of analytical overlay and confabulation. It was used extensively in the earliest phases of Project STARGATE before CRV was fully developed. Today, many practitioners use ERV as a complement to CRV rather than a replacement.
+            </p>
+
+            <h3 class="font-cinzel text-base font-semibold text-slate-200 mb-3 mt-6">Technical Remote Viewing (TRV)</h3>
+            <p class="text-blue-100/90 text-sm leading-relaxed mb-4">
+              TRV is a variant of CRV developed by Ed Dames, a former STARGATE programme manager. Dames adapted the CRV protocol and marketed it commercially as TRV. It follows the same broad structure as CRV but uses slightly different terminology and stage sequencing. Some practitioners consider TRV a simplified, more accessible entry point to CRV's methodology; critics argue it deviates from the most rigorously tested version of the protocol.
+            </p>
+
+            <h3 class="font-cinzel text-base font-semibold text-slate-200 mb-3 mt-6">Blinding &amp; Double-Blinding</h3>
+            <p class="text-blue-100/90 text-sm leading-relaxed mb-4">
+              <strong class="text-slate-200">Blinding</strong> — ensuring the viewer has no prior knowledge of the target — is the most critical safeguard in remote viewing research. Without blinding, unconscious cueing (the viewer picking up subtle clues from the tasker or environment) becomes indistinguishable from genuine remote perception.
+            </p>
+            <p class="text-blue-100/90 text-sm leading-relaxed">
+              In <strong class="text-slate-200">double-blind</strong> conditions, neither the viewer nor the person administering the session knows the target identity. Targets are typically assigned randomly from a sealed pool and identified only by an arbitrary coordinate number — for example, "4821/6630." The coordinate has no meaning; it simply serves as a link between the viewer's session data and the sealed target envelope, which is opened only after the session is complete for feedback.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 5: How To Practice -->
+      <section class="bg-gradient-to-br from-blue-950/40 to-indigo-950/30 border border-blue-700/40 rounded-3xl p-8 backdrop-blur-md shadow-2xl">
+        <h2 class="font-cinzel text-2xl font-semibold mb-5 text-blue-300">✦ How To Begin Practising Remote Viewing</h2>
+        <p class="text-blue-100/85 text-sm leading-relaxed mb-6">
+          The following is a simplified beginner's guide to basic CRV practice. Note that formal training from a certified instructor is strongly recommended for serious practitioners. This is an overview only — proper CRV requires careful study of the protocol's full nuances.
+        </p>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <h3 class="font-cinzel text-base font-semibold text-blue-300 mb-4">🛠️ What You Need</h3>
+            <div class="space-y-2 mb-6">
+              <div class="flex items-start gap-3">
+                <span class="text-blue-400 text-lg shrink-0">📓</span>
+                <div>
+                  <h4 class="text-slate-200 font-semibold text-xs mb-0.5">Notebook &amp; Pen</h4>
+                  <p class="text-blue-100/70 text-xs leading-relaxed">Drawing is central to CRV. Use a clean notebook dedicated to your sessions. A smooth-flowing pen is preferable — you want fluid, unforced strokes for ideograms and sketches.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="text-blue-400 text-lg shrink-0">🎯</span>
+                <div>
+                  <h4 class="text-slate-200 font-semibold text-xs mb-0.5">Blind Target Coordinates</h4>
+                  <p class="text-blue-100/70 text-xs leading-relaxed">Ask a trusted friend to select a photograph from a large image pool (national geographic, news archives), seal it in an envelope, and assign it an arbitrary 8-digit number. <strong class="text-blue-200">Do not look at the photo</strong>. All you receive is the number.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="text-blue-400 text-lg shrink-0">🪑</span>
+                <div>
+                  <h4 class="text-slate-200 font-semibold text-xs mb-0.5">Quiet Environment</h4>
+                  <p class="text-blue-100/70 text-xs leading-relaxed">A calm, distraction-free space where you can sit comfortably at a desk or table. Soft, even lighting. Phones off. Sessions typically run 30–60 minutes for beginners.</p>
+                </div>
+              </div>
+            </div>
+
+            <h3 class="font-cinzel text-base font-semibold text-blue-300 mb-4">📋 Beginner Session Steps</h3>
+            <ol class="space-y-3">
+              <li class="flex items-start gap-3">
+                <span class="text-blue-400 font-bold text-sm shrink-0">1.</span>
+                <p class="text-blue-100/80 text-xs leading-relaxed"><strong class="text-slate-200">Write the coordinate</strong> at the top of your page. Note the date and time. Take three slow, deep breaths and let your body settle.</p>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-blue-400 font-bold text-sm shrink-0">2.</span>
+                <p class="text-blue-100/80 text-xs leading-relaxed"><strong class="text-slate-200">Make the ideogram</strong>. Without thinking about it, let your pen move automatically across the page immediately after writing the coordinate. This gesture — your ideogram — captures the target's basic gestalt. Note any motion quality (smooth, jagged, curved, angular).</p>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-blue-400 font-bold text-sm shrink-0">3.</span>
+                <p class="text-blue-100/80 text-xs leading-relaxed"><strong class="text-slate-200">Probe the ideogram</strong>. Slowly trace the ideogram and note the first word that comes to you: land? water? structure? motion? Don't force it — accept the first impression.</p>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-blue-400 font-bold text-sm shrink-0">4.</span>
+                <p class="text-blue-100/80 text-xs leading-relaxed"><strong class="text-slate-200">Move to Stage II sensory data</strong>. On a fresh section, list raw sensory impressions one at a time: colours, textures, temperatures, sounds, smells, dimensions (large/small, hard/soft). Do NOT name objects. If you find yourself writing "a building" — that's AOL. Replace it with "vertical, angular, smooth surfaces, grey, cool."</p>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-blue-400 font-bold text-sm shrink-0">5.</span>
+                <p class="text-blue-100/80 text-xs leading-relaxed"><strong class="text-slate-200">Sketch</strong>. Draw whatever spatial shapes, configurations, or layouts arise — without naming them. Let your hand move. The sketch often contains the most accurate data in the entire session.</p>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-blue-400 font-bold text-sm shrink-0">6.</span>
+                <p class="text-blue-100/80 text-xs leading-relaxed"><strong class="text-slate-200">Reveal the target</strong>. Only after the session is complete, open the envelope. Compare your session data to the photograph. Note what matched and what was AOL. Be honest. Keep all session records for tracking improvement over time.</p>
+              </li>
+            </ol>
+          </div>
+          <div>
+            <h3 class="font-cinzel text-base font-semibold text-blue-300 mb-4">⚠️ The Most Important Rule: Never Front-Load</h3>
+            <p class="text-blue-100/90 text-sm leading-relaxed mb-4">
+              <strong class="text-slate-200">Front-loading</strong> — knowing anything about the target before your session — invalidates the session completely. If your friend tells you "the target is something in South America," your conscious mind will fill in the rest, and any impressions you receive will be contaminated by that prior knowledge. The entire methodology of remote viewing depends on radical ignorance of the target until after feedback.
+            </p>
+            <p class="text-blue-100/90 text-sm leading-relaxed mb-4">
+              This is why professional remote viewers work with random coordinate numbers assigned by an independent third party, with the actual target sealed in an envelope that is only opened after the session transcript has been completed and signed.
+            </p>
+
+            <h3 class="font-cinzel text-base font-semibold text-blue-300 mb-4 mt-6">🗂️ Building a Practice</h3>
+            <p class="text-blue-100/90 text-sm leading-relaxed mb-4">
+              Consistent, patient practice is the key to developing remote viewing skill. Most serious practitioners recommend:
+            </p>
+            <ul class="space-y-2">
+              <li class="flex items-start gap-3">
+                <span class="text-cyan-400 text-xs shrink-0 mt-0.5">▸</span>
+                <p class="text-blue-100/80 text-xs leading-relaxed">One to three sessions per week, rather than daily marathon sessions that lead to fatigue and increased AOL.</p>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-cyan-400 text-xs shrink-0 mt-0.5">▸</span>
+                <p class="text-blue-100/80 text-xs leading-relaxed">Keeping a dedicated session journal with the date, target coordinate, full session data, and post-feedback notes.</p>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-cyan-400 text-xs shrink-0 mt-0.5">▸</span>
+                <p class="text-blue-100/80 text-xs leading-relaxed">Using large, varied target pools — photographs from geography, architecture, nature, events — to prevent your mind from narrowing its expectations.</p>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-cyan-400 text-xs shrink-0 mt-0.5">▸</span>
+                <p class="text-blue-100/80 text-xs leading-relaxed">Finding a practice partner to act as tasker, which prevents self-tasking and keeps the blind condition intact.</p>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-cyan-400 text-xs shrink-0 mt-0.5">▸</span>
+                <p class="text-blue-100/80 text-xs leading-relaxed">Studying the CRV manual (the declassified US Army document is freely available) and supplementing with books from trained instructors.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 6: What To Expect -->
+      <section class="bg-gradient-to-br from-slate-900/50 to-blue-900/20 border border-slate-700/30 rounded-3xl p-8 backdrop-blur-md shadow-2xl">
+        <h2 class="font-cinzel text-2xl font-semibold mb-5 text-slate-300">✦ What To Expect</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <p class="text-blue-100/90 text-sm leading-relaxed mb-4">
+              New practitioners are frequently surprised by how <strong class="text-slate-200">unremarkable</strong> remote viewing feels in practice. There are rarely vivid visions or cinematic images. The signal line arrives as vague, fleeting impressions — a momentary sense of texture, a colour, a spatial feeling, an emotional tone. These impressions are often so subtle that they feel indistinguishable from imagination, which is why the discipline of trusting and recording them without analysis is so important.
+            </p>
+            <p class="text-blue-100/90 text-sm leading-relaxed mb-4">
+              Sessions can feel tedious or frustrating, particularly in the early stages. The analytical mind keeps wanting to construct a coherent narrative from the fragmentary impressions — that is precisely what must be resisted. Progress is measured not by vivid experiences in the session but by the correlation between your session data and the target feedback over many sessions.
+            </p>
+            <p class="text-blue-100/90 text-sm leading-relaxed mb-4">
+              Occasional <strong class="text-cyan-300">"hits"</strong> — moments where your sketches or sensory data clearly match the target — can be striking and motivating. These are the sessions that demonstrate that something genuine is happening. Keep all sessions, including the poor ones, for an honest statistical record.
+            </p>
+          </div>
+          <div>
+            <p class="text-blue-100/90 text-sm leading-relaxed mb-4">
+              Some practitioners report mild <strong class="text-slate-200">fatigue</strong> after extended sessions, particularly during deeper stages. This is normal. Sessions should be stopped when the viewer feels their concentration deteriorating or when fatigue is apparent — pushing through tiredness dramatically increases AOL.
+            </p>
+            <p class="text-blue-100/90 text-sm leading-relaxed mb-4">
+              <strong class="text-slate-200">Emotional reactions</strong> to targets are common and should be noted as data. Targets with strong emotional content — disaster sites, locations associated with tragedy, significant natural events — often produce corresponding emotional impressions in the viewer. These emotional impressions are themselves data and should be recorded as such, not dismissed.
+            </p>
+            <div class="bg-black/30 rounded-2xl p-4 border border-slate-700/30">
+              <h3 class="font-cinzel text-sm font-semibold text-slate-300 mb-3">📊 Realistic Expectations</h3>
+              <ul class="space-y-2">
+                <li class="flex items-start gap-2">
+                  <span class="text-cyan-400 text-xs shrink-0 mt-0.5">✓</span>
+                  <p class="text-blue-100/80 text-xs leading-relaxed">Vague impressions of textures, shapes, temperatures, and spatial relationships are the norm, not vivid pictures.</p>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-cyan-400 text-xs shrink-0 mt-0.5">✓</span>
+                  <p class="text-blue-100/80 text-xs leading-relaxed">Statistical accuracy above chance over many sessions is the meaningful measure — not perfection in individual sessions.</p>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-cyan-400 text-xs shrink-0 mt-0.5">✓</span>
+                  <p class="text-blue-100/80 text-xs leading-relaxed">Sketches and spatial data are often more accurate than verbal descriptions.</p>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-cyan-400 text-xs shrink-0 mt-0.5">✓</span>
+                  <p class="text-blue-100/80 text-xs leading-relaxed">Skill improves measurably with structured, consistent practice over months.</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 7: What To Avoid -->
+      <section class="bg-gradient-to-br from-red-950/30 to-slate-950/40 border border-red-900/30 rounded-3xl p-8 backdrop-blur-md shadow-2xl">
+        <h2 class="font-cinzel text-2xl font-semibold mb-5 text-red-300">✦ What To Avoid</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <div class="space-y-4">
+              <div class="flex items-start gap-4">
+                <span class="text-2xl shrink-0">🚫</span>
+                <div>
+                  <h3 class="text-red-300 font-semibold text-sm mb-1">Front-Loading</h3>
+                  <p class="text-slate-100/80 text-xs leading-relaxed">Looking up the target, asking questions about it, or receiving any descriptive information before the session is the single greatest error in remote viewing practice. It invalidates results completely and can cause years of wasted effort if practised habitually.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <span class="text-2xl shrink-0">🚫</span>
+                <div>
+                  <h3 class="text-red-300 font-semibold text-sm mb-1">Over-Analysis During the Session</h3>
+                  <p class="text-slate-100/80 text-xs leading-relaxed">The analytical mind is the enemy of good CRV data. If you find yourself constructing stories ("this is a church in Europe…"), stop, label it as AOL in your notes, and return to raw sensory data. The goal is data collection, not narrative construction.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <span class="text-2xl shrink-0">🚫</span>
+                <div>
+                  <h3 class="text-red-300 font-semibold text-sm mb-1">Practising When Ill, Fatigued, or Distressed</h3>
+                  <p class="text-slate-100/80 text-xs leading-relaxed">Both physical and emotional states strongly affect session quality. Tiredness, illness, hunger, anxiety, and emotional disturbance all increase AOL and reduce the quality of signal contact. Wait until you are calm, rested, and well before attempting a session.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="space-y-4">
+              <div class="flex items-start gap-4">
+                <span class="text-2xl shrink-0">🚫</span>
+                <div>
+                  <h3 class="text-red-300 font-semibold text-sm mb-1">Mistaking Imagination for Remote Viewing</h3>
+                  <p class="text-slate-100/80 text-xs leading-relaxed">Without controlled blinding and systematic feedback, there is no way to distinguish genuine remote viewing from imagination, wishful thinking, or confabulation. Every claim of remote viewing ability must be tested under blind conditions. Anecdotal "amazing hits" without blind methodology are not evidence.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <span class="text-2xl shrink-0">🚫</span>
+                <div>
+                  <h3 class="text-red-300 font-semibold text-sm mb-1">Using Remote Viewing for High-Stakes Real-World Decisions</h3>
+                  <p class="text-slate-100/80 text-xs leading-relaxed">Remote viewing data is probabilistic and unreliable at the individual session level. It should never be used as the primary basis for medical decisions, financial investments, legal matters, or finding missing persons without corroboration from conventional evidence. Even experienced government viewers operated as a supplementary intelligence tool, never the sole source.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <span class="text-2xl shrink-0">🚫</span>
+                <div>
+                  <h3 class="text-red-300 font-semibold text-sm mb-1">Viewing Distressing Targets Without Support</h3>
+                  <p class="text-slate-100/80 text-xs leading-relaxed">Experienced viewers describe occasionally encountering disturbing emotional content when viewing targets associated with trauma, death, or violence. Working alone on such targets without a monitor or support structure is inadvisable, particularly for beginners.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 8: When To Stop -->
+      <section class="bg-gradient-to-br from-amber-950/30 to-red-950/30 border border-amber-800/30 rounded-3xl p-6 backdrop-blur-md shadow-xl">
+        <h2 class="font-cinzel text-xl font-semibold mb-4 text-amber-300">✦ When To Stop Entirely</h2>
+        <div class="grid md:grid-cols-3 gap-4">
+          <div class="bg-black/30 rounded-xl p-4 border border-red-900/30">
+            <h3 class="text-red-300 font-semibold text-xs mb-2">🛑 Persistent Extreme Anxiety</h3>
+            <p class="text-slate-100/70 text-xs leading-relaxed">If sessions consistently produce intense anxiety, panic responses, or dissociation that you cannot easily resolve, stop the practice immediately. Seek support from a mental health professional.</p>
+          </div>
+          <div class="bg-black/30 rounded-xl p-4 border border-red-900/30">
+            <h3 class="text-red-300 font-semibold text-xs mb-2">🛑 Inability to Distinguish Impressions from Reality</h3>
+            <p class="text-slate-100/70 text-xs leading-relaxed">If you begin to experience intrusive RV-like impressions in ordinary life that you cannot dismiss, or find yourself unable to distinguish between remote viewing impressions and real sensory experience, stop immediately and seek professional support.</p>
+          </div>
+          <div class="bg-black/30 rounded-xl p-4 border border-red-900/30">
+            <h3 class="text-red-300 font-semibold text-xs mb-2">🛑 Dangerous Circumstances</h3>
+            <p class="text-slate-100/70 text-xs leading-relaxed">Never attempt remote viewing while driving, operating machinery, caring for children or dependants, or in any other circumstance where perceptual disruption would be dangerous. The practice requires a physically safe, stationary environment.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 9: Resources -->
+      <section class="bg-gradient-to-br from-blue-950/40 to-indigo-950/30 border border-blue-800/40 rounded-3xl p-8 backdrop-blur-md shadow-2xl">
+        <h2 class="font-cinzel text-2xl font-semibold mb-5 text-blue-300">✦ Resources &amp; Further Study</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <h3 class="font-cinzel text-base font-semibold text-slate-200 mb-4">📚 Essential Books</h3>
+            <div class="space-y-3">
+              <div class="bg-black/30 rounded-xl p-4 border border-blue-900/30 rv-card">
+                <h4 class="text-cyan-300 font-semibold text-sm mb-1">Mind-Reach</h4>
+                <p class="text-blue-200/70 text-xs mb-1">Russell Targ &amp; Hal Puthoff (1977)</p>
+                <p class="text-slate-100/70 text-xs leading-relaxed">The foundational account of remote viewing research at SRI, written by the two physicists who ran the programme. Readable, scientific, and essential for understanding the origins of the discipline.</p>
+              </div>
+              <div class="bg-black/30 rounded-xl p-4 border border-blue-900/30 rv-card">
+                <h4 class="text-cyan-300 font-semibold text-sm mb-1">The Coordinate Remote Viewing Manual</h4>
+                <p class="text-blue-200/70 text-xs mb-1">US Army (declassified, 1986)</p>
+                <p class="text-slate-100/70 text-xs leading-relaxed">The actual declassified training manual used by the STARGATE programme. Freely available online. The definitive primary source for CRV technique, written by Ingo Swann and the Fort Meade training team.</p>
+              </div>
+              <div class="bg-black/30 rounded-xl p-4 border border-blue-900/30 rv-card">
+                <h4 class="text-cyan-300 font-semibold text-sm mb-1">Penetration</h4>
+                <p class="text-blue-200/70 text-xs mb-1">Ingo Swann (1998)</p>
+                <p class="text-slate-100/70 text-xs leading-relaxed">Swann's most controversial book — an account of allegedly tasked remote viewing of classified extraterrestrial locations. Read with appropriate critical distance, but essential for understanding Swann's broader theoretical framework.</p>
+              </div>
+              <div class="bg-black/30 rounded-xl p-4 border border-blue-900/30 rv-card">
+                <h4 class="text-cyan-300 font-semibold text-sm mb-1">The Seventh Sense</h4>
+                <p class="text-blue-200/70 text-xs mb-1">Joseph McMoneagle (2000)</p>
+                <p class="text-slate-100/70 text-xs leading-relaxed">A practical and thoughtful account of remote viewing from the most celebrated viewer in the STARGATE programme. McMoneagle provides both technique and broader philosophical context for remote viewing as a human capacity.</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3 class="font-cinzel text-base font-semibold text-slate-200 mb-4">🌐 Organisations &amp; Training</h3>
+            <div class="space-y-3">
+              <div class="bg-black/30 rounded-xl p-4 border border-blue-900/30 rv-card">
+                <h4 class="text-cyan-300 font-semibold text-sm mb-1">International Remote Viewing Association (IRVA)</h4>
+                <p class="text-slate-100/70 text-xs leading-relaxed">The primary professional organisation for remote viewing. IRVA promotes research, ethical standards, and connects students with certified instructors. Their annual conference brings together the leading practitioners and researchers in the field.</p>
+              </div>
+              <div class="bg-black/30 rounded-xl p-4 border border-blue-900/30 rv-card">
+                <h4 class="text-cyan-300 font-semibold text-sm mb-1">Remote Viewing Instructional Services (RVIS)</h4>
+                <p class="text-blue-200/70 text-xs mb-1">Paul H. Smith</p>
+                <p class="text-slate-100/70 text-xs leading-relaxed">Comprehensive CRV training programme run by former STARGATE officer Paul H. Smith. Widely regarded as one of the most rigorous and faithful to the original Swann-developed methodology.</p>
+              </div>
+              <div class="bg-black/30 rounded-xl p-4 border border-blue-900/30 rv-card">
+                <h4 class="text-cyan-300 font-semibold text-sm mb-1">Problems &gt; Solutions &gt; Innovations (P&gt;S&gt;I)</h4>
+                <p class="text-blue-200/70 text-xs mb-1">Lyn Buchanan</p>
+                <p class="text-slate-100/70 text-xs leading-relaxed">CRV training and applied remote viewing services run by former STARGATE programme manager Lyn Buchanan. Offers both introductory and advanced training courses.</p>
+              </div>
+              <div class="bg-black/30 rounded-xl p-4 border border-blue-900/30 rv-card">
+                <h4 class="text-cyan-300 font-semibold text-sm mb-1">The Farsight Institute</h4>
+                <p class="text-slate-100/70 text-xs leading-relaxed">A research organisation using remote viewing for investigative and speculative purposes. Note: The Farsight Institute's methods and targets are more controversial than IRVA-aligned practitioners; approach their published results with critical evaluation.</p>
+              </div>
+            </div>
+
+            <div class="mt-6 bg-black/30 rounded-2xl p-4 border border-indigo-800/30">
+              <h3 class="font-cinzel text-sm font-semibold text-blue-300 mb-2">📄 Declassified Documents</h3>
+              <p class="text-blue-100/70 text-xs leading-relaxed">
+                The full archive of declassified STARGATE and related CIA documents is available through the CIA's FOIA Electronic Reading Room (cia.gov/readingroom). Search for "STARGATE," "GONDOLA WISH," "GRILL FLAME," or "SRI remote viewing" to access hundreds of original programme documents, session transcripts, and evaluation reports.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="text-center py-6 text-blue-300/40 text-xs">
+        <p class="italic">"The universe is not only queerer than we suppose, but queerer than we can suppose." — J.B.S. Haldane</p>
+        <p class="mt-2">Esoteric Wisdom · Built with ✨ in Rust</p>
+        <p class="mt-2"><a href="/home" class="hover:text-blue-300 transition-colors">← Back to Portal</a></p>
+        <p class="mt-3">
+          <a href="https://ko-fi.com/esotericwisdom" target="_blank" rel="noopener noreferrer"
+             class="inline-block px-5 py-2 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-white font-semibold text-xs hover:scale-105 transition-transform shadow-lg shadow-orange-500/30">
+            ☕ Support Esoteric Wisdom on Ko-fi
+          </a>
+        </p>
+      </footer>
+
+    </div>
+    <script>
+      const sf = document.getElementById('starfield');
+      for (let i = 0; i < 200; i++) {
+        const s = document.createElement('div');
+        s.className = 'star';
+        const size = Math.random() * 2.5 + 0.5;
+        s.style.cssText = `width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--dur:${2+Math.random()*4}s;--delay:${Math.random()*5}s;opacity:${0.2+Math.random()*0.8};`;
+        sf.appendChild(s);
+      }
+    </script>
+  </body>
+</html>
