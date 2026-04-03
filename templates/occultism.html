@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Occultism — Esoteric Wisdom</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    body { background: radial-gradient(ellipse at top, #1a0030 0%, #130022 25%, #09001a 60%, #000000 100%); font-family: 'Raleway', sans-serif; }
+    .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+    @keyframes twinkle { 0%,100% { opacity: 0.2; } 50% { opacity: 1; } }
+    .star { position: absolute; border-radius: 50%; background: white; animation: twinkle var(--dur,3s) ease-in-out infinite; animation-delay: var(--delay,0s); }
+    @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+    .floating { animation: float 5s ease-in-out infinite; }
+    @keyframes shimmer { 0% { background-position: -200% center; } 100% { background-position: 200% center; } }
+    .aurora-text { background: linear-gradient(90deg, #d8b4fe, #a855f7, #ffffff, #7c3aed, #d8b4fe); background-size: 200% auto; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; animation: shimmer 5s linear infinite; }
+    .occ-card { transition: all 0.35s ease; cursor: default; }
+    .occ-card:hover { transform: translateY(-7px) scale(1.01); box-shadow: 0 24px 64px rgba(168,85,247,0.2); border-color: rgba(168,85,247,0.5) !important; }
+    .nav-link { position: relative; transition: all 0.3s; }
+    .nav-link::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: linear-gradient(90deg, #f59e0b, #a78bfa); transition: width 0.3s; }
+    .nav-link:hover::after { width: 100%; }
+  </style>
+</head>
+<body class="min-h-screen text-white px-4 py-8">
+  <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+
+  <!-- Navigation -->
+  <nav class="sticky top-0 z-50 flex items-center justify-between px-6 py-3 bg-black/40 backdrop-blur-md border-b border-purple-500/20 flex-wrap gap-y-2">
+    <a href="/home" class="font-cinzel text-amber-300 text-sm tracking-widest shrink-0">✦ Esoteric Wisdom ✦</a>
+    <div class="flex items-center gap-x-3 gap-y-1 text-xs text-violet-200 flex-wrap justify-end">
+      <a href="/astrology" class="nav-link hover:text-amber-300 transition-colors">Astrology</a>
+      <a href="/meditation" class="nav-link hover:text-amber-300 transition-colors">Meditation</a>
+      <a href="/tarot/select" class="nav-link hover:text-amber-300 transition-colors">Tarot</a>
+      <a href="/numerology" class="nav-link hover:text-amber-300 transition-colors">Numerology</a>
+      <a href="/crystals" class="nav-link hover:text-amber-300 transition-colors">Crystals</a>
+      <a href="/runes" class="nav-link hover:text-amber-300 transition-colors">Runes</a>
+      <a href="/shamanism" class="nav-link hover:text-amber-300 transition-colors">Shamanism</a>
+      <a href="/druidism" class="nav-link hover:text-amber-300 transition-colors">Druidism</a>
+      <a href="/akashic-records" class="nav-link hover:text-amber-300 transition-colors">Akashic Records</a>
+      <a href="/wicca" class="nav-link hover:text-amber-300 transition-colors">Wicca</a>
+      <a href="/alchemy" class="nav-link hover:text-amber-300 transition-colors">Alchemy</a>
+      <a href="/gateway-process" class="nav-link hover:text-amber-300 transition-colors">Gateway Process</a>
+      <a href="/remote-viewing" class="nav-link hover:text-amber-300 transition-colors">Remote Viewing</a>
+      <a href="/khasarov-mirror" class="nav-link hover:text-amber-300 transition-colors">Khasarov Mirror</a>
+      <a href="/western-esotericism" class="nav-link text-amber-300 font-semibold">Western Esotericism</a>
+      <a href="/journal/reflections" class="nav-link text-emerald-300 hover:text-emerald-200 transition-colors">✨ Reflections</a>
+      <a href="https://ko-fi.com/esotericwisdom" target="_blank" rel="noopener noreferrer"
+         class="px-3 py-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-white font-semibold hover:scale-105 transition-transform shrink-0">☕ Support</a>
+    </div>
+  </nav>
+
+  <!-- Breadcrumb -->
+  <div class="relative z-10 max-w-6xl mx-auto pt-4">
+    <a href="/western-esotericism" class="text-xs text-purple-300/60 hover:text-purple-300 transition-colors">← Western Esotericism</a>
+  </div>
+
+  <div class="relative z-10 max-w-6xl mx-auto space-y-10 pt-6">
+
+    <!-- Hero -->
+    <section class="text-center py-12 px-4">
+      <div class="text-6xl mb-6 floating">🌑</div>
+      <h1 class="font-cinzel text-5xl md:text-6xl font-bold aurora-text mb-6">Occultism</h1>
+      <p class="text-purple-100 text-lg md:text-xl max-w-4xl mx-auto leading-relaxed font-light">
+        The 19th and 20th century synthesis of the Western esoteric tradition — when Eliphas Lévi rediscovered the Tarot, the Hermetic Order of the Golden Dawn fused Kabbalah, Hermeticism, and ceremonial magic into the most sophisticated magical system in Western history, and Aleister Crowley and Dion Fortune carried the current into the modern world.
+      </p>
+    </section>
+
+    <!-- Section 1: What Is Occultism? -->
+    <section class="rounded-2xl border border-purple-500/20 bg-gradient-to-br from-purple-950/60 to-indigo-950/40 p-8">
+      <h2 class="font-cinzel text-3xl text-purple-300 mb-8 text-center">What Is Occultism?</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="space-y-4 text-purple-100 leading-relaxed">
+          <p>
+            <span class="text-amber-300 font-semibold">Etymology:</span> The word "occult" derives from the Latin <em>occultus</em> — hidden, concealed, secret. In its broadest sense, occultism refers to belief in and practice of hidden forces, agencies, and phenomena beyond the range of ordinary human knowledge or the reach of science. In its specific historical sense, it refers to the particular flowering of esoteric thought and practice in 19th and early 20th century Europe and North America.
+          </p>
+          <p>The occult revival was not a unified movement but a constellation of overlapping currents: Spiritualism (the movement to communicate with the dead, beginning in the Fox Sisters' table-rapping of 1848 and spreading with extraordinary speed across the Atlantic world); Mesmerism and its descendants (animal magnetism, hypnosis, psychical research); a renewed interest in ceremonial magic and Kabbalah; and the emergence of new synthetic occult philosophies — most notably those of Eliphas Lévi and Helena Blavatsky.</p>
+          <p>The occult revival was also deeply entangled with Romanticism's rebellion against Enlightenment rationalism, with Orientalism and the fascination with Eastern traditions, and with the rise of scientific materialism — which it simultaneously imitated in form (claiming to be a science of the hidden) and opposed in content (insisting that matter is not the whole of reality).</p>
+        </div>
+        <div class="space-y-4 text-purple-100 leading-relaxed">
+          <p><span class="text-amber-300 font-semibold">Academic perspectives:</span> The scholar Wouter Hanegraaff distinguishes "occultism" (the 19th-century synthesis) from the broader category of "Western esotericism." Occultism is specifically characterised by its attempt to reconcile esoteric tradition with the new scientific worldview — claiming that magic, clairvoyance, and spiritual experience are legitimate subjects of empirical investigation, not mere superstition.</p>
+          <p>Kocku von Stuckrad notes that occultism is deeply shaped by the Enlightenment even in its opposition to it: its practitioners adopted the language of science, evidence, and reason to defend claims that rationalism rejected. The Society for Psychical Research (founded 1882), with its meticulous documentation of apparitions, mediumship, and telepathy, exemplifies this hybrid character.</p>
+          <p>The key figures of the occult revival — Eliphas Lévi, Helena Blavatsky, Samuel Liddell MacGregor Mathers, Aleister Crowley, and Dion Fortune — share a commitment to synthesis: drawing together the scattered threads of Hermeticism, Kabbalah, astrology, Tarot, alchemy, and ceremonial magic into coherent systems for spiritual transformation.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Key Figures -->
+    <section class="rounded-2xl border border-purple-400/30 bg-gradient-to-br from-purple-950/80 to-black/60 p-8">
+      <h2 class="font-cinzel text-3xl text-purple-300 mb-6 text-center">The Great Occultists</h2>
+      <div class="space-y-6 max-w-5xl mx-auto">
+
+        <div class="occ-card bg-purple-950/40 border border-purple-500/20 rounded-xl p-6">
+          <div class="flex items-start gap-4">
+            <div class="text-3xl shrink-0">📜</div>
+            <div>
+              <h3 class="font-cinzel text-xl text-amber-300 mb-2">Eliphas Lévi (1810–1875)</h3>
+              <p class="text-purple-100/80 text-sm leading-relaxed">Born Alphonse Louis Constant in Paris, the son of a cobbler, Lévi trained as a Catholic priest before being refused ordination, and spent his life at the intersection of radical politics, Catholic mysticism, and occultism. His two great works — <em>Dogme et Rituel de la Haute Magie</em> (Transcendental Magic, 1854–56) and <em>Histoire de la Magie</em> (History of Magic, 1860) — transformed the landscape of Western occultism. Lévi connected the 22 Major Arcana of the Tarot with the 22 letters of the Hebrew alphabet and the 22 paths of the Kabbalistic Tree of Life, creating a synthesis of extraordinary fertility. He introduced the Baphomet as a symbol of occult knowledge, developed the concept of the Astral Light (a universal medium of magical action), and presented magic as a science of the will. His influence on all subsequent Western occultism was incalculable: Blavatsky, the Golden Dawn, and Crowley all built on his foundations.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="occ-card bg-purple-950/40 border border-purple-500/20 rounded-xl p-6">
+          <div class="flex items-start gap-4">
+            <div class="text-3xl shrink-0">⭐</div>
+            <div>
+              <h3 class="font-cinzel text-xl text-amber-300 mb-2">The Hermetic Order of the Golden Dawn (est. 1888)</h3>
+              <p class="text-purple-100/80 text-sm leading-relaxed">Founded in London by three Freemasons — William Wynn Westcott, Samuel Liddell MacGregor Mathers, and William Robert Woodman — based on a complex series of Rosicrucian cipher manuscripts (the Sprengel Letters, whose authenticity remains disputed), the Golden Dawn became the most important and influential magical order in Western history. At its peak it numbered among its initiates W.B. Yeats, Aleister Crowley, Arthur Machen, Algernon Blackwood, Evelyn Underhill, and Florence Farr. Its grade system — from Neophyte through Adeptus Minor to the hidden Third Order — systematised the entire Western magical tradition into a coherent curriculum: Kabbalah, Tarot, astrology, geomancy, Enochian magic (derived from John Dee and Edward Kelley's angelic conversations), and ceremonial ritual. The Neophyte Ritual, largely designed by Mathers, remains unsurpassed as a vehicle of initiatory transformation. The order fractured around 1900 following disputes centred on Crowley's advancement, but its teachings spread worldwide through its published members and the documents that entered circulation.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="occ-card bg-purple-950/40 border border-purple-500/20 rounded-xl p-6">
+          <div class="flex items-start gap-4">
+            <div class="text-3xl shrink-0">🌹</div>
+            <div>
+              <h3 class="font-cinzel text-xl text-amber-300 mb-2">Samuel Liddell MacGregor Mathers (1854–1918)</h3>
+              <p class="text-purple-100/80 text-sm leading-relaxed">The intellectual engine and ritual architect of the Golden Dawn, Mathers was an extraordinary scholar of practical magic. He translated and edited the foundational texts of the Western magical tradition: <em>The Key of Solomon</em>, <em>The Sacred Magic of Abramelin the Mage</em>, <em>The Kabbalah Unveiled</em> (portions of the Zohar), and the <em>Greater and Lesser Keys of Solomon</em>. His systematisation of the Tarot correspondences, Enochian magic, and the Golden Dawn grade rituals created the template for all subsequent Western ceremonial magic. He claimed to be in direct contact with the Secret Chiefs — the hidden masters who transmitted the higher knowledge of the Third Order. He and his wife Moina (née Bergson, sister of philosopher Henri Bergson) moved to Paris where they founded the Ahathoor Temple. His break with Crowley marked the beginning of the Golden Dawn's fragmentation.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="occ-card bg-purple-950/40 border border-purple-500/20 rounded-xl p-6">
+          <div class="flex items-start gap-4">
+            <div class="text-3xl shrink-0">👁️</div>
+            <div>
+              <h3 class="font-cinzel text-xl text-amber-300 mb-2">Aleister Crowley (1875–1947)</h3>
+              <p class="text-purple-100/80 text-sm leading-relaxed">Edward Alexander Crowley — who renamed himself Aleister — was born into a wealthy Plymouth Brethren family in Leamington Spa and became the most controversial figure in 20th-century occultism. Initiated into the Golden Dawn in 1898, he clashed with Mathers over his rapid advancement, and in 1904 received (or composed, depending on one's perspective) the <em>Liber AL vel Legis</em> (The Book of the Law) in Cairo, dictated by a discarnate entity calling itself Aiwass. This text proclaimed the new Aeon of Horus and the Law of Thelema: "Do what thou wilt shall be the whole of the Law. Love is the law, love under will." Crowley spent the rest of his life elaborating, practising, and promulgating Thelema through a series of magical orders (the A∴A∴, the O.T.O.), publications (<em>The Equinox</em>), and writings. His system of Magick — he insisted on the archaic spelling to distinguish it from stage magic — synthesised the Golden Dawn curriculum with Thelemic theology and his own extensive practical experience. Despite his notoriety (the press dubbed him "the wickedest man in the world"), serious scholarship increasingly recognises his intellectual significance as a systematiser and innovator in the Western magical tradition.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="occ-card bg-purple-950/40 border border-purple-500/20 rounded-xl p-6">
+          <div class="flex items-start gap-4">
+            <div class="text-3xl shrink-0">🌊</div>
+            <div>
+              <h3 class="font-cinzel text-xl text-amber-300 mb-2">Dion Fortune (1890–1946)</h3>
+              <p class="text-purple-100/80 text-sm leading-relaxed">Born Violet Mary Firth in Llandudno, Wales, Dion Fortune was perhaps the most practically gifted and psychologically sophisticated occultist of the 20th century. Trained in psychology (she worked as a lay analyst), she joined the Alpha et Omega Temple (a Golden Dawn successor) before founding her own Fraternity of the Inner Light in 1924. Her books — <em>The Mystical Qabalah</em> (1935), <em>Psychic Self-Defence</em> (1930), <em>The Cosmic Doctrine</em> (1949), and a series of esoteric novels (<em>The Sea Priestess</em>, <em>Moon Magic</em>) — remain among the clearest and most practically useful expositions of the Western magical tradition. Fortune integrated Jungian psychology, Christian mysticism, and Kabbalistic cosmology into a coherent system emphasising the polarity of masculine and feminine forces as the engine of magical work. Her teachings directly influenced Wicca (through Doreen Valiente and Gerald Gardner) and the modern Western mystery tradition.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="occ-card bg-purple-950/40 border border-purple-500/20 rounded-xl p-6">
+          <div class="flex items-start gap-4">
+            <div class="text-3xl shrink-0">🃏</div>
+            <div>
+              <h3 class="font-cinzel text-xl text-amber-300 mb-2">Arthur Edward Waite (1857–1942)</h3>
+              <p class="text-purple-100/80 text-sm leading-relaxed">A prolific and meticulous scholar of the Western esoteric tradition, Waite was a member of the Golden Dawn and its successor orders, but was always more scholar than practitioner — he is often contrasted with Crowley and Fortune as representing the mystical rather than magical pole of occultism. His most enduring legacy is the Rider-Waite-Smith Tarot deck (1909), illustrated by Pamela Colman Smith under his direction, which introduced fully illustrated scenes to all 78 cards and became the most influential Tarot deck in history, establishing the template for the vast majority of subsequent decks. His scholarly works — <em>The Holy Kabbalah</em>, <em>The Book of Ceremonial Magic</em>, <em>The Secret Tradition in Freemasonry</em> — remain valuable reference works.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Section 3: The Golden Dawn System -->
+    <section class="rounded-2xl border border-purple-500/20 bg-gradient-to-br from-indigo-950/50 to-purple-950/30 p-8">
+      <h2 class="font-cinzel text-3xl text-purple-300 mb-8 text-center">The Golden Dawn System</h2>
+      <div class="grid md:grid-cols-2 gap-8 text-purple-100 leading-relaxed">
+        <div class="space-y-4">
+          <p><span class="text-amber-300 font-semibold">The grade system</span> of the Golden Dawn divided the initiatory path into three orders. The Outer Order (or First Order) comprised six grades — Neophyte (0=0), Zelator (1=10), Theoricus (2=9), Practicus (3=8), Philosophus (4=7), and the Portal grade — assigned to the Sephiroth and 32 paths of the Tree of Life from Malkuth upward. The Inner Order (Rosae Rubeae et Aureae Crucis, the 5=6 Adeptus Minor grade) marked the true beginning of practical magical work. The Third Order (6=5 Adeptus Major, 7=4 Adeptus Exemptus, and above) was claimed to be directed by the Secret Chiefs and was never fully accessible to ordinary initiates.</p>
+          <p><span class="text-amber-300 font-semibold">The elemental grade system</span> assigned each Outer Order grade to an element: Earth (Zelator), Air (Theoricus), Water (Practicus), Fire (Philosophus). Each grade involved extensive study of Kabbalah, astrology, Tarot, geomancy, and ritual practice appropriate to its element. The grade rituals incorporated elaborate symbolism drawn from ancient Egypt, Freemasonry, and the Rosicrucian tradition.</p>
+        </div>
+        <div class="space-y-4">
+          <p><span class="text-amber-300 font-semibold">Enochian magic</span> — a system of angelic communication received by Dr John Dee and Edward Kelley between 1582 and 1589, apparently in the angelic language Enochian — was systematised by Mathers into a comprehensive magical system. The 30 Aethyrs or Aires, the Watchtowers, the Tablets of Union, and the calls or keys became core elements of the Golden Dawn's higher magical work. Crowley explored the Enochian Aethyrs extensively in <em>The Vision and the Voice</em> (1909), a record of his journeys through all 30 Aethyrs in the Algerian desert.</p>
+          <p><span class="text-amber-300 font-semibold">The Middle Pillar and other practices:</span> The Golden Dawn developed a range of practical techniques that have passed into the broader Western magical tradition: the Lesser Banishing Ritual of the Pentagram (LBRP), the Middle Pillar exercise (a technique of balancing and awakening the spiritual centres corresponding to the central Sephiroth), the Rose Cross ritual, and the Supreme Invoking Ritual of the Pentagram. These practices remain in active use in magical orders, solitary practitioners, and even in some therapeutic and contemplative contexts outside formal occultism.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Occultism and the Modern World -->
+    <section class="space-y-6">
+      <h2 class="font-cinzel text-3xl text-purple-300 text-center mb-6">Occultism and the Modern World</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <div class="occ-card bg-purple-950/40 border border-purple-500/20 rounded-xl p-6">
+          <div class="text-3xl mb-3">🎨</div>
+          <h3 class="font-cinzel text-lg text-purple-300 mb-3">Art and Literature</h3>
+          <p class="text-purple-100/80 text-sm leading-relaxed">W.B. Yeats's membership in the Golden Dawn shaped his entire poetic mythology — his concept of the gyres, the Great Wheel, and the Mask draws directly from Golden Dawn cosmology. Algernon Blackwood, Arthur Machen, and Gustav Meyrink produced occult fiction of enduring literary quality. Surrealism was deeply influenced by occultism — André Breton explicitly invoked Hermeticism. The 1960s counterculture drew extensively on the Western magical tradition, with figures like Kenneth Anger, Jimmy Page, and Peter Christopherson bringing occult aesthetics into popular culture.</p>
+        </div>
+
+        <div class="occ-card bg-purple-950/40 border border-purple-500/20 rounded-xl p-6">
+          <div class="text-3xl mb-3">🔬</div>
+          <h3 class="font-cinzel text-lg text-purple-300 mb-3">Psychology and Occultism</h3>
+          <p class="text-purple-100/80 text-sm leading-relaxed">C.G. Jung's engagement with occultism was deep and lifelong — his concept of archetypes, the collective unconscious, and individuation drew on alchemical symbolism, Gnosticism, and Kabbalah. Jung personally conducted experiments in parapsychology and devoted his doctoral thesis to the mediumistic phenomena of his cousin Helly Preiswerk. His <em>Psychology and Alchemy</em>, <em>Mysterium Coniunctionis</em>, and <em>Answer to Job</em> are essentially occultist works in psychological language. The interface between Jungian psychology and the Western magical tradition remains fertile ground.</p>
+        </div>
+
+        <div class="occ-card bg-purple-950/40 border border-purple-500/20 rounded-xl p-6">
+          <div class="text-3xl mb-3">🌿</div>
+          <h3 class="font-cinzel text-lg text-purple-300 mb-3">The Wiccan Connection</h3>
+          <p class="text-purple-100/80 text-sm leading-relaxed">Gerald Gardner — the founder of modern Wicca — was an initiate of a Crowley-chartered O.T.O. and drew extensively on Golden Dawn ritual structure and Crowley's <em>Liber AL</em> in composing the Wiccan Book of Shadows (with the collaboration of Doreen Valiente, who rewrote much of the Crowleyan material). Dion Fortune's work on the Goddess and polarity magic was another major influence. Wicca represents one of the most successful popularisations of occult material, stripping it of its more demanding initiatory requirements while preserving its core ritual structure.</p>
+        </div>
+
+        <div class="occ-card bg-purple-950/40 border border-purple-500/20 rounded-xl p-6">
+          <div class="text-3xl mb-3">📚</div>
+          <h3 class="font-cinzel text-lg text-purple-300 mb-3">Contemporary Practice</h3>
+          <p class="text-purple-100/80 text-sm leading-relaxed">The late 20th and early 21st century have seen a remarkable proliferation of occult practice and publication. Chaos Magic — pioneered by Peter Carroll and Ray Sherwin in the late 1970s — stripped magic of its traditional metaphysical framework to focus on practical technique and result. Austin Osman Spare's sigil magic, rediscovered through Chaos Magic, has entered mainstream consciousness. The internet has democratised access to magical knowledge on an unprecedented scale, creating a vast and varied practitioner community beyond any formal initiatory structure.</p>
+        </div>
+
+        <div class="occ-card bg-purple-950/40 border border-purple-500/20 rounded-xl p-6">
+          <div class="text-3xl mb-3">🎓</div>
+          <h3 class="font-cinzel text-lg text-purple-300 mb-3">Academic Study</h3>
+          <p class="text-purple-100/80 text-sm leading-relaxed">The serious academic study of occultism has flourished since the 1990s. Wouter Hanegraaff's <em>New Age Religion and Western Culture</em> (1996), Alex Owen's <em>The Place of Enchantment: British Occultism and the Culture of the Modern</em> (2004), and Ronald Hutton's <em>The Triumph of the Moon</em> (1999) are among the foundational texts. The Aries: Journal for the Study of Western Esotericism and the ESSWE (European Society for the Study of Western Esotericism) provide institutional homes for the field.</p>
+        </div>
+
+        <div class="occ-card bg-purple-950/40 border border-purple-500/20 rounded-xl p-6">
+          <div class="text-3xl mb-3">⚖️</div>
+          <h3 class="font-cinzel text-lg text-purple-300 mb-3">Ethics and Responsibility</h3>
+          <p class="text-purple-100/80 text-sm leading-relaxed">The occult revival produced serious ethical reflection alongside its practical innovations. Dion Fortune's <em>Psychic Self-Defence</em> addressed the reality of psychic attack and the importance of boundaries. Many practitioners adopt a version of the Wiccan Rede ("An it harm none, do what ye will") or the threefold law as ethical guides. The question of intention, responsibility, and the psychological integration of powerful inner experiences remains central to responsible magical practice.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Section 5: Timeline -->
+    <section class="rounded-2xl border border-purple-500/20 bg-gradient-to-br from-purple-950/60 to-black/40 p-8">
+      <h2 class="font-cinzel text-3xl text-purple-300 mb-8 text-center">A Timeline of the Occult Revival</h2>
+      <div class="space-y-4 max-w-4xl mx-auto">
+        <div class="flex gap-4 items-start">
+          <div class="text-amber-300 font-semibold text-sm shrink-0 w-20">1801</div>
+          <p class="text-purple-100/80 text-sm leading-relaxed">Francis Barrett publishes <em>The Magus</em> — one of the first modern compilations of ceremonial magic, drawing on Agrippa, Paracelsus, and other sources.</p>
+        </div>
+        <div class="flex gap-4 items-start">
+          <div class="text-amber-300 font-semibold text-sm shrink-0 w-20">1848</div>
+          <p class="text-purple-100/80 text-sm leading-relaxed">The Fox Sisters of Hydesville, New York report spirit rappings, sparking the international Spiritualist movement.</p>
+        </div>
+        <div class="flex gap-4 items-start">
+          <div class="text-amber-300 font-semibold text-sm shrink-0 w-20">1854–56</div>
+          <p class="text-purple-100/80 text-sm leading-relaxed">Eliphas Lévi publishes <em>Dogme et Rituel de la Haute Magie</em>, synthesising Kabbalah, Tarot, and ceremonial magic.</p>
+        </div>
+        <div class="flex gap-4 items-start">
+          <div class="text-amber-300 font-semibold text-sm shrink-0 w-20">1875</div>
+          <p class="text-purple-100/80 text-sm leading-relaxed">Helena Blavatsky and Colonel Henry Olcott found the Theosophical Society in New York.</p>
+        </div>
+        <div class="flex gap-4 items-start">
+          <div class="text-amber-300 font-semibold text-sm shrink-0 w-20">1882</div>
+          <p class="text-purple-100/80 text-sm leading-relaxed">The Society for Psychical Research founded in London, beginning rigorous scientific investigation of psychic phenomena.</p>
+        </div>
+        <div class="flex gap-4 items-start">
+          <div class="text-amber-300 font-semibold text-sm shrink-0 w-20">1887–88</div>
+          <p class="text-purple-100/80 text-sm leading-relaxed">The Hermetic Order of the Golden Dawn founded in London by Westcott, Mathers, and Woodman.</p>
+        </div>
+        <div class="flex gap-4 items-start">
+          <div class="text-amber-300 font-semibold text-sm shrink-0 w-20">1904</div>
+          <p class="text-purple-100/80 text-sm leading-relaxed">Aleister Crowley receives <em>The Book of the Law</em> in Cairo, founding the Thelemic tradition.</p>
+        </div>
+        <div class="flex gap-4 items-start">
+          <div class="text-amber-300 font-semibold text-sm shrink-0 w-20">1909</div>
+          <p class="text-purple-100/80 text-sm leading-relaxed">Arthur Waite and Pamela Colman Smith publish the Rider-Waite-Smith Tarot — the most influential Tarot deck in history.</p>
+        </div>
+        <div class="flex gap-4 items-start">
+          <div class="text-amber-300 font-semibold text-sm shrink-0 w-20">1924</div>
+          <p class="text-purple-100/80 text-sm leading-relaxed">Dion Fortune founds the Fraternity (later Society) of the Inner Light in London.</p>
+        </div>
+        <div class="flex gap-4 items-start">
+          <div class="text-amber-300 font-semibold text-sm shrink-0 w-20">1938</div>
+          <p class="text-purple-100/80 text-sm leading-relaxed">Israel Regardie publishes the Golden Dawn's secret documents in full — a controversial act that disseminated the system worldwide.</p>
+        </div>
+        <div class="flex gap-4 items-start">
+          <div class="text-amber-300 font-semibold text-sm shrink-0 w-20">1954</div>
+          <p class="text-purple-100/80 text-sm leading-relaxed">Gerald Gardner publishes <em>Witchcraft Today</em>, inaugurating the modern Wiccan movement.</p>
+        </div>
+        <div class="flex gap-4 items-start">
+          <div class="text-amber-300 font-semibold text-sm shrink-0 w-20">1978</div>
+          <p class="text-purple-100/80 text-sm leading-relaxed">Peter Carroll and Ray Sherwin found the Illuminates of Thanateros (IOT), the first Chaos Magic organisation.</p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="relative z-10 text-center py-10 text-purple-300/40 text-xs mt-12">
+    <p class="italic">"Do what thou wilt shall be the whole of the Law. Love is the law, love under will." — Liber AL vel Legis</p>
+    <p class="mt-2">Esoteric Wisdom · Built with ✨ in Rust · <a href="https://ko-fi.com/esotericwisdom" class="hover:text-purple-300 transition-colors">Support on Ko-fi ☕</a></p>
+  </footer>
+
+  <script>
+    const sf = document.getElementById('starfield');
+    for (let i = 0; i < 120; i++) {
+      const s = document.createElement('div');
+      s.className = 'star';
+      const sz = Math.random() * 2 + 1;
+      s.style.cssText = `width:${sz}px;height:${sz}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--dur:${2+Math.random()*4}s;--delay:${Math.random()*5}s;opacity:${0.3+Math.random()*0.7}`;
+      sf.appendChild(s);
+    }
+  </script>
+</body>
+</html>
