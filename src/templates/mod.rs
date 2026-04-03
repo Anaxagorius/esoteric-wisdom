@@ -117,3 +117,7 @@ pub struct RemoteViewingTemplate;
 #[derive(Template)]
 #[template(path = "khasarov_mirror.html")]
 pub struct KhasarovMirrorTemplate;
+
+#[derive(Template)]
+#[template(path = "alchemy.html")]
+pub struct AlchemyTemplate;

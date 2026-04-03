@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Alchemy — Esoteric Wisdom</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+    <style>
+      body {
+        background: radial-gradient(ellipse at top, #1c0a00 0%, #2d1a00 20%, #0a0500 55%, #000000 100%);
+        font-family: 'Raleway', sans-serif;
+      }
+      .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+      @keyframes twinkle { 0%,100% { opacity: 0.2; } 50% { opacity: 1; } }
+      .star { position: absolute; border-radius: 50%; background: white; animation: twinkle var(--dur,3s) ease-in-out infinite; animation-delay: var(--delay,0s); }
+      @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+      .floating { animation: float 5s ease-in-out infinite; }
+      @keyframes shimmer {
+        0% { background-position: -200% center; }
+        100% { background-position: 200% center; }
+      }
+      @keyframes gold-glow {
+        0%, 100% { box-shadow: 0 0 20px rgba(251,191,36,0.25), 0 0 40px rgba(251,191,36,0.1); }
+        50% { box-shadow: 0 0 40px rgba(251,191,36,0.5), 0 0 80px rgba(245,158,11,0.2); }
+      }
+      .aurora-text {
+        background: linear-gradient(90deg, #fbbf24, #f59e0b, #fcd34d, #d97706, #fbbf24);
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        animation: shimmer 5s linear infinite;
+      }
+      .alchemy-card {
+        transition: all 0.35s ease;
+        cursor: default;
+      }
+      .alchemy-card:hover {
+        transform: translateY(-7px) scale(1.01);
+        box-shadow: 0 24px 64px rgba(251,191,36,0.15);
+        border-color: rgba(251,191,36,0.5) !important;
+      }
+      .glow-card { animation: gold-glow 4s ease-in-out infinite; }
+      .nav-link { position: relative; transition: all 0.3s; }
+      .nav-link::after {
+        content: ''; position: absolute; bottom: -2px; left: 0;
+        width: 0; height: 2px;
+        background: linear-gradient(90deg, #f59e0b, #a78bfa);
+        transition: width 0.3s;
+      }
+      .nav-link:hover::after { width: 100%; }
+    </style>
+  </head>
+  <body class="min-h-screen text-white px-4 py-8">
+    <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 flex items-center justify-between px-6 py-3 bg-black/40 backdrop-blur-md border-b border-amber-700/20 flex-wrap gap-y-2">
+      <a href="/home" class="font-cinzel text-amber-300 text-sm tracking-widest shrink-0">✦ Esoteric Wisdom ✦</a>
+      <div class="flex items-center gap-x-3 gap-y-1 text-xs text-violet-200 flex-wrap justify-end">
+        <a href="/astrology" class="nav-link hover:text-amber-300 transition-colors">Astrology</a>
+        <a href="/meditation" class="nav-link hover:text-amber-300 transition-colors">Meditation</a>
+        <a href="/tarot/select" class="nav-link hover:text-amber-300 transition-colors">Tarot</a>
+        <a href="/numerology" class="nav-link hover:text-amber-300 transition-colors">Numerology</a>
+        <a href="/crystals" class="nav-link hover:text-amber-300 transition-colors">Crystals</a>
+        <a href="/runes" class="nav-link hover:text-amber-300 transition-colors">Runes</a>
+        <a href="/shamanism" class="nav-link hover:text-amber-300 transition-colors">Shamanism</a>
+        <a href="/druidism" class="nav-link hover:text-amber-300 transition-colors">Druidism</a>
+        <a href="/akashic-records" class="nav-link hover:text-amber-300 transition-colors">Akashic Records</a>
+        <a href="/wicca" class="nav-link hover:text-amber-300 transition-colors">Wicca</a>
+        <a href="/alchemy" class="nav-link text-amber-300 font-semibold">Alchemy</a>
+        <a href="/gateway-process" class="nav-link hover:text-amber-300 transition-colors">Gateway Process</a>
+        <a href="/remote-viewing" class="nav-link hover:text-amber-300 transition-colors">Remote Viewing</a>
+        <a href="/khasarov-mirror" class="nav-link hover:text-amber-300 transition-colors">Khasarov Mirror</a>
+        <a href="/journal/reflections" class="nav-link text-emerald-300 hover:text-emerald-200 transition-colors">✨ Reflections</a>
+        <a href="https://ko-fi.com/esotericwisdom" target="_blank" rel="noopener noreferrer"
+           class="px-3 py-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-white font-semibold hover:scale-105 transition-transform shrink-0">☕ Support</a>
+      </div>
+    </nav>
+    <div class="relative z-10 max-w-6xl mx-auto space-y-10 pt-6">
+
+      <!-- Hero -->
+      <header class="text-center py-6">
+        <div class="floating text-7xl mb-4">⚗️</div>
+        <h1 class="font-cinzel text-4xl md:text-5xl font-bold mb-3">
+          <span class="aurora-text">Alchemy</span>
+        </h1>
+        <p class="text-amber-100/80 text-lg max-w-2xl mx-auto leading-relaxed">
+          The ancient art and philosophy of transformation — turning lead into gold, mortality into immortality, and the fragmented self into wholeness. Alchemy is the mother of modern chemistry, the heart of Hermetic tradition, and a living spiritual path.
+        </p>
+      </header>
+
+      <!-- Important Disclaimer -->
+      <section class="bg-gradient-to-br from-red-950/60 to-amber-950/50 border border-red-700/50 rounded-3xl p-8 backdrop-blur-md shadow-2xl">
+        <h2 class="font-cinzel text-2xl font-semibold mb-5 text-amber-300">✦ Important Disclaimer</h2>
+        <div class="bg-black/40 rounded-2xl p-6 border border-amber-600/40">
+          <div class="flex items-start gap-4 mb-4">
+            <span class="text-3xl flex-shrink-0">⚠️</span>
+            <div>
+              <h3 class="font-cinzel text-base font-semibold text-amber-200 mb-2">For Educational &amp; Informational Purposes Only</h3>
+              <p class="text-amber-100/85 text-sm leading-relaxed mb-3">
+                The information on this page is provided solely for educational, historical, and informational purposes. It is not intended as instructions for chemistry, pharmacology, or any form of physical experimentation. Alchemy has deep roots in laboratory practice — and the physical mixing, heating, or combining of substances carries real and serious risks if attempted without proper training, equipment, and safety protocols.
+              </p>
+            </div>
+          </div>
+          <div class="grid md:grid-cols-2 gap-5">
+            <div class="bg-black/30 rounded-xl p-4 border border-red-800/40">
+              <h4 class="text-red-300 font-semibold text-sm mb-2">⛔ Never Mix or Combine Substances Unless You:</h4>
+              <ul class="text-amber-100/80 text-xs leading-relaxed space-y-1 list-disc list-inside">
+                <li>Hold relevant professional qualifications in chemistry or a related field</li>
+                <li>Are working in a properly equipped laboratory with appropriate ventilation</li>
+                <li>Have access to Material Safety Data Sheets (MSDS) for all substances involved</li>
+                <li>Wear appropriate personal protective equipment (PPE) — gloves, eye protection, lab coat</li>
+                <li>Understand the hazard classifications and reactivity of all materials</li>
+                <li>Have emergency procedures in place and first-aid equipment to hand</li>
+                <li>Are not working alone — always have another person present when handling chemicals</li>
+              </ul>
+            </div>
+            <div class="bg-black/30 rounded-xl p-4 border border-red-800/40">
+              <h4 class="text-red-300 font-semibold text-sm mb-2">🚫 Specific Risks to Be Aware Of</h4>
+              <ul class="text-amber-100/80 text-xs leading-relaxed space-y-1 list-disc list-inside">
+                <li><strong class="text-amber-200">Heavy metals</strong> — historical alchemy used mercury, lead, arsenic, and antimony extensively; these are acutely and chronically toxic</li>
+                <li><strong class="text-amber-200">Distillation and heating</strong> — without proper apparatus, fire, explosion, and inhalation risks are severe</li>
+                <li><strong class="text-amber-200">Herbal tinctures and plant extracts</strong> — some medicinal plants are toxic or interact with medications; always consult a qualified herbalist or pharmacist</li>
+                <li><strong class="text-amber-200">Essential oils and concentrates</strong> — highly concentrated; never ingest without professional guidance</li>
+                <li><strong class="text-amber-200">Online recipes</strong> — many circulating "alchemical" recipes are historically inaccurate and potentially dangerous; treat all with extreme caution</li>
+              </ul>
+            </div>
+          </div>
+          <p class="text-amber-100/60 text-xs mt-4 italic leading-relaxed">
+            If you are interested in practical plant alchemy (spagyrics), always begin under the guidance of a qualified teacher or experienced practitioner. The spiritual and philosophical dimensions of alchemy described on this page carry no physical risk and are the aspect most accessible — and most meaningful — for modern seekers.
+          </p>
+        </div>
+      </section>
+
+      <!-- What Is Alchemy? -->
+      <section class="bg-gradient-to-br from-amber-950/40 to-yellow-950/30 border border-amber-700/30 rounded-3xl p-8 backdrop-blur-md shadow-2xl">
+        <h2 class="font-cinzel text-2xl font-semibold mb-5 text-amber-300">✦ What Is Alchemy?</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <p class="text-amber-100/90 text-sm leading-relaxed mb-4">
+              Alchemy is one of the most ancient and multifaceted pursuits in human history — simultaneously a proto-science, a spiritual philosophy, a symbolic language, and a transformative practice. At its most literal, alchemy sought the transmutation of base metals (especially lead) into noble metals (especially gold), the discovery of a universal solvent called the <em>Alkahest</em>, and the creation of the Philosopher's Stone — a legendary substance said to accomplish all of these feats.
+            </p>
+            <p class="text-amber-100/90 text-sm leading-relaxed mb-4">
+              But beneath the material surface lay a much deeper project: the transformation of the alchemist themselves. As above, so below — the purification of base matter in the crucible was understood as a mirror of the soul's own purification. The laboratory was also a temple, and every operation carried symbolic and spiritual weight.
+            </p>
+            <p class="text-amber-100/90 text-sm leading-relaxed">
+              Alchemy is rightly called the mother of chemistry. It gave the world laboratory apparatus, distillation techniques, key chemical observations, and the very word "chemistry" itself (from the Arabic <em>al-kīmiyā</em>). At the same time, it gave humanity a rich symbolic language for inner work that Carl Jung later recognised as a map of the unconscious mind.
+            </p>
+          </div>
+          <div class="space-y-4">
+            <div class="bg-black/30 rounded-xl p-4 border border-amber-700/30 alchemy-card glow-card">
+              <h4 class="text-amber-300 font-semibold text-sm mb-2">🔥 The Three Primes (Tria Prima)</h4>
+              <p class="text-amber-100/75 text-xs leading-relaxed">Paracelsus identified three fundamental principles in all matter: <strong class="text-amber-200">Sulphur</strong> (soul — the animating principle), <strong class="text-amber-200">Mercury</strong> (spirit — the fluid, mediating principle), and <strong class="text-amber-200">Salt</strong> (body — the fixed, material principle). All alchemical work was understood as the interaction of these three.</p>
+            </div>
+            <div class="bg-black/30 rounded-xl p-4 border border-amber-700/30 alchemy-card">
+              <h4 class="text-amber-300 font-semibold text-sm mb-2">🌡️ The Four Elements</h4>
+              <p class="text-amber-100/75 text-xs leading-relaxed">Drawing from classical Greek philosophy, alchemists worked with Fire, Water, Air, and Earth — each associated with qualities (hot/cold, wet/dry), metals, planets, and stages of transformation. The interplay of elements drove all change in the material world.</p>
+            </div>
+            <div class="bg-black/30 rounded-xl p-4 border border-amber-700/30 alchemy-card">
+              <h4 class="text-amber-300 font-semibold text-sm mb-2">☿ The Hermetic Foundation</h4>
+              <p class="text-amber-100/75 text-xs leading-relaxed">Alchemy is inseparable from Hermeticism — the philosophical tradition attributed to the mythical figure Hermes Trismegistus. The <em>Emerald Tablet</em>, alchemy's most sacred text, encapsulates the entire art in a few lines: <em>"As above, so below; as within, so without."</em></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- History of Alchemy -->
+      <section class="bg-gradient-to-br from-stone-900/50 to-amber-950/30 border border-amber-800/30 rounded-3xl p-8 backdrop-blur-md shadow-2xl">
+        <h2 class="font-cinzel text-2xl font-semibold mb-5 text-amber-300">✦ History of Alchemy</h2>
+
+        <div class="space-y-6">
+          <!-- Ancient Origins -->
+          <div class="bg-black/30 rounded-2xl p-6 border border-amber-800/20">
+            <h3 class="font-cinzel text-lg font-semibold text-amber-200 mb-4">🏺 Ancient Origins (c. 300 BCE – 300 CE)</h3>
+            <div class="grid md:grid-cols-2 gap-5">
+              <div>
+                <p class="text-amber-100/85 text-sm leading-relaxed mb-3">
+                  The roots of alchemy reach into ancient Egypt, where craftsmen working with metals, dyes, and embalming substances developed sophisticated material knowledge alongside a rich symbolic framework. The Egyptians associated gold with immortality and the divine — the flesh of the gods — and believed that working with precious metals was a sacred act.
+                </p>
+                <p class="text-amber-100/85 text-sm leading-relaxed">
+                  The earliest explicitly alchemical texts emerged in Hellenistic Egypt, particularly in Alexandria — that great crossroads of Greek philosophy, Egyptian mysticism, Jewish esotericism, and Babylonian astronomy. Here, Greek natural philosophy (especially the four elements of Empedocles and Aristotle's theory of matter) merged with Egyptian craft knowledge and Hermetic spirituality to produce alchemy as a coherent tradition.
+                </p>
+              </div>
+              <div>
+                <p class="text-amber-100/85 text-sm leading-relaxed mb-3">
+                  Key early figures include <strong class="text-amber-200">Zosimos of Panopolis</strong> (c. 300 CE), one of the earliest named alchemists, whose writings describe both laboratory procedures and visions of spiritual transformation. His text <em>Visions</em> describes a series of dream-like encounters with a divine figure who undergoes death and resurrection — mapping the alchemical process onto a spiritual journey.
+                </p>
+                <p class="text-amber-100/85 text-sm leading-relaxed">
+                  <strong class="text-amber-200">Mary the Jewess</strong> (also 3rd–4th century CE) is one of history's first named female alchemists and is credited with inventing key laboratory apparatus still used today — including the bain-marie (water bath), named in her honour.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Islamic Golden Age -->
+          <div class="bg-black/30 rounded-2xl p-6 border border-amber-800/20">
+            <h3 class="font-cinzel text-lg font-semibold text-amber-200 mb-4">🌙 The Islamic Golden Age (c. 700 – 1200 CE)</h3>
+            <p class="text-amber-100/85 text-sm leading-relaxed mb-3">
+              When the Alexandrian tradition declined, Arabic scholars preserved, translated, and dramatically extended the alchemical corpus. The word alchemy itself derives from the Arabic <em>al-kīmiyā</em>, which in turn comes from the Greek <em>chymeia</em> (the art of alloying metals) or possibly from the Coptic <em>kēme</em> (black earth — a name for Egypt).
+            </p>
+            <div class="grid md:grid-cols-3 gap-4 mt-3">
+              <div class="bg-black/20 rounded-xl p-3 border border-amber-900/20">
+                <h4 class="text-amber-300 font-semibold text-xs mb-1">Jabir ibn Hayyan (c. 721–815)</h4>
+                <p class="text-amber-100/70 text-xs leading-relaxed">Known in the West as Geber, Jabir is often called the father of chemistry. He described dozens of laboratory procedures — distillation, calcination, crystallisation, and sublimation — with remarkable precision. His sulphur-mercury theory of metals dominated alchemy for centuries.</p>
+              </div>
+              <div class="bg-black/20 rounded-xl p-3 border border-amber-900/20">
+                <h4 class="text-amber-300 font-semibold text-xs mb-1">Al-Razi (865–925)</h4>
+                <p class="text-amber-100/70 text-xs leading-relaxed">A physician and philosopher, Al-Razi (Rhazes) brought empirical rigour to alchemical practice. His <em>Book of Secrets</em> describes minerals, equipment, and procedures with systematic clarity, laying groundwork for both chemistry and pharmacology.</p>
+              </div>
+              <div class="bg-black/20 rounded-xl p-3 border border-amber-900/20">
+                <h4 class="text-amber-300 font-semibold text-xs mb-1">Ibn Sina (980–1037)</h4>
+                <p class="text-amber-100/70 text-xs leading-relaxed">Known in the West as Avicenna, Ibn Sina was sceptical of metallic transmutation but contributed enormously to the theoretical foundations of both medicine and natural philosophy that shaped European alchemy for centuries.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Medieval Europe -->
+          <div class="bg-black/30 rounded-2xl p-6 border border-amber-800/20">
+            <h3 class="font-cinzel text-lg font-semibold text-amber-200 mb-4">⚔️ Medieval and Renaissance Europe (c. 1200 – 1600 CE)</h3>
+            <div class="grid md:grid-cols-2 gap-5">
+              <div>
+                <p class="text-amber-100/85 text-sm leading-relaxed mb-3">
+                  Latin translations of Arabic alchemical texts flooded into Europe in the 12th century, igniting an enormous alchemical revival. European alchemy fused Arabic laboratory knowledge with Christian theology and Neoplatonic philosophy, producing a uniquely rich symbolic tradition.
+                </p>
+                <p class="text-amber-100/85 text-sm leading-relaxed mb-3">
+                  The Philosopher's Stone — <em>lapis philosophorum</em> — became the central preoccupation: a legendary substance that could transmute base metals into gold, create the Elixir of Life conferring immortality, heal all illness, and illuminate the nature of God. The search for the Stone drove centuries of both genuine scientific experiment and spiritual exploration.
+                </p>
+                <p class="text-amber-100/85 text-sm leading-relaxed">
+                  Alchemy was not fringe in the medieval world. It attracted the attention of kings and popes, funded scholarly work, and occupied some of the greatest minds of the age — though it also attracted charlatans who sold false promises of gold, giving rise to the figure of the deceitful alchemist in popular literature.
+                </p>
+              </div>
+              <div>
+                <p class="text-amber-100/85 text-sm leading-relaxed mb-3">
+                  The Renaissance saw alchemy reach its greatest cultural influence. Figures such as <strong class="text-amber-200">Paracelsus</strong>, <strong class="text-amber-200">John Dee</strong>, and <strong class="text-amber-200">Robert Fludd</strong> brought alchemy into dialogue with medicine, mathematics, and natural magic. The invention of printing allowed alchemical texts to circulate widely, accompanied by elaborate symbolic illustrations that encoded the work in layers of allegory.
+                </p>
+                <p class="text-amber-100/85 text-sm leading-relaxed">
+                  The famous <em>Rosarium Philosophorum</em> (1550), the <em>Atalanta Fugiens</em> (1617) with its fifty engraved emblems, and the <em>Mutus Liber</em> (1677) — a wordless alchemical manual communicated entirely through pictures — represent the genre at its most sophisticated and mysterious.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Decline and Legacy -->
+          <div class="bg-black/30 rounded-2xl p-6 border border-amber-800/20">
+            <h3 class="font-cinzel text-lg font-semibold text-amber-200 mb-4">🔬 The Birth of Chemistry and Alchemy's Legacy (c. 1600 – present)</h3>
+            <p class="text-amber-100/85 text-sm leading-relaxed mb-3">
+              As the Scientific Revolution transformed European intellectual culture, alchemy increasingly bifurcated. Those who pursued the material laboratory work were gradually absorbed into the new discipline of chemistry — retaining the apparatus and many of the observations, discarding the symbolic and spiritual superstructure. The publication of Robert Boyle's <em>The Sceptical Chymist</em> (1661) is often cited as a turning point, though Boyle himself engaged seriously with alchemical ideas.
+            </p>
+            <p class="text-amber-100/85 text-sm leading-relaxed mb-3">
+              Remarkably, <strong class="text-amber-200">Isaac Newton</strong> — the man who formulated the laws of motion and gravitation — devoted more of his life to alchemy than to physics. Newton left behind over a million words of alchemical manuscripts, and scholars now believe his alchemical work significantly informed his understanding of force, attraction, and the hidden structures of matter.
+            </p>
+            <p class="text-amber-100/85 text-sm leading-relaxed">
+              In the 19th and 20th centuries, alchemy was revived as a spiritual and psychological path by the Rosicrucians, the Hermetic Order of the Golden Dawn, and later by Carl Jung, who saw in alchemical symbolism a pre-scientific map of the unconscious. Today, alchemy lives on in laboratory spagyrics (plant alchemy), Jungian psychology, esoteric philosophy, and the rich continuing tradition of Hermeticism.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Myths and Legends -->
+      <section class="bg-gradient-to-br from-yellow-950/40 to-orange-950/30 border border-yellow-700/30 rounded-3xl p-8 backdrop-blur-md shadow-2xl">
+        <h2 class="font-cinzel text-2xl font-semibold mb-5 text-amber-300">✦ Myths, Legends &amp; Symbols</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+          <div class="bg-black/30 rounded-2xl p-5 border border-amber-700/30 alchemy-card">
+            <div class="text-3xl mb-3">💎</div>
+            <h3 class="font-cinzel text-sm font-semibold text-amber-200 mb-2">The Philosopher's Stone</h3>
+            <p class="text-amber-100/75 text-xs leading-relaxed">The supreme object of alchemical desire — described variously as a red powder, a stone, a liquid, or a substance beyond ordinary matter. Said to transmute base metals into gold, create the Elixir of Life, cure all diseases, and grant gnosis of divine truth. Whether taken literally or symbolically, the Stone represents the culmination of all transformation: the perfected self.</p>
+          </div>
+
+          <div class="bg-black/30 rounded-2xl p-5 border border-amber-700/30 alchemy-card">
+            <div class="text-3xl mb-3">🐍</div>
+            <h3 class="font-cinzel text-sm font-semibold text-amber-200 mb-2">The Ouroboros</h3>
+            <p class="text-amber-100/75 text-xs leading-relaxed">The serpent eating its own tail — one of alchemy's oldest and most universal symbols, appearing in ancient Egypt, Greek Hermeticism, and Norse mythology. It represents cyclical renewal, the unity of opposites (beginning and end, creation and destruction), and the self-referential nature of the Great Work. In Jungian psychology, it symbolises the Self-consuming and Self-renewing psyche.</p>
+          </div>
+
+          <div class="bg-black/30 rounded-2xl p-5 border border-amber-700/30 alchemy-card">
+            <div class="text-3xl mb-3">🌿</div>
+            <h3 class="font-cinzel text-sm font-semibold text-amber-200 mb-2">The Elixir of Life</h3>
+            <p class="text-amber-100/75 text-xs leading-relaxed">A legendary potion said to grant immortality or at least remarkable longevity. Sought across cultures — Chinese Taoist alchemists pursued an immortality elixir (<em>dan</em>) with particular dedication, and many emperors are believed to have died from mercury-based longevity tonics. In the Western tradition, the Elixir was often identified with the Philosopher's Stone dissolved in wine or water.</p>
+          </div>
+
+          <div class="bg-black/30 rounded-2xl p-5 border border-amber-700/30 alchemy-card">
+            <div class="text-3xl mb-3">🦅</div>
+            <h3 class="font-cinzel text-sm font-semibold text-amber-200 mb-2">The Great Work (Magnum Opus)</h3>
+            <p class="text-amber-100/75 text-xs leading-relaxed">The alchemical process of transformation proceeds through stages, classically four: <strong class="text-amber-200">Nigredo</strong> (blackening — dissolution and death), <strong class="text-amber-200">Albedo</strong> (whitening — purification), <strong class="text-amber-200">Citrinitas</strong> (yellowing — dawning of light; sometimes omitted in later schemes), and <strong class="text-amber-200">Rubedo</strong> (reddening — completion and new birth). Each stage corresponds to a phase of psychological and spiritual transformation.</p>
+          </div>
+
+          <div class="bg-black/30 rounded-2xl p-5 border border-amber-700/30 alchemy-card">
+            <div class="text-3xl mb-3">🤖</div>
+            <h3 class="font-cinzel text-sm font-semibold text-amber-200 mb-2">The Homunculus</h3>
+            <p class="text-amber-100/75 text-xs leading-relaxed">A miniature artificial human being, said by some alchemists (notably Paracelsus) to be creatable through alchemical procedures. The homunculus legend reflects alchemy's audacious ambition: to not merely transform matter but to create life. It has deeply influenced literature from Goethe's <em>Faust</em> to modern science fiction, and reflects deep questions about the nature of life and creation.</p>
+          </div>
+
+          <div class="bg-black/30 rounded-2xl p-5 border border-amber-700/30 alchemy-card">
+            <div class="text-3xl mb-3">🌓</div>
+            <h3 class="font-cinzel text-sm font-semibold text-amber-200 mb-2">The Alchemical Marriage</h3>
+            <p class="text-amber-100/75 text-xs leading-relaxed">The <em>coniunctio oppositorum</em> — the marriage of opposites — is a central alchemical mystery. Solar (masculine, active, sulphurous) and Lunar (feminine, receptive, mercurial) principles must unite to produce the Stone. Depicted in texts as a royal wedding, a two-headed hermaphrodite (the Rebis), or sun and moon in conjunction, this union mirrors the integration of conscious and unconscious, masculine and feminine, in the individual psyche.</p>
+          </div>
+
+          <div class="bg-black/30 rounded-2xl p-5 border border-amber-700/30 alchemy-card">
+            <div class="text-3xl mb-3">📜</div>
+            <h3 class="font-cinzel text-sm font-semibold text-amber-200 mb-2">The Emerald Tablet</h3>
+            <p class="text-amber-100/75 text-xs leading-relaxed">Attributed to Hermes Trismegistus and claimed to be inscribed on a slab of green stone found in the tomb of Hermes, the Emerald Tablet is alchemy's foundational scripture. Its key teaching — <em>"That which is above is as that which is below, and that which is below is as that which is above"</em> — encapsulates the Hermetic principle of correspondence that underpins all alchemical thinking. Isaac Newton made his own translation of this text.</p>
+          </div>
+
+          <div class="bg-black/30 rounded-2xl p-5 border border-amber-700/30 alchemy-card">
+            <div class="text-3xl mb-3">🧪</div>
+            <h3 class="font-cinzel text-sm font-semibold text-amber-200 mb-2">Nicolas Flamel's Legend</h3>
+            <p class="text-amber-100/75 text-xs leading-relaxed">Nicolas Flamel (c. 1330–1418) was a real Parisian scribe and manuscript dealer who became, in legend, the most famous successful alchemist of all time. According to the story — first circulated long after his death — Flamel discovered an ancient book of Abraham the Jew, decoded its symbols with the help of a Spanish rabbi, and used the knowledge to make the Philosopher's Stone. His legend grew so large that he later appeared in literature including J.K. Rowling's <em>Harry Potter</em> series.</p>
+          </div>
+
+          <div class="bg-black/30 rounded-2xl p-5 border border-amber-700/30 alchemy-card">
+            <div class="text-3xl mb-3">🌑</div>
+            <h3 class="font-cinzel text-sm font-semibold text-amber-200 mb-2">The Seven Metals and Planets</h3>
+            <p class="text-amber-100/75 text-xs leading-relaxed">Classical alchemy assigned each of the seven known metals to a planet and the seven planetary gods: <strong class="text-amber-200">Gold–Sun</strong>, <strong class="text-amber-200">Silver–Moon</strong>, <strong class="text-amber-200">Mercury–Mercury</strong>, <strong class="text-amber-200">Copper–Venus</strong>, <strong class="text-amber-200">Iron–Mars</strong>, <strong class="text-amber-200">Tin–Jupiter</strong>, <strong class="text-amber-200">Lead–Saturn</strong>. This cosmic correspondence meant that working with a metal was also working with its planetary intelligence, opening the operator to celestial influence and vice versa.</p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Key Figures -->
+      <section class="bg-gradient-to-br from-amber-950/30 to-stone-900/40 border border-amber-800/25 rounded-3xl p-8 backdrop-blur-md shadow-2xl">
+        <h2 class="font-cinzel text-2xl font-semibold mb-5 text-amber-300">✦ Key Figures in Alchemical History</h2>
+        <div class="grid md:grid-cols-2 gap-5">
+
+          <div class="bg-black/30 rounded-2xl p-5 border border-amber-700/30 alchemy-card">
+            <h3 class="font-cinzel text-sm font-semibold text-amber-200 mb-1">Hermes Trismegistus</h3>
+            <p class="text-amber-400/60 text-xs mb-2 italic">Mythical — Hellenistic Egypt</p>
+            <p class="text-amber-100/75 text-xs leading-relaxed">The mythical "thrice-great" figure — a syncretism of the Greek god Hermes and the Egyptian god Thoth — to whom the entire Hermetic tradition is attributed. The <em>Corpus Hermeticum</em>, the <em>Emerald Tablet</em>, and the philosophical foundations of Western alchemy all bear his name. Whether he was understood as a real historical figure, a divine messenger, or an allegorical representation of wisdom depended on the era and the interpreter.</p>
+          </div>
+
+          <div class="bg-black/30 rounded-2xl p-5 border border-amber-700/30 alchemy-card">
+            <h3 class="font-cinzel text-sm font-semibold text-amber-200 mb-1">Jabir ibn Hayyan (Geber)</h3>
+            <p class="text-amber-400/60 text-xs mb-2 italic">c. 721–815 CE, Persia/Iraq</p>
+            <p class="text-amber-100/75 text-xs leading-relaxed">The most prolific and influential alchemist of the Arab world. Jabir wrote hundreds of texts on chemistry, cosmology, numerology, and magic. His sulphur-mercury theory — that all metals are composed of these two principles in different proportions — became the dominant framework for alchemy in both the Islamic world and medieval Europe. His name gave us the word "gibberish," reflecting the deliberately obscure style of his later writings.</p>
+          </div>
+
+          <div class="bg-black/30 rounded-2xl p-5 border border-amber-700/30 alchemy-card">
+            <h3 class="font-cinzel text-sm font-semibold text-amber-200 mb-1">Albertus Magnus</h3>
+            <p class="text-amber-400/60 text-xs mb-2 italic">c. 1200–1280, Germany</p>
+            <p class="text-amber-100/75 text-xs leading-relaxed">Dominican friar, bishop, philosopher, and perhaps the greatest scholar of medieval Europe. Albertus wrote extensively on natural philosophy, including detailed discussions of alchemical theory. He is sometimes said to have been the teacher of Thomas Aquinas. Legend credits him with creating a robot and with possessing the Philosopher's Stone, though he himself expressed measured scepticism about transmutation.</p>
+          </div>
+
+          <div class="bg-black/30 rounded-2xl p-5 border border-amber-700/30 alchemy-card">
+            <h3 class="font-cinzel text-sm font-semibold text-amber-200 mb-1">Paracelsus (Theophrastus von Hohenheim)</h3>
+            <p class="text-amber-400/60 text-xs mb-2 italic">1493–1541, Switzerland/Germany</p>
+            <p class="text-amber-100/75 text-xs leading-relaxed">Perhaps the most radical alchemist of all — a physician, philosopher, and mystic who overturned the Galenic medical tradition, introduced mineral medicines (the first use of compounds such as laudanum), and reframed alchemy as primarily a healing art. His doctrine of the <em>Tria Prima</em> (sulphur, mercury, salt) replaced the four-element model. He is considered a founder of pharmacology as well as of the Western occult tradition of Paracelsian magic.</p>
+          </div>
+
+          <div class="bg-black/30 rounded-2xl p-5 border border-amber-700/30 alchemy-card">
+            <h3 class="font-cinzel text-sm font-semibold text-amber-200 mb-1">John Dee</h3>
+            <p class="text-amber-400/60 text-xs mb-2 italic">1527–1608/9, England</p>
+            <p class="text-amber-100/75 text-xs leading-relaxed">Mathematician, cartographer, astrologer, and Queen Elizabeth I's personal advisor on occult matters, Dee was deeply immersed in Hermetic philosophy and alchemy. He worked with medium Edward Kelley to receive the Enochian angelic language through scrying, and believed he was in contact with divine intelligences who could reveal the secrets of nature. His life illustrates alchemy's intimate relationship with Renaissance magic and theosophy.</p>
+          </div>
+
+          <div class="bg-black/30 rounded-2xl p-5 border border-amber-700/30 alchemy-card">
+            <h3 class="font-cinzel text-sm font-semibold text-amber-200 mb-1">Isaac Newton</h3>
+            <p class="text-amber-400/60 text-xs mb-2 italic">1643–1727, England</p>
+            <p class="text-amber-100/75 text-xs leading-relaxed">The father of classical physics was also one of history's most dedicated alchemists. Newton spent more time studying alchemy and theology than he did on the mathematics and physics for which he is remembered. He copied alchemical manuscripts by hand, performed extensive laboratory experiments, and translated the Emerald Tablet. Scholars believe his concept of gravitational attraction — a force acting at a distance — was shaped by alchemical notions of sympathetic and antipathetic forces between substances.</p>
+          </div>
+
+          <div class="bg-black/30 rounded-2xl p-5 border border-amber-700/30 alchemy-card">
+            <h3 class="font-cinzel text-sm font-semibold text-amber-200 mb-1">Carl Gustav Jung</h3>
+            <p class="text-amber-400/60 text-xs mb-2 italic">1875–1961, Switzerland</p>
+            <p class="text-amber-100/75 text-xs leading-relaxed">The founder of analytical psychology recognised in alchemical symbolism a pre-scientific vocabulary for the processes of the unconscious mind. His monumental studies — <em>Psychology and Alchemy</em> (1944), <em>Alchemical Studies</em> (1967), and <em>Mysterium Coniunctionis</em> (1963) — demonstrated that alchemical imagery precisely maps the individuation process: the journey toward psychological wholeness. Jung's work gave alchemy a second life as a psychological and spiritual path.</p>
+          </div>
+
+          <div class="bg-black/30 rounded-2xl p-5 border border-amber-700/30 alchemy-card">
+            <h3 class="font-cinzel text-sm font-semibold text-amber-200 mb-1">Fulcanelli</h3>
+            <p class="text-amber-400/60 text-xs mb-2 italic">Identity unknown — France, early 20th century</p>
+            <p class="text-amber-100/75 text-xs leading-relaxed">The pseudonymous author of <em>Le Mystère des Cathédrales</em> (1926) and <em>Les Demeures Philosophales</em> (1930), Fulcanelli claimed to reveal hidden alchemical symbolism in the Gothic cathedrals of France. His true identity has never been established despite decades of speculation. His books remain among the most celebrated — and most mysterious — alchemical texts of the modern era, and he is claimed by some to have successfully achieved the Great Work before disappearing without trace.</p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Groups and Societies -->
+      <section class="bg-gradient-to-br from-orange-950/40 to-amber-950/30 border border-orange-800/30 rounded-3xl p-8 backdrop-blur-md shadow-2xl">
+        <h2 class="font-cinzel text-2xl font-semibold mb-5 text-amber-300">✦ Groups, Societies &amp; Traditions</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+
+          <div>
+            <div class="space-y-4">
+              <div class="bg-black/30 rounded-xl p-5 border border-orange-800/30 alchemy-card">
+                <h3 class="font-cinzel text-sm font-semibold text-amber-200 mb-2">🌹 The Rosicrucians</h3>
+                <p class="text-amber-100/75 text-xs leading-relaxed mb-2">Originating with the publication of the three Rosicrucian manifestos between 1614 and 1616 — the <em>Fama Fraternitatis</em>, the <em>Confessio Fraternitatis</em>, and the <em>Chymical Wedding of Christian Rosenkreutz</em> — the Rosicrucian movement claimed the existence of a secret brotherhood dedicated to spiritual and alchemical knowledge. Whether or not such a brotherhood actually existed in the 17th century, the manifestos were extraordinarily influential, inspiring Freemasonry and all subsequent Western occultism. Modern Rosicrucian organisations include AMORC (Ancient Mystical Order Rosae Crucis) and the Lectorium Rosicrucianum.</p>
+              </div>
+
+              <div class="bg-black/30 rounded-xl p-5 border border-orange-800/30 alchemy-card">
+                <h3 class="font-cinzel text-sm font-semibold text-amber-200 mb-2">🔺 Freemasonry</h3>
+                <p class="text-amber-100/75 text-xs leading-relaxed mb-2">Freemasonry, which crystallised in early 18th-century Britain, drew deeply on Hermetic and Rosicrucian symbolism. Many of its rituals and degrees encode alchemical allegories — the transformation of rough ashlar (unworked stone) into perfect ashlar (the polished stone) mirrors the alchemical journey of purification. The Royal Arch degree and the Scottish Rite in particular contain extensive Hermetic material. Many early Freemasons were explicitly interested in alchemy, and the movement served as a vehicle for Hermetic philosophy through the Enlightenment.</p>
+              </div>
+
+              <div class="bg-black/30 rounded-xl p-5 border border-orange-800/30 alchemy-card">
+                <h3 class="font-cinzel text-sm font-semibold text-amber-200 mb-2">⭐ Hermetic Order of the Golden Dawn</h3>
+                <p class="text-amber-100/75 text-xs leading-relaxed">Founded in London in 1887, the Golden Dawn synthesised Kabbalah, Hermeticism, alchemy, astrology, tarot, and ceremonial magic into a comprehensive initiatory system. Its members included W.B. Yeats, Aleister Crowley, Arthur Machen, and Evelyn Underhill. The Golden Dawn system placed alchemy at the heart of its grade structure, with each initiatory level corresponding to an alchemical stage and a planetary metal. Its influence on all subsequent Western esotericism is immeasurable.</p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="space-y-4">
+              <div class="bg-black/30 rounded-xl p-5 border border-orange-800/30 alchemy-card">
+                <h3 class="font-cinzel text-sm font-semibold text-amber-200 mb-2">🌺 Thelema and the A∴A∴</h3>
+                <p class="text-amber-100/75 text-xs leading-relaxed mb-2">Aleister Crowley's <em>Thelema</em> — and its mystical order the A∴A∴ (Astrum Argentum) — integrated alchemy into a broader system of Magick. Crowley wrote extensively on alchemical symbolism, interpreting the Great Work as the spiritual and sexual attainment of the individual's True Will. His system drew on the Golden Dawn's alchemical grade structure while radically reinterpreting it through his own philosophical framework. Thelemic orders remain active worldwide.</p>
+              </div>
+
+              <div class="bg-black/30 rounded-xl p-5 border border-orange-800/30 alchemy-card">
+                <h3 class="font-cinzel text-sm font-semibold text-amber-200 mb-2">🌙 Taoist Alchemy (China)</h3>
+                <p class="text-amber-100/75 text-xs leading-relaxed mb-2">Parallel to Western alchemy, Chinese Taoist alchemy pursued <em>dan</em> (elixir), divided into <em>waidan</em> (external alchemy — physical laboratory work with minerals) and <em>neidan</em> (internal alchemy — transforming the body's own energies through meditation and qigong). The tradition of neidan, which flourished from the 8th century CE onwards, views the body itself as the alchemical vessel: refining <em>jing</em> (essence), <em>qi</em> (breath/energy), and <em>shen</em> (spirit) to produce the immortal body of light.</p>
+              </div>
+
+              <div class="bg-black/30 rounded-xl p-5 border border-orange-800/30 alchemy-card">
+                <h3 class="font-cinzel text-sm font-semibold text-amber-200 mb-2">🪷 Indian Rasayana</h3>
+                <p class="text-amber-100/75 text-xs leading-relaxed">The Indian tradition of Rasayana — literally "path of essence" — is the closest Vedic equivalent to alchemy. It sought rejuvenation and longevity through preparations of gold, mercury, herbs, and minerals, and was deeply embedded in Ayurvedic medicine. The tradition of <em>rasa shastra</em> (mercury-based medicinal preparations) continues today within some Ayurvedic lineages, though the use of heavy metals is closely regulated. Like Western alchemy, Rasayana had both a physical and a spiritual dimension — the goal was not just bodily health but liberation (<em>moksha</em>).</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Alchemy Today -->
+      <section class="bg-gradient-to-br from-emerald-950/40 to-teal-950/30 border border-emerald-700/30 rounded-3xl p-8 backdrop-blur-md shadow-2xl">
+        <h2 class="font-cinzel text-2xl font-semibold mb-5 text-amber-300">✦ Incorporating Alchemy Safely Today</h2>
+        <p class="text-amber-100/80 text-sm leading-relaxed mb-6">
+          The living heart of alchemy is fully accessible without a laboratory. Modern seekers can engage the tradition through its spiritual, psychological, and philosophical dimensions — and through the carefully bounded practice of plant alchemy (spagyrics). Here is how to begin safely and meaningfully.
+        </p>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+          <div class="bg-black/30 rounded-2xl p-5 border border-emerald-700/30 alchemy-card">
+            <div class="text-3xl mb-3">📖</div>
+            <h3 class="font-cinzel text-sm font-semibold text-emerald-300 mb-2">Study the Texts</h3>
+            <p class="text-amber-100/75 text-xs leading-relaxed">Begin with the Emerald Tablet and the Corpus Hermeticum — freely available in translation. Read Jung's <em>Psychology and Alchemy</em> for the psychological interpretation. Dennis William Hauck's <em>The Emerald Tablet</em> offers an accessible modern synthesis. Reading alchemical texts is itself a meditative practice; the symbols work on the mind even when their literal meaning eludes us.</p>
+          </div>
+
+          <div class="bg-black/30 rounded-2xl p-5 border border-emerald-700/30 alchemy-card">
+            <div class="text-3xl mb-3">🧘</div>
+            <h3 class="font-cinzel text-sm font-semibold text-emerald-300 mb-2">Psychological Alchemy (Individuation)</h3>
+            <p class="text-amber-100/75 text-xs leading-relaxed">Engage with the four stages of the Magnum Opus as a map of inner work. Nigredo — face your shadow, the parts of yourself you deny or repress. Albedo — purify through reflection and conscious awareness. Citrinitas — cultivate discernment and wisdom. Rubedo — integrate all aspects of self into wholeness. A therapist familiar with Jungian approaches can be an invaluable guide for this work.</p>
+          </div>
+
+          <div class="bg-black/30 rounded-2xl p-5 border border-emerald-700/30 alchemy-card">
+            <div class="text-3xl mb-3">🌿</div>
+            <h3 class="font-cinzel text-sm font-semibold text-emerald-300 mb-2">Spagyrics (Plant Alchemy)</h3>
+            <p class="text-amber-100/75 text-xs leading-relaxed">Spagyrics — from the Greek <em>spao</em> (to separate) and <em>ageiro</em> (to reunite) — is the Paracelsian art of creating herbal preparations that reunite the plant's essential oil (soul), alcohol extract (spirit), and mineral salts from the ash (body). A simple home spagyric can be made with common kitchen herbs using food-grade alcohol. <strong class="text-amber-200">Always research each plant's safety profile before use</strong> and consult a qualified herbalist if in doubt.</p>
+          </div>
+
+          <div class="bg-black/30 rounded-2xl p-5 border border-emerald-700/30 alchemy-card">
+            <div class="text-3xl mb-3">🪐</div>
+            <h3 class="font-cinzel text-sm font-semibold text-emerald-300 mb-2">Planetary Work</h3>
+            <p class="text-amber-100/75 text-xs leading-relaxed">Alchemy's seven planetary intelligences offer a rich framework for attuning to different energetic qualities — solar confidence, lunar intuition, mercurial communication, venusian beauty, martial will, jovian abundance, saturnine wisdom. Work with a planet by meditating on its metal, spending time with its associated herbs (e.g., chamomile for the Sun, mugwort for the Moon), or journalling on its archetypal qualities at relevant astrological moments.</p>
+          </div>
+
+          <div class="bg-black/30 rounded-2xl p-5 border border-emerald-700/30 alchemy-card">
+            <div class="text-3xl mb-3">✍️</div>
+            <h3 class="font-cinzel text-sm font-semibold text-emerald-300 mb-2">The Alchemical Journal</h3>
+            <p class="text-amber-100/75 text-xs leading-relaxed">Historical alchemists kept meticulous laboratory notebooks recording every observation. Keep your own alchemical journal — but record inner observations: dreams, emotional states, recurring images, synchronicities. Track your own Nigredo (periods of dissolution and darkness), Albedo (clarity and cleansing), and Rubedo (integration and creative breakthrough). Over time, patterns emerge that reveal the rhythm of your personal Great Work.</p>
+          </div>
+
+          <div class="bg-black/30 rounded-2xl p-5 border border-emerald-700/30 alchemy-card">
+            <div class="text-3xl mb-3">🕯️</div>
+            <h3 class="font-cinzel text-sm font-semibold text-emerald-300 mb-2">Ritual and Ceremony</h3>
+            <p class="text-amber-100/75 text-xs leading-relaxed">Create simple alchemical rituals aligned with the seasons and lunations. The alchemical calendar mirrors the Wheel of the Year — summer solstice belongs to the Sun (gold, Rubedo), winter solstice to Saturn (lead, Nigredo), spring equinox to the Albedo and new beginnings. Light candles corresponding to planetary colours, work with incense (frankincense for the Sun, myrrh for the Moon), and use the Magnum Opus stages as a framework for seasonal intention-setting.</p>
+          </div>
+
+        </div>
+
+        <div class="mt-6 bg-black/30 rounded-2xl p-5 border border-emerald-800/30">
+          <h3 class="font-cinzel text-sm font-semibold text-amber-300 mb-3">🌱 A Simple Beginner's Spagyric — Safety Guidelines</h3>
+          <div class="grid md:grid-cols-2 gap-5">
+            <div>
+              <p class="text-amber-100/80 text-xs leading-relaxed mb-3">
+                A basic spagyric tincture can be safely made at home using culinary herbs (lavender, lemon balm, chamomile, rosemary), food-grade alcohol (at least 60% ABV), and patience. The process — maceration, filtration, calcination of the marc, and reunion — takes several weeks and is primarily a meditative practice.
+              </p>
+              <p class="text-amber-100/80 text-xs leading-relaxed">
+                Approach the process with intention: research the plant's traditional uses and symbolism, choose a lunar-appropriate day for beginning (new moon for beginning, full moon for completion is traditional), and keep a detailed record of every step and your inner responses during the work.
+              </p>
+            </div>
+            <div>
+              <h4 class="text-emerald-300 font-semibold text-xs mb-2">⚠️ Safety Checklist for Plant Spagyrics</h4>
+              <ul class="text-amber-100/75 text-xs leading-relaxed space-y-1 list-disc list-inside">
+                <li>Only work with herbs whose safety profile you have researched from reliable sources</li>
+                <li>Avoid toxic or controlled plants entirely (foxglove, belladonna, aconite, etc.)</li>
+                <li>Check for interactions with any medications you are taking</li>
+                <li>Do not use if pregnant, breastfeeding, or immunocompromised without professional advice</li>
+                <li>When heating alcohol, keep away from open flames — use a hot plate, never a gas ring</li>
+                <li>Calcination (burning plant matter to ash) should be done outdoors or in a well-ventilated space</li>
+                <li>Never ingest any preparation you have not positively identified and researched</li>
+                <li>Begin with very small test doses of any new preparation</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Further Reading -->
+      <section class="bg-gradient-to-br from-stone-900/50 to-amber-950/20 border border-stone-700/20 rounded-3xl p-8 backdrop-blur-md shadow-2xl">
+        <h2 class="font-cinzel text-2xl font-semibold mb-5 text-amber-300">✦ Further Reading &amp; Key Texts</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <h3 class="font-cinzel text-base font-semibold text-amber-200 mb-4">📚 Primary Sources</h3>
+            <div class="space-y-3">
+              <div class="bg-black/30 rounded-xl p-4 border border-amber-700/20 alchemy-card">
+                <h4 class="text-amber-200 font-semibold text-sm mb-1">The Emerald Tablet</h4>
+                <p class="text-amber-400/60 text-xs mb-1 italic">Attributed to Hermes Trismegistus — available in multiple translations</p>
+                <p class="text-amber-100/70 text-xs leading-relaxed">Alchemy's foundational text. Isaac Newton's translation is available online via the Chymistry of Isaac Newton project at Indiana University. Multiple free English translations can be found in print and online.</p>
+              </div>
+              <div class="bg-black/30 rounded-xl p-4 border border-amber-700/20 alchemy-card">
+                <h4 class="text-amber-200 font-semibold text-sm mb-1">The Corpus Hermeticum</h4>
+                <p class="text-amber-400/60 text-xs mb-1 italic">Attributed to Hermes Trismegistus — translated by Brian Copenhaver (Cambridge, 1992)</p>
+                <p class="text-amber-100/70 text-xs leading-relaxed">The philosophical backbone of the Western Hermetic tradition, including alchemy. Copenhaver's translation with scholarly introduction is the standard academic edition; older translations by G.R.S. Mead are freely available online.</p>
+              </div>
+              <div class="bg-black/30 rounded-xl p-4 border border-amber-700/20 alchemy-card">
+                <h4 class="text-amber-200 font-semibold text-sm mb-1">The Alchemical Wedding of Christian Rosenkreutz (1616)</h4>
+                <p class="text-amber-400/60 text-xs mb-1 italic">Johann Valentin Andreae — translated by Joscelyn Godwin</p>
+                <p class="text-amber-100/70 text-xs leading-relaxed">The third and most literary of the Rosicrucian manifestos. An allegorical romance describing a seven-day alchemical and initiatory journey, it is one of the most beautiful alchemical texts in existence.</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3 class="font-cinzel text-base font-semibold text-amber-200 mb-4">🌐 Modern Studies</h3>
+            <div class="space-y-3">
+              <div class="bg-black/30 rounded-xl p-4 border border-amber-700/20 alchemy-card">
+                <h4 class="text-amber-200 font-semibold text-sm mb-1">Psychology and Alchemy (1944)</h4>
+                <p class="text-amber-400/60 text-xs mb-1 italic">C.G. Jung — Princeton University Press</p>
+                <p class="text-amber-100/70 text-xs leading-relaxed">Jung's landmark study demonstrating the correspondence between alchemical symbolism and the processes of the unconscious. Essential reading for anyone interested in alchemy as a path of inner transformation.</p>
+              </div>
+              <div class="bg-black/30 rounded-xl p-4 border border-amber-700/20 alchemy-card">
+                <h4 class="text-amber-200 font-semibold text-sm mb-1">The Forge and the Crucible (1956)</h4>
+                <p class="text-amber-400/60 text-xs mb-1 italic">Mircea Eliade — University of Chicago Press</p>
+                <p class="text-amber-100/70 text-xs leading-relaxed">A masterful comparative study of alchemy across cultures — Greek, Arabic, Chinese, Indian, and indigenous — by the great historian of religions. Eliade shows how the alchemist's work mirrors shamanic and initiatory traditions worldwide.</p>
+              </div>
+              <div class="bg-black/30 rounded-xl p-4 border border-amber-700/20 alchemy-card">
+                <h4 class="text-amber-200 font-semibold text-sm mb-1">The Practical Handbook of Plant Alchemy (1984)</h4>
+                <p class="text-amber-400/60 text-xs mb-1 italic">Manfred Junius — Inner Traditions</p>
+                <p class="text-amber-100/70 text-xs leading-relaxed">The most comprehensive and careful modern manual for spagyric practice. Junius provides detailed instructions for plant alchemy alongside a rigorous safety framework, making this the go-to guide for anyone wishing to explore the laboratory dimension of alchemy responsibly.</p>
+              </div>
+
+              <div class="mt-4 bg-black/30 rounded-2xl p-4 border border-amber-800/20">
+                <h3 class="font-cinzel text-sm font-semibold text-amber-300 mb-2">📋 A Note on Sources</h3>
+                <p class="text-amber-100/70 text-xs leading-relaxed">
+                  Alchemical texts are intentionally obscure — the authors encrypted their knowledge in allegory and symbol to protect it from the uninitiated and (in some eras) from Church or state censure. When reading primary texts, expect layers of meaning: the literal, the allegorical, the philosophical, and the spiritual all coexist. Modern scholarly translations with annotations are invaluable. Beware of online sources that interpret alchemical symbolism too literally or that offer practical chemical instructions — the physical laboratory work requires professional training to pursue safely.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="text-center py-6 text-amber-400/40 text-xs">
+        <p class="italic">"The secret of alchemy is this: there is a way of manipulating matter and energy so as to produce what modern scientists call 'a field of force'. The field acts on the observer and puts him in a privileged position vis-à-vis the universe." — Fulcanelli</p>
+        <p class="mt-2">Esoteric Wisdom · Built with ✨ in Rust</p>
+        <p class="mt-2"><a href="/home" class="hover:text-amber-300 transition-colors">← Back to Portal</a></p>
+        <p class="mt-3">
+          <a href="https://ko-fi.com/esotericwisdom" target="_blank" rel="noopener noreferrer"
+             class="inline-block px-5 py-2 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-white font-semibold text-xs hover:scale-105 transition-transform shadow-lg shadow-orange-500/30">
+            ☕ Support Esoteric Wisdom on Ko-fi
+          </a>
+        </p>
+      </footer>
+
+    </div>
+    <script>
+      const sf = document.getElementById('starfield');
+      for (let i = 0; i < 200; i++) {
+        const s = document.createElement('div');
+        s.className = 'star';
+        const size = Math.random() * 2.5 + 0.5;
+        s.style.cssText = `width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--dur:${2+Math.random()*4}s;--delay:${Math.random()*5}s;opacity:${0.2+Math.random()*0.8};`;
+        sf.appendChild(s);
+      }
+    </script>
+  </body>
+</html>

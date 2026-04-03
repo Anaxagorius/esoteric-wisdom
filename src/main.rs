@@ -12,6 +12,7 @@ mod shamanism;
 mod druidism;
 mod akashic_records;
 mod wicca;
+mod alchemy;
 mod gateway_process;
 mod remote_viewing;
 mod khasarov_mirror;
@@ -48,6 +49,7 @@ async fn main() -> anyhow::Result<()> {
         .nest("/druidism", druidism::routes())
         .nest("/akashic-records", akashic_records::routes())
         .nest("/wicca", wicca::routes())
+        .nest("/alchemy", alchemy::routes())
         .nest("/gateway-process", gateway_process::routes())
         .nest("/remote-viewing", remote_viewing::routes())
         .nest("/khasarov-mirror", khasarov_mirror::routes())
