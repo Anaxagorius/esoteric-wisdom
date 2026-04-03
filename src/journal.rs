@@ -87,21 +87,19 @@ async fn journal_home(State(state): State<AppState>, cookies: Cookies) -> impl I
 }
 
 async fn user_journal_home(State(state): State<AppState>, cookies: Cookies) -> impl IntoResponse {
-    let user_id = get_user_id_from_cookies(&state, &cookies);
-    let is_authenticated = user_id.is_some();
-
-    let entries: Vec<JournalEntry> = if let Some(uid) = user_id {
-        state.journal_entries.read().await
-            .iter()
-            .filter(|e| e.user_id == uid)
-            .cloned()
-            .rev()
-            .collect()
-    } else {
-        Vec::new()
+    let user_id = match get_user_id_from_cookies(&state, &cookies) {
+        Some(id) => id,
+        None => return (StatusCode::FOUND, [(header::LOCATION, "/auth/login")]).into_response(),
     };
 
-    HtmlTemplate(JournalListTemplate { is_authenticated, entries, error: None })
+    let entries: Vec<JournalEntry> = state.journal_entries.read().await
+        .iter()
+        .filter(|e| e.user_id == user_id)
+        .cloned()
+        .rev()
+        .collect();
+
+    HtmlTemplate(JournalListTemplate { is_authenticated: true, entries, error: None }).into_response()
 }
 
 async fn guest_reflections(State(state): State<AppState>) -> impl IntoResponse {
