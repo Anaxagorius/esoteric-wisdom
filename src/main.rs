@@ -6,6 +6,7 @@ mod meditation;
 mod tarot;
 mod journal;
 mod numerology;
+mod crystals;
 mod templates;
 
 use axum::{Router, routing::get, extract::State, response::IntoResponse, http::{StatusCode, header}};
@@ -33,6 +34,7 @@ async fn main() -> anyhow::Result<()> {
         .nest("/tarot", tarot::routes())
         .nest("/journal", journal::routes())
         .nest("/numerology", numerology::routes())
+        .nest("/crystals", crystals::routes())
         .layer(CookieManagerLayer::new())
         .with_state(state);
 

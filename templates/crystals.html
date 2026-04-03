@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Crystals &amp; Sacred Stones — Esoteric Wisdom</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+    <style>
+      body {
+        background: radial-gradient(ellipse at top, #1a0533 0%, #0f0a1e 30%, #020617 70%, #000000 100%);
+        font-family: 'Raleway', sans-serif;
+      }
+      .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+      @keyframes twinkle { 0%,100% { opacity: 0.2; } 50% { opacity: 1; } }
+      .star { position: absolute; border-radius: 50%; background: white; animation: twinkle var(--dur,3s) ease-in-out infinite; animation-delay: var(--delay,0s); }
+      @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+      .floating { animation: float 5s ease-in-out infinite; }
+      @keyframes shimmer {
+        0% { background-position: -200% center; }
+        100% { background-position: 200% center; }
+      }
+      @keyframes crystal-glow {
+        0%, 100% { box-shadow: 0 0 20px rgba(216,180,254,0.3), 0 0 40px rgba(216,180,254,0.15); }
+        50% { box-shadow: 0 0 40px rgba(244,114,182,0.5), 0 0 80px rgba(244,114,182,0.25); }
+      }
+      .crystal-card {
+        transition: all 0.35s ease;
+        cursor: default;
+      }
+      .crystal-card:hover {
+        transform: translateY(-7px) scale(1.01);
+        box-shadow: 0 24px 64px rgba(216,180,254,0.25);
+        border-color: rgba(216,180,254,0.6) !important;
+      }
+      .aurora-text {
+        background: linear-gradient(90deg, #f9a8d4, #c084fc, #818cf8, #67e8f9, #f9a8d4);
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        animation: shimmer 5s linear infinite;
+      }
+      .chakra-dot {
+        width: 14px; height: 14px;
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: 6px;
+        flex-shrink: 0;
+      }
+      .glow-card { animation: crystal-glow 4s ease-in-out infinite; }
+      .usage-step { counter-increment: step-counter; }
+      .usage-step::before {
+        content: counter(step-counter);
+        display: inline-flex; align-items: center; justify-content: center;
+        width: 28px; height: 28px; border-radius: 50%;
+        background: linear-gradient(135deg, #c084fc, #818cf8);
+        color: white; font-size: 0.75rem; font-weight: 700;
+        margin-right: 12px; flex-shrink: 0;
+      }
+      .steps-list { counter-reset: step-counter; }
+    </style>
+  </head>
+  <body class="min-h-screen text-white px-4 py-8">
+    <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+
+    <div class="relative z-10 max-w-6xl mx-auto space-y-10">
+
+      <!-- Navigation -->
+      <nav class="flex items-center justify-between bg-black/30 backdrop-blur-md rounded-2xl px-6 py-3 border border-purple-500/20">
+        <a href="/home" class="font-cinzel text-amber-300 text-sm tracking-widest">✦ Esoteric Wisdom</a>
+        <div class="flex gap-6 text-xs text-violet-200 flex-wrap justify-end">
+          <a href="/astrology" class="hover:text-amber-300 transition-colors">Astrology</a>
+          <a href="/meditation" class="hover:text-amber-300 transition-colors">Meditation</a>
+          <a href="/tarot/select" class="hover:text-amber-300 transition-colors">Tarot</a>
+          <a href="/numerology" class="hover:text-amber-300 transition-colors">Numerology</a>
+          <a href="/crystals" class="text-amber-300 font-semibold">Crystals</a>
+          <a href="https://ko-fi.com/esotericwisdom" target="_blank" rel="noopener noreferrer" class="px-3 py-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-white font-semibold hover:scale-105 transition-transform">☕ Support</a>
+        </div>
+      </nav>
+
+      <!-- Hero -->
+      <header class="text-center py-6">
+        <div class="floating text-7xl mb-4">💎</div>
+        <h1 class="font-cinzel text-4xl md:text-5xl font-bold mb-3">
+          <span class="aurora-text">Crystals &amp; Sacred Stones</span>
+        </h1>
+        <p class="text-purple-200/80 text-lg max-w-2xl mx-auto leading-relaxed">
+          Born from the earth over millions of years, crystals are nature's most perfect vessels of energy.
+          Explore their ancient secrets, mythic histories, and transformative powers.
+        </p>
+      </header>
+
+      <!-- History Section -->
+      <section class="bg-gradient-to-br from-purple-900/40 to-indigo-900/40 border border-purple-500/40 rounded-3xl p-8 backdrop-blur-md shadow-2xl">
+        <h2 class="font-cinzel text-2xl font-semibold mb-5 text-amber-300">✦ A History Written in Stone</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <p class="text-purple-100/90 text-sm leading-relaxed mb-4">
+              The use of crystals and gemstones stretches back to the earliest chapters of human civilisation. In ancient Sumer, priests wore lapis lazuli to commune with the gods. Egyptian pharaohs were buried with turquoise, carnelian, and obsidian to protect and guide them into the afterlife. The very word <em class="text-amber-300">crystal</em> derives from the Greek <em>krystallos</em>, meaning "ice" — the ancients believed quartz was water frozen so deeply by the gods it could never melt.
+            </p>
+            <p class="text-purple-100/90 text-sm leading-relaxed">
+              In medieval Europe, physicians prescribed gemstones as medicines. Hildegard von Bingen, the 12th-century mystic, devoted entire chapters of her <em>Physica</em> to the healing powers of stones. Emeralds were said to strengthen memory; sapphires to cool fevers; and garnets to kindle passion.
+            </p>
+          </div>
+          <div>
+            <p class="text-purple-100/90 text-sm leading-relaxed mb-4">
+              Across the Americas, indigenous traditions held that stones were living beings — ancestors of the mineral kingdom with their own consciousness and purpose. Shamans used smoky quartz, jade, and pyrite in ceremony to travel between worlds, invoke protection, and facilitate healing.
+            </p>
+            <p class="text-purple-100/90 text-sm leading-relaxed">
+              Today, crystal work sits at the confluence of geology, metaphysics, and mindfulness. Whether regarded as tangible repositories of vibrational energy or as powerful symbolic anchors for intention, crystals continue to captivate seekers worldwide — and their geological reality is itself miraculous: ordered atomic lattices formed under extraordinary heat and pressure over millions of years.
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-6 p-5 bg-black/30 rounded-2xl border border-amber-500/30">
+          <h3 class="font-cinzel text-base font-semibold text-amber-300 mb-2">📜 Legendary Stones in History</h3>
+          <div class="grid sm:grid-cols-3 gap-4 text-xs text-purple-100/80 leading-relaxed">
+            <div>
+              <strong class="text-pink-300">The Koh-i-Noor Diamond</strong> — One of the oldest and largest cut diamonds in the world, originating in India. Hindu tradition holds it to be the Syamantaka jewel from the <em>Bhagavata Purana</em>, said to bring prosperity or ruin depending on the moral character of its bearer. Every ruler who possessed it ultimately fell from power.
+            </div>
+            <div>
+              <strong class="text-violet-300">The Oracle of Delphi's Omphalos</strong> — Greek mythology describes a navel-stone of baetyl (sacred meteoric stone) at the centre of the earth. The Pythia at Delphi sat upon a tripod above a chasm, breathing vapours, with a large stone said to channel the voice of Apollo.
+            </div>
+            <div>
+              <strong class="text-cyan-300">Jade in Ancient China</strong> — Called <em>yu</em>, jade was considered more precious than gold. It symbolised the five virtues: benevolence, wisdom, courage, justice, and purity. Emperors were buried in jade suits of thousands of sewn plaques, hoping the stone's incorruptibility would preserve their bodies into eternity.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Crystals Grid -->
+      <section>
+        <h2 class="font-cinzel text-2xl font-semibold mb-6 text-center text-purple-200">✧ The Crystal Compendium ✧</h2>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          <!-- Amethyst -->
+          <div class="crystal-card bg-gradient-to-br from-violet-900/50 to-purple-900/50 border border-violet-500/50 rounded-2xl p-6 backdrop-blur-md shadow-xl">
+            <div class="flex items-start gap-3 mb-3">
+              <span class="text-4xl">🔮</span>
+              <div>
+                <h3 class="font-cinzel text-lg font-semibold text-violet-200">Amethyst</h3>
+                <span class="text-xs text-violet-300/70">Silicon Dioxide · Quartz Family</span>
+              </div>
+            </div>
+            <div class="flex items-center mb-3 text-xs">
+              <span class="chakra-dot" style="background:#9333ea;"></span>
+              <span class="text-purple-200">Crown &amp; Third Eye Chakras</span>
+            </div>
+            <p class="text-sm text-purple-100/80 leading-relaxed mb-3">
+              One of the most beloved crystals in any tradition, amethyst's violet radiance has enchanted mystics for millennia. The ancient Greeks carved drinking vessels from it, believing it prevented intoxication — the name means "not drunken" in Greek. It was considered as precious as ruby or sapphire until Brazil's vast deposits were discovered in the 19th century.
+            </p>
+            <p class="text-sm text-purple-100/70 leading-relaxed mb-4">
+              Amethyst is prized for sharpening intuition, calming the mind, and deepening spiritual practice. Medieval European soldiers wore amethyst amulets in battle, believing the stone kept them cool-headed and protected from harm.
+            </p>
+            <div class="bg-black/30 rounded-xl p-3 text-xs text-purple-100/70">
+              <strong class="text-violet-300">Use it for:</strong> Meditation, dream enhancement, relieving anxiety, protection during psychic work, sleep.
+            </div>
+          </div>
+
+          <!-- Clear Quartz -->
+          <div class="crystal-card bg-gradient-to-br from-slate-800/50 to-blue-900/40 border border-slate-400/40 rounded-2xl p-6 backdrop-blur-md shadow-xl">
+            <div class="flex items-start gap-3 mb-3">
+              <span class="text-4xl">✨</span>
+              <div>
+                <h3 class="font-cinzel text-lg font-semibold text-slate-100">Clear Quartz</h3>
+                <span class="text-xs text-slate-300/70">Silicon Dioxide · Master Healer</span>
+              </div>
+            </div>
+            <div class="flex items-center mb-3 text-xs">
+              <span class="chakra-dot" style="background:#f8fafc;border:1px solid #94a3b8;"></span>
+              <span class="text-slate-200">Crown Chakra · All Chakras</span>
+            </div>
+            <p class="text-sm text-slate-100/80 leading-relaxed mb-3">
+              Known as the "Master Healer," clear quartz is the most versatile crystal in existence. The ancient Romans used rock crystal lenses to cauterise wounds. The Hopi of North America call it the "Brain Cells of Mother Earth" and use it in rain ceremonies. Crystal balls used by seers and scryers throughout history were almost always polished quartz spheres.
+            </p>
+            <p class="text-sm text-slate-100/70 leading-relaxed mb-4">
+              Quartz is believed to amplify energy and intention, making it an exceptional ally for any purpose. It stores, releases, and regulates energy and is said to amplify the properties of any crystal placed near it.
+            </p>
+            <div class="bg-black/30 rounded-xl p-3 text-xs text-slate-200/70">
+              <strong class="text-slate-300">Use it for:</strong> Amplifying intentions, programming with goals, energy cleansing, scrying, healing grids, clarity of thought.
+            </div>
+          </div>
+
+          <!-- Rose Quartz -->
+          <div class="crystal-card bg-gradient-to-br from-rose-900/50 to-pink-900/50 border border-rose-500/50 rounded-2xl p-6 backdrop-blur-md shadow-xl">
+            <div class="flex items-start gap-3 mb-3">
+              <span class="text-4xl">💗</span>
+              <div>
+                <h3 class="font-cinzel text-lg font-semibold text-rose-200">Rose Quartz</h3>
+                <span class="text-xs text-rose-300/70">Silicon Dioxide · Stone of Love</span>
+              </div>
+            </div>
+            <div class="flex items-center mb-3 text-xs">
+              <span class="chakra-dot" style="background:#ec4899;"></span>
+              <span class="text-rose-200">Heart Chakra</span>
+            </div>
+            <p class="text-sm text-rose-100/80 leading-relaxed mb-3">
+              The stone of universal love. Greek and Roman mythology attributed rose quartz to Aphrodite and Venus — legend says the stone's pink hue was stained by the blood of Adonis when Aphrodite rushed to save him, their blood mingling on the crystal. Ancient Egyptian women used rose quartz face masks, believing it prevented wrinkles and imparted a glowing complexion.
+            </p>
+            <p class="text-sm text-rose-100/70 leading-relaxed mb-4">
+              Rose quartz carries a gentle, nurturing energy that opens the heart to all forms of love: self-love, romantic love, familial bonds, and compassion for all beings. It soothes grief and jealousy, replacing them with trust and harmony.
+            </p>
+            <div class="bg-black/30 rounded-xl p-3 text-xs text-rose-100/70">
+              <strong class="text-rose-300">Use it for:</strong> Attracting love, healing heartbreak, self-acceptance, cultivating compassion, deepening relationships.
+            </div>
+          </div>
+
+          <!-- Black Tourmaline -->
+          <div class="crystal-card bg-gradient-to-br from-gray-900/60 to-slate-900/60 border border-gray-500/40 rounded-2xl p-6 backdrop-blur-md shadow-xl">
+            <div class="flex items-start gap-3 mb-3">
+              <span class="text-4xl">🖤</span>
+              <div>
+                <h3 class="font-cinzel text-lg font-semibold text-gray-200">Black Tourmaline</h3>
+                <span class="text-xs text-gray-400/70">Boron Silicate · Schorl</span>
+              </div>
+            </div>
+            <div class="flex items-center mb-3 text-xs">
+              <span class="chakra-dot" style="background:#1c1917;border:1px solid #57534e;"></span>
+              <span class="text-gray-300">Root Chakra</span>
+            </div>
+            <p class="text-sm text-gray-100/80 leading-relaxed mb-3">
+              The supreme stone of protection. Dutch traders in the 1700s discovered that tourmaline could attract ash when heated — earning it the name <em>aschentrekker</em> ("ash puller") — later understood to be piezoelectricity, a genuine physical property now used in pressure sensors and electronics. Medieval alchemists believed schorl could keep dark entities at bay during dangerous ritual work.
+            </p>
+            <p class="text-sm text-gray-100/70 leading-relaxed mb-4">
+              Black tourmaline is prized as the premier protective stone, believed to create an energetic shield that deflects negative energy, psychic attack, and electromagnetic pollution. It grounds scattered energy and connects the bearer to the stabilising power of the earth.
+            </p>
+            <div class="bg-black/30 rounded-xl p-3 text-xs text-gray-200/70">
+              <strong class="text-gray-300">Use it for:</strong> Psychic protection, grounding, shielding from EMF, banishing negativity, relieving anxiety and panic.
+            </div>
+          </div>
+
+          <!-- Lapis Lazuli -->
+          <div class="crystal-card bg-gradient-to-br from-blue-900/50 to-indigo-900/50 border border-blue-500/40 rounded-2xl p-6 backdrop-blur-md shadow-xl">
+            <div class="flex items-start gap-3 mb-3">
+              <span class="text-4xl">🌑</span>
+              <div>
+                <h3 class="font-cinzel text-lg font-semibold text-blue-200">Lapis Lazuli</h3>
+                <span class="text-xs text-blue-300/70">Lazurite, Calcite &amp; Pyrite</span>
+              </div>
+            </div>
+            <div class="flex items-center mb-3 text-xs">
+              <span class="chakra-dot" style="background:#1d4ed8;"></span>
+              <span class="text-blue-200">Third Eye &amp; Throat Chakras</span>
+            </div>
+            <p class="text-sm text-blue-100/80 leading-relaxed mb-3">
+              Prized for over 6,000 years, lapis lazuli was mined in the mountains of Afghanistan and traded across ancient civilisations. Sumerians believed it held the soul of the gods. Egyptians ground it into powder for the iconic blue cosmetics that adorned the eyes of pharaohs and deities alike — including the famous death mask of Tutankhamun. Michelangelo used ultramarine pigment made from lapis to paint the Sistine Chapel ceiling.
+            </p>
+            <p class="text-sm text-blue-100/70 leading-relaxed mb-4">
+              Associated with wisdom, truth, and inner vision, lapis activates the higher mind and inspires intellectual clarity. Its gold pyrite flecks mirror the star-scattered night sky, connecting the bearer to universal truths and divine perspective.
+            </p>
+            <div class="bg-black/30 rounded-xl p-3 text-xs text-blue-100/70">
+              <strong class="text-blue-300">Use it for:</strong> Enhancing intuition, truth-speaking, past-life recall, intellectual insight, connecting with spirit guides.
+            </div>
+          </div>
+
+          <!-- Citrine -->
+          <div class="crystal-card bg-gradient-to-br from-yellow-900/50 to-amber-900/50 border border-yellow-500/40 rounded-2xl p-6 backdrop-blur-md shadow-xl">
+            <div class="flex items-start gap-3 mb-3">
+              <span class="text-4xl">🌟</span>
+              <div>
+                <h3 class="font-cinzel text-lg font-semibold text-yellow-200">Citrine</h3>
+                <span class="text-xs text-yellow-300/70">Silicon Dioxide · Stone of Abundance</span>
+              </div>
+            </div>
+            <div class="flex items-center mb-3 text-xs">
+              <span class="chakra-dot" style="background:#eab308;"></span>
+              <span class="text-yellow-200">Solar Plexus Chakra</span>
+            </div>
+            <p class="text-sm text-yellow-100/80 leading-relaxed mb-3">
+              Called the "Merchant's Stone," citrine's golden warmth has long been associated with prosperity and success. Ancient Romans wore it as a talisman in signet rings. In Scotland, 17th-century Highlanders decorated their dagger hilts with citrine for luck. Chinese tradition links it to the energy of the sun — solar power crystallised into stone.
+            </p>
+            <p class="text-sm text-yellow-100/70 leading-relaxed mb-4">
+              Unlike most crystals, citrine is said to never need cleansing — it dissipates negative energy rather than absorbing it. It carries the warm, optimistic energy of sunlight, stimulating creativity, confidence, and the joyful pursuit of life's abundance. Merchants traditionally placed it in their cash registers to attract prosperity.
+            </p>
+            <div class="bg-black/30 rounded-xl p-3 text-xs text-yellow-100/70">
+              <strong class="text-yellow-300">Use it for:</strong> Manifesting abundance, boosting confidence, creativity, personal power, dispelling fear and self-doubt.
+            </div>
+          </div>
+
+          <!-- Obsidian -->
+          <div class="crystal-card bg-gradient-to-br from-stone-900/60 to-gray-900/60 border border-stone-500/40 rounded-2xl p-6 backdrop-blur-md shadow-xl">
+            <div class="flex items-start gap-3 mb-3">
+              <span class="text-4xl">⚫</span>
+              <div>
+                <h3 class="font-cinzel text-lg font-semibold text-stone-200">Black Obsidian</h3>
+                <span class="text-xs text-stone-400/70">Volcanic Glass · Mirror of Truth</span>
+              </div>
+            </div>
+            <div class="flex items-center mb-3 text-xs">
+              <span class="chakra-dot" style="background:#292524;border:1px solid #78716c;"></span>
+              <span class="text-stone-300">Root Chakra</span>
+            </div>
+            <p class="text-sm text-stone-100/80 leading-relaxed mb-3">
+              Born from volcanic fire, obsidian is not technically a mineral but a natural glass formed when lava cools rapidly. It was one of humanity's first tools — obsidian blades found at ancient sites are sharper than surgical steel. Aztec priests used polished obsidian mirrors, called <em>tezcatl</em>, for scrying and divination. John Dee, Queen Elizabeth I's court astrologer, reputedly used an Aztec obsidian mirror to commune with angels.
+            </p>
+            <p class="text-sm text-stone-100/70 leading-relaxed mb-4">
+              Obsidian is ruthless in its honesty. It holds up a mirror to the shadow self, exposing hidden truths, unresolved traumas, and illusions with unflinching clarity. It is a stone of deep transformation — not gentle, but profoundly liberating.
+            </p>
+            <div class="bg-black/30 rounded-xl p-3 text-xs text-stone-200/70">
+              <strong class="text-stone-300">Use it for:</strong> Shadow work, scrying, releasing past trauma, psychic protection, cutting energetic cords, truth-seeking.
+            </div>
+          </div>
+
+          <!-- Selenite -->
+          <div class="crystal-card bg-gradient-to-br from-slate-800/40 to-indigo-900/30 border border-slate-300/30 rounded-2xl p-6 backdrop-blur-md shadow-xl">
+            <div class="flex items-start gap-3 mb-3">
+              <span class="text-4xl">🌕</span>
+              <div>
+                <h3 class="font-cinzel text-lg font-semibold text-slate-100">Selenite</h3>
+                <span class="text-xs text-slate-300/70">Gypsum · Named for Selene, Moon Goddess</span>
+              </div>
+            </div>
+            <div class="flex items-center mb-3 text-xs">
+              <span class="chakra-dot" style="background:#e2e8f0;border:1px solid #94a3b8;"></span>
+              <span class="text-slate-200">Crown &amp; Higher Chakras</span>
+            </div>
+            <p class="text-sm text-slate-100/80 leading-relaxed mb-3">
+              Named for the Greek lunar goddess Selene, selenite is prized for its otherworldly pearlescent glow — ancient peoples believed it contained moonlight made solid. In Mexico, the Cave of the Giant Crystals near Naica harbours selenite columns up to 12 metres long, grown over 500,000 years in superheated mineral water. These are among the largest natural crystals ever discovered.
+            </p>
+            <p class="text-sm text-slate-100/70 leading-relaxed mb-4">
+              Selenite vibrates at a very high frequency, clearing energy blockages and raising the energetic vibration of any space. Unlike most crystals it is said to cleanse and charge other stones placed upon it, making it an indispensable ally in any crystal practice.
+            </p>
+            <div class="bg-black/30 rounded-xl p-3 text-xs text-slate-200/70">
+              <strong class="text-slate-300">Use it for:</strong> Cleansing other crystals, clearing spaces, connecting to higher realms, angelic communication, mental clarity.
+            </div>
+          </div>
+
+          <!-- Labradorite -->
+          <div class="crystal-card bg-gradient-to-br from-cyan-900/50 to-teal-900/50 border border-cyan-500/40 rounded-2xl p-6 backdrop-blur-md shadow-xl">
+            <div class="flex items-start gap-3 mb-3">
+              <span class="text-4xl">🌈</span>
+              <div>
+                <h3 class="font-cinzel text-lg font-semibold text-cyan-200">Labradorite</h3>
+                <span class="text-xs text-cyan-300/70">Feldspar · Stone of Magic</span>
+              </div>
+            </div>
+            <div class="flex items-center mb-3 text-xs">
+              <span class="chakra-dot" style="background:#0e7490;"></span>
+              <span class="text-cyan-200">Third Eye &amp; Crown Chakras</span>
+            </div>
+            <p class="text-sm text-cyan-100/80 leading-relaxed mb-3">
+              The Inuit people tell that the Northern Lights fell from the sky and became trapped in the rocks of Labrador, Canada — a warrior struck the cliffs with his spear and freed most of the lights back into the heavens, but some remained imprisoned in the stone. This iridescent play of colour — blues, greens, golds, and violet — is a real optical phenomenon called labradorescence, caused by light interference between twinned crystal layers.
+            </p>
+            <p class="text-sm text-cyan-100/70 leading-relaxed mb-4">
+              Labradorite is considered the supreme stone of magic and transformation. It strengthens and protects the aura, raises consciousness, and deflects unwanted energies. Shamans and healers have traditionally used it to strengthen their abilities and journey safely between worlds.
+            </p>
+            <div class="bg-black/30 rounded-xl p-3 text-xs text-cyan-100/70">
+              <strong class="text-cyan-300">Use it for:</strong> Magical practice, aura protection, awakening psychic gifts, transformation, synchronicity, lucid dreaming.
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Chakra Reference -->
+      <section class="bg-gradient-to-br from-indigo-900/40 to-purple-900/40 border border-indigo-500/30 rounded-3xl p-8 backdrop-blur-md shadow-2xl">
+        <h2 class="font-cinzel text-2xl font-semibold mb-5 text-amber-300">✦ Crystals &amp; the Chakra System</h2>
+        <p class="text-purple-100/80 text-sm leading-relaxed mb-6">
+          The Hindu and tantric traditions describe seven primary energy centres in the body — <em>chakras</em> — each governing specific aspects of physical, emotional, and spiritual life. Crystals resonate with these centres through colour, vibration, and elemental correspondence.
+        </p>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
+          <div class="bg-black/30 rounded-xl p-4 border border-red-500/30">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="chakra-dot" style="background:#ef4444;"></span>
+              <strong class="text-red-300">Root Chakra</strong>
+            </div>
+            <p class="text-red-100/70">Grounding, safety, survival</p>
+            <p class="text-red-200/60 mt-1 italic">Black Tourmaline, Red Jasper, Obsidian, Garnet, Hematite</p>
+          </div>
+          <div class="bg-black/30 rounded-xl p-4 border border-orange-500/30">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="chakra-dot" style="background:#f97316;"></span>
+              <strong class="text-orange-300">Sacral Chakra</strong>
+            </div>
+            <p class="text-orange-100/70">Creativity, sexuality, emotion</p>
+            <p class="text-orange-200/60 mt-1 italic">Carnelian, Orange Calcite, Moonstone, Sunstone, Amber</p>
+          </div>
+          <div class="bg-black/30 rounded-xl p-4 border border-yellow-500/30">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="chakra-dot" style="background:#eab308;"></span>
+              <strong class="text-yellow-300">Solar Plexus</strong>
+            </div>
+            <p class="text-yellow-100/70">Personal power, confidence, will</p>
+            <p class="text-yellow-200/60 mt-1 italic">Citrine, Tiger's Eye, Yellow Jasper, Pyrite, Golden Calcite</p>
+          </div>
+          <div class="bg-black/30 rounded-xl p-4 border border-green-500/30">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="chakra-dot" style="background:#22c55e;"></span>
+              <strong class="text-green-300">Heart Chakra</strong>
+            </div>
+            <p class="text-green-100/70">Love, compassion, forgiveness</p>
+            <p class="text-green-200/60 mt-1 italic">Rose Quartz, Green Aventurine, Jade, Malachite, Rhodonite</p>
+          </div>
+          <div class="bg-black/30 rounded-xl p-4 border border-sky-500/30">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="chakra-dot" style="background:#0ea5e9;"></span>
+              <strong class="text-sky-300">Throat Chakra</strong>
+            </div>
+            <p class="text-sky-100/70">Communication, truth, self-expression</p>
+            <p class="text-sky-200/60 mt-1 italic">Lapis Lazuli, Aquamarine, Blue Lace Agate, Sodalite, Turquoise</p>
+          </div>
+          <div class="bg-black/30 rounded-xl p-4 border border-indigo-500/30">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="chakra-dot" style="background:#6366f1;"></span>
+              <strong class="text-indigo-300">Third Eye</strong>
+            </div>
+            <p class="text-indigo-100/70">Intuition, psychic sight, wisdom</p>
+            <p class="text-indigo-200/60 mt-1 italic">Amethyst, Labradorite, Fluorite, Iolite, Lapis Lazuli</p>
+          </div>
+          <div class="bg-black/30 rounded-xl p-4 border border-violet-500/30">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="chakra-dot" style="background:#8b5cf6;"></span>
+              <strong class="text-violet-300">Crown Chakra</strong>
+            </div>
+            <p class="text-violet-100/70">Spiritual connection, unity, enlightenment</p>
+            <p class="text-violet-200/60 mt-1 italic">Clear Quartz, Selenite, Howlite, White Opal, Diamond</p>
+          </div>
+          <div class="bg-black/30 rounded-xl p-4 border border-purple-500/30">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="chakra-dot" style="background:linear-gradient(135deg,#c084fc,#818cf8);"></span>
+              <strong class="text-purple-300">All Chakras</strong>
+            </div>
+            <p class="text-purple-100/70">Alignment, amplification, full-body healing</p>
+            <p class="text-purple-200/60 mt-1 italic">Clear Quartz, Rainbow Fluorite, Kyanite, Sugilite</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- How to Use Crystals -->
+      <section class="bg-gradient-to-br from-rose-900/30 to-purple-900/40 border border-rose-500/30 rounded-3xl p-8 backdrop-blur-md shadow-2xl">
+        <h2 class="font-cinzel text-2xl font-semibold mb-5 text-amber-300">✦ Working with Crystals</h2>
+        <p class="text-purple-100/80 text-sm leading-relaxed mb-6">
+          Crystals are tools, not magic wands — their power is most fully unlocked through intentional, consistent practice. Here are the foundational methods taught across diverse crystal traditions.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Cleansing -->
+          <div>
+            <h3 class="font-cinzel text-lg text-rose-300 mb-4">🌊 Cleansing Your Crystals</h3>
+            <p class="text-sm text-purple-100/70 leading-relaxed mb-4">
+              Crystals absorb energy from their environment and the people they encounter. Before working with any new stone, or after heavy use, cleansing restores it to its natural vibrational state. Always check whether your crystal is water-safe (many are not — selenite, malachite, and pyrite dissolve or rust in water).
+            </p>
+            <ul class="space-y-3 text-sm text-purple-100/80">
+              <li class="flex gap-3">
+                <span class="text-lg flex-shrink-0">🌙</span>
+                <div><strong class="text-rose-300">Moonlight Bath</strong> — Place crystals on a windowsill or outside under the full moon overnight. The moon's cycle corresponds with feminine and intuitive energies, making this a deeply cleansing and recharging method safe for all stones.</div>
+              </li>
+              <li class="flex gap-3">
+                <span class="text-lg flex-shrink-0">🌿</span>
+                <div><strong class="text-rose-300">Smoke Cleansing</strong> — Pass crystals through the smoke of sacred herbs such as sage, palo santo, cedar, or rosemary. Visualise the smoke carrying away stagnant energies. This ancient practice is used across virtually every world tradition.</div>
+              </li>
+              <li class="flex gap-3">
+                <span class="text-lg flex-shrink-0">🪨</span>
+                <div><strong class="text-rose-300">Selenite Plate</strong> — Rest crystals on a selenite plate or bowl for several hours. Selenite's self-cleansing nature transmutes absorbed energy without itself needing cleansing.</div>
+              </li>
+              <li class="flex gap-3">
+                <span class="text-lg flex-shrink-0">🌍</span>
+                <div><strong class="text-rose-300">Earth Burial</strong> — Bury crystals in soil for 24–48 hours (or up to a week for deeply imprinted stones) to allow the earth to absorb and neutralise negative energy. Mark the spot carefully.</div>
+              </li>
+              <li class="flex gap-3">
+                <span class="text-lg flex-shrink-0">🎵</span>
+                <div><strong class="text-rose-300">Sound Cleansing</strong> — Use a singing bowl, tuning fork, or bells to bathe the crystals in sound. The vibrational frequencies dislodge stagnant energies. Safe for all crystal types.</div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Programming & Using -->
+          <div>
+            <h3 class="font-cinzel text-lg text-violet-300 mb-4">🔮 Programming &amp; Using Crystals</h3>
+            <p class="text-sm text-purple-100/70 leading-relaxed mb-4">
+              Programming a crystal means imprinting it with a specific intention, creating a focused energetic partnership between your will and the stone's natural properties.
+            </p>
+            <div class="steps-list space-y-3 text-sm text-purple-100/80">
+              <div class="usage-step flex items-start">
+                <div class="ml-2"><strong class="text-violet-300">Choose with intention.</strong> Let yourself be drawn to a crystal rather than selecting purely by guidebook. Hold different stones and notice how each one feels in your hand — warmth, tingling, or a sense of calm recognition are common signs of resonance.</div>
+              </div>
+              <div class="usage-step flex items-start">
+                <div class="ml-2"><strong class="text-violet-300">Cleanse before first use.</strong> Always cleanse a new crystal before working with it. Stones travel far before reaching you — they carry the energetic imprints of every hand they have passed through.</div>
+              </div>
+              <div class="usage-step flex items-start">
+                <div class="ml-2"><strong class="text-violet-300">Set your intention.</strong> Hold the crystal in both hands, close your eyes, and breathe slowly. State your intention clearly — aloud if possible — directing the energy of your words and breath into the stone. Be specific and positive: "This crystal amplifies my clarity and focus."</div>
+              </div>
+              <div class="usage-step flex items-start">
+                <div class="ml-2"><strong class="text-violet-300">Work with it daily.</strong> Carry your crystal in a pocket, wear it as jewellery, place it on your body during meditation, or set it on your desk or bedside. Consistent contact deepens the bond and strengthens the intention.</div>
+              </div>
+              <div class="usage-step flex items-start">
+                <div class="ml-2"><strong class="text-violet-300">Listen and observe.</strong> Notice shifts in your mood, thoughts, dreams, or synchronicities. A crystal's influence is often subtle — felt in the quality of your attention rather than dramatic events.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Crystal Grid -->
+        <div class="mt-8 p-6 bg-black/30 rounded-2xl border border-amber-500/30">
+          <h3 class="font-cinzel text-lg text-amber-300 mb-4">⬡ Crystal Grids</h3>
+          <p class="text-sm text-purple-100/80 leading-relaxed mb-3">
+            A crystal grid is an intentional arrangement of stones in a geometric pattern — sacred geometry acts as a blueprint that amplifies the collective energy of the crystals, creating a unified energetic field far more powerful than any single stone alone.
+          </p>
+          <div class="grid sm:grid-cols-3 gap-4 text-xs text-purple-100/70">
+            <div class="bg-purple-900/30 rounded-xl p-3">
+              <strong class="text-amber-300 block mb-1">The Seed of Life</strong>
+              Seven circles — one central stone surrounded by six. Used for new beginnings, fertility, and manifestation. Place citrine or pyrite at centre with clear quartz points radiating outward.
+            </div>
+            <div class="bg-purple-900/30 rounded-xl p-3">
+              <strong class="text-amber-300 block mb-1">The Flower of Life</strong>
+              An expanded grid of 19 stones. Excellent for spiritual growth and accessing Akashic wisdom. Use amethyst, lapis lazuli, and clear quartz.
+            </div>
+            <div class="bg-purple-900/30 rounded-xl p-3">
+              <strong class="text-amber-300 block mb-1">The Metatron's Cube</strong>
+              Thirteen stones echoing all five Platonic solids. A master grid for protection, clearing negative energy, and connecting with archangels and divine guidance.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Anecdotes & Lore -->
+      <section class="bg-gradient-to-br from-teal-900/30 to-indigo-900/40 border border-teal-500/30 rounded-3xl p-8 backdrop-blur-md shadow-2xl">
+        <h2 class="font-cinzel text-2xl font-semibold mb-5 text-amber-300">✦ Myths, Lore &amp; Modern Encounters</h2>
+        <div class="grid md:grid-cols-2 gap-6 text-sm text-teal-100/80">
+          <div class="space-y-4">
+            <div class="p-4 bg-black/30 rounded-xl border border-teal-500/20">
+              <strong class="text-teal-300 block mb-2">🐍 The Philosopher's Stone</strong>
+              Medieval alchemists sought the <em>lapis philosophorum</em> — believed to transmute base metals into gold and grant immortality. While often depicted as a red stone (perhaps a ruby or red calcite), many believed clear quartz or a particular configuration of minerals could serve as the vehicle for this ultimate transformation. Carl Jung reinterpreted the Philosopher's Stone as a metaphor for psychic wholeness and the integration of the shadow self.
+            </div>
+            <div class="p-4 bg-black/30 rounded-xl border border-teal-500/20">
+              <strong class="text-teal-300 block mb-2">🌕 Moonstone &amp; Lunar Magic</strong>
+              Moonstone has long been woven with the mythology of the moon. Ancient Romans believed it was formed from frozen moonbeams; travellers carried it as protection when journeying by night. In India, moonstone is still one of the most sacred gemstones, associated with Chandra, the moon god, and considered a bringer of luck, fertility, and prophetic dreams. On the island of Sri Lanka, moonstones set into the steps of ancient temples were said to ground sacred energy from sky to earth.
+            </div>
+          </div>
+          <div class="space-y-4">
+            <div class="p-4 bg-black/30 rounded-xl border border-teal-500/20">
+              <strong class="text-teal-300 block mb-2">⚡ Tesla's Quartz Obsession</strong>
+              Nikola Tesla, the visionary electrical engineer who pioneered alternating current, wrote extensively about crystals as living beings with frequencies. He famously stated: <em>"In a crystal we have clear evidence of the existence of a formative life-principle, and though we cannot understand the life of a crystal, it is nonetheless a living being."</em> Tesla's work with piezoelectric quartz in oscillators directly contributed to the quartz watches and radio technology still in use today.
+            </div>
+            <div class="p-4 bg-black/30 rounded-xl border border-teal-500/20">
+              <strong class="text-teal-300 block mb-2">💠 The Atlantis Crystal Theory</strong>
+              Edgar Cayce, the "Sleeping Prophet" of the early 20th century, gave channelled readings describing Atlantis as a civilisation powered by enormous crystals — the Tuaoi Stone, also called the "Terrible Crystal" — said to act as a power generator drawing on cosmic rays. Cayce claimed this crystal's misuse contributed to Atlantis's destruction, and that crystals from that age lie buried beneath the Bimini Road off the Bahamas.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Closing Wisdom -->
+      <section class="text-center py-8">
+        <div class="glow-card inline-block bg-gradient-to-br from-purple-900/50 to-indigo-900/50 border border-purple-400/50 rounded-3xl px-10 py-8 backdrop-blur-md shadow-2xl max-w-2xl">
+          <div class="text-5xl mb-4">💎</div>
+          <h3 class="font-cinzel text-xl text-amber-300 mb-3">A Final Word</h3>
+          <p class="text-purple-100/80 text-sm leading-relaxed italic">
+            "Crystals grew inside rock like arithmetic flowers. They lengthened and spread, adding plane to plane in an awed and perfect obedience to an absolute geometry that even stones — maybe only stones — understood."
+          </p>
+          <p class="text-purple-300/60 text-xs mt-3">— Annie Dillard, <em>Pilgrim at Tinker Creek</em></p>
+          <p class="text-purple-100/60 text-xs mt-4 leading-relaxed">
+            Whether you approach crystals as geological marvels, spiritual allies, or both, their beauty invites us to slow down, hold something ancient in our hands, and remember that the earth has been weaving miracles long before we arrived to name them.
+          </p>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="relative z-10 text-center py-8 text-violet-300/50 text-xs mt-8">
+      <p class="italic">"The job of the artist is always to deepen the mystery." — Francis Bacon</p>
+      <p class="mt-2">Esoteric Wisdom · Built with ✨ in Rust</p>
+      <p class="mt-2"><a href="/home" class="hover:text-violet-300 transition-colors">← Back to Portal</a></p>
+    </footer>
+
+    <script>
+      const sf = document.getElementById('starfield');
+      for (let i = 0; i < 180; i++) {
+        const s = document.createElement('div');
+        s.className = 'star';
+        const size = Math.random() * 2.5 + 0.5;
+        s.style.cssText = `width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--dur:${2+Math.random()*4}s;--delay:${Math.random()*5}s;opacity:${0.2+Math.random()*0.8};`;
+        sf.appendChild(s);
+      }
+    </script>
+  </body>
+</html>

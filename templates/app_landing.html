@@ -79,6 +79,7 @@
         <a href="/meditation" class="nav-link text-violet-200 hover:text-amber-300">Meditation</a>
         <a href="/tarot/select" class="nav-link text-violet-200 hover:text-amber-300">Tarot</a>
         <a href="/numerology" class="nav-link text-violet-200 hover:text-amber-300">Numerology</a>
+        <a href="/crystals" class="nav-link text-violet-200 hover:text-amber-300">Crystals</a>
         <a href="/journal/reflections" class="nav-link text-emerald-300 hover:text-emerald-200">✨ Reflections</a>
         {% if is_admin %}
         <a href="/journal" class="nav-link text-amber-300 hover:text-amber-200 font-semibold">📔 Journal</a>
@@ -116,7 +117,7 @@
       </p>
 
       <!-- Feature Cards -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-{% if is_admin %}6{% else %}5{% endif %} gap-5 max-w-6xl w-full justify-items-center">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-{% if is_admin %}4{% else %}3{% endif %} gap-5 max-w-6xl w-full justify-items-center">
 
         <a href="/astrology" class="section-card bg-gradient-to-br from-purple-900/60 to-indigo-900/60 border border-purple-500/50 rounded-2xl p-6 backdrop-blur-md shadow-xl shadow-purple-500/20 w-full">
           <div class="text-4xl mb-3">♈</div>
@@ -144,6 +145,13 @@
           <h2 class="font-cinzel text-base font-semibold mb-2 text-amber-300">Numerology</h2>
           <p class="text-xs text-violet-100/80 leading-relaxed">Decode numbers hidden in your name and birth date — Life Path, Soul Urge &amp; more.</p>
           <div class="mt-4 text-xs text-amber-300/70">→ Discover Your Numbers</div>
+        </a>
+
+        <a href="/crystals" class="section-card bg-gradient-to-br from-purple-900/60 to-pink-900/60 border border-purple-400/50 rounded-2xl p-6 backdrop-blur-md shadow-xl shadow-purple-500/20 w-full">
+          <div class="text-4xl mb-3">💎</div>
+          <h2 class="font-cinzel text-base font-semibold mb-2 text-purple-200">Crystals</h2>
+          <p class="text-xs text-violet-100/80 leading-relaxed">Sacred stones &amp; natural minerals — their history, powers, chakra resonance, and how to work with them.</p>
+          <div class="mt-4 text-xs text-purple-300/70">→ Explore Crystals</div>
         </a>
 
         <a href="/journal/reflections" class="section-card bg-gradient-to-br from-emerald-900/60 to-teal-900/60 border border-emerald-500/50 rounded-2xl p-6 backdrop-blur-md shadow-xl shadow-emerald-500/20 w-full">
