@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Druidism — Esoteric Wisdom</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+    <style>
+      body {
+        background: radial-gradient(ellipse at top, #052e16 0%, #0a1a0a 25%, #020617 60%, #000000 100%);
+        font-family: 'Raleway', sans-serif;
+      }
+      .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+      @keyframes twinkle { 0%,100% { opacity: 0.2; } 50% { opacity: 1; } }
+      .star { position: absolute; border-radius: 50%; background: white; animation: twinkle var(--dur,3s) ease-in-out infinite; animation-delay: var(--delay,0s); }
+      @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+      .floating { animation: float 5s ease-in-out infinite; }
+      @keyframes shimmer {
+        0% { background-position: -200% center; }
+        100% { background-position: 200% center; }
+      }
+      @keyframes oak-glow {
+        0%, 100% { box-shadow: 0 0 20px rgba(34,197,94,0.25), 0 0 40px rgba(34,197,94,0.1); }
+        50% { box-shadow: 0 0 40px rgba(34,197,94,0.5), 0 0 80px rgba(34,197,94,0.25); }
+      }
+      .aurora-text {
+        background: linear-gradient(90deg, #22c55e, #86efac, #a3e635, #16a34a, #22c55e);
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        animation: shimmer 5s linear infinite;
+      }
+      .druid-card {
+        transition: all 0.35s ease;
+        cursor: default;
+      }
+      .druid-card:hover {
+        transform: translateY(-7px) scale(1.01);
+        box-shadow: 0 24px 64px rgba(34,197,94,0.2);
+        border-color: rgba(34,197,94,0.6) !important;
+      }
+      .glow-card { animation: oak-glow 4s ease-in-out infinite; }
+    </style>
+  </head>
+  <body class="min-h-screen text-white px-4 py-8">
+    <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+
+    <div class="relative z-10 max-w-6xl mx-auto space-y-10">
+
+      <!-- Navigation -->
+      <nav class="flex items-center justify-between bg-black/30 backdrop-blur-md rounded-2xl px-6 py-3 border border-green-900/30 flex-wrap gap-3">
+        <a href="/home" class="font-cinzel text-amber-300 text-sm tracking-widest">✦ Esoteric Wisdom</a>
+        <div class="flex gap-4 text-xs text-violet-200 flex-wrap justify-end">
+          <a href="/astrology" class="hover:text-amber-300 transition-colors">Astrology</a>
+          <a href="/meditation" class="hover:text-amber-300 transition-colors">Meditation</a>
+          <a href="/tarot/select" class="hover:text-amber-300 transition-colors">Tarot</a>
+          <a href="/numerology" class="hover:text-amber-300 transition-colors">Numerology</a>
+          <a href="/crystals" class="hover:text-amber-300 transition-colors">Crystals</a>
+          <a href="/runes" class="hover:text-amber-300 transition-colors">Runes</a>
+          <a href="/shamanism" class="hover:text-amber-300 transition-colors">Shamanism</a>
+          <a href="/druidism" class="text-green-400 font-semibold">Druidism</a>
+          <a href="https://ko-fi.com/esotericwisdom" target="_blank" rel="noopener noreferrer" class="px-3 py-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-white font-semibold hover:scale-105 transition-transform">☕ Support</a>
+        </div>
+      </nav>
+
+      <!-- Hero -->
+      <header class="text-center py-6">
+        <div class="floating text-7xl mb-4">🌳</div>
+        <h1 class="font-cinzel text-4xl md:text-5xl font-bold mb-3">
+          <span class="aurora-text">Druidism</span>
+        </h1>
+        <p class="text-green-100/80 text-lg max-w-2xl mx-auto leading-relaxed">
+          Keepers of the sacred groves, voices of the oak and mistletoe — the Druids were philosophers, astronomers, poets, and priests who stood at the living crossroads of the natural and divine.
+        </p>
+      </header>
+
+      <!-- What Is Druidism -->
+      <section class="bg-gradient-to-br from-green-950/40 to-stone-900/50 border border-green-800/40 rounded-3xl p-8 backdrop-blur-md shadow-2xl">
+        <h2 class="font-cinzel text-2xl font-semibold mb-5 text-green-300">✦ What Is Druidism?</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <p class="text-green-100/90 text-sm leading-relaxed mb-4">
+              Druidism is the spiritual and philosophical tradition of the ancient Celtic peoples of Gaul (France),
+              Britain, and Ireland, flourishing from roughly <strong class="text-green-300">600 BCE to 400 CE</strong>
+              before being suppressed by Roman conquest and later Christian conversion. The word
+              <em class="text-green-300">Druid</em> likely derives from two Proto-Celtic roots:
+              <em>dru-</em> (oak, or possibly "deep knowledge") and <em>*wid-</em> (to know, to see) — making
+              a Druid literally <strong class="text-green-300">"one who knows the oak"</strong> or
+              "one of deep knowing."
+            </p>
+            <p class="text-green-100/90 text-sm leading-relaxed mb-4">
+              The ancient Druids were the intellectual and spiritual elite of Celtic society — a class combining
+              the roles of priest, judge, philosopher, astronomer, healer, poet, and political counsellor. Julius
+              Caesar, who fought and wrote extensively about the Gauls, noted that Druids were exempt from
+              military service and taxes, held the highest social authority, and studied for up to twenty years
+              to master their tradition — all of it memorised, never written down.
+            </p>
+            <p class="text-green-100/90 text-sm leading-relaxed">
+              The oral transmission of Druidic knowledge was not ignorance — it was deliberate. The Druids
+              maintained that writing diminished memory and made knowledge accessible to those who hadn't earned
+              it. The vast stores of sacred lore — cosmology, law, genealogy, astronomy, poetry, and magic —
+              were carried entirely in trained human minds, passed through the living voice and ear.
+            </p>
+          </div>
+          <div>
+            <p class="text-green-100/90 text-sm leading-relaxed mb-4">
+              At the heart of Druidic philosophy was a profound reverence for <strong class="text-green-300">nature
+              as the body of the sacred</strong>. Gods did not dwell in temples built by human hands — they
+              inhabited sacred groves (<em>nemeton</em>), lakes, rivers, mountain peaks, and ancient trees.
+              The oak was supreme among trees, and mistletoe (especially mistletoe growing on an oak) was
+              the most sacred of plants — cut at the new or full moon with a golden sickle, never touching
+              the ground.
+            </p>
+            <p class="text-green-100/90 text-sm leading-relaxed mb-4">
+              Druids believed in the immortality of the soul and in
+              <strong class="text-green-300">transmigration</strong> — the soul's passage through successive
+              lives, human and non-human, across vast periods of time. Caesar wrote that this belief made
+              Celtic warriors famously fearless: if death was merely a doorway between incarnations, why
+              fear the sword? The soul's destination was <em>Tír na nÓg</em> — the Land of Youth —
+              a paradisal realm beyond the western sea, from which it would eventually return.
+            </p>
+            <p class="text-green-100/90 text-sm leading-relaxed">
+              The three orders of the Druidic class were: the
+              <strong class="text-green-300">Druids</strong> (philosophers-priests-judges),
+              the <strong class="text-green-300">Vates or Ovates</strong> (seers, diviners, natural
+              philosophers), and the <strong class="text-green-300">Bards</strong> (poets, musicians,
+              memory-keepers). Each order had distinct functions and training, yet all three formed an
+              interconnected ecosystem of sacred knowledge.
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-6 p-5 bg-black/30 rounded-2xl border border-green-800/30">
+          <h3 class="font-cinzel text-base font-semibold text-green-300 mb-3">🌿 The Three Orders</h3>
+          <div class="grid md:grid-cols-3 gap-4">
+            <div>
+              <h4 class="text-green-200 font-semibold text-sm mb-2">🌳 Druids</h4>
+              <p class="text-green-100/80 text-xs leading-relaxed">Priests, judges, and philosophers. Officiated sacrifices and rituals, arbitrated legal disputes, advised kings, and presided over sacred calendar festivals. Trained for up to 20 years. Could halt armies by standing between them.</p>
+            </div>
+            <div>
+              <h4 class="text-green-200 font-semibold text-sm mb-2">👁 Ovates (Vates)</h4>
+              <p class="text-green-100/80 text-xs leading-relaxed">Seers and natural diviners. Specialised in prophecy, augury (reading omens in bird flight and animal behaviour), divination, healing with plants, and the deeper mysteries of life and death. Intermediaries between the living and the Otherworld.</p>
+            </div>
+            <div>
+              <h4 class="text-green-200 font-semibold text-sm mb-2">🎵 Bards</h4>
+              <p class="text-green-100/80 text-xs leading-relaxed">Poets, musicians, and memory-keepers. Preserved tribal history, genealogy, mythology, and law in verse. A master Bard's satire could blight a king's reputation irreparably; their praise could confer immortality. Poetry was not art — it was magic.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- History -->
+      <section class="bg-gradient-to-br from-stone-900/50 to-green-950/30 border border-stone-600/40 rounded-3xl p-8 backdrop-blur-md shadow-2xl">
+        <h2 class="font-cinzel text-2xl font-semibold mb-5 text-green-300">✦ History of the Druids</h2>
+        <div class="grid md:grid-cols-2 gap-6 mb-6">
+          <div>
+            <p class="text-green-100/90 text-sm leading-relaxed mb-4">
+              The Celts emerged as a distinct cultural and linguistic group around
+              <strong class="text-green-300">1200–800 BCE</strong> in Central Europe, spreading across Gaul,
+              Britain, Ireland, the Iberian Peninsula, Anatolia (as the Galatians), and beyond. The Druidic
+              class appears to have developed alongside or shortly after this cultural flowering — possibly
+              synthesising older Bronze Age religious traditions already present in Atlantic Europe.
+            </p>
+            <p class="text-green-100/90 text-sm leading-relaxed mb-4">
+              <strong class="text-green-300">Stonehenge</strong> and the megalithic monuments of Britain and
+              Brittany predate the Celts by 2,000–3,000 years, but later Druids almost certainly incorporated
+              these sites into their sacred calendar and practice. The alignment of Stonehenge with the
+              midsummer sunrise and midwinter sunset is precisely the kind of astronomical knowledge the
+              Druids were renowned for. Whether they built it or inherited it, they knew it.
+            </p>
+            <p class="text-green-100/90 text-sm leading-relaxed mb-4">
+              The <strong class="text-green-300">island of Anglesey (Mona)</strong> in Wales was the principal
+              Druidic sanctuary in Britain. When Roman general Suetonius Paulinus attacked it in 60 CE, he
+              described rows of black-robed women with torches and Druids raising hands to the sky — a vision
+              so terrifying his soldiers initially froze. Paulinus destroyed the sacred groves and massacred
+              the Druids, effectively ending organised Druidry in Roman-controlled Britain.
+            </p>
+            <p class="text-green-100/90 text-sm leading-relaxed">
+              In Ireland, which was never conquered by Rome, Druidic traditions survived longer, blending with
+              early Christian monasticism. Many Irish monks and saints — including Brigid and Columba — came
+              from Druidic families or maintained strong Druidic influences. The
+              <strong class="text-green-300">Filid</strong> (Irish poet-seers) preserved much that the
+              Druids had carried, safely reframed in Christian garb.
+            </p>
+          </div>
+          <div>
+            <p class="text-green-100/90 text-sm leading-relaxed mb-4">
+              The <strong class="text-green-300">Druidic Revival</strong> of the 17th–18th centuries was
+              sparked by Renaissance and Romantic antiquarianism. Scholars like John Aubrey and William
+              Stukeley began associating Stonehenge with Druids (incorrectly, as we now know). Stukeley —
+              who styled himself "Archdruid Chyndonax" — helped create the modern romantic image of
+              white-robed Druids at the stones, an image still powerfully alive today.
+            </p>
+            <p class="text-green-100/90 text-sm leading-relaxed mb-4">
+              <strong class="text-green-300">Iolo Morganwg</strong> (Edward Williams, 1747–1826) was the
+              single most influential figure in modern Druidry — and one of history's great literary forgers.
+              A Welsh poet and stonemason, he created an elaborate pseudo-historical Druidic mythology and
+              invented rituals that he attributed to ancient sources, most famously founding the
+              <em>Gorsedd of the Bards</em> (1792) on Primrose Hill in London. Much of what people today
+              associate with Druidism — the bardic grades, the Awen symbol, the white robes — originates
+              with Iolo's creative genius rather than ancient practice.
+            </p>
+            <p class="text-green-100/90 text-sm leading-relaxed mb-4">
+              The <strong class="text-green-300">Ancient Order of Druids</strong> was founded in 1781 by
+              Henry Hurle as a fraternal benefit society (similar to Freemasonry), using Druidic symbolism
+              as a framework for brotherhood, mutual aid, and philosophical development. It remains active today.
+            </p>
+            <p class="text-green-100/90 text-sm leading-relaxed">
+              Contemporary Druidry — represented by bodies like the
+              <strong class="text-green-300">Order of Bards, Ovates, and Druids (OBOD)</strong> and the
+              <strong class="text-green-300">British Druid Order</strong> — is a living religion practiced
+              by tens of thousands worldwide, recognised by the UK government as a religion in 2010.
+            </p>
+          </div>
+        </div>
+
+        <!-- Timeline -->
+        <div class="mt-4">
+          <h3 class="font-cinzel text-lg text-green-300 mb-4">Key Moments in Druidic History</h3>
+          <div class="grid md:grid-cols-2 gap-3">
+            <div class="bg-black/20 rounded-xl p-4 border border-green-900/30">
+              <span class="text-green-400 font-semibold text-xs">~800–600 BCE</span>
+              <p class="text-green-100/80 text-xs mt-1">The Druidic class emerges within Celtic society across Continental Europe and the British Isles.</p>
+            </div>
+            <div class="bg-black/20 rounded-xl p-4 border border-green-900/30">
+              <span class="text-green-400 font-semibold text-xs">58–51 BCE</span>
+              <p class="text-green-100/80 text-xs mt-1">Julius Caesar's conquest of Gaul — his <em>De Bello Gallico</em> provides the most detailed surviving ancient description of the Druids.</p>
+            </div>
+            <div class="bg-black/20 rounded-xl p-4 border border-green-900/30">
+              <span class="text-green-400 font-semibold text-xs">54 CE</span>
+              <p class="text-green-100/80 text-xs mt-1">Emperor Claudius bans Druidic religion in the Roman Empire, marking the beginning of systematic suppression.</p>
+            </div>
+            <div class="bg-black/20 rounded-xl p-4 border border-green-900/30">
+              <span class="text-green-400 font-semibold text-xs">60–61 CE</span>
+              <p class="text-green-100/80 text-xs mt-1">Roman destruction of the Druidic sanctuary on Anglesey (Mona) under Suetonius Paulinus.</p>
+            </div>
+            <div class="bg-black/20 rounded-xl p-4 border border-green-900/30">
+              <span class="text-green-400 font-semibold text-xs">1717</span>
+              <p class="text-green-100/80 text-xs mt-1">Foundation of the Universal Druid Bond in London — one of the first formal modern Druidic organisations.</p>
+            </div>
+            <div class="bg-black/20 rounded-xl p-4 border border-green-900/30">
+              <span class="text-green-400 font-semibold text-xs">1781</span>
+              <p class="text-green-100/80 text-xs mt-1">Henry Hurle founds the Ancient Order of Druids in London, blending fraternal organisation with Druidic symbolism.</p>
+            </div>
+            <div class="bg-black/20 rounded-xl p-4 border border-green-900/30">
+              <span class="text-green-400 font-semibold text-xs">1792</span>
+              <p class="text-green-100/80 text-xs mt-1">Iolo Morganwg holds the first modern Gorsedd of the Bards on Primrose Hill — inaugurating the bardic revival.</p>
+            </div>
+            <div class="bg-black/20 rounded-xl p-4 border border-green-900/30">
+              <span class="text-green-400 font-semibold text-xs">2010</span>
+              <p class="text-green-100/80 text-xs mt-1">The UK Charity Commission officially recognises Druidry as a religion, granting the Druid Network charitable status.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Symbols -->
+      <section class="bg-gradient-to-br from-emerald-950/40 to-stone-900/50 border border-emerald-800/40 rounded-3xl p-8 backdrop-blur-md shadow-2xl">
+        <h2 class="font-cinzel text-2xl font-semibold mb-5 text-emerald-300">✦ Sacred Symbols &amp; Natural Magic</h2>
+        <div class="grid md:grid-cols-3 gap-5 mb-6">
+
+          <div class="druid-card bg-black/30 border border-emerald-800/40 rounded-2xl p-5">
+            <div class="text-4xl mb-3">☀</div>
+            <h3 class="font-cinzel text-sm font-semibold text-emerald-300 mb-2">Awen — The Three Rays</h3>
+            <p class="text-xs text-green-100/80 leading-relaxed">
+              The <em>Awen</em> (/ˈaʊɛn/) is the central symbol of modern Druidry — three rays descending from a point of light, symbolising the triple nature of inspiration: the unity of opposites held in creative tension. Though largely an invention of Iolo Morganwg, it has become genuinely numinous in contemporary practice. <em>Awen</em> translates from Welsh as "flowing spirit" or "poetic inspiration" — the divine creative fire that animates poetry, prophecy, and truth.
+            </p>
+          </div>
+
+          <div class="druid-card bg-black/30 border border-emerald-800/40 rounded-2xl p-5">
+            <div class="text-4xl mb-3">🌳</div>
+            <h3 class="font-cinzel text-sm font-semibold text-emerald-300 mb-2">The Sacred Oak</h3>
+            <p class="text-xs text-green-100/80 leading-relaxed">
+              The oak (<em>dair</em> in Old Irish; <em>derw</em> in Welsh) is the supreme sacred tree of Druidism — embodying strength, longevity, sovereignty, and the axis between worlds. Oak groves (<em>nemeton</em>) were the original temples. A Druid rite without an oak presence was incomplete. The acorn — seed of an oak that outlives a human lifespan — is a potent Druidic symbol of slow-growing, deep-rooted wisdom.
+            </p>
+          </div>
+
+          <div class="druid-card bg-black/30 border border-emerald-800/40 rounded-2xl p-5">
+            <div class="text-4xl mb-3">🌿</div>
+            <h3 class="font-cinzel text-sm font-semibold text-emerald-300 mb-2">Mistletoe</h3>
+            <p class="text-xs text-green-100/80 leading-relaxed">
+              Pliny the Elder described the Druidic mistletoe rite in the 1st century CE: a white-robed Druid climbs the sacred oak and cuts mistletoe with a golden sickle on the sixth day of the moon, catching it in a white cloak — never allowing it to touch the ground. Two white bulls are sacrificed beneath. Mistletoe, which grows without soil, defying gravity and season, was called <em>all-heal</em> — sacred because it seemed to live between worlds.
+            </p>
+          </div>
+
+          <div class="druid-card bg-black/30 border border-emerald-800/40 rounded-2xl p-5">
+            <div class="text-4xl mb-3">🌀</div>
+            <h3 class="font-cinzel text-sm font-semibold text-emerald-300 mb-2">The Triskelion / Triple Spiral</h3>
+            <p class="text-xs text-green-100/80 leading-relaxed">
+              The triple spiral carved into the entrance stone of Newgrange (c. 3200 BCE) predates Celtic culture by thousands of years, yet was absorbed into Celtic and Druidic symbolism as the <em>triskelion</em>. It represents the threefold nature of existence: land, sea, and sky; past, present, and future; birth, death, and rebirth. Motion in three is the sacred rhythm of the Celtic cosmos.
+            </p>
+          </div>
+
+          <div class="druid-card bg-black/30 border border-emerald-800/40 rounded-2xl p-5">
+            <div class="text-4xl mb-3">🐍</div>
+            <h3 class="font-cinzel text-sm font-semibold text-emerald-300 mb-2">The Serpent &amp; Dragon</h3>
+            <p class="text-xs text-green-100/80 leading-relaxed">
+              Serpents appear in Celtic and Druidic iconography as symbols of wisdom, regeneration, and the earth's energy. The <em>Druid's Egg</em> (<em>ovum anguinum</em>) — described by Pliny as a glass-like ball formed from the foam of writhing serpents — was a talisman of great power. In Welsh tradition, the red dragon (<em>Y Ddraig Goch</em>) embodies the sacred landscape itself, the earth-force underlying all of Britain.
+            </p>
+          </div>
+
+          <div class="druid-card bg-black/30 border border-emerald-800/40 rounded-2xl p-5">
+            <div class="text-4xl mb-3">🌙</div>
+            <h3 class="font-cinzel text-sm font-semibold text-emerald-300 mb-2">The Sacred Calendar</h3>
+            <p class="text-xs text-green-100/80 leading-relaxed">
+              The <strong class="text-emerald-300">Coligny Calendar</strong> (c. 1st century CE), discovered in France in 1897, is a bronze fragmentary calendar tracking a complex lunisolar year — evidence of the Druids' sophisticated astronomical knowledge. The year was divided into light and dark halves. The four great fire festivals — Imbolc, Beltane, Lughnasadh, and Samhain — marked the quarter-points, with the solstices and equinoxes forming the eight-spoked Wheel of the Year.
+            </p>
+          </div>
+        </div>
+
+        <!-- Tree Ogham -->
+        <div class="bg-black/30 rounded-2xl border border-emerald-800/30 p-6">
+          <h3 class="font-cinzel text-base font-semibold text-emerald-300 mb-4">🌿 The Ogham — Celtic Tree Alphabet</h3>
+          <p class="text-green-100/80 text-sm leading-relaxed mb-4">
+            Ogham is the earliest known form of writing in the Irish and Pictish languages, carved on standing stones from roughly 400–700 CE. Each of its 20+ letters (<em>feda</em>) is named for a tree or plant and consists of simple strokes carved along a central line. While ogham's use as a divinatory system — the so-called <em>Beth-Luis-Nion</em> tree calendar — was popularised by Robert Graves's <em>The White Goddess</em> (1948), the deeper connection between letter, tree, and cosmological meaning has roots in genuine bardic tradition.
+          </p>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+            <div class="bg-black/20 rounded-lg p-3 border border-emerald-900/30">
+              <span class="text-emerald-400 font-mono text-sm font-bold">ᚁ Beith</span>
+              <p class="text-xs text-green-100/60 mt-1">Birch — New beginnings, purification, the first light after winter.</p>
+            </div>
+            <div class="bg-black/20 rounded-lg p-3 border border-emerald-900/30">
+              <span class="text-emerald-400 font-mono text-sm font-bold">ᚂ Luis</span>
+              <p class="text-xs text-green-100/60 mt-1">Rowan — Protection, vision, warding against enchantment.</p>
+            </div>
+            <div class="bg-black/20 rounded-lg p-3 border border-emerald-900/30">
+              <span class="text-emerald-400 font-mono text-sm font-bold">ᚃ Fearn</span>
+              <p class="text-xs text-green-100/60 mt-1">Alder — The warrior's shield, foundation, courage in battle.</p>
+            </div>
+            <div class="bg-black/20 rounded-lg p-3 border border-emerald-900/30">
+              <span class="text-emerald-400 font-mono text-sm font-bold">ᚄ Sail</span>
+              <p class="text-xs text-green-100/60 mt-1">Willow — Moon magic, dreams, the fluid wisdom of the unconscious.</p>
+            </div>
+            <div class="bg-black/20 rounded-lg p-3 border border-emerald-900/30">
+              <span class="text-emerald-400 font-mono text-sm font-bold">ᚅ Nion</span>
+              <p class="text-xs text-green-100/60 mt-1">Ash — The World Tree, connection between all realms, fate.</p>
+            </div>
+            <div class="bg-black/20 rounded-lg p-3 border border-emerald-900/30">
+              <span class="text-emerald-400 font-mono text-sm font-bold">ᚆ Huath</span>
+              <p class="text-xs text-green-100/60 mt-1">Hawthorn — The threshold of the Otherworld, cleansing, unlucky to bring indoors.</p>
+            </div>
+            <div class="bg-black/20 rounded-lg p-3 border border-emerald-900/30">
+              <span class="text-emerald-400 font-mono text-sm font-bold">ᚇ Dair</span>
+              <p class="text-xs text-green-100/60 mt-1">Oak — Sovereignty, strength, the king of trees, Druidic heart-wood.</p>
+            </div>
+            <div class="bg-black/20 rounded-lg p-3 border border-emerald-900/30">
+              <span class="text-emerald-400 font-mono text-sm font-bold">ᚈ Tinne</span>
+              <p class="text-xs text-green-100/60 mt-1">Holly — Challenge, conflict, the warrior's year, masculine force.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Secret Societies -->
+      <section class="bg-gradient-to-br from-stone-900/60 to-green-950/30 border border-stone-600/40 rounded-3xl p-8 backdrop-blur-md shadow-2xl">
+        <h2 class="font-cinzel text-2xl font-semibold mb-5 text-green-300">✦ Orders, Societies &amp; Hidden Lineages</h2>
+        <p class="text-green-100/80 text-sm leading-relaxed mb-6">
+          Druidism's modern form emerged substantially through secretive fraternal orders that blended genuine Celtic scholarship with invented tradition. Several of these orders operated as initiatic societies with graded degrees, oaths, and esoteric teachings — in deliberate parallel to Freemasonry.
+        </p>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <h3 class="font-cinzel text-base font-semibold text-green-300 mb-3">Known Orders</h3>
+            <div class="space-y-4">
+              <div class="bg-black/20 rounded-xl p-4 border border-green-900/30">
+                <h4 class="text-green-200 font-semibold text-sm mb-1">Ancient Order of Druids (1781)</h4>
+                <p class="text-xs text-green-100/70 leading-relaxed">Founded by Henry Hurle as a fraternal mutual-aid society, structured in three degrees (Bard, Ovate, Druid) and explicitly modelled on Freemasonry. At its peak in the 19th century it had hundreds of thousands of members worldwide. Winston Churchill was an initiate (1908). The order still operates and holds ceremonies at Stonehenge.</p>
+              </div>
+              <div class="bg-black/20 rounded-xl p-4 border border-green-900/30">
+                <h4 class="text-green-200 font-semibold text-sm mb-1">Order of Bards, Ovates &amp; Druids (OBOD, 1964)</h4>
+                <p class="text-xs text-green-100/70 leading-relaxed">Founded by Ross Nichols after a split from the Ancient Order of Druids. Nichols, a poet and scholar, created a curriculum structured around the Wheel of the Year with seasonal ceremonies. Revived in 1988 by Philip Carr-Gomm, OBOD is now the largest Druidic order in the world, with members in over 60 countries. Its study course is taken via correspondence and covers all three grades.</p>
+              </div>
+              <div class="bg-black/20 rounded-xl p-4 border border-green-900/30">
+                <h4 class="text-green-200 font-semibold text-sm mb-1">Gorsedd of the Bards of the Isle of Britain</h4>
+                <p class="text-xs text-green-100/70 leading-relaxed">Invented by Iolo Morganwg in 1792 and now institutionalised as the ceremonial heart of the Welsh National Eisteddfod — the annual festival of Welsh language and culture. Poet-initiates are admitted in three grades (Ovate, Bard, Druid) in public ceremonies at stone circles. Though largely cultural rather than religious, the Gorsedd preserves Iolo's Druidic ritual forms in living national tradition.</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3 class="font-cinzel text-base font-semibold text-green-300 mb-3">Speculated &amp; Esoteric Connections</h3>
+            <div class="space-y-4">
+              <div class="bg-black/20 rounded-xl p-4 border border-green-900/30">
+                <h4 class="text-green-200 font-semibold text-sm mb-1">Druids &amp; Freemasonry</h4>
+                <p class="text-xs text-green-100/70 leading-relaxed">The structural parallels between early modern Druidry and Freemasonry are not coincidental — the founding generation of Druidic orders largely consisted of Freemasons who wished to create a more British-flavoured initiatic brotherhood. Both traditions use graded degrees, allegorical ritual, solar symbolism, and themes of sacred architecture (or sacred land). Some Masonic lodges incorporated Druidic elements, and several 18th-century Masonic writers speculated that Druids and ancient builders shared a secret philosophical tradition.</p>
+              </div>
+              <div class="bg-black/20 rounded-xl p-4 border border-green-900/30">
+                <h4 class="text-green-200 font-semibold text-sm mb-1">Druids &amp; Pythagoras</h4>
+                <p class="text-xs text-green-100/70 leading-relaxed">Multiple classical writers — Diogenes Laërtius, Clement of Alexandria, and Hippolytus — suggested that Pythagoras either learned from the Druids or that both shared a common philosophical source. Both traditions emphasised the immortality of the soul, transmigration, sacred number, oral transmission, vegetarianism, and the harmony of the cosmos. Whether this represents genuine historical contact or a pattern of convergent wisdom remains unresolved.</p>
+              </div>
+              <div class="bg-black/20 rounded-xl p-4 border border-green-900/30">
+                <h4 class="text-green-200 font-semibold text-sm mb-1">The Holy Grail &amp; Celtic Otherworld</h4>
+                <p class="text-xs text-green-100/70 leading-relaxed">Scholars including Jean Markale and John Matthews have argued that the Arthurian Grail legends are partially Druidicised Celtic mythology — the cauldron of regeneration (Dagda's cauldron, Ceridwen's cauldron) reframed in Christian allegory. The sacred vessel that heals, the perilous quest, the wounded king and the wasteland — these are pre-Christian Celtic mythemes that flow through Grail romance. The Round Table itself echoes the sacred circular assemblies of Druidic councils.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Modern Practice -->
+      <section class="bg-gradient-to-br from-green-950/40 to-emerald-950/30 border border-green-800/40 rounded-3xl p-8 backdrop-blur-md shadow-2xl">
+        <h2 class="font-cinzel text-2xl font-semibold mb-5 text-emerald-300">✦ Druidism in Modern Times</h2>
+        <p class="text-green-100/80 text-sm leading-relaxed mb-6">
+          Contemporary Druidry is one of the fastest-growing nature-based spiritualities in the world, particularly in the United Kingdom, Ireland, and North America. It is explicitly earth-centred, cyclical, and non-dogmatic — practitioners tend to draw from Celtic mythology, seasonal ceremony, ancestor work, and ecological activism.
+        </p>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <h3 class="font-cinzel text-base font-semibold text-green-300 mb-3">Ways to Engage Today</h3>
+            <ul class="space-y-3 text-xs text-green-100/80">
+              <li class="flex items-start gap-3">
+                <span class="text-green-400 mt-0.5 text-base">🌳</span>
+                <div><strong class="text-emerald-300">Tree Communion</strong> — choose a tree to visit regularly across all four seasons. Sit with it. Introduce yourself. Over months, many practitioners report a deepening sense of relationship — noticing the tree's qualities, receiving images or feelings in its presence, and learning its particular character and medicine.</div>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-green-400 mt-0.5 text-base">🕯</span>
+                <div><strong class="text-emerald-300">Wheel of the Year</strong> — mark the eight seasonal festivals (Imbolc, Ostara, Beltane, Litha, Lughnasadh, Mabon, Samhain, Yule) with simple outdoor ceremony — lighting a candle, making an offering, speaking aloud your intention for the turning season. Align your life with the solar and agricultural cycle as a spiritual practice.</div>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-green-400 mt-0.5 text-base">📖</span>
+                <div><strong class="text-emerald-300">Bardic Practice</strong> — write poetry, sing, tell stories, or play music in the presence of nature. The Bard's art is not performance — it is a form of prayer, an offering of beauty to the living world. Compose a poem for a river, a storm, or the first frost. Let language be a sacred act of attention.</div>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-green-400 mt-0.5 text-base">👁</span>
+                <div><strong class="text-emerald-300">Ovate Divination</strong> — study the ogham and work with its tree correspondences as a meditative and divinatory system. Draw an ogham stick each morning with a question or intention. Spend time outdoors with the named tree, observing its qualities. Allow meaning to arise from attention rather than prescribed interpretation.</div>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-cinzel text-base font-semibold text-green-300 mb-3">Druidism &amp; Contemporary Issues</h3>
+            <div class="space-y-3">
+              <div class="bg-black/20 rounded-xl p-4 border border-green-900/30">
+                <h4 class="text-emerald-200 font-semibold text-sm mb-1">Ecology &amp; Deep Green Activism</h4>
+                <p class="text-xs text-green-100/70 leading-relaxed">Modern Druidry is inseparable from ecological consciousness. Many practitioners are also environmental activists, forest defenders, and rewilding advocates — working from a theological premise that the land is sacred, not a resource. Organisations like the Druid Network and OBOD have formal statements on ecological responsibility, and many groves undertake practical conservation work alongside ritual.</p>
+              </div>
+              <div class="bg-black/20 rounded-xl p-4 border border-green-900/30">
+                <h4 class="text-emerald-200 font-semibold text-sm mb-1">Ancestor Healing</h4>
+                <p class="text-xs text-green-100/70 leading-relaxed">Celtic spirituality has always emphasised the living relationship with the dead. Modern Druid practice includes ancestor ceremonies — particularly at Samhain — in which practitioners consciously acknowledge, honour, and in some cases seek to heal unresolved ancestral patterns. Therapists working in <em>family constellations</em> and <em>ancestral healing</em> often find natural alignment with Druidic frameworks.</p>
+              </div>
+              <div class="bg-black/20 rounded-xl p-4 border border-green-900/30">
+                <h4 class="text-emerald-200 font-semibold text-sm mb-1">Druidry &amp; Mental Health</h4>
+                <p class="text-xs text-green-100/70 leading-relaxed">Research consistently demonstrates the therapeutic benefits of time in nature, and Druidic practice is fundamentally a discipline of deep, reverent nature engagement. Many practitioners describe their groves — groups of 8–20 people meeting outdoors to mark seasonal turning points — as their primary community of belonging, providing the relational and ecological connection that industrial society consistently fails to offer.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Closing -->
+      <section class="text-center py-8">
+        <div class="glow-card inline-block bg-gradient-to-br from-green-950/60 to-stone-900/60 border border-green-700/50 rounded-3xl px-10 py-8 backdrop-blur-md shadow-2xl max-w-2xl">
+          <div class="text-5xl mb-4">☘</div>
+          <h3 class="font-cinzel text-xl text-green-300 mb-3">A Final Leaf</h3>
+          <p class="text-green-100/80 text-sm leading-relaxed italic">
+            "A living tradition is one that has roots deep enough to support new growth. The Druid tradition has roots going back thousands of years — not in an unbroken line of transmission, but in the DNA of the land itself, in the turning of the seasons, in the depth of the human longing to belong to something greater than ourselves."
+          </p>
+          <p class="text-green-300/60 text-xs mt-3">— Philip Carr-Gomm, <em>What Do Druids Believe?</em></p>
+          <p class="text-green-100/60 text-xs mt-4 leading-relaxed">
+            The Druids did not leave us their texts — they left us their questions. What is the nature of the soul? How do we live in right relationship with the land? How does beauty become a path to truth? These questions are not answered by Druidism; they are held, tended, turned over like stones in a stream, across a lifetime of practice. The oak does not hurry its growing. Neither need you.
+          </p>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="relative z-10 text-center py-8 text-violet-300/50 text-xs mt-8">
+      <p class="italic">"Listen to the forest, for the forest listens back." — Celtic proverb</p>
+      <p class="mt-2">Esoteric Wisdom · Built with ✨ in Rust</p>
+      <p class="mt-2"><a href="/home" class="hover:text-violet-300 transition-colors">← Back to Portal</a></p>
+    </footer>
+
+    <script>
+      const sf = document.getElementById('starfield');
+      for (let i = 0; i < 180; i++) {
+        const s = document.createElement('div');
+        s.className = 'star';
+        const size = Math.random() * 2.5 + 0.5;
+        s.style.cssText = `width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--dur:${2+Math.random()*4}s;--delay:${Math.random()*5}s;opacity:${0.2+Math.random()*0.8};`;
+        sf.appendChild(s);
+      }
+    </script>
+  </body>
+</html>

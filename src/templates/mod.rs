@@ -89,3 +89,11 @@ pub struct CrystalsTemplate;
 #[derive(Template)]
 #[template(path = "runes.html")]
 pub struct RunesTemplate;
+
+#[derive(Template)]
+#[template(path = "shamanism.html")]
+pub struct ShamanismTemplate;
+
+#[derive(Template)]
+#[template(path = "druidism.html")]
+pub struct DruidismTemplate;
