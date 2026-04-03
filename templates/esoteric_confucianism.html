@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Esoteric Confucianism — Esoteric Wisdom</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <style>
+    body { font-family: 'Raleway', sans-serif; }
+    .font-cinzel { font-family: 'Cinzel Decorative', cursive; }
+    @keyframes twinkle { 0%,100%{opacity:0.2;transform:scale(1);} 50%{opacity:1;transform:scale(1.4);} }
+    @keyframes float { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-12px);} }
+    @keyframes shimmer { 0%{background-position:0% 50%;} 100%{background-position:200% 50%;} }
+    .star { position:absolute; width:2px; height:2px; background:white; border-radius:50%; animation:twinkle 3s infinite; }
+    .aurora-text {
+      background: linear-gradient(90deg, #60a5fa, #3b82f6, #93c5fd, #1d4ed8, #60a5fa);
+      background-size:300% auto;
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+      background-clip:text;
+      animation:shimmer 6s linear infinite;
+    }
+    .floating { animation: float 4s ease-in-out infinite; }
+    .nav-link { position:relative; transition:all 0.3s; }
+    .nav-link::after { content:''; position:absolute; bottom:-2px; left:0; width:0; height:1px; background:#f59e0b; transition:width 0.3s; }
+    .nav-link:hover::after { width:100%; }
+    .confucian-card {
+      background: linear-gradient(135deg, rgba(59,130,246,0.15), rgba(96,165,250,0.07));
+      border: 1px solid rgba(96,165,250,0.28);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      transition: all 0.3s;
+    }
+    .confucian-card:hover { transform: translateY(-4px); box-shadow: 0 0 28px rgba(96,165,250,0.18); border-color: rgba(96,165,250,0.55); }
+    .timeline-entry {
+      border-left: 2px solid rgba(96,165,250,0.30);
+      padding-left: 1.25rem;
+      padding-bottom: 1.5rem;
+      position: relative;
+    }
+    .timeline-entry::before {
+      content: '';
+      position: absolute;
+      left: -5px;
+      top: 4px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #3b82f6;
+      box-shadow: 0 0 8px rgba(59,130,246,0.7);
+    }
+  </style>
+</head>
+<body class="min-h-screen text-blue-100 overflow-x-hidden" style="background: radial-gradient(ellipse at top, #000820 0%, #001040 25%, #000510 60%, #000000 100%);">
+
+  <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+
+  <!-- NAV -->
+  <nav class="sticky top-0 z-50 flex items-center justify-between px-6 py-3 bg-black/40 backdrop-blur-md border-b border-violet-500/20 flex-wrap gap-y-2">
+    <a href="/home" class="font-cinzel text-amber-300 text-sm tracking-widest shrink-0">✦ Esoteric Wisdom ✦</a>
+    <div class="flex items-center gap-x-3 gap-y-1 text-xs text-violet-200 flex-wrap justify-end">
+      <a href="/astrology" class="nav-link hover:text-amber-300 transition-colors">Astrology</a>
+      <a href="/meditation" class="nav-link hover:text-amber-300 transition-colors">Meditation</a>
+      <a href="/tarot/select" class="nav-link hover:text-amber-300 transition-colors">Tarot</a>
+      <a href="/numerology" class="nav-link hover:text-amber-300 transition-colors">Numerology</a>
+      <a href="/crystals" class="nav-link hover:text-amber-300 transition-colors">Crystals</a>
+      <a href="/runes" class="nav-link hover:text-amber-300 transition-colors">Runes</a>
+      <a href="/shamanism" class="nav-link hover:text-amber-300 transition-colors">Shamanism</a>
+      <a href="/druidism" class="nav-link hover:text-amber-300 transition-colors">Druidism</a>
+      <a href="/akashic-records" class="nav-link hover:text-amber-300 transition-colors">Akashic Records</a>
+      <a href="/wicca" class="nav-link hover:text-amber-300 transition-colors">Wicca</a>
+      <a href="/alchemy" class="nav-link hover:text-amber-300 transition-colors">Alchemy</a>
+      <a href="/gateway-process" class="nav-link hover:text-amber-300 transition-colors">Gateway Process</a>
+      <a href="/remote-viewing" class="nav-link hover:text-amber-300 transition-colors">Remote Viewing</a>
+      <a href="/khasarov-mirror" class="nav-link hover:text-amber-300 transition-colors">Khasarov Mirror</a>
+      <a href="/western-esotericism" class="nav-link hover:text-amber-300 transition-colors">Western Esotericism</a>
+      <a href="/eastern-esotericism" class="nav-link text-amber-300 font-semibold">Eastern Esotericism</a>
+      <a href="/journal/reflections" class="nav-link text-emerald-300 hover:text-emerald-200 transition-colors">✨ Reflections</a>
+      <a href="https://ko-fi.com/esotericwisdom" target="_blank" rel="noopener noreferrer"
+         class="px-3 py-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-white font-semibold hover:scale-105 transition-transform shrink-0">☕ Support</a>
+    </div>
+  </nav>
+
+  <!-- CONTENT WRAPPER -->
+  <div class="relative z-10 max-w-6xl mx-auto space-y-10 pt-6 px-4 pb-16">
+
+    <!-- BREADCRUMB -->
+    <div class="text-sm text-blue-400/60">
+      <a href="/eastern-esotericism" class="hover:text-blue-300 transition-colors">← Eastern Esoteric Traditions</a>
+    </div>
+
+    <!-- HERO -->
+    <section class="text-center py-16 space-y-6">
+      <div class="text-7xl floating">📿</div>
+      <h1 class="font-cinzel text-4xl md:text-6xl font-bold aurora-text leading-tight">Esoteric Confucianism</h1>
+      <p class="max-w-3xl mx-auto text-blue-200/80 text-lg leading-relaxed">
+        The hidden metaphysical and contemplative dimensions of the Confucian tradition — from the I Ching as esoteric text to Wang Yangming's School of Mind and the Neo-Confucian cosmology of Heaven, Earth, and humanity.
+      </p>
+    </section>
+
+    <!-- SECTION 1: WHAT IS ESOTERIC CONFUCIANISM? -->
+    <section class="rounded-2xl p-8 space-y-6" style="background: linear-gradient(135deg, rgba(59,130,246,0.12), rgba(96,165,250,0.06));">
+      <h2 class="font-cinzel text-2xl text-blue-300 text-center tracking-wide">What Is Esoteric Confucianism?</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm text-blue-100/80 leading-relaxed">
+
+        <!-- Column 1 -->
+        <div class="space-y-4">
+          <p>
+            <strong class="text-blue-200">The Hidden Face of Confucianism:</strong> Confucianism is most commonly presented as a system of social ethics and political philosophy — emphasising filial piety, social harmony, ritual propriety, and benevolent governance. But this familiar face conceals a rich esoteric dimension. The "inner" or "esoteric" stream of Confucianism concerns itself with cosmology, metaphysics, the nature of mind and heart (<em>xin</em>, 心), the cultivation of the sage, and the relationship between the individual human being and the cosmos. This dimension was emphasised in the Song-Ming Neo-Confucian movement (10th–17th centuries CE) and reaches its most mystical expression in the philosophy of Wang Yangming (1472–1529 CE), whose School of Mind (<em>Xinxue</em>) has striking parallels with Mahayana Buddhist and Zen thought.
+          </p>
+          <p>
+            <strong class="text-blue-200">The I Ching (Yijing) as Esoteric Text:</strong> The I Ching (Book of Changes) is one of the oldest texts in the world (c. 9th century BCE core text, with the Ten Wings commentary attributed to Confucius c. 5th century BCE). Its 64 hexagrams formed from 8 trigrams represent all possible states of change in the cosmos. In its exoteric use it is a divination system; in its esoteric dimension it is a complete cosmological map and a tool for inner cultivation. The Great Commentary (<em>Dazhuan</em>) of the Ten Wings reveals the I Ching's metaphysical dimensions: "The Book of Changes is vast and great. To speak of it in its farthest reach, it embraces everything; to speak of it in its closeness, it is still and correct." Confucian scholars interpreted the I Ching not only as a divination manual but as a guide to becoming a sage by aligning one's actions with the rhythms of Heaven and Earth.
+          </p>
+          <p>
+            <strong class="text-blue-200">Zhou Dunyi and Neo-Confucian Cosmology:</strong> The <em>Taijitu shuo</em> (Explanation of the Diagram of the Supreme Ultimate) by Zhou Dunyi (1017–1073 CE) is the foundational text of Song-dynasty Neo-Confucianism. It presents a complete cosmological schema: Wuji (the Limitless / Non-Ultimate) → Taiji (the Supreme Ultimate) → Yin/Yang → Five Phases (<em>wuxing</em>) → the myriad things. Humanity occupies a privileged position as the most spiritually refined product of this cosmic process. The sage-king embodies the virtue of Heaven and Earth and acts as their expression in the human realm. This cosmological vision gave Confucianism a metaphysical depth that rivalled — and was probably influenced by — Buddhist philosophy.
+          </p>
+          <p>
+            <strong class="text-blue-200">Zhang Zai's Philosophy of Qi:</strong> Zhang Zai (1020–1077 CE) proposed that qi (vital force / material force) is the fundamental stuff of all reality — both physical and mental. The most famous statement from his <em>Western Inscription</em> (<em>Ximing</em>): "Heaven is my father and Earth is my mother, and even such a small creature as I finds an intimate place in their midst." This identification of the individual with the cosmos is the basis of Confucian "cosmic personhood" — the sage who fully realises their nature simultaneously realises the nature of Heaven and Earth. Qi-philosophy gives Confucian cosmology an ecological, relational, and esoteric dimension that resonates powerfully with contemporary holistic thought.
+          </p>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="space-y-4">
+          <p>
+            <strong class="text-blue-200">Wang Yangming and the School of Mind:</strong> Wang Yangming (Wang Shouren, 1472–1529 CE) is the most significant esoteric figure in Confucian history. His experience of sudden enlightenment at Dragon Field (1508 CE), after sleeping among coffins in frontier China, led him to the realisation of what he called the "unity of knowledge and action" (<em>zhixing heyi</em>) — knowing and doing are inseparable at the deepest level. His philosophy of <em>liangzhi</em> (innate moral knowledge) is central: every human being possesses innate knowledge of the good, unconditioned by learning or culture. This <em>liangzhi</em> is described as the "original substance of the mind" (<em>xin zhi benti</em>) — a spontaneous, self-knowing awareness that is both moral compass and metaphysical ground. This bears a striking resemblance to the Zen concept of Buddha-nature or the Dzogchen concept of <em>rigpa</em>.
+          </p>
+          <p>
+            <strong class="text-blue-200">Liangzhi and "Extending the Innate Knowledge":</strong> Wang Yangming's practical teaching centres on the "extension of innate knowledge" (<em>zhi liangzhi</em>) — not the acquisition of external knowledge but the clearing away of selfish desires and habitual patterns that obstruct the spontaneous functioning of <em>liangzhi</em>. This extension happens through action, not contemplation alone. The "unity of knowledge and action" means that genuine knowledge always manifests as action, and genuine action always reflects knowledge. Wang Yangming's school influenced not only Chinese philosophy but Japanese Neo-Confucianism (<em>Yōmeigaku</em>), where it inspired figures such as Ōshio Heihachirō and became foundational to the intellectual formation of the Meiji-era reformers.
+          </p>
+          <p>
+            <strong class="text-blue-200">The Confucian Sage as Cosmic Person:</strong> The concept of the "three powers" (<em>sancai</em>) — Heaven, Earth, and Humanity — places the human sage at the intersection of cosmic forces. The sage (<em>shengren</em>) does not merely live a good ethical life but embodies and expresses the pattern (<em>li</em>) of Heaven-and-Earth. This is expressed in the <em>Zhongyong</em> (Doctrine of the Mean): "Only those who are absolutely sincere can fully develop their nature. If they can fully develop their nature, they can fully develop the nature of others. If they can fully develop the nature of others, they can fully develop the nature of things. If they can fully develop the nature of things, they can assist the transforming and nourishing powers of Heaven and Earth. If they can assist the transforming and nourishing powers of Heaven and Earth, they can form a trinity with Heaven and Earth." This is the esoteric Confucian ideal: the actualisation of one's full humanity as a contribution to the ongoing creative process of the cosmos.
+          </p>
+          <p>
+            <strong class="text-blue-200">Reverence (Jing) as Spiritual Practice:</strong> The Neo-Confucian concept of <em>jing</em> (reverence, seriousness, or mindful attentiveness) is the primary "esoteric" practice of the tradition. Unlike meditation as withdrawal from the world, <em>jing</em> is practised in all activities — it means maintaining a state of collected, attentive, non-distracted presence in every action. Cheng Yi (1033–1107 CE) described it as "holding the mind with seriousness" and "making the mind one without distraction." This practice of mindful attentiveness in daily life parallels certain forms of Zen practice and the Tibetan concept of "bringing meditation into action" — making it a genuinely esoteric method hidden in plain sight within ordinary Confucian self-cultivation.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 2: KEY TEXTS -->
+    <section class="space-y-6">
+      <h2 class="font-cinzel text-2xl text-blue-300 text-center tracking-wide">Key Texts</h2>
+      <p class="text-center text-blue-200/60 text-sm max-w-2xl mx-auto">
+        The foundational scriptures and philosophical works that define the esoteric dimensions of the Confucian tradition.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+        <div class="confucian-card">
+          <div class="text-4xl mb-3">📖</div>
+          <h3 class="font-cinzel text-base text-blue-200 mb-2">I Ching (Book of Changes)</h3>
+          <p class="text-blue-100/70 text-sm leading-relaxed">
+            One of humanity's oldest texts; 64 hexagrams formed from 8 trigrams; both a divination system and a complete cosmological map. The Ten Wings commentaries reveal its metaphysical depth. Used by Leibniz, Jung, and countless others outside the Confucian tradition; a perennial point of encounter between Eastern and Western thought.
+          </p>
+        </div>
+
+        <div class="confucian-card">
+          <div class="text-4xl mb-3">📜</div>
+          <h3 class="font-cinzel text-base text-blue-200 mb-2">Zhongyong (Doctrine of the Mean)</h3>
+          <p class="text-blue-100/70 text-sm leading-relaxed">
+            One of the "Four Books" of Confucianism; contains the most explicitly metaphysical and proto-mystical statements in classical Confucian literature — particularly the passage on forming a "trinity with Heaven and Earth." Attributed to Zisi (Confucius's grandson); the esoteric heart of classical Confucianism.
+          </p>
+        </div>
+
+        <div class="confucian-card">
+          <div class="text-4xl mb-3">🌟</div>
+          <h3 class="font-cinzel text-base text-blue-200 mb-2">Daxue (Great Learning)</h3>
+          <p class="text-blue-100/70 text-sm leading-relaxed">
+            The other foundational text of Neo-Confucianism alongside the <em>Zhongyong</em>; describes the stages of inner cultivation from "investigation of things" (<em>gewu</em>) through "rectification of the mind" to the ultimate goal of bringing peace to the world. Wang Yangming's reinterpretation of <em>gewu</em> is the centre of his esoteric philosophy.
+          </p>
+        </div>
+
+        <div class="confucian-card">
+          <div class="text-4xl mb-3">💎</div>
+          <h3 class="font-cinzel text-base text-blue-200 mb-2">Chuanxi lu (Instructions for Practical Living)</h3>
+          <p class="text-blue-100/70 text-sm leading-relaxed">
+            Wang Yangming's collected dialogues and letters; records his teachings on <em>liangzhi</em>, the unity of knowledge and action, and the extension of innate knowledge. The most important text of Ming-dynasty Confucianism and the primary source for understanding the esoteric depth of the Yangming school.
+          </p>
+        </div>
+
+        <div class="confucian-card">
+          <div class="text-4xl mb-3">☯️</div>
+          <h3 class="font-cinzel text-base text-blue-200 mb-2">Taijitu shuo (Explanation of the Diagram of the Supreme Ultimate)</h3>
+          <p class="text-blue-100/70 text-sm leading-relaxed">
+            Zhou Dunyi's brief but cosmologically rich text; presents the Neo-Confucian universe from Wuji to the myriad things. Foundational for all subsequent Neo-Confucian metaphysics; the point at which Confucianism fully claims the cosmological terrain and establishes its own systematic account of the origin and nature of reality.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 3: HISTORICAL TIMELINE -->
+    <section class="rounded-2xl p-8 space-y-6" style="background: linear-gradient(135deg, rgba(59,130,246,0.10), rgba(0,5,16,0.40));">
+      <h2 class="font-cinzel text-2xl text-blue-300 text-center tracking-wide">Historical Timeline</h2>
+      <p class="text-center text-blue-200/60 text-sm max-w-2xl mx-auto">
+        From the Zhou dynasty sages to the New Confucian movement — the unfolding of Confucianism's esoteric dimension across three millennia.
+      </p>
+      <div class="max-w-3xl mx-auto pt-4">
+
+        <div class="timeline-entry">
+          <p class="text-blue-300 text-xs font-semibold tracking-wider mb-1">C. 9TH CENTURY BCE</p>
+          <p class="text-blue-100/80 text-sm leading-relaxed">
+            The core hexagram text of the <strong class="text-blue-200">I Ching</strong> is compiled during the Zhou dynasty. The divination manual that would become the foundation of Chinese metaphysics, cosmology, and esoteric practice takes shape — one of the oldest continuously used texts in human history.
+          </p>
+        </div>
+
+        <div class="timeline-entry">
+          <p class="text-blue-300 text-xs font-semibold tracking-wider mb-1">C. 551–479 BCE</p>
+          <p class="text-blue-100/80 text-sm leading-relaxed">
+            <strong class="text-blue-200">Confucius</strong> (Kong Qiu) lives; attributed with the Ten Wings commentaries on the I Ching. He establishes the Confucian emphasis on <em>ren</em> (benevolence), ritual propriety (<em>li</em>), and the cultivation of the gentleman (<em>junzi</em>) — providing the ethical framework within which later esoteric Confucianism would operate.
+          </p>
+        </div>
+
+        <div class="timeline-entry">
+          <p class="text-blue-300 text-xs font-semibold tracking-wider mb-1">C. 372–289 BCE</p>
+          <p class="text-blue-100/80 text-sm leading-relaxed">
+            <strong class="text-blue-200">Mencius</strong> (Mengzi) develops the Confucian doctrine of the goodness of human nature (<em>xing shan</em>) and identifies the four sprouts of virtue. His identification of innate moral capacity in every human being lays the foundation for Wang Yangming's later doctrine of innate knowledge (<em>liangzhi</em>).
+          </p>
+        </div>
+
+        <div class="timeline-entry">
+          <p class="text-blue-300 text-xs font-semibold tracking-wider mb-1">C. 175 BCE</p>
+          <p class="text-blue-100/80 text-sm leading-relaxed">
+            Emperor Wu of Han establishes the Five Classics as the basis of the Imperial examination system; Confucianism becomes state orthodoxy. The I Ching is elevated to foremost classical status. This institutionalisation both preserves and partially conceals the esoteric dimensions of the tradition within official doctrine.
+          </p>
+        </div>
+
+        <div class="timeline-entry">
+          <p class="text-blue-300 text-xs font-semibold tracking-wider mb-1">C. 1017–1073 CE</p>
+          <p class="text-blue-100/80 text-sm leading-relaxed">
+            <strong class="text-blue-200">Zhou Dunyi</strong> writes the <em>Taijitu shuo</em>; this begins the Neo-Confucian synthesis of Taoist cosmology, Buddhist metaphysics, and Confucian ethics. The Song dynasty becomes the golden age of Neo-Confucianism — perhaps the most philosophically rich period in Chinese intellectual history.
+          </p>
+        </div>
+
+        <div class="timeline-entry">
+          <p class="text-blue-300 text-xs font-semibold tracking-wider mb-1">1472–1529 CE</p>
+          <p class="text-blue-100/80 text-sm leading-relaxed">
+            <strong class="text-blue-200">Wang Yangming</strong> (Wang Shouren) lives; his enlightenment experience at Dragon Field (1508 CE) leads to his doctrine of <em>liangzhi</em> and the unity of knowledge and action. The most significant esoteric figure in Confucian history, his thought represents the fullest realisation of Confucianism's contemplative potential.
+          </p>
+        </div>
+
+        <div class="timeline-entry">
+          <p class="text-blue-300 text-xs font-semibold tracking-wider mb-1">16TH–17TH CENTURY CE</p>
+          <p class="text-blue-100/80 text-sm leading-relaxed">
+            Wang Yangming's school (<em>Yangming School / Xinxue</em>) spreads throughout China; it is transmitted to Japan as <em>Yōmeigaku</em> and influences figures such as Ōshio Heihachirō. It also reaches Korea, shaping Joseon dynasty scholarship and adding a new dimension to Korean Neo-Confucian debates.
+          </p>
+        </div>
+
+        <div class="timeline-entry" style="border-left-color: transparent; padding-bottom: 0;">
+          <p class="text-blue-300 text-xs font-semibold tracking-wider mb-1">19TH–20TH CENTURY CE</p>
+          <p class="text-blue-100/80 text-sm leading-relaxed">
+            Western Confucian studies begin in earnest; Wang Yangming is studied by scholars such as <strong class="text-blue-200">Wing-tsit Chan</strong>. The New Confucian movement (<em>Xiandai Rujia</em>) emerges in 20th-century China, attempting to integrate Western philosophy with Confucian thought and articulate Confucianism's continuing relevance to the modern world.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 4: CORE CONCEPTS -->
+    <section class="space-y-6">
+      <h2 class="font-cinzel text-2xl text-blue-300 text-center tracking-wide">Core Concepts</h2>
+      <p class="text-center text-blue-200/60 text-sm max-w-2xl mx-auto">
+        The key metaphysical and contemplative concepts that define the esoteric dimension of the Confucian tradition.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+        <div class="confucian-card">
+          <div class="text-4xl mb-3">💙</div>
+          <h3 class="font-cinzel text-base text-blue-200 mb-2">Ren (Benevolence)</h3>
+          <p class="text-blue-100/70 text-sm leading-relaxed">
+            The cardinal virtue; not merely kindness but the full actualisation of one's humanity. The cosmic force of love and creative goodness. Wang Yangming describes <em>ren</em> as forming one body with Heaven, Earth, and all things — making benevolence not only a moral achievement but a metaphysical state of non-separation.
+          </p>
+        </div>
+
+        <div class="confucian-card">
+          <div class="text-4xl mb-3">⚡</div>
+          <h3 class="font-cinzel text-base text-blue-200 mb-2">Liangzhi (Innate Knowing)</h3>
+          <p class="text-blue-100/70 text-sm leading-relaxed">
+            Wang Yangming's central concept; innate moral knowledge that requires no learning or external acquisition. The "original substance of the mind"; simultaneously moral compass and metaphysical ground. Its parallels with Buddha-nature and <em>rigpa</em> make it one of the most remarkable convergence points in world philosophy.
+          </p>
+        </div>
+
+        <div class="confucian-card">
+          <div class="text-4xl mb-3">🔄</div>
+          <h3 class="font-cinzel text-base text-blue-200 mb-2">Zhixing Heyi (Unity of Knowledge and Action)</h3>
+          <p class="text-blue-100/70 text-sm leading-relaxed">
+            Wang Yangming's most famous teaching; genuine knowledge is inseparable from action. The separation of knowing and doing indicates that neither is genuine. This transforms ethics into a form of contemplative practice — the daily life of the practitioner becomes the laboratory of inner transformation.
+          </p>
+        </div>
+
+        <div class="confucian-card">
+          <div class="text-4xl mb-3">🌟</div>
+          <h3 class="font-cinzel text-base text-blue-200 mb-2">Gewu (Investigation of Things)</h3>
+          <p class="text-blue-100/70 text-sm leading-relaxed">
+            The starting point of the Great Learning's cultivation path. Classically interpreted as empirical investigation of the external world; Wang Yangming reinterpreted it as "rectifying things" — clarifying the mind's projections and removing the distortions of selfish desire. The most contested concept in Neo-Confucian philosophy.
+          </p>
+        </div>
+
+        <div class="confucian-card">
+          <div class="text-4xl mb-3">🌍</div>
+          <h3 class="font-cinzel text-base text-blue-200 mb-2">Sancai (Three Powers)</h3>
+          <p class="text-blue-100/70 text-sm leading-relaxed">
+            Heaven, Earth, and Humanity as the three cosmic powers. The human sage occupies the pivotal position, mediating between cosmic principles and their expression in the world. The basis of the Confucian "cosmic personhood" ideal — that to fully realise one's humanity is simultaneously to co-create the cosmos.
+          </p>
+        </div>
+
+        <div class="confucian-card">
+          <div class="text-4xl mb-3">🧘</div>
+          <h3 class="font-cinzel text-base text-blue-200 mb-2">Jing (Reverence)</h3>
+          <p class="text-blue-100/70 text-sm leading-relaxed">
+            Mindful, collected attentiveness in all activities; the primary Confucian "contemplative practice." Not withdrawal from the world but full engagement with undivided attention. The equivalent of mindfulness within the Confucian framework — a contemplative method hidden within the ordinary fabric of moral life.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FOOTER QUOTE -->
+    <section class="text-center py-10 space-y-3">
+      <p class="text-blue-300/60 text-xs tracking-widest uppercase">Confucian Wisdom</p>
+      <blockquote class="font-cinzel text-lg md:text-xl text-blue-200/80 italic max-w-2xl mx-auto leading-relaxed">
+        "The great man regards Heaven, Earth, and all things as one body."
+      </blockquote>
+      <p class="text-blue-400/60 text-sm">— Wang Yangming, <em>Instructions for Practical Living</em></p>
+    </section>
+
+  </div>
+
+  <script>
+  const sf = document.getElementById('starfield');
+  for (let i = 0; i < 200; i++) {
+    const s = document.createElement('div');
+    s.className = 'star';
+    s.style.left = Math.random() * 100 + '%';
+    s.style.top = Math.random() * 100 + '%';
+    s.style.animationDelay = Math.random() * 3 + 's';
+    s.style.animationDuration = (2 + Math.random() * 3) + 's';
+    sf.appendChild(s);
+  }
+  </script>
+
+</body>
+</html>
