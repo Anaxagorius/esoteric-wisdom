@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kabbalah — Esoteric Wisdom</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    body { background: radial-gradient(ellipse at top, #000a1f 0%, #000d28 25%, #000518 60%, #000000 100%); font-family: 'Raleway', sans-serif; }
+    .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+    @keyframes twinkle { 0%,100% { opacity: 0.2; } 50% { opacity: 1; } }
+    .star { position: absolute; border-radius: 50%; background: white; animation: twinkle var(--dur,3s) ease-in-out infinite; animation-delay: var(--delay,0s); }
+    @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+    .floating { animation: float 5s ease-in-out infinite; }
+    @keyframes shimmer { 0% { background-position: -200% center; } 100% { background-position: 200% center; } }
+    .aurora-text { background: linear-gradient(90deg, #93c5fd, #fbbf24, #c4b5fd, #60a5fa, #93c5fd); background-size: 200% auto; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; animation: shimmer 5s linear infinite; }
+    .kab-card { transition: all 0.35s ease; cursor: default; }
+    .kab-card:hover { transform: translateY(-7px) scale(1.01); box-shadow: 0 24px 64px rgba(96,165,250,0.2); border-color: rgba(96,165,250,0.5) !important; }
+    .nav-link { position: relative; transition: all 0.3s; }
+    .nav-link::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: linear-gradient(90deg, #f59e0b, #a78bfa); transition: width 0.3s; }
+    .nav-link:hover::after { width: 100%; }
+  </style>
+</head>
+<body class="min-h-screen text-white px-4 py-8">
+  <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+
+  <!-- Navigation -->
+  <nav class="sticky top-0 z-50 flex items-center justify-between px-6 py-3 bg-black/40 backdrop-blur-md border-b border-blue-500/20 flex-wrap gap-y-2">
+    <a href="/home" class="font-cinzel text-amber-300 text-sm tracking-widest shrink-0">✦ Esoteric Wisdom ✦</a>
+    <div class="flex items-center gap-x-3 gap-y-1 text-xs text-violet-200 flex-wrap justify-end">
+      <a href="/astrology" class="nav-link hover:text-amber-300 transition-colors">Astrology</a>
+      <a href="/meditation" class="nav-link hover:text-amber-300 transition-colors">Meditation</a>
+      <a href="/tarot/select" class="nav-link hover:text-amber-300 transition-colors">Tarot</a>
+      <a href="/numerology" class="nav-link hover:text-amber-300 transition-colors">Numerology</a>
+      <a href="/crystals" class="nav-link hover:text-amber-300 transition-colors">Crystals</a>
+      <a href="/runes" class="nav-link hover:text-amber-300 transition-colors">Runes</a>
+      <a href="/shamanism" class="nav-link hover:text-amber-300 transition-colors">Shamanism</a>
+      <a href="/druidism" class="nav-link hover:text-amber-300 transition-colors">Druidism</a>
+      <a href="/akashic-records" class="nav-link hover:text-amber-300 transition-colors">Akashic Records</a>
+      <a href="/wicca" class="nav-link hover:text-amber-300 transition-colors">Wicca</a>
+      <a href="/alchemy" class="nav-link hover:text-amber-300 transition-colors">Alchemy</a>
+      <a href="/gateway-process" class="nav-link hover:text-amber-300 transition-colors">Gateway Process</a>
+      <a href="/remote-viewing" class="nav-link hover:text-amber-300 transition-colors">Remote Viewing</a>
+      <a href="/khasarov-mirror" class="nav-link hover:text-amber-300 transition-colors">Khasarov Mirror</a>
+      <a href="/western-esotericism" class="nav-link text-amber-300 font-semibold">Western Esotericism</a>
+      <a href="/journal/reflections" class="nav-link text-emerald-300 hover:text-emerald-200 transition-colors">✨ Reflections</a>
+      <a href="https://ko-fi.com/esotericwisdom" target="_blank" rel="noopener noreferrer"
+         class="px-3 py-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-white font-semibold hover:scale-105 transition-transform shrink-0">☕ Support</a>
+    </div>
+  </nav>
+
+  <!-- Breadcrumb -->
+  <div class="relative z-10 max-w-6xl mx-auto pt-4">
+    <a href="/western-esotericism" class="text-xs text-blue-300/60 hover:text-blue-300 transition-colors">← Western Esotericism</a>
+  </div>
+
+  <div class="relative z-10 max-w-6xl mx-auto space-y-10 pt-6">
+
+    <!-- Hero -->
+    <section class="text-center py-12 px-4">
+      <div class="text-6xl mb-6 floating">🕎</div>
+      <h1 class="font-cinzel text-5xl md:text-6xl font-bold aurora-text mb-6">Kabbalah</h1>
+      <p class="text-blue-200 text-lg md:text-xl max-w-4xl mx-auto leading-relaxed font-light">
+        The mystical heart of Judaism — a received tradition of divine wisdom that maps the hidden structure of God, the cosmos, and the human soul through the luminous language of the Hebrew letters, the sefirot, and the Tree of Life. From the ancient Merkabah mystics to the Zohar's flowering in medieval Spain, from the Lurianic school of Safed to the Hasidic masters, Kabbalah has remained the secret fire within the Jewish tradition for two millennia.
+      </p>
+    </section>
+
+    <!-- What Is Kabbalah? -->
+    <section class="rounded-2xl border border-blue-700/40 bg-gradient-to-br from-blue-950/50 to-indigo-950/40 p-8">
+      <h2 class="font-cinzel text-2xl text-blue-300 mb-6">✦ What Is Kabbalah?</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div>
+          <p class="text-blue-100/90 text-sm leading-relaxed mb-4">
+            The word <em class="text-blue-300">Kabbalah</em> (קַבָּלָה) derives from the Hebrew root meaning "to receive" — pointing to its nature as a <strong class="text-blue-300">received tradition</strong>, a body of esoteric wisdom passed from teacher to student across generations. It constitutes the mystical, theosophical, and contemplative dimension of Judaism, exploring the inner meaning of Torah and the hidden nature of the divine.
+          </p>
+          <p class="text-blue-100/90 text-sm leading-relaxed mb-4">
+            Kabbalah asks the most profound questions: What is God in God's innermost nature? How did the finite world emerge from the Infinite? What is the structure of the cosmos? What is the nature and destiny of the human soul? It answers through a highly developed symbolic language — the <strong class="text-blue-300">sefirot</strong> (divine qualities), the <strong class="text-blue-300">Hebrew letters</strong> (as cosmic building blocks), the <strong class="text-blue-300">Four Worlds</strong>, and the ever-present mystery of <em>Ein Sof</em> (the Infinite Without End).
+          </p>
+          <p class="text-blue-100/90 text-sm leading-relaxed">
+            The Kabbalistic worldview is fundamentally optimistic: the world is not a prison but a vessel for divine light. Human beings are not fallen accidents but <strong class="text-blue-300">partners in creation</strong>, entrusted with the sacred task of <em>Tikkun Olam</em> — the repair and completion of the world.
+          </p>
+        </div>
+        <div>
+          <p class="text-blue-100/90 text-sm leading-relaxed mb-4">
+            Kabbalah must be distinguished from the broader category of "Jewish mysticism" (which includes Merkabah literature, Hasidism, and other streams) and from the modern phenomenon sometimes called "pop Kabbalah" — the commercialised version associated with celebrities that strips the tradition of its Torah roots and Jewish context.
+          </p>
+          <p class="text-blue-100/90 text-sm leading-relaxed mb-4">
+            Authentic Kabbalah is inseparable from Jewish practice: study of Torah, observance of <em>mitzvot</em> (commandments), prayer, and ethical living form the foundation on which Kabbalistic practice rests. The Zohar itself insists that mystical experience cannot be separated from the life of a practising Jew.
+          </p>
+          <p class="text-blue-100/90 text-sm leading-relaxed">
+            Modern scholars — most notably <strong class="text-blue-300">Gershom Scholem</strong> and his successor <strong class="text-blue-300">Moshe Idel</strong> — have established Kabbalah as a legitimate area of academic study, distinguishing its historical development with rigour and revealing its astonishing richness and variety.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ein Sof and the Sefirot -->
+    <section class="rounded-2xl border border-indigo-700/40 bg-gradient-to-br from-indigo-950/50 to-blue-950/30 p-8">
+      <h2 class="font-cinzel text-2xl text-indigo-300 mb-6">✦ Ein Sof &amp; the Tree of Life</h2>
+      <p class="text-blue-100/90 text-sm leading-relaxed mb-6">
+        At the summit of Kabbalistic theology stands <strong class="text-indigo-300">Ein Sof</strong> (אֵין סוֹף) — literally "Without End" — the Infinite, the Absolute, the divine reality beyond all attributes, beyond being and non-being alike. Ein Sof cannot be described, named, or grasped. It is the hidden root of all existence. From this unthinkable Infinite, divine light flows outward through a process of emanation, crystallising into the <strong class="text-indigo-300">ten sefirot</strong> — the divine qualities or powers through which God creates and sustains the universe.
+      </p>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
+        <div class="bg-black/30 rounded-xl p-4 border border-indigo-800/30">
+          <h3 class="text-indigo-300 font-semibold text-sm mb-2">1. Keter — Crown</h3>
+          <p class="text-blue-100/80 text-xs leading-relaxed">The first and highest sefirah — pure will, the primordial point of divine self-expression. The threshold between Ein Sof and manifest reality. Associated with the Divine Will and the innermost aspect of the soul.</p>
+        </div>
+        <div class="bg-black/30 rounded-xl p-4 border border-indigo-800/30">
+          <h3 class="text-indigo-300 font-semibold text-sm mb-2">2. Chokhmah — Wisdom</h3>
+          <p class="text-blue-100/80 text-xs leading-relaxed">The first flash of divine thought — pure undifferentiated wisdom, the primordial point of light. The "father" principle in Kabbalistic symbolism, associated with the spark before form.</p>
+        </div>
+        <div class="bg-black/30 rounded-xl p-4 border border-indigo-800/30">
+          <h3 class="text-indigo-300 font-semibold text-sm mb-2">3. Binah — Understanding</h3>
+          <p class="text-blue-100/80 text-xs leading-relaxed">The "mother" — divine understanding that receives the seed of Chokhmah and gives it form. Associated with the womb of creation, the divine intellect that structures and differentiates.</p>
+        </div>
+        <div class="bg-black/30 rounded-xl p-4 border border-indigo-800/30">
+          <h3 class="text-indigo-300 font-semibold text-sm mb-2">4. Chesed — Lovingkindness</h3>
+          <p class="text-blue-100/80 text-xs leading-relaxed">Boundless divine mercy, generosity, and grace. The expansive, giving quality of God. Associated with Abraham, the patriarch of hospitality and divine blessing.</p>
+        </div>
+        <div class="bg-black/30 rounded-xl p-4 border border-indigo-800/30">
+          <h3 class="text-indigo-300 font-semibold text-sm mb-2">5. Gevurah — Strength</h3>
+          <p class="text-blue-100/80 text-xs leading-relaxed">Divine judgement, power, and boundary-setting. The contracting, limiting quality that balances Chesed's expansiveness. Without Gevurah, love becomes formless; without Chesed, judgement becomes cruel.</p>
+        </div>
+        <div class="bg-black/30 rounded-xl p-4 border border-indigo-800/30">
+          <h3 class="text-indigo-300 font-semibold text-sm mb-2">6. Tiferet — Beauty</h3>
+          <p class="text-blue-100/80 text-xs leading-relaxed">The heart of the Tree — the harmonising centre that mediates between mercy and judgement. Associated with the divine heart, the sun, and in later Kabbalah with the Messiah. The "son" in the divine family.</p>
+        </div>
+        <div class="bg-black/30 rounded-xl p-4 border border-indigo-800/30">
+          <h3 class="text-indigo-300 font-semibold text-sm mb-2">7. Netzach — Victory/Eternity</h3>
+          <p class="text-blue-100/80 text-xs leading-relaxed">The quality of divine endurance, desire, and natural emotion. Associated with Venus, the world of nature, and the eternal drive toward life and love.</p>
+        </div>
+        <div class="bg-black/30 rounded-xl p-4 border border-indigo-800/30">
+          <h3 class="text-indigo-300 font-semibold text-sm mb-2">8. Hod — Splendour</h3>
+          <p class="text-blue-100/80 text-xs leading-relaxed">Divine glory in its structured, articulated form. Associated with Mercury, communication, intellect, and the beauty of form. The quality of surrender and receptivity.</p>
+        </div>
+        <div class="bg-black/30 rounded-xl p-4 border border-indigo-800/30">
+          <h3 class="text-indigo-300 font-semibold text-sm mb-2">9. Yesod — Foundation</h3>
+          <p class="text-blue-100/80 text-xs leading-relaxed">The channel through which divine energy flows into manifestation — the cosmic foundation that connects the higher worlds to the physical. Associated with the moon and the power of connection and covenant.</p>
+        </div>
+        <div class="bg-black/30 rounded-xl p-4 border border-indigo-800/30">
+          <h3 class="text-indigo-300 font-semibold text-sm mb-2">10. Malkuth — Kingdom</h3>
+          <p class="text-blue-100/80 text-xs leading-relaxed">The Shekhinah — the divine feminine presence in the world. The physical cosmos, the Earth, the manifest reality in which God's glory is expressed. The goal of creation: that the divine light fully inhabits the material world.</p>
+        </div>
+      </div>
+      <p class="text-blue-100/80 text-sm leading-relaxed">The Tree of Life is threaded by <strong class="text-indigo-300">22 paths</strong> corresponding to the 22 letters of the Hebrew alphabet — each letter a force of creation and a gate of consciousness. The entire structure is also reflected across <strong class="text-indigo-300">Four Worlds</strong>: Atziluth (Emanation), Beriah (Creation), Yetzirah (Formation), and Assiah (Action/Matter).</p>
+    </section>
+
+    <!-- Sacred Texts -->
+    <section class="rounded-2xl border border-blue-800/40 bg-gradient-to-br from-blue-950/40 to-indigo-950/30 p-8">
+      <h2 class="font-cinzel text-2xl text-blue-300 mb-6">✦ Sacred Kabbalistic Texts</h2>
+      <div class="grid md:grid-cols-2 gap-5">
+        <div class="kab-card bg-black/30 rounded-xl p-5 border border-blue-800/30">
+          <h3 class="text-blue-300 font-cinzel font-semibold text-base mb-2">📜 Sefer Yetzirah — Book of Formation</h3>
+          <p class="text-blue-100/80 text-xs leading-relaxed">The oldest Kabbalistic text (c. 2nd–6th century CE), attributed to the patriarch Abraham. In terse, enigmatic Hebrew, it describes how God created the cosmos through the 22 Hebrew letters and the 10 primordial numbers (sefirot). It is the original source of the letter–cosmos correspondence at the heart of all later Kabbalah.</p>
+        </div>
+        <div class="kab-card bg-black/30 rounded-xl p-5 border border-blue-800/30">
+          <h3 class="text-blue-300 font-cinzel font-semibold text-base mb-2">💡 Sefer ha-Bahir — Book of Brilliance</h3>
+          <p class="text-blue-100/80 text-xs leading-relaxed">Appearing in Provence in the 12th century, the Bahir is the first text to use the term <em>sefirot</em> in its developed Kabbalistic sense. Written in the style of a midrash, it introduces reincarnation (<em>gilgul neshamot</em>) into Jewish thought and develops rich symbolism around the Hebrew letters and divine feminine.</p>
+        </div>
+        <div class="kab-card bg-black/30 rounded-xl p-5 border border-blue-800/30">
+          <h3 class="text-blue-300 font-cinzel font-semibold text-base mb-2">🌟 The Zohar — Book of Splendour</h3>
+          <p class="text-blue-100/80 text-xs leading-relaxed">The crown jewel of Kabbalistic literature, written primarily by <strong class="text-blue-200">Moses de León</strong> in Castile (c. 1280–1286), though attributed to the ancient sage Rabbi Shimon bar Yochai. Written in Aramaic, the Zohar is a mystical commentary on the Torah that reveals the inner, luminous dimensions of scripture. It describes the drama of the sefirot, the exile of the Shekhinah, the mystery of evil, and the path of return. Its authority in Judaism has approached that of the Talmud itself.</p>
+        </div>
+        <div class="kab-card bg-black/30 rounded-xl p-5 border border-blue-800/30">
+          <h3 class="text-blue-300 font-cinzel font-semibold text-base mb-2">⚡ Lurianic Texts</h3>
+          <p class="text-blue-100/80 text-xs leading-relaxed">Isaac Luria's revolutionary teachings were recorded by his disciple <strong class="text-blue-200">Chaim Vital</strong> in the <em>Etz Chaim</em> (Tree of Life) and <em>Pri Etz Chaim</em>. These texts introduce Tzimtzum, Shevirat ha-Kelim, and Tikkun — the three great cosmological acts that define Lurianic Kabbalah and underpin the concept of Tikkun Olam.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Historical Schools -->
+    <section class="rounded-2xl border border-indigo-700/30 bg-gradient-to-br from-indigo-950/40 to-blue-950/30 p-8">
+      <h2 class="font-cinzel text-2xl text-indigo-300 mb-6">✦ Historical Schools &amp; Development</h2>
+      <div class="space-y-4">
+        <div class="bg-black/20 rounded-xl p-5 border border-indigo-900/30">
+          <h3 class="text-indigo-300 font-semibold text-sm mb-2">🔥 Merkabah Mysticism (1st–7th c. CE)</h3>
+          <p class="text-blue-100/80 text-xs leading-relaxed">The earliest form of Jewish mysticism — the <em>Heikhalot</em> (Palaces) literature — describes the mystic's ascent through seven heavenly palaces to behold the divine Chariot (<em>Merkabah</em>) described by Ezekiel. These visionary ascents required intense preparation, elaborate rituals, and knowledge of divine names and seals. The <em>Shi'ur Qomah</em> text controversially describes the cosmic dimensions of the divine body.</p>
+        </div>
+        <div class="bg-black/20 rounded-xl p-5 border border-indigo-900/30">
+          <h3 class="text-indigo-300 font-semibold text-sm mb-2">🌹 Spanish Golden Age (12th–15th c.)</h3>
+          <p class="text-blue-100/80 text-xs leading-relaxed">The great flowering of Kabbalah in Provence and then Castilian Spain. The Gerona school (Nachmanides, Ezra of Gerona) developed systematic sefirot theology. Moses de León produced the Zohar. Joseph Gikatilla wrote <em>Gates of Light</em> — the most accessible guide to the sefirot system. Abraham Abulafia developed ecstatic, prophetic Kabbalah centred on Hebrew letter permutation and breathing meditation.</p>
+        </div>
+        <div class="bg-black/20 rounded-xl p-5 border border-indigo-900/30">
+          <h3 class="text-indigo-300 font-semibold text-sm mb-2">🌌 Safed School (16th c.)</h3>
+          <p class="text-blue-100/80 text-xs leading-relaxed">Following the expulsion of Jews from Spain (1492), the mystical community of Safed in the Galilee became the new centre of Kabbalistic life. Moses Cordovero systematised the entire prior tradition in his <em>Pardes Rimmonim</em>. Then Isaac Luria ("the Ari", 1534–1572) arrived and revolutionised everything with his doctrine of Tzimtzum, the breaking of the vessels, and Tikkun — a cosmic drama of exile and repair. Luria's student Joseph Karo also composed the <em>Shulchan Aruch</em>, unifying Jewish law.</p>
+        </div>
+        <div class="bg-black/20 rounded-xl p-5 border border-indigo-900/30">
+          <h3 class="text-indigo-300 font-semibold text-sm mb-2">✨ Hasidism (18th c. — present)</h3>
+          <p class="text-blue-100/80 text-xs leading-relaxed">Founded by <strong class="text-blue-200">Israel ben Eliezer</strong>, the Baal Shem Tov ("Master of the Good Name", c. 1698–1760), Hasidism democratised Kabbalah. Rather than requiring scholarly mastery of the Zohar, the Besht taught that God is everywhere — in a blade of grass, a peasant's song, a child's laughter. Devequt (cleaving to God) through joy, prayer, and simple faith was available to all. Hasidism spread rapidly through Eastern Europe, developing into distinct dynasties (Chabad-Lubavitch, Breslov, Satmar) that persist today.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lurianic Kabbalah Feature -->
+    <section class="rounded-2xl border border-blue-600/40 bg-gradient-to-br from-blue-950/60 to-indigo-950/40 p-8">
+      <h2 class="font-cinzel text-2xl text-blue-300 mb-6">✦ Isaac Luria &amp; the Lurianic Revolution</h2>
+      <div class="grid md:grid-cols-3 gap-5">
+        <div class="bg-black/30 rounded-xl p-5 border border-blue-800/30">
+          <h3 class="text-blue-300 font-semibold text-sm mb-2">🌀 Tzimtzum — Contraction</h3>
+          <p class="text-blue-100/80 text-xs leading-relaxed">Before creation, God's infinite light filled all. To make room for a world, God performed <em>Tzimtzum</em> — a primal contraction, a withdrawal into the divine self, leaving a "vacant space" (<em>chalal</em>) in which creation could occur. This revolutionary idea solved the problem of how a finite world could arise from an infinite God, and carried deep implications for understanding exile, self-limitation, and the hidden presence of God in the world.</p>
+        </div>
+        <div class="bg-black/30 rounded-xl p-5 border border-blue-800/30">
+          <h3 class="text-blue-300 font-semibold text-sm mb-2">💥 Shevirat ha-Kelim — Breaking of the Vessels</h3>
+          <p class="text-blue-100/80 text-xs leading-relaxed">Into the vacant space, God emanated vessels (<em>kelim</em>) to contain divine light. But the lower vessels could not contain the intensity of the light — they shattered. This "breaking of the vessels" scattered 288 divine sparks (<em>nitzotzot</em>) into the depths of matter, where they are now covered by <em>qliphot</em> (shells/husks). The physical world is thus a realm of fallen sparks waiting to be raised.</p>
+        </div>
+        <div class="bg-black/30 rounded-xl p-5 border border-blue-800/30">
+          <h3 class="text-blue-300 font-semibold text-sm mb-2">🌱 Tikkun — Repair</h3>
+          <p class="text-blue-100/80 text-xs leading-relaxed">The purpose of human existence is <em>Tikkun</em> — the restoration and repair of the cosmos by gathering and elevating the scattered divine sparks. Every act of Torah, prayer, and ethical living performed with holy intention raises a spark. Human beings are thus partners in the divine project of completion. This doctrine gave profound meaning to Jewish exile and transformed suffering into a cosmic vocation. <em>Tikkun Olam</em> (repair of the world) has since become a central concept in modern Jewish ethics.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Figures -->
+    <section class="rounded-2xl border border-indigo-700/30 bg-gradient-to-br from-indigo-950/40 to-blue-950/30 p-8">
+      <h2 class="font-cinzel text-2xl text-indigo-300 mb-6">✦ Key Figures</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="bg-black/20 rounded-xl p-4 border border-indigo-900/30">
+          <h3 class="text-indigo-300 font-semibold text-sm mb-1">Rabbi Shimon bar Yochai (c. 2nd c.)</h3>
+          <p class="text-blue-100/80 text-xs leading-relaxed">Legendary author of the Zohar — said to have spent 13 years in a cave with his son, emerging to compose the masterwork of Jewish mysticism. The cave became a symbol of the hidden life of contemplation.</p>
+        </div>
+        <div class="bg-black/20 rounded-xl p-4 border border-indigo-900/30">
+          <h3 class="text-indigo-300 font-semibold text-sm mb-1">Moses de León (c. 1240–1305)</h3>
+          <p class="text-blue-100/80 text-xs leading-relaxed">The actual author of most of the Zohar, according to modern scholarship (Gershom Scholem). A Castilian Kabbalist who composed the Zohar in Aramaic, presenting it as an ancient text. Whether fraud or inspiration, he produced the greatest work of Jewish mystical literature.</p>
+        </div>
+        <div class="bg-black/20 rounded-xl p-4 border border-indigo-900/30">
+          <h3 class="text-indigo-300 font-semibold text-sm mb-1">Abraham Abulafia (1240–c. 1291)</h3>
+          <p class="text-blue-100/80 text-xs leading-relaxed">Founder of ecstatic Kabbalah — a visionary and controversial figure who sought prophetic experience through letter-combination and breathing techniques. He even attempted to convert Pope Nicholas III to his vision of prophetic Judaism.</p>
+        </div>
+        <div class="bg-black/20 rounded-xl p-4 border border-indigo-900/30">
+          <h3 class="text-indigo-300 font-semibold text-sm mb-1">Isaac Luria — the Ari (1534–1572)</h3>
+          <p class="text-blue-100/80 text-xs leading-relaxed">The "Lion" of Safed — perhaps the most influential Kabbalist since the Zohar itself. His revolutionary cosmology (Tzimtzum, Shevirat, Tikkun) transformed all subsequent Kabbalah and gave birth to the modern concept of Tikkun Olam.</p>
+        </div>
+        <div class="bg-black/20 rounded-xl p-4 border border-indigo-900/30">
+          <h3 class="text-indigo-300 font-semibold text-sm mb-1">Baal Shem Tov (c. 1698–1760)</h3>
+          <p class="text-blue-100/80 text-xs leading-relaxed">Israel ben Eliezer — the "Master of the Good Name" who founded Hasidism and democratised Kabbalistic wisdom. He taught that a simple person's sincere prayer is more precious than a scholar's cold scholarship, and that joy itself is a path to God.</p>
+        </div>
+        <div class="bg-black/20 rounded-xl p-4 border border-indigo-900/30">
+          <h3 class="text-indigo-300 font-semibold text-sm mb-1">Gershom Scholem (1897–1982)</h3>
+          <p class="text-blue-100/80 text-xs leading-relaxed">The great modern scholar of Kabbalah — his landmark works <em>Major Trends in Jewish Mysticism</em> and <em>Kabbalah</em> established the academic study of the tradition, revealing its history, diversity, and profound significance within Judaism and Western thought.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kabbalah in Practice -->
+    <section class="rounded-2xl border border-blue-700/30 bg-gradient-to-br from-blue-950/40 to-indigo-950/30 p-8">
+      <h2 class="font-cinzel text-2xl text-blue-300 mb-6">✦ Kabbalah in Practice</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div>
+          <p class="text-blue-100/90 text-sm leading-relaxed mb-4">
+            In its Jewish context, Kabbalistic practice is woven inseparably into the fabric of <em>halakha</em> (Jewish law) and <em>tefillah</em> (prayer). The great Kabbalists did not see mysticism as an alternative to normative Judaism but as its hidden dimension — the inner fire that animates the outer form. Observing Shabbat, eating kosher food, and reciting daily prayers are all understood, from a Kabbalistic perspective, as acts of profound cosmic significance.
+          </p>
+          <p class="text-blue-100/90 text-sm leading-relaxed">
+            The <strong class="text-blue-300">four levels of Torah interpretation</strong> — known by the acronym <em>PaRDeS</em> (Peshat, Remez, Derash, Sod) — correspond to literal, allegorical, homiletical, and mystical/secret dimensions. Kabbalistic study engages the innermost Sod level: the hidden, esoteric meaning of every word, letter, and cantillation mark in the Torah.
+          </p>
+        </div>
+        <div>
+          <p class="text-blue-100/90 text-sm leading-relaxed mb-4">
+            <strong class="text-blue-300">Gematria</strong> (assigning numerical values to Hebrew letters), <strong class="text-blue-300">Notarikon</strong> (reading each letter of a word as the initial of another word), and <strong class="text-blue-300">Temurah</strong> (letter permutation) are techniques used to reveal hidden dimensions of the sacred text.
+          </p>
+          <p class="text-blue-100/90 text-sm leading-relaxed">
+            In the Hasidic tradition, practices of <em>devequt</em> (cleaving to God in all activities), <em>hitbonenut</em> (deep contemplation of divine concepts), and <em>hitbodedut</em> (spontaneous personal prayer in one's own language, as taught by Rabbi Nachman of Breslov) bring the high metaphysics of Kabbalah down to earth in the life of every practising Jew.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <footer class="relative z-10 text-center py-8 text-blue-300/40 text-xs mt-8">
+    <p class="italic">"The Torah has a body and a soul. The body is the commandments; the soul is the mystery of the Torah." — The Zohar</p>
+    <p class="mt-2">Esoteric Wisdom · Built with ✨ in Rust</p>
+    <p class="mt-2"><a href="/western-esotericism" class="hover:text-blue-300 transition-colors">← Western Esotericism</a> · <a href="/home" class="hover:text-blue-300 transition-colors">Portal</a></p>
+  </footer>
+
+  <script>
+    const sf = document.getElementById('starfield');
+    for (let i = 0; i < 200; i++) {
+      const s = document.createElement('div');
+      s.className = 'star';
+      const size = Math.random() * 2.5 + 0.5;
+      s.style.cssText = `width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--dur:${2+Math.random()*4}s;--delay:${Math.random()*5}s;opacity:${0.2+Math.random()*0.8};`;
+      sf.appendChild(s);
+    }
+  </script>
+</body>
+</html>
