@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Western Esotericism — Esoteric Wisdom</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Raleway', sans-serif; }
+    .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+
+    @keyframes twinkle { 0%,100% { opacity: 0.2; } 50% { opacity: 1; } }
+    .star { position: absolute; border-radius: 50%; background: white; animation: twinkle var(--dur,3s) ease-in-out infinite; animation-delay: var(--delay,0s); }
+
+    @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+    .floating { animation: float 5s ease-in-out infinite; }
+
+    @keyframes shimmer {
+      0% { background-position: -200% center; }
+      100% { background-position: 200% center; }
+    }
+
+    .nav-link { position: relative; transition: all 0.3s; }
+    .nav-link::after {
+      content: ''; position: absolute; bottom: -2px; left: 0;
+      width: 0; height: 2px;
+      background: linear-gradient(90deg, #f59e0b, #a78bfa);
+      transition: width 0.3s;
+    }
+    .nav-link:hover::after { width: 100%; }
+
+    .aurora-text {
+      background: linear-gradient(90deg, #a78bfa, #818cf8, #c4b5fd, #7c3aed, #a78bfa);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 4s linear infinite;
+    }
+
+    @keyframes we-pulse {
+      0%, 100% { box-shadow: 0 0 10px 2px rgba(139, 92, 246, 0.3); }
+      50% { box-shadow: 0 0 25px 6px rgba(139, 92, 246, 0.6); }
+    }
+
+    .we-card {
+      background: linear-gradient(135deg, rgba(139,92,246,0.08), rgba(109,40,217,0.04));
+      border: 1px solid rgba(139,92,246,0.25);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+      cursor: pointer;
+    }
+    .we-card:hover {
+      transform: translateY(-7px) scale(1.01);
+      box-shadow: 0 0 30px 6px rgba(139, 92, 246, 0.35);
+      border-color: rgba(139, 92, 246, 0.6);
+    }
+    .we-card.pulse {
+      animation: we-pulse 3s ease-in-out infinite;
+    }
+
+    .scholar-card {
+      background: linear-gradient(135deg, rgba(109,40,217,0.1), rgba(76,29,149,0.06));
+      border: 1px solid rgba(139,92,246,0.2);
+      border-radius: 0.75rem;
+      padding: 1.25rem;
+      transition: border-color 0.3s;
+    }
+    .scholar-card:hover {
+      border-color: rgba(167, 139, 250, 0.5);
+    }
+  </style>
+</head>
+<body class="min-h-screen text-violet-100 overflow-x-hidden" style="background: radial-gradient(ellipse at top, #1a0a3d 0%, #0d0a2e 30%, #050318 65%, #000000 100%);">
+
+  <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+
+  <!-- NAV -->
+  <nav class="sticky top-0 z-50 flex items-center justify-between px-6 py-3 bg-black/40 backdrop-blur-md border-b border-violet-500/20 flex-wrap gap-y-2">
+    <a href="/home" class="font-cinzel text-amber-300 text-sm tracking-widest shrink-0">✦ Esoteric Wisdom ✦</a>
+    <div class="flex items-center gap-x-3 gap-y-1 text-xs text-violet-200 flex-wrap justify-end">
+      <a href="/astrology" class="nav-link hover:text-amber-300 transition-colors">Astrology</a>
+      <a href="/meditation" class="nav-link hover:text-amber-300 transition-colors">Meditation</a>
+      <a href="/tarot/select" class="nav-link hover:text-amber-300 transition-colors">Tarot</a>
+      <a href="/numerology" class="nav-link hover:text-amber-300 transition-colors">Numerology</a>
+      <a href="/crystals" class="nav-link hover:text-amber-300 transition-colors">Crystals</a>
+      <a href="/runes" class="nav-link hover:text-amber-300 transition-colors">Runes</a>
+      <a href="/shamanism" class="nav-link hover:text-amber-300 transition-colors">Shamanism</a>
+      <a href="/druidism" class="nav-link hover:text-amber-300 transition-colors">Druidism</a>
+      <a href="/akashic-records" class="nav-link hover:text-amber-300 transition-colors">Akashic Records</a>
+      <a href="/wicca" class="nav-link hover:text-amber-300 transition-colors">Wicca</a>
+      <a href="/alchemy" class="nav-link hover:text-amber-300 transition-colors">Alchemy</a>
+      <a href="/gateway-process" class="nav-link hover:text-amber-300 transition-colors">Gateway Process</a>
+      <a href="/remote-viewing" class="nav-link hover:text-amber-300 transition-colors">Remote Viewing</a>
+      <a href="/khasarov-mirror" class="nav-link hover:text-amber-300 transition-colors">Khasarov Mirror</a>
+      <a href="/western-esotericism" class="nav-link text-amber-300 font-semibold">Western Esotericism</a>
+      <a href="/journal/reflections" class="nav-link text-emerald-300 hover:text-emerald-200 transition-colors">✨ Reflections</a>
+      <a href="https://ko-fi.com/esotericwisdom" target="_blank" rel="noopener noreferrer"
+         class="px-3 py-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-white font-semibold hover:scale-105 transition-transform shrink-0">☕ Support</a>
+    </div>
+  </nav>
+
+  <!-- CONTENT WRAPPER -->
+  <div class="relative z-10 max-w-6xl mx-auto space-y-10 pt-6 px-4 pb-12">
+
+    <!-- HERO -->
+    <section class="text-center py-16 space-y-6">
+      <div class="text-7xl floating">🌿</div>
+      <h1 class="font-cinzel text-4xl md:text-6xl font-bold aurora-text leading-tight">
+        Western Esotericism
+      </h1>
+      <p class="max-w-3xl mx-auto text-violet-200/80 text-lg leading-relaxed">
+        A living constellation of spiritual traditions, philosophical schools, and mystical movements that emerged from the ancient Mediterranean world, developed through medieval Europe, and continue to evolve today. Western Esotericism bridges Greco-Roman philosophy, Jewish mysticism, Christian mysticism, Renaissance magic, and 19th-century occult revival into one interconnected stream of hidden wisdom.
+      </p>
+    </section>
+
+    <!-- SECTION 1: WHAT IS WESTERN ESOTERICISM? -->
+    <section class="rounded-2xl p-8 space-y-6" style="background: linear-gradient(135deg, rgba(79,42,179,0.15), rgba(55,27,140,0.08));">
+      <h2 class="font-cinzel text-2xl text-violet-300 text-center tracking-wide">What Is Western Esotericism?</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm text-violet-100/80 leading-relaxed">
+        <div class="space-y-4">
+          <p>
+            The academic study of Western esotericism was shaped decisively by the French scholar <strong class="text-violet-200">Antoine Faivre</strong>, professor emeritus at the École Pratique des Hautes Études in Paris, who proposed four intrinsic characteristics that define the field as a coherent object of scholarly inquiry.
+          </p>
+          <p>
+            The first characteristic is <strong class="text-violet-200">correspondences</strong> — the idea that symbolic and real correspondences exist between all parts of the cosmos. Between the macrocosm (the great world: stars, planets, cosmic forces) and the microcosm (the small world: the human being, the body, the soul). Between different levels of reality — the mineral, vegetable, animal, human, angelic, and divine — each level reflecting the structure of every other. This principle underlies astrology, alchemy, and the entire system of Renaissance natural magic.
+          </p>
+          <p>
+            The second is <strong class="text-violet-200">living nature</strong> — the cosmos is not a dead mechanical clock but a living, ensouled organism, permeated by occult forces, energies, and intelligences. Nature is not merely matter to be exploited but a sacred text to be read and a living being to be engaged with in relationship.
+          </p>
+          <p>
+            The third is <strong class="text-violet-200">imagination and mediations</strong> — the role of symbols, rituals, visions, and intermediary spiritual beings. The imagination (in the strong sense — the capacity for spiritual vision, not mere fantasy) is an organ of spiritual perception. Rituals, talismans, and angelic intermediaries serve as bridges between the human and divine.
+          </p>
+          <p>
+            The fourth, and perhaps most important, is the <strong class="text-violet-200">experience of transmutation</strong> — the practitioner themselves is transformed through engagement with esoteric knowledge and practice. This is not merely intellectual study but a process of spiritual metamorphosis: the alchemical transformation of the soul, the Hermetic ascent through the planetary spheres, the Kabbalistic approach to the divine through the sefirot.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <p>
+            The Dutch scholar <strong class="text-violet-200">Wouter Hanegraaff</strong>, Professor of Hermetic Philosophy at the University of Amsterdam, offers a complementary and broader definition. He describes Western esotericism as <em>"rejected knowledge"</em> — the traditions that modernity's twin processes of rationalisation and disenchantment pushed to the cultural margins. As the Enlightenment elevated empirical science and rational theology as the twin arbiters of truth, an entire current of wisdom — one that believed in the living cosmos, occult forces, spiritual transformation, and the unity of all things — was marginalised and labelled as superstition, fraud, or heresy.
+          </p>
+          <p>
+            Yet this marginalised current never disappeared. It continued in underground and semi-public forms, transmitted through initiatory societies, scholarly networks, and the persistent fascination of curious minds. Hanegraaff's approach illuminates how the very concept of "esotericism" as a category is itself a product of modernity — created by the forces that rejected it.
+          </p>
+          <p>
+            The concept of the <strong class="text-violet-200">Hermetic chain</strong> (or <em>prisca theologia</em>, the "ancient theology") describes a continuous lineage of initiatory wisdom stretching from ancient Egypt through the Renaissance to the present. This chain was itself a mythic construction — a self-understanding of the tradition — but one with profound consequences for how practitioners understood their inheritance and responsibility.
+          </p>
+          <p>
+            Western esotericism is <em>distinct</em> from Eastern traditions such as Hinduism, Buddhism, and Taoism, though it shares deep resonances with them. It emerged from a distinct cultural matrix: <strong class="text-violet-200">Greek philosophy</strong> (Plato, Aristotle, the Stoics), <strong class="text-violet-200">Jewish scripture and mysticism</strong>, <strong class="text-violet-200">Christian theology</strong>, <strong class="text-violet-200">Arabic science and philosophy</strong>, and later the Latin West. The academic field is represented by the <strong class="text-violet-200">ESSWE</strong> (European Society for the Study of Western Esotericism) and journals such as <em>Aries: Journal for the Study of Western Esotericism</em>. Key scholars include Faivre, Hanegraaff, <strong class="text-violet-200">Frances Yates</strong> (pioneering historian of Renaissance Hermeticism), <strong class="text-violet-200">Gershom Scholem</strong> (founding authority on Kabbalah), and <strong class="text-violet-200">Nicholas Goodrick-Clarke</strong> (historian of Western esotericism at the University of Exeter).
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: THE TRADITIONS -->
+    <section class="space-y-6">
+      <h2 class="font-cinzel text-2xl text-violet-300 text-center tracking-wide">The Traditions</h2>
+      <p class="text-center text-violet-200/60 text-sm max-w-2xl mx-auto">
+        Eleven interwoven currents of hidden wisdom — each a world unto itself, yet all flowing from and back into the same great stream.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+        <a href="/western-esotericism/hermeticism" class="we-card block no-underline group">
+          <div class="text-4xl mb-3">🜁</div>
+          <h3 class="font-cinzel text-lg text-amber-300 mb-2 group-hover:text-amber-200 transition-colors">Hermeticism</h3>
+          <p class="text-violet-100/70 text-sm leading-relaxed mb-3">
+            The Hermetic tradition stemming from Hermes Trismegistus — the thrice-great philosopher-magician whose texts shaped Western esotericism for two millennia.
+          </p>
+          <span class="text-amber-400 text-xs font-semibold tracking-wider">Explore →</span>
+        </a>
+
+        <a href="/western-esotericism/gnosticism" class="we-card block no-underline group">
+          <div class="text-4xl mb-3">🕳️</div>
+          <h3 class="font-cinzel text-lg text-cyan-300 mb-2 group-hover:text-cyan-200 transition-colors">Gnosticism</h3>
+          <p class="text-violet-100/70 text-sm leading-relaxed mb-3">
+            Ancient liberationist religions teaching that the material world is a divine error and that the soul carries a spark of transcendent light.
+          </p>
+          <span class="text-cyan-400 text-xs font-semibold tracking-wider">Explore →</span>
+        </a>
+
+        <a href="/western-esotericism/neoplatonism" class="we-card block no-underline group">
+          <div class="text-4xl mb-3">⚖️</div>
+          <h3 class="font-cinzel text-lg text-violet-300 mb-2 group-hover:text-violet-200 transition-colors">Neoplatonism</h3>
+          <p class="text-violet-100/70 text-sm leading-relaxed mb-3">
+            Plotinus, Iamblichus, and Proclus — the late antique philosophical tradition that became the metaphysical backbone of Western esotericism.
+          </p>
+          <span class="text-violet-400 text-xs font-semibold tracking-wider">Explore →</span>
+        </a>
+
+        <a href="/western-esotericism/rosicrucianism" class="we-card block no-underline group">
+          <div class="text-4xl mb-3">🌹</div>
+          <h3 class="font-cinzel text-lg text-rose-300 mb-2 group-hover:text-rose-200 transition-colors">Rosicrucianism</h3>
+          <p class="text-violet-100/70 text-sm leading-relaxed mb-3">
+            The mysterious Brotherhood of the Rosy Cross — its founding manifestos, legendary origins, and lasting influence on Freemasonry and modern occultism.
+          </p>
+          <span class="text-rose-400 text-xs font-semibold tracking-wider">Explore →</span>
+        </a>
+
+        <a href="/western-esotericism/christian-mysticism" class="we-card block no-underline group">
+          <div class="text-4xl mb-3">✝️</div>
+          <h3 class="font-cinzel text-lg text-blue-300 mb-2 group-hover:text-blue-200 transition-colors">Christian Mysticism</h3>
+          <p class="text-violet-100/70 text-sm leading-relaxed mb-3">
+            Meister Eckhart's Godhead, Jakob Böhme's Unground, and the mystical tradition within Christianity that sought union with the Divine beyond doctrine.
+          </p>
+          <span class="text-blue-400 text-xs font-semibold tracking-wider">Explore →</span>
+        </a>
+
+        <a href="/western-esotericism/theosophy" class="we-card block no-underline group">
+          <div class="text-4xl mb-3">🔯</div>
+          <h3 class="font-cinzel text-lg text-indigo-300 mb-2 group-hover:text-indigo-200 transition-colors">Theosophy</h3>
+          <p class="text-violet-100/70 text-sm leading-relaxed mb-3">
+            Helena Petrovna Blavatsky and the Theosophical Society — the great 19th-century synthesis of Eastern and Western wisdom that seeded the modern New Age.
+          </p>
+          <span class="text-indigo-400 text-xs font-semibold tracking-wider">Explore →</span>
+        </a>
+
+        <a href="/western-esotericism/anthroposophy" class="we-card block no-underline group">
+          <div class="text-4xl mb-3">🌱</div>
+          <h3 class="font-cinzel text-lg text-green-300 mb-2 group-hover:text-green-200 transition-colors">Anthroposophy</h3>
+          <p class="text-violet-100/70 text-sm leading-relaxed mb-3">
+            Rudolf Steiner's spiritual science — clairvoyant research into cosmic evolution, the nature of the human being, and practical applications in education, medicine, and agriculture.
+          </p>
+          <span class="text-green-400 text-xs font-semibold tracking-wider">Explore →</span>
+        </a>
+
+        <a href="/western-esotericism/kabbalah" class="we-card block no-underline group">
+          <div class="text-4xl mb-3">🕎</div>
+          <h3 class="font-cinzel text-lg text-yellow-300 mb-2 group-hover:text-yellow-200 transition-colors">Kabbalah</h3>
+          <p class="text-violet-100/70 text-sm leading-relaxed mb-3">
+            The Jewish mystical tradition — the Tree of Life, the sefirot, Ein Sof, and the hidden structure of divinity from the Sefer Yetzirah to the Zohar.
+          </p>
+          <span class="text-yellow-400 text-xs font-semibold tracking-wider">Explore →</span>
+        </a>
+
+        <a href="/western-esotericism/christian-kabbalah" class="we-card block no-underline group">
+          <div class="text-4xl mb-3">✡️</div>
+          <h3 class="font-cinzel text-lg text-teal-300 mb-2 group-hover:text-teal-200 transition-colors">Christian Kabbalah</h3>
+          <p class="text-violet-100/70 text-sm leading-relaxed mb-3">
+            The Renaissance synthesis of Jewish Kabbalistic wisdom with Christian theology — Pico della Mirandola, Johannes Reuchlin, and the Hermetic-Kabbalistic currents that defined Western magic.
+          </p>
+          <span class="text-teal-400 text-xs font-semibold tracking-wider">Explore →</span>
+        </a>
+
+        <a href="/western-esotericism/occultism" class="we-card block no-underline group">
+          <div class="text-4xl mb-3">🌑</div>
+          <h3 class="font-cinzel text-lg text-purple-300 mb-2 group-hover:text-purple-200 transition-colors">Occultism</h3>
+          <p class="text-violet-100/70 text-sm leading-relaxed mb-3">
+            The 19th–20th century synthesis — Eliphas Lévi, the Golden Dawn, Aleister Crowley, Dion Fortune, and the great occult revival.
+          </p>
+          <span class="text-purple-400 text-xs font-semibold tracking-wider">Explore →</span>
+        </a>
+
+        <a href="/alchemy" class="we-card block no-underline group">
+          <div class="text-4xl mb-3">⚗️</div>
+          <h3 class="font-cinzel text-lg text-orange-300 mb-2 group-hover:text-orange-200 transition-colors">Alchemy</h3>
+          <p class="text-violet-100/70 text-sm leading-relaxed mb-3">
+            The ancient art of transformation — Hermetic philosophy in practice, from the prima materia to the Philosopher's Stone and the Great Work of the soul.
+          </p>
+          <span class="text-orange-400 text-xs font-semibold tracking-wider">Explore →</span>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- SECTION 3: THE HERMETIC CHAIN -->
+    <section class="rounded-2xl p-8 space-y-5" style="background: linear-gradient(135deg, rgba(55,27,140,0.12), rgba(30,15,80,0.08));">
+      <h2 class="font-cinzel text-2xl text-violet-300 text-center tracking-wide">The Hermetic Chain</h2>
+      <div class="text-sm text-violet-100/80 leading-relaxed space-y-4 max-w-4xl mx-auto">
+        <p>
+          At the heart of Western esotericism lies the concept of an unbroken chain of wisdom — a <em>tradition</em> in the truest sense, from the Latin <em>tradere</em>: to hand down. This chain does not run through one institution but through a living succession of teachers, texts, and initiatory encounters that have transmitted esoteric knowledge across the centuries.
+        </p>
+        <p>
+          The chain begins in the ancient Mediterranean world, with the <strong class="text-violet-200">mystery traditions of Egypt and Greece</strong> — the rites of Eleusis, the Orphic mysteries, the temple rites of Isis and Osiris. These traditions offered initiates transformative encounters with the divine through ritual, drama, and direct experience. They shared the conviction that the human soul has a divine origin and a celestial destiny.
+        </p>
+        <p>
+          In the late antique period, the chain bifurcates and interweaves. <strong class="text-violet-200">Neoplatonism</strong> (Plotinus, Porphyry, Iamblichus, Proclus) provided the metaphysical architecture — the hierarchical emanation of reality from the One, the soul's ascent through contemplation. <strong class="text-violet-200">Hermeticism</strong> (the Corpus Hermeticum, the Emerald Tablet) provided the practical and cosmological framework. <strong class="text-violet-200">Gnosticism</strong> ran as a parallel current, radicalising the Platonic critique of matter and developing elaborate mythologies of divine descent and return.
+        </p>
+        <p>
+          Throughout the medieval period, transmission continued — often underground, often via unexpected routes. <strong class="text-violet-200">Arabic scholars</strong> preserved and developed Hermetic, Neoplatonic, and alchemical texts. The Emerald Tablet first appears in Arabic. The Picatrix — a vast encyclopaedia of Hermetic magic and astrology — was composed in Arabic before its Latin translation. <strong class="text-violet-200">Jewish Kabbalah</strong> developed its own unique stream — the Sefer Yetzirah (Book of Formation), the Sefer ha-Bahir (Book of Illumination), and the great medieval synthesis of the Zohar (c. 1280). Christian mystics — Meister Eckhart, Johannes Tauler, Hildegard of Bingen — kept alive a mystical undercurrent within the Church.
+        </p>
+        <p>
+          The <strong class="text-violet-200">Renaissance</strong> was the first great synthesis: Cosimo de' Medici's commission to Ficino to translate the Corpus Hermeticum (1463), Pico della Mirandola's integration of Kabbalah into the Hermetic synthesis (1486), Cornelius Agrippa's encyclopaedic Three Books of Occult Philosophy (1531). The <strong class="text-violet-200">Rosicrucian manifestos</strong> of 1614–1616 broadcast the promise of an invisible brotherhood of adepts reforming the world through esoteric knowledge — a vision that proved immensely fertile.
+        </p>
+        <p>
+          The Enlightenment drove esoteric currents underground but could not extinguish them. Freemasonry became a vehicle for esoteric transmission in the 18th century. The 19th-century <strong class="text-violet-200">occult revival</strong> brought a remarkable flowering: Eliphas Lévi's synthesis of Kabbalah, Tarot, and magic; Helena Blavatsky's Theosophy; the Hermetic Order of the Golden Dawn (1888) — the most sophisticated synthesis of ceremonial magic, Kabbalah, Hermeticism, astrology, and Tarot that the Western tradition had produced. Rudolf Steiner split from Theosophy to develop Anthroposophy, a distinctly Western spiritual science. Aleister Crowley and Dion Fortune shaped 20th-century occultism. The chain continues today in academic scholarship, in esoteric schools and orders, and in the individual seekers who find themselves drawn — inexplicably, irresistibly — to these ancient currents.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION 4: RECOMMENDED SCHOLARS -->
+    <section class="space-y-6">
+      <h2 class="font-cinzel text-2xl text-violet-300 text-center tracking-wide">Recommended Scholars</h2>
+      <p class="text-center text-violet-200/60 text-sm max-w-2xl mx-auto">
+        The academic study of Western esotericism has produced a remarkable body of rigorous, sympathetic scholarship. These five figures are essential guides.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+
+        <div class="scholar-card space-y-2">
+          <h3 class="font-cinzel text-base text-violet-200">Antoine Faivre</h3>
+          <p class="text-violet-300/70 text-xs uppercase tracking-wider">Professor Emeritus, EPHE Paris</p>
+          <p class="text-violet-100/70 text-sm leading-relaxed">
+            The scholar who coined the modern academic definition of Western esotericism and established it as a legitimate field of university study. His four characteristics of esotericism remain the foundational framework. Key work: <em>Access to Western Esotericism</em> (1994).
+          </p>
+        </div>
+
+        <div class="scholar-card space-y-2">
+          <h3 class="font-cinzel text-base text-violet-200">Wouter Hanegraaff</h3>
+          <p class="text-violet-300/70 text-xs uppercase tracking-wider">Professor of Hermetic Philosophy, University of Amsterdam</p>
+          <p class="text-violet-100/70 text-sm leading-relaxed">
+            Holder of the world's first professorship in Hermetic philosophy, Hanegraaff has brought extraordinary rigour to the study of esotericism's relationship with modernity and academia. Key works: <em>Western Esotericism: A Guide for the Perplexed</em> (2013), <em>Esotericism and the Academy</em> (2012).
+          </p>
+        </div>
+
+        <div class="scholar-card space-y-2">
+          <h3 class="font-cinzel text-base text-violet-200">Frances Yates</h3>
+          <p class="text-violet-300/70 text-xs uppercase tracking-wider">British Historian (1899–1981)</p>
+          <p class="text-violet-100/70 text-sm leading-relaxed">
+            Dame Frances Yates pioneered the scholarly study of Renaissance Hermeticism and Rosicrucianism, demonstrating their profound influence on the Scientific Revolution and European intellectual history. Key works: <em>Giordano Bruno and the Hermetic Tradition</em> (1964), <em>The Rosicrucian Enlightenment</em> (1972).
+          </p>
+        </div>
+
+        <div class="scholar-card space-y-2">
+          <h3 class="font-cinzel text-base text-violet-200">Gershom Scholem</h3>
+          <p class="text-violet-300/70 text-xs uppercase tracking-wider">Israeli Scholar (1897–1982)</p>
+          <p class="text-violet-100/70 text-sm leading-relaxed">
+            The founding academic authority on Jewish mysticism and Kabbalah, Scholem almost single-handedly transformed Kabbalistic studies from a dismissed curiosity into a major field of historical and religious scholarship. Key work: <em>Major Trends in Jewish Mysticism</em> (1941).
+          </p>
+        </div>
+
+        <div class="scholar-card space-y-2">
+          <h3 class="font-cinzel text-base text-violet-200">Gareth Knight</h3>
+          <p class="text-violet-300/70 text-xs uppercase tracking-wider">British Occultist and Scholar</p>
+          <p class="text-violet-100/70 text-sm leading-relaxed">
+            A practitioner-scholar who brought intellectual rigour and historical awareness to the study and practice of the Western magical tradition, bridging the gap between academic history and living practice. Key work: <em>A History of White Magic</em> (1978).
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+  </div><!-- end content wrapper -->
+
+  <footer class="relative z-10 text-center py-8 text-violet-300/50 text-xs mt-8">
+    <p class="italic">"The first step to knowledge is to know that we are ignorant." — Richard Cecil</p>
+    <p class="mt-2">Esoteric Wisdom · Built with ✨ in Rust</p>
+    <p class="mt-2"><a href="/home" class="hover:text-violet-300 transition-colors">← Back to Portal</a></p>
+  </footer>
+
+  <script>
+    const sf = document.getElementById('starfield');
+    for (let i = 0; i < 200; i++) {
+      const s = document.createElement('div');
+      s.className = 'star';
+      const size = Math.random() * 2.5 + 0.5;
+      s.style.cssText = `width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--dur:${2+Math.random()*4}s;--delay:${Math.random()*5}s;opacity:${0.2+Math.random()*0.8};`;
+      sf.appendChild(s);
+    }
+  </script>
+
+</body>
+</html>
