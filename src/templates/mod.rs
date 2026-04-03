@@ -105,3 +105,15 @@ pub struct AkashicRecordsTemplate;
 #[derive(Template)]
 #[template(path = "wicca.html")]
 pub struct WiccaTemplate;
+
+#[derive(Template)]
+#[template(path = "gateway_process.html")]
+pub struct GatewayProcessTemplate;
+
+#[derive(Template)]
+#[template(path = "remote_viewing.html")]
+pub struct RemoteViewingTemplate;
+
+#[derive(Template)]
+#[template(path = "khasarov_mirror.html")]
+pub struct KhasarovMirrorTemplate;
