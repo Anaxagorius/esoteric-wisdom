@@ -85,3 +85,7 @@ pub struct NumerologyTemplate;
 #[derive(Template)]
 #[template(path = "crystals.html")]
 pub struct CrystalsTemplate;
+
+#[derive(Template)]
+#[template(path = "runes.html")]
+pub struct RunesTemplate;
