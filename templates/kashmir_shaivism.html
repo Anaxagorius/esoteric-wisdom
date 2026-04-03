@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kashmir Shaivism — Esoteric Wisdom</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <style>
+    body { font-family: 'Raleway', sans-serif; }
+    .font-cinzel { font-family: 'Cinzel Decorative', cursive; }
+    @keyframes twinkle { 0%,100%{opacity:0.2;transform:scale(1);} 50%{opacity:1;transform:scale(1.4);} }
+    @keyframes float { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-12px);} }
+    @keyframes shimmer { 0%{background-position:0% 50%;} 100%{background-position:200% 50%;} }
+    .star { position:absolute; width:2px; height:2px; background:white; border-radius:50%; animation:twinkle 3s infinite; }
+    .aurora-text { background: linear-gradient(90deg, #fb7185, #f43f5e, #fda4af, #e11d48, #fb7185); background-size:300% auto; -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; animation:shimmer 6s linear infinite; }
+    .floating { animation: float 4s ease-in-out infinite; }
+    .nav-link { position:relative; transition:all 0.3s; }
+    .nav-link::after { content:''; position:absolute; bottom:-2px; left:0; width:0; height:1px; background:#f59e0b; transition:width 0.3s; }
+    .nav-link:hover::after { width:100%; }
+    .ks-card { background: linear-gradient(135deg, rgba(190,18,60,0.15), rgba(120,10,30,0.08)); border: 1px solid rgba(251,113,133,0.30); border-radius: 1rem; padding: 1.5rem; transition: all 0.3s; }
+    .ks-card:hover { transform: translateY(-4px); box-shadow: 0 0 24px rgba(251,113,133,0.20); border-color: rgba(251,113,133,0.55); }
+  </style>
+</head>
+<body class="min-h-screen text-rose-100 overflow-x-hidden" style="background: radial-gradient(ellipse at top, #1a0008 0%, #2d0010 25%, #0a0004 60%, #000000 100%);">
+  <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+  <nav class="sticky top-0 z-50 flex items-center justify-between px-6 py-3 bg-black/40 backdrop-blur-md border-b border-violet-500/20 flex-wrap gap-y-2">
+    <a href="/home" class="font-cinzel text-amber-300 text-sm tracking-widest shrink-0">✦ Esoteric Wisdom ✦</a>
+    <div class="flex items-center gap-x-3 gap-y-1 text-xs text-violet-200 flex-wrap justify-end">
+      <a href="/astrology" class="nav-link hover:text-amber-300 transition-colors">Astrology</a>
+      <a href="/meditation" class="nav-link hover:text-amber-300 transition-colors">Meditation</a>
+      <a href="/tarot/select" class="nav-link hover:text-amber-300 transition-colors">Tarot</a>
+      <a href="/numerology" class="nav-link hover:text-amber-300 transition-colors">Numerology</a>
+      <a href="/crystals" class="nav-link hover:text-amber-300 transition-colors">Crystals</a>
+      <a href="/runes" class="nav-link hover:text-amber-300 transition-colors">Runes</a>
+      <a href="/shamanism" class="nav-link hover:text-amber-300 transition-colors">Shamanism</a>
+      <a href="/druidism" class="nav-link hover:text-amber-300 transition-colors">Druidism</a>
+      <a href="/akashic-records" class="nav-link hover:text-amber-300 transition-colors">Akashic Records</a>
+      <a href="/wicca" class="nav-link hover:text-amber-300 transition-colors">Wicca</a>
+      <a href="/alchemy" class="nav-link hover:text-amber-300 transition-colors">Alchemy</a>
+      <a href="/gateway-process" class="nav-link hover:text-amber-300 transition-colors">Gateway Process</a>
+      <a href="/remote-viewing" class="nav-link hover:text-amber-300 transition-colors">Remote Viewing</a>
+      <a href="/khasarov-mirror" class="nav-link hover:text-amber-300 transition-colors">Khasarov Mirror</a>
+      <a href="/western-esotericism" class="nav-link hover:text-amber-300 transition-colors">Western Esotericism</a>
+      <a href="/eastern-esotericism" class="nav-link text-amber-300 font-semibold">Eastern Esotericism</a>
+      <a href="/journal/reflections" class="nav-link text-emerald-300 hover:text-emerald-200 transition-colors">✨ Reflections</a>
+      <a href="https://ko-fi.com/esotericwisdom" target="_blank" rel="noopener noreferrer" class="px-3 py-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-white font-semibold hover:scale-105 transition-transform shrink-0">☕ Support</a>
+    </div>
+  </nav>
+  <div class="relative z-10 max-w-6xl mx-auto space-y-10 pt-6 px-4 pb-12">
+    <div class="text-sm text-rose-300/70">
+      <a href="/eastern-esotericism" class="hover:text-rose-200 transition-colors">← Eastern Esoteric Traditions</a>
+    </div>
+    <section class="text-center py-16 space-y-6">
+      <div class="text-7xl floating">🌺</div>
+      <h1 class="font-cinzel text-4xl md:text-6xl font-bold aurora-text leading-tight">Kashmir Shaivism</h1>
+      <p class="max-w-3xl mx-auto text-rose-200/80 text-lg leading-relaxed">The non-dual Shaiva philosophy of medieval Kashmir — recognising all reality as the self-luminous expression of Shiva-consciousness, and the path as the recognition (pratyabhijñā) of one's own nature as that consciousness.</p>
+    </section>
+
+    <section class="rounded-2xl p-8 space-y-6" style="background: linear-gradient(135deg, rgba(190,18,60,0.10), rgba(80,10,20,0.06));">
+      <h2 class="font-cinzel text-2xl text-rose-300 text-center tracking-wide">What Is Kashmir Shaivism?</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm text-rose-100/80 leading-relaxed">
+        <div class="space-y-4">
+          <p>Kashmir Shaivism — also called Trika (Triple) Shaivism, Pratyabhijñā (Recognition) philosophy, or simply the Shaiva Āgama tradition of Kashmir — is one of the most sophisticated non-dual philosophical systems ever developed. It flourished in the Kashmir Valley from approximately 850 CE to 1200 CE, representing a golden age of philosophical and mystical creativity unparalleled in South Asian intellectual history. The tradition is "non-dual" (advaita) in the strictest sense: there is only one reality — Shiva, understood not as a personal deity but as pure, self-luminous consciousness — and the entire universe is the spontaneous, free self-expression of that consciousness through its own inherent power (Shakti).</p>
+          <p>The core insight of Kashmir Shaivism is expressed in the concept of pratyabhijñā (recognition): the individual soul (jīva) is not fundamentally different from Shiva-consciousness; liberation is not the attainment of something new but the recognition (pratyabhijñā) of what one already is and has always been. The Sanskrit verb "prati-abhi-jñā" means "to recognise something that was known before" — as when you suddenly recognise an old friend in a crowd. The practitioner does not become Shiva; they recognise that they have always been Shiva, and that the apparent experience of being a limited individual was itself the self-concealing play (līlā) of Shiva's freedom.</p>
+          <p>The philosophical schools within Kashmir Shaivism: the tradition is divided into four inter-related schools: (1) Trika — "the Triple" — referring to the three goddesses Parā (supreme), Parāparā (intermediate), and Aparā (lower), or alternatively to Shiva, Shakti, and the individual soul (nara); this is the broadest designation for the tradition; (2) Pratyabhijñā (Recognition) — the philosophical school systematised by Utpaladeva and Abhinavagupta, which uses logical argument to establish the recognition of Shiva as one's own nature; (3) Spanda (Vibration) — based on the Spanda Kārikās attributed to Vasugupta's disciple Kallata; teaches that ultimate reality is dynamic pulsation or vibration (spanda), not static or inert; (4) Krama (Succession) — a more tantric and goddess-centred school emphasising the successive unfolding of Kali's twelve aspects as the stages of consciousness.</p>
+          <p>The founding revelation — the Shiva Sūtras: the tradition traces its origin to a revelation experienced by the sage Vasugupta (c. 850 CE), who discovered — according to tradition, either in a dream or carved on a rock on the Mahādeva mountain near Kashmir — a set of 77 aphorisms known as the Shiva Sūtras; these terse, cryptic sutras became the foundational scripture of the entire tradition; they are divided into three sections corresponding to three means of liberation (upāyas): āṇavopāya (individual means), śāktopāya (energy means), and śāmbhavopāya (Shiva means); Vasugupta also authored or discovered the Spanda Kārikās, the other foundational text.</p>
+        </div>
+        <div class="space-y-4">
+          <p>Abhinavagupta — the supreme synthesiser: the tradition reached its apex in the work of Abhinavagupta (c. 950–1016 CE), one of the greatest philosophers in the entire history of Indian thought. Abhinavagupta was a polymath of extraordinary range — philosopher, tantric adept, aesthetician, poet, and musician. His encyclopaedic Tantrāloka ("Light on the Tantras") in 37 chapters is the most comprehensive systematic exposition of tantric philosophy and practice ever written, synthesising all the streams of Kashmir Shaivism into a unified whole. His philosophical treatise Tantrasāra ("Essence of the Tantras") provides a more accessible summary. His Parātrimśikāvivaraṇa (commentary on the Parātrimśikā) is considered his most profound philosophical work. His Abhinavabhāratī (commentary on the Nāṭyaśāstra) developed a theory of aesthetic experience (rasa) that linked the experience of beauty to the recognition of Shiva-consciousness — one of the most original contributions to world aesthetics.</p>
+          <p>Utpaladeva and the Pratyabhijñā philosophy: Abhinavagupta's teacher's teacher, Utpaladeva (c. 900–950 CE), was the philosopher who gave Kashmir Shaivism its most rigorous logical and argumentative form. His Īśvara Pratyabhijñā Kārikās ("Verses on the Recognition of the Lord") is the central philosophical text of the Pratyabhijñā school. Utpaladeva argues against the Buddhist no-self doctrine and the dualistic Shaiva Siddhānta, establishing through careful logical reasoning that the ultimate subject of all experience — the "I" that is always present — is nothing other than Shiva's own self-recognition. His teacher Somānanda wrote the Śivadṛṣṭi ("Vision of Shiva"), the earliest systematic statement of the non-dual Shaiva position.</p>
+          <p>The 36 tattvas and the structure of manifestation: Kashmir Shaivism maps reality through a system of 36 tattvas (principles or levels of reality), extending the standard Sāṃkhya system of 25 tattvas by adding 11 higher tattvas that account for the manifestation of consciousness. The lowest 25 tattvas (from earth up through the categories of Sāṃkhya) describe the material and individual dimensions of reality. Above these are the five "limited conditions" (kañcukas) that restrict the infinite qualities of Shiva into the finite experience of the individual soul: kalā (limited activity), vidyā (limited knowledge), rāga (limited desire), kāla (limited time), niyati (limited space/causation). Above these is māyā (the cosmic illusion-power). Above māyā are the pure tattvas: Śuddhavidyā (pure wisdom), Īśvara (the Lord), Sadāśiva (Ever-Shiva), Śakti (power), and Śiva (consciousness) — the ground of all. This schema provides a map of how infinite consciousness appears to have become finite, limited, embodied experience.</p>
+          <p>Decline and revival: the tradition's golden age ended with the Islamic conquest of Kashmir in the 13th–14th centuries. The oral and manuscript traditions survived but in fragmented form. The tradition's revival in the 20th century is largely the work of one extraordinary man: Swami Lakshmanjoo (1907–1991) of Srinagar, who preserved the living oral tradition and transmitted it to Western students, including the American scholar John Hughes. Western academic study of the tradition has been shaped above all by the Oxford scholar Alexis Sanderson, whose detailed historical and philosophical studies have established the importance of the Shaiva Āgamic tradition in the broader history of South Asian religion.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="space-y-6">
+      <h2 class="font-cinzel text-2xl text-rose-300 text-center tracking-wide">Key Texts</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="ks-card space-y-3">
+          <div class="text-3xl">📜</div>
+          <h3 class="font-cinzel text-base text-rose-200">Shiva Sūtras</h3>
+          <p class="text-xs text-rose-100/70 leading-relaxed">Revealed to Vasugupta c. 850 CE; 77 terse aphorisms forming the foundational scripture; divided into three sections corresponding to the three upāyas (means of liberation); the starting point of the entire tradition.</p>
+        </div>
+        <div class="ks-card space-y-3">
+          <div class="text-3xl">💎</div>
+          <h3 class="font-cinzel text-base text-rose-200">Vijñāna Bhairava Tantra</h3>
+          <p class="text-xs text-rose-100/70 leading-relaxed">112 contemplative techniques for recognising Shiva-consciousness in every experience; from breath to sound to darkness; one of the most practically accessible tantric texts; translated and taught widely in modern times.</p>
+        </div>
+        <div class="ks-card space-y-3">
+          <div class="text-3xl">🌺</div>
+          <h3 class="font-cinzel text-base text-rose-200">Tantrāloka (Abhinavagupta)</h3>
+          <p class="text-xs text-rose-100/70 leading-relaxed">37-chapter encyclopaedic masterwork (c. 1000 CE); the most comprehensive systematic exposition of tantric philosophy and practice ever written; synthesises all streams of Kashmir Shaivism.</p>
+        </div>
+        <div class="ks-card space-y-3">
+          <div class="text-3xl">📖</div>
+          <h3 class="font-cinzel text-base text-rose-200">Īśvara Pratyabhijñā Kārikās (Utpaladeva)</h3>
+          <p class="text-xs text-rose-100/70 leading-relaxed">The central philosophical text of the Pratyabhijñā school (c. 900–950 CE); uses logical argument to establish recognition of Shiva as one's own nature; Abhinavagupta's two-volume commentary is itself a masterwork.</p>
+        </div>
+        <div class="ks-card space-y-3">
+          <div class="text-3xl">✨</div>
+          <h3 class="font-cinzel text-base text-rose-200">Spanda Kārikās</h3>
+          <p class="text-xs text-rose-100/70 leading-relaxed">Attributed to Kallata (Vasugupta's disciple); teaches that ultimate reality is dynamic vibration (spanda) — not a static absolute but a living pulse; the universe is Shiva's own rhythmic self-expression.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="space-y-6">
+      <h2 class="font-cinzel text-2xl text-rose-300 text-center tracking-wide">Historical Timeline</h2>
+      <div class="space-y-4">
+        <div class="flex gap-4 items-start"><div class="w-24 shrink-0 text-xs text-rose-400 font-semibold pt-1">c. 850 CE</div><div class="ks-card flex-1 text-xs text-rose-100/80">Vasugupta receives the Shiva Sūtras; also authors or discovers the Spanda Kārikās; the tradition of Kashmir Shaivism begins its golden age of philosophical development.</div></div>
+        <div class="flex gap-4 items-start"><div class="w-24 shrink-0 text-xs text-rose-400 font-semibold pt-1">c. 850–900 CE</div><div class="ks-card flex-1 text-xs text-rose-100/80">Kallata (Vasugupta's student) develops the Spanda school; Somānanda writes the Śivadṛṣṭi ("Vision of Shiva"), the earliest systematic non-dual Shaiva philosophical text.</div></div>
+        <div class="flex gap-4 items-start"><div class="w-24 shrink-0 text-xs text-rose-400 font-semibold pt-1">c. 900–950 CE</div><div class="ks-card flex-1 text-xs text-rose-100/80">Utpaladeva writes the Īśvara Pratyabhijñā Kārikās; establishes the Pratyabhijñā ("Recognition") school on logical-philosophical foundations; argues against Buddhist no-self doctrine.</div></div>
+        <div class="flex gap-4 items-start"><div class="w-24 shrink-0 text-xs text-rose-400 font-semibold pt-1">c. 950–1016 CE</div><div class="ks-card flex-1 text-xs text-rose-100/80">Abhinavagupta — the supreme synthesiser — active; writes the Tantrāloka, Tantrasāra, Parātrimśikāvivaraṇa, and Abhinavabhāratī; the tradition reaches its absolute philosophical peak.</div></div>
+        <div class="flex gap-4 items-start"><div class="w-24 shrink-0 text-xs text-rose-400 font-semibold pt-1">c. 1000–1100 CE</div><div class="ks-card flex-1 text-xs text-rose-100/80">Kṣemarāja (Abhinavagupta's student) writes major commentaries; his Pratyabhijñāhṛdayam ("Heart of Recognition") is the most accessible introduction to Kashmir Shaivism.</div></div>
+        <div class="flex gap-4 items-start"><div class="w-24 shrink-0 text-xs text-rose-400 font-semibold pt-1">13th–14th c. CE</div><div class="ks-card flex-1 text-xs text-rose-100/80">Islamic conquest of Kashmir disrupts the tradition; manuscript traditions survive in fragmentary form; the living oral transmission becomes increasingly rare.</div></div>
+        <div class="flex gap-4 items-start"><div class="w-24 shrink-0 text-xs text-rose-400 font-semibold pt-1">1907–1991 CE</div><div class="ks-card flex-1 text-xs text-rose-100/80">Swami Lakshmanjoo of Srinagar preserves the living oral tradition; transmits it to Western students; his recorded teachings are a primary modern source for the tradition.</div></div>
+        <div class="flex gap-4 items-start"><div class="w-24 shrink-0 text-xs text-rose-400 font-semibold pt-1">Late 20th c.–present</div><div class="ks-card flex-1 text-xs text-rose-100/80">Alexis Sanderson (Oxford) and Mark Dyczkowski establish rigorous academic study; Jaideva Singh's translations make the texts accessible; Kashmir Shaivism now widely studied globally.</div></div>
+      </div>
+    </section>
+
+    <section class="space-y-6">
+      <h2 class="font-cinzel text-2xl text-rose-300 text-center tracking-wide">Core Concepts</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="ks-card space-y-3"><div class="text-3xl">🌺</div><h3 class="font-cinzel text-base text-rose-200">Pratyabhijñā (Recognition)</h3><p class="text-xs text-rose-100/70 leading-relaxed">The central teaching: liberation is not attaining something new but recognising what one already is — Shiva-consciousness; the "recognition" of one's own nature as the ultimate subject of all experience.</p></div>
+        <div class="ks-card space-y-3"><div class="text-3xl">⚡</div><h3 class="font-cinzel text-base text-rose-200">Spanda (Divine Vibration)</h3><p class="text-xs text-rose-100/70 leading-relaxed">Reality is not static but dynamically pulsating; the universe is Shiva's own rhythmic self-expression; every experience is a vibration of consciousness; the felt sense of aliveness is itself spanda.</p></div>
+        <div class="ks-card space-y-3"><div class="text-3xl">🔱</div><h3 class="font-cinzel text-base text-rose-200">The Upāyas (Three Means)</h3><p class="text-xs text-rose-100/70 leading-relaxed">Three approaches to recognition: Āṇavopāya (individual means — breath, mantra, body-based practices), Śāktopāya (energy means — contemplation, intention), Śāmbhavopāya (Shiva means — direct, effortless recognition); Anupāya (no means — the recognition that requires no method).</p></div>
+        <div class="ks-card space-y-3"><div class="text-3xl">✨</div><h3 class="font-cinzel text-base text-rose-200">Cit-Ānanda</h3><p class="text-xs text-rose-100/70 leading-relaxed">Consciousness-bliss; the two inseparable qualities of Shiva; pure awareness (cit) is intrinsically blissful (ānanda); the recognition of one's nature is experienced as inherent joy.</p></div>
+        <div class="ks-card space-y-3"><div class="text-3xl">🌊</div><h3 class="font-cinzel text-base text-rose-200">The 36 Tattvas</h3><p class="text-xs text-rose-100/70 leading-relaxed">The complete map of reality from Shiva (pure consciousness) down through the five kañcukas (limiting conditions) and māyā to the 25 tattvas of Sāṃkhya; describes how infinite consciousness appears as finite experience.</p></div>
+        <div class="ks-card space-y-3"><div class="text-3xl">🎭</div><h3 class="font-cinzel text-base text-rose-200">Svātantrya (Absolute Freedom)</h3><p class="text-xs text-rose-100/70 leading-relaxed">Shiva's most essential quality: absolute, unconditional freedom; the universe is the free play (līlā) of consciousness; even the apparent limitation of individual experience is an expression of Shiva's freedom to self-conceal.</p></div>
+      </div>
+    </section>
+
+    <footer class="text-center py-8 space-y-3 text-xs text-rose-200/50">
+      <p class="italic text-rose-200/70 text-sm">"The Self is pure light, pure consciousness, pure freedom — it has no impurity except the impurity of not recognising itself."</p>
+      <p class="text-rose-300/50">— Abhinavagupta, Tantrasāra</p>
+      <a href="/home" class="inline-block mt-4 text-rose-300/60 hover:text-rose-200 transition-colors">← Back to Portal</a>
+    </footer>
+  </div>
+  <script>
+    const sf = document.getElementById('starfield');
+    for (let i = 0; i < 200; i++) {
+      const s = document.createElement('div');
+      s.className = 'star';
+      s.style.left = Math.random() * 100 + '%';
+      s.style.top = Math.random() * 100 + '%';
+      s.style.animationDelay = Math.random() * 3 + 's';
+      s.style.animationDuration = (2 + Math.random() * 3) + 's';
+      sf.appendChild(s);
+    }
+  </script>
+</body>
+</html>

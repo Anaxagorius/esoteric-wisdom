@@ -166,3 +166,47 @@ pub struct ChristianKabbalahTemplate;
 #[derive(Template)]
 #[template(path = "occultism.html")]
 pub struct OccultismTemplate;
+
+#[derive(Template)]
+#[template(path = "eastern_esotericism.html")]
+pub struct EasternEsotericismTemplate;
+
+#[derive(Template)]
+#[template(path = "tantra.html")]
+pub struct TantraTemplate;
+
+#[derive(Template)]
+#[template(path = "vajrayana.html")]
+pub struct VajrayanaTemplate;
+
+#[derive(Template)]
+#[template(path = "dzogchen.html")]
+pub struct DzogchenTemplate;
+
+#[derive(Template)]
+#[template(path = "mahamudra.html")]
+pub struct MahamudraTemplate;
+
+#[derive(Template)]
+#[template(path = "taoist_inner_alchemy.html")]
+pub struct TaoistInnerAlchemyTemplate;
+
+#[derive(Template)]
+#[template(path = "esoteric_confucianism.html")]
+pub struct EsotericConfucianismTemplate;
+
+#[derive(Template)]
+#[template(path = "shugendo.html")]
+pub struct ShugendoTemplate;
+
+#[derive(Template)]
+#[template(path = "shingon.html")]
+pub struct ShingonTemplate;
+
+#[derive(Template)]
+#[template(path = "kashmir_shaivism.html")]
+pub struct KashmirShaivismTemplate;
+
+#[derive(Template)]
+#[template(path = "siddha.html")]
+pub struct SiddhaTemplate;

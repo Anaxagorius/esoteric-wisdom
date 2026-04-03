@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mahāmudrā — Esoteric Wisdom</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <style>
+    body { font-family: 'Raleway', sans-serif; }
+    .font-cinzel { font-family: 'Cinzel Decorative', cursive; }
+    @keyframes twinkle { 0%,100%{opacity:0.2;transform:scale(1);} 50%{opacity:1;transform:scale(1.4);} }
+    @keyframes float { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-12px);} }
+    @keyframes shimmer { 0%{background-position:0% 50%;} 100%{background-position:200% 50%;} }
+    .star { position:absolute; width:2px; height:2px; background:white; border-radius:50%; animation:twinkle 3s infinite; }
+    .aurora-text {
+      background: linear-gradient(90deg, #a78bfa, #7c3aed, #8b5cf6, #c4b5fd, #a78bfa);
+      background-size:300% auto;
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+      background-clip:text;
+      animation:shimmer 6s linear infinite;
+    }
+    .floating { animation: float 4s ease-in-out infinite; }
+    .nav-link { position:relative; transition:all 0.3s; }
+    .nav-link::after { content:''; position:absolute; bottom:-2px; left:0; width:0; height:1px; background:#f59e0b; transition:width 0.3s; }
+    .nav-link:hover::after { width:100%; }
+    .mudra-card {
+      background: linear-gradient(135deg, rgba(124,58,237,0.15), rgba(139,92,246,0.07));
+      border: 1px solid rgba(167,139,250,0.28);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      transition: all 0.3s;
+    }
+    .mudra-card:hover { transform: translateY(-4px); box-shadow: 0 0 28px rgba(167,139,250,0.18); border-color: rgba(167,139,250,0.55); }
+    .timeline-entry {
+      border-left: 2px solid rgba(167,139,250,0.30);
+      padding-left: 1.25rem;
+      padding-bottom: 1.5rem;
+      position: relative;
+    }
+    .timeline-entry::before {
+      content: '';
+      position: absolute;
+      left: -5px;
+      top: 4px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #8b5cf6;
+      box-shadow: 0 0 8px rgba(139,92,246,0.7);
+    }
+  </style>
+</head>
+<body class="min-h-screen text-violet-100 overflow-x-hidden" style="background: radial-gradient(ellipse at top, #0d0020 0%, #1a0040 25%, #05000f 60%, #000000 100%);">
+
+  <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+
+  <!-- NAV -->
+  <nav class="sticky top-0 z-50 flex items-center justify-between px-6 py-3 bg-black/40 backdrop-blur-md border-b border-violet-500/20 flex-wrap gap-y-2">
+    <a href="/home" class="font-cinzel text-amber-300 text-sm tracking-widest shrink-0">✦ Esoteric Wisdom ✦</a>
+    <div class="flex items-center gap-x-3 gap-y-1 text-xs text-violet-200 flex-wrap justify-end">
+      <a href="/astrology" class="nav-link hover:text-amber-300 transition-colors">Astrology</a>
+      <a href="/meditation" class="nav-link hover:text-amber-300 transition-colors">Meditation</a>
+      <a href="/tarot/select" class="nav-link hover:text-amber-300 transition-colors">Tarot</a>
+      <a href="/numerology" class="nav-link hover:text-amber-300 transition-colors">Numerology</a>
+      <a href="/crystals" class="nav-link hover:text-amber-300 transition-colors">Crystals</a>
+      <a href="/runes" class="nav-link hover:text-amber-300 transition-colors">Runes</a>
+      <a href="/shamanism" class="nav-link hover:text-amber-300 transition-colors">Shamanism</a>
+      <a href="/druidism" class="nav-link hover:text-amber-300 transition-colors">Druidism</a>
+      <a href="/akashic-records" class="nav-link hover:text-amber-300 transition-colors">Akashic Records</a>
+      <a href="/wicca" class="nav-link hover:text-amber-300 transition-colors">Wicca</a>
+      <a href="/alchemy" class="nav-link hover:text-amber-300 transition-colors">Alchemy</a>
+      <a href="/gateway-process" class="nav-link hover:text-amber-300 transition-colors">Gateway Process</a>
+      <a href="/remote-viewing" class="nav-link hover:text-amber-300 transition-colors">Remote Viewing</a>
+      <a href="/khasarov-mirror" class="nav-link hover:text-amber-300 transition-colors">Khasarov Mirror</a>
+      <a href="/western-esotericism" class="nav-link hover:text-amber-300 transition-colors">Western Esotericism</a>
+      <a href="/eastern-esotericism" class="nav-link text-amber-300 font-semibold">Eastern Esotericism</a>
+      <a href="/journal/reflections" class="nav-link text-emerald-300 hover:text-emerald-200 transition-colors">✨ Reflections</a>
+      <a href="https://ko-fi.com/esotericwisdom" target="_blank" rel="noopener noreferrer"
+         class="px-3 py-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-white font-semibold hover:scale-105 transition-transform shrink-0">☕ Support</a>
+    </div>
+  </nav>
+
+  <!-- CONTENT WRAPPER -->
+  <div class="relative z-10 max-w-6xl mx-auto space-y-10 pt-6 px-4 pb-16">
+
+    <!-- HERO -->
+    <section class="text-center py-16 space-y-6">
+      <div class="text-7xl floating">🌊</div>
+      <h1 class="font-cinzel text-4xl md:text-6xl font-bold aurora-text leading-tight">Mahāmudrā</h1>
+      <p class="max-w-3xl mx-auto text-violet-200/80 text-lg leading-relaxed">
+        The Great Seal — the pinnacle teaching of the Kagyu school of Tibetan Buddhism, pointing directly to the nature of mind through pointing-out instructions from a qualified master.
+      </p>
+    </section>
+
+    <!-- SECTION 1: WHAT IS MAHĀMUDRĀ? -->
+    <section class="rounded-2xl p-8 space-y-6" style="background: linear-gradient(135deg, rgba(124,58,237,0.12), rgba(139,92,246,0.06));">
+      <h2 class="font-cinzel text-2xl text-violet-300 text-center tracking-wide">What Is Mahāmudrā?</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm text-violet-100/80 leading-relaxed">
+
+        <!-- Column 1 -->
+        <div class="space-y-4">
+          <p>
+            The word <strong class="text-violet-200">Mahāmudrā</strong> is Sanskrit — a compound of <em>maha</em> (great) and <em>mudra</em> (seal, gesture, or symbol). As the "great seal," the teaching holds that all phenomena are "sealed" or marked by the nature of mind: every experience, without exception, bears the imprint of the primordial ground. The term is also rendered as "great symbol" — the recognition of mind's nature symbolises and encompasses the entirety of reality. This single recognition "seals" all experiences as dharmakaya. In Tibetan the term becomes <em>Chakgya Chenpo</em> (<em>phyag rgya chen po</em>). Although the term appears in both Hindu and Buddhist contexts, Mahāmudrā as a specific transmission lineage is centred in the Kagyu school of Tibetan Buddhism, within which it functions as the highest and most direct teaching.
+          </p>
+          <p>
+            <strong class="text-violet-200">The Kagyu lineage</strong> traces Mahāmudrā back to the Indian Mahasiddha <em>Tilopa</em> (988–1069 CE), who received the transmission directly from Vajradhara — the primordial Buddha of the Kagyu school — or, in historical terms, from four Indian teachers: Nagarjuna, Krishnacharya (Kanhapa), Luipa, and Lawapa. Tilopa transmitted to <em>Naropa</em> (1016–1100 CE), whose "Six Yogas" — tummo (inner heat), illusory body, dream yoga, clear light, phowa (consciousness transference), and bardo yoga — form the practical complement to the Mahāmudrā pointing-out instruction. Naropa transmitted to <em>Marpa the Translator</em> (1012–1097 CE), who made three arduous journeys to India to receive the complete transmission. Marpa transmitted to <em>Milarepa</em> (1052–1135 CE), Tibet's greatest yogi, who achieved full realisation through years of intense solitary practice in remote mountain caves. Milarepa transmitted to <em>Gampopa</em> (1079–1153 CE), who systematised the teaching for a monastic and lay student body.
+          </p>
+          <p>
+            <strong class="text-violet-200">Gampopa's synthesis</strong> is one of the defining moments in the history of Tibetan Buddhism. Gampopa uniquely combined two streams: (1) the <em>Kadampa Mahayana tradition</em> of Atisha — with its graduated path, cultivation of bodhicitta, and systematic compassion practices — and (2) the <em>Mahasiddha Mahāmudrā transmission</em> he received from Milarepa. The first stream provided the ethical and compassionate foundation essential for genuine realisation; the second provided the direct recognition of the nature of mind that transcends all gradual accumulation. This synthesis — systematic ethical and compassionate cultivation combined with direct pointing to mind's nature — became the characteristic Kagyu approach. Gampopa's "Jewel Ornament of Liberation" (<em>Dvagpo Tharpa Rinpoche</em>) remains one of the finest works in the entire Tibetan Buddhist canon.
+          </p>
+          <p>
+            The classical map of Mahāmudrā practice is structured around <strong class="text-violet-200">the four yogas</strong>: (1) <em>One-pointedness</em> (Tibetan: <em>rtse gcig</em>) — the stabilisation of meditative absorption; the ability to rest the mind on an object without distraction, whether the object is the breath, a visual support, or awareness itself; (2) <em>Simplicity</em> (Tibetan: <em>spros bral</em>) — the recognition that mind has no inherent characteristics to elaborate or fixate upon; conceptual complexity falls away of itself; (3) <em>One Taste</em> (Tibetan: <em>ro gcig</em>) — the recognition that all phenomena — pleasurable and painful, pure and impure, samsara and nirvana — share a single taste in the nature of mind; (4) <em>Non-meditation</em> (Tibetan: <em>sgom med</em>) — the final stage: meditation and non-meditation are no longer distinct; every moment of arising is spontaneously recognised as dharmakaya; this is full Mahāmudrā realisation.
+          </p>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="space-y-4">
+          <p>
+            Mahāmudrā is also described through the three aspects of <strong class="text-violet-200">ground, path, and fruit</strong>: (1) <em>Ground Mahāmudrā</em> — the true nature of mind as it is, right now: luminous, empty, and aware. This is not something to be created or achieved but something to be recognised. It is described as "co-emergent wisdom" (Tibetan: <em>lhan cig skyes pa'i ye shes</em>) — the wisdom that arises co-emergently with every single experience; (2) <em>Path Mahāmudrā</em> — the practice of recognising the ground through the instructions of a qualified guru. The two main practices are <em>Shamatha</em> (calm abiding) and <em>Vipashyana</em> (insight) as the foundation, leading naturally to the pointing-out instruction when the student is prepared; (3) <em>Fruit Mahāmudrā</em> — the stable, irreversible recognition of the nature of mind in all activities, at all times; the distinction between meditation and post-meditation fully dissolved; the three kayas realised within one's own immediate experience.
+          </p>
+          <p>
+            The most characteristic feature of Mahāmudrā is the <strong class="text-violet-200">pointing-out instruction</strong> (Tibetan: <em>ngo sprod</em>). A qualified guru "points out" the nature of the student's own mind directly, cutting through all conceptual misidentification in a single moment. This is not a philosophical explanation but a direct transmission — it may occur through a question, a gesture, a sudden shout, a direct gaze, or any situation that momentarily disrupts the habitual overlay of conceptual thought. Once the student has genuinely glimpsed the nature of mind — even briefly — the work of Mahāmudrā becomes one of stabilising and deepening that recognition through meditation and everyday activity. Without the pointing-out instruction from a qualified master, a practitioner may meditate sincerely for years without encountering the direct recognition. This is why the guru is considered not merely helpful but absolutely indispensable in Mahāmudrā.
+          </p>
+          <p>
+            <strong class="text-violet-200">Mahāmudrā and Dzogchen</strong> are often compared as the supreme teachings of the Kagyu and Nyingma schools respectively. Both point directly to the nature of mind and both emphasise that liberation is already present, requiring only recognition rather than fabrication. There are genuine similarities in their ultimate descriptions of the natural state, and many masters have held both lineages simultaneously. However, there are also real differences in method and emphasis: Mahāmudrā tends to work within the framework of the two-stage Vajrayana (generation and completion) practice and often uses analytical investigation as a means of dissolving conceptual elaboration; Dzogchen works more nakedly with the direct recognition of rigpa, and places greater emphasis on the visionary and energetic qualities of awareness through Tögal practice. In practice, the two traditions have cross-pollinated throughout Tibetan history.
+          </p>
+          <p>
+            The question of <strong class="text-violet-200">Sutra versus Tantra Mahāmudrā</strong> is one of the great doctrinal debates within Tibetan Buddhism. Gampopa introduced a "sutra" approach — working with the nature of mind directly without the full Vajrayana empowerment structure, accessible to ordained monastics and laypeople alike. Some Kagyu teachers fully accept this approach as valid; others, following the famous critique of <em>Sakya Pandita</em> (1182–1251 CE), insist that Mahāmudrā requires proper Vajrayana empowerment and that the "sutra Mahāmudrā" conflates different systems in a potentially misleading way. The Gelug school developed their own "Gelug Mahāmudrā" tradition based on Tsongkhapa's teachings, typically understood as requiring Vajrayana empowerment. The <em>Karma Kagyu lineage</em> of the Karmapas — now in its seventeenth unbroken incarnation — remains the primary custodian of the classical Mahāmudrā transmission as received from Tilopa and Naropa.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 2: KEY TEXTS -->
+    <section class="space-y-6">
+      <h2 class="font-cinzel text-2xl text-violet-300 text-center tracking-wide">Key Texts</h2>
+      <p class="text-center text-violet-200/60 text-sm max-w-2xl mx-auto">
+        The canonical works and living oral teachings that carry the Mahāmudrā transmission from India and Tibet to the present day.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+        <div class="mudra-card">
+          <div class="text-4xl mb-3">📜</div>
+          <h3 class="font-cinzel text-base text-violet-200 mb-2">Jewel Ornament of Liberation</h3>
+          <p class="text-violet-100/70 text-sm leading-relaxed">
+            Gampopa's (1079–1153 CE) masterwork, systematising the Kagyu path from refuge through to full Buddhahood. Combines Kadampa Mahayana foundations with Mahāmudrā in a single comprehensive guide. Still the standard Kagyu textbook used in monasteries and retreat programmes worldwide.
+          </p>
+        </div>
+
+        <div class="mudra-card">
+          <div class="text-4xl mb-3">📖</div>
+          <h3 class="font-cinzel text-base text-violet-200 mb-2">Tilopa's Ganges Mahāmudrā</h3>
+          <p class="text-violet-100/70 text-sm leading-relaxed">
+            <em>Mahamudra Upadesha to Naropa on the Banks of the Ganges</em> — a short but supremely direct text pointing to the nature of mind. Contains the celebrated line: "Look into the mirror of your mind, the mysterious home of the dakini." One of the most direct transmissions in all of Buddhist literature.
+          </p>
+        </div>
+
+        <div class="mudra-card">
+          <div class="text-4xl mb-3">🌊</div>
+          <h3 class="font-cinzel text-base text-violet-200 mb-2">Mahāmudrā: The Ocean of Definitive Meaning</h3>
+          <p class="text-violet-100/70 text-sm leading-relaxed">
+            By the 9th Karmapa Wangchuk Dorje (1556–1603 CE). A comprehensive guide to Mahāmudrā meditation covering Shamatha, Vipashyana, and the recognition of the nature of mind in full detail. The most complete practical manual in the Tibetan Mahāmudrā literature.
+          </p>
+        </div>
+
+        <div class="mudra-card">
+          <div class="text-4xl mb-3">💎</div>
+          <h3 class="font-cinzel text-base text-violet-200 mb-2">Songs of Milarepa</h3>
+          <p class="text-violet-100/70 text-sm leading-relaxed">
+            Milarepa's (1052–1135 CE) spontaneous spiritual songs (<em>dohas</em>), composed in response to the questions of students, visitors, and demons alike. Convey the direct experience of Mahāmudrā realisation in poetic form. Among the most beloved and widely read texts in all of Tibetan Buddhism.
+          </p>
+        </div>
+
+        <div class="mudra-card">
+          <div class="text-4xl mb-3">🌀</div>
+          <h3 class="font-cinzel text-base text-violet-200 mb-2">Pointing Out the Dharmakaya</h3>
+          <p class="text-violet-100/70 text-sm leading-relaxed">
+            A teaching by Thrangu Rinpoche based on the oral instructions of the Kagyu lineage. The most accessible modern introduction to Mahāmudrā pointing-out instruction available in English, bridging the gap between classical Tibetan texts and contemporary Western practitioners.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 3: HISTORICAL TIMELINE -->
+    <section class="rounded-2xl p-8 space-y-6" style="background: linear-gradient(135deg, rgba(124,58,237,0.10), rgba(13,0,32,0.40));">
+      <h2 class="font-cinzel text-2xl text-violet-300 text-center tracking-wide">Historical Timeline</h2>
+      <p class="text-center text-violet-200/60 text-sm max-w-2xl mx-auto">
+        From Tilopa on the banks of the Ganges to the living Kagyu lineage of the present day — the unbroken transmission of the Great Seal.
+      </p>
+      <div class="max-w-3xl mx-auto pt-4">
+
+        <div class="timeline-entry">
+          <p class="text-violet-300 text-xs font-semibold tracking-wider mb-1">C. 988–1069 CE</p>
+          <p class="text-violet-100/80 text-sm leading-relaxed">
+            <strong class="text-violet-200">Tilopa</strong>, the "father of Mahāmudrā," receives the transmission from Vajradhara and from four Indian Mahasiddha teachers. He practises for twelve years in intense retreat, achieving full realisation on the banks of the Ganges. His transmission to Naropa establishes the human lineage that will reach Tibet.
+          </p>
+        </div>
+
+        <div class="timeline-entry">
+          <p class="text-violet-300 text-xs font-semibold tracking-wider mb-1">C. 1016–1100 CE</p>
+          <p class="text-violet-100/80 text-sm leading-relaxed">
+            <strong class="text-violet-200">Naropa</strong> receives Tilopa's transmission, but only after undergoing the twelve great trials (the "12 difficulties of Naropa") through which his conceptual clinging is systematically dissolved. He codifies the "Six Yogas of Naropa" as the practical complement to Mahāmudrā and transmits the full teaching to Marpa.
+          </p>
+        </div>
+
+        <div class="timeline-entry">
+          <p class="text-violet-300 text-xs font-semibold tracking-wider mb-1">C. 1012–1097 CE</p>
+          <p class="text-violet-100/80 text-sm leading-relaxed">
+            <strong class="text-violet-200">Marpa the Translator</strong> makes three perilous journeys to India across the Himalayas to receive the complete Mahāmudrā and Six Yogas transmission from Naropa. He establishes the Kagyu lineage in Tibet and transmits the teaching to his foremost student Milarepa, testing him with extraordinary hardships before giving full instruction.
+          </p>
+        </div>
+
+        <div class="timeline-entry">
+          <p class="text-violet-300 text-xs font-semibold tracking-wider mb-1">C. 1052–1135 CE</p>
+          <p class="text-violet-100/80 text-sm leading-relaxed">
+            <strong class="text-violet-200">Milarepa</strong> meditates for years in remote mountain caves, sustaining himself on nettles, enduring extraordinary hardship in pursuit of realisation. He achieves full Mahāmudrā recognition and transmits to <em>Gampopa</em> and <em>Rechungpa</em>. His spontaneous songs are still studied as direct transmissions of realisation.
+          </p>
+        </div>
+
+        <div class="timeline-entry">
+          <p class="text-violet-300 text-xs font-semibold tracking-wider mb-1">C. 1079–1153 CE</p>
+          <p class="text-violet-100/80 text-sm leading-relaxed">
+            <strong class="text-violet-200">Gampopa</strong> synthesises Mahāmudrā with the Kadampa Mahayana tradition, founds the Dagpo Kagyu school, and writes the <em>Jewel Ornament of Liberation</em>. The Karmapa lineage begins with his disciple Dusum Khyenpa (1st Karmapa, 1110–1193 CE) — the first explicitly recognised incarnate lama in Tibetan history.
+          </p>
+        </div>
+
+        <div class="timeline-entry">
+          <p class="text-violet-300 text-xs font-semibold tracking-wider mb-1">C. 1200–1600 CE</p>
+          <p class="text-violet-100/80 text-sm leading-relaxed">
+            The "four great and eight lesser" Kagyu schools develop across Tibet. The Karmapa lineage becomes the most important institutional custodian of Mahāmudrā. <strong class="text-violet-200">Rangjung Dorje</strong> (3rd Karmapa, 1284–1339 CE) writes the definitive texts on the synthesis of Mahāmudrā and Dzogchen — establishing that the two highest teachings are, at their deepest level, pointing to the same recognition.
+          </p>
+        </div>
+
+        <div class="timeline-entry">
+          <p class="text-violet-300 text-xs font-semibold tracking-wider mb-1">1959 CE</p>
+          <p class="text-violet-100/80 text-sm leading-relaxed">
+            The Kagyu lineage scatters from Tibet following the Chinese invasion. The <strong class="text-violet-200">16th Karmapa</strong> (1924–1981 CE) flees to Rumtek monastery in Sikkim, establishing the new seat of the lineage. Major teachers including <strong class="text-violet-200">Chögyam Trungpa Rinpoche</strong> and <strong class="text-violet-200">Kalu Rinpoche</strong> are among the first to bring Mahāmudrā practice directly to Western students.
+          </p>
+        </div>
+
+        <div class="timeline-entry" style="border-left-color: transparent; padding-bottom: 0;">
+          <p class="text-violet-300 text-xs font-semibold tracking-wider mb-1">1970S–PRESENT</p>
+          <p class="text-violet-100/80 text-sm leading-relaxed">
+            Major Western Kagyu centres are established across Europe and North America. <strong class="text-violet-200">Thrangu Rinpoche</strong> produces extensive English-language Mahāmudrā teachings accessible to Western practitioners. The <strong class="text-violet-200">17th Karmapa</strong> (Ogyen Trinley Dorje) continues the living transmission, and Mahāmudrā is now taught in formal three-year retreats on multiple continents.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 4: CORE CONCEPTS -->
+    <section class="space-y-6">
+      <h2 class="font-cinzel text-2xl text-violet-300 text-center tracking-wide">Core Concepts</h2>
+      <p class="text-center text-violet-200/60 text-sm max-w-2xl mx-auto">
+        The fundamental terms and principles that define the Mahāmudrā path from ground through to fruit.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+        <div class="mudra-card">
+          <div class="text-3xl mb-3">🌊</div>
+          <h3 class="font-cinzel text-base text-violet-200 mb-2">Co-emergent Wisdom</h3>
+          <p class="text-violet-100/70 text-sm leading-relaxed">
+            <em>Lhan cig skyes pa'i ye shes</em> — the wisdom that arises co-emergently with every experience. The ground Mahāmudrā is this wisdom — not something to be created or cultivated, but recognised as already completely present within the very texture of experience itself.
+          </p>
+        </div>
+
+        <div class="mudra-card">
+          <div class="text-3xl mb-3">👁️</div>
+          <h3 class="font-cinzel text-base text-violet-200 mb-2">Pointing-Out Instruction</h3>
+          <p class="text-violet-100/70 text-sm leading-relaxed">
+            <em>Ngo sprod</em> — the direct introduction by the guru to the nature of the student's own mind. The most essential and irreplaceable element of Mahāmudrā transmission. Without it, years of meditation may proceed without the recognition that constitutes the actual path.
+          </p>
+        </div>
+
+        <div class="mudra-card">
+          <div class="text-3xl mb-3">🔄</div>
+          <h3 class="font-cinzel text-base text-violet-200 mb-2">The Four Yogas</h3>
+          <p class="text-violet-100/70 text-sm leading-relaxed">
+            One-pointedness → Simplicity → One Taste → Non-meditation. The four progressive stages of deepening Mahāmudrā recognition, from initial stabilisation of attention through to the full dissolution of any distinction between meditation and ordinary experience.
+          </p>
+        </div>
+
+        <div class="mudra-card">
+          <div class="text-3xl mb-3">☁️</div>
+          <h3 class="font-cinzel text-base text-violet-200 mb-2">Shamatha &amp; Vipashyana</h3>
+          <p class="text-violet-100/70 text-sm leading-relaxed">
+            Calm abiding and clear seeing — the two foundational wings of Buddhist meditation practice. In Mahāmudrā, these two practices prepare the ground for the pointing-out instruction and are subsequently integrated into the recognition of the natural state itself.
+          </p>
+        </div>
+
+        <div class="mudra-card">
+          <div class="text-3xl mb-3">💫</div>
+          <h3 class="font-cinzel text-base text-violet-200 mb-2">Dharmakaya</h3>
+          <p class="text-violet-100/70 text-sm leading-relaxed">
+            The "truth body" of Buddha — in Mahāmudrā, one's own mind is directly recognised as dharmakaya. Every moment of experience, when nakedly recognised, is dharmakaya. Conceptual activity does not obstruct dharmakaya but dissolves into it when seen clearly.
+          </p>
+        </div>
+
+        <div class="mudra-card">
+          <div class="text-3xl mb-3">🌟</div>
+          <h3 class="font-cinzel text-base text-violet-200 mb-2">Guru Yoga</h3>
+          <p class="text-violet-100/70 text-sm leading-relaxed">
+            Union with the guru's mind — the guru is the living embodiment of Mahāmudrā realisation, the transmission made present in a form the student can encounter. Guru yoga is the most powerful means of receiving the pointing-out instruction and of sustaining the recognition once received.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FOOTER QUOTE -->
+    <footer class="text-center py-10 space-y-3 border-t border-violet-500/15">
+      <p class="text-violet-300/80 text-lg italic leading-relaxed max-w-2xl mx-auto">
+        "Look into the mirror of your mind, the mysterious home of the dakini."
+      </p>
+      <p class="text-violet-500/60 text-sm">— Tilopa, <em>Ganges Mahāmudrā</em></p>
+      <p class="text-violet-600/40 text-xs mt-4">
+        <a href="/eastern-esotericism" class="hover:text-violet-400 transition-colors">← Eastern Esotericism</a>
+      </p>
+    </footer>
+
+  </div><!-- end content wrapper -->
+
+  <script>
+    const sf = document.getElementById('starfield');
+    for (let i = 0; i < 200; i++) {
+      const s = document.createElement('div');
+      s.className = 'star';
+      s.style.left = Math.random() * 100 + '%';
+      s.style.top = Math.random() * 100 + '%';
+      s.style.animationDelay = Math.random() * 3 + 's';
+      s.style.animationDuration = (2 + Math.random() * 3) + 's';
+      sf.appendChild(s);
+    }
+  </script>
+
+</body>
+</html>

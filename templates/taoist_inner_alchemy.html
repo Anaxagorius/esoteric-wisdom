@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Taoist Inner Alchemy (Neidan) — Esoteric Wisdom</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <style>
+    body { font-family: 'Raleway', sans-serif; }
+    .font-cinzel { font-family: 'Cinzel Decorative', cursive; }
+    @keyframes twinkle { 0%,100%{opacity:0.2;transform:scale(1);} 50%{opacity:1;transform:scale(1.4);} }
+    @keyframes float { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-12px);} }
+    @keyframes shimmer { 0%{background-position:0% 50%;} 100%{background-position:200% 50%;} }
+    .star { position:absolute; width:2px; height:2px; background:white; border-radius:50%; animation:twinkle 3s infinite; }
+    .aurora-text {
+      background: linear-gradient(90deg, #34d399, #10b981, #6ee7b7, #059669, #34d399);
+      background-size:300% auto;
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+      background-clip:text;
+      animation:shimmer 6s linear infinite;
+    }
+    .floating { animation: float 4s ease-in-out infinite; }
+    .nav-link { position:relative; transition:all 0.3s; }
+    .nav-link::after { content:''; position:absolute; bottom:-2px; left:0; width:0; height:1px; background:#f59e0b; transition:width 0.3s; }
+    .nav-link:hover::after { width:100%; }
+    .taoist-card {
+      background: linear-gradient(135deg, rgba(16,185,129,0.15), rgba(52,211,153,0.07));
+      border: 1px solid rgba(52,211,153,0.28);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      transition: all 0.3s;
+    }
+    .taoist-card:hover { transform: translateY(-4px); box-shadow: 0 0 28px rgba(52,211,153,0.18); border-color: rgba(52,211,153,0.55); }
+    .timeline-entry {
+      border-left: 2px solid rgba(52,211,153,0.30);
+      padding-left: 1.25rem;
+      padding-bottom: 1.5rem;
+      position: relative;
+    }
+    .timeline-entry::before {
+      content: '';
+      position: absolute;
+      left: -5px;
+      top: 4px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #10b981;
+      box-shadow: 0 0 8px rgba(16,185,129,0.7);
+    }
+  </style>
+</head>
+<body class="min-h-screen text-emerald-100 overflow-x-hidden" style="background: radial-gradient(ellipse at top, #001a0a 0%, #002d14 25%, #000a04 60%, #000000 100%);">
+
+  <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+
+  <!-- NAV -->
+  <nav class="sticky top-0 z-50 flex items-center justify-between px-6 py-3 bg-black/40 backdrop-blur-md border-b border-violet-500/20 flex-wrap gap-y-2">
+    <a href="/home" class="font-cinzel text-amber-300 text-sm tracking-widest shrink-0">✦ Esoteric Wisdom ✦</a>
+    <div class="flex items-center gap-x-3 gap-y-1 text-xs text-violet-200 flex-wrap justify-end">
+      <a href="/astrology" class="nav-link hover:text-amber-300 transition-colors">Astrology</a>
+      <a href="/meditation" class="nav-link hover:text-amber-300 transition-colors">Meditation</a>
+      <a href="/tarot/select" class="nav-link hover:text-amber-300 transition-colors">Tarot</a>
+      <a href="/numerology" class="nav-link hover:text-amber-300 transition-colors">Numerology</a>
+      <a href="/crystals" class="nav-link hover:text-amber-300 transition-colors">Crystals</a>
+      <a href="/runes" class="nav-link hover:text-amber-300 transition-colors">Runes</a>
+      <a href="/shamanism" class="nav-link hover:text-amber-300 transition-colors">Shamanism</a>
+      <a href="/druidism" class="nav-link hover:text-amber-300 transition-colors">Druidism</a>
+      <a href="/akashic-records" class="nav-link hover:text-amber-300 transition-colors">Akashic Records</a>
+      <a href="/wicca" class="nav-link hover:text-amber-300 transition-colors">Wicca</a>
+      <a href="/alchemy" class="nav-link hover:text-amber-300 transition-colors">Alchemy</a>
+      <a href="/gateway-process" class="nav-link hover:text-amber-300 transition-colors">Gateway Process</a>
+      <a href="/remote-viewing" class="nav-link hover:text-amber-300 transition-colors">Remote Viewing</a>
+      <a href="/khasarov-mirror" class="nav-link hover:text-amber-300 transition-colors">Khasarov Mirror</a>
+      <a href="/western-esotericism" class="nav-link hover:text-amber-300 transition-colors">Western Esotericism</a>
+      <a href="/eastern-esotericism" class="nav-link text-amber-300 font-semibold">Eastern Esotericism</a>
+      <a href="/journal/reflections" class="nav-link text-emerald-300 hover:text-emerald-200 transition-colors">✨ Reflections</a>
+      <a href="https://ko-fi.com/esotericwisdom" target="_blank" rel="noopener noreferrer"
+         class="px-3 py-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-white font-semibold hover:scale-105 transition-transform shrink-0">☕ Support</a>
+    </div>
+  </nav>
+
+  <!-- CONTENT WRAPPER -->
+  <div class="relative z-10 max-w-6xl mx-auto space-y-10 pt-6 px-4 pb-16">
+
+    <!-- BREADCRUMB -->
+    <div class="text-sm text-emerald-400/60">
+      <a href="/eastern-esotericism" class="hover:text-emerald-300 transition-colors">← Eastern Esoteric Traditions</a>
+    </div>
+
+    <!-- HERO -->
+    <section class="text-center py-16 space-y-6">
+      <div class="text-7xl floating">☯️</div>
+      <h1 class="font-cinzel text-4xl md:text-6xl font-bold aurora-text leading-tight">Taoist Inner Alchemy</h1>
+      <p class="font-cinzel text-xl text-amber-300/80 tracking-widest">Neidan</p>
+      <p class="max-w-3xl mx-auto text-emerald-200/80 text-lg leading-relaxed">
+        The supreme science of inner transformation — cultivating jing, qi, and shen through meditation, breath-work, and the microcosmic orbit to forge the Golden Elixir of immortality.
+      </p>
+    </section>
+
+    <!-- SECTION 1: WHAT IS TAOIST INNER ALCHEMY? -->
+    <section class="rounded-2xl p-8 space-y-6" style="background: linear-gradient(135deg, rgba(16,185,129,0.12), rgba(52,211,153,0.06));">
+      <h2 class="font-cinzel text-2xl text-emerald-300 text-center tracking-wide">What Is Taoist Inner Alchemy?</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm text-emerald-100/80 leading-relaxed">
+
+        <!-- Column 1 -->
+        <div class="space-y-4">
+          <p>
+            <strong class="text-emerald-200">Neidan vs Waidan:</strong> <em>Neidan</em> (内丹, inner alchemy / inner elixir) is distinguished from <em>Waidan</em> (外丹, outer alchemy / external elixir). Waidan — the earlier tradition — attempted to produce physical elixirs of immortality from minerals and metals such as cinnabar (mercury sulphide), lead, gold, and arsenic. As the obvious toxicity of these substances became apparent (several Tang dynasty emperors died from ingesting Waidan elixirs), the tradition shifted inward. Neidan reinterpreted the alchemical process as entirely internal — the "furnace" is the lower abdomen (lower dantian), the "cauldron" is the chest or head, and the substances being refined are the body's own vital energies. This inner transformation produces not a physical pill but a spiritual "golden elixir" (<em>jindan</em>) — a state of purified, refined consciousness.
+          </p>
+          <p>
+            <strong class="text-emerald-200">The Three Treasures (San Bao):</strong> The three fundamental vital substances that serve as the "ingredients" of the inner alchemical process are: (1) <em>Jing</em> (精) — essence; often associated with sexual energy and the reproductive capacity of the body; in men associated with semen, in women with menstrual blood and ovarian energy; the most dense and material of the three treasures. (2) <em>Qi</em> (氣) — vital breath and life force; the animating energy that flows through the body's meridians; equivalent in some respects to <em>prana</em> in Indian systems. (3) <em>Shen</em> (神) — spirit and consciousness; the most refined and subtle of the three. The goal of Neidan practice is to refine jing into qi, then qi into shen, and finally to return shen to the "Emptiness" (<em>xu</em>) — expressed as "returning the three to the one" (<em>san bao gui yi</em>).
+          </p>
+          <p>
+            <strong class="text-emerald-200">The Dantian (Elixir Fields):</strong> The three energy centres correspond to the Three Treasures: (1) Lower dantian (<em>Xia Dantian</em>) — located approximately three <em>cun</em> (finger widths) below the navel; the seat of jing; the primary reservoir of vital energy; where inner alchemical practice begins. (2) Middle dantian (<em>Zhong Dantian</em>) — at the heart and solar plexus level; the seat of qi; emotions and feeling reside here. (3) Upper dantian (<em>Shang Dantian</em>) — at the "third eye" point between and slightly above the eyebrows; the seat of shen; associated with consciousness and spiritual awareness. The microcosmic orbit moves energy from the lower dantian upward through the spine (Governing Vessel) and down the front of the body (Conception Vessel), cycling through all three dantian.
+          </p>
+          <p>
+            <strong class="text-emerald-200">Taoist Cosmology and the Reversal Principle:</strong> The cosmological background to Neidan is the Taoist understanding of reality as emerging from Wuji (formless potential) → Taiji (the supreme ultimate, the primordial undifferentiated whole) → Yin and Yang (the two primal forces) → Five Elements (<em>wuxing</em>: wood, fire, earth, metal, water) → Ten Thousand Things (the multiplicity of manifest reality). The natural "downward" flow is: Wuji → diversity. Ordinary human life follows this downward, outward path of dispersion. Neidan practice reverses this flow — through inward cultivation, the practitioner moves from the multiplicity of ordinary experience back toward the source, eventually realising union with Wuji. This "reversal" (<em>ni</em>, 逆) is the fundamental principle of Neidan.
+          </p>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="space-y-4">
+          <p>
+            <strong class="text-emerald-200">The Microcosmic Orbit (Xiao Zhoutian 小周天):</strong> The foundational practice of Neidan is the circulation of qi along the two main meridians of the Governing Vessel (<em>Du Mai</em>, running up the spine from the perineum to the crown) and the Conception Vessel (<em>Ren Mai</em>, running down the front of the body from the crown to the perineum). This circuit, when completed, forms the "small heavenly circuit" — the microcosmic orbit. The practitioner learns to direct attention and breath to guide qi along this circuit. This practice refines jing into qi and begins the inner alchemical transformation. More advanced practices involve the "macrocosmic orbit" (<em>Da Zhoutian</em>), engaging all twelve meridians.
+          </p>
+          <p>
+            <strong class="text-emerald-200">Key Figures — the Eight Immortals and Inner Alchemy Masters:</strong> The Zhongli Quan and Lü Dongbin tradition is central. <em>Zhongli Quan</em> (traditionally 2nd century BCE) — one of the Eight Immortals; said to have transmitted the inner alchemical teachings to Lü Dongbin. <em>Lü Dongbin</em> (c. 798–?) — the most famous of the Eight Immortals; patron deity of inner alchemy; depicted as a scholar-swordsman; his encounters and teachings are the source of many Neidan texts. <em>Zhang Boduan</em> (984–1082 CE) — one of the most important historical figures; wrote the <em>Wuzhen pian</em> (Awakening to Reality), the foundational text of the Southern School of Neidan. <em>Liu Haichan</em> and <em>Wang Chongyang</em> (founder of the Quanzhen school, 1113–1170 CE) established the most important school of Neidan in Northern China.
+          </p>
+          <p>
+            <strong class="text-emerald-200">The Quanzhen School and the Two Schools of Neidan:</strong> The Quanzhen (Complete Perfection) school, founded by Wang Chongyang in the 12th century, is the most historically important Neidan school. It emphasises celibacy, monastery life, and the integration of Confucian ethics and Chan (Zen) Buddhist practice with Taoist inner alchemy. This "Northern School" contrasts with the "Southern School" (<em>Nanzong</em>) founded on Zhang Boduan's teachings, which allows householder practice and is more explicitly sexual in its symbolism. Both schools use the same inner alchemical terminology but interpret it differently — the Northern School reading the symbolic language of lead and mercury as metaphors for stillness and activity of the mind, the Southern School giving it a more physiological interpretation.
+          </p>
+          <p>
+            <strong class="text-emerald-200">Wu Wei and the Philosophy of Naturalness:</strong> Neidan is not only a set of techniques but a complete philosophical orientation rooted in the <em>Tao Te Ching</em> and the concept of <em>wu wei</em> (non-action, non-forcing). The inner alchemical transformation ideally happens through yielding, letting go, and returning to the natural state rather than through forceful effort. <em>Ziran</em> (自然, naturalness, self-so-ness) is the quality that Neidan practice cultivates. This philosophical dimension distinguishes Taoist inner alchemy from Indian practices that more explicitly emphasise wilful effort. The great paradox at the heart of Neidan: one must practise diligently in order to learn how not to practise.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 2: KEY TEXTS -->
+    <section class="space-y-6">
+      <h2 class="font-cinzel text-2xl text-emerald-300 text-center tracking-wide">Key Texts</h2>
+      <p class="text-center text-emerald-200/60 text-sm max-w-2xl mx-auto">
+        The foundational scriptures and treatises of the Neidan tradition — from obscure classical verse to the texts that shaped inner alchemy practice to the present day.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+        <div class="taoist-card">
+          <div class="text-4xl mb-3">☯️</div>
+          <h3 class="font-cinzel text-base text-emerald-200 mb-2">Cantong qi (Seal of the Unity of the Three)</h3>
+          <p class="text-emerald-100/70 text-sm leading-relaxed">
+            By Wei Boyang, c. 150 CE; the oldest surviving text on Chinese alchemy, written in deliberately obscure verse. "Three" refers to the I Ching, Taoist cosmology, and alchemical practice. Foundational text for all later Neidan; its enigmatic style set the precedent for the coded language of the entire tradition.
+          </p>
+        </div>
+
+        <div class="taoist-card">
+          <div class="text-4xl mb-3">📖</div>
+          <h3 class="font-cinzel text-base text-emerald-200 mb-2">Wuzhen pian (Awakening to Reality)</h3>
+          <p class="text-emerald-100/70 text-sm leading-relaxed">
+            By Zhang Boduan, 1075 CE; the foundational text of the Southern School of Neidan. Combines poetic verse with commentary and describes the inner alchemical process in both literal and metaphorical terms. Still widely studied by practitioners of Neidan today.
+          </p>
+        </div>
+
+        <div class="taoist-card">
+          <div class="text-4xl mb-3">🌿</div>
+          <h3 class="font-cinzel text-base text-emerald-200 mb-2">Huangdi Neijing (Yellow Emperor's Classic of Internal Medicine)</h3>
+          <p class="text-emerald-100/70 text-sm leading-relaxed">
+            Though primarily a medical text, it contains the foundational theory of qi, meridians, and the three dantian that underlies all Neidan practice. Composed c. 2nd century BCE to 1st century CE; the theoretical bedrock of Chinese medicine and inner cultivation alike.
+          </p>
+        </div>
+
+        <div class="taoist-card">
+          <div class="text-4xl mb-3">✨</div>
+          <h3 class="font-cinzel text-base text-emerald-200 mb-2">Tao Te Ching</h3>
+          <p class="text-emerald-100/70 text-sm leading-relaxed">
+            Laozi's foundational text of 81 verses; while not an alchemical text per se, it provides the philosophical foundation — wu wei, ziran, the nature of Tao — upon which all Neidan rests. Composed c. 4th–3rd century BCE; the most translated Chinese text in history.
+          </p>
+        </div>
+
+        <div class="taoist-card">
+          <div class="text-4xl mb-3">🔮</div>
+          <h3 class="font-cinzel text-base text-emerald-200 mb-2">The Secret of the Golden Flower (Taiyi Jinhua Zongzhi)</h3>
+          <p class="text-emerald-100/70 text-sm leading-relaxed">
+            A Neidan text from the Tang or Song dynasty, transmitted through the Lü Dongbin tradition. Famously translated by Richard Wilhelm with commentary by C.G. Jung (1929). Describes the "circulation of the light" as the essential Neidan practice; the text that introduced inner alchemy to the Western world.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 3: HISTORICAL TIMELINE -->
+    <section class="rounded-2xl p-8 space-y-6" style="background: linear-gradient(135deg, rgba(16,185,129,0.10), rgba(0,10,4,0.40));">
+      <h2 class="font-cinzel text-2xl text-emerald-300 text-center tracking-wide">Historical Timeline</h2>
+      <p class="text-center text-emerald-200/60 text-sm max-w-2xl mx-auto">
+        From the classical Taoist sages to the living tradition of the present day — the unfolding of the golden elixir across Chinese history.
+      </p>
+      <div class="max-w-3xl mx-auto pt-4">
+
+        <div class="timeline-entry">
+          <p class="text-emerald-300 text-xs font-semibold tracking-wider mb-1">C. 4TH–3RD CENTURY BCE</p>
+          <p class="text-emerald-100/80 text-sm leading-relaxed">
+            The classical Taoist texts are composed — the <strong class="text-emerald-200">Tao Te Ching</strong> and <strong class="text-emerald-200">Zhuangzi</strong>. The philosophical foundation of all later Neidan is established: the nature of the Tao, wu wei, the reversal principle, and the possibility of returning to the primordial state.
+          </p>
+        </div>
+
+        <div class="timeline-entry">
+          <p class="text-emerald-300 text-xs font-semibold tracking-wider mb-1">C. 2ND CENTURY CE</p>
+          <p class="text-emerald-100/80 text-sm leading-relaxed">
+            <strong class="text-emerald-200">Wei Boyang</strong> writes the <em>Cantong qi</em>; the earliest synthesis of the I Ching, Taoism, and alchemical practice. Waidan (external alchemy) is the dominant form of practice, with experimenters seeking literal physical immortality through mineral elixirs.
+          </p>
+        </div>
+
+        <div class="timeline-entry">
+          <p class="text-emerald-300 text-xs font-semibold tracking-wider mb-1">C. 5TH–8TH CENTURY CE (TANG DYNASTY)</p>
+          <p class="text-emerald-100/80 text-sm leading-relaxed">
+            Waidan reaches its height; famous elixir experiments proliferate across China. Several emperors die from toxic alchemical preparations. The shift toward Neidan begins as the inner reinterpretation of alchemical symbols gains ground. Taoist monasteries are established and become centres of learning.
+          </p>
+        </div>
+
+        <div class="timeline-entry">
+          <p class="text-emerald-300 text-xs font-semibold tracking-wider mb-1">C. 10TH–12TH CENTURY CE (SONG DYNASTY)</p>
+          <p class="text-emerald-100/80 text-sm leading-relaxed">
+            Neidan (inner alchemy) becomes dominant. <strong class="text-emerald-200">Zhang Boduan</strong> writes the <em>Wuzhen pian</em> (1075 CE); the Southern School of Neidan is established. The Eight Immortals legends proliferate across Chinese popular culture, making inner alchemical figures household names.
+          </p>
+        </div>
+
+        <div class="timeline-entry">
+          <p class="text-emerald-300 text-xs font-semibold tracking-wider mb-1">C. 12TH CENTURY CE</p>
+          <p class="text-emerald-100/80 text-sm leading-relaxed">
+            <strong class="text-emerald-200">Wang Chongyang</strong> founds the Quanzhen (Complete Perfection) school in Northern China; integrates celibacy, Chan Buddhism, and Neo-Confucian ethics with inner alchemy. His Seven Perfected disciples spread the school throughout China, establishing a network of Taoist monasteries.
+          </p>
+        </div>
+
+        <div class="timeline-entry">
+          <p class="text-emerald-300 text-xs font-semibold tracking-wider mb-1">13TH–14TH CENTURY CE (YUAN DYNASTY)</p>
+          <p class="text-emerald-100/80 text-sm leading-relaxed">
+            The Quanzhen school flourishes under Mongol patronage. <strong class="text-emerald-200">Changchun Zhenren</strong> (Qiu Chuji) travels to Central Asia to meet Genghis Khan and receives imperial protection for Taoist monasteries across China — one of the most significant encounters between Taoism and world history.
+          </p>
+        </div>
+
+        <div class="timeline-entry">
+          <p class="text-emerald-300 text-xs font-semibold tracking-wider mb-1">17TH–19TH CENTURY CE</p>
+          <p class="text-emerald-100/80 text-sm leading-relaxed">
+            Synthesis and commentary traditions flourish. <strong class="text-emerald-200">Liu Yiming</strong> (1734–1821 CE) writes major commentaries on Neidan texts, producing some of the most accessible expositions of the tradition. The Qing dynasty sees both active Neidan practitioners and the beginnings of scholarly study of the tradition.
+          </p>
+        </div>
+
+        <div class="timeline-entry" style="border-left-color: transparent; padding-bottom: 0;">
+          <p class="text-emerald-300 text-xs font-semibold tracking-wider mb-1">20TH CENTURY–PRESENT</p>
+          <p class="text-emerald-100/80 text-sm leading-relaxed">
+            <strong class="text-emerald-200">Mantak Chia</strong> popularises microcosmic orbit practice in the West (<em>Taoist Secrets of Love</em>, 1984). Academic study advances through scholars such as <strong class="text-emerald-200">Fabrizio Pregadio</strong>. Living Neidan traditions continue within Quanzhen and other Taoist orders in China and Taiwan, maintaining the unbroken chain of inner alchemical transmission.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 4: CORE PRACTICES -->
+    <section class="space-y-6">
+      <h2 class="font-cinzel text-2xl text-emerald-300 text-center tracking-wide">Core Practices</h2>
+      <p class="text-center text-emerald-200/60 text-sm max-w-2xl mx-auto">
+        The essential methods of Taoist inner alchemy — from foundational energy circulation to the culminating realisation of the Golden Elixir.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+        <div class="taoist-card">
+          <div class="text-4xl mb-3">🌀</div>
+          <h3 class="font-cinzel text-base text-emerald-200 mb-2">Microcosmic Orbit (Xiao Zhoutian)</h3>
+          <p class="text-emerald-100/70 text-sm leading-relaxed">
+            Circulating qi along the Governing and Conception Vessels; the foundational inner alchemical practice. Experienced as warmth, tingling, or light moving up the spine and down the front of the body. The essential first step in refining jing into qi and initiating the transformative process of Neidan.
+          </p>
+        </div>
+
+        <div class="taoist-card">
+          <div class="text-4xl mb-3">🌬️</div>
+          <h3 class="font-cinzel text-base text-emerald-200 mb-2">Embryonic Breathing (Taixi)</h3>
+          <p class="text-emerald-100/70 text-sm leading-relaxed">
+            A highly refined breathing practice that eventually becomes self-sustaining; the breath becomes extremely fine and subtle. Associated with the inner alchemical process of refinement. Metaphorically returns the practitioner to the breathing state of the foetus in the womb — a return to the pre-Heaven, primordial condition.
+          </p>
+        </div>
+
+        <div class="taoist-card">
+          <div class="text-4xl mb-3">👁️</div>
+          <h3 class="font-cinzel text-base text-emerald-200 mb-2">Inner Observation (Neiguan)</h3>
+          <p class="text-emerald-100/70 text-sm leading-relaxed">
+            The practice of turning awareness inward; observing the qi movements, the dantian, and eventually the Three Treasures themselves. A form of internal contemplation that reveals the inner landscape of the subtle body — the living geography of the Neidan universe.
+          </p>
+        </div>
+
+        <div class="taoist-card">
+          <div class="text-4xl mb-3">🔄</div>
+          <h3 class="font-cinzel text-base text-emerald-200 mb-2">Reversal (Ni)</h3>
+          <p class="text-emerald-100/70 text-sm leading-relaxed">
+            The principle of reversing the downward and outward flow of vital energy. In ordinary life, jing is dispersed through sexual activity and emotional reactivity. In Neidan, this flow is reversed and jing is "returned" upward to nourish the brain and spirit — the foundational act of inner alchemical transformation.
+          </p>
+        </div>
+
+        <div class="taoist-card">
+          <div class="text-4xl mb-3">🧘</div>
+          <h3 class="font-cinzel text-base text-emerald-200 mb-2">Stillness Practice (Jing Zuo)</h3>
+          <p class="text-emerald-100/70 text-sm leading-relaxed">
+            Silent sitting meditation; the foundation of all Neidan practice. Learning to calm the "post-Heaven" (acquired) mind so the "pre-Heaven" (original) nature can emerge. Without a stable foundation in stillness, the more active circulation practices cannot take root.
+          </p>
+        </div>
+
+        <div class="taoist-card">
+          <div class="text-4xl mb-3">☯️</div>
+          <h3 class="font-cinzel text-base text-emerald-200 mb-2">The Golden Elixir (Jindan)</h3>
+          <p class="text-emerald-100/70 text-sm leading-relaxed">
+            Not a physical substance but the refined spiritual state achieved through sustained practice; the union of fire (<em>li</em>, consciousness) and water (<em>kan</em>, life-force essence); the inner marriage of yang and yin. The Golden Elixir is the culmination of the Neidan path — the realisation of one's original, immortal nature.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FOOTER QUOTE -->
+    <section class="text-center py-10 space-y-3">
+      <p class="text-emerald-300/60 text-xs tracking-widest uppercase">Inner Alchemy Wisdom</p>
+      <blockquote class="font-cinzel text-lg md:text-xl text-emerald-200/80 italic max-w-2xl mx-auto leading-relaxed">
+        "The Tao that can be named is not the eternal Tao. The name that can be named is not the eternal name."
+      </blockquote>
+      <p class="text-emerald-400/60 text-sm">— Laozi, <em>Tao Te Ching</em></p>
+    </section>
+
+  </div>
+
+  <script>
+  const sf = document.getElementById('starfield');
+  for (let i = 0; i < 200; i++) {
+    const s = document.createElement('div');
+    s.className = 'star';
+    s.style.left = Math.random() * 100 + '%';
+    s.style.top = Math.random() * 100 + '%';
+    s.style.animationDelay = Math.random() * 3 + 's';
+    s.style.animationDuration = (2 + Math.random() * 3) + 's';
+    sf.appendChild(s);
+  }
+  </script>
+
+</body>
+</html>

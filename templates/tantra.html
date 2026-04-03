@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tantra — Esoteric Wisdom</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Raleway', sans-serif; }
+    .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+
+    @keyframes twinkle { 0%,100% { opacity: 0.2; } 50% { opacity: 1; } }
+    .star { position: absolute; width: 2px; height: 2px; border-radius: 50%; background: white; animation: twinkle var(--dur,3s) ease-in-out infinite; animation-delay: var(--delay,0s); }
+
+    @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+    .floating { animation: float 5s ease-in-out infinite; }
+
+    @keyframes shimmer {
+      0% { background-position: -200% center; }
+      100% { background-position: 200% center; }
+    }
+
+    .nav-link { position: relative; transition: all 0.3s; }
+    .nav-link::after {
+      content: ''; position: absolute; bottom: -2px; left: 0;
+      width: 0; height: 2px;
+      background: linear-gradient(90deg, #f59e0b, #a78bfa);
+      transition: width 0.3s;
+    }
+    .nav-link:hover::after { width: 100%; }
+
+    .aurora-text {
+      background: linear-gradient(90deg, #ef4444, #f43f5e, #dc2626, #fb7185, #ef4444);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 4s linear infinite;
+    }
+
+    @keyframes crimson-glow {
+      0%, 100% { box-shadow: 0 0 10px 2px rgba(220, 38, 38, 0.25); }
+      50% { box-shadow: 0 0 28px 6px rgba(220, 38, 38, 0.55); }
+    }
+
+    .tantra-card {
+      background: linear-gradient(135deg, rgba(220,38,38,0.07), rgba(159,18,57,0.04));
+      border: 1px solid rgba(220,38,38,0.2);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+    .tantra-card:hover {
+      transform: translateY(-6px) scale(1.01);
+      box-shadow: 0 0 28px 5px rgba(220, 38, 38, 0.3);
+      border-color: rgba(220, 38, 38, 0.5);
+    }
+    .tantra-card.pulse {
+      animation: crimson-glow 3s ease-in-out infinite;
+    }
+
+    .practice-card {
+      background: linear-gradient(135deg, rgba(220,38,38,0.06), rgba(136,19,55,0.04));
+      border: 1px solid rgba(220,38,38,0.15);
+      border-radius: 0.75rem;
+      padding: 1.25rem;
+      transition: border-color 0.3s, background 0.3s;
+    }
+    .practice-card:hover {
+      border-color: rgba(220, 38, 38, 0.4);
+      background: linear-gradient(135deg, rgba(220,38,38,0.1), rgba(136,19,55,0.06));
+    }
+
+    .timeline-item {
+      border-left: 2px solid rgba(220,38,38,0.3);
+      padding-left: 1.25rem;
+      padding-bottom: 1.25rem;
+      position: relative;
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -5px;
+      top: 4px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #ef4444;
+      box-shadow: 0 0 8px rgba(220, 38, 38, 0.6);
+    }
+  </style>
+</head>
+<body class="min-h-screen text-rose-100 overflow-x-hidden" style="background: radial-gradient(ellipse at top, #1a0000 0%, #2d0505 25%, #0a0000 60%, #000000 100%);">
+
+  <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+
+  <!-- NAV -->
+  <nav class="sticky top-0 z-50 flex items-center justify-between px-6 py-3 bg-black/40 backdrop-blur-md border-b border-violet-500/20 flex-wrap gap-y-2">
+    <a href="/home" class="font-cinzel text-amber-300 text-sm tracking-widest shrink-0">✦ Esoteric Wisdom ✦</a>
+    <div class="flex items-center gap-x-3 gap-y-1 text-xs text-violet-200 flex-wrap justify-end">
+      <a href="/astrology" class="nav-link hover:text-amber-300 transition-colors">Astrology</a>
+      <a href="/meditation" class="nav-link hover:text-amber-300 transition-colors">Meditation</a>
+      <a href="/tarot/select" class="nav-link hover:text-amber-300 transition-colors">Tarot</a>
+      <a href="/numerology" class="nav-link hover:text-amber-300 transition-colors">Numerology</a>
+      <a href="/crystals" class="nav-link hover:text-amber-300 transition-colors">Crystals</a>
+      <a href="/runes" class="nav-link hover:text-amber-300 transition-colors">Runes</a>
+      <a href="/shamanism" class="nav-link hover:text-amber-300 transition-colors">Shamanism</a>
+      <a href="/druidism" class="nav-link hover:text-amber-300 transition-colors">Druidism</a>
+      <a href="/akashic-records" class="nav-link hover:text-amber-300 transition-colors">Akashic Records</a>
+      <a href="/wicca" class="nav-link hover:text-amber-300 transition-colors">Wicca</a>
+      <a href="/alchemy" class="nav-link hover:text-amber-300 transition-colors">Alchemy</a>
+      <a href="/gateway-process" class="nav-link hover:text-amber-300 transition-colors">Gateway Process</a>
+      <a href="/remote-viewing" class="nav-link hover:text-amber-300 transition-colors">Remote Viewing</a>
+      <a href="/khasarov-mirror" class="nav-link hover:text-amber-300 transition-colors">Khasarov Mirror</a>
+      <a href="/western-esotericism" class="nav-link hover:text-amber-300 transition-colors">Western Esotericism</a>
+      <a href="/eastern-esotericism" class="nav-link text-amber-300 font-semibold">Eastern Esotericism</a>
+      <a href="/journal/reflections" class="nav-link text-emerald-300 hover:text-emerald-200 transition-colors">✨ Reflections</a>
+      <a href="https://ko-fi.com/esotericwisdom" target="_blank" rel="noopener noreferrer"
+         class="px-3 py-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-white font-semibold hover:scale-105 transition-transform shrink-0">☕ Support</a>
+    </div>
+  </nav>
+
+  <!-- CONTENT WRAPPER -->
+  <div class="relative z-10 max-w-6xl mx-auto space-y-10 pt-6 px-4 pb-12">
+
+    <!-- BREADCRUMB -->
+    <div>
+      <a href="/eastern-esotericism" class="text-xs text-rose-300/60 hover:text-rose-300 transition-colors">← Eastern Esoteric Traditions</a>
+    </div>
+
+    <!-- HERO -->
+    <section class="text-center py-14 space-y-6">
+      <div class="text-7xl floating">🔱</div>
+      <h1 class="font-cinzel text-4xl md:text-6xl font-bold aurora-text leading-tight">
+        Tantra
+      </h1>
+      <p class="max-w-3xl mx-auto text-rose-200/80 text-lg leading-relaxed">
+        The sacred science of liberation through expansion — the ancient tradition of Hindu and Buddhist Tantra that transforms every aspect of experience into a path of awakening, weaving together mantra, yantra, and the fire of divine consciousness.
+      </p>
+    </section>
+
+    <!-- SECTION 1: WHAT IS TANTRA? -->
+    <section class="rounded-2xl p-8 space-y-6" style="background: linear-gradient(135deg, rgba(159,18,57,0.12), rgba(136,19,55,0.07));">
+      <h2 class="font-cinzel text-2xl text-rose-300 text-center tracking-wide">What Is Tantra?</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm text-rose-100/80 leading-relaxed">
+        <div class="space-y-4">
+          <p>
+            The word <em>Tantra</em> derives from the Sanskrit root <strong class="text-rose-200">tan</strong> (to expand, to weave, to stretch) combined with <strong class="text-rose-200">tra</strong> (instrument or tool) — the word itself points directly to the expansion of consciousness and liberation from the limitations of ordinary experience. This etymology is central to understanding the tradition: Tantra is the instrument by which awareness is woven into its fullest possible expression. It is crucial to note at the outset that this bears virtually no resemblance to the popular Western misconception of Tantra as primarily or predominantly sexual. This "Neo-Tantra" is a 20th-century Western distortion of a vastly more comprehensive sacred science.
+          </p>
+          <p>
+            The historical origins of the Tantric tradition are found in texts known as the <strong class="text-rose-200">Agamas</strong> and <strong class="text-rose-200">Tantras</strong>, dated approximately to the 5th–7th centuries CE, though the tradition itself claims timeless origins as revealed scripture. These texts are understood as <em>shruti</em> — divinely revealed knowledge rather than authored works. The canonical corpus divides into the <strong class="text-rose-200">Shaiva Agamas</strong> (28 primary texts of Shaiva Siddhanta), the <strong class="text-rose-200">Shakta Tantras</strong> (centring on the goddess traditions), and the <strong class="text-rose-200">Vaishnava Pancharatra</strong> texts — three distinct but interrelated streams of revelation.
+          </p>
+          <p>
+            Two primary streams characterise the Tantric world: <strong class="text-rose-200">Hindu Tantra</strong> and <strong class="text-rose-200">Buddhist Tantra</strong> (Vajrayana). These are related yet distinct traditions. Both emphasise the indispensable role of an initiated teacher (the <em>guru</em>), the centrality of ritual practice, the transformative power of mantra, and the fundamental principle that ordinary experience — rather than being abandoned — can be transmuted into liberation. Hindu Tantra is structured around the divine polarity of <strong class="text-rose-200">Shiva</strong> (pure consciousness) and <strong class="text-rose-200">Shakti</strong> (dynamic energy); Buddhist Tantra is structured around Buddha-nature and the deity yoga path leading to the non-dual realisation of bliss-emptiness (<em>mahasukha-shunyata</em>).
+          </p>
+          <p>
+            Within Hindu Tantra, a fundamental division separates two paths. The <strong class="text-rose-200">Vama Marga</strong> (Left-Hand Path) employs the so-called "Five M's" (<em>panchamakara</em>): <em>madya</em> (wine), <em>mamsa</em> (meat), <em>matsya</em> (fish), <em>mudra</em> (grain), and <em>maithuna</em> (ritual sexual intercourse). In the <strong class="text-rose-200">Kaula school</strong>, these are engaged literally as a means of transcending conventional distinctions of pure and impure through consecrated transgression. The <strong class="text-rose-200">Samaya school</strong> (Right-Hand Path, <em>Dakshina Marga</em>) interprets these as entirely symbolic or substitutes non-transgressive equivalents, holding that the true meaning is always interior. The tension and dialogue between these two approaches runs throughout the entire textual tradition.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <p>
+            Central to Hindu Tantra is the figure of <strong class="text-rose-200">Shakti</strong> — the divine feminine principle understood not merely as a goddess but as the very power of consciousness itself, the dynamic energy (<em>spanda</em>) that manifests and sustains all of reality. Shiva is understood as pure, still awareness (<em>chit</em>); Shakti is the vibrant, creative force through which that awareness manifests the cosmos. Their union (<em>yoga</em>) constitutes the supreme state of realisation. Within this framework, the goddess traditions of <strong class="text-rose-200">Devi, Durga, Kali</strong>, and above all <strong class="text-rose-200">Lalita Tripura Sundari</strong> are central. The <strong class="text-rose-200">Sri Vidya</strong> tradition, centred on the great cosmogram of the <strong class="text-rose-200">Sri Yantra</strong> (or Sri Chakra), represents perhaps the most philosophically refined stream of the entire Shakta-Tantric world.
+          </p>
+          <p>
+            The Tantric understanding of the human being centres on the <strong class="text-rose-200">subtle body</strong> (<em>sukshma sharira</em>) — an energetic counterpart to the physical frame that is the primary field of Tantric practice. Within this subtle body, 72,000 energy channels (<em>nadis</em>) carry vital force, with three principal channels: <strong class="text-rose-200">Ida</strong> (lunar, left-side current), <strong class="text-rose-200">Pingala</strong> (solar, right-side current), and the central <strong class="text-rose-200">Sushumna</strong> (the axial channel through which liberation flows). Along the Sushumna are situated six or seven main <strong class="text-rose-200">chakras</strong> — energy centres or wheels — ascending from the <em>Muladhara</em> at the base of the spine to the <em>Sahasrara</em> at the crown. The dormant cosmic energy called <strong class="text-rose-200">kundalini-shakti</strong>, coiled like a serpent at the Muladhara, is, when properly awakened through initiation and practice, raised through the chakra system to unite with Shiva at the crown — the experiential correlate of liberation (<em>moksha</em>).
+          </p>
+          <p>
+            The three indispensable pillars of Tantric practice are <strong class="text-rose-200">mantra</strong> (sacred sound and vibration operating through speech), <strong class="text-rose-200">yantra</strong> (sacred geometry and visual form operating through sight), and <strong class="text-rose-200">mudra</strong> (ritual gesture operating through the body). These three together constitute the complete technology of Tantric practice — the total involvement of all modes of human expression in the work of liberation. None of these three pillars can be properly activated without the transmission of an authorised <em>guru</em>: the teacher is not optional but structurally indispensable to the tradition.
+          </p>
+          <p>
+            The contrast between <strong class="text-rose-200">Neo-Tantra</strong> and the authentic traditional Tantra deserves frank acknowledgement. The Western "Tantric" movement — originating with the American Pierre Bernard in the early 20th century and later amplified through the human potential movement of the 1960s and 70s — bears little resemblance to the traditional textual and practice tradition. Traditional Tantra requires years of preparatory purification, formal initiation by a qualified <em>guru</em> in an established lineage, intensive daily practice, and often considerable prior knowledge of Sanskrit and the philosophical background. The academic field — represented by scholars of the calibre of <strong class="text-rose-200">David Gordon White</strong>, <strong class="text-rose-200">Alexis Sanderson</strong>, and <strong class="text-rose-200">Mark Dyczkowski</strong> — has worked to recover and illuminate the authentic textual and historical tradition against both popular misconception and anti-Tantric prejudice within modern Hinduism itself.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: KEY TEXTS -->
+    <section class="space-y-6">
+      <h2 class="font-cinzel text-2xl text-rose-300 text-center tracking-wide">Key Texts</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+        <div class="tantra-card space-y-3">
+          <div class="text-3xl">📜</div>
+          <h3 class="font-cinzel text-base text-rose-200">Vijnana Bhairava Tantra</h3>
+          <p class="text-rose-300/60 text-xs uppercase tracking-wider">c. 9th Century CE</p>
+          <p class="text-rose-100/70 text-sm leading-relaxed">
+            The "Tantra of the Consciousness of Bhairava" — arguably the most accessible and immediately usable of all Tantric texts. In a dialogue between Bhairava (the fierce, transcendent form of Shiva) and Bhairavi (the goddess), 112 <em>dharana</em> (contemplative techniques) are presented, covering every conceivable mode of awareness: following the breath, dwelling in the gap between thoughts, attending to sound, resting in open space, and dozens of others. The sheer variety of entry-points reflects the Tantric conviction that every moment of experience can become a door to liberation. The text has been beautifully translated by Jaideva Singh and commented upon by the teacher Swami Lakshmanjoo.
+          </p>
+        </div>
+
+        <div class="tantra-card space-y-3">
+          <div class="text-3xl">📖</div>
+          <h3 class="font-cinzel text-base text-rose-200">Kularnava Tantra</h3>
+          <p class="text-rose-300/60 text-xs uppercase tracking-wider">c. 11th–12th Century CE</p>
+          <p class="text-rose-100/70 text-sm leading-relaxed">
+            One of the most important and comprehensive of the Kaula Tantras, the Kularnava Tantra comprises 17 chapters of dense teaching on the guru-disciple relationship, initiation (<em>diksha</em>), the nature of liberation, and the ritual practice of the Kaula path. The text is particularly notable for its detailed and reverential treatment of the <em>guru</em> as the living embodiment of Shiva, without whom no spiritual progress is possible. It remains a central reference text for practitioners and scholars of the Left-Hand Path traditions within Shaiva Tantra.
+          </p>
+        </div>
+
+        <div class="tantra-card space-y-3">
+          <div class="text-3xl">🌸</div>
+          <h3 class="font-cinzel text-base text-rose-200">Mahanirvana Tantra</h3>
+          <p class="text-rose-300/60 text-xs uppercase tracking-wider">c. 18th Century CE</p>
+          <p class="text-rose-100/70 text-sm leading-relaxed">
+            A 14-chapter text presenting the worship of Shakti in the form of Adya Kali, together with teachings on initiation, mantra, and the spiritual life of the householder (<em>grihastha</em>). The Mahanirvana Tantra was notably important as a text that sought to reconcile authentic Tantric practice with orthodox Hindu social norms — a reformist agenda that earned it both influence and suspicion within traditional circles. It was one of the primary texts translated and championed by the pioneering Western scholar of Tantra, John Woodroffe (Arthur Avalon), whose work in the early 20th century opened the tradition to serious Western study for the first time.
+          </p>
+        </div>
+
+        <div class="tantra-card space-y-3">
+          <div class="text-3xl">💎</div>
+          <h3 class="font-cinzel text-base text-rose-200">Hevajra Tantra</h3>
+          <p class="text-rose-300/60 text-xs uppercase tracking-wider">c. 8th Century CE</p>
+          <p class="text-rose-100/70 text-sm leading-relaxed">
+            One of the central texts of Buddhist (Vajrayana) Tantra, the Hevajra Tantra presents the non-dual wisdom of bliss-emptiness (<em>mahasukha-shunyata</em>) through the practice of deity yoga centred on the wrathful deity Hevajra — a dancing, multi-armed figure whose iconography embodies the inseparability of compassion and emptiness. The text is central to the <strong class="text-rose-200">Sakya school</strong> of Tibetan Buddhism and represents the Vajrayana conviction that awakening can be achieved within a single lifetime through the skilled use of Tantric methods of transformation, rather than the gradual path of renunciation.
+          </p>
+        </div>
+
+        <div class="tantra-card space-y-3 md:col-span-2 lg:col-span-1">
+          <div class="text-3xl">🔯</div>
+          <h3 class="font-cinzel text-base text-rose-200">Tantrāloka</h3>
+          <p class="text-rose-300/60 text-xs uppercase tracking-wider">c. 1000 CE · Abhinavagupta</p>
+          <p class="text-rose-100/70 text-sm leading-relaxed">
+            Abhinavagupta's encyclopaedic masterwork, the <em>Tantrāloka</em> ("Light on the Tantras") is the most comprehensive and philosophically sophisticated text in the entire Tantric corpus. Comprising 37 chapters, it synthesises the multiple competing schools and streams of Kashmir Shaivism — from the dualistic Shaiva Siddhanta to the radical non-dualism of the Trika and Krama schools — into a single coherent philosophical and practical system. Abhinavagupta (c. 950–1016 CE) was without question the greatest philosopher-practitioner of the Tantric tradition; his capacity for synthesising vast bodies of rival teaching whilst maintaining the highest standards of philosophical rigour has never been surpassed within the tradition.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 3: HISTORICAL TIMELINE -->
+    <section class="rounded-2xl p-8 space-y-6" style="background: linear-gradient(135deg, rgba(136,19,55,0.12), rgba(80,10,30,0.07));">
+      <h2 class="font-cinzel text-2xl text-rose-300 text-center tracking-wide">Historical Timeline</h2>
+      <div class="max-w-3xl mx-auto space-y-0">
+
+        <div class="timeline-item">
+          <p class="text-rose-300 text-xs font-semibold tracking-wider uppercase mb-1">c. 300–500 CE</p>
+          <p class="text-rose-100/80 text-sm leading-relaxed">
+            <strong class="text-rose-200">Early Tantric Currents.</strong> The earliest Shaiva and Shakta Agamic texts begin to be compiled, most likely in Kashmir and across the Deccan. The <strong class="text-rose-200">Pashupata</strong> sect — one of the oldest Shaiva renunciant movements — and the <strong class="text-rose-200">Kapālika</strong> tradition (skull-bearing ascetics who practised transgressive rituals at cremation grounds) represent early forms of Shaiva Tantrism. These traditions self-consciously positioned themselves outside and above the Vedic orthodox order, claiming a directly revealed, higher path to liberation.
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <p class="text-rose-300 text-xs font-semibold tracking-wider uppercase mb-1">c. 500–700 CE</p>
+          <p class="text-rose-100/80 text-sm leading-relaxed">
+            <strong class="text-rose-200">Classical Composition.</strong> The classic Tantric texts are composed across North and South India. The <strong class="text-rose-200">Shaiva Siddhanta</strong> school begins to systematise the 28 Agamas, establishing the canonical dualistic theology of Shaiva orthodoxy that would become dominant in South India. Simultaneously, the <strong class="text-rose-200">Kaula tradition</strong> — the radical, non-dualist, transgressive current at the heart of the Tantric world — emerges as a distinct and self-conscious movement, centred on the direct experience of Shakti-consciousness in the midst of ordinary life.
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <p class="text-rose-300 text-xs font-semibold tracking-wider uppercase mb-1">c. 700–1000 CE</p>
+          <p class="text-rose-100/80 text-sm leading-relaxed">
+            <strong class="text-rose-200">The Golden Age.</strong> The great flowering of Tantric traditions across the Indian subcontinent. <strong class="text-rose-200">Kashmir</strong> becomes the supreme intellectual centre of Tantric philosophy, producing a brilliant lineage of philosopher-practitioners culminating in <strong class="text-rose-200">Abhinavagupta</strong> (c. 950–1016 CE), whose Tantrāloka synthesises the entirety of Kashmir Shaivism. Buddhist Tantra is transmitted to Tibet through pivotal figures: <strong class="text-rose-200">Padmasambhava</strong> (8th century) establishes the Vajrayana in Tibet, and later <strong class="text-rose-200">Marpa the Translator</strong> returns from India with the Kagyü teachings, establishing the Tibetan Buddhist Tantric lineages.
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <p class="text-rose-300 text-xs font-semibold tracking-wider uppercase mb-1">c. 1000–1200 CE</p>
+          <p class="text-rose-100/80 text-sm leading-relaxed">
+            <strong class="text-rose-200">Expansion and Diffusion.</strong> Major Tantric texts are composed, including the Kularnava Tantra and the great commentarial literature of Kashmir Shaivism. The <strong class="text-rose-200">Tamil Siddha tradition</strong> (the Siddhar movement) flourishes in South India, blending Shaiva Tantra with alchemical and yogic knowledge. Tantric traditions travel the maritime routes to <strong class="text-rose-200">Southeast Asia</strong> — Java receives both Hindu and Buddhist Tantra, as evidenced by the great monument of <strong class="text-rose-200">Borobudur</strong> (c. 800 CE) and the Hindu-Buddhist temples of the Prambanan complex.
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <p class="text-rose-300 text-xs font-semibold tracking-wider uppercase mb-1">13th–16th Century CE</p>
+          <p class="text-rose-100/80 text-sm leading-relaxed">
+            <strong class="text-rose-200">Disruption and Survival.</strong> Islamic conquests profoundly disrupt North Indian Tantric institutions — temples are destroyed, manuscripts dispersed, and lineages broken. The living traditions survive most fully in <strong class="text-rose-200">Kashmir, Bengal, South India, Nepal</strong>, and — crucially — <strong class="text-rose-200">Tibet</strong>, where the Vajrayana traditions continue to flourish under royal patronage. In some North Indian centres, Tantric worship paradoxically continues under Mughal patronage, as certain Mughal nobles were attracted to Tantric astrology and occult practice.
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <p class="text-rose-300 text-xs font-semibold tracking-wider uppercase mb-1">19th Century CE</p>
+          <p class="text-rose-100/80 text-sm leading-relaxed">
+            <strong class="text-rose-200">Western Discovery.</strong> Serious Western engagement with Tantra begins. The pioneering scholar <strong class="text-rose-200">John Woodroffe</strong> (writing under the pseudonym Arthur Avalon) publishes the first rigorous Western translations and studies of Tantric texts, including <em>Shakti and Shākta</em> (1918) and the multi-volume Tantric Texts series. Woodroffe's work — though now superseded in many respects — was extraordinary in its time, demonstrating to a sceptical Western audience that the Tantric tradition was philosophically sophisticated and deserving of serious scholarly attention.
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <p class="text-rose-300 text-xs font-semibold tracking-wider uppercase mb-1">20th Century CE</p>
+          <p class="text-rose-100/80 text-sm leading-relaxed">
+            <strong class="text-rose-200">Scholarship and Misappropriation.</strong> Major scholars bring new analytical rigour to the study of Tantra: <strong class="text-rose-200">Mircea Eliade</strong> examines yoga and Tantra in a comparative religious framework, <strong class="text-rose-200">Heinrich Zimmer</strong> illuminates the mythological dimensions, and <strong class="text-rose-200">Agehananda Bharati</strong> (a practising Tantric himself) provides the first insider account in <em>The Tantric Tradition</em> (1965). Simultaneously, the Western "Neo-Tantra" movement — detached from lineage, language, and authentic textual grounding — appropriates Tantric terminology for a primarily sexual and therapeutic context bearing no genuine resemblance to the original tradition.
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <p class="text-rose-300 text-xs font-semibold tracking-wider uppercase mb-1">Contemporary</p>
+          <p class="text-rose-100/80 text-sm leading-relaxed">
+            <strong class="text-rose-200">Revival and Recovery.</strong> Academic Tantric Studies is established as a rigorous philological and historical discipline, led by scholars such as <strong class="text-rose-200">Alexis Sanderson</strong> (whose Oxford research group produced definitive studies of Kashmir Shaivism and the Kaula tradition), <strong class="text-rose-200">David Gordon White</strong>, and <strong class="text-rose-200">Somdev Vasudeva</strong>. Critical digital editions of Tantric manuscripts are being prepared from collections in Nepal, India, and Europe. Living Tantric traditions continue in India, Nepal, and Tibet, preserved by initiated lineage holders who maintain the unbroken transmission from teacher to student.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 4: CORE PRACTICES -->
+    <section class="space-y-6">
+      <h2 class="font-cinzel text-2xl text-rose-300 text-center tracking-wide">Core Practices</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+
+        <div class="practice-card space-y-3">
+          <div class="flex items-center gap-3">
+            <span class="text-2xl">🕉️</span>
+            <h3 class="font-cinzel text-sm text-rose-200">Mantra Japa</h3>
+          </div>
+          <p class="text-rose-100/70 text-sm leading-relaxed">
+            The repetition (<em>japa</em>) of sacred syllables and formulas received through formal initiation from a qualified <em>guru</em>. The teacher transmits the <em>bija</em> (seed) mantra — a concentrated syllable regarded as the sound-body of a specific deity — along with the proper intonation, rhythm, and mental attitude required for its efficacy. Japa may be performed aloud (<em>vachika</em>), as a whisper (<em>upamshu</em>), or purely mentally (<em>manasika</em>) — the last being regarded as the most powerful. Mantra is understood not merely as a verbal formula but as a direct vibrational form of the divine consciousness it invokes.
+          </p>
+        </div>
+
+        <div class="practice-card space-y-3">
+          <div class="flex items-center gap-3">
+            <span class="text-2xl">🔷</span>
+            <h3 class="font-cinzel text-sm text-rose-200">Yantra Worship</h3>
+          </div>
+          <p class="text-rose-100/70 text-sm leading-relaxed">
+            The visual and geometric equivalent of mantra — sacred diagrams understood as the spatial bodies of deities and cosmic principles. The supreme yantra is the <strong class="text-rose-200">Sri Yantra</strong> (or Sri Chakra), a complexly interlocking pattern of nine triangles — four pointing upward (Shiva) and five pointing downward (Shakti) — generating 43 smaller triangles, enclosed in concentric circles and a square with four gates. It represents both the cosmos and the body of the goddess Lalita Tripura Sundari. Ritual installation and worship of a yantra involves its consecration as a living presence, followed by daily offerings, mantra recitation, and meditative absorption into its geometry.
+          </p>
+        </div>
+
+        <div class="practice-card space-y-3">
+          <div class="flex items-center gap-3">
+            <span class="text-2xl">🌀</span>
+            <h3 class="font-cinzel text-sm text-rose-200">Kundalini Awakening</h3>
+          </div>
+          <p class="text-rose-100/70 text-sm leading-relaxed">
+            The systematic awakening and raising of <em>kundalini-shakti</em> — the dormant cosmic energy coiled at the base of the spine in the <em>Muladhara</em> chakra — through the central channel (<em>Sushumna nadi</em>) to the crown centre (<em>Sahasrara</em>). This is the central somatic and experiential event of Tantric practice. The process requires the skilled guidance of a qualified guru, as the premature or improper arousal of kundalini can produce intense and destabilising experiences. The ultimate goal is the conscious union of the ascending Shakti-energy with the pure awareness of Shiva at the crown — the experiential realisation of non-dual consciousness that constitutes liberation.
+          </p>
+        </div>
+
+        <div class="practice-card space-y-3">
+          <div class="flex items-center gap-3">
+            <span class="text-2xl">🙏</span>
+            <h3 class="font-cinzel text-sm text-rose-200">Puja</h3>
+          </div>
+          <p class="text-rose-100/70 text-sm leading-relaxed">
+            Ritual worship as a complete Tantric practice in itself. In Tantric <em>puja</em>, the practitioner first purifies the body, mind, and ritual space through mantra and gesture, then mentally or physically invites the deity into the ritual image or yantra (<em>avahana</em>), and proceeds to honour the divine presence with the sixteen-fold (<em>shodashopachara</em>) offering of seat, water, flowers, incense, lamp, food, and so on. Crucially, the Tantric practitioner is simultaneously trained to visualise themselves as identical in nature with the deity being worshipped — the outer act of offering and the inner recognition of non-duality are inseparable in authentic Tantric puja.
+          </p>
+        </div>
+
+        <div class="practice-card space-y-3">
+          <div class="flex items-center gap-3">
+            <span class="text-2xl">🧘</span>
+            <h3 class="font-cinzel text-sm text-rose-200">Chakra Dhyana</h3>
+          </div>
+          <p class="text-rose-100/70 text-sm leading-relaxed">
+            Meditative contemplation (<em>dhyana</em>) focused systematically on each of the subtle-body energy centres. Each chakra is associated with a specific deity, colour, geometric form (<em>yantra</em>), seed syllable (<em>bija mantra</em>), element, and quality of consciousness. Chakra dhyana involves vivid visualisation of these associated forms at each centre, combined with mantra repetition and breath awareness, proceeding in an ascending sequence from the <em>Muladhara</em> to the <em>Sahasrara</em>. This practice serves both the systematic purification of each energetic level and the gradual awakening of kundalini through the chakra system.
+          </p>
+        </div>
+
+        <div class="practice-card space-y-3">
+          <div class="flex items-center gap-3">
+            <span class="text-2xl">🔥</span>
+            <h3 class="font-cinzel text-sm text-rose-200">Homa / Havana</h3>
+          </div>
+          <p class="text-rose-100/70 text-sm leading-relaxed">
+            The fire ritual in which offerings of clarified butter (<em>ghee</em>), grains, herbs, and other consecrated substances are made into the sacred fire (<em>agni</em>). In the Tantric understanding, the fire is the visible mouth of the deity — each offering, accompanied by the appropriate mantra, feeds the divine presence and simultaneously purifies the practitioner and the surrounding environment. Specific <em>homa</em> rituals are performed for particular intentions — health, protection, the completion of a mantra practice, or the pacification of inauspicious influences — and the rite is itself a microcosmic reflection of the cosmic creative fire of consciousness.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="text-center mt-4">
+      <a href="/eastern-esotericism" class="text-rose-400/60 hover:text-rose-300 text-sm transition-colors">← Eastern Esoteric Traditions</a>
+    </div>
+
+  </div><!-- end content wrapper -->
+
+  <footer class="relative z-10 text-center py-8 text-rose-400/40 text-xs mt-8">
+    <p class="italic">"By means of the Tantra the wise man becomes Shiva." — Kularnava Tantra</p>
+    <p class="mt-2">Esoteric Wisdom · Built with ✨ in Rust</p>
+    <p class="mt-2"><a href="/home" class="hover:text-rose-300 transition-colors">← Back to Portal</a></p>
+  </footer>
+
+  <script>
+  const sf = document.getElementById('starfield');
+  for (let i = 0; i < 200; i++) {
+    const s = document.createElement('div');
+    s.className = 'star';
+    s.style.left = Math.random() * 100 + '%';
+    s.style.top = Math.random() * 100 + '%';
+    s.style.animationDelay = Math.random() * 3 + 's';
+    s.style.animationDuration = (2 + Math.random() * 3) + 's';
+    sf.appendChild(s);
+  }
+</script>
+
+</body>
+</html>

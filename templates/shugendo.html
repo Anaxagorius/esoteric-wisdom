@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shugendō — Esoteric Wisdom</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Crimson Text', serif; }
+    .font-cinzel { font-family: 'Cinzel', serif; }
+    .aurora-text {
+      background: linear-gradient(135deg, #86efac, #4ade80, #16a34a, #bbf7d0, #86efac);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    #starfield { position: fixed; inset: 0; pointer-events: none; z-index: 0; }
+    .star {
+      position: absolute;
+      width: 2px; height: 2px;
+      background: #fff;
+      border-radius: 50%;
+      animation: twinkle 3s infinite alternate;
+    }
+    @keyframes twinkle {
+      0% { opacity: 0.1; transform: scale(1); }
+      100% { opacity: 0.9; transform: scale(1.4); }
+    }
+    .shugendo-card {
+      background: rgba(0,30,0,0.55);
+      border: 1px solid rgba(74,222,128,0.3);
+      border-radius: 0.75rem;
+      padding: 1.5rem;
+      backdrop-filter: blur(6px);
+      transition: border-color 0.3s, transform 0.3s;
+    }
+    .shugendo-card:hover {
+      border-color: rgba(74,222,128,0.65);
+      transform: translateY(-2px);
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -1.3rem;
+      top: 0.45rem;
+      width: 0.6rem;
+      height: 0.6rem;
+      border-radius: 50%;
+      background: #4ade80;
+    }
+    .nav-link { font-size: 0.75rem; }
+  </style>
+</head>
+<body class="text-green-100 min-h-screen" style="background: radial-gradient(ellipse at top, #0a1a00 0%, #142800 25%, #040a00 60%, #000000 100%);">
+
+<div id="starfield"></div>
+
+<nav class="sticky top-0 z-50 flex items-center justify-between px-6 py-3 bg-black/40 backdrop-blur-md border-b border-violet-500/20 flex-wrap gap-y-2">
+    <a href="/home" class="font-cinzel text-amber-300 text-sm tracking-widest shrink-0">✦ Esoteric Wisdom ✦</a>
+    <div class="flex items-center gap-x-3 gap-y-1 text-xs text-violet-200 flex-wrap justify-end">
+      <a href="/astrology" class="nav-link hover:text-amber-300 transition-colors">Astrology</a>
+      <a href="/meditation" class="nav-link hover:text-amber-300 transition-colors">Meditation</a>
+      <a href="/tarot/select" class="nav-link hover:text-amber-300 transition-colors">Tarot</a>
+      <a href="/numerology" class="nav-link hover:text-amber-300 transition-colors">Numerology</a>
+      <a href="/crystals" class="nav-link hover:text-amber-300 transition-colors">Crystals</a>
+      <a href="/runes" class="nav-link hover:text-amber-300 transition-colors">Runes</a>
+      <a href="/shamanism" class="nav-link hover:text-amber-300 transition-colors">Shamanism</a>
+      <a href="/druidism" class="nav-link hover:text-amber-300 transition-colors">Druidism</a>
+      <a href="/akashic-records" class="nav-link hover:text-amber-300 transition-colors">Akashic Records</a>
+      <a href="/wicca" class="nav-link hover:text-amber-300 transition-colors">Wicca</a>
+      <a href="/alchemy" class="nav-link hover:text-amber-300 transition-colors">Alchemy</a>
+      <a href="/gateway-process" class="nav-link hover:text-amber-300 transition-colors">Gateway Process</a>
+      <a href="/remote-viewing" class="nav-link hover:text-amber-300 transition-colors">Remote Viewing</a>
+      <a href="/khasarov-mirror" class="nav-link hover:text-amber-300 transition-colors">Khasarov Mirror</a>
+      <a href="/western-esotericism" class="nav-link hover:text-amber-300 transition-colors">Western Esotericism</a>
+      <a href="/eastern-esotericism" class="nav-link text-amber-300 font-semibold">Eastern Esotericism</a>
+      <a href="/journal/reflections" class="nav-link text-emerald-300 hover:text-emerald-200 transition-colors">✨ Reflections</a>
+      <a href="https://ko-fi.com/esotericwisdom" target="_blank" rel="noopener noreferrer"
+         class="px-3 py-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-white font-semibold hover:scale-105 transition-transform shrink-0">☕ Support</a>
+    </div>
+</nav>
+
+<main class="relative z-10 max-w-6xl mx-auto px-4 py-12">
+
+  <!-- Breadcrumb -->
+  <div class="mb-6 text-sm text-green-400">
+    <a href="/eastern-esotericism" class="hover:text-green-200 transition-colors">← Eastern Esoteric Traditions</a>
+  </div>
+
+  <!-- Hero -->
+  <header class="text-center mb-16">
+    <div class="text-6xl mb-4">⛰️</div>
+    <h1 class="font-cinzel text-5xl md:text-6xl font-bold aurora-text mb-6">Shugendō</h1>
+    <p class="text-lg md:text-xl text-green-200 max-w-3xl mx-auto leading-relaxed italic">
+      The Japanese path of mountain asceticism — a unique syncretic tradition fusing Shinto animism, esoteric Buddhist practice, and Taoist elements in intense embodied practice within sacred mountain landscapes.
+    </p>
+  </header>
+
+  <!-- Section 1: What Is Shugendō? -->
+  <section class="mb-20">
+    <h2 class="font-cinzel text-3xl aurora-text mb-10 text-center">What Is Shugendō?</h2>
+    <div class="grid md:grid-cols-2 gap-10">
+
+      <!-- Column 1 -->
+      <div class="space-y-6 text-green-100 leading-relaxed text-lg">
+        <p>
+          "Shugendō" (修験道) is constructed from three characters, each carrying profound weight: "shu" (修) meaning to practise or cultivate; "gen" (験) meaning supernatural power, verification, or experiential proof; and "dō" (道) meaning way or path. The tradition is often translated as "the path of training and testing" or "the way of cultivating supernatural powers through austerities." Its practitioners are called <em>yamabushi</em> (山伏, "those who lie down in the mountains" or "those who prostrate to the mountains") or <em>shugenja</em>. Shugendō is a uniquely Japanese tradition — a syncretic fusion that developed over centuries, drawing from Shinto reverence for <em>kami</em> (divine spirits present in natural features), esoteric Buddhism (<em>Mikkyō</em>, especially Shingon and Tendai), and Taoist influences. It represents the pre-Meiji religious world of Japan, in which "Shinto" and "Buddhism" were inseparably entwined in what is called <em>shinbutsu-shūgō</em> — "the merging of kami and Buddhas."
+        </p>
+        <p>
+          Mountains are the heart of Shugendō practice — not as metaphors, but as literal sacred spaces that demand physical engagement. The major sacred mountains associated with Shugendō include: Mount Yoshino (Kinpusen) in Nara Prefecture, the oldest Shugendō site associated with En no Gyōja; Mount Ōmine (Ōminesan), the main training mountain, divided into sections for practitioners of different stages; the Dewa Sanzan (Three Mountains of Dewa) in Yamagata Prefecture — Hagurosan, Gassan, and Yudono-san — representing birth, death, and rebirth; Mount Kōya (Kōyasan), Kūkai's sacred centre closely associated with Shingon-influenced Shugendō; and Mount Hiei (Hieizan), the Tendai centre associated with the <em>kaihōgyō</em> circumambulation practices. These are not merely picturesque landscapes — the mountains are understood to be literally the bodies of Buddhist deities and Shinto kami. To enter the mountain is to enter the body of the divine.
+        </p>
+        <p>
+          En no Gyōja (En no Ozunu, c. 634–703 CE) is the legendary founder and patron deity of Shugendō. Historically, he was a real figure — a Nara-period ascetic from a Yamato-province family with ties to the Kamo clan, who practised extreme asceticism in the mountains of the Kinki region for decades. He was said to have bound supernatural creatures (<em>oni</em>) through spiritual power and was exiled to the island of Izu by imperial decree in 699 CE, reportedly due to the jealousy of court officials who feared his growing influence. He was later pardoned and deified after his death. In later Shugendō hagiography, he becomes a semi-divine figure who could fly, was attended by supernatural creatures, and received the mountain dharma directly from the Buddha himself. All Shugendō lineages trace their spiritual authority back to him.
+        </p>
+        <p>
+          Shugendō synthesises multiple religious systems into a unified experiential framework. From Shinto it draws: reverence for <em>kami</em> in natural features (mountains, waterfalls, rocks, trees), the concept of sacred space (<em>shintai</em> and <em>himorogi</em>), ritual purity and pollution (<em>kegare</em>), and the <em>matsuri</em> (festival) cycle. From esoteric Buddhism (Shingon) it takes: the Three Mysteries practice (mantra, mudra, mandala visualisation), the mandala cosmology (particularly the identification of Dainichi Nyorai/Mahavairocana as the cosmic Buddha who is the mountain deity), the <em>goma</em> (fire ritual), and the <em>abhisheka</em>/empowerment structure. From Tendai it derives: the practice of <em>kaihōgyō</em> (circumambulation as walking meditation), Lotus Sutra devotion, and the concept of original enlightenment (<em>hongaku</em>). Taoist elements contribute cosmological frameworks, directional symbolism, and certain ascetic techniques. The result is a tradition that is irreducibly synthetic — not a compromise but a genuine integration.
+        </p>
+      </div>
+
+      <!-- Column 2 -->
+      <div class="space-y-6 text-green-100 leading-relaxed text-lg">
+        <p>
+          The heart of Shugendō practice is the <em>nyūbu</em> ("entering the peak") — intensive seasonal retreats into the sacred mountain space conducted by groups of yamabushi under the leadership of a senior practitioner, the <em>sendatsu</em> ("guide who goes ahead"). These retreats typically last seven to ten days, during which the group traverses the mountain following a prescribed ritual route. Each stage of the route corresponds to a stage of spiritual transformation. Crucially, the group acts ritually as if dead — they have left ordinary society and entered the world of the departed. They undergo ritual death and rebirth in the body of the mountain. Austerities practised during the <em>nyūbu</em> include sleeping rough on the mountain, fasting or strict dietary restriction, exposure to cold and heat, repeated liturgical recitation of <em>rokkon shojo</em> (purification of the six senses), waterfall practice, and fire rituals. The group emerges from the mountain ritually reborn as perfected practitioners with enhanced spiritual powers.
+        </p>
+        <p>
+          The central liturgical cry of Shugendō is "Rokkon shōjō!" (六根清浄) — "purification of the six sense organs." The six senses in this Buddhist-derived framework are: seeing, hearing, smelling, tasting, touching, and mental perception. This purification is the stated goal of all Shugendō austerity. Through physical hardship, ritual practice, and focused intention, the yamabushi purifies each of the sense organs so that they can perceive reality directly, without the distortions of ego-attachment and habitual conditioning. This purification is understood both in terms of religious propriety (becoming worthy to stand before the kami and Buddhas) and in terms of direct spiritual realisation (perceiving one's original nature and the enlightened nature of reality). The physical and the spiritual dimensions are not separated — the cold of the waterfall and the heat of the fire goma are the purifying activity of the kami and Buddhas themselves.
+        </p>
+        <p>
+          In 1868, the new Meiji government issued the <em>shinbutsu bunri</em> (separation edicts) ordering the formal separation of Shinto and Buddhism — institutions that had been merged for over a thousand years. In 1872, Shugendō was explicitly banned as a "superstitious" practice incompatible with the new nationalist ideology that was constructing State Shinto. Yamabushi were forced to either register as Shinto priests or Buddhist monks; many sacred Shugendō sites were stripped of their Buddhist elements by government order. The tradition was driven underground. After the defeat of Japan in 1945 and the restoration of religious freedom under the American occupation constitution, Shugendō revived with remarkable tenacity. Today active Shugendō organisations exist within both Shingon (the Tōzan-ha, based at Daigo-ji temple in Kyoto) and Tendai (the Hōzan-ha, based at Shōgo-in in Kyoto). The Dewa Sanzan in Yamagata Prefecture remains an active Shugendō centre receiving thousands of pilgrims and practitioners annually.
+        </p>
+        <p>
+          Shugendō is frank about its pursuit of supernatural powers (<em>jinzū</em>, 神通) as a demonstration and consequence of spiritual attainment. The yamabushi's acquired capacities include: the ability to enter fire without being burned (the <em>hi-watari</em> fire-walking ceremony, also practised in Shinto contexts), the ability to withstand extreme cold through cold-water austerities, the power to exorcise evil spirits and heal illness, and the ability to perform effective prayer and ritual on behalf of lay petitioners. These powers were not incidental but practically important in traditional Japanese society — yamabushi served as exorcists, healers, rainmakers, and mediators with the spirit world for the communities that surrounded their sacred mountains. The practical, instrumental dimension of Shugendō distinguishes it from more contemplative traditions. It is a tradition of spiritual technology in direct, embodied engagement with the sacred landscape.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 2: Key Practices -->
+  <section class="mb-20">
+    <h2 class="font-cinzel text-3xl aurora-text mb-10 text-center">Key Practices</h2>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <div class="shugendo-card">
+        <div class="text-3xl mb-3">⛰️</div>
+        <h3 class="font-cinzel text-green-300 text-lg mb-2">Nyūbu (Mountain Retreat)</h3>
+        <p class="text-green-200 text-base leading-relaxed">The central practice of Shugendō; a seasonal retreat into the sacred mountain following a prescribed ritual route. The group enters the mountain as if entering the realm of the dead, undergoing ritual death and rebirth across seven to ten days of intensive austerity, mantra recitation, and contemplation. Each stage of the mountain route marks a stage of spiritual transformation, culminating in rebirth as a yamabushi with purified senses and enhanced spiritual power.</p>
+      </div>
+
+      <div class="shugendo-card">
+        <div class="text-3xl mb-3">🔥</div>
+        <h3 class="font-cinzel text-green-300 text-lg mb-2">Goma (Fire Ritual)</h3>
+        <p class="text-green-200 text-base leading-relaxed">The esoteric Buddhist fire ceremony in which ritual offerings are cast into the sacred fire as the mouth of the deity. Mantra is recited continuously throughout the ceremony. The goma purifies both the surrounding environment and the practitioner, burning away spiritual obstacles and impurities. Particularly dramatic versions are performed publicly at major Shugendō festivals and are considered one of the most visually striking expressions of yamabushi practice.</p>
+      </div>
+
+      <div class="shugendo-card">
+        <div class="text-3xl mb-3">💧</div>
+        <h3 class="font-cinzel text-green-300 text-lg mb-2">Takigyō (Waterfall Austerity)</h3>
+        <p class="text-green-200 text-base leading-relaxed">Standing beneath a waterfall, often under cold or winter conditions, as a form of intense purification. The force and cold of the water are understood as the purifying activity of the water kami and the Buddhas, stripping away mental and spiritual impurities. The roar of the water drowns out ordinary thought, creating conditions for direct awareness. Practised by both yamabushi in formal training and by lay devotees who undergo shorter versions of the practice.</p>
+      </div>
+
+      <div class="shugendo-card">
+        <div class="text-3xl mb-3">🐚</div>
+        <h3 class="font-cinzel text-green-300 text-lg mb-2">Horagai (Conch Shell Horn)</h3>
+        <p class="text-green-200 text-base leading-relaxed">The distinctive instrument of the yamabushi; a large conch shell fashioned into a horn. Blown to purify the space, announce the practitioner's presence to the kami, and signal the stages of the ritual during mountain retreats and ceremonies. The deep, resonant sound of the conch horn is understood to have intrinsic spiritual power — it vibrates the atmosphere, awakens the kami, and marks the boundary between sacred and ordinary space. Its sound is one of the most recognisable features of Shugendō.</p>
+      </div>
+
+      <div class="shugendo-card">
+        <div class="text-3xl mb-3">🏃</div>
+        <h3 class="font-cinzel text-green-300 text-lg mb-2">Kaihōgyō (Walking Meditation)</h3>
+        <p class="text-green-200 text-base leading-relaxed">Extended walking meditation practice, most famously undertaken by the Tendai yamabushi of Mount Hiei. The legendary 1,000-day kaihōgyō involves walking between thirty and eighty kilometres daily for 100-day periods over seven years — five years of 100-day periods, followed by one 700-day period and a final 1,000-day period. Practitioners wear white robes (the colour of death) and carry a knife and rope, symbolising their commitment to die rather than fail. Considered one of the most extreme physical-spiritual disciplines in the world.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 3: Historical Timeline -->
+  <section class="mb-20">
+    <h2 class="font-cinzel text-3xl aurora-text mb-10 text-center">Historical Timeline</h2>
+    <div class="max-w-3xl mx-auto">
+      <div class="border-l-2 border-green-700 pl-8 space-y-8">
+
+        <div class="relative timeline-item">
+          <p class="font-cinzel text-green-400 text-sm mb-1">c. 634–703 CE</p>
+          <p class="text-green-100 leading-relaxed">En no Gyōja practises in the mountains of the Kinki region; said to have bound supernatural creatures through spiritual power; exiled to Izu by imperial decree in 699 CE; later pardoned; deified after death; becomes the legendary founder and patron deity of Shugendō, to whom all lineages trace their authority.</p>
+        </div>
+
+        <div class="relative timeline-item">
+          <p class="font-cinzel text-green-400 text-sm mb-1">c. 8th–9th Century CE (Nara and Early Heian Period)</p>
+          <p class="text-green-100 leading-relaxed">Shugendō crystallises as a distinct practice combining mountain asceticism, Shinto reverence for kami, and Buddhist esotericism. The <em>ubasoku</em> (lay Buddhist practitioners) living in the mountains are the direct predecessors of the yamabushi, already engaged in a fusion of spiritual systems in the liminal space of the sacred peaks.</p>
+        </div>
+
+        <div class="relative timeline-item">
+          <p class="font-cinzel text-green-400 text-sm mb-1">c. 9th Century CE</p>
+          <p class="text-green-100 leading-relaxed">Kūkai (Kōbō Daishi, 774–835 CE) founds Shingon Buddhism and the monastery at Mount Kōya; Shingon's esoteric elements — mandala cosmology, Three Mysteries, goma — become central to Shugendō practice. Ryōgen (912–985 CE) develops the Tendai <em>kaihōgyō</em> tradition of marathon walking meditation on Mount Hiei.</p>
+        </div>
+
+        <div class="relative timeline-item">
+          <p class="font-cinzel text-green-400 text-sm mb-1">c. 11th–12th Century CE (Late Heian Period)</p>
+          <p class="text-green-100 leading-relaxed">Shugendō reaches full institutional development. The major schools are established around sacred mountain complexes. Kinpusen-ji at Mount Yoshino and Shōgo-in at Mount Hiei emerge as major centres. Yamabushi serve throughout Japan as exorcists, healers, rainmakers, and mediators between the human community and the spirit world.</p>
+        </div>
+
+        <div class="relative timeline-item">
+          <p class="font-cinzel text-green-400 text-sm mb-1">c. 13th–16th Century CE (Kamakura and Muromachi Periods)</p>
+          <p class="text-green-100 leading-relaxed">Shugendō spreads throughout Japan; local mountain cults are integrated into the broader Shugendō framework. Yamabushi serve as important ritual specialists in both urban and rural contexts. The two main schools — the Tōzan-ha (Shingon-affiliated) and the Hōzan-ha (Tendai-affiliated) — formally differentiate and establish their distinct institutional identities.</p>
+        </div>
+
+        <div class="relative timeline-item">
+          <p class="font-cinzel text-green-400 text-sm mb-1">1868 CE</p>
+          <p class="text-green-100 leading-relaxed">Meiji Restoration; the <em>shinbutsu bunri</em> (separation of Shinto and Buddhism) edicts issued. In 1872, Shugendō is explicitly banned as incompatible with State Shinto ideology. Yamabushi are forced to convert; many sacred sites are stripped of their Buddhist elements. The tradition is driven underground but survives in private transmission.</p>
+        </div>
+
+        <div class="relative timeline-item">
+          <p class="font-cinzel text-green-400 text-sm mb-1">1945 CE</p>
+          <p class="text-green-100 leading-relaxed">Defeat of Japan in World War II; restoration of religious freedom under the American occupation constitution. Shugendō revives with remarkable tenacity. The Tōzan-ha (Shingon) and Hōzan-ha (Tendai) organisations are formally re-established, and the sacred mountain sites are reopened to practitioners.</p>
+        </div>
+
+        <div class="relative timeline-item">
+          <p class="font-cinzel text-green-400 text-sm mb-1">Present</p>
+          <p class="text-green-100 leading-relaxed">Active Shugendō communities flourish at Dewa Sanzan, Mount Ōmine, Mount Kōya, and throughout Japan. Growing international interest draws practitioners from across the world. Academic study has deepened through scholars such as H. Byron Earhart, Paul Swanson, and Gaynor Sekimori. Historical restrictions on women at certain sacred mountains are being revisited in the modern era.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Core Concepts -->
+  <section class="mb-20">
+    <h2 class="font-cinzel text-3xl aurora-text mb-10 text-center">Core Concepts</h2>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <div class="shugendo-card">
+        <div class="text-3xl mb-3">⛰️</div>
+        <h3 class="font-cinzel text-green-300 text-lg mb-2">Satogaeri (Return from the Mountain)</h3>
+        <p class="text-green-200 text-base leading-relaxed">The yamabushi returns from the mountain retreat carrying spiritual power and healing capacity to serve the community. The circuit of departure, transformation in the sacred space, and return to the everyday world mirrors shamanic and hero-journey patterns found worldwide. The mountain is not merely the site of private spiritual development — the yamabushi returns as a servant of the community, bringing the mountain's blessing into the valley.</p>
+      </div>
+
+      <div class="shugendo-card">
+        <div class="text-3xl mb-3">🌿</div>
+        <h3 class="font-cinzel text-green-300 text-lg mb-2">Shinbutsu-shūgō</h3>
+        <p class="text-green-200 text-base leading-relaxed">The merging of kami (Shinto deities) and Buddhas — the theological foundation of pre-Meiji Japanese religion and the conceptual heart of Shugendō. In this framework, the mountain deity is simultaneously a kami and a manifestation of a particular Buddha or bodhisattva. This is not religious confusion but a sophisticated theology in which the two systems are understood as complementary expressions of the same ultimate reality.</p>
+      </div>
+
+      <div class="shugendo-card">
+        <div class="text-3xl mb-3">🔥</div>
+        <h3 class="font-cinzel text-green-300 text-lg mb-2">Rokkon Shōjō</h3>
+        <p class="text-green-200 text-base leading-relaxed">"Purification of the six senses" — the central aspiration and liturgical heart of Shugendō practice. The six senses — seeing, hearing, smelling, tasting, touching, and mental perception — are to be purified through austerity and ritual, so that they may perceive reality directly, without the distortions of ego and habitual conditioning. When this purification is complete, the practitioner is said to stand in the presence of the kami and Buddhas with an undivided heart.</p>
+      </div>
+
+      <div class="shugendo-card">
+        <div class="text-3xl mb-3">💫</div>
+        <h3 class="font-cinzel text-green-300 text-lg mb-2">Mikkyō (Esoteric Buddhism)</h3>
+        <p class="text-green-200 text-base leading-relaxed">The Shingon and Tendai esoteric Buddhist elements that form the Buddhist backbone of Shugendō practice. Mikkyō contributes mandala cosmology, the Three Mysteries (mudra, mantra, and mandala visualisation), the goma fire ritual, and the empowerment (<em>abhisheka</em>) structure. These elements are not superficial borrowings — they provide the Shugendō practitioner with a sophisticated map of the cosmos and a precise technology for engaging it.</p>
+      </div>
+
+      <div class="shugendo-card">
+        <div class="text-3xl mb-3">🗻</div>
+        <h3 class="font-cinzel text-green-300 text-lg mb-2">Dewa Sanzan</h3>
+        <p class="text-green-200 text-base leading-relaxed">The Three Mountains of Dewa in Yamagata Prefecture — Hagurosan (representing birth), Gassan (representing death), and Yudonosan (representing rebirth) — together form the most active Shugendō pilgrimage site in Japan today. The three-mountain pilgrimage represents the full cycle of life, death, and spiritual renewal. Thousands of practitioners and pilgrims visit annually, making it the living heart of contemporary Shugendō.</p>
+      </div>
+
+      <div class="shugendo-card">
+        <div class="text-3xl mb-3">🐚</div>
+        <h3 class="font-cinzel text-green-300 text-lg mb-2">Sendatsu</h3>
+        <p class="text-green-200 text-base leading-relaxed">The senior yamabushi who leads the <em>nyūbu</em> mountain retreat — the "guide who goes ahead." The sendatsu is responsible for the safety, ritual correctness, and spiritual welfare of the entire group. They carry the living transmission of Shugendō knowledge, knowing the precise ritual requirements of each stage of the mountain route and the spiritual significance of each austerity. The relationship between sendatsu and student is the primary vehicle of Shugendō transmission.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer Quote -->
+  <footer class="text-center py-12 border-t border-green-900/40">
+    <blockquote class="max-w-2xl mx-auto">
+      <p class="text-xl italic text-green-300 mb-3">"Rokkon shōjō! — May the six senses be pure!"</p>
+      <cite class="text-green-500 text-sm">— Traditional Shugendō invocation</cite>
+    </blockquote>
+    <p class="mt-8 text-green-700 text-xs">© Esoteric Wisdom — Eastern Esoteric Traditions</p>
+  </footer>
+
+</main>
+
+<script>
+  const sf = document.getElementById('starfield');
+  for (let i = 0; i < 200; i++) {
+    const s = document.createElement('div');
+    s.className = 'star';
+    s.style.left = Math.random() * 100 + '%';
+    s.style.top = Math.random() * 100 + '%';
+    s.style.animationDelay = Math.random() * 3 + 's';
+    s.style.animationDuration = (2 + Math.random() * 3) + 's';
+    sf.appendChild(s);
+  }
+</script>
+
+</body>
+</html>
