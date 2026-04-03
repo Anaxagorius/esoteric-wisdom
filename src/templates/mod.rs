@@ -81,3 +81,7 @@ pub struct GuestJournalTemplate {
 #[derive(Template)]
 #[template(path = "numerology.html")]
 pub struct NumerologyTemplate;
+
+#[derive(Template)]
+#[template(path = "crystals.html")]
+pub struct CrystalsTemplate;
