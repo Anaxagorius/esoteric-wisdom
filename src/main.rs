@@ -10,6 +10,7 @@ mod crystals;
 mod runes;
 mod shamanism;
 mod druidism;
+mod akashic_records;
 mod templates;
 
 use axum::{Router, routing::get, extract::State, response::IntoResponse, http::{StatusCode, header}};
@@ -41,6 +42,7 @@ async fn main() -> anyhow::Result<()> {
         .nest("/runes", runes::routes())
         .nest("/shamanism", shamanism::routes())
         .nest("/druidism", druidism::routes())
+        .nest("/akashic-records", akashic_records::routes())
         .layer(CookieManagerLayer::new())
         .with_state(state);
 
