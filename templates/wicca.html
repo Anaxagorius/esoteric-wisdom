@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Wicca — Esoteric Wisdom</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+    <style>
+      body {
+        background: radial-gradient(ellipse at top, #2e1065 0%, #1a0836 25%, #020617 60%, #000000 100%);
+        font-family: 'Raleway', sans-serif;
+      }
+      .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+      @keyframes twinkle { 0%,100% { opacity: 0.2; } 50% { opacity: 1; } }
+      .star { position: absolute; border-radius: 50%; background: white; animation: twinkle var(--dur,3s) ease-in-out infinite; animation-delay: var(--delay,0s); }
+      @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+      .floating { animation: float 5s ease-in-out infinite; }
+      @keyframes shimmer {
+        0% { background-position: -200% center; }
+        100% { background-position: 200% center; }
+      }
+      @keyframes moon-glow {
+        0%, 100% { box-shadow: 0 0 20px rgba(216,180,254,0.25), 0 0 40px rgba(216,180,254,0.1); }
+        50% { box-shadow: 0 0 40px rgba(216,180,254,0.5), 0 0 80px rgba(216,180,254,0.25); }
+      }
+      .aurora-text {
+        background: linear-gradient(90deg, #c084fc, #f0abfc, #e879f9, #a855f7, #c084fc);
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        animation: shimmer 5s linear infinite;
+      }
+      .wicca-card {
+        transition: all 0.35s ease;
+        cursor: default;
+      }
+      .wicca-card:hover {
+        transform: translateY(-7px) scale(1.01);
+        box-shadow: 0 24px 64px rgba(192,132,252,0.2);
+        border-color: rgba(192,132,252,0.6) !important;
+      }
+      .glow-card { animation: moon-glow 4s ease-in-out infinite; }
+      .sabbat-card {
+        transition: all 0.3s ease;
+      }
+      .sabbat-card:hover {
+        transform: translateY(-5px);
+        border-color: rgba(240,171,252,0.6) !important;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen text-white px-4 py-8">
+    <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+
+    <div class="relative z-10 max-w-6xl mx-auto space-y-10">
+
+      <!-- Navigation -->
+      <nav class="flex items-center justify-between bg-black/30 backdrop-blur-md rounded-2xl px-6 py-3 border border-purple-900/30 flex-wrap gap-3">
+        <a href="/home" class="font-cinzel text-amber-300 text-sm tracking-widest">✦ Esoteric Wisdom</a>
+        <div class="flex gap-4 text-xs text-violet-200 flex-wrap justify-end">
+          <a href="/astrology" class="hover:text-amber-300 transition-colors">Astrology</a>
+          <a href="/meditation" class="hover:text-amber-300 transition-colors">Meditation</a>
+          <a href="/tarot/select" class="hover:text-amber-300 transition-colors">Tarot</a>
+          <a href="/numerology" class="hover:text-amber-300 transition-colors">Numerology</a>
+          <a href="/crystals" class="hover:text-amber-300 transition-colors">Crystals</a>
+          <a href="/runes" class="hover:text-amber-300 transition-colors">Runes</a>
+          <a href="/shamanism" class="hover:text-amber-300 transition-colors">Shamanism</a>
+          <a href="/druidism" class="hover:text-amber-300 transition-colors">Druidism</a>
+          <a href="/akashic-records" class="hover:text-amber-300 transition-colors">Akashic Records</a>
+          <a href="/wicca" class="text-purple-300 font-semibold">Wicca</a>
+          <a href="https://ko-fi.com/esotericwisdom" target="_blank" rel="noopener noreferrer" class="px-3 py-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-white font-semibold hover:scale-105 transition-transform">☕ Support</a>
+        </div>
+      </nav>
+
+      <!-- Hero -->
+      <header class="text-center py-6">
+        <div class="floating text-7xl mb-4">🌙</div>
+        <h1 class="font-cinzel text-4xl md:text-5xl font-bold mb-3">
+          <span class="aurora-text">Wicca</span>
+        </h1>
+        <p class="text-purple-100/80 text-lg max-w-2xl mx-auto leading-relaxed">
+          A modern pagan religion rooted in ancient mystery — honouring the Goddess and the God, working with the cycles of nature, and weaving magic through ritual, intention, and reverence for all living things.
+        </p>
+      </header>
+
+      <!-- What Is Wicca -->
+      <section class="wicca-card glow-card bg-black/40 backdrop-blur-sm border border-purple-800/40 rounded-2xl p-8">
+        <h2 class="font-cinzel text-2xl text-purple-300 mb-5">🌕 What Is Wicca?</h2>
+        <div class="grid md:grid-cols-2 gap-6 text-purple-100/80 leading-relaxed text-sm">
+          <p>
+            Wicca is a contemporary pagan, witchcraft religion that venerates nature as sacred and divine. Practitioners — called Wiccans or Witches — recognise the universe as alive with spiritual energy and seek to live in harmony with its rhythms. At its heart, Wicca is both a spiritual path and a magical practice.
+          </p>
+          <p>
+            Central to the tradition is the worship of a dual deity: the <span class="text-fuchsia-300 font-semibold">Triple Goddess</span> (Maiden, Mother, and Crone) who governs the Moon, fertility, and the mysteries of life and death, and the <span class="text-fuchsia-300 font-semibold">Horned God</span> who embodies the Sun, nature, hunting, and the cycle of the seasons. Together they represent the balance of all opposing forces.
+          </p>
+          <p>
+            Wicca honours the Earth as a living being and marks time by the turning of the <em>Wheel of the Year</em> — eight seasonal festivals called Sabbats that trace the story of the Goddess and God through birth, growth, union, harvest, and death. The lunar cycles (Esbats) are also sacred, with the full moon a time for heightened magical work and communion with the Goddess.
+          </p>
+          <p>
+            Magic in Wicca is understood as the art of focusing will and intention to align with natural forces. It is not about supernatural power over others but about co-creating with the universe. The guiding ethical principle is the <span class="text-fuchsia-300 font-semibold">Wiccan Rede</span>: <em>"An it harm none, do what ye will"</em> — a call to personal freedom tempered by responsibility.
+          </p>
+        </div>
+      </section>
+
+      <!-- History and Origins -->
+      <section class="wicca-card bg-black/40 backdrop-blur-sm border border-purple-800/40 rounded-2xl p-8">
+        <h2 class="font-cinzel text-2xl text-purple-300 mb-5">📜 History &amp; Origins</h2>
+        <div class="space-y-5 text-purple-100/80 text-sm leading-relaxed">
+          <div class="border-l-2 border-fuchsia-600/50 pl-4">
+            <h3 class="text-fuchsia-300 font-semibold mb-1">Gerald Gardner and the Birth of Modern Wicca (1950s)</h3>
+            <p>Wicca as a religion was publicly introduced by <strong class="text-purple-200">Gerald Brosseau Gardner</strong> (1884–1964), a retired British civil servant and amateur folklorist. In 1954 he published <em>Witchcraft Today</em>, claiming that Wicca was a survival of pre-Christian European witchcraft passed down in secret covens. Gardner worked with occultist Doreen Valiente to refine and codify its rituals, drawing on ceremonial magic, Freemasonry, Aleister Crowley's Thelema, and fragments of folk tradition. Whether his claims of a continuous lineage are historically accurate remains debated by scholars, but Gardner's synthesis became the foundation of what is today called <em>Gardnerian Wicca</em>.</p>
+          </div>
+          <div class="border-l-2 border-fuchsia-600/50 pl-4">
+            <h3 class="text-fuchsia-300 font-semibold mb-1">Aleister Crowley and Occult Influence</h3>
+            <p>Gardner was directly influenced by the ceremonial magician <strong class="text-purple-200">Aleister Crowley</strong>, and elements of Crowley's <em>Book of the Law</em> and magical rituals found their way into early Wiccan texts. The phrase "Do what thou wilt shall be the whole of the Law" is a clear ancestor of the Wiccan Rede. The Hermetic Order of the Golden Dawn's ritual framework also left deep marks on Wiccan circle-casting and elemental symbolism.</p>
+          </div>
+          <div class="border-l-2 border-fuchsia-600/50 pl-4">
+            <h3 class="text-fuchsia-300 font-semibold mb-1">Doreen Valiente — The Mother of Modern Wicca</h3>
+            <p><strong class="text-purple-200">Doreen Valiente</strong> (1922–1999) is widely considered the most important figure in shaping Wicca's spiritual character. Initiated by Gardner in 1953, she rewrote much of the early liturgy to give it genuine poetic beauty, composing the beloved <em>Charge of the Goddess</em> and other foundational texts still used today. She later broke with Gardner and wrote influential books including <em>Witchcraft for Tomorrow</em>, establishing herself as an independent voice for the Craft.</p>
+          </div>
+          <div class="border-l-2 border-fuchsia-600/50 pl-4">
+            <h3 class="text-fuchsia-300 font-semibold mb-1">Alex Sanders and Alexandrian Wicca (1960s)</h3>
+            <p><strong class="text-purple-200">Alex Sanders</strong> (1926–1988), who called himself "King of the Witches," founded <em>Alexandrian Wicca</em> in the 1960s alongside his wife Maxine. Drawing heavily from Gardnerian Wicca but incorporating more ceremonial magic, Kabbalah, and angelic invocations, Alexandrian covens proliferated rapidly through Britain and beyond. The two traditions — Gardnerian and Alexandrian — are together known as <em>British Traditional Wicca (BTW)</em> and remain the most initiatory, lineage-based forms of the religion.</p>
+          </div>
+          <div class="border-l-2 border-fuchsia-600/50 pl-4">
+            <h3 class="text-fuchsia-300 font-semibold mb-1">Spread to North America and Dianic Wicca (1970s–80s)</h3>
+            <p>Wicca crossed the Atlantic in the late 1960s and flourished in the US counterculture of the 1970s. <strong class="text-purple-200">Raymond Buckland</strong> introduced Gardnerian Wicca to America in 1964 and later developed his own tradition, Seax-Wica. The feminist spirituality movement gave rise to <em>Dianic Wicca</em>, championed by <strong class="text-purple-200">Zsuzsanna Budapest</strong> and <strong class="text-purple-200">Starhawk</strong>. Dianic covens focus exclusively on the Goddess and are frequently women-only spaces; Starhawk's 1979 book <em>The Spiral Dance</em> became a landmark text of feminist witchcraft and eco-spirituality.</p>
+          </div>
+          <div class="border-l-2 border-fuchsia-600/50 pl-4">
+            <h3 class="text-fuchsia-300 font-semibold mb-1">Eclectic Wicca and the Internet Age (1990s–present)</h3>
+            <p>The publication of Scott Cunningham's <em>Wicca: A Guide for the Solitary Practitioner</em> (1988) marked a turning point: for the first time, a widely-read book presented Wicca as something a person could practice alone without coven initiation. This sparked an explosion of <em>eclectic Wicca</em> in which practitioners freely blend Wiccan principles with other traditions — Celtic, Norse, Egyptian, Hoodoo, and more. The internet accelerated this further, connecting solitary practitioners across the globe and spawning countless online covens and digital communities.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Core Beliefs and Ethics -->
+      <section>
+        <h2 class="font-cinzel text-2xl text-purple-300 mb-5">⚖️ Core Beliefs &amp; Ethics</h2>
+        <div class="grid md:grid-cols-3 gap-5">
+          <div class="wicca-card bg-black/40 backdrop-blur-sm border border-purple-800/40 rounded-2xl p-6">
+            <div class="text-3xl mb-3">☯️</div>
+            <h3 class="font-cinzel text-base text-fuchsia-300 mb-2">The Threefold Law</h3>
+            <p class="text-purple-100/75 text-sm leading-relaxed">Whatever energy a person sends out into the world — positive or negative — returns to them threefold. This is both a spiritual principle and a practical reminder that magic comes with consequence.</p>
+          </div>
+          <div class="wicca-card bg-black/40 backdrop-blur-sm border border-purple-800/40 rounded-2xl p-6">
+            <div class="text-3xl mb-3">📜</div>
+            <h3 class="font-cinzel text-base text-fuchsia-300 mb-2">The Wiccan Rede</h3>
+            <p class="text-purple-100/75 text-sm leading-relaxed">"An it harm none, do what ye will." This deceptively simple statement is the ethical backbone of Wicca. It grants personal freedom while demanding deep consideration of how one's actions affect all beings — human, animal, plant, and spirit.</p>
+          </div>
+          <div class="wicca-card bg-black/40 backdrop-blur-sm border border-purple-800/40 rounded-2xl p-6">
+            <div class="text-3xl mb-3">🌿</div>
+            <h3 class="font-cinzel text-base text-fuchsia-300 mb-2">Reverence for Nature</h3>
+            <p class="text-purple-100/75 text-sm leading-relaxed">Nature is not merely a backdrop to human life — it is sacred in itself. The Earth, seasons, plants, animals, moon, and sun are all manifestations of divine power. Ecological awareness and environmental respect are therefore spiritual duties for many Wiccans.</p>
+          </div>
+          <div class="wicca-card bg-black/40 backdrop-blur-sm border border-purple-800/40 rounded-2xl p-6">
+            <div class="text-3xl mb-3">🌓</div>
+            <h3 class="font-cinzel text-base text-fuchsia-300 mb-2">Polarity</h3>
+            <p class="text-purple-100/75 text-sm leading-relaxed">The universe operates through the interplay of complementary forces — Goddess and God, dark and light, ebb and flow. Magic is often understood as directing and balancing these polarities. Most Wiccan traditions celebrate both a female and a male divine principle, though many traditions today embrace a more fluid understanding of divinity.</p>
+          </div>
+          <div class="wicca-card bg-black/40 backdrop-blur-sm border border-purple-800/40 rounded-2xl p-6">
+            <div class="text-3xl mb-3">🔄</div>
+            <h3 class="font-cinzel text-base text-fuchsia-300 mb-2">Reincarnation</h3>
+            <p class="text-purple-100/75 text-sm leading-relaxed">Wicca generally holds that the soul is immortal and journeys through multiple lifetimes, resting in the "Summerland" — a peaceful afterlife realm — between incarnations. Death is not an ending but a turning of the wheel, a necessary part of the cycle of life.</p>
+          </div>
+          <div class="wicca-card bg-black/40 backdrop-blur-sm border border-purple-800/40 rounded-2xl p-6">
+            <div class="text-3xl mb-3">✨</div>
+            <h3 class="font-cinzel text-base text-fuchsia-300 mb-2">Magic &amp; Intention</h3>
+            <p class="text-purple-100/75 text-sm leading-relaxed">Magic is the art and science of causing change in accordance with will. Wiccans work magic through ritual, visualisation, herbalism, crystals, candles, charms, and invocation. Intent is everything — magic is not a shortcut but a focused co-creation with natural and divine forces.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- The Wheel of the Year – Sabbats -->
+      <section class="wicca-card bg-black/40 backdrop-blur-sm border border-purple-800/40 rounded-2xl p-8">
+        <h2 class="font-cinzel text-2xl text-purple-300 mb-2">🌀 The Wheel of the Year</h2>
+        <p class="text-purple-100/70 text-sm mb-6 leading-relaxed">The eight Sabbats mark the solar year and tell the mythic story of the Goddess and God through the turning seasons. Four are solar cross-quarter days (solstices and equinoxes) and four are fire festivals between them.</p>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div class="sabbat-card bg-indigo-950/50 border border-indigo-700/40 rounded-xl p-4">
+            <div class="text-2xl mb-2">🕯️</div>
+            <h3 class="font-cinzel text-xs text-indigo-300 mb-1">Yule</h3>
+            <p class="text-indigo-100/60 text-xs leading-relaxed">Winter Solstice (≈ Dec 21). The rebirth of the Sun God. The longest night yields to the return of the light. Celebration of hope, hearth, and the promise of spring.</p>
+          </div>
+          <div class="sabbat-card bg-purple-950/50 border border-purple-700/40 rounded-xl p-4">
+            <div class="text-2xl mb-2">🌱</div>
+            <h3 class="font-cinzel text-xs text-purple-300 mb-1">Imbolc</h3>
+            <p class="text-purple-100/60 text-xs leading-relaxed">Feb 1–2. Sacred to Brigid — goddess of fire, healing, and poetry. First stirrings of spring, purification, and new beginnings. Candles are lit to welcome the Maiden.</p>
+          </div>
+          <div class="sabbat-card bg-emerald-950/50 border border-emerald-700/40 rounded-xl p-4">
+            <div class="text-2xl mb-2">🌸</div>
+            <h3 class="font-cinzel text-xs text-emerald-300 mb-1">Ostara</h3>
+            <p class="text-emerald-100/60 text-xs leading-relaxed">Spring Equinox (≈ Mar 21). Equal day and night; balance restored. Fertility, renewal, and the awakening earth. Eggs and hares as symbols of new life.</p>
+          </div>
+          <div class="sabbat-card bg-rose-950/50 border border-rose-700/40 rounded-xl p-4">
+            <div class="text-2xl mb-2">🔥</div>
+            <h3 class="font-cinzel text-xs text-rose-300 mb-1">Beltane</h3>
+            <p class="text-rose-100/60 text-xs leading-relaxed">May 1. Fire festival celebrating the sacred union of Goddess and God. Maypoles, bonfires, and flowers. The height of spring's power, fertility, and erotic energy.</p>
+          </div>
+          <div class="sabbat-card bg-amber-950/50 border border-amber-700/40 rounded-xl p-4">
+            <div class="text-2xl mb-2">☀️</div>
+            <h3 class="font-cinzel text-xs text-amber-300 mb-1">Litha</h3>
+            <p class="text-amber-100/60 text-xs leading-relaxed">Summer Solstice (≈ Jun 21). The Sun God at the height of his power. Midsummer bonfires, fairy magic, and the peak of light. From here the days begin to shorten.</p>
+          </div>
+          <div class="sabbat-card bg-orange-950/50 border border-orange-700/40 rounded-xl p-4">
+            <div class="text-2xl mb-2">🌾</div>
+            <h3 class="font-cinzel text-xs text-orange-300 mb-1">Lughnasadh</h3>
+            <p class="text-orange-100/60 text-xs leading-relaxed">Aug 1. First harvest festival. Named for the god Lugh. Bread baked from the first grain, gratitude for abundance, and acknowledgement of sacrifice and impermanence.</p>
+          </div>
+          <div class="sabbat-card bg-yellow-950/50 border border-yellow-700/40 rounded-xl p-4">
+            <div class="text-2xl mb-2">🍂</div>
+            <h3 class="font-cinzel text-xs text-yellow-300 mb-1">Mabon</h3>
+            <p class="text-yellow-100/60 text-xs leading-relaxed">Autumn Equinox (≈ Sep 21). The second harvest and a time of balance, reflection, and giving thanks. The God begins his descent toward the Underworld.</p>
+          </div>
+          <div class="sabbat-card bg-gray-900/60 border border-gray-600/40 rounded-xl p-4">
+            <div class="text-2xl mb-2">🎃</div>
+            <h3 class="font-cinzel text-xs text-gray-300 mb-1">Samhain</h3>
+            <p class="text-gray-100/60 text-xs leading-relaxed">Oct 31. The Witch's New Year and most sacred Sabbat. The veil between worlds is thinnest. Ancestors are honoured, the God dies and journeys to the Summerland, and the Crone rules the dark half of the year.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tools and Sacred Objects -->
+      <section>
+        <h2 class="font-cinzel text-2xl text-purple-300 mb-5">🔮 Sacred Tools &amp; Symbols</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div class="wicca-card bg-black/40 backdrop-blur-sm border border-purple-800/40 rounded-2xl p-5 text-center">
+            <div class="text-4xl mb-3">🗡️</div>
+            <h3 class="font-cinzel text-sm text-fuchsia-300 mb-2">Athame</h3>
+            <p class="text-purple-100/70 text-xs leading-relaxed">A double-edged ritual knife associated with the element of Fire (or Air in some traditions). Used to cast the magic circle, direct energy, and invoke the gods. It is a tool of will and rarely used to cut physical objects.</p>
+          </div>
+          <div class="wicca-card bg-black/40 backdrop-blur-sm border border-purple-800/40 rounded-2xl p-5 text-center">
+            <div class="text-4xl mb-3">🪄</div>
+            <h3 class="font-cinzel text-sm text-fuchsia-300 mb-2">Wand</h3>
+            <p class="text-purple-100/70 text-xs leading-relaxed">Traditionally of wood — hawthorn, elder, oak, or willow — and associated with Fire or Air. The wand is used to invite and direct energy, invite deity, and focus intention during ritual. It is often a deeply personal, hand-crafted tool.</p>
+          </div>
+          <div class="wicca-card bg-black/40 backdrop-blur-sm border border-purple-800/40 rounded-2xl p-5 text-center">
+            <div class="text-4xl mb-3">🥣</div>
+            <h3 class="font-cinzel text-sm text-fuchsia-300 mb-2">Cauldron</h3>
+            <p class="text-purple-100/70 text-xs leading-relaxed">Symbol of the Goddess, the womb, rebirth, and the transformative power of Water. Used for scrying, brewing potions, burning herbs or paper spells, and as the centrepiece of many seasonal rituals. The three-legged iron cauldron is iconic in Wicca.</p>
+          </div>
+          <div class="wicca-card bg-black/40 backdrop-blur-sm border border-purple-800/40 rounded-2xl p-5 text-center">
+            <div class="text-4xl mb-3">🕯️</div>
+            <h3 class="font-cinzel text-sm text-fuchsia-300 mb-2">Candles</h3>
+            <p class="text-purple-100/70 text-xs leading-relaxed">Fire and light are central to Wiccan ritual. Candles represent the element of Fire and the divine light. Colour correspondences are important: white for purity and the Goddess, black for protection and banishing, green for abundance, red for passion and courage, and so on.</p>
+          </div>
+          <div class="wicca-card bg-black/40 backdrop-blur-sm border border-purple-800/40 rounded-2xl p-5 text-center">
+            <div class="text-4xl mb-3">⭐</div>
+            <h3 class="font-cinzel text-sm text-fuchsia-300 mb-2">Pentacle</h3>
+            <p class="text-purple-100/70 text-xs leading-relaxed">A five-pointed star enclosed in a circle. The five points represent Earth, Air, Fire, Water, and Spirit. A fundamental symbol of Wicca representing the balanced elements and the protection of the sacred circle. Also used as an altar tile for grounding energy.</p>
+          </div>
+          <div class="wicca-card bg-black/40 backdrop-blur-sm border border-purple-800/40 rounded-2xl p-5 text-center">
+            <div class="text-4xl mb-3">🍷</div>
+            <h3 class="font-cinzel text-sm text-fuchsia-300 mb-2">Chalice</h3>
+            <p class="text-purple-100/70 text-xs leading-relaxed">The ritual cup, representing the Goddess, Water, and the feminine principle. In the Great Rite ceremony it is paired with the athame to symbolise the sacred union of the God and Goddess. Used to hold wine, water, or mead during ritual.</p>
+          </div>
+          <div class="wicca-card bg-black/40 backdrop-blur-sm border border-purple-800/40 rounded-2xl p-5 text-center">
+            <div class="text-4xl mb-3">🧹</div>
+            <h3 class="font-cinzel text-sm text-fuchsia-300 mb-2">Besom</h3>
+            <p class="text-purple-100/70 text-xs leading-relaxed">The witch's broomstick. Used ritually to sweep the sacred space and cleanse it of negative energies before casting a circle. Also a symbol of hearth, home, and the union of the male and female (the handle and bristles). Traditionally made of ash, birch, and willow.</p>
+          </div>
+          <div class="wicca-card bg-black/40 backdrop-blur-sm border border-purple-800/40 rounded-2xl p-5 text-center">
+            <div class="text-4xl mb-3">📖</div>
+            <h3 class="font-cinzel text-sm text-fuchsia-300 mb-2">Book of Shadows</h3>
+            <p class="text-purple-100/70 text-xs leading-relaxed">A witch's personal magical journal — part grimoire, part diary. It contains spells, rituals, dreams, correspondences, herb and crystal notes, and reflections on one's spiritual path. In Gardnerian Wicca it was traditionally hand-copied and kept secret; today many witches keep digital or shared versions.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Traditions and Denominations -->
+      <section class="wicca-card bg-black/40 backdrop-blur-sm border border-purple-800/40 rounded-2xl p-8">
+        <h2 class="font-cinzel text-2xl text-purple-300 mb-5">🌲 Traditions &amp; Denominations</h2>
+        <div class="space-y-4 text-sm leading-relaxed text-purple-100/80">
+          <div class="grid md:grid-cols-2 gap-4">
+            <div class="bg-purple-950/30 border border-purple-700/30 rounded-xl p-4">
+              <h3 class="text-fuchsia-300 font-semibold mb-2">Gardnerian Wicca</h3>
+              <p>The oldest formal tradition, founded by Gerald Gardner. It is an initiatory, degree-based system passed within coven structures. Its rituals are held largely secret among initiates. Strong emphasis on polarity, the Goddess and God, and formal ritual structure.</p>
+            </div>
+            <div class="bg-purple-950/30 border border-purple-700/30 rounded-xl p-4">
+              <h3 class="text-fuchsia-300 font-semibold mb-2">Alexandrian Wicca</h3>
+              <p>Founded by Alex and Maxine Sanders in the 1960s. Similar to Gardnerian but with more ceremonial magic influence. Also initiation-based and coven-centred. Both Gardnerian and Alexandrian are known as British Traditional Wicca (BTW).</p>
+            </div>
+            <div class="bg-purple-950/30 border border-purple-700/30 rounded-xl p-4">
+              <h3 class="text-fuchsia-300 font-semibold mb-2">Dianic Wicca</h3>
+              <p>A feminist tradition honouring the Goddess alone (particularly Diana). Pioneered by Z. Budapest and Starhawk. Covens are often women-only and focus strongly on female empowerment, healing, and the feminist reclaiming of the witch as a powerful archetype.</p>
+            </div>
+            <div class="bg-purple-950/30 border border-purple-700/30 rounded-xl p-4">
+              <h3 class="text-fuchsia-300 font-semibold mb-2">Eclectic Wicca</h3>
+              <p>The most widely practised form today. Practitioners draw freely from multiple traditions, pantheons, and magical systems. No formal initiation or coven required. Scott Cunningham's writings made this accessible and it is the natural home of solitary practitioners.</p>
+            </div>
+            <div class="bg-purple-950/30 border border-purple-700/30 rounded-xl p-4">
+              <h3 class="text-fuchsia-300 font-semibold mb-2">Celtic Wicca</h3>
+              <p>Draws specifically on Celtic mythology, gods, and symbolism — Brigid, the Morrigan, Cernunnos — and incorporates practices from Celtic druidism, Ogham divination, and the sacred significance of trees, wells, and the three realms of Land, Sea, and Sky.</p>
+            </div>
+            <div class="bg-purple-950/30 border border-purple-700/30 rounded-xl p-4">
+              <h3 class="text-fuchsia-300 font-semibold mb-2">Seax-Wica</h3>
+              <p>Developed by Raymond Buckland, who introduced Wicca to the US. Seax-Wica is based on Saxon paganism and is notably more democratic — there are no degrees of initiation, and self-initiation is fully honoured. Buckland published its rituals openly, a radical departure from Gardnerian secrecy.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Where Wicca Is Practised and by Whom -->
+      <section>
+        <h2 class="font-cinzel text-2xl text-purple-300 mb-5">🌍 Where It Is Practised &amp; By Whom</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="wicca-card bg-black/40 backdrop-blur-sm border border-purple-800/40 rounded-2xl p-6">
+            <h3 class="font-cinzel text-base text-fuchsia-300 mb-3">Global Reach</h3>
+            <p class="text-purple-100/75 text-sm leading-relaxed mb-3">Wicca is most widespread in the <strong class="text-purple-200">United Kingdom</strong> (its birthplace), the <strong class="text-purple-200">United States</strong>, <strong class="text-purple-200">Canada</strong>, <strong class="text-purple-200">Australia</strong>, and <strong class="text-purple-200">New Zealand</strong>. It has also spread across continental Europe, particularly in Germany, France, Italy, and Scandinavia, as well as in Brazil, where it intersects with local magical traditions.</p>
+            <p class="text-purple-100/75 text-sm leading-relaxed">The <strong class="text-purple-200">Pew Research Center</strong> has estimated around 1–1.5 million Wiccans and pagans in the United States alone. Global estimates are difficult due to the decentralised nature of the religion, but academic surveys suggest Wicca is one of the fastest-growing new religious movements in the Western world.</p>
+          </div>
+          <div class="wicca-card bg-black/40 backdrop-blur-sm border border-purple-800/40 rounded-2xl p-6">
+            <h3 class="font-cinzel text-base text-fuchsia-300 mb-3">Who Practises Wicca</h3>
+            <p class="text-purple-100/75 text-sm leading-relaxed mb-3">Wicca is remarkably diverse. It attracts people from all walks of life — students and academics, artists, healers, environmental activists, LGBTQ+ communities, and those disillusioned with mainstream religions. It has historically skewed younger and tends to attract those who find meaning in personal spiritual authority rather than institutional doctrine.</p>
+            <p class="text-purple-100/75 text-sm leading-relaxed">Women make up a significant majority of practitioners, drawn by the prominent role of the Goddess and the tradition's embrace of feminine power. However, men, non-binary, and gender-fluid people are fully present across most traditions. The internet and social media ("WitchTok," online covens, pagan forums) have brought a new generation of witches into the fold since the 2010s.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Wicca in Society and Law -->
+      <section class="wicca-card bg-black/40 backdrop-blur-sm border border-purple-800/40 rounded-2xl p-8">
+        <h2 class="font-cinzel text-2xl text-purple-300 mb-5">⚖️ Wicca in Society &amp; Law</h2>
+        <div class="space-y-4 text-purple-100/80 text-sm leading-relaxed">
+          <p>Wicca has achieved formal legal recognition in many countries. In the <strong class="text-purple-200">United States</strong>, a landmark 1985 federal court ruling (<em>Dettmer v. Landon</em>) confirmed that Wicca is a legally recognised religion entitled to constitutional protection. US military personnel may list Wicca as their religion on official documents, and Wiccan pentacles are included among approved symbols on veterans' headstones. In the <strong class="text-purple-200">United Kingdom</strong>, Wiccans have held public Pagan Pride events since the 1990s and pagan chaplains serve in some prisons and hospitals.</p>
+          <p>Despite this, Wiccans continue to face discrimination and social stigma, particularly in conservative religious communities. Misrepresentation in popular media — conflating Wicca with Satanism, dark magic, or evil — persists. The reality is that most Wiccans are peaceful, nature-loving people who simply hold a different understanding of the divine. Many are open about their practice; others remain "in the broom closet" to protect their professional and family lives.</p>
+          <p>Wicca has also influenced mainstream culture considerably: the popularity of neo-pagan festivals, herbalism, crystal healing, tarot, and mindful living owes much to the Wiccan revival. Books, podcasts, films, and television series (<em>Charmed</em>, <em>The Craft</em>, <em>Practical Magic</em>) have both reflected and fed continued public fascination with witchcraft.</p>
+        </div>
+      </section>
+
+      <!-- Beginning the Path -->
+      <section class="wicca-card glow-card bg-black/40 backdrop-blur-sm border border-purple-800/40 rounded-2xl p-8 text-center">
+        <h2 class="font-cinzel text-2xl text-purple-300 mb-4">🌙 Beginning the Path</h2>
+        <p class="text-purple-100/75 text-sm leading-relaxed max-w-3xl mx-auto mb-6">There is no single gateway into Wicca. Some seek out a coven and undergo formal initiation. Many begin as solitary practitioners — reading, observing the Sabbats, learning the properties of herbs and crystals, keeping a Book of Shadows, and drawing their own connection to the Goddess and God. The path is deeply personal. What unites all Wiccans is reverence for the Earth, respect for the interconnectedness of all life, and the understanding that each person carries within them a spark of the divine.</p>
+        <div class="grid sm:grid-cols-3 gap-4 max-w-3xl mx-auto text-left">
+          <div class="bg-purple-950/40 border border-purple-700/30 rounded-xl p-4">
+            <div class="text-xl mb-2">📚</div>
+            <h4 class="text-fuchsia-300 text-xs font-semibold mb-1">Foundational Texts</h4>
+            <ul class="text-purple-100/60 text-xs space-y-1">
+              <li>• <em>Witchcraft Today</em> — Gardner</li>
+              <li>• <em>Wicca: A Solitary Practitioner</em> — Cunningham</li>
+              <li>• <em>The Spiral Dance</em> — Starhawk</li>
+              <li>• <em>Witchcraft for Tomorrow</em> — Valiente</li>
+              <li>• <em>To Ride a Silver Broomstick</em> — RavenWolf</li>
+            </ul>
+          </div>
+          <div class="bg-purple-950/40 border border-purple-700/30 rounded-xl p-4">
+            <div class="text-xl mb-2">🌙</div>
+            <h4 class="text-fuchsia-300 text-xs font-semibold mb-1">Daily Practice Ideas</h4>
+            <ul class="text-purple-100/60 text-xs space-y-1">
+              <li>• Track the moon phases</li>
+              <li>• Keep a Book of Shadows</li>
+              <li>• Observe the Wheel of the Year</li>
+              <li>• Work with herbs &amp; crystals</li>
+              <li>• Meditate at sunrise or moonrise</li>
+            </ul>
+          </div>
+          <div class="bg-purple-950/40 border border-purple-700/30 rounded-xl p-4">
+            <div class="text-xl mb-2">🔮</div>
+            <h4 class="text-fuchsia-300 text-xs font-semibold mb-1">Finding Community</h4>
+            <ul class="text-purple-100/60 text-xs space-y-1">
+              <li>• Local pagan moots and open circles</li>
+              <li>• Pagan Pride events worldwide</li>
+              <li>• Online covens and forums</li>
+              <li>• The Witches' Voice (witchvox.com)</li>
+              <li>• Pagan social media communities</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <footer class="text-center py-6 text-purple-300/40 text-xs">
+        <p class="italic">"Thou art Goddess. Thou art God. Divinity is not external but lies within each of us." — Margot Adler</p>
+        <p class="mt-2">Esoteric Wisdom · Built with ✨ in Rust</p>
+        <p class="mt-2"><a href="/home" class="hover:text-purple-300 transition-colors">← Back to the Portal</a></p>
+        <p class="mt-3">
+          <a href="https://ko-fi.com/esotericwisdom" target="_blank" rel="noopener noreferrer"
+             class="inline-block px-5 py-2 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-white font-semibold text-xs hover:scale-105 transition-transform shadow-lg shadow-orange-500/30">
+            ☕ Support Esoteric Wisdom on Ko-fi
+          </a>
+        </p>
+      </footer>
+
+    </div>
+
+    <script>
+      const sf = document.getElementById('starfield');
+      for (let i = 0; i < 180; i++) {
+        const s = document.createElement('div');
+        s.className = 'star';
+        const size = Math.random() * 2.5 + 0.5;
+        s.style.cssText = `width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--dur:${2+Math.random()*4}s;--delay:${Math.random()*5}s;opacity:${0.2+Math.random()*0.8};`;
+        sf.appendChild(s);
+      }
+    </script>
+  </body>
+</html>
