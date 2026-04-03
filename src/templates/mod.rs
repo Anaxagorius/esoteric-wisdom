@@ -121,3 +121,47 @@ pub struct KhasarovMirrorTemplate;
 #[derive(Template)]
 #[template(path = "alchemy.html")]
 pub struct AlchemyTemplate;
+
+#[derive(Template)]
+#[template(path = "western_esotericism.html")]
+pub struct WesternEsotericismTemplate;
+
+#[derive(Template)]
+#[template(path = "hermeticism.html")]
+pub struct HermeticismTemplate;
+
+#[derive(Template)]
+#[template(path = "gnosticism.html")]
+pub struct GnosticismTemplate;
+
+#[derive(Template)]
+#[template(path = "neoplatonism.html")]
+pub struct NeoplatonismTemplate;
+
+#[derive(Template)]
+#[template(path = "rosicrucianism.html")]
+pub struct RosicrucianismTemplate;
+
+#[derive(Template)]
+#[template(path = "christian_mysticism.html")]
+pub struct ChristianMysticismTemplate;
+
+#[derive(Template)]
+#[template(path = "theosophy.html")]
+pub struct TheosophyTemplate;
+
+#[derive(Template)]
+#[template(path = "anthroposophy.html")]
+pub struct AnthroposophyTemplate;
+
+#[derive(Template)]
+#[template(path = "kabbalah.html")]
+pub struct KabbalahTemplate;
+
+#[derive(Template)]
+#[template(path = "christian_kabbalah.html")]
+pub struct ChristianKabbalahTemplate;
+
+#[derive(Template)]
+#[template(path = "occultism.html")]
+pub struct OccultismTemplate;

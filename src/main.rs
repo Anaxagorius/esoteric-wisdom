@@ -16,6 +16,7 @@ mod alchemy;
 mod gateway_process;
 mod remote_viewing;
 mod khasarov_mirror;
+mod western_esotericism;
 mod templates;
 
 use axum::{Router, routing::get, extract::State, response::IntoResponse, http::{StatusCode, header}};
@@ -53,6 +54,7 @@ async fn main() -> anyhow::Result<()> {
         .nest("/gateway-process", gateway_process::routes())
         .nest("/remote-viewing", remote_viewing::routes())
         .nest("/khasarov-mirror", khasarov_mirror::routes())
+        .nest("/western-esotericism", western_esotericism::routes())
         .layer(CookieManagerLayer::new())
         .with_state(state);
 
