@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Theosophy — Esoteric Wisdom</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    body { background: radial-gradient(ellipse at top, #0d0020 0%, #120028 25%, #08001a 60%, #000000 100%); font-family: 'Raleway', sans-serif; }
+    .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+    @keyframes twinkle { 0%,100% { opacity: 0.2; } 50% { opacity: 1; } }
+    .star { position: absolute; border-radius: 50%; background: white; animation: twinkle var(--dur,3s) ease-in-out infinite; animation-delay: var(--delay,0s); }
+    @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+    .floating { animation: float 5s ease-in-out infinite; }
+    @keyframes shimmer { 0% { background-position: -200% center; } 100% { background-position: 200% center; } }
+    .aurora-text { background: linear-gradient(90deg, #c4b5fd, #818cf8, #ffffff, #7c3aed, #c4b5fd); background-size: 200% auto; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; animation: shimmer 5s linear infinite; }
+    .theo-card { transition: all 0.35s ease; cursor: default; }
+    .theo-card:hover { transform: translateY(-7px) scale(1.01); box-shadow: 0 24px 64px rgba(167,139,250,0.2); border-color: rgba(167,139,250,0.5) !important; }
+    .nav-link { position: relative; transition: all 0.3s; }
+    .nav-link::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: linear-gradient(90deg, #f59e0b, #a78bfa); transition: width 0.3s; }
+    .nav-link:hover::after { width: 100%; }
+  </style>
+</head>
+<body class="min-h-screen text-white px-4 py-8">
+  <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+
+  <!-- Navigation -->
+  <nav class="sticky top-0 z-50 flex items-center justify-between px-6 py-3 bg-black/40 backdrop-blur-md border-b border-violet-500/20 flex-wrap gap-y-2">
+    <a href="/home" class="font-cinzel text-amber-300 text-sm tracking-widest shrink-0">✦ Esoteric Wisdom ✦</a>
+    <div class="flex items-center gap-x-3 gap-y-1 text-xs text-violet-200 flex-wrap justify-end">
+      <a href="/astrology" class="nav-link hover:text-amber-300 transition-colors">Astrology</a>
+      <a href="/meditation" class="nav-link hover:text-amber-300 transition-colors">Meditation</a>
+      <a href="/tarot/select" class="nav-link hover:text-amber-300 transition-colors">Tarot</a>
+      <a href="/numerology" class="nav-link hover:text-amber-300 transition-colors">Numerology</a>
+      <a href="/crystals" class="nav-link hover:text-amber-300 transition-colors">Crystals</a>
+      <a href="/runes" class="nav-link hover:text-amber-300 transition-colors">Runes</a>
+      <a href="/shamanism" class="nav-link hover:text-amber-300 transition-colors">Shamanism</a>
+      <a href="/druidism" class="nav-link hover:text-amber-300 transition-colors">Druidism</a>
+      <a href="/akashic-records" class="nav-link hover:text-amber-300 transition-colors">Akashic Records</a>
+      <a href="/wicca" class="nav-link hover:text-amber-300 transition-colors">Wicca</a>
+      <a href="/alchemy" class="nav-link hover:text-amber-300 transition-colors">Alchemy</a>
+      <a href="/gateway-process" class="nav-link hover:text-amber-300 transition-colors">Gateway Process</a>
+      <a href="/remote-viewing" class="nav-link hover:text-amber-300 transition-colors">Remote Viewing</a>
+      <a href="/khasarov-mirror" class="nav-link hover:text-amber-300 transition-colors">Khasarov Mirror</a>
+      <a href="/western-esotericism" class="nav-link text-amber-300 font-semibold">Western Esotericism</a>
+      <a href="/journal/reflections" class="nav-link text-emerald-300 hover:text-emerald-200 transition-colors">✨ Reflections</a>
+      <a href="https://ko-fi.com/esotericwisdom" target="_blank" rel="noopener noreferrer"
+         class="px-3 py-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-white font-semibold hover:scale-105 transition-transform shrink-0">☕ Support</a>
+    </div>
+  </nav>
+
+  <!-- Breadcrumb -->
+  <div class="relative z-10 max-w-6xl mx-auto pt-4">
+    <a href="/western-esotericism" class="text-xs text-violet-300/60 hover:text-violet-300 transition-colors">← Western Esotericism</a>
+  </div>
+
+  <div class="relative z-10 max-w-6xl mx-auto space-y-10 pt-6">
+
+    <!-- Hero -->
+    <section class="text-center py-12 px-4">
+      <div class="text-6xl mb-6 floating">✨</div>
+      <h1 class="font-cinzel text-5xl md:text-6xl font-bold aurora-text mb-6">Theosophy</h1>
+      <p class="text-violet-200 text-lg md:text-xl max-w-4xl mx-auto leading-relaxed font-light">
+        Divine Wisdom — the great 19th-century synthesis of Eastern and Western mysticism founded by Helena Petrovna Blavatsky and Colonel Henry Olcott in New York in 1875. Theosophy seeded the modern New Age movement, introduced karma and reincarnation to the Western mainstream, and remains one of the most ambitious attempts to unify all world religions into one esoteric philosophy.
+      </p>
+    </section>
+
+    <!-- Section 1: What Is Theosophy? -->
+    <section class="rounded-2xl border border-violet-500/20 bg-gradient-to-br from-purple-950/60 to-indigo-950/40 p-8">
+      <h2 class="font-cinzel text-3xl text-violet-300 mb-8 text-center">What Is Theosophy?</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="space-y-4 text-violet-100 leading-relaxed">
+          <p>
+            <span class="text-amber-300 font-semibold">Etymology:</span> Theosophy comes from the Greek <em>theos</em> (God) and <em>sophia</em> (wisdom) — literally "divine wisdom". The Theosophical Society was founded in New York on 17 November 1875 by Helena Petrovna Blavatsky (HPB), Colonel Henry Steel Olcott, and William Quan Judge.
+          </p>
+          <p>Its three stated Objects were: (1) To form a nucleus of the Universal Brotherhood of Humanity, without distinction of race, creed, sex, caste, or colour. (2) To encourage the comparative study of religion, philosophy, and science. (3) To investigate the unexplained laws of nature and the powers latent in man.</p>
+          <p>Theosophy claimed to present the Ageless Wisdom — the esoteric core underlying all world religions, preserved by a Brotherhood of Mahatmas (Masters of the Ancient Wisdom) residing in Tibet and elsewhere, who had guarded this teaching through the centuries and now judged humanity ready to receive it anew.</p>
+        </div>
+        <div class="space-y-4 text-violet-100 leading-relaxed">
+          <p><span class="text-amber-300 font-semibold">Core doctrines</span> include the divine origin and spiritual evolution of the cosmos and humanity; karma — the law of moral causation, action and reaction; reincarnation — the soul evolving through many lives toward divine perfection; seven planes of existence (physical, astral, mental, causal, and above); and seven bodies of the human being (physical, etheric, astral, mental, causal, buddhic, atmic).</p>
+          <p>Theosophy also teaches that humanity passes through seven great evolutionary epochs called Root Races, each with its own civilisations and spiritual characteristics.</p>
+          <p>The synthesis character of Theosophy is remarkable: it drew on Hinduism (karma, reincarnation, the Vedas), Buddhism (the Dharma, the Eightfold Path), Neoplatonism, Hermeticism, Kabbalah, and Western occultism into a single grand vision. HPB insisted that Theosophy was not a new religion but the rediscovery of the perennial philosophy that all religions share at their esoteric core.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Helena Petrovna Blavatsky -->
+    <section class="rounded-2xl border border-violet-400/30 bg-gradient-to-br from-purple-950/80 to-black/60 p-8">
+      <h2 class="font-cinzel text-3xl text-violet-300 mb-6 text-center">Helena Petrovna Blavatsky</h2>
+      <div class="text-violet-100 leading-relaxed space-y-5 max-w-5xl mx-auto">
+        <p>Helena Petrovna Blavatsky (1831–1891) was one of the most extraordinary, controversial, and influential figures of the 19th century. Born Helena von Hahn in Dnipropetrovsk (then Ekaterinoslav), Ukraine, to a Russian noble family — her mother was a novelist, her grandfather Prince Dolgoroukov a man of letters — from childhood she was psychically sensitive, clairvoyant, and wilful, deeply unsuited to the role of society lady expected of her class.</p>
+        <p>At seventeen she made an inexplicable marriage to the elderly General Nikifor Blavatsky, which she abandoned within weeks, beginning a life of extraordinary worldwide travel spanning three decades. She claimed to have studied with Tibetan Buddhist Masters — the Mahatmas — first encountered in London in 1851, then in Tibet itself during 1867–1870. Whether these encounters were literal, metaphorical, or both remains the central biographical mystery.</p>
+        <p>In New York, she co-founded the Theosophical Society with Colonel Henry Steel Olcott (a Civil War officer, lawyer, and journalist) and William Quan Judge. Together she and Olcott sailed to India in 1879, establishing the Society's headquarters at Adyar, Chennai — still its international headquarters today.</p>
+
+        <h3 class="font-cinzel text-xl text-violet-300 mt-6">Her Major Works</h3>
+        <ul class="space-y-4">
+          <li class="theo-card bg-purple-950/40 border border-violet-500/20 rounded-xl p-4">
+            <span class="text-amber-300 font-semibold">Isis Unveiled (1877)</span> — Over 1,200 pages in two volumes (Science, and Theology). A vast critique of materialist science and Christian orthodoxy, drawing on Neoplatonic, Hermetic, and Eastern sources. Her first major publication and an immediate sensation despite mixed reviews.
+          </li>
+          <li class="theo-card bg-purple-950/40 border border-violet-500/20 rounded-xl p-4">
+            <span class="text-amber-300 font-semibold">The Secret Doctrine (1888)</span> — Her masterwork in two volumes: Cosmogenesis and Anthropogenesis. Presents the esoteric cosmology claimed to have been given by the Mahatmas: the three fundamental propositions (Absolute Reality, cyclic law, the identity of the individual soul with the Universal Soul), the seven Root Races of humanity, and the history of cosmic evolution through Manvantaras, Rounds, and Globes. Still the central Theosophical text.
+          </li>
+          <li class="theo-card bg-purple-950/40 border border-violet-500/20 rounded-xl p-4">
+            <span class="text-amber-300 font-semibold">The Key to Theosophy (1889)</span> — An accessible question-and-answer format introduction to Theosophical teaching, designed for the general reader.
+          </li>
+          <li class="theo-card bg-purple-950/40 border border-violet-500/20 rounded-xl p-4">
+            <span class="text-amber-300 font-semibold">The Voice of the Silence (1889)</span> — Brief, beautiful translations from the "Book of the Golden Precepts" — instructions for the bodhisattva path. Beloved by Tibetan Buddhist scholars including the Dalai Lama.
+          </li>
+          <li class="theo-card bg-purple-950/40 border border-violet-500/20 rounded-xl p-4">
+            <span class="text-amber-300 font-semibold">The Mahatma Letters</span> — Correspondence received (by precipitation, HPB and Olcott claimed) from the Masters KH (Koot Hoomi) and M (Morya). Published in 1923, long after HPB's death. Intensely debated as to authenticity and meaning.
+          </li>
+        </ul>
+
+        <p class="mt-4">The Society for Psychical Research (SPR) investigated HPB in 1884–1885 and produced the Hodgson Report (1885), accusing her of fraud and fabricating the phenomena she produced. This damaged her reputation enormously and cast a shadow over her legacy for a century. However, the SPR itself commissioned a re-examination in 1986 by Vernon Harrison, who found the Hodgson Report to be seriously flawed and unreliable as a piece of investigation. HPB remains a figure of vigorous scholarly debate.</p>
+      </div>
+    </section>
+
+    <!-- Section 3: Core Theosophical Teachings -->
+    <section class="rounded-2xl border border-violet-500/20 bg-gradient-to-br from-indigo-950/50 to-purple-950/30 p-8">
+      <h2 class="font-cinzel text-3xl text-violet-300 mb-8 text-center">Core Theosophical Teachings</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <div class="theo-card bg-purple-900/30 border border-violet-500/25 rounded-xl p-5">
+          <div class="text-3xl mb-3">🌌</div>
+          <h3 class="font-cinzel text-lg text-violet-300 mb-3">The Seven Planes</h3>
+          <p class="text-violet-100 text-sm leading-relaxed">Physical, Astral (emotional), Mental (lower and higher), Causal (buddhic), Atmic (spirit), Monadic, and Divine. Each plane is progressively subtler and more comprehensive than the last. The human being possesses bodies on several planes simultaneously, most of which remain latent and unperceived by ordinary consciousness.</p>
+        </div>
+
+        <div class="theo-card bg-purple-900/30 border border-violet-500/25 rounded-xl p-5">
+          <div class="text-3xl mb-3">🌍</div>
+          <h3 class="font-cinzel text-lg text-violet-300 mb-3">Root Races and Human Evolution</h3>
+          <p class="text-violet-100 text-sm leading-relaxed">Theosophy teaches that humanity passes through seven great Root Races: First (Astral, Polarean), Second (Hyperborean), Third (Lemurian — the first with physical bodies), Fourth (Atlantean), Fifth (our current epoch). <em class="text-amber-300/80">Note:</em> The racial terminology in Theosophy is deeply problematic and has been used to support racist ideologies, particularly in the 20th century. Modern Theosophical societies distance themselves from these elements whilst retaining the broader evolutionary framework.</p>
+        </div>
+
+        <div class="theo-card bg-purple-900/30 border border-violet-500/25 rounded-xl p-5">
+          <div class="text-3xl mb-3">⚖️</div>
+          <h3 class="font-cinzel text-lg text-violet-300 mb-3">Karma and Reincarnation</h3>
+          <p class="text-violet-100 text-sm leading-relaxed">Theosophy brought the Hindu and Buddhist concepts of karma (the moral law of cause and effect) and reincarnation (the soul's repeated embodiment) to Western audiences with unprecedented clarity and philosophical depth. HPB reinterpreted these concepts through the Hermetic and Neoplatonic lens: karma as cosmic justice, reincarnation as soul evolution across vast timescales toward ultimate spiritual perfection.</p>
+        </div>
+
+        <div class="theo-card bg-purple-900/30 border border-violet-500/25 rounded-xl p-5">
+          <div class="text-3xl mb-3">🌠</div>
+          <h3 class="font-cinzel text-lg text-violet-300 mb-3">The Astral Plane</h3>
+          <p class="text-violet-100 text-sm leading-relaxed">The subtle dimension immediately "above" the physical, composed of astral matter. The plane of dreams, emotions, and psychic phenomena. The newly deceased initially inhabit the astral plane before progressing to the mental plane (Devachan — the heavenly state of rest between incarnations) and eventually reincarnating. Clairvoyants and trained occultists can access and navigate the astral plane consciously.</p>
+        </div>
+
+        <div class="theo-card bg-purple-900/30 border border-violet-500/25 rounded-xl p-5">
+          <div class="text-3xl mb-3">🌈</div>
+          <h3 class="font-cinzel text-lg text-violet-300 mb-3">The Seven Rays</h3>
+          <p class="text-violet-100 text-sm leading-relaxed">Seven cosmic principles or energies that condition all manifestation. Each soul, nation, and historical epoch is said to be under the predominating influence of one or more Rays, which determines its essential character, strengths, and challenges. This system was later developed with great elaboration by Alice A. Bailey through her claimed transmission from Master Djwal Khul.</p>
+        </div>
+
+        <div class="theo-card bg-purple-900/30 border border-violet-500/25 rounded-xl p-5">
+          <div class="text-3xl mb-3">📖</div>
+          <h3 class="font-cinzel text-lg text-violet-300 mb-3">Akashic Records</h3>
+          <p class="text-violet-100 text-sm leading-relaxed">The Theosophical tradition is the primary source of the concept of the Akashic Records in its modern form. The akasha is the etheric substrate in which all events, thoughts, and experiences are indelibly recorded. Trained clairvoyants such as C.W. Leadbeater claimed to read these records, investigating past lives and historical events. Annie Besant and Leadbeater co-wrote <em>Occult Chemistry</em> (1908), claiming to have investigated atomic structure clairvoyantly.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Section 4: The Theosophical Society and Successors -->
+    <section class="rounded-2xl border border-violet-500/20 bg-gradient-to-br from-purple-950/60 to-indigo-950/40 p-8">
+      <h2 class="font-cinzel text-3xl text-violet-300 mb-8 text-center">The Theosophical Society and Its Successors</h2>
+      <div class="space-y-6 text-violet-100 leading-relaxed">
+
+        <div class="theo-card bg-purple-900/30 border border-violet-500/25 rounded-xl p-6">
+          <h3 class="font-cinzel text-xl text-amber-300 mb-3">Annie Besant (1847–1933)</h3>
+          <p>The second great Theosophical leader. A former atheist, freethinker, and remarkable social activist — member of the Fabian Society, champion of trade unionism, advocate of birth control — who became HPB's devoted student after reading <em>The Secret Doctrine</em>. On HPB's death in 1891 she rose to lead the Theosophical Society. Deeply involved in Indian independence politics, she became President of the Indian National Congress in 1917, the first woman ever to hold that office. Her spiritual partnership with C.W. Leadbeater shaped much of 20th-century Theosophical teaching. She discovered and groomed Jiddu Krishnamurti as the vehicle for the coming World Teacher.</p>
+        </div>
+
+        <div class="theo-card bg-purple-900/30 border border-violet-500/25 rounded-xl p-6">
+          <h3 class="font-cinzel text-xl text-amber-300 mb-3">Charles Webster Leadbeater (1854–1934)</h3>
+          <p>English-born clairvoyant investigator whose prolific writings elaborated Theosophical cosmology with extraordinary detail. Works including <em>The Astral Plane</em>, <em>The Mental Plane</em>, <em>The Inner Life</em>, and <em>Clairvoyance</em> gave Western audiences their most vivid picture of the subtle worlds. He was a deeply controversial figure: the Theosophical Society investigated allegations of impropriety with boys under his charge. Despite the controversy, his books shaped enormous swathes of 20th-century esoteric thought and vocabulary.</p>
+        </div>
+
+        <div class="theo-card bg-purple-900/30 border border-violet-500/25 rounded-xl p-6">
+          <h3 class="font-cinzel text-xl text-amber-300 mb-3">Jiddu Krishnamurti (1895–1986)</h3>
+          <p>Discovered on the beach at Adyar by Leadbeater in 1909 as a young Indian boy with what Leadbeater described as "an aura unlike any he had ever seen". He was groomed as the vehicle for the coming World Teacher, the Lord Maitreya. Given a Western education under Theosophical auspices, he was initiated into the Order of the Star in the East, which attracted over 100,000 members. In 1929, at the Order's annual gathering at Ommen in the Netherlands, Krishnamurti dissolved the Order, resigned from the Theosophical Society, and declared: "Truth is a pathless land, and you cannot approach it by any path whatsoever." He spent the following 56 years as an independent teacher, travelling the world and teaching radical self-inquiry without system or authority.</p>
+        </div>
+
+        <div class="theo-card bg-purple-900/30 border border-violet-500/25 rounded-xl p-6">
+          <h3 class="font-cinzel text-xl text-amber-300 mb-3">Alice Bailey (1880–1949)</h3>
+          <p>British-born esotericist who claimed to receive telepathic transmissions from Master Djwal Khul (DK, "The Tibetan"). She founded the Lucis Trust and the Arcane School in New York. Her 24 books of teachings elaborated the Seven Rays system, the Plan (the Masters' plan for human evolution), and the coming Externalisation of the Hierarchy. Her work was enormously influential in founding what became the New Age movement. Her organisation is distinct from the Theosophical Society proper, though rooted in its teachings.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Section 5: Key Figures -->
+    <section class="rounded-2xl border border-violet-500/20 bg-gradient-to-br from-indigo-950/40 to-black/40 p-8">
+      <h2 class="font-cinzel text-3xl text-violet-300 mb-8 text-center">Key Figures in the Theosophical Tradition</h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+
+        <div class="theo-card bg-purple-900/30 border border-violet-500/25 rounded-xl p-4 text-center">
+          <div class="text-3xl mb-2">🔮</div>
+          <h4 class="font-cinzel text-sm text-amber-300 mb-1">H.P. Blavatsky</h4>
+          <p class="text-violet-200 text-xs">1831–1891. Founder of Theosophy and the Theosophical Society. Author of <em>Isis Unveiled</em> and <em>The Secret Doctrine</em>.</p>
+        </div>
+
+        <div class="theo-card bg-purple-900/30 border border-violet-500/25 rounded-xl p-4 text-center">
+          <div class="text-3xl mb-2">⚔️</div>
+          <h4 class="font-cinzel text-sm text-amber-300 mb-1">Colonel Olcott</h4>
+          <p class="text-violet-200 text-xs">1832–1907. Co-founder of the Society, first President, instrumental in Theosophical work in India and Ceylon. Promoted Buddhist revival.</p>
+        </div>
+
+        <div class="theo-card bg-purple-900/30 border border-violet-500/25 rounded-xl p-4 text-center">
+          <div class="text-3xl mb-2">🌺</div>
+          <h4 class="font-cinzel text-sm text-amber-300 mb-1">Annie Besant</h4>
+          <p class="text-violet-200 text-xs">1847–1933. Second great Theosophical leader, social activist, and President of the Indian National Congress.</p>
+        </div>
+
+        <div class="theo-card bg-purple-900/30 border border-violet-500/25 rounded-xl p-4 text-center">
+          <div class="text-3xl mb-2">👁️</div>
+          <h4 class="font-cinzel text-sm text-amber-300 mb-1">C.W. Leadbeater</h4>
+          <p class="text-violet-200 text-xs">1854–1934. Clairvoyant investigator who elaborated Theosophical cosmology in vivid detail. Controversial but enormously influential.</p>
+        </div>
+
+        <div class="theo-card bg-purple-900/30 border border-violet-500/25 rounded-xl p-4 text-center">
+          <div class="text-3xl mb-2">🕊️</div>
+          <h4 class="font-cinzel text-sm text-amber-300 mb-1">J. Krishnamurti</h4>
+          <p class="text-violet-200 text-xs">1895–1986. Groomed as World Teacher, dramatically renounced all organisations, became one of the 20th century's most original spiritual voices.</p>
+        </div>
+
+        <div class="theo-card bg-purple-900/30 border border-violet-500/25 rounded-xl p-4 text-center">
+          <div class="text-3xl mb-2">📚</div>
+          <h4 class="font-cinzel text-sm text-amber-300 mb-1">Alice Bailey</h4>
+          <p class="text-violet-200 text-xs">1880–1949. Claimed transmissions from Master DK. Founded the Lucis Trust. 24 volumes of spiritual teaching foundational to the New Age movement.</p>
+        </div>
+
+        <div class="theo-card bg-purple-900/30 border border-violet-500/25 rounded-xl p-4 text-center">
+          <div class="text-3xl mb-2">🧚</div>
+          <h4 class="font-cinzel text-sm text-amber-300 mb-1">Geoffrey Hodson</h4>
+          <p class="text-violet-200 text-xs">1886–1983. Clairvoyant investigator of nature spirits, angels, and occult anatomy. Wrote over 50 books including <em>The Kingdom of the Gods</em>.</p>
+        </div>
+
+        <div class="theo-card bg-purple-900/30 border border-violet-500/25 rounded-xl p-4 text-center">
+          <div class="text-3xl mb-2">🌿</div>
+          <h4 class="font-cinzel text-sm text-amber-300 mb-1">William Quan Judge</h4>
+          <p class="text-violet-200 text-xs">1851–1896. Co-founder of the Theosophical Society. Leader of the American Section. Author of <em>The Ocean of Theosophy</em>.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Section 6: Legacy -->
+    <section class="rounded-2xl border border-violet-500/20 bg-gradient-to-br from-purple-950/60 to-indigo-950/40 p-8">
+      <h2 class="font-cinzel text-3xl text-violet-300 mb-8 text-center">Theosophy's Legacy</h2>
+      <div class="grid md:grid-cols-2 gap-6 text-violet-100 leading-relaxed">
+        <div class="space-y-4">
+          <div class="theo-card bg-purple-900/30 border border-violet-500/25 rounded-xl p-5">
+            <h3 class="font-cinzel text-lg text-amber-300 mb-2">The New Age Movement</h3>
+            <p class="text-sm">Virtually the entire vocabulary and framework of New Age spirituality derives directly or indirectly from Theosophy: chakras in the Western sense, Akashic Records, spirit guides, Masters and Ascended Masters, auras, the etheric body, astral travel, karma in popular usage — all trace back to Theosophical popularisation of these concepts.</p>
+          </div>
+          <div class="theo-card bg-purple-900/30 border border-violet-500/25 rounded-xl p-5">
+            <h3 class="font-cinzel text-lg text-amber-300 mb-2">Anthroposophy</h3>
+            <p class="text-sm">Rudolf Steiner joined the German Section of the Theosophical Society in 1902 and departed in 1912 to found his own independent stream. Anthroposophy is the spiritual child of Theosophy — accepting its broad framework of spiritual evolution and the subtle bodies, whilst centring everything on the unique cosmic event of the Christ incarnation.</p>
+          </div>
+        </div>
+        <div class="space-y-4">
+          <div class="theo-card bg-purple-900/30 border border-violet-500/25 rounded-xl p-5">
+            <h3 class="font-cinzel text-lg text-amber-300 mb-2">Indian Independence Movement</h3>
+            <p class="text-sm">Annie Besant's Theosophical involvement in India was politically significant. The Society's promotion of Indian culture, philosophy, and religion gave confidence to the independence movement. Besant's presidency of the Indian National Congress (1917) was a landmark. Mahatma Gandhi and Jawaharlal Nehru were influenced by and in dialogue with the Theosophical world, even as they maintained their independence from it.</p>
+          </div>
+          <div class="theo-card bg-purple-900/30 border border-violet-500/25 rounded-xl p-5">
+            <h3 class="font-cinzel text-lg text-amber-300 mb-2">Western Engagement with Eastern Philosophy</h3>
+            <p class="text-sm">Before Theosophy, Hindu and Buddhist philosophy was largely unknown to Western audiences. The Theosophical Society's translations, publications, and founding of institutions in India and Ceylon made Eastern thought accessible in Europe and America for the first time at scale. Carl Jung's deep engagement with Eastern thought was partly mediated by Theosophical translations and publications.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Back link -->
+    <div class="text-center mt-4">
+      <a href="/western-esotericism" class="text-violet-400 hover:text-violet-300 text-sm transition-colors">← Western Esotericism</a>
+    </div>
+
+  </div>
+
+  <footer class="relative z-10 text-center py-8 text-violet-300/40 text-xs mt-8">
+    <p class="italic">"There is no religion higher than Truth." — Theosophical Society motto</p>
+    <p class="mt-2">Esoteric Wisdom · Built with ✨ in Rust</p>
+    <p class="mt-2"><a href="/home" class="hover:text-violet-300 transition-colors">← Back to Portal</a></p>
+  </footer>
+
+  <script>
+    const sf = document.getElementById('starfield');
+    for (let i = 0; i < 200; i++) {
+      const s = document.createElement('div');
+      s.className = 'star';
+      const size = Math.random() * 2.5 + 0.5;
+      s.style.cssText = `width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--dur:${2+Math.random()*4}s;--delay:${Math.random()*5}s;opacity:${0.2+Math.random()*0.8};`;
+      sf.appendChild(s);
+    }
+  </script>
+</body>
+</html>
