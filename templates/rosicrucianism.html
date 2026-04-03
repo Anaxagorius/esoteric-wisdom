@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rosicrucianism — Esoteric Wisdom</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    body { background: radial-gradient(ellipse at top, #1a0505 0%, #2d0808 20%, #0d0202 55%, #000000 100%); font-family: 'Raleway', sans-serif; }
+    .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+    @keyframes twinkle { 0%,100% { opacity: 0.2; } 50% { opacity: 1; } }
+    .star { position: absolute; border-radius: 50%; background: white; animation: twinkle var(--dur,3s) ease-in-out infinite; animation-delay: var(--delay,0s); }
+    @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+    .floating { animation: float 5s ease-in-out infinite; }
+    @keyframes shimmer { 0% { background-position: -200% center; } 100% { background-position: 200% center; } }
+    .aurora-text { background: linear-gradient(90deg, #fca5a5, #f87171, #fbbf24, #ef4444, #fca5a5); background-size: 200% auto; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; animation: shimmer 5s linear infinite; }
+    .ros-card { transition: all 0.35s ease; cursor: default; }
+    .ros-card:hover { transform: translateY(-7px) scale(1.01); box-shadow: 0 24px 64px rgba(252,165,165,0.15); border-color: rgba(252,165,165,0.5) !important; }
+    .nav-link { position: relative; transition: all 0.3s; }
+    .nav-link::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: linear-gradient(90deg, #f59e0b, #a78bfa); transition: width 0.3s; }
+    .nav-link:hover::after { width: 100%; }
+  </style>
+</head>
+<body class="min-h-screen text-white px-4 py-8">
+  <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+
+  <!-- NAV -->
+  <nav class="sticky top-0 z-50 flex items-center justify-between px-6 py-3 bg-black/40 backdrop-blur-md border-b border-violet-500/20 flex-wrap gap-y-2">
+    <a href="/home" class="font-cinzel text-amber-300 text-sm tracking-widest shrink-0">✦ Esoteric Wisdom ✦</a>
+    <div class="flex items-center gap-x-3 gap-y-1 text-xs text-violet-200 flex-wrap justify-end">
+      <a href="/astrology" class="nav-link hover:text-amber-300 transition-colors">Astrology</a>
+      <a href="/meditation" class="nav-link hover:text-amber-300 transition-colors">Meditation</a>
+      <a href="/tarot/select" class="nav-link hover:text-amber-300 transition-colors">Tarot</a>
+      <a href="/numerology" class="nav-link hover:text-amber-300 transition-colors">Numerology</a>
+      <a href="/crystals" class="nav-link hover:text-amber-300 transition-colors">Crystals</a>
+      <a href="/runes" class="nav-link hover:text-amber-300 transition-colors">Runes</a>
+      <a href="/shamanism" class="nav-link hover:text-amber-300 transition-colors">Shamanism</a>
+      <a href="/druidism" class="nav-link hover:text-amber-300 transition-colors">Druidism</a>
+      <a href="/akashic-records" class="nav-link hover:text-amber-300 transition-colors">Akashic Records</a>
+      <a href="/wicca" class="nav-link hover:text-amber-300 transition-colors">Wicca</a>
+      <a href="/alchemy" class="nav-link hover:text-amber-300 transition-colors">Alchemy</a>
+      <a href="/gateway-process" class="nav-link hover:text-amber-300 transition-colors">Gateway Process</a>
+      <a href="/remote-viewing" class="nav-link hover:text-amber-300 transition-colors">Remote Viewing</a>
+      <a href="/khasarov-mirror" class="nav-link hover:text-amber-300 transition-colors">Khasarov Mirror</a>
+      <a href="/western-esotericism" class="nav-link text-amber-300 font-semibold">Western Esotericism</a>
+      <a href="/journal/reflections" class="nav-link text-emerald-300 hover:text-emerald-200 transition-colors">✨ Reflections</a>
+      <a href="https://ko-fi.com/esotericwisdom" target="_blank" rel="noopener noreferrer"
+         class="px-3 py-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-white font-semibold hover:scale-105 transition-transform shrink-0">☕ Support</a>
+    </div>
+  </nav>
+
+  <!-- BREADCRUMB -->
+  <div class="relative z-10 max-w-6xl mx-auto pt-4">
+    <a href="/western-esotericism" class="text-xs text-violet-300/60 hover:text-violet-300 transition-colors">← Western Esotericism</a>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="relative z-10 max-w-6xl mx-auto space-y-10 pt-6">
+
+    <!-- HERO -->
+    <div class="text-center py-12 space-y-6">
+      <div class="text-7xl floating">🌹</div>
+      <h1 class="font-cinzel text-5xl md:text-6xl font-bold aurora-text leading-tight">Rosicrucianism</h1>
+      <p class="text-rose-200/80 text-lg md:text-xl max-w-4xl mx-auto leading-relaxed font-light">
+        The mysterious Brotherhood of the Rosy Cross — whose founding manifestos in 1614–1616 electrified Europe with the promise of a universal reformation of arts and sciences guided by hidden adepts. Secret, invisible, and perhaps mythical — the Rosicrucians nonetheless transformed Western esotericism forever.
+      </p>
+    </div>
+
+    <!-- SECTION 1: THE MANIFESTOS -->
+    <div class="bg-gradient-to-br from-red-950/40 to-rose-950/20 border border-red-800/40 rounded-3xl p-8 space-y-6">
+      <h2 class="font-cinzel text-2xl text-rose-200 tracking-wide">The Rosicrucian Manifestos</h2>
+      <p class="text-rose-100/80 text-sm leading-relaxed max-w-4xl">
+        In the years 1614–1616, three anonymous texts appeared in Germany that caused an intellectual sensation across Europe. They described a secret brotherhood of learned Christian adepts — the Brothers of the Rosy Cross — who had possessed hidden wisdom since the 15th century and who were now revealing themselves to begin a universal reformation of humanity. These texts electrified European intellectual life: hundreds of pamphlets responded, scholars and seekers sent open letters to the Brotherhood hoping for a reply, and the idea of a hidden college of wise men working quietly for the benefit of all mankind profoundly influenced subsequent developments in Freemasonry, the founding of the Royal Society, and the entire modern occult tradition.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mt-4">
+
+        <div class="ros-card bg-gradient-to-br from-rose-950/50 to-red-950/30 border border-rose-800/30 rounded-2xl p-6 space-y-3">
+          <div class="text-3xl text-center">📣</div>
+          <h3 class="font-cinzel text-rose-200 text-sm tracking-wide text-center">Fama Fraternitatis</h3>
+          <p class="text-rose-300/60 text-xs text-center">1614 · "The Fame of the Brotherhood"</p>
+          <p class="text-rose-100/75 text-sm leading-relaxed">
+            The first and most important manifesto, written in German and addressed "To the Learned of Europe." It tells the story of Christian Rosenkreutz — his pilgrimage to the East, his gathering of hidden wisdom, the founding of the Brotherhood, and the miraculous discovery of his perfectly preserved body in a sealed vault 120 years after his death. It calls on all learned men to apply for membership and announces the imminent transformation of the world.
+          </p>
+        </div>
+
+        <div class="ros-card bg-gradient-to-br from-rose-950/50 to-red-950/30 border border-rose-800/30 rounded-2xl p-6 space-y-3">
+          <div class="text-3xl text-center">📖</div>
+          <h3 class="font-cinzel text-rose-200 text-sm tracking-wide text-center">Confessio Fraternitatis</h3>
+          <p class="text-rose-300/60 text-xs text-center">1615 · "The Confession of the Brotherhood"</p>
+          <p class="text-rose-100/75 text-sm leading-relaxed">
+            The second manifesto, written in Latin for a scholarly audience. It expands upon the Brotherhood's aims and their theological stance: explicitly Protestant and anti-papal, drawing on Lutheran pietism. The <em>Confessio</em> describes the Brotherhood's spiritual goals and their conviction that a great reformation — not merely of religion, but of all arts and sciences and indeed of human consciousness itself — is imminent and divinely ordained.
+          </p>
+        </div>
+
+        <div class="ros-card bg-gradient-to-br from-rose-950/50 to-red-950/30 border border-rose-800/30 rounded-2xl p-6 space-y-3">
+          <div class="text-3xl text-center">💒</div>
+          <h3 class="font-cinzel text-rose-200 text-sm tracking-wide text-center">Chemical Wedding of Christian Rosenkreutz</h3>
+          <p class="text-rose-300/60 text-xs text-center">1616 · By Johann Valentin Andreae</p>
+          <p class="text-rose-100/75 text-sm leading-relaxed">
+            The most literary and complex of the three texts — an allegorical romance in seven chapters (one for each day) describing Christian Rosenkreutz's invitation to a Royal Wedding and his week-long alchemical and initiatory journey through a symbolic castle. Definitively authored by Johann Valentin Andreae (1586–1654), who later called it a <em>ludibrium</em> (jest or playful fiction). The most aesthetically beautiful of the three, drawing on court masque tradition, alchemical symbolism, and Christian mysticism.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- SECTION 2: CHRISTIAN ROSENKREUTZ -->
+    <div class="bg-gradient-to-br from-red-950/30 to-rose-950/20 border border-rose-700/30 rounded-3xl p-8 space-y-5">
+      <h2 class="font-cinzel text-2xl text-rose-200 tracking-wide text-center">Christian Rosenkreutz — The Legendary Founder</h2>
+      <div class="max-w-4xl mx-auto text-rose-100/80 text-sm leading-relaxed space-y-4">
+        <p>
+          According to the <em>Fama Fraternitatis</em>, Christian Rosenkreutz (CRC) was born in 1378 to a poor German noble family. Educated from childhood in a monastery, he embarked at sixteen on a pilgrimage to the Holy Land. Diverted to Damascus, he was then drawn to the Arabian city of <em>Damcar</em> — often identified with Fez in Morocco — where he was welcomed by Arab sages who seemed to know him already, as if they had been expecting his arrival.
+        </p>
+        <p>
+          These sages taught him the hidden sciences: natural magic, Kabbalah, mathematics, and the philosophy of nature. Over three years he absorbed this wisdom and translated into Latin the mysterious book <em>M</em> — whose contents remain undisclosed in the manifesto. He then travelled to Egypt and Spain, attempting to share his newly acquired knowledge with European scholars — who dismissed him with contempt.
+        </p>
+        <p>
+          Returning to Germany, CRC built the <strong class="text-rose-300">House of the Holy Spirit (Sancti Spiritus)</strong> and founded the Brotherhood with three like-minded brothers. They agreed upon six rules that would govern the Brotherhood for generations:
+        </p>
+        <ul class="space-y-2 pl-4">
+          <li class="flex items-start gap-3"><span class="text-rose-400 mt-0.5">✦</span><span>To cure the sick gratuitously, without payment or reward.</span></li>
+          <li class="flex items-start gap-3"><span class="text-rose-400 mt-0.5">✦</span><span>To maintain no outward mark or sign distinguishing them from other people — they would blend seamlessly into whatever society they entered.</span></li>
+          <li class="flex items-start gap-3"><span class="text-rose-400 mt-0.5">✦</span><span>To meet in the House of the Holy Spirit once every year, or to send a written account of their activities if unable to attend.</span></li>
+          <li class="flex items-start gap-3"><span class="text-rose-400 mt-0.5">✦</span><span>Each Brother to find and train one worthy successor to take his place upon his death.</span></li>
+          <li class="flex items-start gap-3"><span class="text-rose-400 mt-0.5">✦</span><span>To use the letters R.C. as their seal, password, and mark of identification.</span></li>
+          <li class="flex items-start gap-3"><span class="text-rose-400 mt-0.5">✦</span><span>That the Brotherhood would remain secret for exactly one hundred years.</span></li>
+        </ul>
+        <p>
+          After a long life of service, CRC died at the remarkable age of 106 and was secretly buried in a sealed vault within the House of the Holy Spirit, the location concealed from all but the innermost Brotherhood. One hundred and twenty years later, during a rebuilding of the House, a hidden door was discovered. Behind it lay a seven-sided vault illuminated not by any natural light but by a magical inner sun — perfectly preserved, containing CRC's incorruptible body surrounded by alchemical instruments, books, and inscriptions. The discovery, the <em>Fama</em> proclaims, is a sign that the time of reformation has come.
+        </p>
+        <blockquote class="border-l-2 border-rose-500/40 pl-4 italic text-rose-200/70 text-sm">
+          "We are born of God, we die in Jesus, and we live again through the Holy Spirit." — Inscription reportedly found in the vault of Christian Rosenkreutz
+        </blockquote>
+      </div>
+    </div>
+
+    <!-- SECTION 3: CORE TEACHINGS -->
+    <div class="bg-gradient-to-br from-red-950/40 to-rose-950/20 border border-rose-800/30 rounded-3xl p-8 space-y-6">
+      <h2 class="font-cinzel text-2xl text-rose-200 tracking-wide text-center">Core Rosicrucian Teachings</h2>
+      <div class="max-w-4xl mx-auto text-rose-100/80 text-sm leading-relaxed space-y-5">
+        <p>
+          The Rosicrucian philosophy as presented in the manifestos is not a systematic doctrine but a synthesis of several currents of Renaissance esotericism, unified by a Christian framework and oriented towards practical service. Its main intellectual ingredients are:
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div class="bg-red-950/30 border border-rose-800/20 rounded-xl p-4 space-y-2">
+            <h3 class="text-rose-300 font-semibold text-xs tracking-wide uppercase">Hermetic Philosophy</h3>
+            <p class="text-rose-100/75 text-sm">The <em>Corpus Hermeticum</em> and the <em>Emerald Tablet</em> — the Hermetic doctrine of correspondence ("as above, so below"), the unity of all things in God, and the transformation of the human being through knowledge of the divine order — form the philosophical backbone of Rosicrucian thought.</p>
+          </div>
+          <div class="bg-red-950/30 border border-rose-800/20 rounded-xl p-4 space-y-2">
+            <h3 class="text-rose-300 font-semibold text-xs tracking-wide uppercase">Spiritual Alchemy</h3>
+            <p class="text-rose-100/75 text-sm">Not merely the physical transformation of base metals into gold, but the spiritual transmutation of the human being — from the leaden state of ignorance, self-centredness, and spiritual sleep into the golden state of wisdom, compassion, and divine union. The alchemical language of the manifestos is primarily initiatory and spiritual.</p>
+          </div>
+          <div class="bg-red-950/30 border border-rose-800/20 rounded-xl p-4 space-y-2">
+            <h3 class="text-rose-300 font-semibold text-xs tracking-wide uppercase">Kabbalah</h3>
+            <p class="text-rose-100/75 text-sm">The Tree of Life, the divine names, the angelic hierarchies, and the Kabbalistic interpretation of Scripture all feature in the broader Rosicrucian synthesis. CRC's learning in the East included Kabbalah, and the tradition draws extensively on the Christian Kabbalah of Pico della Mirandola and Johannes Reuchlin.</p>
+          </div>
+          <div class="bg-red-950/30 border border-rose-800/20 rounded-xl p-4 space-y-2">
+            <h3 class="text-rose-300 font-semibold text-xs tracking-wide uppercase">Christian Mysticism</h3>
+            <p class="text-rose-100/75 text-sm">The tradition is explicitly and sincerely Christian — particularly in the Lutheran pietist mode. The Brotherhood sees itself as a movement within Christianity, aiming at the inner reformation of human souls rather than merely external doctrinal reform. The death and resurrection of Christ is the central symbol: spiritual transformation through suffering and renewal.</p>
+          </div>
+        </div>
+        <p>
+          Their "Reformation" was conceived on a cosmic scale — not merely religious or political but a transformation of human consciousness itself: the full development of the divine potential latent in every human being, through wisdom, virtue, and service to others.
+        </p>
+        <p>
+          The concept of the <strong class="text-rose-300">Invisible College</strong> is central: the Brothers of the Rosy Cross moved through the world incognito, dressing according to local custom, practising as physicians, scientists, and counsellors, working silently for the good of humanity without seeking any recognition or worldly reward. This image — of a hidden community of enlightened servants — became one of the most potent and enduring ideas in Western esotericism.
+        </p>
+        <p>
+          <strong class="text-rose-300">The Rose and the Cross:</strong> The rose symbolises the unfolding soul — in Rosicrucian interpretation, the blood of Christ, spiritual development, and the opening of the heart centre. The cross symbolises the material world, the crucifixion and sacrifice, and also the four elements and cardinal directions of existence. Together they express the fundamental Rosicrucian insight: that the soul's redemption is accomplished not by escaping the material world but by undergoing transformation within it — the rose flowering at the centre of the cross.
+        </p>
+      </div>
+    </div>
+
+    <!-- SECTION 4: HISTORICAL ORDERS -->
+    <div class="space-y-6">
+      <h2 class="font-cinzel text-2xl text-rose-200 tracking-wide text-center">Historical Rosicrucian Orders</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+        <div class="ros-card bg-gradient-to-br from-red-950/50 to-rose-950/30 border border-rose-800/30 rounded-2xl p-6 space-y-3">
+          <div class="flex items-center gap-3">
+            <span class="text-2xl">⚜️</span>
+            <div>
+              <h3 class="font-cinzel text-rose-200 text-sm">Gold und Rosenkreutz</h3>
+              <p class="text-rose-400/60 text-xs">Germany · c. 1750–1777</p>
+            </div>
+          </div>
+          <p class="text-rose-100/75 text-sm leading-relaxed">
+            The Orden des Gold- und Rosenkreutzes was a hierarchical initiatory order that attracted high-ranking Freemasons, alchemists, and occultists in the German-speaking lands. Frederick William II of Prussia — who would later become King of Prussia — was a member. Members practised ceremonial magic and alchemy alongside Masonic ritual, organised in nine grades from Juniores to Magus.
+          </p>
+        </div>
+
+        <div class="ros-card bg-gradient-to-br from-red-950/50 to-rose-950/30 border border-rose-800/30 rounded-2xl p-6 space-y-3">
+          <div class="flex items-center gap-3">
+            <span class="text-2xl">🏴󠁧󠁢󠁥󠁮󠁧󠁿</span>
+            <div>
+              <h3 class="font-cinzel text-rose-200 text-sm">Societas Rosicruciana in Anglia</h3>
+              <p class="text-rose-400/60 text-xs">England · Founded 1866</p>
+            </div>
+          </div>
+          <p class="text-rose-100/75 text-sm leading-relaxed">
+            Founded in 1866 in England by Robert Wentworth Little, and open only to Master Masons of good standing. The SRICF was hugely influential in the Victorian occult revival: several of the founders of the Hermetic Order of the Golden Dawn — including William Wynn Westcott and William Robert Woodman — were members. Its nine grades of initiation provided a model for subsequent occult orders.
+          </p>
+        </div>
+
+        <div class="ros-card bg-gradient-to-br from-red-950/50 to-rose-950/30 border border-rose-800/30 rounded-2xl p-6 space-y-3">
+          <div class="flex items-center gap-3">
+            <span class="text-2xl">🌺</span>
+            <div>
+              <h3 class="font-cinzel text-rose-200 text-sm">Rosicrucian Fellowship</h3>
+              <p class="text-rose-400/60 text-xs">USA · Founded 1909</p>
+            </div>
+          </div>
+          <p class="text-rose-100/75 text-sm leading-relaxed">
+            Founded by Max Heindel (born Carl Louis von Grasshoff, 1865–1919) in Oceanside, California in 1909. Heindel claimed to have received teachings directly from a "Rosicrucian Elder Brother" who appeared to him in Germany. His foundational work, <em>The Rosicrucian Cosmo-Conception</em> (1909), synthesises Anthroposophical and Theosophical cosmology with Rosicrucian themes around the evolution of human consciousness through successive "root races."
+          </p>
+        </div>
+
+        <div class="ros-card bg-gradient-to-br from-red-950/50 to-rose-950/30 border border-rose-800/30 rounded-2xl p-6 space-y-3">
+          <div class="flex items-center gap-3">
+            <span class="text-2xl">🌍</span>
+            <div>
+              <h3 class="font-cinzel text-rose-200 text-sm">AMORC</h3>
+              <p class="text-rose-400/60 text-xs">USA · Founded 1915</p>
+            </div>
+          </div>
+          <p class="text-rose-100/75 text-sm leading-relaxed">
+            The Ancient Mystical Order Rosae Crucis, founded by H. Spencer Lewis in New York in 1915. AMORC grew to become the largest modern Rosicrucian organisation worldwide, with hundreds of thousands of members in dozens of countries. It operates on a correspondence-course model in which students progress through degrees by post (and now online). Its headquarters — the Rosicrucian Park — are located in San Jose, California, where it maintains a significant Egyptian museum.
+          </p>
+        </div>
+
+        <div class="ros-card bg-gradient-to-br from-red-950/50 to-rose-950/30 border border-rose-800/30 rounded-2xl p-6 space-y-3">
+          <div class="flex items-center gap-3">
+            <span class="text-2xl">🕊️</span>
+            <div>
+              <h3 class="font-cinzel text-rose-200 text-sm">Lectorium Rosicrucianum</h3>
+              <p class="text-rose-400/60 text-xs">Netherlands · Founded 1924</p>
+            </div>
+          </div>
+          <p class="text-rose-100/75 text-sm leading-relaxed">
+            Founded in 1924 in Haarlem by Jan van Rijckenborgh (1896–1968) and Catharose de Petri (1902–1990), two Dutch seekers who had formerly worked with the Rosicrucian Fellowship. The Lectorium takes a Christian Gnostic orientation and emphasises the "transfiguration path" — a genuine and total spiritual transformation of the entire human being, not merely intellectual development or moral improvement. Active internationally to this day.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- SECTION 5: KEY FIGURES -->
+    <div class="space-y-6">
+      <h2 class="font-cinzel text-2xl text-rose-200 tracking-wide text-center">Key Figures</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+        <div class="ros-card bg-gradient-to-br from-red-950/40 to-rose-950/20 border border-rose-800/25 rounded-2xl p-5 space-y-2">
+          <div class="flex items-center gap-3">
+            <span class="text-xl">✍️</span>
+            <div>
+              <h3 class="font-cinzel text-rose-200 text-sm">Johann Valentin Andreae</h3>
+              <p class="text-rose-400/60 text-xs">1586–1654 · Lutheran Pastor</p>
+            </div>
+          </div>
+          <p class="text-rose-100/70 text-sm leading-relaxed">
+            German Lutheran pastor and theologian, definitively the author of the <em>Chemical Wedding</em> and possibly the primary author of all three manifestos, though this remains debated. He later called the <em>Chemical Wedding</em> a youthful <em>ludibrium</em> (jest or playful game) — scholars debate whether this was a sincere disavowal, prudent distancing from dangerous associations, or even misdirection. His utopian work <em>Christianopolis</em> (1619) describes an ideal Christian commonwealth.
+          </p>
+        </div>
+
+        <div class="ros-card bg-gradient-to-br from-red-950/40 to-rose-950/20 border border-rose-800/25 rounded-2xl p-5 space-y-2">
+          <div class="flex items-center gap-3">
+            <span class="text-xl">🔬</span>
+            <div>
+              <h3 class="font-cinzel text-rose-200 text-sm">Robert Fludd</h3>
+              <p class="text-rose-400/60 text-xs">1574–1637 · English Physician</p>
+            </div>
+          </div>
+          <p class="text-rose-100/70 text-sm leading-relaxed">
+            The most prominent public defender of the Rosicrucians in England, Fludd was an Oxford-educated physician and committed occultist. His vast illustrated encyclopaedias — the two-volume <em>Utriusque Cosmi Historia</em> (History of the Two Worlds, 1617–1621) — present the entire Hermetic-Rosicrucian worldview in extraordinary detail, featuring some of the most beautiful symbolic engravings of the era, many by Matthäus Merian the Elder.
+          </p>
+        </div>
+
+        <div class="ros-card bg-gradient-to-br from-red-950/40 to-rose-950/20 border border-rose-800/25 rounded-2xl p-5 space-y-2">
+          <div class="flex items-center gap-3">
+            <span class="text-xl">🦅</span>
+            <div>
+              <h3 class="font-cinzel text-rose-200 text-sm">Michael Maier</h3>
+              <p class="text-rose-400/60 text-xs">1568–1622 · German Alchemist</p>
+            </div>
+          </div>
+          <p class="text-rose-100/70 text-sm leading-relaxed">
+            German physician, alchemist, and personal physician to the Emperor Rudolf II in Prague. Maier travelled extensively across Europe in search of genuine Rosicrucians. His emblem books — <em>Atalanta Fugiens</em> (1617), with 50 emblems each accompanied by a musical fugue, and <em>Symbola Aureae Mensae</em> (1617) — are masterpieces of alchemical symbolism and among the most extraordinary books of the 17th century.
+          </p>
+        </div>
+
+        <div class="ros-card bg-gradient-to-br from-red-950/40 to-rose-950/20 border border-rose-800/25 rounded-2xl p-5 space-y-2">
+          <div class="flex items-center gap-3">
+            <span class="text-xl">🏴󠁧󠁢󠁷󠁬󠁳󠁿</span>
+            <div>
+              <h3 class="font-cinzel text-rose-200 text-sm">Thomas Vaughan</h3>
+              <p class="text-rose-400/60 text-xs">1621–1666 · Welsh Alchemist</p>
+            </div>
+          </div>
+          <p class="text-rose-100/70 text-sm leading-relaxed">
+            Welsh alchemist and Rosicrucian enthusiast who produced the first English translation of the <em>Fama</em> and <em>Confessio</em> (1652), introducing the manifestos to an English-speaking audience. Published philosophical works under the pen name Eugenius Philalethes. Twin brother of the celebrated metaphysical poet Henry Vaughan, whose spiritual poetry ("I saw Eternity the other night…") reflects a shared Hermetic sensibility.
+          </p>
+        </div>
+
+        <div class="ros-card bg-gradient-to-br from-red-950/40 to-rose-950/20 border border-rose-800/25 rounded-2xl p-5 space-y-2">
+          <div class="flex items-center gap-3">
+            <span class="text-xl">🧪</span>
+            <div>
+              <h3 class="font-cinzel text-rose-200 text-sm">Francis Bacon</h3>
+              <p class="text-rose-400/60 text-xs">1561–1626 · English Philosopher</p>
+            </div>
+          </div>
+          <p class="text-rose-100/70 text-sm leading-relaxed">
+            English philosopher, statesman, and founder of the modern inductive scientific method. His posthumous utopia <em>New Atlantis</em> (1627) describes Solomon's House — a scientific academy dedicated to the benefit of mankind, strikingly similar in structure and ethos to the Rosicrucian Invisible College. The historian Frances Yates argued persuasively that Bacon was deeply influenced by Rosicrucian ideals, making him a crucial link between the esoteric and scientific traditions.
+          </p>
+        </div>
+
+        <div class="ros-card bg-gradient-to-br from-red-950/40 to-rose-950/20 border border-rose-800/25 rounded-2xl p-5 space-y-2">
+          <div class="flex items-center gap-3">
+            <span class="text-xl">🏛️</span>
+            <div>
+              <h3 class="font-cinzel text-rose-200 text-sm">Elias Ashmole</h3>
+              <p class="text-rose-400/60 text-xs">1617–1692 · English Antiquary</p>
+            </div>
+          </div>
+          <p class="text-rose-100/70 text-sm leading-relaxed">
+            English antiquary, astrologer, and founder of the Ashmolean Museum in Oxford — the first university museum in the world. Deeply interested in alchemy and Rosicrucianism, his <em>Theatrum Chemicum Britannicum</em> (1652) is a major anthology of English alchemical poetry. One of the earliest recorded speculative Freemasons (initiated 1646), Ashmole represents the crucial link between English Rosicrucianism and the nascent Masonic tradition.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- SECTION 6: LEGACY -->
+    <div class="bg-gradient-to-br from-red-950/40 to-rose-950/20 border border-rose-800/30 rounded-3xl p-8 space-y-5">
+      <h2 class="font-cinzel text-2xl text-rose-200 tracking-wide text-center">The Rosicrucian Legacy</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-rose-100/80 text-sm leading-relaxed">
+        <div class="space-y-4">
+          <div>
+            <h3 class="text-rose-300 font-semibold mb-1">Freemasonry</h3>
+            <p>The Invisible College concept, the graded initiatory system, the themes of Solomon's Temple and hidden wisdom preserved through successive generations — all of these flow directly into the founding of speculative Freemasonry (Grand Lodge of England, 1717). The Rose Croix degree (18°) within Scottish Rite Freemasonry makes the connection explicit, incorporating Rosicrucian symbolism at a central place within the Masonic system of degrees.</p>
+          </div>
+          <div>
+            <h3 class="text-rose-300 font-semibold mb-1">The Royal Society</h3>
+            <p>Founded in London in 1660, partly inspired by the Baconian and Rosicrucian ideal of a college of learned men dedicated to the advancement of knowledge through careful observation and experiment. Several founding Fellows — including Elias Ashmole and Robert Boyle — had deep interests in alchemy and Rosicrucianism. The historian Frances Yates argued in her <em>The Rosicrucian Enlightenment</em> (1972) that the Rosicrucian movement was a key catalyst for the Scientific Revolution.</p>
+          </div>
+          <div>
+            <h3 class="text-rose-300 font-semibold mb-1">The Hermetic Order of the Golden Dawn</h3>
+            <p>Founded in London in 1888 by Freemasons with SRICF connections (William Wynn Westcott, Samuel Liddell MacGregor Mathers, William Robert Woodman), the Golden Dawn synthesised Rosicrucian, Kabbalistic, Hermetic, and astrological traditions into the most influential Western magical order of the modern era. Its members included W.B. Yeats, Aleister Crowley, Arthur Machen, and Evelyn Underhill.</p>
+          </div>
+        </div>
+        <div class="space-y-4">
+          <div>
+            <h3 class="text-rose-300 font-semibold mb-1">Academic Scholarship</h3>
+            <p>Frances Yates's <em>The Rosicrucian Enlightenment</em> (1972) remains the foundational scholarly work, arguing for the Rosicrucian manifestos' significance as a moment when esoteric, scientific, and political reformist ideals briefly coalesced in early 17th-century Europe. More recent scholars — including Christoph Meinel, Carlos Gilly, and Wouter Hanegraaff — have qualified aspects of Yates's thesis whilst affirming the cultural significance of the phenomenon. The question of authorship and the exact nature of any actual brotherhood continues to generate lively scholarly debate.</p>
+          </div>
+          <div>
+            <h3 class="text-rose-300 font-semibold mb-1">Modern Rosicrucianism</h3>
+            <p>AMORC, the Rosicrucian Fellowship, and the Lectorium Rosicrucianum all continue Rosicrucian practice today, with different emphases and interpretations of the tradition. The image of the hidden Brotherhood — wise, selfless servants of humanity working quietly through the centuries — remains one of the most potent and romantic in the Western esoteric imagination, inspiring new generations of seekers in every era.</p>
+          </div>
+          <div>
+            <h3 class="text-rose-300 font-semibold mb-1">The Continuing Mystery</h3>
+            <p>Whether a literal Brotherhood of the Rosy Cross ever existed — and whether it still does — remains unknown. The manifestos may have been an elaborate prank, a sincere utopian programme, a Paracelsian reform manifesto, or the announcement of a genuine initiatory current. The mystery itself has proven more generative than any historical answer could have been: it invited — and continues to invite — the reader to imagine what a truly wise, truly selfless, truly invisible college of servants might look like.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BACK LINK -->
+    <div class="text-center mt-4">
+      <a href="/western-esotericism" class="text-rose-300/60 hover:text-rose-300 text-sm transition-colors">← Western Esotericism</a>
+    </div>
+
+  </div><!-- end content wrapper -->
+
+  <!-- FOOTER -->
+  <footer class="relative z-10 text-center py-8 text-rose-400/40 text-xs mt-8">
+    <p class="italic">"We acknowledge ourselves to be true Christians, not those imagined by the Papacy." — <em>Fama Fraternitatis</em> (1614)</p>
+    <p class="mt-2">Esoteric Wisdom · Built with ✨ in Rust</p>
+    <p class="mt-2"><a href="/home" class="hover:text-rose-300 transition-colors">← Back to Portal</a></p>
+  </footer>
+
+  <script>
+    const sf = document.getElementById('starfield');
+    for (let i = 0; i < 200; i++) {
+      const s = document.createElement('div');
+      s.className = 'star';
+      const size = Math.random() * 2.5 + 0.5;
+      s.style.cssText = `width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--dur:${2+Math.random()*4}s;--delay:${Math.random()*5}s;opacity:${0.2+Math.random()*0.8};`;
+      sf.appendChild(s);
+    }
+  </script>
+</body>
+</html>
