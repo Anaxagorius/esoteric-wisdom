@@ -91,6 +91,10 @@
         <a href="/khasarov-mirror" class="nav-link text-violet-200 hover:text-amber-300">Khasarov Mirror</a>
         <a href="/western-esotericism" class="nav-link text-violet-200 hover:text-amber-300">Western Esotericism</a>
         <a href="/journal/reflections" class="nav-link text-emerald-300 hover:text-emerald-200">✨ Reflections</a>
+        {% if is_user %}
+        <a href="/journal/my" class="nav-link text-emerald-300 hover:text-emerald-200 font-semibold">📔 My Journal</a>
+        <a href="/auth/logout" class="text-xs text-red-400/70 hover:text-red-300 transition-colors">Sign out</a>
+        {% endif %}
         {% if is_admin %}
         <a href="/journal" class="nav-link text-amber-300 hover:text-amber-200 font-semibold">📔 Journal</a>
         <a href="/admin/change-password" class="nav-link text-violet-300 hover:text-violet-200 text-xs">🔒 Change PW</a>
@@ -240,6 +244,15 @@
           <p class="text-xs text-violet-100/80 leading-relaxed">Read curated journal reflections shared from the inner sanctum. Wisdom made visible.</p>
           <div class="mt-4 text-xs text-emerald-300/70">→ Read Reflections</div>
         </a>
+
+        {% if is_user %}
+        <a href="/journal/my" class="section-card bg-gradient-to-br from-emerald-900/60 to-teal-950/60 border border-emerald-500/50 rounded-2xl p-6 backdrop-blur-md shadow-xl shadow-emerald-500/20 w-full">
+          <div class="text-4xl mb-3">📔</div>
+          <h2 class="font-cinzel text-base font-semibold mb-2 text-emerald-300">My Journal</h2>
+          <p class="text-xs text-violet-100/80 leading-relaxed">Your private sanctuary. Record your spiritual journey, reflections, and inner wisdom.</p>
+          <div class="mt-4 text-xs text-emerald-300/70">→ Open Journal</div>
+        </a>
+        {% endif %}
 
         {% if is_admin %}
         <a href="/journal" class="section-card bg-gradient-to-br from-amber-800/60 to-yellow-900/60 border border-amber-400/60 rounded-2xl p-6 backdrop-blur-md shadow-xl shadow-amber-500/20 w-full">
