@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Runes &amp; Runestones — Esoteric Wisdom</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+    <style>
+      body {
+        background: radial-gradient(ellipse at top, #1a0a2e 0%, #0d1117 30%, #020617 70%, #000000 100%);
+        font-family: 'Raleway', sans-serif;
+      }
+      .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+      @keyframes twinkle { 0%,100% { opacity: 0.2; } 50% { opacity: 1; } }
+      .star { position: absolute; border-radius: 50%; background: white; animation: twinkle var(--dur,3s) ease-in-out infinite; animation-delay: var(--delay,0s); }
+      @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+      .floating { animation: float 5s ease-in-out infinite; }
+      @keyframes shimmer {
+        0% { background-position: -200% center; }
+        100% { background-position: 200% center; }
+      }
+      @keyframes rune-glow {
+        0%, 100% { box-shadow: 0 0 20px rgba(251,191,36,0.25), 0 0 40px rgba(251,191,36,0.1); }
+        50% { box-shadow: 0 0 40px rgba(251,191,36,0.5), 0 0 80px rgba(251,191,36,0.25); }
+      }
+      .aurora-text {
+        background: linear-gradient(90deg, #fbbf24, #f97316, #c084fc, #fbbf24);
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        animation: shimmer 5s linear infinite;
+      }
+      .rune-card {
+        transition: all 0.35s ease;
+        cursor: default;
+      }
+      .rune-card:hover {
+        transform: translateY(-7px) scale(1.01);
+        box-shadow: 0 24px 64px rgba(251,191,36,0.2);
+        border-color: rgba(251,191,36,0.6) !important;
+      }
+      .glow-card { animation: rune-glow 4s ease-in-out infinite; }
+      .rune-symbol {
+        font-size: 2rem;
+        line-height: 1;
+        text-shadow: 0 0 16px rgba(251,191,36,0.7);
+      }
+      .usage-step { counter-increment: step-counter; }
+      .usage-step::before {
+        content: counter(step-counter);
+        display: inline-flex; align-items: center; justify-content: center;
+        width: 28px; height: 28px; border-radius: 50%;
+        background: linear-gradient(135deg, #f97316, #c084fc);
+        color: white; font-size: 0.75rem; font-weight: 700;
+        margin-right: 12px; flex-shrink: 0;
+      }
+      .steps-list { counter-reset: step-counter; }
+    </style>
+  </head>
+  <body class="min-h-screen text-white px-4 py-8">
+    <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+
+    <div class="relative z-10 max-w-6xl mx-auto space-y-10">
+
+      <!-- Navigation -->
+      <nav class="flex items-center justify-between bg-black/30 backdrop-blur-md rounded-2xl px-6 py-3 border border-amber-500/20">
+        <a href="/home" class="font-cinzel text-amber-300 text-sm tracking-widest">✦ Esoteric Wisdom</a>
+        <div class="flex gap-6 text-xs text-violet-200 flex-wrap justify-end">
+          <a href="/astrology" class="hover:text-amber-300 transition-colors">Astrology</a>
+          <a href="/meditation" class="hover:text-amber-300 transition-colors">Meditation</a>
+          <a href="/tarot/select" class="hover:text-amber-300 transition-colors">Tarot</a>
+          <a href="/numerology" class="hover:text-amber-300 transition-colors">Numerology</a>
+          <a href="/crystals" class="hover:text-amber-300 transition-colors">Crystals</a>
+          <a href="/runes" class="text-amber-300 font-semibold">Runes</a>
+          <a href="https://ko-fi.com/esotericwisdom" target="_blank" rel="noopener noreferrer" class="px-3 py-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-white font-semibold hover:scale-105 transition-transform">☕ Support</a>
+        </div>
+      </nav>
+
+      <!-- Hero -->
+      <header class="text-center py-6">
+        <div class="floating text-7xl mb-4">ᚱ</div>
+        <h1 class="font-cinzel text-4xl md:text-5xl font-bold mb-3">
+          <span class="aurora-text">Runes &amp; Runestones</span>
+        </h1>
+        <p class="text-amber-100/80 text-lg max-w-2xl mx-auto leading-relaxed">
+          Carved in stone, whispered by Odin, wielded by Vikings and skalds — runes are among humanity's most potent
+          symbols. Ancient alphabet, living oracle, and sacred key to the cosmic order.
+        </p>
+      </header>
+
+      <!-- What Are Runes -->
+      <section class="bg-gradient-to-br from-amber-900/30 to-stone-900/40 border border-amber-500/40 rounded-3xl p-8 backdrop-blur-md shadow-2xl">
+        <h2 class="font-cinzel text-2xl font-semibold mb-5 text-amber-300">✦ What Are Runes?</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <p class="text-amber-100/90 text-sm leading-relaxed mb-4">
+              Runes are the letters of an ancient Germanic writing system used by Norse, Anglo-Saxon, and other
+              Germanic peoples from roughly the 2nd century CE onward. But runes were never merely an alphabet. The
+              word <em class="text-amber-300">rune</em> derives from the Proto-Germanic <em>*rūnō</em> — meaning
+              <strong class="text-amber-300">"secret," "mystery,"</strong> or "whisper." To carve a rune was to
+              inscribe a living force into the material world.
+            </p>
+            <p class="text-amber-100/90 text-sm leading-relaxed mb-4">
+              Each runic character is not simply a phonetic symbol but a <em>concept</em> — a force of nature, a
+              cosmic principle, a living energy. The rune <strong>ᚠ (Fehu)</strong> does not just sound like "F"; it
+              embodies wealth, cattle, primal fire, and the flowing vitality of the universe. In this sense, runes
+              are closer to Chinese ideograms or Egyptian hieroglyphs than to a modern alphabet.
+            </p>
+            <p class="text-amber-100/90 text-sm leading-relaxed">
+              A <strong class="text-amber-300">runestone</strong> is a raised stone bearing runic inscriptions.
+              Thousands survive across Scandinavia — particularly in Sweden, where over 2,500 have been found —
+              raised as memorials, boundary markers, or declarations of power. The most famous are the Jelling stones
+              of Denmark (c. 960–985 CE), raised by King Harald Bluetooth to commemorate the conversion of Denmark
+              to Christianity, standing at the very threshold between old and new worlds.
+            </p>
+          </div>
+          <div>
+            <p class="text-amber-100/90 text-sm leading-relaxed mb-4">
+              In esoteric practice, runes function as a divinatory and magical system with extraordinary depth.
+              Each rune governs a sphere of existence — love, conflict, fertility, death, fate, transformation — and
+              consulting them is less about predicting a fixed future than about illuminating the hidden currents
+              already shaping your path.
+            </p>
+            <p class="text-amber-100/90 text-sm leading-relaxed mb-4">
+              Rune magic (<em class="text-amber-300">galdr</em>) involved chanting the rune's name, carving it into
+              objects, and meditating on its essence to align with its power. Warriors carved runes onto swords and
+              shields. Healers inscribed them on amulets. Poets wove them into verse to invoke protection, love, or
+              victory.
+            </p>
+            <p class="text-amber-100/90 text-sm leading-relaxed">
+              Today, runes are used for meditation, self-reflection, divination, and as spiritual anchors — a way
+              of conversing with the deep, archaic wisdom encoded in Northern European cosmology and the mythology
+              of the Norse gods.
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-6 p-5 bg-black/30 rounded-2xl border border-amber-500/30">
+          <h3 class="font-cinzel text-base font-semibold text-amber-300 mb-3">📜 Odin and the Discovery of Runes</h3>
+          <p class="text-amber-100/80 text-sm leading-relaxed">
+            According to the Norse poem <em>Hávamál</em> ("Sayings of the High One"), the god Odin hung himself
+            upside-down from the great world-tree <em>Yggdrasil</em> for nine days and nine nights, wounded by
+            his own spear, fasting and in agony — a voluntary sacrifice of self to Self, in order to discover
+            the runes. "I took up the runes, screaming I took them, then I fell back from there." The act is one
+            of the oldest recorded accounts of shamanic initiation: entering the void to seize cosmic knowledge.
+            This myth places runes not as human invention but as forces discovered within the fabric of existence.
+          </p>
+        </div>
+      </section>
+
+      <!-- History Section -->
+      <section class="bg-gradient-to-br from-stone-900/50 to-amber-900/30 border border-stone-500/40 rounded-3xl p-8 backdrop-blur-md shadow-2xl">
+        <h2 class="font-cinzel text-2xl font-semibold mb-5 text-amber-300">✦ A History Carved in Stone</h2>
+        <div class="grid md:grid-cols-2 gap-6 mb-6">
+          <div>
+            <p class="text-amber-100/90 text-sm leading-relaxed mb-4">
+              The earliest runic inscriptions date to around <strong class="text-amber-300">150–200 CE</strong>,
+              found on objects such as combs, buckles, and spearheads across what is now Denmark and northern
+              Germany. The origin of the runic alphabet is debated — scholars trace strong parallels to the
+              Old Italic alphabets (especially Etruscan or Latin), suggesting Germanic peoples encountered these
+              scripts through contact with Roman or Mediterranean cultures and adapted them into a system uniquely
+              suited to carving in wood, bone, and stone.
+            </p>
+            <p class="text-amber-100/90 text-sm leading-relaxed mb-4">
+              The earliest full runic alphabet, the <strong class="text-amber-300">Elder Futhark</strong>, consists
+              of 24 runes arranged in three groups of eight called <em>ættir</em> (families). It was used across
+              the Germanic world from roughly 150–800 CE. The name "Futhark" derives from the first six runes:
+              <em>ᚠ ᚢ ᚦ ᚨ ᚱ ᚲ</em>.
+            </p>
+            <p class="text-amber-100/90 text-sm leading-relaxed">
+              During the <strong class="text-amber-300">Viking Age</strong> (c. 793–1066 CE), the Younger Futhark
+              emerged in Scandinavia — a reduced 16-rune alphabet adapted to phonetic shifts in the Old Norse
+              language. Paradoxically, as Viking culture flourished and literacy spread, the alphabet shrank.
+              Scholars suggest the condensed form retained a sacred quality: each character now carried even
+              more concentrated meaning.
+            </p>
+          </div>
+          <div>
+            <p class="text-amber-100/90 text-sm leading-relaxed mb-4">
+              The <strong class="text-amber-300">Anglo-Saxons</strong> carried runes to Britain, expanding the
+              Elder Futhark into the <em>Futhorc</em> — up to 33 characters — to account for additional Old
+              English sounds. The <em>Ruthwell Cross</em> (c. 7th–8th century CE), carved in runic Futhorc with
+              a passage from <em>The Dream of the Rood</em>, stands as one of the finest early Christian and
+              runic monuments.
+            </p>
+            <p class="text-amber-100/90 text-sm leading-relaxed mb-4">
+              With the Christianisation of Scandinavia and Northern Europe, runic use gradually declined through
+              the 11th–13th centuries — though in some Swedish regions, <em>dalecarlian runes</em> survived as
+              a local script into the <strong class="text-amber-300">early 20th century</strong>, one of the
+              longest continuous runic traditions in history.
+            </p>
+            <p class="text-amber-100/90 text-sm leading-relaxed">
+              The modern revival of runes as a divinatory and esoteric system gained momentum through the 19th-century
+              Romantic interest in Norse mythology and accelerated in the 20th century through figures such as
+              Ralph Blum, who popularised the casting of rune tiles in his 1982 book <em>The Book of Runes</em>.
+              Today, runes sit at the heart of modern Norse paganism (<em>Ásatrú</em>), runic yoga, and a wide
+              spectrum of spiritual practice worldwide.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid sm:grid-cols-3 gap-4">
+          <div class="bg-black/30 rounded-2xl p-4 border border-amber-500/20">
+            <h4 class="font-cinzel text-sm font-semibold text-amber-300 mb-2">Elder Futhark</h4>
+            <p class="text-amber-100/70 text-xs leading-relaxed">24 runes · c. 150–800 CE · Used across all Germanic peoples. The oldest and most widely used runic alphabet — the foundation of all modern runic study and divination.</p>
+          </div>
+          <div class="bg-black/30 rounded-2xl p-4 border border-amber-500/20">
+            <h4 class="font-cinzel text-sm font-semibold text-amber-300 mb-2">Younger Futhark</h4>
+            <p class="text-amber-100/70 text-xs leading-relaxed">16 runes · c. 800–1100 CE · Evolved in Viking Age Scandinavia. Reduced but intensified — each rune shouldered greater linguistic and symbolic weight.</p>
+          </div>
+          <div class="bg-black/30 rounded-2xl p-4 border border-amber-500/20">
+            <h4 class="font-cinzel text-sm font-semibold text-amber-300 mb-2">Anglo-Saxon Futhorc</h4>
+            <p class="text-amber-100/70 text-xs leading-relaxed">28–33 runes · c. 400–1100 CE · Used in England and Frisia. Extended the Elder Futhark to capture Old English sounds. Found in manuscripts and stone monuments.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- The Elder Futhark Compendium -->
+      <section>
+        <h2 class="font-cinzel text-2xl font-semibold mb-2 text-center text-amber-200">✧ The Elder Futhark — All 24 Runes ✧</h2>
+        <p class="text-center text-amber-100/60 text-sm mb-8">Arranged in three <em>ættir</em> (families) of eight runes each.</p>
+
+        <!-- Freyr's Ætt -->
+        <h3 class="font-cinzel text-lg font-semibold mb-4 text-orange-300">Freyr's Ætt — Runes 1–8</h3>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
+
+          <div class="rune-card bg-gradient-to-br from-amber-900/50 to-yellow-900/40 border border-amber-500/50 rounded-2xl p-5 backdrop-blur-md shadow-xl">
+            <div class="rune-symbol mb-2 text-amber-300">ᚠ</div>
+            <h4 class="font-cinzel text-base font-semibold text-amber-200">Fehu</h4>
+            <p class="text-xs text-amber-300/70 mb-2">F · Cattle · Wealth</p>
+            <p class="text-xs text-amber-100/80 leading-relaxed mb-3">The first rune — primal fire, mobile wealth, and the power of creation. Fehu governs abundance, prosperity, and the flow of vital energy. It represents earned success and the wise stewardship of resources.</p>
+            <div class="bg-black/30 rounded-xl p-2 text-xs text-amber-100/70"><strong class="text-amber-300">Keywords:</strong> Wealth, fertility, luck, success, new beginnings, fire</div>
+          </div>
+
+          <div class="rune-card bg-gradient-to-br from-stone-800/50 to-gray-900/50 border border-stone-500/40 rounded-2xl p-5 backdrop-blur-md shadow-xl">
+            <div class="rune-symbol mb-2 text-stone-300">ᚢ</div>
+            <h4 class="font-cinzel text-base font-semibold text-stone-200">Uruz</h4>
+            <p class="text-xs text-stone-400/70 mb-2">U · Aurochs · Strength</p>
+            <p class="text-xs text-stone-100/80 leading-relaxed mb-3">Named for the auroch — the wild European ox, now extinct — Uruz embodies untamed physical strength, raw vitality, and endurance. It is the rune of the body's primal power and the force that drives transformation.</p>
+            <div class="bg-black/30 rounded-xl p-2 text-xs text-stone-200/70"><strong class="text-stone-300">Keywords:</strong> Strength, health, primal force, courage, transition, wildness</div>
+          </div>
+
+          <div class="rune-card bg-gradient-to-br from-indigo-900/50 to-blue-900/40 border border-indigo-500/40 rounded-2xl p-5 backdrop-blur-md shadow-xl">
+            <div class="rune-symbol mb-2 text-indigo-300">ᚦ</div>
+            <h4 class="font-cinzel text-base font-semibold text-indigo-200">Thurisaz</h4>
+            <p class="text-xs text-indigo-400/70 mb-2">Th · Giant · Thorn</p>
+            <p class="text-xs text-indigo-100/80 leading-relaxed mb-3">The thorn, the giant, the force of Thor's hammer. Thurisaz is protective and reactive — a weapon and a boundary. It guards against danger but warns of conflict or obstacles that must be confronted rather than avoided.</p>
+            <div class="bg-black/30 rounded-xl p-2 text-xs text-indigo-200/70"><strong class="text-indigo-300">Keywords:</strong> Protection, conflict, Thor, directed force, boundaries, defence</div>
+          </div>
+
+          <div class="rune-card bg-gradient-to-br from-sky-900/50 to-cyan-900/40 border border-sky-500/40 rounded-2xl p-5 backdrop-blur-md shadow-xl">
+            <div class="rune-symbol mb-2 text-sky-300">ᚨ</div>
+            <h4 class="font-cinzel text-base font-semibold text-sky-200">Ansuz</h4>
+            <p class="text-xs text-sky-400/70 mb-2">A · Odin · The Divine</p>
+            <p class="text-xs text-sky-100/80 leading-relaxed mb-3">The rune of Odin, the All-Father, and of divine breath, language, and wisdom. Ansuz governs communication, inspiration, and messages from the higher mind. It is the rune of the poet and the prophet.</p>
+            <div class="bg-black/30 rounded-xl p-2 text-xs text-sky-200/70"><strong class="text-sky-300">Keywords:</strong> Communication, wisdom, Odin, inspiration, messages, truth</div>
+          </div>
+
+          <div class="rune-card bg-gradient-to-br from-orange-900/50 to-red-900/40 border border-orange-500/40 rounded-2xl p-5 backdrop-blur-md shadow-xl">
+            <div class="rune-symbol mb-2 text-orange-300">ᚱ</div>
+            <h4 class="font-cinzel text-base font-semibold text-orange-200">Raidho</h4>
+            <p class="text-xs text-orange-400/70 mb-2">R · Wagon · Journey</p>
+            <p class="text-xs text-orange-100/80 leading-relaxed mb-3">The wheel, the road, the cosmic rhythm. Raidho governs travel — both physical journeys and the soul's journey through life. It speaks of right action, cycles, and the importance of direction and timing.</p>
+            <div class="bg-black/30 rounded-xl p-2 text-xs text-orange-200/70"><strong class="text-orange-300">Keywords:</strong> Journey, movement, rhythm, right action, travel, cosmic order</div>
+          </div>
+
+          <div class="rune-card bg-gradient-to-br from-yellow-900/50 to-amber-900/40 border border-yellow-500/40 rounded-2xl p-5 backdrop-blur-md shadow-xl">
+            <div class="rune-symbol mb-2 text-yellow-300">ᚲ</div>
+            <h4 class="font-cinzel text-base font-semibold text-yellow-200">Kenaz</h4>
+            <p class="text-xs text-yellow-400/70 mb-2">K · Torch · Knowledge</p>
+            <p class="text-xs text-yellow-100/80 leading-relaxed mb-3">The torch held in the dark. Kenaz is the rune of fire, craft, and illuminated knowledge. It represents creativity, artistic skill, inner light, and the spark that ignites transformation or passion.</p>
+            <div class="bg-black/30 rounded-xl p-2 text-xs text-yellow-200/70"><strong class="text-yellow-300">Keywords:</strong> Knowledge, fire, creativity, craft, illumination, passion</div>
+          </div>
+
+          <div class="rune-card bg-gradient-to-br from-green-900/50 to-emerald-900/40 border border-green-500/40 rounded-2xl p-5 backdrop-blur-md shadow-xl">
+            <div class="rune-symbol mb-2 text-green-300">ᚷ</div>
+            <h4 class="font-cinzel text-base font-semibold text-green-200">Gebo</h4>
+            <p class="text-xs text-green-400/70 mb-2">G · Gift · Partnership</p>
+            <p class="text-xs text-green-100/80 leading-relaxed mb-3">The sacred gift and the reciprocal bond it creates. Gebo is the rune of generosity, partnership, and the balanced exchange that binds individuals, communities, and humans to the divine. It is one of very few runes with no reversed meaning.</p>
+            <div class="bg-black/30 rounded-xl p-2 text-xs text-green-200/70"><strong class="text-green-300">Keywords:</strong> Gift, exchange, partnership, generosity, love, union</div>
+          </div>
+
+          <div class="rune-card bg-gradient-to-br from-violet-900/50 to-purple-900/40 border border-violet-500/40 rounded-2xl p-5 backdrop-blur-md shadow-xl">
+            <div class="rune-symbol mb-2 text-violet-300">ᚹ</div>
+            <h4 class="font-cinzel text-base font-semibold text-violet-200">Wunjo</h4>
+            <p class="text-xs text-violet-400/70 mb-2">W/V · Joy · Bliss</p>
+            <p class="text-xs text-violet-100/80 leading-relaxed mb-3">The rune of joy, harmony, and the fellowship of the clan. Wunjo represents the deep contentment that arises when one is aligned with their true path and at home among their people. It is a rune of belonging and of wishes fulfilled.</p>
+            <div class="bg-black/30 rounded-xl p-2 text-xs text-violet-200/70"><strong class="text-violet-300">Keywords:</strong> Joy, harmony, wish fulfilment, belonging, light, fellowship</div>
+          </div>
+
+        </div>
+
+        <!-- Heimdall's Ætt -->
+        <h3 class="font-cinzel text-lg font-semibold mb-4 text-teal-300">Heimdall's Ætt — Runes 9–16</h3>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
+
+          <div class="rune-card bg-gradient-to-br from-slate-800/50 to-zinc-900/50 border border-slate-400/30 rounded-2xl p-5 backdrop-blur-md shadow-xl">
+            <div class="rune-symbol mb-2 text-slate-300">ᚺ</div>
+            <h4 class="font-cinzel text-base font-semibold text-slate-200">Hagalaz</h4>
+            <p class="text-xs text-slate-400/70 mb-2">H · Hail · Disruption</p>
+            <p class="text-xs text-slate-100/80 leading-relaxed mb-3">Hailstones — sudden, uncontrollable, destructive, and yet necessary. Hagalaz is the rune of elemental disruption, sudden change, and crisis that ultimately clears the way for growth. The most feared rune in divination, but also a herald of liberation.</p>
+            <div class="bg-black/30 rounded-xl p-2 text-xs text-slate-200/70"><strong class="text-slate-300">Keywords:</strong> Disruption, hail, elemental force, sudden change, crisis, purification</div>
+          </div>
+
+          <div class="rune-card bg-gradient-to-br from-blue-900/50 to-indigo-900/40 border border-blue-500/40 rounded-2xl p-5 backdrop-blur-md shadow-xl">
+            <div class="rune-symbol mb-2 text-blue-300">ᚾ</div>
+            <h4 class="font-cinzel text-base font-semibold text-blue-200">Nauthiz</h4>
+            <p class="text-xs text-blue-400/70 mb-2">N · Need · Constraint</p>
+            <p class="text-xs text-blue-100/80 leading-relaxed mb-3">The fire born of necessity. Nauthiz represents need, constraint, and the friction that generates inner strength. The ancients made fire by rubbing two sticks together — necessity as the mother of power. This rune teaches that hardship contains hidden gifts.</p>
+            <div class="bg-black/30 rounded-xl p-2 text-xs text-blue-200/70"><strong class="text-blue-300">Keywords:</strong> Need, constraint, necessity, endurance, shadow work, inner fire</div>
+          </div>
+
+          <div class="rune-card bg-gradient-to-br from-cyan-900/50 to-teal-900/40 border border-cyan-500/40 rounded-2xl p-5 backdrop-blur-md shadow-xl">
+            <div class="rune-symbol mb-2 text-cyan-300">ᛁ</div>
+            <h4 class="font-cinzel text-base font-semibold text-cyan-200">Isaz</h4>
+            <p class="text-xs text-cyan-400/70 mb-2">I · Ice · Stillness</p>
+            <p class="text-xs text-cyan-100/80 leading-relaxed mb-3">Ice — pure, still, immovable. Isaz is the rune of standstill, concentration, and the power of waiting. It appears when forward motion is impossible or inadvisable, calling for patience, self-discipline, and introspection.</p>
+            <div class="bg-black/30 rounded-xl p-2 text-xs text-cyan-200/70"><strong class="text-cyan-300">Keywords:</strong> Ice, stillness, standstill, concentration, patience, self-mastery</div>
+          </div>
+
+          <div class="rune-card bg-gradient-to-br from-lime-900/50 to-green-900/40 border border-lime-500/40 rounded-2xl p-5 backdrop-blur-md shadow-xl">
+            <div class="rune-symbol mb-2 text-lime-300">ᛃ</div>
+            <h4 class="font-cinzel text-base font-semibold text-lime-200">Jera</h4>
+            <p class="text-xs text-lime-400/70 mb-2">J/Y · Year · Harvest</p>
+            <p class="text-xs text-lime-100/80 leading-relaxed mb-3">The completed cycle of the year and the harvest earned by patient effort. Jera is one of the most positive runes — it assures that right action over time yields abundant results. A rune of good timing, cyclical renewal, and the reward of perseverance.</p>
+            <div class="bg-black/30 rounded-xl p-2 text-xs text-lime-200/70"><strong class="text-lime-300">Keywords:</strong> Harvest, cycle, reward, patience, seasons, natural law</div>
+          </div>
+
+          <div class="rune-card bg-gradient-to-br from-emerald-900/50 to-teal-900/40 border border-emerald-500/40 rounded-2xl p-5 backdrop-blur-md shadow-xl">
+            <div class="rune-symbol mb-2 text-emerald-300">ᛇ</div>
+            <h4 class="font-cinzel text-base font-semibold text-emerald-200">Eihwaz</h4>
+            <p class="text-xs text-emerald-400/70 mb-2">Ei · Yew Tree · Axis</p>
+            <p class="text-xs text-emerald-100/80 leading-relaxed mb-3">The yew tree — ancient, poisonous, and immortal, the tree of death and rebirth. Eihwaz is the axis of the world, linked to Yggdrasil itself. It governs endurance, protection, the mysteries of life and death, and access to other realms.</p>
+            <div class="bg-black/30 rounded-xl p-2 text-xs text-emerald-200/70"><strong class="text-emerald-300">Keywords:</strong> Yew tree, life-death cycle, endurance, Yggdrasil, protection, shamanic vision</div>
+          </div>
+
+          <div class="rune-card bg-gradient-to-br from-pink-900/50 to-rose-900/40 border border-pink-500/40 rounded-2xl p-5 backdrop-blur-md shadow-xl">
+            <div class="rune-symbol mb-2 text-pink-300">ᛈ</div>
+            <h4 class="font-cinzel text-base font-semibold text-pink-200">Perthro</h4>
+            <p class="text-xs text-pink-400/70 mb-2">P · Lot-Cup · Fate</p>
+            <p class="text-xs text-pink-100/80 leading-relaxed mb-3">One of the most mysterious runes, Perthro is associated with the cup or vessel used for casting lots — the original rune oracle. It governs fate, chance, hidden knowledge, and the wyrd (the web of destiny). It speaks of secrets yet to be revealed.</p>
+            <div class="bg-black/30 rounded-xl p-2 text-xs text-pink-200/70"><strong class="text-pink-300">Keywords:</strong> Fate, chance, mystery, hidden things, divination, the Norns</div>
+          </div>
+
+          <div class="rune-card bg-gradient-to-br from-red-900/50 to-orange-900/40 border border-red-500/40 rounded-2xl p-5 backdrop-blur-md shadow-xl">
+            <div class="rune-symbol mb-2 text-red-300">ᛉ</div>
+            <h4 class="font-cinzel text-base font-semibold text-red-200">Algiz</h4>
+            <p class="text-xs text-red-400/70 mb-2">Z/R · Elk · Protection</p>
+            <p class="text-xs text-red-100/80 leading-relaxed mb-3">The sedge grass, the elk's antler, the raised hand of protection. Algiz is perhaps the most powerful protective rune, forming an energetic shield. It also signifies connection to the divine — the human figure reaching upward toward the gods.</p>
+            <div class="bg-black/30 rounded-xl p-2 text-xs text-red-200/70"><strong class="text-red-300">Keywords:</strong> Protection, divine connection, guardian, defence, higher self, sanctuary</div>
+          </div>
+
+          <div class="rune-card bg-gradient-to-br from-amber-800/50 to-orange-900/40 border border-amber-400/40 rounded-2xl p-5 backdrop-blur-md shadow-xl">
+            <div class="rune-symbol mb-2 text-amber-200">ᛊ</div>
+            <h4 class="font-cinzel text-base font-semibold text-amber-100">Sowilo</h4>
+            <p class="text-xs text-amber-300/70 mb-2">S · Sun · Victory</p>
+            <p class="text-xs text-amber-100/80 leading-relaxed mb-3">The sun — radiant, victorious, life-giving. Sowilo is the rune of solar power, success, wholeness, and the will to achieve. It illuminates all darkness and is associated with the solar force that drives heroes and warriors toward glory.</p>
+            <div class="bg-black/30 rounded-xl p-2 text-xs text-amber-200/70"><strong class="text-amber-300">Keywords:</strong> Sun, victory, will, wholeness, success, clarity, life force</div>
+          </div>
+
+        </div>
+
+        <!-- Tyr's Ætt -->
+        <h3 class="font-cinzel text-lg font-semibold mb-4 text-rose-300">Tyr's Ætt — Runes 17–24</h3>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+
+          <div class="rune-card bg-gradient-to-br from-red-900/50 to-rose-900/40 border border-rose-500/40 rounded-2xl p-5 backdrop-blur-md shadow-xl">
+            <div class="rune-symbol mb-2 text-rose-300">ᛏ</div>
+            <h4 class="font-cinzel text-base font-semibold text-rose-200">Tiwaz</h4>
+            <p class="text-xs text-rose-400/70 mb-2">T · Tyr · Justice</p>
+            <p class="text-xs text-rose-100/80 leading-relaxed mb-3">Named for Tyr, the one-handed god of justice who sacrificed his hand to bind the wolf Fenrir for the good of all. Tiwaz is the rune of honour, self-sacrifice, justice, and regulated conflict. The warrior's rune — carved on swords to ensure victory in fair battle.</p>
+            <div class="bg-black/30 rounded-xl p-2 text-xs text-rose-200/70"><strong class="text-rose-300">Keywords:</strong> Justice, honour, sacrifice, victory, Tyr, warrior spirit, law</div>
+          </div>
+
+          <div class="rune-card bg-gradient-to-br from-purple-900/50 to-violet-900/40 border border-purple-500/40 rounded-2xl p-5 backdrop-blur-md shadow-xl">
+            <div class="rune-symbol mb-2 text-purple-300">ᛒ</div>
+            <h4 class="font-cinzel text-base font-semibold text-purple-200">Berkana</h4>
+            <p class="text-xs text-purple-400/70 mb-2">B · Birch · Birth</p>
+            <p class="text-xs text-purple-100/80 leading-relaxed mb-3">The birch tree — the first to leaf in spring, symbol of new beginnings, nurture, and the great mother. Berkana governs birth, growth, fertility, and the tender care of what is newly begun. It is the rune of the healer and the mother.</p>
+            <div class="bg-black/30 rounded-xl p-2 text-xs text-purple-200/70"><strong class="text-purple-300">Keywords:</strong> Birth, growth, nurture, fertility, healing, new beginnings, the feminine</div>
+          </div>
+
+          <div class="rune-card bg-gradient-to-br from-teal-900/50 to-cyan-900/40 border border-teal-500/40 rounded-2xl p-5 backdrop-blur-md shadow-xl">
+            <div class="rune-symbol mb-2 text-teal-300">ᛖ</div>
+            <h4 class="font-cinzel text-base font-semibold text-teal-200">Ehwaz</h4>
+            <p class="text-xs text-teal-400/70 mb-2">E · Horse · Partnership</p>
+            <p class="text-xs text-teal-100/80 leading-relaxed mb-3">The horse and rider — the perfect partnership between two distinct beings moving as one. Ehwaz governs cooperation, trust, symbiosis, and swift progress. In shamanic practice, the horse is a psychopomp — the vehicle of the soul's journeys between worlds.</p>
+            <div class="bg-black/30 rounded-xl p-2 text-xs text-teal-200/70"><strong class="text-teal-300">Keywords:</strong> Partnership, trust, swift progress, horse, soul journeys, cooperation</div>
+          </div>
+
+          <div class="rune-card bg-gradient-to-br from-green-900/50 to-lime-900/40 border border-green-400/40 rounded-2xl p-5 backdrop-blur-md shadow-xl">
+            <div class="rune-symbol mb-2 text-green-300">ᛗ</div>
+            <h4 class="font-cinzel text-base font-semibold text-green-200">Mannaz</h4>
+            <p class="text-xs text-green-400/70 mb-2">M · Man · Humanity</p>
+            <p class="text-xs text-green-100/80 leading-relaxed mb-3">The rune of humanity itself — the self in relation to others, the divine in the human form. Mannaz calls for self-reflection, cooperation, and the acknowledgement of our shared nature. It is the rune of the examined life.</p>
+            <div class="bg-black/30 rounded-xl p-2 text-xs text-green-200/70"><strong class="text-green-300">Keywords:</strong> Humanity, self, introspection, community, the divine human, cooperation</div>
+          </div>
+
+          <div class="rune-card bg-gradient-to-br from-blue-900/50 to-sky-900/40 border border-blue-400/40 rounded-2xl p-5 backdrop-blur-md shadow-xl">
+            <div class="rune-symbol mb-2 text-blue-300">ᛚ</div>
+            <h4 class="font-cinzel text-base font-semibold text-blue-200">Laguz</h4>
+            <p class="text-xs text-blue-400/70 mb-2">L · Lake · Flow</p>
+            <p class="text-xs text-blue-100/80 leading-relaxed mb-3">Water — flowing, deep, formless, and all-encompassing. Laguz governs the unconscious, intuition, psychic ability, and the ebb and flow of emotions. It calls for surrender to the current rather than resistance, trusting the unseen depths.</p>
+            <div class="bg-black/30 rounded-xl p-2 text-xs text-blue-200/70"><strong class="text-blue-300">Keywords:</strong> Water, intuition, the unconscious, flow, psychic ability, dreams</div>
+          </div>
+
+          <div class="rune-card bg-gradient-to-br from-yellow-900/50 to-amber-900/40 border border-yellow-400/40 rounded-2xl p-5 backdrop-blur-md shadow-xl">
+            <div class="rune-symbol mb-2 text-yellow-300">ᛜ</div>
+            <h4 class="font-cinzel text-base font-semibold text-yellow-200">Ingwaz</h4>
+            <p class="text-xs text-yellow-400/70 mb-2">Ng · Ing · Fertility</p>
+            <p class="text-xs text-yellow-100/80 leading-relaxed mb-3">Named for the god Ing (Freyr), deity of fertility, peace, and the sacred harvest. Ingwaz is the rune of completion, stored potential, and the fertile seed held in stillness before its release. It marks a cycle of gestation nearing its culmination.</p>
+            <div class="bg-black/30 rounded-xl p-2 text-xs text-yellow-200/70"><strong class="text-yellow-300">Keywords:</strong> Fertility, potential, completion, Freyr, inner gestation, release</div>
+          </div>
+
+          <div class="rune-card bg-gradient-to-br from-stone-800/50 to-amber-900/40 border border-stone-500/40 rounded-2xl p-5 backdrop-blur-md shadow-xl">
+            <div class="rune-symbol mb-2 text-stone-300">ᛞ</div>
+            <h4 class="font-cinzel text-base font-semibold text-stone-200">Dagaz</h4>
+            <p class="text-xs text-stone-400/70 mb-2">D · Day · Awakening</p>
+            <p class="text-xs text-stone-100/80 leading-relaxed mb-3">The moment of dawn — the perfect balance and union of light and dark, and the breakthrough that occurs at their threshold. Dagaz is the rune of awakening, transformation, and the clarity that arrives after a long period of darkness.</p>
+            <div class="bg-black/30 rounded-xl p-2 text-xs text-stone-200/70"><strong class="text-stone-300">Keywords:</strong> Dawn, awakening, breakthrough, transformation, balance, enlightenment</div>
+          </div>
+
+          <div class="rune-card bg-gradient-to-br from-violet-900/50 to-indigo-900/40 border border-violet-400/40 rounded-2xl p-5 backdrop-blur-md shadow-xl">
+            <div class="rune-symbol mb-2 text-violet-300">ᛟ</div>
+            <h4 class="font-cinzel text-base font-semibold text-violet-200">Othala</h4>
+            <p class="text-xs text-violet-400/70 mb-2">O · Estate · Inheritance</p>
+            <p class="text-xs text-violet-100/80 leading-relaxed mb-3">The ancestral home, the inherited land, the bloodline. Othala is the final rune of the Elder Futhark — a rune of completion, heritage, and the wealth of lineage. It speaks of the gifts passed down through family, culture, and tradition, and of finding one's true home.</p>
+            <div class="bg-black/30 rounded-xl p-2 text-xs text-violet-200/70"><strong class="text-violet-300">Keywords:</strong> Ancestry, inheritance, home, tradition, clan, completion, belonging</div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- How to Use Runes -->
+      <section class="bg-gradient-to-br from-amber-900/30 to-violet-900/30 border border-amber-500/40 rounded-3xl p-8 backdrop-blur-md shadow-2xl">
+        <h2 class="font-cinzel text-2xl font-semibold mb-6 text-amber-300">✦ How to Work with Runes</h2>
+
+        <div class="grid md:grid-cols-2 gap-8 mb-8">
+          <div>
+            <h3 class="font-cinzel text-base font-semibold text-amber-200 mb-4">Choosing Your Rune Set</h3>
+            <p class="text-amber-100/80 text-sm leading-relaxed mb-3">
+              Rune sets are traditionally made from natural materials — wood (especially elder, yew, oak, or ash),
+              stone, bone, or clay. The material matters: natural substances carry their own energies and connect
+              you to the earth from which the rune tradition emerged. Many practitioners carve and colour their
+              own set, which is considered the most powerful approach, as the act of creation attunes you deeply
+              to each character.
+            </p>
+            <p class="text-amber-100/80 text-sm leading-relaxed mb-3">
+              When purchasing a set, take time to hold the pieces and sense their resonance. Store your runes in
+              a cloth pouch or wooden box, keep them on or near your person or altar, and handle them often.
+              Before first use, cleanse them — by moonlight, in earth, with smoke from herbs, or by your own
+              breath and intention.
+            </p>
+            <p class="text-amber-100/80 text-sm leading-relaxed">
+              A blank rune tile, sometimes called the <strong class="text-amber-300">Wyrd rune</strong>, is included
+              in many modern sets — representing the unknowable, the void, and the fate not yet written. Its use
+              is a modern addition and not part of the historical Elder Futhark.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="font-cinzel text-base font-semibold text-amber-200 mb-4">Creating Sacred Space</h3>
+            <p class="text-amber-100/80 text-sm leading-relaxed mb-3">
+              Before a reading, take time to ground and centre yourself. Traditional practice involved facing north —
+              the direction of the cosmic axis in Norse cosmology — and calling upon Odin or the Norns (the weavers
+              of fate) to guide the reading.
+            </p>
+            <p class="text-amber-100/80 text-sm leading-relaxed mb-3">
+              Spread a white or natural-coloured cloth — called a <em class="text-amber-300">casting cloth</em> —
+              on a flat surface. This defines the sacred boundary of the reading. Hold your rune bag in both hands,
+              breathe deeply, and formulate your question clearly. A focused, sincere question opens the channel
+              to genuine insight.
+            </p>
+            <p class="text-amber-100/80 text-sm leading-relaxed">
+              Keep a rune journal. Record your readings, your emotional state, and what unfolds in the days
+              following — this is the most powerful way to deepen your relationship with the runes over time.
+            </p>
+          </div>
+        </div>
+
+        <!-- Casting Methods -->
+        <h3 class="font-cinzel text-base font-semibold text-amber-200 mb-4">Common Casting Methods</h3>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-8">
+
+          <div class="bg-black/30 border border-amber-500/30 rounded-2xl p-5">
+            <div class="text-2xl mb-2">⬜</div>
+            <h4 class="font-cinzel text-sm font-semibold text-amber-300 mb-2">Single Rune Draw</h4>
+            <p class="text-xs text-amber-100/70 leading-relaxed">
+              The simplest and most powerful method. Draw one rune from the bag without looking.
+              Use for daily guidance, meditation focus, or a direct answer to a single clear question.
+              Meditate on the rune's essence for several minutes before consulting its meaning.
+            </p>
+          </div>
+
+          <div class="bg-black/30 border border-amber-500/30 rounded-2xl p-5">
+            <div class="text-2xl mb-2">▽</div>
+            <h4 class="font-cinzel text-sm font-semibold text-amber-300 mb-2">Three Rune Spread</h4>
+            <p class="text-xs text-amber-100/70 leading-relaxed">
+              Draw three runes and lay them left to right. The classic layout is
+              <strong class="text-amber-200">Past · Present · Future</strong>, though variations include
+              <em>Situation · Action · Outcome</em>, or <em>Challenge · Advice · Resolution</em>.
+              Three-rune spreads offer depth without overwhelming complexity.
+            </p>
+          </div>
+
+          <div class="bg-black/30 border border-amber-500/30 rounded-2xl p-5">
+            <div class="text-2xl mb-2">✦</div>
+            <h4 class="font-cinzel text-sm font-semibold text-amber-300 mb-2">The Norns' Spread</h4>
+            <p class="text-xs text-amber-100/70 leading-relaxed">
+              Three runes drawn for the three weavers of fate — Urd (what was), Verdandi (what is),
+              and Skuld (what shall be). A deeper version of the three-rune spread, explicitly invoking
+              the Norse concept of wyrd and the interwoven nature of past, present, and becoming.
+            </p>
+          </div>
+
+          <div class="bg-black/30 border border-amber-500/30 rounded-2xl p-5">
+            <div class="text-2xl mb-2">✚</div>
+            <h4 class="font-cinzel text-sm font-semibold text-amber-300 mb-2">Five Rune Cross</h4>
+            <p class="text-xs text-amber-100/70 leading-relaxed">
+              Five runes placed in a cross pattern — centre (the heart of the matter), above (what aids),
+              below (the foundation), left (the past influencing now), right (the likely outcome).
+              Good for complex situations requiring a holistic view.
+            </p>
+          </div>
+
+          <div class="bg-black/30 border border-amber-500/30 rounded-2xl p-5">
+            <div class="text-2xl mb-2">🌊</div>
+            <h4 class="font-cinzel text-sm font-semibold text-amber-300 mb-2">Runic Casting</h4>
+            <p class="text-xs text-amber-100/70 leading-relaxed">
+              The oldest method: hold all runes in your hands, focus on your question, and cast them
+              onto the cloth. Read only those that land face-up. Runes near the centre hold immediate
+              relevance; those at the edges speak to peripheral influences. Runes that cross indicate tension.
+            </p>
+          </div>
+
+          <div class="bg-black/30 border border-amber-500/30 rounded-2xl p-5">
+            <div class="text-2xl mb-2">🔮</div>
+            <h4 class="font-cinzel text-sm font-semibold text-amber-300 mb-2">Reversed Runes (Merkstave)</h4>
+            <p class="text-xs text-amber-100/70 leading-relaxed">
+              When a rune falls upside-down it is called <em class="text-amber-200">merkstave</em>
+              — "dark stick." It does not mean disaster, but rather the blocked, delayed, or shadow
+              aspect of the rune's energy. Not all runes have distinguishable reversals; those that
+              are symmetrical carry the same meaning in all orientations.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Rune Meditation & Magic -->
+        <h3 class="font-cinzel text-base font-semibold text-amber-200 mb-4">Rune Meditation &amp; Galdr</h3>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="bg-black/30 border border-amber-500/30 rounded-2xl p-5">
+            <h4 class="font-cinzel text-sm font-semibold text-amber-300 mb-3">Runic Meditation</h4>
+            <ol class="steps-list text-xs text-amber-100/80 leading-relaxed space-y-2">
+              <li class="usage-step flex items-start">Choose a rune relevant to an area of your life you wish to explore or strengthen.</li>
+              <li class="usage-step flex items-start">Sit comfortably, hold the rune tile, and gaze at the symbol with a soft, open focus.</li>
+              <li class="usage-step flex items-start">Close your eyes and visualise the rune glowing before you — trace its shape in your mind.</li>
+              <li class="usage-step flex items-start">Allow images, feelings, and impressions to arise without forcing them. Simply witness.</li>
+              <li class="usage-step flex items-start">Chant or whisper the rune's name slowly and repeatedly — this is the essence of <em>galdr</em>.</li>
+              <li class="usage-step flex items-start">Close by expressing gratitude and grounding yourself with deep breaths and awareness of your body.</li>
+            </ol>
+          </div>
+          <div class="bg-black/30 border border-amber-500/30 rounded-2xl p-5">
+            <h4 class="font-cinzel text-sm font-semibold text-amber-300 mb-3">Runic Inscriptions &amp; Bind Runes</h4>
+            <p class="text-xs text-amber-100/80 leading-relaxed mb-3">
+              A <strong class="text-amber-200">bind rune</strong> (<em>bindrune</em>) is a glyph formed by
+              combining two or more runes into a single symbol — used to concentrate the energies of multiple
+              runes into one focused intention. Medieval Norse craftspeople carved bind runes onto tools,
+              jewellery, and ships for protection and empowerment.
+            </p>
+            <p class="text-xs text-amber-100/80 leading-relaxed mb-3">
+              To create a bind rune: identify the runes whose qualities serve your intention, draw them
+              overlapping or sharing lines, and work with the composite image in meditation until it feels
+              alive and unified. Then inscribe it where it will serve — on paper, wood, stone, or skin in
+              ink or henna.
+            </p>
+            <p class="text-xs text-amber-100/80 leading-relaxed">
+              You may also <strong class="text-amber-200">stain</strong> rune carvings with red ochre, blood,
+              or red ink — a practice recorded in the Norse sagas. The act of offering something of yourself
+              to the rune deepens the bond between practitioner and symbol.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Closing Wisdom -->
+      <section class="text-center py-8">
+        <div class="glow-card inline-block bg-gradient-to-br from-amber-900/50 to-indigo-900/50 border border-amber-400/50 rounded-3xl px-10 py-8 backdrop-blur-md shadow-2xl max-w-2xl">
+          <div class="text-5xl mb-4">ᚠᚢᚦᚨᚱᚲ</div>
+          <h3 class="font-cinzel text-xl text-amber-300 mb-3">A Final Word</h3>
+          <p class="text-amber-100/80 text-sm leading-relaxed italic">
+            "I know that I hung on the windy tree, swung there for nine long nights, wounded by my own spear, given to Odin, myself to myself, on that tree, of which no man knows from where its roots run."
+          </p>
+          <p class="text-amber-300/60 text-xs mt-3">— Odin, <em>Hávamál</em>, stanza 138 (Elder Edda)</p>
+          <p class="text-amber-100/60 text-xs mt-4 leading-relaxed">
+            Runes are not a system to be mastered in a day. They are a lifelong conversation with the oldest
+            layers of human knowing — a dialogue between you and the forces that shaped the Norse cosmos.
+            Approach them with patience, reverence, and an open mind, and they will return insights proportional
+            to the depth of your listening.
+          </p>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="relative z-10 text-center py-8 text-violet-300/50 text-xs mt-8">
+      <p class="italic">"The secret of the runes is a gift, but the gift must be earned." — Norse proverb</p>
+      <p class="mt-2">Esoteric Wisdom · Built with ✨ in Rust</p>
+      <p class="mt-2"><a href="/home" class="hover:text-violet-300 transition-colors">← Back to Portal</a></p>
+    </footer>
+
+    <script>
+      const sf = document.getElementById('starfield');
+      for (let i = 0; i < 180; i++) {
+        const s = document.createElement('div');
+        s.className = 'star';
+        const size = Math.random() * 2.5 + 0.5;
+        s.style.cssText = `width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--dur:${2+Math.random()*4}s;--delay:${Math.random()*5}s;opacity:${0.2+Math.random()*0.8};`;
+        sf.appendChild(s);
+      }
+    </script>
+  </body>
+</html>
