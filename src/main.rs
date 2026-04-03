@@ -38,6 +38,7 @@ async fn main() -> anyhow::Result<()> {
     let app = Router::new()
         .route("/", get(landing))
         .route("/home", get(app_landing))
+        .route("/favicon.svg", get(favicon))
         .nest("/admin", admin::routes())
         .nest("/auth", auth::routes())
         .nest("/astrology", astrology::routes())
@@ -82,6 +83,13 @@ async fn main() -> anyhow::Result<()> {
     axum::serve(listener, app).await?;
 
     Ok(())
+}
+
+async fn favicon() -> impl IntoResponse {
+    (
+        [(header::CONTENT_TYPE, "image/svg+xml")],
+        include_bytes!("../static/favicon.svg").as_ref(),
+    )
 }
 
 async fn landing() -> HtmlTemplate<LandingTemplate> {
