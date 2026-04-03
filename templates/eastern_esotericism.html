@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Eastern Esoteric Traditions — Esoteric Wisdom</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <style>
+    body { font-family: 'Raleway', sans-serif; }
+    .font-cinzel { font-family: 'Cinzel Decorative', cursive; }
+    @keyframes twinkle { 0%,100%{opacity:0.2;transform:scale(1);} 50%{opacity:1;transform:scale(1.4);} }
+    @keyframes float { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-12px);} }
+    @keyframes shimmer { 0%{background-position:0% 50%;} 100%{background-position:200% 50%;} }
+    .star { position:absolute; width:2px; height:2px; background:white; border-radius:50%; animation:twinkle 3s infinite; }
+    .aurora-text { background: linear-gradient(90deg, #f59e0b, #ef4444, #f97316, #fbbf24, #ef4444, #f59e0b); background-size:300% auto; -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; animation:shimmer 6s linear infinite; }
+    .floating { animation: float 4s ease-in-out infinite; }
+    .nav-link { position:relative; transition:all 0.3s; }
+    .nav-link::after { content:''; position:absolute; bottom:-2px; left:0; width:0; height:1px; background:#f59e0b; transition:width 0.3s; }
+    .nav-link:hover::after { width:100%; }
+    .ee-card { background: linear-gradient(135deg, rgba(180,60,0,0.18), rgba(120,30,0,0.10)); border: 1px solid rgba(251,146,60,0.25); border-radius: 1rem; padding: 1.5rem; transition: all 0.3s; }
+    .ee-card:hover { transform: translateY(-4px); box-shadow: 0 0 24px rgba(251,146,60,0.18); border-color: rgba(251,146,60,0.5); }
+    .scholar-card { background: linear-gradient(135deg, rgba(180,60,0,0.12), rgba(100,25,0,0.08)); border: 1px solid rgba(251,146,60,0.18); border-radius: 0.75rem; padding: 1.25rem; transition: border-color 0.3s; }
+    .scholar-card:hover { border-color: rgba(251,191,36,0.45); }
+  </style>
+</head>
+<body class="min-h-screen text-orange-100 overflow-x-hidden" style="background: radial-gradient(ellipse at top, #1a0800 0%, #2d1200 25%, #0a0400 60%, #000000 100%);">
+
+  <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+
+  <!-- NAV -->
+  <nav class="sticky top-0 z-50 flex items-center justify-between px-6 py-3 bg-black/40 backdrop-blur-md border-b border-violet-500/20 flex-wrap gap-y-2">
+    <a href="/home" class="font-cinzel text-amber-300 text-sm tracking-widest shrink-0">✦ Esoteric Wisdom ✦</a>
+    <div class="flex items-center gap-x-3 gap-y-1 text-xs text-violet-200 flex-wrap justify-end">
+      <a href="/astrology" class="nav-link hover:text-amber-300 transition-colors">Astrology</a>
+      <a href="/meditation" class="nav-link hover:text-amber-300 transition-colors">Meditation</a>
+      <a href="/tarot/select" class="nav-link hover:text-amber-300 transition-colors">Tarot</a>
+      <a href="/numerology" class="nav-link hover:text-amber-300 transition-colors">Numerology</a>
+      <a href="/crystals" class="nav-link hover:text-amber-300 transition-colors">Crystals</a>
+      <a href="/runes" class="nav-link hover:text-amber-300 transition-colors">Runes</a>
+      <a href="/shamanism" class="nav-link hover:text-amber-300 transition-colors">Shamanism</a>
+      <a href="/druidism" class="nav-link hover:text-amber-300 transition-colors">Druidism</a>
+      <a href="/akashic-records" class="nav-link hover:text-amber-300 transition-colors">Akashic Records</a>
+      <a href="/wicca" class="nav-link hover:text-amber-300 transition-colors">Wicca</a>
+      <a href="/alchemy" class="nav-link hover:text-amber-300 transition-colors">Alchemy</a>
+      <a href="/gateway-process" class="nav-link hover:text-amber-300 transition-colors">Gateway Process</a>
+      <a href="/remote-viewing" class="nav-link hover:text-amber-300 transition-colors">Remote Viewing</a>
+      <a href="/khasarov-mirror" class="nav-link hover:text-amber-300 transition-colors">Khasarov Mirror</a>
+      <a href="/western-esotericism" class="nav-link hover:text-amber-300 transition-colors">Western Esotericism</a>
+      <a href="/eastern-esotericism" class="nav-link text-amber-300 font-semibold">Eastern Esotericism</a>
+      <a href="/journal/reflections" class="nav-link text-emerald-300 hover:text-emerald-200 transition-colors">✨ Reflections</a>
+      <a href="https://ko-fi.com/esotericwisdom" target="_blank" rel="noopener noreferrer"
+         class="px-3 py-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-white font-semibold hover:scale-105 transition-transform shrink-0">☕ Support</a>
+    </div>
+  </nav>
+
+  <!-- CONTENT WRAPPER -->
+  <div class="relative z-10 max-w-6xl mx-auto space-y-10 pt-6 px-4 pb-12">
+
+    <!-- HERO -->
+    <section class="text-center py-16 space-y-6">
+      <div class="text-7xl floating">☸️</div>
+      <h1 class="font-cinzel text-4xl md:text-6xl font-bold aurora-text leading-tight">Eastern Esoteric Traditions</h1>
+      <p class="max-w-3xl mx-auto text-orange-200/80 text-lg leading-relaxed">
+        The esoteric wisdom of South Asia, East Asia, and Japan — traditions rooted in direct experience, lineage transmission, subtle body practices, and the ultimate goal of liberation or enlightenment.
+      </p>
+    </section>
+
+    <!-- SECTION 1: WHAT ARE EASTERN ESOTERIC TRADITIONS? -->
+    <section class="rounded-2xl p-8 space-y-6" style="background: linear-gradient(135deg, rgba(180,60,0,0.15), rgba(100,25,0,0.08));">
+      <h2 class="font-cinzel text-2xl text-amber-300 text-center tracking-wide">What Are Eastern Esoteric Traditions?</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm text-orange-100/80 leading-relaxed">
+        <div class="space-y-4">
+          <p>
+            Eastern esoteric traditions comprise the vast body of initiatory, contemplative, and transformative teachings that emerged from the spiritual civilisations of <strong class="text-amber-200">South Asia</strong> (India, Nepal, Sri Lanka, Tibet), <strong class="text-amber-200">East Asia</strong> (China, Korea, Japan), and the cultural sphere shaped by these civilisations across South-East Asia and the Himalayas. They are distinct from Western esotericism not merely geographically but in their underlying assumptions about the cosmos, the self, and the purpose of esoteric practice.
+          </p>
+          <p>
+            Where Western esotericism developed largely in tension with Christianity and emerged from a matrix of Greek philosophy, Jewish mysticism, and Renaissance humanism, Eastern traditions arose within indigenous cosmological frameworks — Vedic, Shaiva, Buddhist, Taoist, and Shinto — in which the categories of matter and spirit, natural and supernatural, are configured quite differently. The world is not fallen from grace; it is itself a manifestation of consciousness, energy, or the Tao, depending on the tradition.
+          </p>
+          <p>
+            What unites these traditions as <em>esoteric</em> is their emphasis on <strong class="text-amber-200">direct experience</strong> over mere doctrinal assent. Knowledge in these traditions is not primarily propositional — a set of beliefs to be affirmed — but <em>gnosis</em> in the experiential sense: a transformative recognition of the true nature of mind, self, or reality that can only be transmitted from teacher to student through initiation and sustained practice. The text is always secondary to the living teacher.
+          </p>
+          <p>
+            The concept of <strong class="text-amber-200">lineage transmission</strong> (<em>parampara</em> in Sanskrit; <em>ch'uan-ch'eng</em> in Chinese) is foundational. Each tradition understands itself as an unbroken chain of transmission stretching back to a founding figure — a god, a Buddha, a Siddha, or an immortal — through whom the essential power and understanding of the teaching is passed, generation after generation, from master to disciple.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <p>
+            The <strong class="text-amber-200">subtle body</strong> is perhaps the most distinctive shared technology of Eastern esoteric traditions. Rather than working primarily with the intellect, scripture, or symbolic imagination (as Western esotericism often does), Eastern traditions map and work directly with the subtle energetic anatomy of the human being. In Hindu and Tantric traditions this is articulated as a system of <em>chakras</em> (energy centres), <em>nadis</em> (subtle channels), <em>prana</em> (vital breath/energy), and <em>kundalini</em> (the coiled serpent-power at the base of the spine). In Tibetan Buddhist traditions the equivalent system describes <em>channels</em> (<em>rtsa</em>), <em>winds</em> (<em>rlung</em>), and <em>drops</em> (<em>thig le</em>). In Taoist inner alchemy the operative substances are <em>jing</em> (essence), <em>qi</em> (vital energy), and <em>shen</em> (spirit).
+          </p>
+          <p>
+            These maps of the subtle body are not merely theoretical; they are <em>practical technologies</em>. Through carefully prescribed combinations of <strong class="text-amber-200">mantra</strong> (sacred sound), <strong class="text-amber-200">yantra</strong> (sacred geometry), <strong class="text-amber-200">mudra</strong> (ritual gesture), <strong class="text-amber-200">pranayama</strong> (breath regulation), and <strong class="text-amber-200">meditation</strong> (in its many distinctive forms across traditions), the practitioner systematically reorganises and refines the subtle body, culminating in states of consciousness identified with liberation, Buddhahood, immortality, or the recognition of one's own primordial nature.
+          </p>
+          <p>
+            The shared soteriological goal across these traditions — whatever its specific formulation — points beyond ordinary human consciousness to a recognition that is simultaneously the most intimate possible (<em>it is your own nature</em>) and the most universal (<em>it is the nature of all that is</em>). Whether called <em>moksha</em>, <em>nirvana</em>, <em>rigpa</em>, <em>wu</em>, or <em>satori</em>, this recognition is understood not as an acquisition but as an uncovering — a return to what was never truly lost.
+          </p>
+          <p>
+            These traditions parallel Western esotericism in their concern with hidden dimensions of reality, their use of initiatory structures, and their preservation of knowledge within select lineages. Yet they differ decisively in their non-dualistic metaphysics, their elaborate psychophysical practices, and their grounding in living oral traditions that have remained unbroken for centuries.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: THE TRADITIONS -->
+    <section class="space-y-6">
+      <h2 class="font-cinzel text-2xl text-amber-300 text-center tracking-wide">The Traditions</h2>
+      <p class="text-center text-orange-200/60 text-sm max-w-2xl mx-auto">
+        Ten streams of living wisdom — each a complete world of practice and understanding, united by the common thread of lineage, initiation, and the pursuit of liberation.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+        <a href="/eastern-esotericism/tantra" class="ee-card block no-underline group">
+          <div class="text-4xl mb-3">🔱</div>
+          <h3 class="font-cinzel text-lg text-amber-300 mb-2 group-hover:text-amber-200 transition-colors">Tantra</h3>
+          <p class="text-orange-100/70 text-sm leading-relaxed mb-3">
+            The ancient science of expanding consciousness through ritual, mantra, yantra, and subtle body practice. Encompasses both Hindu and Buddhist streams rooted in the Agamic textual tradition.
+          </p>
+          <span class="text-orange-300 text-xs font-semibold tracking-wider">Explore →</span>
+        </a>
+
+        <a href="/eastern-esotericism/vajrayana" class="ee-card block no-underline group">
+          <div class="text-4xl mb-3">💎</div>
+          <h3 class="font-cinzel text-lg text-amber-300 mb-2 group-hover:text-amber-200 transition-colors">Vajrayāna Buddhism</h3>
+          <p class="text-orange-100/70 text-sm leading-relaxed mb-3">
+            The Diamond Vehicle of Tibetan and Himalayan Buddhism, employing deity yoga, mandala visualisation, and empowerment to achieve Buddhahood in a single lifetime.
+          </p>
+          <span class="text-orange-300 text-xs font-semibold tracking-wider">Explore →</span>
+        </a>
+
+        <a href="/eastern-esotericism/dzogchen" class="ee-card block no-underline group">
+          <div class="text-4xl mb-3">🌌</div>
+          <h3 class="font-cinzel text-lg text-amber-300 mb-2 group-hover:text-amber-200 transition-colors">Dzogchen</h3>
+          <p class="text-orange-100/70 text-sm leading-relaxed mb-3">
+            The Great Perfection — the pinnacle teaching of the Nyingma school and Bön, pointing directly to the recognition of rigpa, the primordial pure awareness.
+          </p>
+          <span class="text-orange-300 text-xs font-semibold tracking-wider">Explore →</span>
+        </a>
+
+        <a href="/eastern-esotericism/mahamudra" class="ee-card block no-underline group">
+          <div class="text-4xl mb-3">🌊</div>
+          <h3 class="font-cinzel text-lg text-amber-300 mb-2 group-hover:text-amber-200 transition-colors">Mahāmudrā</h3>
+          <p class="text-orange-100/70 text-sm leading-relaxed mb-3">
+            The Great Seal — the highest instruction of the Kagyu school, revealing the true nature of mind through pointing-out instructions from a qualified guru.
+          </p>
+          <span class="text-orange-300 text-xs font-semibold tracking-wider">Explore →</span>
+        </a>
+
+        <a href="/eastern-esotericism/taoist-inner-alchemy" class="ee-card block no-underline group">
+          <div class="text-4xl mb-3">☯️</div>
+          <h3 class="font-cinzel text-lg text-amber-300 mb-2 group-hover:text-amber-200 transition-colors">Taoist Inner Alchemy</h3>
+          <p class="text-orange-100/70 text-sm leading-relaxed mb-3">
+            Neidan (Internal Alchemy) — the cultivation of jing, qi, and shen through meditation, breath-work, and the microcosmic orbit to forge the Golden Elixir of immortality.
+          </p>
+          <span class="text-orange-300 text-xs font-semibold tracking-wider">Explore →</span>
+        </a>
+
+        <a href="/eastern-esotericism/esoteric-confucianism" class="ee-card block no-underline group">
+          <div class="text-4xl mb-3">📿</div>
+          <h3 class="font-cinzel text-lg text-amber-300 mb-2 group-hover:text-amber-200 transition-colors">Esoteric Confucianism</h3>
+          <p class="text-orange-100/70 text-sm leading-relaxed mb-3">
+            The hidden metaphysical and contemplative dimensions of Confucian thought, from the I Ching to Wang Yangming's School of Mind and Neo-Confucian cosmology.
+          </p>
+          <span class="text-orange-300 text-xs font-semibold tracking-wider">Explore →</span>
+        </a>
+
+        <a href="/eastern-esotericism/shugendo" class="ee-card block no-underline group">
+          <div class="text-4xl mb-3">⛰️</div>
+          <h3 class="font-cinzel text-lg text-amber-300 mb-2 group-hover:text-amber-200 transition-colors">Shugendō</h3>
+          <p class="text-orange-100/70 text-sm leading-relaxed mb-3">
+            The Japanese path of mountain asceticism, fusing Shinto animism, esoteric Buddhism, and Taoist elements in rigorous embodied practice in sacred mountain spaces.
+          </p>
+          <span class="text-orange-300 text-xs font-semibold tracking-wider">Explore →</span>
+        </a>
+
+        <a href="/eastern-esotericism/shingon" class="ee-card block no-underline group">
+          <div class="text-4xl mb-3">🪷</div>
+          <h3 class="font-cinzel text-lg text-amber-300 mb-2 group-hover:text-amber-200 transition-colors">Shingon Buddhism</h3>
+          <p class="text-orange-100/70 text-sm leading-relaxed mb-3">
+            True Word — Japanese Esoteric Buddhism founded by Kūkai (Kōbō Daishi), centred on the Three Mysteries of body, speech, and mind to attain Buddhahood in this very body.
+          </p>
+          <span class="text-orange-300 text-xs font-semibold tracking-wider">Explore →</span>
+        </a>
+
+        <a href="/eastern-esotericism/kashmir-shaivism" class="ee-card block no-underline group">
+          <div class="text-4xl mb-3">🌺</div>
+          <h3 class="font-cinzel text-lg text-amber-300 mb-2 group-hover:text-amber-200 transition-colors">Kashmir Shaivism</h3>
+          <p class="text-orange-100/70 text-sm leading-relaxed mb-3">
+            The non-dual Shaiva philosophy of medieval Kashmir, recognising all reality as the self-expression of Shiva through his divine Shakti — the ultimate recognition of one's own nature.
+          </p>
+          <span class="text-orange-300 text-xs font-semibold tracking-wider">Explore →</span>
+        </a>
+
+        <a href="/eastern-esotericism/siddha" class="ee-card block no-underline group">
+          <div class="text-4xl mb-3">✨</div>
+          <h3 class="font-cinzel text-lg text-amber-300 mb-2 group-hover:text-amber-200 transition-colors">Siddha Tradition</h3>
+          <p class="text-orange-100/70 text-sm leading-relaxed mb-3">
+            The perfected masters of Hindu and Buddhist tantra — the Tamil Siddhas and the 84 Buddhist Mahasiddhas — who transcended ordinary limitations through esoteric practice and direct transmission.
+          </p>
+          <span class="text-orange-300 text-xs font-semibold tracking-wider">Explore →</span>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- SECTION 3: THE STREAM OF TRANSMISSION -->
+    <section class="rounded-2xl p-8 space-y-5" style="background: linear-gradient(135deg, rgba(120,40,0,0.18), rgba(80,20,0,0.10));">
+      <h2 class="font-cinzel text-2xl text-amber-300 text-center tracking-wide">The Stream of Transmission</h2>
+      <div class="max-w-4xl mx-auto space-y-5 text-sm text-orange-100/80 leading-relaxed">
+        <p>
+          What unites the remarkable diversity of Eastern esoteric traditions — from Tibetan deity yoga to Japanese mountain asceticism, from Kashmir Shaivite non-dualism to Taoist inner alchemy — is the shared infrastructure of <strong class="text-amber-200">lineage</strong>. Each of these traditions understands itself not as a body of information freely available to any interested reader, but as a <em>living transmission</em> that moves from heart to heart, from the awakened consciousness of the teacher into the ripening awareness of the student. This is the concept of <em>parampara</em> (Sanskrit: "one after another") — the unbroken succession of masters and disciples through whom the essential power and understanding of the teaching is preserved and conveyed across generations.
+        </p>
+        <p>
+          The gateway into these traditions is invariably <strong class="text-amber-200">initiation</strong>. In Hindu Tantric contexts this is known as <em>diksha</em> — a ritual act through which the guru transmits the seed of awakening directly into the disciple's subtle body, simultaneously conferring the right to practise specific techniques and undertaking the spiritual responsibility of guiding the student to their goal. In Tibetan Buddhist traditions the equivalent is <em>abhisheka</em> (empowerment or consecration) — a complex ritual in which the student is introduced to a particular mandala-deity and given the transmission necessary to engage in that deity's yogic practises. Without this initiation, the practices are understood to be not merely ineffective but potentially harmful.
+        </p>
+        <p>
+          The knowledge transmitted through these lineages is carefully preserved within them. Unlike the Western esoteric tradition's characteristic tendency towards textual proliferation and literary dissemination — from the Renaissance printing press to the 19th-century occult revival's flood of published manuals — Eastern esoteric traditions have historically maintained their most vital teachings as <em>oral transmissions</em>, shared only between teacher and student in contexts of established trust and demonstrated readiness. The published text (where it exists at all) is understood as a mere support, an aide-mémoire for those who have already received the living transmission, meaningless or misleading without the accompanying oral commentary and direct guidance.
+        </p>
+        <p>
+          The <strong class="text-amber-200">subtle body</strong> serves as the primary site and technology of transformation across all these streams. Whether understood as the chakra-nadi system of Hindu Tantra, the channels-winds-drops of Tibetan Buddhism, or the jing-qi-shen triad of Taoist inner alchemy, the subtle body is the locus where the practitioner's spiritual work is performed. This is what most decisively distinguishes Eastern esoteric traditions from their Western counterparts: not merely different metaphysics, but a different <em>orientation towards the body itself</em> as the primary vehicle of liberation rather than an obstacle to it.
+        </p>
+        <p>
+          The shared soteriological horizon — <em>moksha</em> in Hindu traditions, <em>nirvana</em> or <em>Buddhahood</em> in Buddhist ones, <em>xian</em> (immortality) in Taoism, <em>satori</em> in Zen — points to a common recognition underlying the diversity of metaphysical vocabularies: that ordinary human consciousness is contracted, obscured, or otherwise limited, and that through the extraordinary means transmitted within these lineages it is possible to realise one's actual nature, which is already, always, and fundamentally free.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION 4: RECOMMENDED SCHOLARS -->
+    <section class="space-y-6">
+      <h2 class="font-cinzel text-2xl text-amber-300 text-center tracking-wide">Recommended Scholars</h2>
+      <p class="text-center text-orange-200/60 text-sm max-w-2xl mx-auto">
+        Six voices — academic, contemplative, and historical — whose works illuminate the depth and breadth of Eastern esoteric traditions.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+        <div class="scholar-card">
+          <h3 class="font-cinzel text-base text-amber-300 mb-1">Georg Feuerstein</h3>
+          <p class="text-orange-300/70 text-xs mb-2 tracking-wide">1947–2012 · Yoga &amp; Tantra Scholar</p>
+          <p class="text-orange-100/70 text-sm leading-relaxed">
+            One of the most encyclopaedic Western scholars of Indian spiritual traditions, Feuerstein devoted his life to the scholarly and practical study of Yoga, Tantra, and the Vedic heritage. His work combines rigorous textual scholarship with genuine sympathy for the practitioner's perspective.
+          </p>
+          <p class="text-orange-200/50 text-xs mt-3 italic">Key work: <em>The Yoga Tradition</em> (2001)</p>
+        </div>
+
+        <div class="scholar-card">
+          <h3 class="font-cinzel text-base text-amber-300 mb-1">David Gordon White</h3>
+          <p class="text-orange-300/70 text-xs mb-2 tracking-wide">Contemporary · Tantric Studies</p>
+          <p class="text-orange-100/70 text-sm leading-relaxed">
+            Professor at the University of California, Santa Barbara, White is among the foremost authorities on the history of Tantric traditions in South Asia. His scholarship challenges popular misconceptions about Tantra by grounding it in its historical and ritual contexts.
+          </p>
+          <p class="text-orange-200/50 text-xs mt-3 italic">Key works: <em>The Alchemical Body</em> (1996), <em>Kiss of the Yogini</em> (2003)</p>
+        </div>
+
+        <div class="scholar-card">
+          <h3 class="font-cinzel text-base text-amber-300 mb-1">Geoffrey Samuel</h3>
+          <p class="text-orange-300/70 text-xs mb-2 tracking-wide">Contemporary · Tibetan Buddhism</p>
+          <p class="text-orange-100/70 text-sm leading-relaxed">
+            Emeritus Professor at Cardiff University, Samuel is a leading scholar of Tibetan Buddhism and Himalayan religious traditions. His interdisciplinary approach draws on anthropology, religious studies, and cognitive science to illuminate the origins and practises of tantric Buddhism.
+          </p>
+          <p class="text-orange-200/50 text-xs mt-3 italic">Key works: <em>Civilized Shamans</em> (1993), <em>The Origins of Yoga and Tantra</em> (2008)</p>
+        </div>
+
+        <div class="scholar-card">
+          <h3 class="font-cinzel text-base text-amber-300 mb-1">Thomas Cleary</h3>
+          <p class="text-orange-300/70 text-xs mb-2 tracking-wide">1949–2021 · Translator &amp; Scholar</p>
+          <p class="text-orange-100/70 text-sm leading-relaxed">
+            One of the most prolific and respected translators of Chinese and Japanese classical texts, Cleary rendered dozens of foundational Taoist, Buddhist, and Confucian works into English with exceptional clarity and fidelity. His translations remain the standard introductions for Western readers.
+          </p>
+          <p class="text-orange-200/50 text-xs mt-3 italic">Key works: Translations of the <em>I Ching</em>, <em>Tao Te Ching</em>, and numerous Zen texts</p>
+        </div>
+
+        <div class="scholar-card">
+          <h3 class="font-cinzel text-base text-amber-300 mb-1">Kūkai (空海)</h3>
+          <p class="text-orange-300/70 text-xs mb-2 tracking-wide">774–835 CE · Founder of Shingon</p>
+          <p class="text-orange-100/70 text-sm leading-relaxed">
+            Known posthumously as Kōbō Daishi (The Grand Master Who Spread the Dharma), Kūkai is the foundational figure of Japanese esoteric Buddhism. His philosophical writings reveal the inner logic of East Asian esoteric thought with unparalleled clarity and depth, making him both a primary source and a living intellectual guide to the tradition.
+          </p>
+          <p class="text-orange-200/50 text-xs mt-3 italic">Key work: <em>Jūjūshinron</em> (Ten Stages of Religious Consciousness)</p>
+        </div>
+
+        <div class="scholar-card">
+          <h3 class="font-cinzel text-base text-amber-300 mb-1">Lilian Silburn</h3>
+          <p class="text-orange-300/70 text-xs mb-2 tracking-wide">1908–1993 · Kashmir Shaivism Scholar</p>
+          <p class="text-orange-100/70 text-sm leading-relaxed">
+            A French Indologist and student of both Sanskrit and living Shaiva masters, Silburn produced the first serious Western scholarly examination of the Kashmir Shaivite tradition. Her work on kundalini energy remains one of the most rigorous treatments of the subject available in any European language.
+          </p>
+          <p class="text-orange-200/50 text-xs mt-3 italic">Key work: <em>Kundalini: The Energy of the Depths</em> (1988)</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <section class="text-center py-10 space-y-6 border-t border-orange-500/20">
+      <blockquote class="max-w-2xl mx-auto">
+        <p class="text-orange-200/70 text-base italic leading-relaxed">
+          "The Self alone is the light of lights — it illumines the sun, the moon, the stars, and all that shines. By its light alone does all this world shine forth."
+        </p>
+        <footer class="text-orange-300/50 text-xs mt-3 tracking-wide">— Brihadāranyaka Upanishad, IV.iii.6</footer>
+      </blockquote>
+      <div>
+        <a href="/home" class="inline-flex items-center gap-2 text-sm text-orange-300/70 hover:text-amber-300 transition-colors">
+          ← Back to Portal
+        </a>
+      </div>
+    </section>
+
+  </div>
+
+  <script>
+  const sf = document.getElementById('starfield');
+  for (let i = 0; i < 200; i++) {
+    const s = document.createElement('div');
+    s.className = 'star';
+    s.style.left = Math.random() * 100 + '%';
+    s.style.top = Math.random() * 100 + '%';
+    s.style.animationDelay = Math.random() * 3 + 's';
+    s.style.animationDuration = (2 + Math.random() * 3) + 's';
+    sf.appendChild(s);
+  }
+  </script>
+</body>
+</html>
