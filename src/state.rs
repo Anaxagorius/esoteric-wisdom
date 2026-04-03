@@ -86,11 +86,16 @@ impl AppState {
         let journal_entries = load_journal_entries().await;
         let journal_count = journal_entries.len();
 
+        let jwt_secret = std::env::var("JWT_SECRET").unwrap_or_else(|_| {
+            tracing::warn!("JWT_SECRET env var not set — using insecure default. Set JWT_SECRET in production!");
+            "change_me_super_secret".to_string()
+        });
+
         let state = AppState {
             users: Arc::new(RwLock::new(Vec::new())),
             tarot_decks: Arc::new(RwLock::new(decks)),
             journal_entries: Arc::new(RwLock::new(journal_entries)),
-            jwt_secret: Arc::new("change_me_super_secret".to_string()),
+            jwt_secret: Arc::new(jwt_secret),
             admin_password_hash: Arc::new(RwLock::new(admin_hash)),
             admin_must_change_password: Arc::new(RwLock::new(true)),
         };

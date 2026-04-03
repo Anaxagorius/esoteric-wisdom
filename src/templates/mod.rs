@@ -9,6 +9,7 @@ pub struct LandingTemplate;
 #[template(path = "app_landing.html")]
 pub struct AppLandingTemplate {
     pub is_admin: bool,
+    pub is_user: bool,
 }
 
 #[derive(Template)]

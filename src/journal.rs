@@ -10,7 +10,7 @@ use serde::{Serialize, Deserialize};
 use tower_cookies::Cookies;
 use uuid::Uuid;
 use crate::auth::HtmlTemplate;
-use crate::templates::{AdminJournalTemplate, GuestJournalTemplate};
+use crate::templates::{AdminJournalTemplate, GuestJournalTemplate, JournalListTemplate};
 use crate::state::{AppState, journal_data_path};
 use crate::admin;
 
@@ -54,11 +54,18 @@ pub struct NewEntryForm {
 pub fn routes() -> Router<AppState> {
     Router::new()
         .route("/", get(journal_home))
+        .route("/my", get(user_journal_home))
         .route("/reflections", get(guest_reflections))
         .route("/export", get(export_journal))
         .route("/new", post(create_entry))
         .route("/delete/:id", post(delete_entry))
         .route("/toggle/:id", post(toggle_visibility))
+}
+
+fn get_user_id_from_cookies(state: &AppState, cookies: &Cookies) -> Option<Uuid> {
+    let token = cookies.get("esoteric_session")?.value().to_string();
+    let claims = crate::auth::decode_token(state, &token)?;
+    claims.sub.parse().ok()
 }
 
 async fn journal_home(State(state): State<AppState>, cookies: Cookies) -> impl IntoResponse {
@@ -79,6 +86,22 @@ async fn journal_home(State(state): State<AppState>, cookies: Cookies) -> impl I
     HtmlTemplate(AdminJournalTemplate { entries, error: None }).into_response()
 }
 
+async fn user_journal_home(State(state): State<AppState>, cookies: Cookies) -> impl IntoResponse {
+    let user_id = match get_user_id_from_cookies(&state, &cookies) {
+        Some(id) => id,
+        None => return (StatusCode::FOUND, [(header::LOCATION, "/auth/login")]).into_response(),
+    };
+
+    let entries: Vec<JournalEntry> = state.journal_entries.read().await
+        .iter()
+        .filter(|e| e.user_id == user_id)
+        .cloned()
+        .rev()
+        .collect();
+
+    HtmlTemplate(JournalListTemplate { is_authenticated: true, entries, error: None }).into_response()
+}
+
 async fn guest_reflections(State(state): State<AppState>) -> impl IntoResponse {
     let entries: Vec<JournalEntry> = state.journal_entries.read().await
         .iter()
@@ -95,19 +118,23 @@ async fn create_entry(
     cookies: Cookies,
     Form(form): Form<NewEntryForm>,
 ) -> impl IntoResponse {
-    if !admin::is_admin(&state, &cookies) {
-        return (StatusCode::FOUND, [(header::LOCATION, "/admin/login")]).into_response();
+    let is_admin = admin::is_admin(&state, &cookies);
+    let user_id = get_user_id_from_cookies(&state, &cookies);
+
+    if !is_admin && user_id.is_none() {
+        return (StatusCode::FOUND, [(header::LOCATION, "/auth/login")]).into_response();
     }
 
     if form.body.trim().is_empty() {
-        return (StatusCode::FOUND, [(header::LOCATION, "/journal")]).into_response();
+        let redirect = if is_admin { "/journal" } else { "/journal/my" };
+        return (StatusCode::FOUND, [(header::LOCATION, redirect)]).into_response();
     }
 
     let now = chrono::Utc::now().format("%B %d, %Y · %H:%M UTC").to_string();
 
     let entry = JournalEntry {
         id: Uuid::new_v4(),
-        user_id: Uuid::nil(), // Admin is the sole author; nil UUID used as a placeholder
+        user_id: if is_admin { Uuid::nil() } else { user_id.unwrap() },
         title: form.title.unwrap_or_default().trim().to_string(),
         body: form.body.trim().to_string(),
         mood_happy: form.mood_happy.is_some(),
@@ -120,7 +147,8 @@ async fn create_entry(
     state.journal_entries.write().await.push(entry);
     let snapshot = state.journal_entries.read().await.clone();
     save_journal(&snapshot).await;
-    (StatusCode::FOUND, [(header::LOCATION, "/journal")]).into_response()
+    let redirect = if is_admin { "/journal" } else { "/journal/my" };
+    (StatusCode::FOUND, [(header::LOCATION, redirect)]).into_response()
 }
 
 async fn delete_entry(
@@ -128,16 +156,25 @@ async fn delete_entry(
     cookies: Cookies,
     Path(entry_id): Path<Uuid>,
 ) -> impl IntoResponse {
-    if !admin::is_admin(&state, &cookies) {
-        return (StatusCode::FOUND, [(header::LOCATION, "/admin/login")]).into_response();
+    let is_admin = admin::is_admin(&state, &cookies);
+    let user_id = get_user_id_from_cookies(&state, &cookies);
+
+    if !is_admin && user_id.is_none() {
+        return (StatusCode::FOUND, [(header::LOCATION, "/auth/login")]).into_response();
     }
 
     let mut entries = state.journal_entries.write().await;
-    entries.retain(|e| e.id != entry_id);
+    if is_admin {
+        entries.retain(|e| e.id != entry_id);
+    } else {
+        let uid = user_id.unwrap();
+        entries.retain(|e| e.id != entry_id || e.user_id != uid);
+    }
     let snapshot = entries.clone();
     drop(entries);
     save_journal(&snapshot).await;
-    (StatusCode::FOUND, [(header::LOCATION, "/journal")]).into_response()
+    let redirect = if is_admin { "/journal" } else { "/journal/my" };
+    (StatusCode::FOUND, [(header::LOCATION, redirect)]).into_response()
 }
 
 async fn toggle_visibility(
@@ -164,11 +201,23 @@ async fn export_journal(
     State(state): State<AppState>,
     cookies: Cookies,
 ) -> impl IntoResponse {
-    if !admin::is_admin(&state, &cookies) {
-        return (StatusCode::FOUND, [(header::LOCATION, "/admin/login")]).into_response();
+    let is_admin = admin::is_admin(&state, &cookies);
+    let user_id = get_user_id_from_cookies(&state, &cookies);
+
+    if !is_admin && user_id.is_none() {
+        return (StatusCode::FOUND, [(header::LOCATION, "/auth/login")]).into_response();
     }
 
-    let entries: Vec<JournalEntry> = state.journal_entries.read().await.clone();
+    let entries: Vec<JournalEntry> = if is_admin {
+        state.journal_entries.read().await.clone()
+    } else {
+        let uid = user_id.unwrap();
+        state.journal_entries.read().await
+            .iter()
+            .filter(|e| e.user_id == uid)
+            .cloned()
+            .collect()
+    };
 
     let now = chrono::Utc::now().format("%B %d, %Y · %H:%M UTC").to_string();
     let divider = "=".repeat(48);

@@ -97,5 +97,9 @@ async fn app_landing(
         }
     }
     let is_admin = admin_claims.is_some();
-    HtmlTemplate(AppLandingTemplate { is_admin }).into_response()
+    let is_user = !is_admin && cookies
+        .get("esoteric_session")
+        .and_then(|c| auth::decode_token(&state, c.value()))
+        .is_some();
+    HtmlTemplate(AppLandingTemplate { is_admin, is_user }).into_response()
 }
