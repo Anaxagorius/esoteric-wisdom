@@ -97,3 +97,7 @@ pub struct ShamanismTemplate;
 #[derive(Template)]
 #[template(path = "druidism.html")]
 pub struct DruidismTemplate;
+
+#[derive(Template)]
+#[template(path = "akashic_records.html")]
+pub struct AkashicRecordsTemplate;
