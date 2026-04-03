@@ -210,3 +210,31 @@ pub struct KashmirShaivismTemplate;
 #[derive(Template)]
 #[template(path = "siddha.html")]
 pub struct SiddhaTemplate;
+
+#[derive(Template)]
+#[template(path = "indigenous_esotericism.html")]
+pub struct IndigenousEsotericismTemplate;
+
+#[derive(Template)]
+#[template(path = "andean_cosmology.html")]
+pub struct AndeanCosmologyTemplate;
+
+#[derive(Template)]
+#[template(path = "native_american_vision.html")]
+pub struct NativeAmericanVisionTemplate;
+
+#[derive(Template)]
+#[template(path = "african_initiatory.html")]
+pub struct AfricanInitiatoryTemplate;
+
+#[derive(Template)]
+#[template(path = "aboriginal_dreamtime.html")]
+pub struct AboriginalDreamtimeTemplate;
+
+#[derive(Template)]
+#[template(path = "hawaiian_huna.html")]
+pub struct HawaiianHunaTemplate;
+
+#[derive(Template)]
+#[template(path = "inuit_angakkuq.html")]
+pub struct InuitAngakkuqTemplate;
