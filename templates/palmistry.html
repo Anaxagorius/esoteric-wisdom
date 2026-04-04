@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Palmistry (Initiatic) — Esoteric Wisdom</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <meta property="og:title" content="Palmistry (Initiatic) — Esoteric Wisdom" />
+  <meta property="og:description" content="The hand as map of the soul — chirognomy, chiromancy, and the initiatic reading of the body's own symbolic language as a window into character, vocation, and subtle body structure." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://esoteric-wisdom.onrender.com/esoteric-practices/palmistry" />
+  <meta property="og:image" content="https://esoteric-wisdom.onrender.com/og-image.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Raleway', sans-serif; }
+    .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+    @keyframes twinkle { 0%,100% { opacity: 0.2; } 50% { opacity: 1; } }
+    .star { position: absolute; width: 2px; height: 2px; border-radius: 50%; background: white; animation: twinkle var(--dur,3s) ease-in-out infinite; animation-delay: var(--delay,0s); }
+    @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+    .floating { animation: float 5s ease-in-out infinite; }
+    @keyframes shimmer { 0% { background-position: -200% center; } 100% { background-position: 200% center; } }
+    .nav-link { position: relative; transition: all 0.3s; }
+    .nav-link::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: linear-gradient(90deg, #f59e0b, #a78bfa); transition: width 0.3s; }
+    .nav-link:hover::after { width: 100%; }
+    .aurora-text { background: linear-gradient(90deg, #f59e0b, #818cf8, #a78bfa, #fbbf24, #6366f1, #f59e0b); background-size: 200% auto; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; animation: shimmer 4s linear infinite; }
+    @keyframes indigo-glow { 0%, 100% { box-shadow: 0 0 10px 2px rgba(99,102,241,0.25); } 50% { box-shadow: 0 0 28px 6px rgba(99,102,241,0.55); } }
+    .esoteric-card { background: linear-gradient(135deg, rgba(79,70,229,0.07), rgba(49,46,129,0.04)); border: 1px solid rgba(99,102,241,0.2); border-radius: 1rem; padding: 1.5rem; transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; }
+    .esoteric-card:hover { transform: translateY(-6px) scale(1.01); box-shadow: 0 0 28px 5px rgba(99,102,241,0.3); border-color: rgba(99,102,241,0.5); }
+    .practice-card { background: linear-gradient(135deg, rgba(79,70,229,0.06), rgba(49,46,129,0.04)); border: 1px solid rgba(99,102,241,0.15); border-radius: 0.75rem; padding: 1.25rem; transition: border-color 0.3s, background 0.3s; }
+    .practice-card:hover { border-color: rgba(99,102,241,0.4); background: linear-gradient(135deg, rgba(79,70,229,0.1), rgba(49,46,129,0.06)); }
+  </style>
+</head>
+<body class="min-h-screen text-indigo-100 overflow-x-hidden" style="background: radial-gradient(ellipse at top, #0c0a1e 0%, #1a1040 25%, #060412 60%, #000000 100%);">
+
+  <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+
+  <nav class="sticky top-0 z-50 flex items-center justify-between px-6 py-3 bg-black/40 backdrop-blur-md border-b border-violet-500/20 flex-wrap gap-y-2">
+    <a href="/home" class="font-cinzel text-amber-300 text-sm tracking-widest shrink-0">✦ Esoteric Wisdom ✦</a>
+    <div class="flex items-center gap-x-3 gap-y-1 text-xs text-violet-200 flex-wrap justify-end">
+      <a href="/astrology" class="nav-link hover:text-amber-300 transition-colors">Astrology</a>
+      <a href="/meditation" class="nav-link hover:text-amber-300 transition-colors">Meditation</a>
+      <a href="/tarot/select" class="nav-link hover:text-amber-300 transition-colors">Tarot</a>
+      <a href="/numerology" class="nav-link hover:text-amber-300 transition-colors">Numerology</a>
+      <a href="/crystals" class="nav-link hover:text-amber-300 transition-colors">Crystals</a>
+      <a href="/runes" class="nav-link hover:text-amber-300 transition-colors">Runes</a>
+      <a href="/shamanism" class="nav-link hover:text-amber-300 transition-colors">Shamanism</a>
+      <a href="/druidism" class="nav-link hover:text-amber-300 transition-colors">Druidism</a>
+      <a href="/akashic-records" class="nav-link hover:text-amber-300 transition-colors">Akashic Records</a>
+      <a href="/wicca" class="nav-link hover:text-amber-300 transition-colors">Wicca</a>
+      <a href="/alchemy" class="nav-link hover:text-amber-300 transition-colors">Alchemy</a>
+      <a href="/gateway-process" class="nav-link hover:text-amber-300 transition-colors">Gateway Process</a>
+      <a href="/remote-viewing" class="nav-link hover:text-amber-300 transition-colors">Remote Viewing</a>
+      <a href="/khasarov-mirror" class="nav-link hover:text-amber-300 transition-colors">Khasarov Mirror</a>
+      <a href="/western-esotericism" class="nav-link hover:text-amber-300 transition-colors">Western Esotericism</a>
+      <a href="/eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Eastern Esotericism</a>
+      <a href="/indigenous-esotericism" class="nav-link hover:text-amber-300 transition-colors">Indigenous Esotericism</a>
+      <a href="/middle-eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Middle Eastern Mysteries</a>
+      <a href="/esoteric-practices" class="nav-link text-amber-300 font-semibold">Esoteric Practices</a>
+      <a href="/journal/reflections" class="nav-link text-emerald-300 hover:text-emerald-200 transition-colors">✨ Reflections</a>
+      <a href="https://ko-fi.com/esotericwisdom" target="_blank" rel="noopener noreferrer"
+         class="px-3 py-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-white font-semibold hover:scale-105 transition-transform shrink-0">☕ Support</a>
+    </div>
+  </nav>
+
+  <div class="relative z-10 max-w-6xl mx-auto space-y-10 pt-6 px-4 pb-12">
+
+    <div>
+      <a href="/esoteric-practices" class="text-xs text-indigo-300/60 hover:text-indigo-300 transition-colors">← Esoteric Practices &amp; Disciplines</a>
+    </div>
+
+    <section class="text-center py-14 space-y-6">
+      <div class="text-7xl floating">✋</div>
+      <h1 class="font-cinzel text-4xl md:text-6xl font-bold aurora-text leading-tight">
+        Palmistry (Initiatic)
+      </h1>
+      <p class="max-w-3xl mx-auto text-indigo-200/80 text-lg leading-relaxed">
+        The hand as a living map of the soul — the esoteric discipline of reading the lines, mounts, and form of the hand as a symbolic language encoding character, destiny, and the structure of the subtle body.
+      </p>
+    </section>
+
+    <section class="rounded-2xl p-8 space-y-6" style="background: linear-gradient(135deg, rgba(79,70,229,0.15), rgba(49,46,129,0.08));">
+      <h2 class="font-cinzel text-2xl text-indigo-300 text-center tracking-wide">What Is Initiatic Palmistry?</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm text-indigo-100/80 leading-relaxed">
+        <div class="space-y-4">
+          <p>
+            The serious study of the hand as a symbolic document of the soul requires a fundamental distinction between two disciplines that popular culture conflates: <strong class="text-indigo-200">chirognomy</strong> (from the Greek <em>cheir</em>, hand, and <em>gnomon</em>, indicator) is the study of the hand's form — its overall shape, the relative proportions of palm and fingers, the thickness and flexibility of the hand, the quality of skin and nails, and the shape and length of each individual finger. Chirognomy reveals character — the essential nature of the individual, their temperament, their capacities, and their constitutional tendencies — relatively fixed features that change slowly if at all over a lifetime. <strong class="text-indigo-200">Chiromancy</strong> (from <em>cheir</em> and <em>manteia</em>, divination) is the reading of the lines on the palm's surface — the Life Line, the Head Line, the Heart Line, the Fate Line, and the numerous smaller lines and markings that develop and change over time in response to the individual's life experience. Chiromancy reveals the trajectory of life, the areas of strength and vulnerability, and — according to the tradition — the general patterning of the individual's destiny.
+          </p>
+          <p>
+            The Indian tradition of <strong class="text-indigo-200">hasta jyotisha</strong> (hand astrology) represents the oldest and most systematic palmistic tradition in the world, embedded within the comprehensive astrological system of Vedic jyotisha. The earliest Indian texts on hand reading — found in the Vedic literature and in the Samudrika Shastra texts of the early centuries CE — present palmistry as an integral part of the broader science of reading the body's surface as a map of the soul's constitution and the planetary influences governing its life. Each finger is associated with a specific planetary power: the index finger with Jupiter, the middle with Saturn, the ring with the Sun, the little finger with Mercury. The thumb is associated with Mars and Venus. The mounts — the fleshy pads beneath each finger and at various positions on the palm — are similarly associated with specific planetary and elemental forces.
+          </p>
+          <p>
+            The Arabic transmission of palmistry into medieval Europe followed the same channels as geomancy and astrology: through the translations of the 12th century in Toledo and Sicily, and through the cosmopolitan intellectual culture of al-Andalus. Arabic palmistic texts built on Greek and Indian sources (the connection between Greek and Indian divinatory traditions in the Hellenistic period was substantial) and added their own systematic developments. By the 15th century, chiromancy was firmly established in the European curriculum of the occult arts, and texts by <strong class="text-indigo-200">Cocles</strong> (Bartolommeo della Rocca, c. 1467–1504), Johannes Hartlieb, and others provided the systematic framework that later practitioners elaborated. The Renaissance Hermetic tradition integrated palmistry within its comprehensive synthesis of astrology, physiognomy, and natural magic, understanding the hand as a microcosm of the heavenly influences that governed the individual at birth.
+          </p>
+          <p>
+            The <strong class="text-indigo-200">four major lines</strong> of the Western palmistic tradition each carry a distinctive interpretive significance. The <strong class="text-indigo-200">Life Line</strong> — running from between the thumb and index finger down toward the wrist — is traditionally read for the quality and duration of vitality, the significant events and transitions of the physical life, and the constitutional strength of the vital force. Despite popular misconception, its length is not simply a predictor of lifespan; its depth, continuity, and character indicate the quality of the life force more than its duration. The <strong class="text-indigo-200">Head Line</strong> (crossing the palm from the same origin point) indicates the quality of the mind — its mode of operation, its characteristic tendencies (practical or intuitive, focused or wide-ranging, concrete or abstract), and the relationship between the individual's intellectual life and their emotional constitution. The <strong class="text-indigo-200">Heart Line</strong> (running across the top of the palm beneath the fingers) indicates the quality of emotional life, the mode of loving and relating, and the relationship between the heart's needs and the life trajectory. The <strong class="text-indigo-200">Fate Line</strong> — running vertically up the palm from wrist toward fingers — is perhaps the most philosophically interesting: it is associated with the individual's sense of vocation, direction, and destiny, and its presence, absence, or characteristic form has been the subject of extensive esoteric commentary.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <p>
+            The <strong class="text-indigo-200">seven mounts</strong> of the palm — the fleshy elevations beneath each finger and at the heel of the thumb and the percussion (outer edge) of the hand — are directly associated with the seven classical planets in the Western tradition: Jupiter (index finger), Saturn (middle finger), Apollo/Sun (ring finger), Mercury (little finger), Venus (base of thumb), Moon (heel of palm, percussion side), and Mars (central palm and middle sections). The developed or underdeveloped quality of each mount indicates the relative strength or weakness of the corresponding planetary influence in the individual's character: a well-developed Jupiter mount indicates capacity for leadership, wisdom, and expansive ambition; a very dominant Saturn mount indicates seriousness, discipline, and philosophical or scientific temperament; a prominent Venus mount indicates capacity for sensory pleasure, affection, and aesthetic sensitivity.
+          </p>
+          <p>
+            The approach of the great 19th-century palmist <strong class="text-indigo-200">Cheiro</strong> (Count Louis Hamon, 1866–1936) — who read the hands of Edward VII, Oscar Wilde, Mark Twain, Sarah Bernhardt, General Kitchener, and numerous heads of state — represents the high-water mark of palmistry as a culturally respected art in the modern Western world. Cheiro's synthesis, presented in <em>Cheiro's Language of the Hand</em> (1897), combined rigorous attention to both chirognomy and chiromancy with a genuine intuitive sensitivity that made his readings famous for their accuracy. His documented predictions — including specific dates of significant events for several of his clients — remain among the most impressive in the history of predictive palmistry. His work, and that of his contemporary <strong class="text-indigo-200">William Benham</strong> (<em>The Laws of Scientific Hand Reading</em>, 1900), established the detailed systematic framework that most 20th-century Western palmists have built upon.
+          </p>
+          <p>
+            Modern scientific investigation of the hand has produced several results that converge with traditional palmistic claims, though not always in the ways the tradition anticipated. <strong class="text-indigo-200">Dermatoglyphics</strong> — the scientific study of fingerprint and palm-print patterns — has established clear genetic and developmental connections between hand markings and specific constitutional conditions. The single transverse palmar crease (formerly called the "simian crease") is associated with several genetic conditions. The 2D:4D digit ratio (the relative length of index and ring fingers) is now well-established as a marker of prenatal testosterone and oestrogen exposure, with documented correlations to personality traits, sexual orientation, athletic ability, and cardiovascular health. These scientific findings do not confirm traditional palmistry's specific interpretive claims, but they confirm the underlying premise: that the hand's morphology encodes genuine information about the individual's biological constitution.
+          </p>
+          <p>
+            The most sophisticated esoteric tradition of palmistry — found in certain schools of Anthroposophy (following Rudolf Steiner's discussions of the hand as an expression of the formative forces shaping the individual from spiritual levels), in some Theosophical teachings, and in the work of practitioners who have integrated traditional palmistry with chakra and subtle body theory — understands the hand not merely as a physical structure encoding genetic and constitutional information but as the point at which the <strong class="text-indigo-200">subtle body</strong> most directly expresses itself in the physical. The palm's lines, in this view, are not merely the product of genetic factors and mechanical use: they are the physical impression of the etheric and astral body's patterns — the subtle energetic structure that interpenetrates and shapes the physical form throughout life. Changes in the lines over time, from this perspective, reflect genuine changes in the individual's energetic constitution, not merely alterations produced by aging and physical use.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="space-y-6">
+      <h2 class="font-cinzel text-2xl text-indigo-300 text-center tracking-wide">Key Concepts &amp; Traditions</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+        <div class="esoteric-card space-y-3">
+          <div class="text-3xl">✋</div>
+          <h3 class="font-cinzel text-base text-indigo-200">Chirognomy vs Chiromancy</h3>
+          <p class="text-indigo-300/60 text-xs uppercase tracking-wider">Form vs Line Reading</p>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">The distinction between chirognomy (the study of hand form — shape, finger proportions, texture, flexibility) and chiromancy (the reading of the palm's lines) is fundamental to serious palmistic study. Chirognomy reveals the constitutional character — the relatively stable psychological and temperamental foundation of the individual. Chiromancy reveals the life trajectory — the patterns and events of experience as they unfold over time. The great palmistic teachers — from Desbarrolles and d'Arpentigny in the 19th century to modern masters — have insisted that accurate reading requires proficiency in both disciplines: the form provides the frame within which the lines must be interpreted, and the lines give specific content to the character indicated by the form.</p>
+        </div>
+
+        <div class="esoteric-card space-y-3">
+          <div class="text-3xl">〰️</div>
+          <h3 class="font-cinzel text-base text-indigo-200">The Major Lines</h3>
+          <p class="text-indigo-300/60 text-xs uppercase tracking-wider">Life, Head, Heart, Fate</p>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">The four primary lines of the palm encode the major dimensions of the individual's life experience. The Life Line indicates vital constitution, significant transitions, and the quality of the physical life force. The Head Line reveals the mode of the intellect — pragmatic or intuitive, focused or diffuse, linear or associative. The Heart Line describes the emotional nature and the characteristic mode of love and relationship. The Fate Line — absent in some hands, dramatically prominent in others — indicates the degree to which the individual experiences their life as purposive and directed, guided by a sense of vocation or calling that transcends circumstantial choice. Its absence does not indicate an aimless life; many highly purposive individuals lack a prominent Fate Line, suggesting that their destiny is lived from the inside rather than imposed from without.</p>
+        </div>
+
+        <div class="esoteric-card space-y-3">
+          <div class="text-3xl">🪐</div>
+          <h3 class="font-cinzel text-base text-indigo-200">The Seven Mounts</h3>
+          <p class="text-indigo-300/60 text-xs uppercase tracking-wider">Planetary Energies in the Hand</p>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">The seven mounts of the palm map the seven classical planetary influences directly onto the physical structure of the hand. Jupiter (beneath the index finger) governs ambition, leadership, and expansive wisdom. Saturn (middle finger) governs discipline, seriousness, and the philosophical impulse. Apollo/Sun (ring finger) governs creativity, beauty, and the need for recognition. Mercury (little finger) governs communication, commerce, and practical intelligence. Venus (base of thumb) governs love, sensuality, and aesthetic pleasure. The Moon (heel, percussion) governs imagination, intuition, and the receptive feminine principle. Mars (central palm) governs courage, aggression, and the active masculine force. The relative development of each mount indicates the relative strength of these influences in the individual's character.</p>
+        </div>
+
+        <div class="esoteric-card space-y-3">
+          <div class="text-3xl">🇮🇳</div>
+          <h3 class="font-cinzel text-base text-indigo-200">Indian Jyotish Tradition</h3>
+          <p class="text-indigo-300/60 text-xs uppercase tracking-wider">Hasta Jyotisha</p>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">The Indian tradition of hasta jyotisha (hand astrology) is the most ancient and most systematically integrated palmistic tradition in the world. Its foundational texts — in the Vedic literature and the Samudrika Shastra corpus — present hand reading as an integral component of the comprehensive astrological science of individual constitution. The Indian tradition emphasises chirognomy heavily, classifying hand types according to their elemental constitution and their planetary dominance, and reads the lines within this chirognomical framework. Unlike the popular Western tradition, Indian hasta jyotisha does not focus on predictive fortune-telling but on the recognition of the individual's constitutional strengths, their dharmic inclinations, and their appropriate life-path.</p>
+        </div>
+
+        <div class="esoteric-card space-y-3">
+          <div class="text-3xl">❓</div>
+          <h3 class="font-cinzel text-base text-indigo-200">The Fate Line Controversy</h3>
+          <p class="text-indigo-300/60 text-xs uppercase tracking-wider">Destiny vs Free Will</p>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">The Fate Line has generated more philosophical debate than any other feature of the palm because it directly engages the perennial question of free will and determinism. Its presence indicates a strong sense of directed purpose; its absence does not indicate purposelessness. The traditional interpretation — that it shows the degree to which the individual's life is shaped by forces beyond personal choice — has been refined by modern practitioners to indicate the degree to which the individual consciously participates in their unfolding destiny. A strongly marked Fate Line on a person of poor self-awareness may indicate a life driven by external forces; on a person of developed consciousness, it may indicate a life of exceptional purposive alignment between the individual will and the larger pattern the soul seeks to express.</p>
+        </div>
+
+        <div class="esoteric-card space-y-3">
+          <div class="text-3xl">🌐</div>
+          <h3 class="font-cinzel text-base text-indigo-200">Hand Reading as Subtle Body Map</h3>
+          <p class="text-indigo-300/60 text-xs uppercase tracking-wider">The Etheric Impression</p>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">The most esoteric interpretation of palmistry — found in Anthroposophical and Theosophical teaching and in the work of certain contemporary integral palmists — understands the hand not merely as a physical structure encoding constitutional information but as the point at which the subtle body (etheric body, astral body) most directly impresses itself onto the physical. The lines of the hand, in this understanding, are not merely produced by folding patterns in the skin during foetal development and shaped by physical use thereafter; they are the physical crystallisation of the subtle energetic patterns that constitute the individual's essential nature. This makes the hand a genuine subtle body map — a physical reading of energetic realities that, at deeper levels, are not physical at all.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="rounded-2xl p-8 space-y-6" style="background: linear-gradient(135deg, rgba(79,70,229,0.15), rgba(49,46,129,0.08));">
+      <h2 class="font-cinzel text-2xl text-indigo-300 text-center tracking-wide">The Body's Symbolic Language</h2>
+      <div class="space-y-5 text-sm text-indigo-100/80 leading-relaxed max-w-4xl mx-auto">
+        <p>
+          The initiatic tradition of palmistry — as distinct from the popular fortune-telling tradition — reads the hand not as a predictor of a fixed future but as a <strong class="text-indigo-200">recognition of the soul's signature</strong> in physical form. The hand, in this tradition, is understood as the most individualised part of the human body: no two hands are identical, even those of identical twins, whose fingerprints and palmar lines differ. This extraordinary individuality is not accidental — it reflects the unique configuration of forces that constitutes each particular human being. To read a hand with genuine skill is not to enumerate a list of characteristics but to witness a unique soul expressing itself through the medium of physical form.
+        </p>
+        <p>
+          The relationship between the hand and the rest of the person is one of the most compelling features of serious palmistry. A skilled hand reader who has read thousands of hands develops an immediate recognition of congruence or incongruence: the person who presents one type of hand while behaving in ways that contradict it is revealing something — a suppression, an unlived dimension, a discrepancy between the constitutional potential and the actual lived life. The hand, in this sense, does not lie: it registers what the individual <em>is</em> at the level of their constitutional nature, regardless of what they choose to present to the world. This makes it a uniquely direct instrument of recognition — not of predetermined fate, but of the authentic soul-pattern that each person carries and may or may not choose to express.
+        </p>
+        <p>
+          The most profound use of palmistry in the initiatic tradition is therefore not predictive but <strong class="text-indigo-200">reflective</strong>: the hand reader serves as a mirror in which the individual can see their own deepest nature recognised and named by another. The experience of having one's hand read by a genuinely skilled practitioner — having the pattern of one's inner life discerned and articulated from the physical evidence of the hand alone — can be a powerful moment of self-recognition, of being seen in one's authentic character rather than in the social persona. This is why the great palmists have always insisted that their art is not fortune-telling but soul-recognition, and why the most memorable readings are not those that predict events but those that recognise, with precise compassion, who the person most deeply is.
+        </p>
+      </div>
+    </section>
+
+    <div class="text-center mt-4">
+      <a href="/esoteric-practices" class="text-indigo-400/60 hover:text-indigo-300 text-sm transition-colors">← Esoteric Practices &amp; Disciplines</a>
+    </div>
+
+  </div>
+
+  <footer class="relative z-10 text-center py-8 text-indigo-400/40 text-xs mt-8">
+    <p class="italic">"Your hand is the autobiography of your life." — Cheiro, Language of the Hand</p>
+    <p class="mt-2">Esoteric Wisdom · Built with ✨ in Rust</p>
+    <p class="mt-2"><a href="/home" class="hover:text-indigo-300 transition-colors">← Back to Portal</a></p>
+  </footer>
+
+  <script>
+  const sf = document.getElementById('starfield');
+  for (let i = 0; i < 200; i++) {
+    const s = document.createElement('div');
+    s.className = 'star';
+    s.style.left = Math.random() * 100 + '%';
+    s.style.top = Math.random() * 100 + '%';
+    s.style.animationDelay = Math.random() * 3 + 's';
+    s.style.animationDuration = (2 + Math.random() * 3) + 's';
+    sf.appendChild(s);
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Breathwork — Esoteric Wisdom</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <meta property="og:title" content="Breathwork — Esoteric Wisdom" />
+  <meta property="og:description" content="The breath as bridge between body and consciousness — pranayama, holotropic breathwork, Taoist embryonic breathing, and the ancient science of breath as the primary vehicle of spiritual transformation." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://esoteric-wisdom.onrender.com/esoteric-practices/breathwork" />
+  <meta property="og:image" content="https://esoteric-wisdom.onrender.com/og-image.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Raleway', sans-serif; }
+    .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+    @keyframes twinkle { 0%,100% { opacity: 0.2; } 50% { opacity: 1; } }
+    .star { position: absolute; width: 2px; height: 2px; border-radius: 50%; background: white; animation: twinkle var(--dur,3s) ease-in-out infinite; animation-delay: var(--delay,0s); }
+    @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+    .floating { animation: float 5s ease-in-out infinite; }
+    @keyframes shimmer { 0% { background-position: -200% center; } 100% { background-position: 200% center; } }
+    .nav-link { position: relative; transition: all 0.3s; }
+    .nav-link::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: linear-gradient(90deg, #f59e0b, #a78bfa); transition: width 0.3s; }
+    .nav-link:hover::after { width: 100%; }
+    .aurora-text { background: linear-gradient(90deg, #f59e0b, #818cf8, #a78bfa, #fbbf24, #6366f1, #f59e0b); background-size: 200% auto; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; animation: shimmer 4s linear infinite; }
+    @keyframes indigo-glow { 0%, 100% { box-shadow: 0 0 10px 2px rgba(99,102,241,0.25); } 50% { box-shadow: 0 0 28px 6px rgba(99,102,241,0.55); } }
+    .esoteric-card { background: linear-gradient(135deg, rgba(79,70,229,0.07), rgba(49,46,129,0.04)); border: 1px solid rgba(99,102,241,0.2); border-radius: 1rem; padding: 1.5rem; transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; }
+    .esoteric-card:hover { transform: translateY(-6px) scale(1.01); box-shadow: 0 0 28px 5px rgba(99,102,241,0.3); border-color: rgba(99,102,241,0.5); }
+    .practice-card { background: linear-gradient(135deg, rgba(79,70,229,0.06), rgba(49,46,129,0.04)); border: 1px solid rgba(99,102,241,0.15); border-radius: 0.75rem; padding: 1.25rem; transition: border-color 0.3s, background 0.3s; }
+    .practice-card:hover { border-color: rgba(99,102,241,0.4); background: linear-gradient(135deg, rgba(79,70,229,0.1), rgba(49,46,129,0.06)); }
+  </style>
+</head>
+<body class="min-h-screen text-indigo-100 overflow-x-hidden" style="background: radial-gradient(ellipse at top, #0c0a1e 0%, #1a1040 25%, #060412 60%, #000000 100%);">
+
+  <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+
+  <nav class="sticky top-0 z-50 flex items-center justify-between px-6 py-3 bg-black/40 backdrop-blur-md border-b border-violet-500/20 flex-wrap gap-y-2">
+    <a href="/home" class="font-cinzel text-amber-300 text-sm tracking-widest shrink-0">✦ Esoteric Wisdom ✦</a>
+    <div class="flex items-center gap-x-3 gap-y-1 text-xs text-violet-200 flex-wrap justify-end">
+      <a href="/astrology" class="nav-link hover:text-amber-300 transition-colors">Astrology</a>
+      <a href="/meditation" class="nav-link hover:text-amber-300 transition-colors">Meditation</a>
+      <a href="/tarot/select" class="nav-link hover:text-amber-300 transition-colors">Tarot</a>
+      <a href="/numerology" class="nav-link hover:text-amber-300 transition-colors">Numerology</a>
+      <a href="/crystals" class="nav-link hover:text-amber-300 transition-colors">Crystals</a>
+      <a href="/runes" class="nav-link hover:text-amber-300 transition-colors">Runes</a>
+      <a href="/shamanism" class="nav-link hover:text-amber-300 transition-colors">Shamanism</a>
+      <a href="/druidism" class="nav-link hover:text-amber-300 transition-colors">Druidism</a>
+      <a href="/akashic-records" class="nav-link hover:text-amber-300 transition-colors">Akashic Records</a>
+      <a href="/wicca" class="nav-link hover:text-amber-300 transition-colors">Wicca</a>
+      <a href="/alchemy" class="nav-link hover:text-amber-300 transition-colors">Alchemy</a>
+      <a href="/gateway-process" class="nav-link hover:text-amber-300 transition-colors">Gateway Process</a>
+      <a href="/remote-viewing" class="nav-link hover:text-amber-300 transition-colors">Remote Viewing</a>
+      <a href="/khasarov-mirror" class="nav-link hover:text-amber-300 transition-colors">Khasarov Mirror</a>
+      <a href="/western-esotericism" class="nav-link hover:text-amber-300 transition-colors">Western Esotericism</a>
+      <a href="/eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Eastern Esotericism</a>
+      <a href="/indigenous-esotericism" class="nav-link hover:text-amber-300 transition-colors">Indigenous Esotericism</a>
+      <a href="/middle-eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Middle Eastern Mysteries</a>
+      <a href="/esoteric-practices" class="nav-link text-amber-300 font-semibold">Esoteric Practices</a>
+      <a href="/journal/reflections" class="nav-link text-emerald-300 hover:text-emerald-200 transition-colors">✨ Reflections</a>
+      <a href="https://ko-fi.com/esotericwisdom" target="_blank" rel="noopener noreferrer"
+         class="px-3 py-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-white font-semibold hover:scale-105 transition-transform shrink-0">☕ Support</a>
+    </div>
+  </nav>
+
+  <div class="relative z-10 max-w-6xl mx-auto space-y-10 pt-6 px-4 pb-12">
+
+    <div>
+      <a href="/esoteric-practices" class="text-xs text-indigo-300/60 hover:text-indigo-300 transition-colors">← Esoteric Practices &amp; Disciplines</a>
+    </div>
+
+    <section class="text-center py-14 space-y-6">
+      <div class="text-7xl floating">💨</div>
+      <h1 class="font-cinzel text-4xl md:text-6xl font-bold aurora-text leading-tight">
+        Breathwork
+      </h1>
+      <p class="max-w-3xl mx-auto text-indigo-200/80 text-lg leading-relaxed">
+        The ancient science of breath as the primary bridge between the physical body, the subtle body, and the transcendent dimensions of consciousness — from pranayama to holotropic breathwork.
+      </p>
+    </section>
+
+    <section class="rounded-2xl p-8 space-y-6" style="background: linear-gradient(135deg, rgba(79,70,229,0.15), rgba(49,46,129,0.08));">
+      <h2 class="font-cinzel text-2xl text-indigo-300 text-center tracking-wide">What Is Breathwork?</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm text-indigo-100/80 leading-relaxed">
+        <div class="space-y-4">
+          <p>
+            The Sanskrit word <em>pranayama</em> combines <strong class="text-indigo-200">prana</strong> (vital force, breath, life-energy) with <strong class="text-indigo-200">ayama</strong> (extension, expansion, restraint) — the extension and regulation of the vital force through the deliberate control of breathing. Patanjali's <em>Yoga Sutras</em> (c. 200–400 CE) describe pranayama as the fourth of the eight limbs of yoga: following the ethical foundations (yama, niyama), the physical postures (asana), and preceding the meditative limbs (pratyahara, dharana, dhyana, samadhi). Patanjali's definition of pranayama is specifically about the interruption and extension of the normal breathing cycle — the manipulation of inhalation, exhalation, and retention to produce specific states of prana regulation in the subtle body and corresponding states of consciousness. This is not breathing for physiological health (though health effects inevitably follow) but breathing as a technology of consciousness alteration.
+          </p>
+          <p>
+            The Hatha Yoga tradition, which developed and systematised pranayama practice from approximately the 9th to the 15th century CE, produced a comprehensive body of techniques for working with prana through breath. The principal pranayama practices include: <strong class="text-indigo-200">Nadi Shodhana</strong> (alternate nostril breathing) — the practice of breathing alternately through left and right nostrils to balance the solar (Pingala) and lunar (Ida) pranic channels and induce the condition called <em>sushumna awakening</em> in which prana flows through the central channel; <strong class="text-indigo-200">Bhastrika</strong> (bellows breath) — rapid, forceful inhalations and exhalations that rapidly oxygenate the body and stimulate pranic circulation; <strong class="text-indigo-200">Kapalabhati</strong> (skull-shining breath) — rapid exhalations with passive inhalations, used for purification of the nadis (energy channels); and <strong class="text-indigo-200">Ujjayi</strong> (victorious breath) — the oceanic-sounding breath produced by a gentle constriction of the throat, used throughout asana practice and meditation to maintain pranic focus.
+          </p>
+          <p>
+            The Taoist tradition has developed an equally sophisticated breathwork technology under the concept of <strong class="text-indigo-200">qi</strong> (vital force, life energy) and its cultivation through the practices collectively known as <em>qigong</em> and <em>neigong</em>. The most esoteric Taoist breathwork practice is <strong class="text-indigo-200">taixi</strong> (胎息, embryonic breathing) — the goal-state of advanced practice in which ordinary breathing becomes so refined, slow, and subtle that the Taoist adept appears from the outside to be barely breathing at all, while internally experiencing a deep circulation of qi that nourishes the body at the cellular level. Taixi is associated in Taoist texts with extreme longevity, immunity to illness, and eventually with the cultivation of the immortal spirit body (<em>shenxian</em>). The practice involves progressively extending the breath cycle while maintaining internal qi circulation through the microcosmic orbit — the primary energy channel connecting the governing vessel up the spine and the conception vessel down the front of the body.
+          </p>
+          <p>
+            <strong class="text-indigo-200">Stanislav Grof's</strong> development of holotropic breathwork represents the most significant modern contribution to the breathwork tradition. Grof, a Czech-born psychiatrist who began his research career in the 1950s studying the therapeutic and consciousness-expanding effects of LSD, was forced to abandon LSD research when the substance was criminalised in the late 1960s. Working with his wife Christina, he developed holotropic breathwork as a non-pharmacological alternative that could reliably produce states of consciousness as extraordinary as those produced by LSD. The technique involves sustained hyperventilation in a supported lying position, combined with evocative music and a trained facilitator — sessions typically lasting several hours. Grof's extensive documentation of the experiences produced by holotropic breathwork led him to develop a comprehensive cartography of the psyche that includes the biographical level, the perinatal level (associated with the stages of biological birth), and the transpersonal level (involving archetypal, cosmic, and mystical experiences beyond ordinary personal history).
+          </p>
+        </div>
+        <div class="space-y-4">
+          <p>
+            The neuroscientific understanding of how breath regulation affects brain states and the autonomic nervous system has developed significantly in the past two decades and provides mechanistic support for ancient claims about breathwork's transformative power. The <strong class="text-indigo-200">vagus nerve</strong> — the primary nerve of the parasympathetic nervous system, which regulates the body's rest-and-digest state — is directly stimulated by slow, deep diaphragmatic breathing. This stimulation reduces heart rate, lowers blood pressure, decreases cortisol levels, and shifts the brain from the alert/survival states associated with sympathetic activation toward the calm/connected states associated with parasympathetic dominance. Conversely, rapid, shallow breathing activates the sympathetic nervous system, increases arousal, and — when carried to the extreme used in holotropic breathwork — produces altered states through a complex combination of CO2 reduction, cerebral blood flow changes, and direct limbic system effects.
+          </p>
+          <p>
+            The relationship between breath and mind is uniquely bidirectional — a feature that has not been lost on the esoteric traditions. Of all the physiological functions of the body, breathing is the only one that is both completely automatic and completely voluntary. We breathe without any conscious attention; yet we can also take complete, sustained conscious control of our breathing whenever we choose. This unique status makes the breath the ideal bridge between the voluntary and involuntary aspects of the nervous system — and, by extension, between the conscious and unconscious dimensions of the mind. The Yoga Sutras' famous definition of yoga as "the cessation of the fluctuations of the mind" (yogash chitta vritti nirodhah) is directly achievable through pranayama: systematic breath regulation reliably stills the mental fluctuations that characterise ordinary consciousness.
+          </p>
+          <p>
+            The <strong class="text-indigo-200">Tibetan Buddhist practice of tummo</strong> (gtum mo — "fierce woman" or "inner heat") is one of the Six Yogas of Naropa — a set of advanced practices that together constitute the complete technology of the Vajrayana path. Tummo practice combines visualisation (of the central channel as a hollow tube of light), mantra, specific mudras, and highly specific breath retention (kumbhaka) practices to generate intense heat in the body — heat that is understood not merely as a physical warmth but as the "bliss-heat" that melts the drops of bodhicitta and allows them to descend through the central channel, producing the states of clear light awareness associated with the highest levels of Vajrayana realisation. Herbert Benson's Harvard research on tummo practitioners, demonstrating their ability to raise peripheral body temperature by several degrees in controlled laboratory conditions, provided striking physiological confirmation of what the tradition had always described.
+          </p>
+          <p>
+            The <strong class="text-indigo-200">Wim Hof Method</strong> — developed by the Dutch athlete Wim Hof and studied by researchers at Radboud University — combines specific hyperventilation, breath retention, and cold exposure to produce measurable effects on the immune system that were previously thought impossible: voluntary suppression of inflammation, modulation of the autonomic nervous system response, and resistance to bacterial infection. Hof's ability to run barefoot above the Arctic Circle, climb Everest in shorts, and swim under polar ice for extended periods has attracted considerable scientific attention and popular interest. Whether his method represents a modern rediscovery of ancient Taoist and Tibetan principles or an independent development, its documented physiological effects confirm the ancient claim that breath techniques can access physiological systems previously considered inaccessible to conscious intervention.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="space-y-6">
+      <h2 class="font-cinzel text-2xl text-indigo-300 text-center tracking-wide">Key Practices &amp; Techniques</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+        <div class="esoteric-card space-y-3">
+          <div class="text-3xl">🌬️</div>
+          <h3 class="font-cinzel text-base text-indigo-200">Pranayama (Yoga)</h3>
+          <p class="text-indigo-300/60 text-xs uppercase tracking-wider">Extension of the Vital Force</p>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">The systematic yogic science of breath regulation, comprising techniques for controlling the duration, depth, and rhythm of inhalation, exhalation, and retention. Classical Hatha Yoga texts such as the Hatha Yoga Pradipika (c. 15th century) describe eight principal pranayama techniques, each producing specific effects on the pranic system and consciousness. Nadi Shodhana is the foundational balancing practice; Bhastrika and Kapalabhati are cleansing and energising; Sitali and Sitkari are cooling; Bhramari (humming bee breath) is deeply calming. All pranayama practice is understood to work primarily on the subtle body — purifying the nadis and directing prana to activate the sushumna channel.</p>
+        </div>
+
+        <div class="esoteric-card space-y-3">
+          <div class="text-3xl">⏸️</div>
+          <h3 class="font-cinzel text-base text-indigo-200">Kumbhaka (Breath Retention)</h3>
+          <p class="text-indigo-300/60 text-xs uppercase tracking-wider">The Pause That Transforms</p>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">Kumbhaka — the retention of breath, either after inhalation (antara kumbhaka) or after exhalation (bahya kumbhaka) — is the most potent and most demanding pranayama technique. In the Hatha Yoga understanding, it is during kumbhaka that prana is most directly available to be directed within the subtle body. Extended retention after full inhalation (puraka kumbhaka) builds pranic pressure and is associated with the awakening of kundalini; extended retention after full exhalation (rechaka kumbhaka) is associated with the deep inward contraction that reveals the nature of consciousness independent of the breath-body cycle. Both require careful preparation and ideally a qualified teacher's guidance.</p>
+        </div>
+
+        <div class="esoteric-card space-y-3">
+          <div class="text-3xl">🐣</div>
+          <h3 class="font-cinzel text-base text-indigo-200">Taoist Embryonic Breathing</h3>
+          <p class="text-indigo-300/60 text-xs uppercase tracking-wider">Taixi — Return to the Source</p>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">Taoist embryonic breathing (taixi) aims at the conditions of the foetus in the womb — sustained by qi circulation rather than by gross respiratory exchange. The practice begins with cultivating slow, deep, complete breathing that activates the lower dantian (the primary qi centre below the navel), then progressively refines toward the barely perceptible breathing of advanced Taoist meditation. The Taoist understanding is that ordinary breathing "leaks" vital essence outward; embryonic breathing reverses this, drawing in the primordial qi of heaven and earth and circulating it within the body. Associated texts include the Taixi Jing and various Inner Alchemy (neidan) manuals.</p>
+        </div>
+
+        <div class="esoteric-card space-y-3">
+          <div class="text-3xl">🌊</div>
+          <h3 class="font-cinzel text-base text-indigo-200">Holotropic Breathwork</h3>
+          <p class="text-indigo-300/60 text-xs uppercase tracking-wider">Grof's Non-Ordinary State Technology</p>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">Developed by Stanislav and Christina Grof as a legal alternative to LSD psychotherapy, holotropic breathwork uses sustained faster-than-normal breathing combined with evocative music to reliably produce non-ordinary states of consciousness. Sessions typically last 2–3 hours and are conducted in pairs (one breathing, one "sitting") with trained facilitators present. The experiences produced — ranging from biographical re-experiencing to archetypal visions to transpersonal union states — are documented in Grof's extensive case literature. Participants are encouraged to express whatever arises through movement, sound, and bodywork, with no attempt to control or direct the process. Integration through mandala drawing and group sharing follows each session.</p>
+        </div>
+
+        <div class="esoteric-card space-y-3">
+          <div class="text-3xl">❄️</div>
+          <h3 class="font-cinzel text-base text-indigo-200">Wim Hof Method &amp; Tummo</h3>
+          <p class="text-indigo-300/60 text-xs uppercase tracking-wider">Inner Fire</p>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">The Tibetan tummo practice and the Wim Hof Method share a common core: specific hyperventilation sequences followed by extended breath retention on the exhale, combined with visualisation and physical exposure to cold. Both produce measurable effects on thermoregulation, immune function, and autonomic nervous system activity. Tummo is embedded in a complete Vajrayana context — the "inner fire" is understood as the bliss-heat that purifies and transforms the subtle body. The Wim Hof Method operates more empirically, but its documented physiological effects have prompted serious academic research into breath-induced autonomic modulation that benefits practitioners of all traditions.</p>
+        </div>
+
+        <div class="esoteric-card space-y-3">
+          <div class="text-3xl">🫁</div>
+          <h3 class="font-cinzel text-base text-indigo-200">The Nervous System &amp; Breath</h3>
+          <p class="text-indigo-300/60 text-xs uppercase tracking-wider">The Scientific Foundation</p>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">The vagal hypothesis of breath — the understanding that slow, rhythmic, diaphragmatic breathing stimulates the vagus nerve and shifts nervous system activity from sympathetic (fight-or-flight) to parasympathetic (rest-and-restore) dominance — has become the scientific foundation for a revolution in understanding stress, trauma, and their treatment. Heart rate variability (HRV) — a measure of the responsiveness of the nervous system mediated by vagal tone — can be reliably elevated through specific breathing practices, including coherent breathing (5–6 breaths per minute), Nadi Shodhana, and box breathing. Stephen Porges's Polyvagal Theory and Peter Levine's Somatic Experiencing both draw on this understanding to inform trauma-sensitive breathwork approaches.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="rounded-2xl p-8 space-y-6" style="background: linear-gradient(135deg, rgba(79,70,229,0.15), rgba(49,46,129,0.08));">
+      <h2 class="font-cinzel text-2xl text-indigo-300 text-center tracking-wide">The Breath That Knows</h2>
+      <div class="space-y-5 text-sm text-indigo-100/80 leading-relaxed max-w-4xl mx-auto">
+        <p>
+          Every serious esoteric tradition has recognised the breath as the most accessible and most powerful lever for altering consciousness — not because it is the most dramatic or exotic of spiritual techniques, but because of a single structural fact: <strong class="text-indigo-200">the breath is already there</strong>. Every practitioner carries with them, in every moment of every day, a complete technology for modifying their own nervous system, altering their brain chemistry, directing their vital energy, and opening access to dimensions of consciousness that ordinary waking life conceals. This technology requires no equipment, no initiation (at least at the entry level), no special location, and no external assistance. It is completely portable, completely free, and available without exception to every human being alive.
+        </p>
+        <p>
+          This availability is at once breathwork's greatest gift and the reason it tends to be underestimated. The profound and the accessible rarely coincide so completely in the spiritual life. When they do — as here — there is a natural tendency to discount the simplicity as insufficient for "serious" spiritual work. The great teachers of every tradition have consistently resisted this tendency. Patanjali places pranayama at the centre of his eight-limbed system; the Taoist Inner Alchemists regard the refinement of breathing as the gateway to immortal consciousness; the Tibetan Buddhist masters consider tummo an essential preparation for the attainment of clear light mind. None of these traditions regards the breath as a preliminary exercise to be discarded when "real" practice begins. It is rather the thread that runs through all practice, from the most elementary to the most advanced.
+        </p>
+        <p>
+          The contemporary rediscovery of breathwork as a primary therapeutic and spiritual tool — through Grof's holotropic work, through the Wim Hof phenomenon, through the explosion of interest in somatic approaches to trauma healing — represents a remarkable convergence of ancient practice and modern understanding. Neuroscience has provided mechanistic explanations for effects that the traditions described in metaphysical terms: the "activation of the sushumna" is, in part, the shift toward coherent parasympathetic/sympathetic balance that Nadi Shodhana reliably produces. The "inner fire of tummo" corresponds to the measured thermogenic effects of breath retention and cold exposure. The "dissolution of ego" in holotropic breathing correlates with specific neurological signatures in the default mode network. None of these correspondences reduces the spiritual significance of the practices to mere physiology — but they do provide modern practitioners with a confident framework for understanding why the breath-based traditions have always produced what they claimed to produce.
+        </p>
+      </div>
+    </section>
+
+    <div class="text-center mt-4">
+      <a href="/esoteric-practices" class="text-indigo-400/60 hover:text-indigo-300 text-sm transition-colors">← Esoteric Practices &amp; Disciplines</a>
+    </div>
+
+  </div>
+
+  <footer class="relative z-10 text-center py-8 text-indigo-400/40 text-xs mt-8">
+    <p class="italic">"Breath is the bridge which connects life to consciousness." — Thich Nhat Hanh</p>
+    <p class="mt-2">Esoteric Wisdom · Built with ✨ in Rust</p>
+    <p class="mt-2"><a href="/home" class="hover:text-indigo-300 transition-colors">← Back to Portal</a></p>
+  </footer>
+
+  <script>
+  const sf = document.getElementById('starfield');
+  for (let i = 0; i < 200; i++) {
+    const s = document.createElement('div');
+    s.className = 'star';
+    s.style.left = Math.random() * 100 + '%';
+    s.style.top = Math.random() * 100 + '%';
+    s.style.animationDelay = Math.random() * 3 + 's';
+    s.style.animationDuration = (2 + Math.random() * 3) + 's';
+    sf.appendChild(s);
+  }
+</script>
+
+</body>
+</html>

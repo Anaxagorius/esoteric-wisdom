@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dream Incubation — Esoteric Wisdom</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <meta property="og:title" content="Dream Incubation — Esoteric Wisdom" />
+  <meta property="og:description" content="The ancient art of cultivating oracular and healing dreams — from the Asclepian temples of Greece to Tibetan dream yoga and the oneiric traditions of ancient Egypt." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://esoteric-wisdom.onrender.com/esoteric-practices/dream-incubation" />
+  <meta property="og:image" content="https://esoteric-wisdom.onrender.com/og-image.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Raleway', sans-serif; }
+    .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+    @keyframes twinkle { 0%,100% { opacity: 0.2; } 50% { opacity: 1; } }
+    .star { position: absolute; width: 2px; height: 2px; border-radius: 50%; background: white; animation: twinkle var(--dur,3s) ease-in-out infinite; animation-delay: var(--delay,0s); }
+    @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+    .floating { animation: float 5s ease-in-out infinite; }
+    @keyframes shimmer { 0% { background-position: -200% center; } 100% { background-position: 200% center; } }
+    .nav-link { position: relative; transition: all 0.3s; }
+    .nav-link::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: linear-gradient(90deg, #f59e0b, #a78bfa); transition: width 0.3s; }
+    .nav-link:hover::after { width: 100%; }
+    .aurora-text { background: linear-gradient(90deg, #f59e0b, #818cf8, #a78bfa, #fbbf24, #6366f1, #f59e0b); background-size: 200% auto; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; animation: shimmer 4s linear infinite; }
+    @keyframes indigo-glow { 0%, 100% { box-shadow: 0 0 10px 2px rgba(99,102,241,0.25); } 50% { box-shadow: 0 0 28px 6px rgba(99,102,241,0.55); } }
+    .esoteric-card { background: linear-gradient(135deg, rgba(79,70,229,0.07), rgba(49,46,129,0.04)); border: 1px solid rgba(99,102,241,0.2); border-radius: 1rem; padding: 1.5rem; transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; }
+    .esoteric-card:hover { transform: translateY(-6px) scale(1.01); box-shadow: 0 0 28px 5px rgba(99,102,241,0.3); border-color: rgba(99,102,241,0.5); }
+    .practice-card { background: linear-gradient(135deg, rgba(79,70,229,0.06), rgba(49,46,129,0.04)); border: 1px solid rgba(99,102,241,0.15); border-radius: 0.75rem; padding: 1.25rem; transition: border-color 0.3s, background 0.3s; }
+    .practice-card:hover { border-color: rgba(99,102,241,0.4); background: linear-gradient(135deg, rgba(79,70,229,0.1), rgba(49,46,129,0.06)); }
+  </style>
+</head>
+<body class="min-h-screen text-indigo-100 overflow-x-hidden" style="background: radial-gradient(ellipse at top, #0c0a1e 0%, #1a1040 25%, #060412 60%, #000000 100%);">
+
+  <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+
+  <nav class="sticky top-0 z-50 flex items-center justify-between px-6 py-3 bg-black/40 backdrop-blur-md border-b border-violet-500/20 flex-wrap gap-y-2">
+    <a href="/home" class="font-cinzel text-amber-300 text-sm tracking-widest shrink-0">✦ Esoteric Wisdom ✦</a>
+    <div class="flex items-center gap-x-3 gap-y-1 text-xs text-violet-200 flex-wrap justify-end">
+      <a href="/astrology" class="nav-link hover:text-amber-300 transition-colors">Astrology</a>
+      <a href="/meditation" class="nav-link hover:text-amber-300 transition-colors">Meditation</a>
+      <a href="/tarot/select" class="nav-link hover:text-amber-300 transition-colors">Tarot</a>
+      <a href="/numerology" class="nav-link hover:text-amber-300 transition-colors">Numerology</a>
+      <a href="/crystals" class="nav-link hover:text-amber-300 transition-colors">Crystals</a>
+      <a href="/runes" class="nav-link hover:text-amber-300 transition-colors">Runes</a>
+      <a href="/shamanism" class="nav-link hover:text-amber-300 transition-colors">Shamanism</a>
+      <a href="/druidism" class="nav-link hover:text-amber-300 transition-colors">Druidism</a>
+      <a href="/akashic-records" class="nav-link hover:text-amber-300 transition-colors">Akashic Records</a>
+      <a href="/wicca" class="nav-link hover:text-amber-300 transition-colors">Wicca</a>
+      <a href="/alchemy" class="nav-link hover:text-amber-300 transition-colors">Alchemy</a>
+      <a href="/gateway-process" class="nav-link hover:text-amber-300 transition-colors">Gateway Process</a>
+      <a href="/remote-viewing" class="nav-link hover:text-amber-300 transition-colors">Remote Viewing</a>
+      <a href="/khasarov-mirror" class="nav-link hover:text-amber-300 transition-colors">Khasarov Mirror</a>
+      <a href="/western-esotericism" class="nav-link hover:text-amber-300 transition-colors">Western Esotericism</a>
+      <a href="/eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Eastern Esotericism</a>
+      <a href="/indigenous-esotericism" class="nav-link hover:text-amber-300 transition-colors">Indigenous Esotericism</a>
+      <a href="/middle-eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Middle Eastern Mysteries</a>
+      <a href="/esoteric-practices" class="nav-link text-amber-300 font-semibold">Esoteric Practices</a>
+      <a href="/journal/reflections" class="nav-link text-emerald-300 hover:text-emerald-200 transition-colors">✨ Reflections</a>
+      <a href="https://ko-fi.com/esotericwisdom" target="_blank" rel="noopener noreferrer"
+         class="px-3 py-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-white font-semibold hover:scale-105 transition-transform shrink-0">☕ Support</a>
+    </div>
+  </nav>
+
+  <div class="relative z-10 max-w-6xl mx-auto space-y-10 pt-6 px-4 pb-12">
+
+    <div>
+      <a href="/esoteric-practices" class="text-xs text-indigo-300/60 hover:text-indigo-300 transition-colors">← Esoteric Practices &amp; Disciplines</a>
+    </div>
+
+    <section class="text-center py-14 space-y-6">
+      <div class="text-7xl floating">🌙</div>
+      <h1 class="font-cinzel text-4xl md:text-6xl font-bold aurora-text leading-tight">
+        Dream Incubation
+      </h1>
+      <p class="max-w-3xl mx-auto text-indigo-200/80 text-lg leading-relaxed">
+        The sacred art of entering sleep as a deliberate spiritual practice — the ancient traditions of temple dreaming, oracular vision, and the Tibetan Buddhist path of dream yoga.
+      </p>
+    </section>
+
+    <section class="rounded-2xl p-8 space-y-6" style="background: linear-gradient(135deg, rgba(79,70,229,0.15), rgba(49,46,129,0.08));">
+      <h2 class="font-cinzel text-2xl text-indigo-300 text-center tracking-wide">What Is Dream Incubation?</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm text-indigo-100/80 leading-relaxed">
+        <div class="space-y-4">
+          <p>
+            Dream incubation is the deliberate preparation of the mind and body, through ritual means, to receive a significant dream — typically a dream of healing, guidance, divine revelation, or prophetic insight. The term itself derives from the Latin <em>incubare</em> (to lie upon, to brood over), reflecting the practice of sleeping within a sacred precinct in order to receive a divinely mediated dream. The most elaborately documented form of dream incubation in the ancient world was the Greek practice of <strong class="text-indigo-200">enkoimesis</strong> — the ritual "sleeping in" — practised at the sanctuaries of the healing god Asclepius across the Greek world. Pilgrims who had suffered long journeys in hope of healing would undergo purification rites, offer sacrifices, pray, and finally sleep in the inner precinct of the temple (<em>abaton</em>), where Asclepius might appear in a dream — either to heal directly or to prescribe a cure. The inscriptions preserved at Epidaurus, Pergamon, and Cos record hundreds of such healing dreams, several of which describe what appear to be surgical interventions performed by the god himself during the dream state.
+          </p>
+          <p>
+            The Asclepian healing tradition reached its greatest development between the 5th century BCE and the 3rd century CE. The sanctuary at <strong class="text-indigo-200">Epidaurus</strong> in the Peloponnese was the most celebrated — described by Pausanias as a place where the lame walked away and the blind received sight after sleeping in the abaton. The physician Aelius Aristides left the most detailed personal record of Asclepian dream healing: his <em>Sacred Tales</em> chronicle years of health crises and their treatment through the prescriptions received in Asclepian dreams — prescriptions that sometimes contradicted ordinary medical wisdom but that Aristides followed with extraordinary devotion and reportedly dramatic results. The Asclepian tradition continued into early Christianity, where the saints Cosmas and Damian became the Christian successors of Asclepius, and their sanctuaries became sites of the same incubation practice under the name of <em>egkomitisis</em>.
+          </p>
+          <p>
+            In ancient Egypt, the primary site of dream incubation was the <strong class="text-indigo-200">Serapeum at Memphis</strong> — the great necropolis of the sacred Apis bulls, associated with the syncretic deity Serapis, who combined attributes of Osiris, Apis, and Helios. The Greek-speaking residents of the Memphis district who sought oracular dreams from Serapis followed a procedure closely paralleling the Greek Asclepian ritual: they approached the temple with a request, underwent preparatory rituals, and slept within the sacred precinct to receive a divine communication in their dreams. The Ptolemaic archive of a Greek priest named Ptolemaios, who lived in the Memphis Serapeum during the 2nd century BCE, preserves dozens of dream records that illuminate the daily practice of Egyptian temple dreaming and its relationship to the resident god's perceived interventions in human affairs.
+          </p>
+          <p>
+            <strong class="text-indigo-200">Tibetan dream yoga</strong> (<em>milam</em>) is one of the Six Yogas of Naropa — a complete system of advanced Vajrayana practices that together constitute the path to full awakening within a single lifetime. Dream yoga differs fundamentally from Western dream incubation in its ultimate aim: it is not concerned primarily with receiving information or healing in dreams, but with recognising the dream state as a training ground for the recognition of the nature of reality itself. The foundational practice is the cultivation of <strong class="text-indigo-200">lucid dreaming</strong> — recognising within the dream that one is dreaming. Once this recognition is stable, the practitioner uses the dream state to perform spiritual practices: encountering teachers, receiving teachings, performing purification rituals, and ultimately recognising the dream's appearances as the natural expression of the empty, luminous nature of mind — identical with the nature of waking reality, and with the clear light encountered at death.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <p>
+            The Tibetan practice of dream yoga proceeds through four principal stages. First, the practitioner achieves reliable <strong class="text-indigo-200">recognition</strong> that they are dreaming — typically facilitated by preliminary practices of increasing mindfulness and by holding the intention to recognise the dream state before sleep. Second, they begin to <strong class="text-indigo-200">transform</strong> the dream content: deliberately multiplying dream objects, changing their qualities, or navigating to specific desired locations. Third, they overcome <strong class="text-indigo-200">fear</strong> in the dream: encountering the frightening figures and threatening situations that arise and recognising them as the projections of mind. Fourth, they carry the recognition of the dream's illusory nature into waking life — recognising the appearances of the waking world as equally dream-like, equally the projections of mind, equally empty of inherent self-existence. This final stage is not nihilism but the direct experience of the Tibetan Buddhist understanding of emptiness (<em>shunyata</em>) in lived reality.
+          </p>
+          <p>
+            The contemporary revival of interest in <strong class="text-indigo-200">lucid dreaming</strong> in the West owes much to the work of Stanford University psychophysiologist Stephen LaBerge, who developed both the experimental methodology for verifying lucid dreams in laboratory conditions (using pre-arranged eye-movement signals made by the lucid dreamer to an observer) and practical techniques for reliably inducing them. LaBerge's MILD (Mnemonic Induction of Lucid Dreams) and WILD (Wake-Initiated Lucid Dreams) techniques have become widely practised, and his collaboration with Tibetan Buddhist teachers — particularly through the work of the Lucidity Institute — helped establish the connection between Western lucid dreaming research and Tibetan dream yoga practice. The phenomenological overlap between the most advanced Western lucid dreaming reports and Tibetan accounts of dream yoga is striking.
+          </p>
+          <p>
+            The <strong class="text-indigo-200">hypnagogic state</strong> — the transitional state of consciousness between waking and sleeping, characterised by vivid imagery, auditory hallucinations, and a loosening of ordinary cognitive control — has attracted attention both as a gateway to lucid dreaming and as a source of creative and spiritual insight in its own right. Thomas Edison famously exploited the hypnagogic state by dozing in a chair while holding steel balls in his hands, so that the sound of the balls dropping when he fell asleep would wake him at the threshold — allowing him to capture the imagery of the hypnagogic state before it was lost in deeper sleep. Salvador Dalí used an analogous technique with a key in his hand over a metal plate. The visionary images that arise in the hypnagogic state — often more vivid and surprising than ordinary dreaming — have been described as a genuine source of non-ordinary knowing by practitioners from Aristotle to contemporary dream researchers.
+          </p>
+          <p>
+            In contemporary depth psychology, the work of Carl Jung and James Hillman on the <strong class="text-indigo-200">imaginal</strong> — the domain of psyche as genuinely real, neither physical nor merely subjective — converges with the ancient traditions of dream incubation in a sophisticated theoretical synthesis. Jung's own extensive engagement with his dream life, documented in the recently published <em>Red Book</em> (<em>Liber Novus</em>), demonstrates a practice closely analogous to deliberate dream incubation: the cultivation of a receptive, imaginally engaged relationship with the figures of the unconscious that allows them to speak and act with a degree of autonomy and authority beyond what the conscious ego could generate. Hillman's Re-Visioning Psychology extends this into a full-scale defence of the reality of psychic imagery — the dream's inhabitants are not "merely" symbols but have their own reality, their own intelligence, and their own claim on the attention of the waking self.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="space-y-6">
+      <h2 class="font-cinzel text-2xl text-indigo-300 text-center tracking-wide">Key Traditions &amp; Concepts</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+        <div class="esoteric-card space-y-3">
+          <div class="text-3xl">🏛️</div>
+          <h3 class="font-cinzel text-base text-indigo-200">Greek Enkoimesis (Temple Sleeping)</h3>
+          <p class="text-indigo-300/60 text-xs uppercase tracking-wider">5th BCE – 3rd CE</p>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">The most extensively documented incubation practice in the ancient world — pilgrims to the Asclepian sanctuaries at Epidaurus, Pergamon, Cos, and dozens of other sites underwent preparatory fasting, bathing, and sacrifice before sleeping in the sacred abaton (the innermost sleeping hall). The god Asclepius was understood to appear in person during the healing dream, either treating the patient directly or prescribing treatment. Inscriptions recording miraculous cures survive in abundance and represent one of the richest sources of ancient dream phenomenology. The parallel practice at Delphic and other oracular sanctuaries sought prophetic rather than healing dreams.</p>
+        </div>
+
+        <div class="esoteric-card space-y-3">
+          <div class="text-3xl">🐍</div>
+          <h3 class="font-cinzel text-base text-indigo-200">Asclepius &amp; Healing Dreams</h3>
+          <p class="text-indigo-300/60 text-xs uppercase tracking-wider">The Divine Physician</p>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">Asclepius — the Greek healing deity, son of Apollo, who was educated by the centaur Chiron in the art of medicine — was understood to operate primarily through the dream state, appearing in person to perform surgeries, prescribe herbal remedies, and recommend lifestyle changes. His symbol, the serpent-entwined staff (caduceus/rod of Asclepius), connects him to chthonic healing powers and to the snake's association with renewal through shedding of skin. The sanctuary at Epidaurus also housed sacred serpents understood as his embodiments on earth, and they were permitted to crawl over sleeping incubants. The tradition continued into Byzantine Christianity through the saints Cosmas and Damian.</p>
+        </div>
+
+        <div class="esoteric-card space-y-3">
+          <div class="text-3xl">🏺</div>
+          <h3 class="font-cinzel text-base text-indigo-200">Egyptian Serapeum Incubation</h3>
+          <p class="text-indigo-300/60 text-xs uppercase tracking-wider">Memphis &amp; the Apis Bulls</p>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">The Ptolemaic Serapeum at Memphis — the vast underground necropolis of the sacred Apis bulls — was one of the principal sites of dream incubation in the ancient Near East. The syncretic deity Serapis (Osiris-Apis-Helios) was understood to communicate healing and prophetic guidance through dreams to those who slept in his precinct. The archive of the catoptrist (dream interpreter) Ptolemaios, who lived in the Serapeum for decades, preserves one of the most intimate documentary records of ancient dream incubation in practice. The procedures involved petition, purification, and overnight sleeping in specific sacred locations — a ritual framework remarkably similar to the Greek Asclepian practice conducted contemporaneously.</p>
+        </div>
+
+        <div class="esoteric-card space-y-3">
+          <div class="text-3xl">☸️</div>
+          <h3 class="font-cinzel text-base text-indigo-200">Tibetan Milam (Dream Yoga)</h3>
+          <p class="text-indigo-300/60 text-xs uppercase tracking-wider">The Yoga of the Dream State</p>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">The most sophisticated traditional system of deliberate dream work in the world — a complete yogic path using the dream state as the primary vehicle for realising the empty, luminous nature of mind. Unlike Western dream incubation, which seeks specific content in dreams, Tibetan milam is primarily concerned with the quality of awareness within the dream: whether the dreamer recognises they are dreaming, and whether they can maintain that recognition in the face of compelling dream appearances. The tradition is transmitted through the Six Yogas of Naropa, which also include the closely related practices of tummo (inner heat) and the yoga of the bardo. Tenzin Wangyal Rinpoche's <em>The Tibetan Yogas of Dream and Sleep</em> provides the most accessible modern exposition.</p>
+        </div>
+
+        <div class="esoteric-card space-y-3">
+          <div class="text-3xl">💡</div>
+          <h3 class="font-cinzel text-base text-indigo-200">Lucid Dreaming Practice</h3>
+          <p class="text-indigo-300/60 text-xs uppercase tracking-wider">The Conscious Dream</p>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">The systematic cultivation of lucid awareness within the dream state — knowing one is dreaming while the dream continues — has been practised in the Tibetan tradition for over a millennium and has been the subject of rigorous Western scientific investigation since Stephen LaBerge's laboratory experiments at Stanford in the 1980s. LaBerge's MILD technique (setting intention before sleep) and WILD technique (maintaining consciousness through the sleep transition) are the most reliably documented methods. Polyphasic sleep schedules, reality testing (regularly questioning waking reality to build the habit), and meditation practice are all associated with increased lucid dreaming frequency. The applications range from creative problem-solving to trauma resolution to direct spiritual investigation of the dream state.</p>
+        </div>
+
+        <div class="esoteric-card space-y-3">
+          <div class="text-3xl">🌅</div>
+          <h3 class="font-cinzel text-base text-indigo-200">The Hypnagogic State</h3>
+          <p class="text-indigo-300/60 text-xs uppercase tracking-wider">The Threshold Vision</p>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">The hypnagogic state — the transitional zone between waking and sleeping — has been recognised across cultures as a particularly fertile ground for unusual perception: vivid geometric and figurative imagery, voices, presences, and symbolic visions that seem to come from beyond the ordinary self. Aristotle described hypnagogic hallucinations in <em>On Divination in Sleep</em>. Swedenborg received many of his visions in hypnagogic states. The alchemist Paracelsus regarded the threshold state as the primary zone of occult vision. Modern researchers including Andreas Mavromatis have catalogued the extraordinary range of hypnagogic phenomena and their relationship to creative insight, mystical experience, and the exploration of non-ordinary consciousness.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="rounded-2xl p-8 space-y-6" style="background: linear-gradient(135deg, rgba(79,70,229,0.15), rgba(49,46,129,0.08));">
+      <h2 class="font-cinzel text-2xl text-indigo-300 text-center tracking-wide">The Oracle in the Night</h2>
+      <div class="space-y-5 text-sm text-indigo-100/80 leading-relaxed max-w-4xl mx-auto">
+        <p>
+          The universality of the belief that dreams can provide genuine access to knowledge unavailable in waking life is one of the most striking features of human religious history. From the Sumerian dream of Gudea of Lagash (c. 2100 BCE), in which the god Ningirsu appeared to commission the building of his temple, through the biblical dreams of Pharaoh interpreted by Joseph and of Nebuchadnezzar interpreted by Daniel, through the Asclepian healing dreams of classical antiquity, to the prophetic dreams of Islamic tradition — the conviction that the dreaming mind can receive communications from beyond the ordinary self has been a constant of human spiritual life across every culture and epoch.
+        </p>
+        <p>
+          Modern depth psychology, beginning with Freud's <em>Interpretation of Dreams</em> (1900) and developing through Jung's much more expansive treatment of the unconscious, offers a framework that simultaneously naturalises and validates this conviction. For Freud, the dream is the "royal road to the unconscious" — a window into the drives, memories, and conflicts that the waking ego suppresses. For Jung, the dream is a communication from the Self — the totality of the psyche, including its deepest, most objective, most impersonal dimensions — to the ego. The figures who appear in significant dreams, in Jung's understanding, are not merely projections of the dreamer's personal psychology; they carry the authority of the archetype — patterns of being and knowing that transcend any individual's personal history and connect to the deepest strata of collective human experience.
+        </p>
+        <p>
+          James Hillman's post-Jungian depth psychology goes even further, insisting that the images of the dream — the figures, the places, the objects — have their own <strong class="text-indigo-200">interiority</strong>: they are not symbols to be decoded by the waking ego but presences to be honoured, engaged with, and listened to on their own terms. This perspective converges with the ancient view in a striking way: the ancient dream incubant who slept in Asclepius's temple was not seeking to interpret a symbol of their own psychology. They were seeking an encounter with a real, autonomous divine intelligence that knew things the conscious mind did not. Whether one calls this intelligence "Asclepius," "the Self," "the unconscious," or "the imaginal realm," the structural claim is the same: significant dreams bring genuinely non-ordinary information and deserve genuinely non-ordinary attention.
+        </p>
+      </div>
+    </section>
+
+    <div class="text-center mt-4">
+      <a href="/esoteric-practices" class="text-indigo-400/60 hover:text-indigo-300 text-sm transition-colors">← Esoteric Practices &amp; Disciplines</a>
+    </div>
+
+  </div>
+
+  <footer class="relative z-10 text-center py-8 text-indigo-400/40 text-xs mt-8">
+    <p class="italic">"Trust in dreams, for in them is the hidden gate to eternity." — Kahlil Gibran</p>
+    <p class="mt-2">Esoteric Wisdom · Built with ✨ in Rust</p>
+    <p class="mt-2"><a href="/home" class="hover:text-indigo-300 transition-colors">← Back to Portal</a></p>
+  </footer>
+
+  <script>
+  const sf = document.getElementById('starfield');
+  for (let i = 0; i < 200; i++) {
+    const s = document.createElement('div');
+    s.className = 'star';
+    s.style.left = Math.random() * 100 + '%';
+    s.style.top = Math.random() * 100 + '%';
+    s.style.animationDelay = Math.random() * 3 + 's';
+    s.style.animationDuration = (2 + Math.random() * 3) + 's';
+    sf.appendChild(s);
+  }
+</script>
+
+</body>
+</html>

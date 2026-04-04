@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scrying — Esoteric Wisdom</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <meta property="og:title" content="Scrying — Esoteric Wisdom" />
+  <meta property="og:description" content="The art of gazing — crystal balls, black mirrors, and the induction of visionary consciousness through focused attention on reflective surfaces, from ancient Mesopotamia to John Dee." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://esoteric-wisdom.onrender.com/esoteric-practices/scrying" />
+  <meta property="og:image" content="https://esoteric-wisdom.onrender.com/og-image.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Raleway', sans-serif; }
+    .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+    @keyframes twinkle { 0%,100% { opacity: 0.2; } 50% { opacity: 1; } }
+    .star { position: absolute; width: 2px; height: 2px; border-radius: 50%; background: white; animation: twinkle var(--dur,3s) ease-in-out infinite; animation-delay: var(--delay,0s); }
+    @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+    .floating { animation: float 5s ease-in-out infinite; }
+    @keyframes shimmer { 0% { background-position: -200% center; } 100% { background-position: 200% center; } }
+    .nav-link { position: relative; transition: all 0.3s; }
+    .nav-link::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: linear-gradient(90deg, #f59e0b, #a78bfa); transition: width 0.3s; }
+    .nav-link:hover::after { width: 100%; }
+    .aurora-text { background: linear-gradient(90deg, #f59e0b, #818cf8, #a78bfa, #fbbf24, #6366f1, #f59e0b); background-size: 200% auto; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; animation: shimmer 4s linear infinite; }
+    @keyframes indigo-glow { 0%, 100% { box-shadow: 0 0 10px 2px rgba(99,102,241,0.25); } 50% { box-shadow: 0 0 28px 6px rgba(99,102,241,0.55); } }
+    .esoteric-card { background: linear-gradient(135deg, rgba(79,70,229,0.07), rgba(49,46,129,0.04)); border: 1px solid rgba(99,102,241,0.2); border-radius: 1rem; padding: 1.5rem; transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; }
+    .esoteric-card:hover { transform: translateY(-6px) scale(1.01); box-shadow: 0 0 28px 5px rgba(99,102,241,0.3); border-color: rgba(99,102,241,0.5); }
+    .practice-card { background: linear-gradient(135deg, rgba(79,70,229,0.06), rgba(49,46,129,0.04)); border: 1px solid rgba(99,102,241,0.15); border-radius: 0.75rem; padding: 1.25rem; transition: border-color 0.3s, background 0.3s; }
+    .practice-card:hover { border-color: rgba(99,102,241,0.4); background: linear-gradient(135deg, rgba(79,70,229,0.1), rgba(49,46,129,0.06)); }
+  </style>
+</head>
+<body class="min-h-screen text-indigo-100 overflow-x-hidden" style="background: radial-gradient(ellipse at top, #0c0a1e 0%, #1a1040 25%, #060412 60%, #000000 100%);">
+
+  <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+
+  <nav class="sticky top-0 z-50 flex items-center justify-between px-6 py-3 bg-black/40 backdrop-blur-md border-b border-violet-500/20 flex-wrap gap-y-2">
+    <a href="/home" class="font-cinzel text-amber-300 text-sm tracking-widest shrink-0">✦ Esoteric Wisdom ✦</a>
+    <div class="flex items-center gap-x-3 gap-y-1 text-xs text-violet-200 flex-wrap justify-end">
+      <a href="/astrology" class="nav-link hover:text-amber-300 transition-colors">Astrology</a>
+      <a href="/meditation" class="nav-link hover:text-amber-300 transition-colors">Meditation</a>
+      <a href="/tarot/select" class="nav-link hover:text-amber-300 transition-colors">Tarot</a>
+      <a href="/numerology" class="nav-link hover:text-amber-300 transition-colors">Numerology</a>
+      <a href="/crystals" class="nav-link hover:text-amber-300 transition-colors">Crystals</a>
+      <a href="/runes" class="nav-link hover:text-amber-300 transition-colors">Runes</a>
+      <a href="/shamanism" class="nav-link hover:text-amber-300 transition-colors">Shamanism</a>
+      <a href="/druidism" class="nav-link hover:text-amber-300 transition-colors">Druidism</a>
+      <a href="/akashic-records" class="nav-link hover:text-amber-300 transition-colors">Akashic Records</a>
+      <a href="/wicca" class="nav-link hover:text-amber-300 transition-colors">Wicca</a>
+      <a href="/alchemy" class="nav-link hover:text-amber-300 transition-colors">Alchemy</a>
+      <a href="/gateway-process" class="nav-link hover:text-amber-300 transition-colors">Gateway Process</a>
+      <a href="/remote-viewing" class="nav-link hover:text-amber-300 transition-colors">Remote Viewing</a>
+      <a href="/khasarov-mirror" class="nav-link hover:text-amber-300 transition-colors">Khasarov Mirror</a>
+      <a href="/western-esotericism" class="nav-link hover:text-amber-300 transition-colors">Western Esotericism</a>
+      <a href="/eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Eastern Esotericism</a>
+      <a href="/indigenous-esotericism" class="nav-link hover:text-amber-300 transition-colors">Indigenous Esotericism</a>
+      <a href="/middle-eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Middle Eastern Mysteries</a>
+      <a href="/esoteric-practices" class="nav-link text-amber-300 font-semibold">Esoteric Practices</a>
+      <a href="/journal/reflections" class="nav-link text-emerald-300 hover:text-emerald-200 transition-colors">✨ Reflections</a>
+      <a href="https://ko-fi.com/esotericwisdom" target="_blank" rel="noopener noreferrer"
+         class="px-3 py-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-white font-semibold hover:scale-105 transition-transform shrink-0">☕ Support</a>
+    </div>
+  </nav>
+
+  <div class="relative z-10 max-w-6xl mx-auto space-y-10 pt-6 px-4 pb-12">
+
+    <div>
+      <a href="/esoteric-practices" class="text-xs text-indigo-300/60 hover:text-indigo-300 transition-colors">← Esoteric Practices &amp; Disciplines</a>
+    </div>
+
+    <section class="text-center py-14 space-y-6">
+      <div class="text-7xl floating">🔮</div>
+      <h1 class="font-cinzel text-4xl md:text-6xl font-bold aurora-text leading-tight">
+        Scrying
+      </h1>
+      <p class="max-w-3xl mx-auto text-indigo-200/80 text-lg leading-relaxed">
+        The art of visionary gazing — the deliberate induction of symbolic and prophetic vision through sustained, unfocused attention upon a reflective or translucent surface, from crystal balls to black obsidian mirrors.
+      </p>
+    </section>
+
+    <section class="rounded-2xl p-8 space-y-6" style="background: linear-gradient(135deg, rgba(79,70,229,0.15), rgba(49,46,129,0.08));">
+      <h2 class="font-cinzel text-2xl text-indigo-300 text-center tracking-wide">What Is Scrying?</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm text-indigo-100/80 leading-relaxed">
+        <div class="space-y-4">
+          <p>
+            Scrying — from the Middle English <em>descry</em>, to discern or perceive — is the practice of inducing visionary or symbolic experience through sustained, unfocused, or softly focused gazing upon a surface that reflects, refracts, or absorbs light: a crystal ball, a black mirror, a bowl of water or ink, a flame, a pool of oil or blood. The surface itself is not the source of the vision; it serves as a <strong class="text-indigo-200">focal point for a specific mode of attention</strong> — absorbed, receptive, and non-analytical — that is distinct from ordinary focused looking and that facilitates access to deeper image-forming processes within the psyche. The scryer does not look <em>at</em> the surface but <em>through</em> it or <em>into</em> it — maintaining a gaze that is simultaneously directed and diffuse.
+          </p>
+          <p>
+            The historical roots of scrying run deep into the most ancient layers of Near Eastern civilisation. <strong class="text-indigo-200">Mesopotamian oil divination</strong> (lecanomancy) — the practice of reading patterns formed by oil poured on water in a bowl — is documented in cuneiform texts from Babylon dating to the 2nd millennium BCE. Specific procedures are prescribed: the quality of the oil, the direction of its spread, the patterns it forms on the water's surface — all were read as communications from the divine powers presiding over the oracle. Ancient Egyptian texts describe scrying in bowls of water and in polished metal surfaces as one of the arts of the trained temple priest. The Greek tradition of <strong class="text-indigo-200">catoptromancy</strong> (divination by mirror) is described in several classical sources, and the association of mirrors with prophecy and divination is a consistent feature of ancient Mediterranean religious culture.
+          </p>
+          <p>
+            The most historically significant and extensively documented instance of Western scrying practice is the collaboration between <strong class="text-indigo-200">Dr John Dee</strong> (1527–1608/09) and <strong class="text-indigo-200">Edward Kelley</strong> (1555–1597/98). Dee — mathematician, astrologer, and adviser to Queen Elizabeth I — had long sought direct communication with angelic intelligences. After years of unsuccessful attempts with other scryers, he engaged Kelley as his primary crystal-gazer in March 1582. Over the next several years, in England and on the Continent, Dee and Kelley conducted hundreds of séances in which Kelley gazed into a polished obsidian mirror (now in the British Museum) or a crystal ball ("shewstone") while Dee recorded the communications received. The result was the extraordinary <strong class="text-indigo-200">Enochian system</strong> — an angelic language with its own alphabet, grammar, and cosmology, a set of angelic calls or keys (Aethyrs) for invoking the 30 regions of the angelic realm, and a comprehensive record of the angelic communications preserved in Dee's meticulous diaries.
+          </p>
+          <p>
+            The <strong class="text-indigo-200">psychology of the scrying state</strong> involves a specific modulation of ordinary attention. In ordinary visual experience, the conscious visual system is primarily engaged in object recognition, spatial mapping, and threat detection — functions that require directed, analytical attention. The scrying state involves a deliberate suspension of this directed mode: the gaze becomes soft, diffuse, and non-analytic. This produces what researchers have called the <strong class="text-indigo-200">Ganzfeld effect</strong> (from the German: "whole field") — a perceptual phenomenon that occurs when the visual system is presented with a uniform, featureless visual field. In a genuine Ganzfeld condition (achieved in parapsychology experiments by covering the eyes with halved ping-pong balls illuminated with a diffuse red light), the brain, deprived of ordinary visual input, begins to generate its own imagery. The softened gaze of scrying, directed at the uniform depths of a dark mirror or the refractive interior of a crystal, approximates Ganzfeld conditions and produces analogous effects: the emergence of autonomous imagery from deeper levels of the mind.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <p>
+            <strong class="text-indigo-200">Crystal ball scrying</strong> is the form most widely associated with European popular culture — the fortune-teller's crystal ball is a cultural fixture that dates back at least to the 15th century in its recognisable form, though the use of polished spherical stones for divinatory gazing is considerably older. The most prized materials for crystal balls in the Western tradition have been clear quartz crystal (particularly large, inclusion-free spheres of natural rock crystal), beryl (a greenish or bluish stone favoured in medieval sources), and obsidian. In the Golden Dawn tradition, the crystal ball was one of the standard instruments of magical working, consecrated to specific planetary powers and used in a formal ceremonial context. The practitioner's crystal was understood as an object into which a specific spiritual intelligence had been attracted and temporarily housed — a "vessel" for the presence being consulted rather than a merely passive optical device.
+          </p>
+          <p>
+            <strong class="text-indigo-200">Black mirror scrying</strong> — using a mirror with a dark reflective surface — is associated primarily with the Dee and Kelley tradition, but its history is considerably older. The Aztec deity Tezcatlipoca was associated with a black obsidian mirror — literally "Smoking Mirror" — in which he could perceive events anywhere in the world. Aztec priests used polished obsidian mirrors as divinatory instruments, and it is precisely such a pre-Columbian obsidian mirror, obtained from an unknown source, that Dee used in his Enochian workings. The black mirror's advantage over the crystal ball is its complete absorption of ordinary light: there are no reflections or refractions from external sources to distract the gaze, and the uniform blackness of the reflective surface is ideal for inducing the scrying state. Contemporary black mirror scrying has been systematised by practitioners within the Western magical tradition, including Donald Tyson and others.
+          </p>
+          <p>
+            The Enochian system derived from Dee and Kelley's scrying sessions has had an enormous influence on the subsequent Western magical tradition, far exceeding anything its originators could have anticipated. The 19 Enochian calls (Aethyrs) and the associated system of the 30 Aethyrs (the 30 regions of the angelic universe) were adopted by the Hermetic Order of the Golden Dawn in the 1890s, and Aleister Crowley's systematic exploration of the 30 Aethyrs (recorded in <em>The Vision and the Voice</em>, 1909–1911) using scrying and other methods produced what many regard as the most significant magical vision-record since Dee's own diaries. The Enochian system continues to be actively practised and developed in the contemporary Western magical tradition. The precise origin of the Enochian language — whether it was genuinely received from angelic intelligences, created unconsciously by Kelley, or some complex mixture of both — remains a subject of serious scholarly and practical debate.
+          </p>
+          <p>
+            <strong class="text-indigo-200">Lecanomancy</strong> — divination using a bowl or basin of water, oil, or other liquid — is among the oldest and most geographically widespread scrying techniques. Ancient Babylonian, Egyptian, and Greek texts all describe it. The liquid surface offers a different scrying experience from the solid crystal or mirror: it can be disturbed, rippled, or swirled to induce the scrying state, and the reflections and refractions produced by the liquid add an element of dynamic visual complexity that some practitioners find more generative than the uniform surface of a mirror. The technique was used both independently and in combination with other divinatory methods — drops of oil on water, or ink dissolved in water, adding visual complexity to the gazing surface.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="space-y-6">
+      <h2 class="font-cinzel text-2xl text-indigo-300 text-center tracking-wide">Key Traditions &amp; Instruments</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+        <div class="esoteric-card space-y-3">
+          <div class="text-3xl">📜</div>
+          <h3 class="font-cinzel text-base text-indigo-200">John Dee &amp; Edward Kelley</h3>
+          <p class="text-indigo-300/60 text-xs uppercase tracking-wider">The Enochian Sessions, 1582–1589</p>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">The most extensively documented scrying programme in Western history — Dee's meticulous records of hundreds of sessions with Kelley fill several large manuscript volumes preserved in the British Library and the Ashmolean Museum. The communications received described a complex angelic cosmology, an angelic alphabet (the "Enochian" or "Angelic" alphabet), 19 Calls or Keys in the angelic language, and a system of 30 Aethyrs constituting the regions of the angelic universe. Whatever one concludes about the ultimate nature of these communications, the Dee diaries represent an extraordinary primary source for the study of scrying in practice, and the Enochian system they generated has shaped Western esotericism ever since.</p>
+        </div>
+
+        <div class="esoteric-card space-y-3">
+          <div class="text-3xl">🔤</div>
+          <h3 class="font-cinzel text-base text-indigo-200">The Enochian Communications</h3>
+          <p class="text-indigo-300/60 text-xs uppercase tracking-wider">The Angelic Language</p>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">The Enochian language received by Kelley in the crystal sessions has been the subject of serious scholarly attention from linguists and historians of esotericism. Donald Laycock's <em>The Complete Enochian Dictionary</em> (1978) subjected the language to systematic linguistic analysis and concluded that it exhibits too few words and too much internal consistency to have been invented consciously by Kelley — suggesting either genuine reception of an artificial language or unconscious creation at a deep psycholinguistic level. The language's syntax, phonology, and the internal consistency of its 19 Calls continue to fascinate both scholars and practitioners. Whether its source is angelic, unconscious, or some combination remains an open question.</p>
+        </div>
+
+        <div class="esoteric-card space-y-3">
+          <div class="text-3xl">🖤</div>
+          <h3 class="font-cinzel text-base text-indigo-200">Black Mirror Scrying</h3>
+          <p class="text-indigo-300/60 text-xs uppercase tracking-wider">The Dark Glass</p>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">The black mirror — whether of obsidian (volcanic glass), polished jet, dark glass, or modern black-painted glass — is the instrument most associated with the Dee and Kelley tradition and with contemporary scrying practice in the Western magical tradition. Its advantage is the complete absence of external light reflections: the gazer looks into pure darkness, and any imagery that arises is entirely internal, generated by the mind's image-forming processes without contamination from external sources. The black mirror is typically used in candlelit or near-dark conditions, with the candle flame positioned so it cannot be seen in the mirror's reflection. Initial scrying sessions may last only minutes; experienced practitioners can maintain productive sessions for extended periods.</p>
+        </div>
+
+        <div class="esoteric-card space-y-3">
+          <div class="text-3xl">🔮</div>
+          <h3 class="font-cinzel text-base text-indigo-200">Crystal Ball Traditions</h3>
+          <p class="text-indigo-300/60 text-xs uppercase tracking-wider">The Sphere of Vision</p>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">Crystal ball scrying has a documented history in Europe from at least the 13th century, when references to the practice appear in accounts of Merlin's "beryl" and in numerous medieval magical texts. The material of the ball matters: clear quartz crystal is considered most receptive to impressions, while leaded glass and synthetic crystal (common in modern "crystal balls") are regarded by serious practitioners as inferior. In the Golden Dawn tradition, the crystal was understood as a vessel into which a specific angelic intelligence was attracted and consecrated; the same crystal used over years of practice was believed to develop an accumulated charge that facilitated easier and deeper scrying states.</p>
+        </div>
+
+        <div class="esoteric-card space-y-3">
+          <div class="text-3xl">💧</div>
+          <h3 class="font-cinzel text-base text-indigo-200">Lecanomancy (Water Scrying)</h3>
+          <p class="text-indigo-300/60 text-xs uppercase tracking-wider">Divination by Liquid</p>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">Divination using bowls of water, oil, blood, or ink represents the oldest documented form of scrying. The Babylonian omen series <em>Enuma Anu Enlil</em> and the <em>Maqlu</em> ritual text both contain references to lecanomancy procedures. In practice, the lecanomancer gazes into the bowl's surface or depths, using the play of light, the movement of oil, or the darkness of ink or dark water as the scrying medium. Islamic geomancers used bowls of sand or water as preliminary instruments before developing ilm al-raml proper. The bowl of water's dynamic quality — responsive to breath, touch, and ambient movement — adds a dimension of spontaneous visual complexity that practitioners find useful for inducing the receptive scrying state.</p>
+        </div>
+
+        <div class="esoteric-card space-y-3">
+          <div class="text-3xl">🌫️</div>
+          <h3 class="font-cinzel text-base text-indigo-200">The Hypnagogic State</h3>
+          <p class="text-indigo-300/60 text-xs uppercase tracking-wider">The Threshold of Vision</p>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">The psychological state induced by sustained scrying closely resembles the hypnagogic state — the threshold between waking and sleeping in which autonomous imagery arises from the deeper mind. Both states are characterised by a relaxation of the critical faculty, a softening of the ordinary focused mode of attention, and the emergence of imagery that has the phenomenal quality of externality — it appears as if seen rather than as if imagined. This proximity to the hypnagogic state explains both the value of scrying as a visionary technique and its requirement for a certain kind of training: the practitioner must learn to maintain the threshold state long enough for significant imagery to develop without falling asleep or restoring ordinary critical attention.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="rounded-2xl p-8 space-y-6" style="background: linear-gradient(135deg, rgba(79,70,229,0.15), rgba(49,46,129,0.08));">
+      <h2 class="font-cinzel text-2xl text-indigo-300 text-center tracking-wide">The Still Surface and the Moving Vision</h2>
+      <div class="space-y-5 text-sm text-indigo-100/80 leading-relaxed max-w-4xl mx-auto">
+        <p>
+          The psychological mechanism of scrying can be understood as a technology for <strong class="text-indigo-200">suspending the critical faculty</strong> — the analytical, categorising mode of ordinary cognition that monitors, filters, and evaluates experience in terms of pre-existing categories and expectations. In ordinary waking consciousness, this critical faculty is highly active: it is responsible for our ability to function effectively in the world, but it is also responsible for suppressing precisely the kinds of imagery and association that scrying seeks to access. The image-forming processes of the deep psyche — the same processes that generate dreams, visions, and creative inspiration — are continuously active beneath the surface of ordinary awareness, but they are ordinarily overridden by the louder, faster operations of the critical mind.
+        </p>
+        <p>
+          Scrying works by creating conditions in which the critical faculty is temporarily suspended through two complementary mechanisms. First, the absorption of visual attention in a featureless or subtly structured surface occupies the visual processing system without providing it with the kind of clear, defined objects that trigger the object-recognition circuits. The visual system, directed at the dark interior of a mirror or crystal, finds nothing to "lock onto" in the ordinary way — and in this state of visual suspension, the deep image-forming processes gain access to the threshold of awareness. Second, the specific quality of <strong class="text-indigo-200">sustained, relaxed attention</strong> required for scrying is itself a mild meditative state — it reduces cortical arousal, quietens the internal dialogue, and creates the conditions of receptive passivity in which the deeper mind can project its imagery onto the scrying surface.
+        </p>
+        <p>
+          Whether the imagery that arises in the scrying state is purely internal — a projection of the scryer's own deep psyche — or whether it can also include genuine perceptions of external non-physical realities is a question that the tradition has always debated and that modern research has not resolved. What is not in doubt is that experienced scyers consistently access imagery that is autonomous, surprising, vivid, and — in many documented cases — apparently accurate in describing events or situations that the scryer had no ordinary means of knowing. This accuracy was precisely what made scrying valuable to those who employed it throughout history — from the Babylonian temple priests who advised kings through their oil-divination to John Dee seeking angelic guidance on matters of statecraft. The consistent practical utility of the practice, across cultures and centuries, suggests that something real is being accessed — something that exceeds the individual scryer's ordinary conscious knowledge.
+        </p>
+      </div>
+    </section>
+
+    <div class="text-center mt-4">
+      <a href="/esoteric-practices" class="text-indigo-400/60 hover:text-indigo-300 text-sm transition-colors">← Esoteric Practices &amp; Disciplines</a>
+    </div>
+
+  </div>
+
+  <footer class="relative z-10 text-center py-8 text-indigo-400/40 text-xs mt-8">
+    <p class="italic">"The stone showeth all things." — Edward Kelley, scrying record, 1582</p>
+    <p class="mt-2">Esoteric Wisdom · Built with ✨ in Rust</p>
+    <p class="mt-2"><a href="/home" class="hover:text-indigo-300 transition-colors">← Back to Portal</a></p>
+  </footer>
+
+  <script>
+  const sf = document.getElementById('starfield');
+  for (let i = 0; i < 200; i++) {
+    const s = document.createElement('div');
+    s.className = 'star';
+    s.style.left = Math.random() * 100 + '%';
+    s.style.top = Math.random() * 100 + '%';
+    s.style.animationDelay = Math.random() * 3 + 's';
+    s.style.animationDuration = (2 + Math.random() * 3) + 's';
+    sf.appendChild(s);
+  }
+</script>
+
+</body>
+</html>
