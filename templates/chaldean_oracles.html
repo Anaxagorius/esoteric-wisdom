@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chaldean Oracles — Esoteric Texts &amp; Corpora</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <meta property="og:title" content="Chaldean Oracles — Esoteric Texts &amp; Corpora" />
+  <meta property="og:description" content="Hexameter verses attributed to Julian the Theurgist — the foundational scripture of Neoplatonic theurgy." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://esoteric-wisdom.onrender.com/esoteric-corpora/chaldean-oracles" />
+  <meta property="og:image" content="https://esoteric-wisdom.onrender.com/og-image.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Raleway', sans-serif; }
+    .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+
+    @keyframes twinkle { 0%,100% { opacity: 0.2; } 50% { opacity: 1; } }
+    .star { position: absolute; border-radius: 50%; background: white; animation: twinkle var(--dur,3s) ease-in-out infinite; animation-delay: var(--delay,0s); }
+
+    @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+    .floating { animation: float 5s ease-in-out infinite; }
+
+    @keyframes shimmer {
+      0% { background-position: -200% center; }
+      100% { background-position: 200% center; }
+    }
+
+    .nav-link { position: relative; transition: all 0.3s; }
+    .nav-link::after {
+      content: ''; position: absolute; bottom: -2px; left: 0;
+      width: 0; height: 2px;
+      background: linear-gradient(90deg, #f59e0b, #a78bfa);
+      transition: width 0.3s;
+    }
+    .nav-link:hover::after { width: 100%; }
+
+    .aurora-text {
+      background: linear-gradient(90deg, #fca5a5, #ef4444, #fcd34d, #dc2626, #fca5a5);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 4s linear infinite;
+    }
+
+    .corpus-card {
+      background: linear-gradient(135deg, rgba(239,68,68,0.07), rgba(185,28,28,0.04));
+      border: 1px solid rgba(239,68,68,0.2);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+    .corpus-card:hover {
+      transform: translateY(-6px) scale(1.01);
+      box-shadow: 0 0 28px 5px rgba(239,68,68,0.25);
+      border-color: rgba(239,68,68,0.5);
+    }
+  </style>
+</head>
+<body class="min-h-screen text-red-100 overflow-x-hidden" style="background: radial-gradient(ellipse at top, #1a0500 0%, #2a0a00 20%, #0a0200 55%, #000000 100%);">
+
+  <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+
+  <!-- NAV -->
+  <nav class="sticky top-0 z-50 flex items-center justify-between px-6 py-3 bg-black/40 backdrop-blur-md border-b border-violet-500/20 flex-wrap gap-y-2">
+    <a href="/home" class="font-cinzel text-amber-300 text-sm tracking-widest shrink-0">✦ Esoteric Wisdom ✦</a>
+    <div class="flex items-center gap-x-3 gap-y-1 text-xs text-violet-200 flex-wrap justify-end">
+      <a href="/astrology" class="nav-link hover:text-amber-300 transition-colors">Astrology</a>
+      <a href="/meditation" class="nav-link hover:text-amber-300 transition-colors">Meditation</a>
+      <a href="/tarot/select" class="nav-link hover:text-amber-300 transition-colors">Tarot</a>
+      <a href="/numerology" class="nav-link hover:text-amber-300 transition-colors">Numerology</a>
+      <a href="/crystals" class="nav-link hover:text-amber-300 transition-colors">Crystals</a>
+      <a href="/runes" class="nav-link hover:text-amber-300 transition-colors">Runes</a>
+      <a href="/shamanism" class="nav-link hover:text-amber-300 transition-colors">Shamanism</a>
+      <a href="/druidism" class="nav-link hover:text-amber-300 transition-colors">Druidism</a>
+      <a href="/akashic-records" class="nav-link hover:text-amber-300 transition-colors">Akashic Records</a>
+      <a href="/wicca" class="nav-link hover:text-amber-300 transition-colors">Wicca</a>
+      <a href="/alchemy" class="nav-link hover:text-amber-300 transition-colors">Alchemy</a>
+      <a href="/gateway-process" class="nav-link hover:text-amber-300 transition-colors">Gateway Process</a>
+      <a href="/remote-viewing" class="nav-link hover:text-amber-300 transition-colors">Remote Viewing</a>
+      <a href="/khasarov-mirror" class="nav-link hover:text-amber-300 transition-colors">Khasarov Mirror</a>
+      <a href="/western-esotericism" class="nav-link hover:text-amber-300 transition-colors">Western Esotericism</a>
+      <a href="/eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Eastern Esotericism</a>
+      <a href="/indigenous-esotericism" class="nav-link hover:text-amber-300 transition-colors">Indigenous Esotericism</a>
+      <a href="/middle-eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Middle Eastern Mysteries</a>
+      <a href="/esoteric-practices" class="nav-link hover:text-amber-300 transition-colors">Esoteric Practices</a>
+      <a href="/esoteric-corpora" class="nav-link text-amber-300 font-semibold">Sacred Texts</a>
+      <a href="/journal/reflections" class="nav-link text-emerald-300 hover:text-emerald-200 transition-colors">✨ Reflections</a>
+      <a href="https://ko-fi.com/esotericwisdom" target="_blank" rel="noopener noreferrer"
+         class="px-3 py-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-white font-semibold hover:scale-105 transition-transform shrink-0">☕ Support</a>
+    </div>
+  </nav>
+
+  <!-- CONTENT WRAPPER -->
+  <div class="relative z-10 max-w-5xl mx-auto space-y-10 pt-6 px-4 pb-12">
+
+    <!-- BREADCRUMB -->
+    <div>
+      <a href="/esoteric-corpora" class="text-xs text-red-300/60 hover:text-red-300 transition-colors">← Esoteric Texts &amp; Corpora</a>
+    </div>
+
+    <!-- HERO -->
+    <section class="text-center py-12 space-y-6">
+      <div class="text-7xl floating">🔥</div>
+      <h1 class="font-cinzel text-4xl md:text-5xl font-bold aurora-text leading-tight">
+        Chaldean Oracles
+      </h1>
+      <p class="max-w-3xl mx-auto text-red-200/80 text-lg leading-relaxed">
+        Fragmentary hexameter verses attributed to Julian the Theurgist (2nd century CE) — the foundational scripture of Neoplatonic theurgy, in which fire is both the physical element and the metaphysical substance of the divine, and the soul is a spark of fiery light exiled in matter.
+      </p>
+    </section>
+
+    <!-- DISCLAIMER -->
+    <section class="rounded-2xl p-6 space-y-4" style="background: linear-gradient(135deg, rgba(180,60,0,0.15), rgba(120,30,0,0.08)); border: 1px solid rgba(251,146,60,0.3);">
+      <div class="flex items-start gap-4">
+        <span class="text-3xl flex-shrink-0">⚠️</span>
+        <div>
+          <h2 class="font-cinzel text-lg text-amber-300 mb-2">For Educational &amp; Informational Purposes Only</h2>
+          <p class="text-amber-100/85 text-sm leading-relaxed">
+            The content on this page is provided solely for educational and historical study. The texts and practices described here derive from diverse sacred traditions and carry genuine power within those contexts. Readers are encouraged to approach these traditions with respect and discernment. Attempting advanced practices described in these texts without proper guidance from a qualified teacher is not recommended and may carry psychological or spiritual risks. If you are drawn to pursue any of these practices, seek instruction from a qualified, lineage-authorised teacher within the tradition in question.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT ARE THE CHALDEAN ORACLES? -->
+    <section class="rounded-2xl p-8 space-y-6" style="background: linear-gradient(135deg, rgba(239,68,68,0.1), rgba(185,28,28,0.06));">
+      <h2 class="font-cinzel text-2xl text-red-300 text-center tracking-wide">What Are the Chaldean Oracles?</h2>
+      <div class="space-y-4 text-sm text-red-100/80 leading-relaxed max-w-4xl mx-auto">
+        <p>
+          The Chaldean Oracles are a collection of approximately 200 surviving hexameter verses — fragments of what was originally a longer work — composed in the 2nd century CE and attributed to <strong class="text-red-200">Julian the Theurgist</strong> and his father <strong class="text-red-200">Julian the Chaldean</strong>. The texts present themselves as divine oracles: revelations received from the gods (particularly the supreme Father-God, Hecate as the World-Soul, and the Demiurge) through ecstatic ritual operations — the technique later called <em>theurgy</em> (from Greek <em>theourgia</em>, "divine work" or "god-work"). Despite surviving only in fragmentary form — preserved in quotations by later Neoplatonic philosophers who treated them as sacred scripture — the Chaldean Oracles exercised an influence on the spiritual life of the late antique educated world that far exceeded their fragmentary state.
+        </p>
+        <p>
+          The designation "Chaldean" refers not necessarily to the Babylonian Chaldeans of antiquity but to the pseudo-historical authority attributed to ancient Eastern wisdom in the Hellenistic period. The Oracles claim an Eastern, Zoroastrian-influenced origin, incorporating fire mysticism and a divine hierarchy with a distinctly Iranian flavour into their Platonic framework. Whether the Julians actually received these verses in genuine visionary states — whether, that is, the texts are authentic products of ecstatic religious experience — or composed them as learned philosophical poetry in oracular style, is a question that cannot be definitively resolved. Both possibilities have serious advocates.
+        </p>
+        <p>
+          The Oracles became central to the later Neoplatonic tradition. <strong class="text-red-200">Iamblichus</strong> (c. 245–325 CE) — who wrote <em>De Mysteriis Aegyptiorum</em> ("On the Mysteries of the Egyptians"), the most important theoretical work on theurgy in antiquity — treated the Chaldean Oracles as scripture of the highest authority, placing them alongside Plato as the two pillars of philosophical wisdom. <strong class="text-red-200">Proclus</strong> (412–485 CE) — the last great Athenian Neoplatonist — wrote extensive commentaries on them and organised his own philosophical system in part around their cosmological structure. Through Proclus and the Byzantine scholar <strong class="text-red-200">Michael Psellos</strong> (1017–1078), the Oracles survived into the mediaeval period and exercised their influence on Renaissance Hermeticism and Christian Neoplatonism.
+        </p>
+      </div>
+    </section>
+
+    <!-- THE DIVINE HIERARCHY -->
+    <section class="space-y-6">
+      <h2 class="font-cinzel text-2xl text-red-300 text-center tracking-wide">The Divine Hierarchy</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-red-200">The Father — First Intellect</h3>
+          <p class="text-red-100/70 text-sm leading-relaxed">At the summit of the Chaldean divine hierarchy stands the <strong class="text-red-200">Father</strong> — the supreme deity, identified with the First Intellect (<em>Nous Patrikós</em>). The Father is pure fiery intelligence — transcendent, self-contained, self-knowing, the source of all subsequent being. The Oracles describe him as a "fiery Abyss" who acts through his "thunderous boulē" (will/counsel), sending forth the second principle and the Demiurge. He is unknowable by ordinary discursive reason but accessible through theurgical ascent and the contemplative practices described in the Oracles.</p>
+        </div>
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-red-200">Hecate — World-Soul</h3>
+          <p class="text-red-100/70 text-sm leading-relaxed">The second principle in the Chaldean triad is a feminine divine figure identified with <strong class="text-red-200">Hecate</strong> (here elevated far above her usual role as goddess of magic and crossroads) and with the World-Soul. She mediates between the Father's transcendent fire and the created world, carrying divine light downward into matter and carrying souls upward in their return to the source. She is described in the Oracles as a "membrane" or "girdle" separating the upper from the lower fire, and as a cosmic womb from which the Demiurge proceeds. Her role as the divine Feminine mediator between transcendence and immanence anticipates the Kabbalistic Shekhinah.</p>
+        </div>
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-red-200">The Demiurge — Second Intellect</h3>
+          <p class="text-red-100/70 text-sm leading-relaxed">Below the Father and Hecate stands the <strong class="text-red-200">Demiurge</strong> (Craftsman) — the "Second Intellect" who actually creates the material world by receiving the Father's creative thoughts through Hecate and enacting them in matter. Unlike the Gnostic Demiurge (who is an ignorant or evil inferior god), the Chaldean Demiurge is a positive, albeit subordinate, figure — a divine craftsman carrying out the Father's design. Below him in the hierarchy stand the <em>Iynges</em>, <em>Teletarchs</em>, <em>Synoches</em>, and <em>Cosmocrators</em> — various categories of divine intermediaries responsible for different levels of cosmic order.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- THEURGICAL PRACTICE -->
+    <section class="rounded-2xl p-8 space-y-5" style="background: linear-gradient(135deg, rgba(239,68,68,0.1), rgba(185,28,28,0.06));">
+      <h2 class="font-cinzel text-2xl text-red-300 text-center tracking-wide">Theurgical Practice</h2>
+      <div class="space-y-4 text-sm text-red-100/80 leading-relaxed max-w-4xl mx-auto">
+        <p>
+          The Chaldean Oracles represent the theoretical foundation of <strong class="text-red-200">theurgy</strong> — a form of ritual practice aimed not merely at persuading or communing with the gods (as in ordinary prayer and sacrifice) but at actually becoming divine, at transforming the practitioner's soul through ritual operations that replicate the divine creative and redemptive acts. The theurgist works "from below" — using material objects, symbols, sounds, and ritual actions that correspond to the divine realities — to draw divine power into the soul and ultimately achieve the soul's reintegration with its source.
+        </p>
+        <p>
+          The Oracles distinguish sharply between <em>theurgy</em> — genuine divine work operating through the practitioner's participation in divine action — and mere <em>magic</em> (<em>goēteia</em>), which operates through inferior daimonic powers and whose goals are limited to material results. The theurgist's aim is not power over nature but liberation from nature — the soul's ascent through the planetary and elemental spheres back to the fiery realm of the Father. This requires both philosophical purification (following the Platonic path) and ritual practice (using the Chaldean techniques) simultaneously.
+        </p>
+        <p>
+          Key theurgical practices mentioned in or associated with the Oracles include: the use of <strong class="text-red-200">sunthēmata</strong> and <strong class="text-red-200">symbola</strong> — sacred signs and symbols placed in material objects or used in ritual — which carry divine power by virtue of their correspondence with celestial realities rather than by conventional association; the <em>iunges</em> — spinning wheels or magical tops used to concentrate divine force; the use of divine names and vowel-chanting to resonate with specific divine levels; fire rituals in which the practitioner identified with the divine fiery light; and meditations on light through which the theurgist experienced the ascent of the luminous body (<em>ochēma pneumatikon</em>) through the spheres to the Father's fire.
+        </p>
+      </div>
+    </section>
+
+    <!-- KEY THEMES -->
+    <section class="space-y-6">
+      <h2 class="font-cinzel text-2xl text-red-300 text-center tracking-wide">Key Themes</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-red-200">Fire as the Divine Substance</h3>
+          <p class="text-red-100/70 text-sm leading-relaxed">Throughout the Chaldean Oracles, <strong class="text-red-200">fire</strong> is the primary metaphysical substance — the element that most closely corresponds to the divine nature. The Father is a "fiery Abyss" or "fiery Pole"; souls are "fire-kindled stars" or "sparks of fire"; the highest contemplative state is described as the soul's return to the divine fire. This fire mysticism, drawing on pre-Socratic Heraclitean tradition and possibly on Zoroastrian fire worship, gives the Oracles their distinctive thermal imagery and distinguishes them from other Platonic texts of the period.</p>
+        </div>
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-red-200">The Luminous Vehicle (Astral Body)</h3>
+          <p class="text-red-100/70 text-sm leading-relaxed">The Chaldean Oracles were the primary ancient source for the doctrine of the <strong class="text-red-200">luminous vehicle</strong> (<em>ochēma pneumatikon</em>, or <em>astral body</em>) — a subtle, luminous body of fiery light that the soul acquires during its descent through the planetary spheres and that serves as its "vehicle" or "chariot" during both incarnate life and the post-mortem journey. Purifying this luminous vehicle — stripping it of the denser material accreted during the soul's descent — is the theurgical work of spiritual development. This doctrine was enormously influential on all subsequent traditions of the astral body in Western esotericism.</p>
+        </div>
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-red-200">The Iynges</h3>
+          <p class="text-red-100/70 text-sm leading-relaxed">The <em>Iynges</em> (singular: <em>Iunx</em>) — mysterious divine intermediaries first mentioned in the Chaldean Oracles — represent one of the most fascinating and obscure elements of the Chaldean system. Described as "flashing lightning-bolts of fire" and as "winged and knowing," they appear to function both as cosmic forces (transmitting the Father's will through the divine hierarchy) and as ritual instruments (spinning magical tops or wheels used in theurgical practice). Their exact nature was debated even in antiquity, and they remain one of the most contested elements of Chaldean cosmology.</p>
+        </div>
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-red-200">Do Not Incline Downward</h3>
+          <p class="text-red-100/70 text-sm leading-relaxed">A recurring instruction in the Oracles — "do not incline downward to the dark world" — captures their fundamental soteriological orientation. The soul's natural inclination, weighed down by the material accretions of its descent and the attractions of the material world, is always downward — towards matter, forgetting, and deeper entanglement in the cycle of reincarnation. The theurgist's constant practice is counter-gravitational: maintaining the soul's upward orientation through contemplation, theurgical ritual, and the cultivation of the fiery virtues that align the soul with its divine source.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- NEOPLATONIC RECEPTION -->
+    <section class="rounded-2xl p-8 space-y-5" style="background: linear-gradient(135deg, rgba(239,68,68,0.1), rgba(185,28,28,0.06));">
+      <h2 class="font-cinzel text-2xl text-red-300 text-center tracking-wide">Neoplatonic Reception</h2>
+      <div class="space-y-4 text-sm text-red-100/80 leading-relaxed max-w-4xl mx-auto">
+        <p>
+          The Chaldean Oracles achieved their greatest influence through their adoption as sacred scripture by the later Neoplatonic school. <strong class="text-red-200">Porphyry</strong> (234–305 CE) — Plotinus's most important pupil — wrote a commentary on the Oracles, though it is lost. <strong class="text-red-200">Iamblichus</strong> made theurgy (based on the Chaldean model) the centrepiece of his Neoplatonism, arguing against his teacher Porphyry that philosophical contemplation alone was insufficient for salvation and that the ritual operations described in the Oracles were necessary complements to philosophical purification. This Iamblichean synthesis of philosophy and theurgy became the dominant form of late antique Neoplatonism.
+        </p>
+        <p>
+          <strong class="text-red-200">Proclus</strong> (412–485 CE) — the last and most systematic of the Athenian Neoplatonists — organised his entire philosophical system in conscious dialogue with both Plato and the Chaldean Oracles, treating the two as the twin supreme authorities on the nature of reality. His commentary on the Oracles, largely lost, was used by the Byzantine philosopher <strong class="text-red-200">Michael Psellos</strong>, through whose excerpts much of our knowledge of Proclus's Chaldean interpretation derives. Psellos also wrote his own exposition of the Oracles, making them available to Byzantine and eventually Renaissance readers.
+        </p>
+        <p>
+          The Renaissance magi — Ficino, Pico della Mirandola, Francesco Patrizi — were fascinated by the Chaldean Oracles as part of the <em>prisca theologia</em> (ancient theology), and Patrizi's 1591 <em>Nova de Universis Philosophia</em> included the Oracles alongside Hermetica, Orphic Hymns, Zoroastrian texts, and Platonic dialogues as the pre-Christian revelation underlying all genuine philosophy. This Renaissance vision of the Oracles as part of a universal ancient wisdom continues to inform esoteric and philosophical engagements with the text.
+        </p>
+      </div>
+    </section>
+
+    <!-- KEY SCHOLARS -->
+    <section class="space-y-6">
+      <h2 class="font-cinzel text-2xl text-red-300 text-center tracking-wide">Key Scholars</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-red-200">Ruth Majercik</h3>
+          <p class="text-red-100/70 text-sm leading-relaxed">The American scholar whose edition and translation <em>The Chaldean Oracles: Text, Translation, and Commentary</em> (1989) is the standard English-language reference for the Oracles. Majercik's work provides the Greek text with facing English translation, detailed notes identifying parallel passages in Neoplatonic sources, and a comprehensive introduction covering the historical context, authorship questions, and theological content of the Oracles. It remains indispensable for any serious study of the text.</p>
+        </div>
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-red-200">Sarah Iles Johnston</h3>
+          <p class="text-red-100/70 text-sm leading-relaxed">The religious historian whose monograph <em>Hekate Soteira: A Study of Hekate's Role in the Chaldean Oracles and Related Literature</em> (1990) provided the most detailed analysis of the Chaldean Hecate, placing her in the broader context of ancient Hecate worship, theurgy, and late antique religion. Johnston's work demonstrates how the Chaldean elevation of Hecate from a daimonic goddess of magic to a cosmic World-Soul reflects the broader syncretistic religious dynamics of the 2nd–4th centuries CE.</p>
+        </div>
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-red-200">Hans Lewy (1901–1945)</h3>
+          <p class="text-red-100/70 text-sm leading-relaxed">The German-Israeli scholar whose posthumously published <em>Chaldaean Oracles and Theurgy</em> (1956; revised edition by Michel Tardieu, 1978) laid the foundations of modern Chaldean scholarship. Despite his early death in Jerusalem in 1945, Lewy's analysis of the Oracles' sources, their relationship to the Neoplatonic tradition, and the nature of theurgical practice remains a fundamental reference work — still cited by every subsequent scholar of the Oracles as the starting point for serious study.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="text-center mt-4">
+      <a href="/esoteric-corpora" class="text-red-400/60 hover:text-red-300 text-sm transition-colors">← Esoteric Texts &amp; Corpora</a>
+    </div>
+
+  </div><!-- end content wrapper -->
+
+  <footer class="relative z-10 text-center py-8 text-red-400/40 text-xs mt-8">
+    <p class="italic">"Hasten towards the Light and towards the Father's rays, from where the soul came, clothed in much mind." — Chaldean Oracles, fr. 115</p>
+    <p class="mt-2">Esoteric Wisdom · Built with ✨ in Rust</p>
+    <p class="mt-2"><a href="/home" class="hover:text-red-300 transition-colors">← Back to Portal</a></p>
+  </footer>
+
+  <script>
+    const sf = document.getElementById('starfield');
+    for (let i = 0; i < 200; i++) {
+      const s = document.createElement('div');
+      s.className = 'star';
+      const size = Math.random() * 2.5 + 0.5;
+      s.style.cssText = `width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--dur:${2+Math.random()*4}s;--delay:${Math.random()*5}s;opacity:${0.2+Math.random()*0.8};`;
+      sf.appendChild(s);
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sefer Bahir — Esoteric Texts &amp; Corpora</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <meta property="og:title" content="Sefer Bahir — Esoteric Texts &amp; Corpora" />
+  <meta property="og:description" content="The Book of Illumination — the first Kabbalistic text to develop the sefirot as cosmic divine forces, emerging in 12th-century Provence." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://esoteric-wisdom.onrender.com/esoteric-corpora/sefer-bahir" />
+  <meta property="og:image" content="https://esoteric-wisdom.onrender.com/og-image.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Raleway', sans-serif; }
+    .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+
+    @keyframes twinkle { 0%,100% { opacity: 0.2; } 50% { opacity: 1; } }
+    .star { position: absolute; border-radius: 50%; background: white; animation: twinkle var(--dur,3s) ease-in-out infinite; animation-delay: var(--delay,0s); }
+
+    @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+    .floating { animation: float 5s ease-in-out infinite; }
+
+    @keyframes shimmer {
+      0% { background-position: -200% center; }
+      100% { background-position: 200% center; }
+    }
+
+    .nav-link { position: relative; transition: all 0.3s; }
+    .nav-link::after {
+      content: ''; position: absolute; bottom: -2px; left: 0;
+      width: 0; height: 2px;
+      background: linear-gradient(90deg, #f59e0b, #a78bfa);
+      transition: width 0.3s;
+    }
+    .nav-link:hover::after { width: 100%; }
+
+    .aurora-text {
+      background: linear-gradient(90deg, #fbbf24, #fcd34d, #fef08a, #f59e0b, #fbbf24);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 4s linear infinite;
+    }
+
+    .corpus-card {
+      background: linear-gradient(135deg, rgba(251,191,36,0.07), rgba(234,179,8,0.04));
+      border: 1px solid rgba(251,191,36,0.2);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+    .corpus-card:hover {
+      transform: translateY(-6px) scale(1.01);
+      box-shadow: 0 0 28px 5px rgba(251,191,36,0.25);
+      border-color: rgba(251,191,36,0.5);
+    }
+  </style>
+</head>
+<body class="min-h-screen text-yellow-100 overflow-x-hidden" style="background: radial-gradient(ellipse at top, #1a1200 0%, #2a1e00 20%, #0a0800 55%, #000000 100%);">
+
+  <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+
+  <!-- NAV -->
+  <nav class="sticky top-0 z-50 flex items-center justify-between px-6 py-3 bg-black/40 backdrop-blur-md border-b border-violet-500/20 flex-wrap gap-y-2">
+    <a href="/home" class="font-cinzel text-amber-300 text-sm tracking-widest shrink-0">✦ Esoteric Wisdom ✦</a>
+    <div class="flex items-center gap-x-3 gap-y-1 text-xs text-violet-200 flex-wrap justify-end">
+      <a href="/astrology" class="nav-link hover:text-amber-300 transition-colors">Astrology</a>
+      <a href="/meditation" class="nav-link hover:text-amber-300 transition-colors">Meditation</a>
+      <a href="/tarot/select" class="nav-link hover:text-amber-300 transition-colors">Tarot</a>
+      <a href="/numerology" class="nav-link hover:text-amber-300 transition-colors">Numerology</a>
+      <a href="/crystals" class="nav-link hover:text-amber-300 transition-colors">Crystals</a>
+      <a href="/runes" class="nav-link hover:text-amber-300 transition-colors">Runes</a>
+      <a href="/shamanism" class="nav-link hover:text-amber-300 transition-colors">Shamanism</a>
+      <a href="/druidism" class="nav-link hover:text-amber-300 transition-colors">Druidism</a>
+      <a href="/akashic-records" class="nav-link hover:text-amber-300 transition-colors">Akashic Records</a>
+      <a href="/wicca" class="nav-link hover:text-amber-300 transition-colors">Wicca</a>
+      <a href="/alchemy" class="nav-link hover:text-amber-300 transition-colors">Alchemy</a>
+      <a href="/gateway-process" class="nav-link hover:text-amber-300 transition-colors">Gateway Process</a>
+      <a href="/remote-viewing" class="nav-link hover:text-amber-300 transition-colors">Remote Viewing</a>
+      <a href="/khasarov-mirror" class="nav-link hover:text-amber-300 transition-colors">Khasarov Mirror</a>
+      <a href="/western-esotericism" class="nav-link hover:text-amber-300 transition-colors">Western Esotericism</a>
+      <a href="/eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Eastern Esotericism</a>
+      <a href="/indigenous-esotericism" class="nav-link hover:text-amber-300 transition-colors">Indigenous Esotericism</a>
+      <a href="/middle-eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Middle Eastern Mysteries</a>
+      <a href="/esoteric-practices" class="nav-link hover:text-amber-300 transition-colors">Esoteric Practices</a>
+      <a href="/esoteric-corpora" class="nav-link text-amber-300 font-semibold">Sacred Texts</a>
+      <a href="/journal/reflections" class="nav-link text-emerald-300 hover:text-emerald-200 transition-colors">✨ Reflections</a>
+      <a href="https://ko-fi.com/esotericwisdom" target="_blank" rel="noopener noreferrer"
+         class="px-3 py-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-white font-semibold hover:scale-105 transition-transform shrink-0">☕ Support</a>
+    </div>
+  </nav>
+
+  <!-- CONTENT WRAPPER -->
+  <div class="relative z-10 max-w-5xl mx-auto space-y-10 pt-6 px-4 pb-12">
+
+    <!-- BREADCRUMB -->
+    <div>
+      <a href="/esoteric-corpora" class="text-xs text-yellow-300/60 hover:text-yellow-300 transition-colors">← Esoteric Texts &amp; Corpora</a>
+    </div>
+
+    <!-- HERO -->
+    <section class="text-center py-12 space-y-6">
+      <div class="text-7xl floating">✨</div>
+      <h1 class="font-cinzel text-4xl md:text-5xl font-bold aurora-text leading-tight">
+        Sefer Bahir
+      </h1>
+      <p class="max-w-3xl mx-auto text-yellow-200/80 text-lg leading-relaxed">
+        The "Book of Illumination" — a mysterious, pseudonymous work that appeared in Provence in the late 12th century and revolutionised Jewish mysticism by introducing the sefirot as living divine powers, the divine feminine as the Shekhinah, and the soul's transmigration through multiple lives.
+      </p>
+    </section>
+
+    <!-- DISCLAIMER -->
+    <section class="rounded-2xl p-6 space-y-4" style="background: linear-gradient(135deg, rgba(180,60,0,0.15), rgba(120,30,0,0.08)); border: 1px solid rgba(251,146,60,0.3);">
+      <div class="flex items-start gap-4">
+        <span class="text-3xl flex-shrink-0">⚠️</span>
+        <div>
+          <h2 class="font-cinzel text-lg text-amber-300 mb-2">For Educational &amp; Informational Purposes Only</h2>
+          <p class="text-amber-100/85 text-sm leading-relaxed">
+            The content on this page is provided solely for educational and historical study. The texts and practices described here derive from diverse sacred traditions and carry genuine power within those contexts. Readers are encouraged to approach these traditions with respect and discernment. Attempting advanced practices described in these texts without proper guidance from a qualified teacher is not recommended and may carry psychological or spiritual risks. If you are drawn to pursue any of these practices, seek instruction from a qualified, lineage-authorised teacher within the tradition in question.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT IS THE SEFER BAHIR? -->
+    <section class="rounded-2xl p-8 space-y-6" style="background: linear-gradient(135deg, rgba(251,191,36,0.1), rgba(234,179,8,0.06));">
+      <h2 class="font-cinzel text-2xl text-yellow-300 text-center tracking-wide">What Is the Sefer Bahir?</h2>
+      <div class="space-y-4 text-sm text-yellow-100/80 leading-relaxed max-w-4xl mx-auto">
+        <p>
+          The <em>Sefer Bahir</em> — the "Book of Illumination" or "Book of Brilliance" — is a short but enormously influential Kabbalistic text that appeared in Provence, southern France, in the latter half of the 12th century. Its title derives from the opening quotation of Job 37:21 — "And now they cannot see the light, it is brilliant (<em>bahir</em>) in the skies" — though the text's own style is anything but brilliantly clear. Written in a deliberately obscure, enigmatic manner that resembles a kind of pseudo-Midrash or mystical Talmud, it presents a series of seemingly disconnected sayings, parables, and exchanges between unnamed masters and disciples that encode a radically new vision of the divine inner life.
+        </p>
+        <p>
+          The Sefer Bahir is commonly attributed by tradition to Rabbi Neḥunya ben ha-Qanah, a 1st-century Tanna mentioned in rabbinic literature as a master of esoteric wisdom. This attribution is, like most ancient attributions of mystical texts, a literary device rather than a historical claim. Scholarly consensus, following the meticulous analysis of <strong class="text-yellow-200">Gershom Scholem</strong>, places its composition in the late 12th century in Provence, though Scholem argued that the Bahir incorporated much older Eastern (Babylonian or Palestinian) material — possibly transmitted through channels connected to the esoteric tradition of the Geonic academies of Babylonia.
+        </p>
+        <p>
+          The Sefer Bahir's historical importance resides in the fact that it was the <strong class="text-yellow-200">first Kabbalistic text to treat the sefirot as ten distinct divine powers</strong> with clearly defined characteristics, symbolic associations, and mutual relationships — rather than merely the abstract primordial numbers of the Sefer Yetzirah. In the Bahir, the sefirot are metaphorically compared to a king's attributes, a divine tree with roots in heaven, and the lights of a candelabrum — images that would become standard Kabbalistic imagery in all subsequent literature. The text also introduced, for the first time in a Jewish mystical text, explicit discussion of the <strong class="text-yellow-200">transmigration of souls</strong> (<em>gilgul neshamot</em>) — using the parable of a king who plants different trees in his orchard to describe how souls are replanted in successive bodies until they complete their rectification.
+        </p>
+      </div>
+    </section>
+
+    <!-- DEVELOPMENT OF THE SEFIROT -->
+    <section class="space-y-6">
+      <h2 class="font-cinzel text-2xl text-yellow-300 text-center tracking-wide">Development of the Sefirot</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-yellow-200">From Numbers to Divine Powers</h3>
+          <p class="text-yellow-100/70 text-sm leading-relaxed">Where the Sefer Yetzirah had described ten <em>sefirot belimah</em> — primordial divine numbers without clear personalisation — the Bahir transforms them into active divine powers, each with its own character and function within the divine life. The Bahir speaks of ten "sayings" or "voices" through which God operates, comparing them to a king who rules through ten ministers, each responsible for a different domain. This personalisation of the sefirot created the foundation for the rich anthropomorphic-theosophical Kabbalah of the Zohar.</p>
+        </div>
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-yellow-200">The Divine Tree</h3>
+          <p class="text-yellow-100/70 text-sm leading-relaxed">One of the Bahir's most fertile images for the sefirot is the cosmic tree (<em>ilan</em>) — rooted above, with branches spreading downward through all levels of reality, its roots, trunk, branches, and fruit corresponding to the different divine powers. This vertical image, with divinity flowing from the highest root downward into the world, captures the emanationist dynamic that would be elaborated in subsequent Kabbalistic cosmology. The image also connects the sefirot to the biblical Tree of Life in the Garden of Eden.</p>
+        </div>
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-yellow-200">The Seventh Sefirah as the "Good"</h3>
+          <p class="text-yellow-100/70 text-sm leading-relaxed">The Bahir develops a particularly rich meditation on the seventh sefirah — identified variously as the "holy palace," the "good," and the divine power that distributes blessings to the world. This sefirah occupies a pivotal position in the Bahiric sefirot-system as the cosmic storehouse and distributor of divine abundance, and its identification with the Sabbath — as the seventh day that completes and blesses all creation — anticipates the rich Zoharic theology of the Sabbath as the feminine divine principle.</p>
+        </div>
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-yellow-200">The Shekhinah &amp; Divine Femininity</h3>
+          <p class="text-yellow-100/70 text-sm leading-relaxed">The Bahir introduces into Kabbalistic theology the explicit association of the lowest sefirah with the feminine divine principle — the <em>Shekhinah</em>, God's indwelling presence in the world. Through the image of a daughter or a princess set apart from the divine family, the Bahir opens the door to the entire mystical-erotic theology of the Zohar, in which the relationship between the masculine divine principle (Tiferet) and the Shekhinah (Malkhut) is the central cosmic drama. This feminine theological principle, startlingly innovative within Judaism, represents one of the Bahir's most far-reaching contributions.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SYMBOLISM -->
+    <section class="rounded-2xl p-8 space-y-5" style="background: linear-gradient(135deg, rgba(251,191,36,0.1), rgba(234,179,8,0.06));">
+      <h2 class="font-cinzel text-2xl text-yellow-300 text-center tracking-wide">Symbolism &amp; Key Doctrines</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-yellow-100/80 leading-relaxed">
+        <div class="space-y-3">
+          <p><strong class="text-yellow-200">Soul Transmigration (Gilgul).</strong> The Bahir's introduction of transmigration of souls into mainstream Kabbalistic thought represents a striking engagement with ideas circulating in the Cathar milieu of Provence. The parable of the king whose servants fail in their tasks, so that he replants them in different "orchards" to try again, presents reincarnation as a mechanism of divine justice and soul-development — an idea that would become a central and elaborate doctrine in subsequent Kabbalah, especially in the Lurianic system.</p>
+          <p><strong class="text-yellow-200">The Hebrew Letters as Divine Members.</strong> Extending the Sefer Yetzirah's letter mysticism, the Bahir develops elaborate correspondences between the Hebrew letters and parts of the divine "body" — anticipating the <em>Shi'ur Qomah</em> (divine measurement) mysticism of later Kabbalah. The letters are not merely creative instruments but participate in the divine nature itself, each carrying a fragment of the divine light and wisdom.</p>
+        </div>
+        <div class="space-y-3">
+          <p><strong class="text-yellow-200">The North as the Source of Evil.</strong> In a striking development that influenced subsequent Kabbalistic theodicy, the Bahir associates the north with the left side of the divine and with the potential for evil. This spatial-moral symbolism — the right side associated with mercy and the left with judgment and potential evil — became a fundamental structural principle of Kabbalistic thought, culminating in the Zohar's elaborate dualism of the "other side" (<em>sitra aḥra</em>) as the demonic realm associated with the left.</p>
+          <p><strong class="text-yellow-200">Paradise and Gehenna.</strong> The Bahir elaborates on the rabbinic doctrines of Paradise (<em>Gan Eden</em>) and Gehenna through Kabbalistic imagery, describing the souls' post-mortem experiences in terms that draw on the sefirot-system. The soul that has accumulated merit inhabits the upper Paradise and contemplates the divine splendour; the soul that requires further purification passes through Gehenna before being replanted in a new body. These eschatological teachings were among the most widely transmitted elements of the Bahir's thought.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- HISTORICAL CONTEXT -->
+    <section class="space-y-6">
+      <h2 class="font-cinzel text-2xl text-yellow-300 text-center tracking-wide">Historical Context &amp; Influence</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-yellow-200">Provence &amp; the Cathar Environment</h3>
+          <p class="text-yellow-100/70 text-sm leading-relaxed">The appearance of the Sefer Bahir in 12th-century Provence — a region simultaneously the cradle of troubadour poetry, the centre of the Cathar heresy, and the home of thriving Jewish communities — raises fascinating questions about cultural cross-pollination. Scholars have noted that several of the Bahir's most unusual teachings — soul transmigration, the explicit principle of a divine feminine, and a quasi-dualistic account of evil — resemble Cathar doctrines circulating in the same region at the same time. Whether the influence ran from Catharism to Kabbalah, from a common source to both, or is merely coincidental remains debated.</p>
+        </div>
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-yellow-200">Gershom Scholem's Analysis</h3>
+          <p class="text-yellow-100/70 text-sm leading-relaxed">Scholem's monograph <em>Das Buch Bahir</em> (1923) — one of his earliest major works, written in his twenties — established the Bahir as a genuine turning point in the history of Jewish mysticism. Scholem argued that the Bahir incorporated ancient Eastern material (possibly going back to the Gnostic or Manichaean period) transmitted through obscure channels, but that its Provençal compiler arranged and enriched this material to produce something genuinely new. Scholem's analysis demonstrated that the Bahir's doctrine of the sefirot was the crucial link between the Sefer Yetzirah's abstract numerology and the Zohar's rich theosophical personalism.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="text-center mt-4">
+      <a href="/esoteric-corpora" class="text-yellow-400/60 hover:text-yellow-300 text-sm transition-colors">← Esoteric Texts &amp; Corpora</a>
+    </div>
+
+  </div><!-- end content wrapper -->
+
+  <footer class="relative z-10 text-center py-8 text-yellow-400/40 text-xs mt-8">
+    <p class="italic">"And now they cannot see the light, it is brilliant in the skies." — Job 37:21, opening of the Sefer Bahir</p>
+    <p class="mt-2">Esoteric Wisdom · Built with ✨ in Rust</p>
+    <p class="mt-2"><a href="/home" class="hover:text-yellow-300 transition-colors">← Back to Portal</a></p>
+  </footer>
+
+  <script>
+    const sf = document.getElementById('starfield');
+    for (let i = 0; i < 200; i++) {
+      const s = document.createElement('div');
+      s.className = 'star';
+      const size = Math.random() * 2.5 + 0.5;
+      s.style.cssText = `width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--dur:${2+Math.random()*4}s;--delay:${Math.random()*5}s;opacity:${0.2+Math.random()*0.8};`;
+      sf.appendChild(s);
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Picatrix — Esoteric Texts &amp; Corpora</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <meta property="og:title" content="Picatrix — Esoteric Texts &amp; Corpora" />
+  <meta property="og:description" content="The Ghāyat al-Ḥakīm — the greatest grimoire of mediaeval astrological magic, compiled in Andalusia and translated into Latin in 1256." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://esoteric-wisdom.onrender.com/esoteric-corpora/picatrix" />
+  <meta property="og:image" content="https://esoteric-wisdom.onrender.com/og-image.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Raleway', sans-serif; }
+    .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+
+    @keyframes twinkle { 0%,100% { opacity: 0.2; } 50% { opacity: 1; } }
+    .star { position: absolute; border-radius: 50%; background: white; animation: twinkle var(--dur,3s) ease-in-out infinite; animation-delay: var(--delay,0s); }
+
+    @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+    .floating { animation: float 5s ease-in-out infinite; }
+
+    @keyframes shimmer {
+      0% { background-position: -200% center; }
+      100% { background-position: 200% center; }
+    }
+
+    .nav-link { position: relative; transition: all 0.3s; }
+    .nav-link::after {
+      content: ''; position: absolute; bottom: -2px; left: 0;
+      width: 0; height: 2px;
+      background: linear-gradient(90deg, #f59e0b, #a78bfa);
+      transition: width 0.3s;
+    }
+    .nav-link:hover::after { width: 100%; }
+
+    .aurora-text {
+      background: linear-gradient(90deg, #a5b4fc, #818cf8, #c7d2fe, #6366f1, #a5b4fc);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 4s linear infinite;
+    }
+
+    .corpus-card {
+      background: linear-gradient(135deg, rgba(129,140,248,0.07), rgba(99,102,241,0.04));
+      border: 1px solid rgba(129,140,248,0.2);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+    .corpus-card:hover {
+      transform: translateY(-6px) scale(1.01);
+      box-shadow: 0 0 28px 5px rgba(129,140,248,0.25);
+      border-color: rgba(129,140,248,0.5);
+    }
+  </style>
+</head>
+<body class="min-h-screen text-indigo-100 overflow-x-hidden" style="background: radial-gradient(ellipse at top, #0a0525 0%, #120840 20%, #050215 55%, #000000 100%);">
+
+  <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+
+  <!-- NAV -->
+  <nav class="sticky top-0 z-50 flex items-center justify-between px-6 py-3 bg-black/40 backdrop-blur-md border-b border-violet-500/20 flex-wrap gap-y-2">
+    <a href="/home" class="font-cinzel text-amber-300 text-sm tracking-widest shrink-0">✦ Esoteric Wisdom ✦</a>
+    <div class="flex items-center gap-x-3 gap-y-1 text-xs text-violet-200 flex-wrap justify-end">
+      <a href="/astrology" class="nav-link hover:text-amber-300 transition-colors">Astrology</a>
+      <a href="/meditation" class="nav-link hover:text-amber-300 transition-colors">Meditation</a>
+      <a href="/tarot/select" class="nav-link hover:text-amber-300 transition-colors">Tarot</a>
+      <a href="/numerology" class="nav-link hover:text-amber-300 transition-colors">Numerology</a>
+      <a href="/crystals" class="nav-link hover:text-amber-300 transition-colors">Crystals</a>
+      <a href="/runes" class="nav-link hover:text-amber-300 transition-colors">Runes</a>
+      <a href="/shamanism" class="nav-link hover:text-amber-300 transition-colors">Shamanism</a>
+      <a href="/druidism" class="nav-link hover:text-amber-300 transition-colors">Druidism</a>
+      <a href="/akashic-records" class="nav-link hover:text-amber-300 transition-colors">Akashic Records</a>
+      <a href="/wicca" class="nav-link hover:text-amber-300 transition-colors">Wicca</a>
+      <a href="/alchemy" class="nav-link hover:text-amber-300 transition-colors">Alchemy</a>
+      <a href="/gateway-process" class="nav-link hover:text-amber-300 transition-colors">Gateway Process</a>
+      <a href="/remote-viewing" class="nav-link hover:text-amber-300 transition-colors">Remote Viewing</a>
+      <a href="/khasarov-mirror" class="nav-link hover:text-amber-300 transition-colors">Khasarov Mirror</a>
+      <a href="/western-esotericism" class="nav-link hover:text-amber-300 transition-colors">Western Esotericism</a>
+      <a href="/eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Eastern Esotericism</a>
+      <a href="/indigenous-esotericism" class="nav-link hover:text-amber-300 transition-colors">Indigenous Esotericism</a>
+      <a href="/middle-eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Middle Eastern Mysteries</a>
+      <a href="/esoteric-practices" class="nav-link hover:text-amber-300 transition-colors">Esoteric Practices</a>
+      <a href="/esoteric-corpora" class="nav-link text-amber-300 font-semibold">Sacred Texts</a>
+      <a href="/journal/reflections" class="nav-link text-emerald-300 hover:text-emerald-200 transition-colors">✨ Reflections</a>
+      <a href="https://ko-fi.com/esotericwisdom" target="_blank" rel="noopener noreferrer"
+         class="px-3 py-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-white font-semibold hover:scale-105 transition-transform shrink-0">☕ Support</a>
+    </div>
+  </nav>
+
+  <!-- CONTENT WRAPPER -->
+  <div class="relative z-10 max-w-5xl mx-auto space-y-10 pt-6 px-4 pb-12">
+
+    <!-- BREADCRUMB -->
+    <div>
+      <a href="/esoteric-corpora" class="text-xs text-indigo-300/60 hover:text-indigo-300 transition-colors">← Esoteric Texts &amp; Corpora</a>
+    </div>
+
+    <!-- HERO -->
+    <section class="text-center py-12 space-y-6">
+      <div class="text-7xl floating">🌙</div>
+      <h1 class="font-cinzel text-4xl md:text-5xl font-bold aurora-text leading-tight">
+        Picatrix
+      </h1>
+      <p class="max-w-3xl mx-auto text-indigo-200/80 text-lg leading-relaxed">
+        <em>Ghāyat al-Ḥakīm</em> — "The Goal of the Wise" — the greatest encyclopaedia of astrological magic in the Western tradition, compiled in Andalusia and translated into Latin for Alfonso X of Castile in 1256, transmitting the celestial magic of antiquity to the Renaissance magi.
+      </p>
+    </section>
+
+    <!-- DISCLAIMER -->
+    <section class="rounded-2xl p-6 space-y-4" style="background: linear-gradient(135deg, rgba(180,60,0,0.15), rgba(120,30,0,0.08)); border: 1px solid rgba(251,146,60,0.3);">
+      <div class="flex items-start gap-4">
+        <span class="text-3xl flex-shrink-0">⚠️</span>
+        <div>
+          <h2 class="font-cinzel text-lg text-amber-300 mb-2">For Educational &amp; Informational Purposes Only</h2>
+          <p class="text-amber-100/85 text-sm leading-relaxed">
+            The content on this page is provided solely for educational and historical study. The texts and practices described here derive from diverse sacred traditions and carry genuine power within those contexts. Readers are encouraged to approach these traditions with respect and discernment. Attempting advanced practices described in these texts without proper guidance from a qualified teacher is not recommended and may carry psychological or spiritual risks. If you are drawn to pursue any of these practices, seek instruction from a qualified, lineage-authorised teacher within the tradition in question.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT IS THE PICATRIX? -->
+    <section class="rounded-2xl p-8 space-y-6" style="background: linear-gradient(135deg, rgba(99,102,241,0.1), rgba(79,70,229,0.06));">
+      <h2 class="font-cinzel text-2xl text-indigo-300 text-center tracking-wide">What Is the Picatrix?</h2>
+      <div class="space-y-4 text-sm text-indigo-100/80 leading-relaxed max-w-4xl mx-auto">
+        <p>
+          The <em>Picatrix</em> — known in Arabic as <em>Ghāyat al-Ḥakīm</em> ("The Goal of the Wise") — is the most comprehensive and ambitious compendium of astrological magic ever compiled in the Western tradition. A vast Arabic work of four books, it synthesises Hermetic philosophy, Neoplatonic cosmology, Sabian astral religion, Babylonian astronomy, Greek natural magic, alchemical theory, and a vast repertoire of practical magical operations (talismans, fumigations, invocations, rituals for planetary spirits, and techniques for creating magically charged objects) into a coherent theoretical and practical whole. It is simultaneously a philosophical treatise on the nature of celestial influence and a practical manual for exploiting that influence through magical means.
+        </p>
+        <p>
+          The text was compiled in Arabic in al-Andalus (Islamic Spain) around the 10th–11th century CE, drawing on a vast range of earlier Arabic, Greek, Persian, and Babylonian sources. Its attributed author — <strong class="text-indigo-200">Maslama ibn Qāsim al-Qurṭubī</strong> — was a real historical figure, an Andalusian scholar of the late 10th century who wrote on magic and astrology, though the attribution has been debated. The text demonstrably incorporates material from dozens of earlier sources, making it more a compilation than an original composition in the conventional sense.
+        </p>
+        <p>
+          In 1256, the Picatrix was translated into Castilian Spanish at the court of <strong class="text-indigo-200">Alfonso X of Castile</strong> ("Alfonso the Wise," 1221–1284) — the monarch who sponsored the most ambitious programme of translation from Arabic to Castilian in mediaeval history — and then into Latin. The Latin Picatrix became one of the most widely copied magical texts in Renaissance Europe, exercising a direct influence on Marsilio Ficino's theory of natural magic (<em>De vita libri tres</em>, 1489), Heinrich Cornelius Agrippa's <em>De occulta philosophia</em> (1531), and through them, on the entire tradition of Renaissance and early modern ceremonial magic.
+        </p>
+      </div>
+    </section>
+
+    <!-- ORIGINS & TRANSMISSION -->
+    <section class="space-y-6">
+      <h2 class="font-cinzel text-2xl text-indigo-300 text-center tracking-wide">Origins &amp; Transmission</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-indigo-200">The Sabian Connection</h3>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">The Picatrix draws heavily on the traditions of the <strong class="text-indigo-200">Sabians of Ḥarrān</strong> — a mysterious religious community in northern Mesopotamia (modern southern Turkey) who practised an astral religion centred on the seven planetary powers, performed elaborate planetary rituals and sacrifices, and preserved Hermetic and Neoplatonic texts that might otherwise have been lost. The Sabians were instrumental in transmitting ancient Babylonian, Greek, and Hermetic knowledge into the Islamic world, and the Picatrix preserves extensive records of their planetary worship — including detailed descriptions of temples, rituals, and prayers dedicated to each of the seven planets.</p>
+        </div>
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-indigo-200">The Alfonsine Translation</h3>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">Alfonso X's commission of a Castilian translation of the Picatrix was part of his broader cultural programme: the <em>Escuela de Traductores de Toledo</em> — the "School of Translators of Toledo" — through which Islamic science, philosophy, and esoteric knowledge was systematically rendered into Castilian and Latin for European audiences. The Picatrix translation was one of the most ambitious undertakings of this school. The Latin version, produced from the Castilian, circulated widely in manuscript through Renaissance Europe and was first printed in the 20th century. The modern critical edition by David Pingree (1986) is the standard scholarly reference.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTENTS OVERVIEW -->
+    <section class="rounded-2xl p-8 space-y-5" style="background: linear-gradient(135deg, rgba(99,102,241,0.1), rgba(79,70,229,0.06));">
+      <h2 class="font-cinzel text-2xl text-indigo-300 text-center tracking-wide">Contents Overview</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-indigo-100/80 leading-relaxed">
+        <div class="space-y-4">
+          <p><strong class="text-indigo-200">Book I — Theory of Astrological Magic.</strong> The first book lays out the theoretical foundations: the nature of the heavens and their influence on the sublunary world, the structure of the celestial sphere, the properties of the planets, the concept of the <em>spiritus mundi</em> (the cosmic spirit that mediates between the celestial and terrestrial realms), and the philosophical basis of talismanic magic. This is the most philosophically sophisticated section, drawing on Neoplatonic emanationism and Hermetic cosmology to provide a rational framework for the magical operations described in subsequent books.</p>
+          <p><strong class="text-indigo-200">Book II — Planetary Images &amp; Spirits.</strong> The second book provides detailed descriptions of the images (figures) associated with each planet, the zodiacal signs, and the lunar mansions — visual programmes for the creation of talismans that will attract and embody the relevant celestial influence. It also describes the planetary spirits and their hierarchies, providing invocations and prayers for establishing contact with these intelligences. This section preserves the most detailed surviving record of the Sabian planetary cult.</p>
+        </div>
+        <div class="space-y-4">
+          <p><strong class="text-indigo-200">Book III — Practical Magic.</strong> The third book is the most practically oriented, containing hundreds of specific operations: recipes for talismans, magical suffumigations (incenses), preparations of magical substances (plants, minerals, animal parts) aligned to each planet, rituals for attracting love, wealth, power, victory, or protection, and procedures for binding, harming, or neutralising enemies. This material reflects the full range of ancient Mediterranean and Near Eastern magical practice, synthesised through the Picatrix's astrological framework.</p>
+          <p><strong class="text-indigo-200">Book IV — Advanced Theory &amp; Cosmology.</strong> The fourth book returns to theory, dealing with the most recondite aspects of the magical tradition: the nature of divine names, the use of mathematical calculations in magic, the properties of talismanic stones, the doctrine of the <em>spiritus</em>, and philosophical reflections on the ultimate goals of magical practice — culminating in a vision of the wise mage (<em>ḥakīm</em>) as someone who has achieved not merely technical magical skill but genuine philosophical wisdom about the nature of reality.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- THE THEORY OF ASTROLOGICAL MAGIC -->
+    <section class="space-y-6">
+      <h2 class="font-cinzel text-2xl text-indigo-300 text-center tracking-wide">The Theory of Astrological Magic</h2>
+      <div class="corpus-card max-w-4xl mx-auto space-y-4">
+        <p class="text-indigo-100/80 text-sm leading-relaxed">
+          The philosophical foundation of the Picatrix's magical theory is Neoplatonic emanationism: reality consists of a hierarchy of levels descending from the One through Intellect, Soul, and Nature to the material world. The celestial spheres — the planetary and starry heavens — are intermediate levels between the purely spiritual upper realms and the material lower realm. Each planet represents a specific quality of divine intelligence flowing down through the cosmic hierarchy and manifesting in corresponding materials, animals, plants, and activities in the sublunary world.
+        </p>
+        <p class="text-indigo-100/80 text-sm leading-relaxed">
+          The medium through which celestial influence operates is the <strong class="text-indigo-200"><em>spiritus mundi</em></strong> — the "spirit of the world," a subtle, pneumatic substance that permeates the entire cosmos and carries celestial influences from the stars down to the material world. This <em>spiritus</em> is neither purely material nor purely spiritual but an intermediate, animating principle — analogous to the "vital breath" of ancient Greek and Arabic medicine. Marsilio Ficino adopted this concept directly from the Picatrix in his theory of natural magic, arguing that the magician could attract celestial <em>spiritus</em> through the use of sympathetically aligned materials, music, foods, and environments.
+        </p>
+        <p class="text-indigo-100/80 text-sm leading-relaxed">
+          The practical art of talismanic magic as described in the Picatrix involves precisely timing the creation of a physical object (a ring, seal, figure, or engraved stone) to catch and condense the <em>spiritus</em> of a particular planet at its astrological maximum. The talisman then becomes a permanent repository of that planetary influence, radiating it into its environment and affecting whatever falls within its sphere in accordance with the planet's qualities. A talisman of the Sun would attract vitality, honour, and illumination; one of Venus, love and beauty; one of Saturn, longevity, wisdom, and esoteric knowledge; one of Mars, courage, military success, and physical strength.
+        </p>
+      </div>
+    </section>
+
+    <!-- KEY SCHOLARS -->
+    <section class="rounded-2xl p-8 space-y-5" style="background: linear-gradient(135deg, rgba(99,102,241,0.1), rgba(79,70,229,0.06));">
+      <h2 class="font-cinzel text-2xl text-indigo-300 text-center tracking-wide">Key Scholars</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-indigo-100/80 leading-relaxed">
+        <div>
+          <p class="text-indigo-200 font-semibold">David Pingree (1933–2005)</p>
+          <p>The American historian of science and mathematics whose critical edition of the Latin Picatrix (1986) remains the definitive scholarly text. Pingree's vast knowledge of Arabic, Persian, Sanskrit, and Greek sources for the history of astrology and mathematical astronomy made him uniquely qualified to trace the Picatrix's complex genealogy of sources. His edition is accompanied by detailed notes identifying hundreds of quotations and paraphrases from earlier texts, revealing the Picatrix as a sophisticated synthesis of the entire ancient and early mediaeval astrological-magical tradition.</p>
+        </div>
+        <div>
+          <p class="text-indigo-200 font-semibold">Christopher Warnock</p>
+          <p>The American Renaissance astrologer and magical practitioner whose English translation of the Latin Picatrix (2010, with John Michael Greer) made the text accessible to modern practitioners for the first time. Warnock's approach combines scholarly accuracy with living practice: he has worked extensively with the Picatrix's talismanic magic and his commentary draws on both historical sources and contemporary magical experience, providing a practically oriented perspective that complements the purely academic analyses.</p>
+        </div>
+        <div>
+          <p class="text-indigo-200 font-semibold">Liana De Girolami Cheney</p>
+          <p>The art historian whose research has traced the Picatrix's influence on Renaissance iconography — particularly in the planetary imagery of Botticelli, Mantegna, and the Villa Farnesina frescoes. Cheney's work illuminates how the Picatrix's descriptions of planetary images provided a direct visual programme for Renaissance painters working under the influence of Ficinian natural magic, revealing the Picatrix's presence in some of the most celebrated works of Renaissance art.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="text-center mt-4">
+      <a href="/esoteric-corpora" class="text-indigo-400/60 hover:text-indigo-300 text-sm transition-colors">← Esoteric Texts &amp; Corpora</a>
+    </div>
+
+  </div><!-- end content wrapper -->
+
+  <footer class="relative z-10 text-center py-8 text-indigo-400/40 text-xs mt-8">
+    <p class="italic">"Know that no work of magic can be perfected unless it be by the help of the celestial virtue." — Picatrix, Book I</p>
+    <p class="mt-2">Esoteric Wisdom · Built with ✨ in Rust</p>
+    <p class="mt-2"><a href="/home" class="hover:text-indigo-300 transition-colors">← Back to Portal</a></p>
+  </footer>
+
+  <script>
+    const sf = document.getElementById('starfield');
+    for (let i = 0; i < 200; i++) {
+      const s = document.createElement('div');
+      s.className = 'star';
+      const size = Math.random() * 2.5 + 0.5;
+      s.style.cssText = `width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--dur:${2+Math.random()*4}s;--delay:${Math.random()*5}s;opacity:${0.2+Math.random()*0.8};`;
+      sf.appendChild(s);
+    }
+  </script>
+
+</body>
+</html>

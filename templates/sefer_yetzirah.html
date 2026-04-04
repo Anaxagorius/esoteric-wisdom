@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sefer Yetzirah — Esoteric Texts &amp; Corpora</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <meta property="og:title" content="Sefer Yetzirah — Esoteric Texts &amp; Corpora" />
+  <meta property="og:description" content="The Book of Formation — the earliest Kabbalistic text, describing creation through the twenty-two Hebrew letters and ten sefirot." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://esoteric-wisdom.onrender.com/esoteric-corpora/sefer-yetzirah" />
+  <meta property="og:image" content="https://esoteric-wisdom.onrender.com/og-image.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Raleway', sans-serif; }
+    .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+
+    @keyframes twinkle { 0%,100% { opacity: 0.2; } 50% { opacity: 1; } }
+    .star { position: absolute; border-radius: 50%; background: white; animation: twinkle var(--dur,3s) ease-in-out infinite; animation-delay: var(--delay,0s); }
+
+    @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+    .floating { animation: float 5s ease-in-out infinite; }
+
+    @keyframes shimmer {
+      0% { background-position: -200% center; }
+      100% { background-position: 200% center; }
+    }
+
+    .nav-link { position: relative; transition: all 0.3s; }
+    .nav-link::after {
+      content: ''; position: absolute; bottom: -2px; left: 0;
+      width: 0; height: 2px;
+      background: linear-gradient(90deg, #f59e0b, #a78bfa);
+      transition: width 0.3s;
+    }
+    .nav-link:hover::after { width: 100%; }
+
+    .aurora-text {
+      background: linear-gradient(90deg, #bfdbfe, #93c5fd, #e0f2fe, #60a5fa, #bfdbfe);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 4s linear infinite;
+    }
+
+    .corpus-card {
+      background: linear-gradient(135deg, rgba(96,165,250,0.07), rgba(59,130,246,0.04));
+      border: 1px solid rgba(96,165,250,0.2);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+    .corpus-card:hover {
+      transform: translateY(-6px) scale(1.01);
+      box-shadow: 0 0 28px 5px rgba(96,165,250,0.25);
+      border-color: rgba(96,165,250,0.5);
+    }
+  </style>
+</head>
+<body class="min-h-screen text-blue-100 overflow-x-hidden" style="background: radial-gradient(ellipse at top, #050520 0%, #0a0a30 20%, #020210 55%, #000000 100%);">
+
+  <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+
+  <!-- NAV -->
+  <nav class="sticky top-0 z-50 flex items-center justify-between px-6 py-3 bg-black/40 backdrop-blur-md border-b border-violet-500/20 flex-wrap gap-y-2">
+    <a href="/home" class="font-cinzel text-amber-300 text-sm tracking-widest shrink-0">✦ Esoteric Wisdom ✦</a>
+    <div class="flex items-center gap-x-3 gap-y-1 text-xs text-violet-200 flex-wrap justify-end">
+      <a href="/astrology" class="nav-link hover:text-amber-300 transition-colors">Astrology</a>
+      <a href="/meditation" class="nav-link hover:text-amber-300 transition-colors">Meditation</a>
+      <a href="/tarot/select" class="nav-link hover:text-amber-300 transition-colors">Tarot</a>
+      <a href="/numerology" class="nav-link hover:text-amber-300 transition-colors">Numerology</a>
+      <a href="/crystals" class="nav-link hover:text-amber-300 transition-colors">Crystals</a>
+      <a href="/runes" class="nav-link hover:text-amber-300 transition-colors">Runes</a>
+      <a href="/shamanism" class="nav-link hover:text-amber-300 transition-colors">Shamanism</a>
+      <a href="/druidism" class="nav-link hover:text-amber-300 transition-colors">Druidism</a>
+      <a href="/akashic-records" class="nav-link hover:text-amber-300 transition-colors">Akashic Records</a>
+      <a href="/wicca" class="nav-link hover:text-amber-300 transition-colors">Wicca</a>
+      <a href="/alchemy" class="nav-link hover:text-amber-300 transition-colors">Alchemy</a>
+      <a href="/gateway-process" class="nav-link hover:text-amber-300 transition-colors">Gateway Process</a>
+      <a href="/remote-viewing" class="nav-link hover:text-amber-300 transition-colors">Remote Viewing</a>
+      <a href="/khasarov-mirror" class="nav-link hover:text-amber-300 transition-colors">Khasarov Mirror</a>
+      <a href="/western-esotericism" class="nav-link hover:text-amber-300 transition-colors">Western Esotericism</a>
+      <a href="/eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Eastern Esotericism</a>
+      <a href="/indigenous-esotericism" class="nav-link hover:text-amber-300 transition-colors">Indigenous Esotericism</a>
+      <a href="/middle-eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Middle Eastern Mysteries</a>
+      <a href="/esoteric-practices" class="nav-link hover:text-amber-300 transition-colors">Esoteric Practices</a>
+      <a href="/esoteric-corpora" class="nav-link text-amber-300 font-semibold">Sacred Texts</a>
+      <a href="/journal/reflections" class="nav-link text-emerald-300 hover:text-emerald-200 transition-colors">✨ Reflections</a>
+      <a href="https://ko-fi.com/esotericwisdom" target="_blank" rel="noopener noreferrer"
+         class="px-3 py-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-white font-semibold hover:scale-105 transition-transform shrink-0">☕ Support</a>
+    </div>
+  </nav>
+
+  <!-- CONTENT WRAPPER -->
+  <div class="relative z-10 max-w-5xl mx-auto space-y-10 pt-6 px-4 pb-12">
+
+    <!-- BREADCRUMB -->
+    <div>
+      <a href="/esoteric-corpora" class="text-xs text-blue-300/60 hover:text-blue-300 transition-colors">← Esoteric Texts &amp; Corpora</a>
+    </div>
+
+    <!-- HERO -->
+    <section class="text-center py-12 space-y-6">
+      <div class="text-7xl floating">🔤</div>
+      <h1 class="font-cinzel text-4xl md:text-5xl font-bold aurora-text leading-tight">
+        Sefer Yetzirah
+      </h1>
+      <p class="max-w-3xl mx-auto text-blue-200/80 text-lg leading-relaxed">
+        The "Book of Formation" — the most ancient and condensed of all Kabbalistic texts, describing how God created the universe through the thirty-two wondrous paths of wisdom: ten sefirot and twenty-two letters of the Hebrew alphabet. Its brevity belies its inexhaustible depth.
+      </p>
+    </section>
+
+    <!-- DISCLAIMER -->
+    <section class="rounded-2xl p-6 space-y-4" style="background: linear-gradient(135deg, rgba(180,60,0,0.15), rgba(120,30,0,0.08)); border: 1px solid rgba(251,146,60,0.3);">
+      <div class="flex items-start gap-4">
+        <span class="text-3xl flex-shrink-0">⚠️</span>
+        <div>
+          <h2 class="font-cinzel text-lg text-amber-300 mb-2">For Educational &amp; Informational Purposes Only</h2>
+          <p class="text-amber-100/85 text-sm leading-relaxed">
+            The content on this page is provided solely for educational and historical study. The texts and practices described here derive from diverse sacred traditions and carry genuine power within those contexts. Readers are encouraged to approach these traditions with respect and discernment. Attempting advanced practices described in these texts without proper guidance from a qualified teacher is not recommended and may carry psychological or spiritual risks. If you are drawn to pursue any of these practices, seek instruction from a qualified, lineage-authorised teacher within the tradition in question.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT IS THE SEFER YETZIRAH? -->
+    <section class="rounded-2xl p-8 space-y-6" style="background: linear-gradient(135deg, rgba(59,130,246,0.1), rgba(37,99,235,0.06));">
+      <h2 class="font-cinzel text-2xl text-blue-300 text-center tracking-wide">What Is the Sefer Yetzirah?</h2>
+      <div class="space-y-4 text-sm text-blue-100/80 leading-relaxed max-w-4xl mx-auto">
+        <p>
+          The <em>Sefer Yetzirah</em> — the "Book of Formation" or "Book of Creation" — is the earliest surviving text of the Kabbalistic tradition and one of the most enigmatic and influential works in the history of Jewish mysticism. In its shortest recension it contains barely 1,300 words, and yet it has generated more commentary, more competing interpretations, and more sustained mystical speculation than almost any other text in Judaism. Its compressed, oracular style — more like a series of cryptic instructions than a theological treatise — has made it simultaneously accessible (anyone can read it in an hour) and inexhaustible (no one has ever fully understood it).
+        </p>
+        <p>
+          The text is attributed by tradition to the patriarch <strong class="text-blue-200">Abraham</strong>, and by others to <strong class="text-blue-200">Rabbi Akiva</strong> (50–135 CE) — attributions that are pious pseudepigraphy rather than historical claims. Modern scholarship dates the text to the period between the 3rd and 6th centuries CE, though some scholars argue for even earlier elements. It was certainly known and studied in Babylonian Jewish academies by the Geonic period (7th–11th centuries CE), when the first major commentaries were written, and it exerted a decisive influence on the subsequent development of all Kabbalistic thought.
+        </p>
+        <p>
+          The central claim of the Sefer Yetzirah is that God created the universe through <strong class="text-blue-200">thirty-two wondrous paths of wisdom</strong> — ten <em>sefirot</em> (divine numbers or spheres) and twenty-two letters of the Hebrew alphabet. These thirty-two paths are not merely a descriptive framework but a <em>generative</em> one: by working with the letters and their combinations, the practitioner can, in principle, participate in the creative process itself. This practical dimension — the use of the Sefer Yetzirah as a guide to theurgical creation — is what produced the most dramatic consequences in later tradition, including the celebrated traditions of the <em>golem</em>.
+        </p>
+      </div>
+    </section>
+
+    <!-- THE 32 PATHS -->
+    <section class="space-y-6">
+      <h2 class="font-cinzel text-2xl text-blue-300 text-center tracking-wide">The 32 Paths of Wisdom</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-blue-200">The Ten Sefirot</h3>
+          <p class="text-blue-100/70 text-sm leading-relaxed">The Sefer Yetzirah opens with a description of ten <em>sefirot belimah</em> — "sefirot of nothingness" or "sefirot without substance" — the primordial divine numbers through which creation unfolds. These are not yet the elaborate personal-divine powers of the Zoharic Kabbalah but rather the ten fundamental dimensions of existence: the six directions of space (above, below, east, west, north, south), beginning and end, good and evil, with the divine spirit as their unifying principle. The practitioner is instructed to "understand with wisdom and be wise with understanding, examine them and explore from them, make each thing stand on its essence and restore the Creator to His abode."</p>
+        </div>
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-blue-200">The Twenty-Two Letters</h3>
+          <p class="text-blue-100/70 text-sm leading-relaxed">The twenty-two letters of the Hebrew alphabet are described as the building blocks of all created reality. The Sefer Yetzirah states that God "engraved" (<em>chakak</em>), "carved" (<em>chatzav</em>), "permuted" (<em>tzaraf</em>), "weighed" (<em>shaqal</em>), and "transformed" (<em>hephakh</em>) these letters to create the cosmos — an account that presents divine creativity as fundamentally linguistic in character. Just as all possible texts can be constructed from the twenty-six letters of the English alphabet, so all possible created beings can be generated from the twenty-two Hebrew letters — which are not merely symbols but creative forces.</p>
+        </div>
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-blue-200">The 231 Gates</h3>
+          <p class="text-blue-100/70 text-sm leading-relaxed">One of the most celebrated sections of the Sefer Yetzirah describes the 231 two-letter "gates" — the combinations formed by taking each of the twenty-two letters paired with each of the other twenty-one (22 × 21 ÷ 2 = 231). These gates, when arranged in a circle, generate all possible spoken sounds and, through them, all possible created things. The circular arrangement of the letters — each combination pointing both forward and backward — expresses the Kabbalistic vision of creation as a self-referential, recursive system generated by divine language.</p>
+        </div>
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-blue-200">Three Realms of Manifestation</h3>
+          <p class="text-blue-100/70 text-sm leading-relaxed">The letters' creative operations produce three parallel realms: <em>olam</em> (the cosmos — space), <em>shanah</em> (the year — time), and <em>nefesh</em> (the soul — the human body). Each of the letter categories (mother, double, and simple) governs specific manifestations in each of these three realms simultaneously. This threefold parallelism expresses the Kabbalistic conviction that macrocosm, time-cycle, and microcosm are structurally isomorphic — a systematic "as above, so below" extending through all dimensions of existence.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- THE HEBREW LETTERS -->
+    <section class="rounded-2xl p-8 space-y-6" style="background: linear-gradient(135deg, rgba(59,130,246,0.1), rgba(37,99,235,0.06));">
+      <h2 class="font-cinzel text-2xl text-blue-300 text-center tracking-wide">The Hebrew Letters as Cosmic Forces</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-blue-100/80 leading-relaxed">
+        <div class="space-y-3">
+          <h3 class="font-cinzel text-xs text-blue-200 tracking-wider uppercase">The Three Mothers: אמש</h3>
+          <p>Aleph (א), Mem (מ), and Shin (ש) are the three "mother letters" — the primordial foundations of all the others. They correspond to the three fundamental cosmic elements: Aleph to air (and equilibrium), Mem to water (and silence), Shin to fire (and hissing sound). In the cosmos, they produced air/ether, water, and fire; in the year, they produced the temperate season, winter, and summer; in the human body, they produced the chest/breath, the belly, and the head.</p>
+        </div>
+        <div class="space-y-3">
+          <h3 class="font-cinzel text-xs text-blue-200 tracking-wider uppercase">The Seven Doubles: בגדכפרת</h3>
+          <p>The seven double letters — Bet, Gimel, Dalet, Kaph, Pe, Resh, Tav — are so called because each has two pronunciations (hard and soft), corresponding to their dual cosmic roles. Each governs one of the seven planets, one of the seven days of the week, one of the seven "gates" of the soul (the two eyes, two ears, two nostrils, and mouth), and one of the pairs of opposites: wisdom/foolishness, wealth/poverty, fertility/desolation, life/death, dominion/servitude, peace/war, beauty/ugliness.</p>
+        </div>
+        <div class="space-y-3">
+          <h3 class="font-cinzel text-xs text-blue-200 tracking-wider uppercase">The Twelve Simples: הוזחטילנסעצק</h3>
+          <p>The twelve simple letters each have a single sound and govern the twelve zodiacal signs, the twelve months of the year, and twelve functions of the human organism (sight, hearing, smell, speech, taste, sexual activity, work, movement, anger, laughter, thought, and sleep). Their combinations produce the vast diversity of created beings. The Sefer Yetzirah calculates that the twelve letters can be combined in 479,001,600 ways — the factorial of twelve — representing the inexhaustible variety of creation.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- HISTORICAL SIGNIFICANCE -->
+    <section class="space-y-6">
+      <h2 class="font-cinzel text-2xl text-blue-300 text-center tracking-wide">Historical Significance</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-blue-200">Foundation of the Kabbalah</h3>
+          <p class="text-blue-100/70 text-sm leading-relaxed">The Sefer Yetzirah established the conceptual vocabulary — sefirot, divine letters, the three realms of olam-shanah-nefesh — that all subsequent Kabbalistic literature would develop, elaborate, and transform. When the Zohar appeared in the 13th century with its far richer and more anthropomorphic account of the Sefirot, it was building on foundations laid by the Sefer Yetzirah. The text's influence on Islamic Neoplatonism and Christian Kabbalah (via the Renaissance) was also substantial.</p>
+        </div>
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-blue-200">The Golem Tradition</h3>
+          <p class="text-blue-100/70 text-sm leading-relaxed">The Sefer Yetzirah's teaching that divine creativity operates through the permutation of letters generated a tradition of theurgical creation — the making of a <em>golem</em> (artificial humanoid) by replicating God's creative act. Medieval sources describe Kabbalists using the Sefer Yetzirah's letter combinations to create and animate artificial beings, typically by inscribing the word <em>emet</em> (truth) on the golem's forehead. The most celebrated account involves Rabbi Judah Loew of Prague (the Maharal, c. 1520–1609), whose legendary golem inspired Mary Shelley's <em>Frankenstein</em> and continues to resonate in literature, film, and artificial intelligence discourse.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- KEY COMMENTARIES -->
+    <section class="rounded-2xl p-8 space-y-5" style="background: linear-gradient(135deg, rgba(59,130,246,0.1), rgba(37,99,235,0.06));">
+      <h2 class="font-cinzel text-2xl text-blue-300 text-center tracking-wide">Key Commentaries</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-blue-100/80 leading-relaxed">
+        <div class="space-y-3">
+          <div>
+            <p class="text-blue-200 font-semibold">Saadia Gaon (882–942)</p>
+            <p>The Babylonian scholar and philosopher whose Arabic commentary on the Sefer Yetzirah (c. 931) was the first major systematic interpretation of the text and the first to read it through the lens of Neoplatonic philosophy. Saadia emphasised the text's theological dimensions — its account of divine creation and the uniqueness of the Hebrew language as the medium of creation — while providing detailed explanations of the letter correspondences.</p>
+          </div>
+          <div>
+            <p class="text-blue-200 font-semibold">Abraham ibn Ezra (1089–1167)</p>
+            <p>The Spanish Jewish polymath — poet, grammarian, biblical commentator, and astrologer — whose commentary on the Sefer Yetzirah brought astrological interpretation to the forefront, systematically correlating the text's cosmic correspondences with the astrological tradition. Ibn Ezra's work was enormously influential on the subsequent integration of astrology and Kabbalah that characterised much mediaeval Jewish thought.</p>
+          </div>
+        </div>
+        <div class="space-y-3">
+          <div>
+            <p class="text-blue-200 font-semibold">Abraham Abulafia (1240–c. 1291)</p>
+            <p>The Castilian Kabbalist who developed a distinctive form of ecstatic Kabbalah based directly on the Sefer Yetzirah's letter-combination practices. Abulafia taught systematic techniques of letter permutation, breath control, and head movement combined with chanting divine names — a method he called the "path of the names" (<em>derekh ha-shemot</em>) — as a means of inducing prophetic states and ultimately achieving mystical union with the divine intellect. His work represents the most elaborate practical development of the Sefer Yetzirah's creative-linguistic vision.</p>
+          </div>
+          <div>
+            <p class="text-blue-200 font-semibold">Aryeh Kaplan (1934–1983)</p>
+            <p>The American rabbi and prolific author whose translation and commentary <em>Sefer Yetzirah: The Book of Creation in Theory and Practice</em> (1990) became the standard English-language resource for modern students. Kaplan synthesised traditional Kabbalistic commentaries with modern scholarship and provided practical guidance on the text's meditative and contemplative dimensions, making the Sefer Yetzirah accessible to a new generation of English-speaking seekers without reducing its complexity.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="text-center mt-4">
+      <a href="/esoteric-corpora" class="text-blue-400/60 hover:text-blue-300 text-sm transition-colors">← Esoteric Texts &amp; Corpora</a>
+    </div>
+
+  </div><!-- end content wrapper -->
+
+  <footer class="relative z-10 text-center py-8 text-blue-400/40 text-xs mt-8">
+    <p class="italic">"With thirty-two wondrous paths of wisdom, Yah, the Lord of Hosts, engraved and created His world." — Sefer Yetzirah 1:1</p>
+    <p class="mt-2">Esoteric Wisdom · Built with ✨ in Rust</p>
+    <p class="mt-2"><a href="/home" class="hover:text-blue-300 transition-colors">← Back to Portal</a></p>
+  </footer>
+
+  <script>
+    const sf = document.getElementById('starfield');
+    for (let i = 0; i < 200; i++) {
+      const s = document.createElement('div');
+      s.className = 'star';
+      const size = Math.random() * 2.5 + 0.5;
+      s.style.cssText = `width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--dur:${2+Math.random()*4}s;--delay:${Math.random()*5}s;opacity:${0.2+Math.random()*0.8};`;
+      sf.appendChild(s);
+    }
+  </script>
+
+</body>
+</html>
