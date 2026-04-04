@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pythagorean Brotherhood — Esoteric Wisdom</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <meta property="og:title" content="Pythagorean Brotherhood — Esoteric Wisdom" />
+  <meta property="og:description" content="The initiatory community of Pythagoras — mathematics as sacred science, the harmony of the spheres, metempsychosis, and the path of purification through number, music, and philosophy." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://esoteric-wisdom.onrender.com/orders-societies/pythagorean-brotherhood" />
+  <meta property="og:image" content="https://esoteric-wisdom.onrender.com/og-image.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <style>
+    body { font-family: 'Raleway', sans-serif; }
+    .font-cinzel { font-family: 'Cinzel Decorative', cursive; }
+    @keyframes twinkle { 0%,100%{opacity:0.2;transform:scale(1);} 50%{opacity:1;transform:scale(1.4);} }
+    @keyframes float { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-12px);} }
+    @keyframes shimmer { 0%{background-position:0% 50%;} 100%{background-position:200% 50%;} }
+    .star { position:absolute; width:2px; height:2px; background:white; border-radius:50%; animation:twinkle 3s infinite; }
+    .aurora-text {
+      background: linear-gradient(90deg, #b45309, #d97706, #92400e, #fde68a, #b45309);
+      background-size: 300% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 6s linear infinite;
+    }
+    .floating { animation: float 4s ease-in-out infinite; }
+    .nav-link { position:relative; transition:all 0.3s; }
+    .nav-link::after { content:''; position:absolute; bottom:-2px; left:0; width:0; height:1px; background:#f59e0b; transition:width 0.3s; }
+    .nav-link:hover::after { width:100%; }
+    .os-card {
+      background: linear-gradient(135deg, rgba(180,83,9,0.12), rgba(120,53,15,0.08));
+      border: 1px solid rgba(180,83,9,0.25);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      transition: all 0.3s;
+    }
+    .os-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 0 24px rgba(180,83,9,0.20);
+      border-color: rgba(180,83,9,0.5);
+    }
+  </style>
+</head>
+<body class="min-h-screen text-amber-100 overflow-x-hidden"
+      style="background: radial-gradient(ellipse at top, #1a0e00 0%, #2d1a00 25%, #0a0500 60%, #000000 100%);">
+
+  <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+
+  <nav class="sticky top-0 z-50 flex items-center justify-between px-6 py-3 bg-black/40 backdrop-blur-md border-b border-amber-700/30 flex-wrap gap-y-2">
+    <a href="/home" class="font-cinzel text-amber-300 text-sm tracking-widest shrink-0">✦ Esoteric Wisdom ✦</a>
+    <div class="flex items-center gap-x-3 gap-y-1 text-xs text-violet-200 flex-wrap justify-end">
+      <a href="/astrology" class="nav-link hover:text-amber-300 transition-colors">Astrology</a>
+      <a href="/meditation" class="nav-link hover:text-amber-300 transition-colors">Meditation</a>
+      <a href="/tarot/select" class="nav-link hover:text-amber-300 transition-colors">Tarot</a>
+      <a href="/numerology" class="nav-link hover:text-amber-300 transition-colors">Numerology</a>
+      <a href="/crystals" class="nav-link hover:text-amber-300 transition-colors">Crystals</a>
+      <a href="/runes" class="nav-link hover:text-amber-300 transition-colors">Runes</a>
+      <a href="/shamanism" class="nav-link hover:text-amber-300 transition-colors">Shamanism</a>
+      <a href="/druidism" class="nav-link hover:text-amber-300 transition-colors">Druidism</a>
+      <a href="/akashic-records" class="nav-link hover:text-amber-300 transition-colors">Akashic Records</a>
+      <a href="/wicca" class="nav-link hover:text-amber-300 transition-colors">Wicca</a>
+      <a href="/alchemy" class="nav-link hover:text-amber-300 transition-colors">Alchemy</a>
+      <a href="/gateway-process" class="nav-link hover:text-amber-300 transition-colors">Gateway Process</a>
+      <a href="/remote-viewing" class="nav-link hover:text-amber-300 transition-colors">Remote Viewing</a>
+      <a href="/khasarov-mirror" class="nav-link hover:text-amber-300 transition-colors">Khasarov Mirror</a>
+      <a href="/western-esotericism" class="nav-link hover:text-amber-300 transition-colors">Western Esotericism</a>
+      <a href="/eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Eastern Esotericism</a>
+      <a href="/indigenous-esotericism" class="nav-link hover:text-amber-300 transition-colors">Indigenous Esotericism</a>
+      <a href="/middle-eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Middle Eastern Mysteries</a>
+      <a href="/esoteric-practices" class="nav-link hover:text-amber-300 transition-colors">Esoteric Practices</a>
+      <a href="/esoteric-corpora" class="nav-link hover:text-amber-300 transition-colors">Sacred Texts</a>
+      <a href="/orders-societies" class="nav-link text-amber-300 font-semibold transition-colors">Orders &amp; Societies</a>
+      <a href="/journal/reflections" class="nav-link text-emerald-300 hover:text-emerald-200 transition-colors">✨ Reflections</a>
+      <a href="https://ko-fi.com/esotericwisdom" target="_blank" rel="noopener noreferrer"
+         class="px-3 py-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-white font-semibold hover:scale-105 transition-transform shrink-0">☕ Support</a>
+    </div>
+  </nav>
+
+  <div class="relative z-10 max-w-6xl mx-auto space-y-10 pt-6 px-4 pb-12">
+
+    <!-- Breadcrumb -->
+    <div class="text-sm text-amber-300/70">
+      <a href="/orders-societies" class="hover:text-amber-200 transition-colors">← Orders, Societies &amp; Movements</a>
+    </div>
+
+    <!-- Hero -->
+    <div class="text-center space-y-6 py-10">
+      <div class="text-7xl floating">🔢</div>
+      <h1 class="font-cinzel text-4xl md:text-5xl aurora-text leading-tight">The Pythagorean Brotherhood</h1>
+      <p class="text-amber-100/70 text-base md:text-lg max-w-3xl mx-auto leading-relaxed">
+        In the city of Croton in southern Italy, a philosopher from Samos founded what may be the ancient world's most influential initiatory community — one that saw in number the very fabric of divine reality, and in mathematics the path of the soul's return to its celestial origin.
+      </p>
+    </div>
+
+    <!-- Section: Pythagoras & the Founding -->
+    <section class="rounded-2xl p-8 space-y-6" style="background: linear-gradient(135deg, rgba(180,83,9,0.12), rgba(120,53,15,0.07));">
+      <h2 class="font-cinzel text-2xl text-amber-300 text-center tracking-wide">Pythagoras &amp; the Founding of the Brotherhood</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm text-amber-100/80 leading-relaxed">
+        <div class="space-y-4">
+          <p>
+            <strong class="text-amber-300">Pythagoras of Samos</strong> (c. 570–495 BCE) — the biographical tradition is rich but partly legendary; ancient sources (Porphyry's <em>Life of Pythagoras</em>, Iamblichus's <em>On the Pythagorean Life</em>) report extensive travels: to Egypt, where he reportedly studied with Egyptian priests for up to 22 years and was initiated into their mysteries; to Babylon and Persia, where he encountered Chaldaean astronomical and mathematical traditions; possibly to Phoenicia, Arabia, and even India. These travels positioned Pythagoras as a vessel of universal wisdom, synthesising the sacred sciences of the ancient world into a coherent philosophical vision. Whether every detail of these travels is historical is uncertain, but the tradition is consistent and ancient, and the content of Pythagorean teaching does show significant structural parallels with Egyptian, Babylonian, and Zoroastrian thought.
+          </p>
+          <p>
+            His founding of the community at <strong class="text-amber-300">Croton</strong>, a prosperous Greek colony in southern Italy (Magna Graecia), around 530 BCE — arriving as a famous sage, Pythagoras attracted followers immediately; the community grew to include both men and women (Pythagoras's wife Theano was herself a philosopher and mathematician of note); the two tiers of membership: the <strong class="text-amber-300">Akousmatikoi</strong> (literally 'those who listen') who received the master's teachings as oral maxims to be obeyed without question or explanation, and the <strong class="text-amber-300">Mathematikoi</strong> (literally 'those who learn') who studied the deeper rational and mathematical foundations of the teachings and engaged in active philosophical inquiry; the distinction reflects both a pedagogical structure (beginners receive rules; advanced students understand reasons) and a social structure (the outer circle maintaining basic Pythagorean practice; the inner circle engaged in esoteric science).
+          </p>
+          <p>
+            The <strong class="text-amber-300">political dimension</strong> — the Pythagorean brotherhood was not merely an intellectual-religious community but a political force in Croton and surrounding cities of Magna Graecia; Pythagoreans served as magistrates and governed several cities; this combination of esoteric philosophy and political power was to prove fatal; around the mid-5th century BCE (dates are disputed — possibly c. 450s or 430s BCE), violent anti-Pythagorean uprisings led by a noble named Cylon destroyed the meeting-houses of the brotherhood in Croton; Pythagoras himself may have fled to Metapontum, where he died; the scattered survivors carried the tradition forward across the Greek world.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <p>
+            The two tiers in detail — the Akousmatikoi received the <strong class="text-amber-300">acusmata</strong> (oral maxims): 'Do not stir the fire with a sword', 'Do not step over a balance', 'Do not eat from a whole loaf', 'Do not sit on a quart measure', 'On rising, roll up the bedclothes and smooth out the impression of the body' — each maxim had both a literal interpretation (with practical ritual significance) and a deeper allegorical or symbolic meaning revealed to the advanced students; the Akousmatikoi were expected to observe five years of silence before being permitted to speak in the master's presence — the silence functioned both as a discipline of the mind (learning to listen rather than assert) and as an initiation of the ego (the obliteration of the ordinary self's compulsion to speak).
+          </p>
+          <p>
+            The question of <strong class="text-amber-300">authenticity and transmission</strong> — Pythagoras himself wrote nothing; everything we know comes from disciples and from later Pythagoreans and Neoplatonists (especially Porphyry and Iamblichus in the 3rd–4th centuries CE, whose biographies draw on earlier sources now lost); the tradition underwent significant development over the centuries, with later Neo-Pythagoreans (Apollonius of Tyana, Nicomachus of Gerasa, Numenius of Apamea) elaborating the original teachings in new directions; the challenge for scholars is to distinguish the genuine 5th-century BCE core from later accretions — though for the esoteric tradition this distinction matters less than the coherence and power of the Pythagorean synthesis as it has been received.
+          </p>
+          <p>
+            <strong class="text-amber-300">Pythagoras's legendary qualities</strong> — ancient sources attribute to him extraordinary abilities: the memory of previous incarnations (he reportedly remembered being Euphorbus, a Trojan hero; being a fisherman; being a beautiful courtesan; being various plants and animals); the capacity to be in two places at once; the ability to hear the harmony of the spheres (which ordinary mortals cannot hear because it is always present); a golden thigh (a divine sign visible to his closest disciples); the taming of a bear and an eagle through gentle speech; these legendary features mark Pythagoras as a <em>divine man</em> (theios anēr) — a category of wonder-working sage that sits between the human and the divine, a pattern that recurs throughout the ancient world (Apollonius of Tyana, Simon Magus, various figures in the Gospels).
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: The Sacred Science of Number -->
+    <section class="rounded-2xl p-8 space-y-6" style="background: linear-gradient(135deg, rgba(180,83,9,0.12), rgba(120,53,15,0.07));">
+      <h2 class="font-cinzel text-2xl text-amber-300 text-center tracking-wide">The Sacred Science of Number</h2>
+      <div class="space-y-4 text-sm text-amber-100/80 leading-relaxed max-w-4xl mx-auto">
+        <p>
+          For Pythagoras and his school, number was not an abstract mental construct but a living, divine reality — the very substance of which the cosmos is woven. The fundamental Pythagorean insight, which the tradition regards as the master's greatest discovery, was that the mathematical structure underlying musical harmony (the octave as a ratio of 2:1, the perfect fifth as 3:2, the perfect fourth as 4:3) reveals that number governs not merely abstract relations but sensory experience itself. The cosmic order (<em>kosmos</em> — a word Pythagoras is credited with introducing into Greek philosophy, meaning 'beautiful order') is a harmony in the strict musical sense: a set of ratios between elements that produces beauty.
+        </p>
+        <p>
+          The <strong class="text-amber-300">tetractys</strong> (literally 'the four') was the most sacred symbol of the brotherhood — a triangular arrangement of ten dots (1 + 2 + 3 + 4 = 10) representing the Pythagorean understanding of the cosmos. The brotherhood swore their most solemn oaths by the tetractys: 'By him who gave to our generation the tetractys, which contains the fount and root of ever-flowing nature.' The first row (1 dot) represents the Monad — the principle of unity, the divine source, undifferentiated being, the point. The second row (2 dots) represents the Dyad — the principle of division and multiplicity, the line, the beginning of material extension, the principle of otherness and opposition. The third row (3 dots) represents the Triad — the first genuine number (since unity and multiplicity are principles, not numbers), the surface, the first figure (the triangle), the principle of harmony reconciling unity and multiplicity. The fourth row (4 dots) represents the Tetrad — solidity, the four elements, space, the principle of completion. The sum (10) represents the cosmos as the complete unfolding of divine unity into material multiplicity.
+        </p>
+        <p>
+          The specific numbers each carried profound symbolic weight: <strong class="text-amber-300">1</strong> (Monad) as the divine source and the point; <strong class="text-amber-300">2</strong> (Dyad) as the first division, the feminine principle, matter, the beginning of multiplicity; <strong class="text-amber-300">3</strong> (Triad) as the first genuine number, the masculine principle, the reconciliation of unity and division (Pythagoras reportedly declared 'the world breathes in threes'); <strong class="text-amber-300">4</strong> (Tetrad) as the four elements, justice (equal sides of a square), solidity, completion; <strong class="text-amber-300">5</strong> (Pentad) as marriage (the union of the first masculine number 3 and the first feminine number 2), also associated with the five regular solids (Platonic solids); <strong class="text-amber-300">6</strong> (Hexad) as the first perfect number (equal to the sum of its factors: 1+2+3); <strong class="text-amber-300">7</strong> (Heptad) as the virgin number (not generated by any number within the decad, nor does it generate any), associated with Athena; <strong class="text-amber-300">8</strong> (Ogdoad) as the first cube; <strong class="text-amber-300">9</strong> (Ennead) as the first odd square; <strong class="text-amber-300">10</strong> (Decad) as the perfect number containing all others.
+        </p>
+        <p>
+          The <strong class="text-amber-300">harmony of the spheres</strong> (<em>harmonia tōn sphaerōn</em>) represents the cosmological extension of musical number theory. The planets (including the sun and moon) move at distances from the earth corresponding to musical ratios, and their movement through the heavens therefore produces a music — a cosmic harmony inaudible to ordinary human ears only because it has been present since birth (as Aristotle explains the Pythagorean doctrine in <em>De Caelo</em>). Pythagoras alone, according to the tradition, could hear this celestial music. The cosmos is not mute matter arranged in mechanical order but a vast musical performance, a sustained chord of divine harmony — a vision that profoundly influenced Plato (the Myth of Er at the end of the <em>Republic</em> features the Sirens singing on each planetary sphere), Boethius (<em>De institutione musica</em>), Kepler (<em>Harmonices Mundi</em>, 1619), and the entire Western tradition of sacred cosmology.
+        </p>
+        <p>
+          <strong class="text-amber-300">Geometry as a spiritual practice</strong> — the Pythagorean theorem (the square on the hypotenuse of a right triangle equals the sum of the squares on the other two sides) was, in the Pythagorean tradition, a sacred truth about the cosmos rather than merely a useful mathematical result. The tradition holds that Pythagoras sacrificed one hundred oxen in thanksgiving when he discovered it (though as a vegetarian community this story is almost certainly legendary). More significant are the five regular solids (the Platonic solids) — the tetrahedron, cube, octahedron, dodecahedron, and icosahedron — which the Pythagoreans associated with the five elements: fire, earth, air, spirit/cosmos, and water respectively; Plato systematises this association in the <em>Timaeus</em>, but the Pythagorean origin is explicit.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section: The Communal Life -->
+    <section class="rounded-2xl p-8 space-y-6" style="background: linear-gradient(135deg, rgba(180,83,9,0.12), rgba(120,53,15,0.07));">
+      <h2 class="font-cinzel text-2xl text-amber-300 text-center tracking-wide">The Communal Life</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm text-amber-100/80 leading-relaxed">
+        <div class="space-y-4">
+          <p>
+            The strict rules of the Pythagorean daily life — at the heart of which stood the <strong class="text-amber-300">prohibition on eating meat and on eating beans</strong>. The meat prohibition follows directly from the doctrine of metempsychosis: if the souls of the dead inhabit animal bodies (Pythagoras reportedly stopped a man from beating a dog, saying he recognised the voice of a departed friend), then eating meat is potentially cannibalism. The bean prohibition is more enigmatic — Aristotle records without endorsement three possible explanations: beans resemble genitals or the gates of Hades; their blossoms are polluted with black; or, most intriguing, if one chews a bean and leaves it in the sun, it smells like human semen or human blood — suggesting a belief that beans harbour nascent souls or vital force. In whatever case, abstaining from meat and beans was not merely dietary hygiene but a daily assertion of the soul's dignity and its potential presence in all living things.
+          </p>
+          <p>
+            The <strong class="text-amber-300">daily programme</strong> — morning walks taken alone in silence for meditation and preparation of the mind; the communal study period; the noon bathing; the communal meal (simple — barley bread, honey, salt, and water or wine diluted with water); the evening discussions and philosophical inquiry; the nightly self-examination practised before sleep: the <em>Golden Verse</em> (<em>Carmina Aurea</em>), a poem attributed to Pythagoras, prescribes that each evening the practitioner review the day three times, asking: 'Where did I transgress? What did I accomplish? What duty did I leave undone?' This nightly examination of conscience (a practice strikingly similar to the Jesuit examen of St Ignatius of Loyola and to the Stoic practices commended by Marcus Aurelius and Seneca) was understood as a method of moral and spiritual refinement.
+          </p>
+          <p>
+            The <strong class="text-amber-300">symbolic maxims</strong> (acusmata) formed a kind of daily ethical-ritual code permeating life. Beyond the dietary rules, they included: 'Do not use a public road' (the spiritual path is the inner path, not the common way); 'Do not touch a white cock' (associated with the divine, and also a night-watchman, associated with time and fate); 'Do not break bread' (the whole represents the cosmos; to break it would fragment the unity); 'When you rise from bed, roll up the bedclothes and smooth out the impression of the body' (the soul is separating from the body; do not leave a trace of its temporary habitation). Each acusma was known at two levels — the surface literal meaning observed by all, and the inner philosophical meaning accessible to the Mathematikoi who understood the reasons.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <p>
+            <strong class="text-amber-300">Communal property and social structure</strong> — in the strictest Pythagorean communities, all property was held in common; members who left the community could reclaim their property (doubled, according to one tradition) but were treated as spiritually dead by those who remained, for whom a memorial was erected; this absolute communal commitment reflects the understanding that ordinary social life with its competition and accumulation was incompatible with the Pythagorean path of purification; Iamblichus describes the community as a kind of philosophical monastery, emphasising the transformation of the entire person through community life.
+          </p>
+          <p>
+            <strong class="text-amber-300">Music as a spiritual technology</strong> — Pythagoras is credited with the systematic use of music for psychological and physical healing; different modes of music were understood to affect the soul in different ways (calming, invigorating, purifying); students were prescribed certain musical exercises as part of their daily practice; Iamblichus describes Pythagoras beginning and ending each day with music — morning music to awaken and attune the soul to the cosmic harmony, evening music to calm and purify it; the instrument of choice was the lyre (kithara), whose seven strings corresponded to the seven planets; playing it well was not merely an aesthetic accomplishment but a cosmological participation.
+          </p>
+          <p>
+            The <strong class="text-amber-300">role of women</strong> — the Pythagorean community was unusual in the ancient world for the significant role it accorded to women; Theano of Croton (c. 546 BCE), the wife (or according to some sources the daughter) of Pythagoras, was herself a distinguished mathematician and philosopher; she wrote (according to later tradition) on the golden mean, on piety, on the nature of women, and on the Pythagorean teaching on numbers; other named women Pythagoreans include Damo (daughter of Pythagoras), Myia, Arignote, Timycha (whose courage in maintaining the bean-prohibition before the tyrant Dionysius became a famous story of Pythagorean integrity); this inclusion of women as full philosophical participants was exceptional in the ancient world and suggests that the Pythagorean community understood its principles of cosmic harmony as transcending the usual gendered exclusions.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Esoteric Teachings -->
+    <section class="rounded-2xl p-8 space-y-6" style="background: linear-gradient(135deg, rgba(180,83,9,0.12), rgba(120,53,15,0.07));">
+      <h2 class="font-cinzel text-2xl text-amber-300 text-center tracking-wide">Esoteric Teachings: The Soul's Journey</h2>
+      <div class="space-y-4 text-sm text-amber-100/80 leading-relaxed max-w-4xl mx-auto">
+        <p>
+          The central metaphysical teaching of Pythagoreanism is <strong class="text-amber-300">metempsychosis</strong> — the transmigration of souls through successive embodiments in human, animal, and even plant forms. This is not merely a speculative hypothesis but an experienced reality: Pythagoras himself reportedly remembered multiple previous lives (being the Trojan hero Euphorbus, being a fisherman, being a peacock, etc.), and this personal memory of previous incarnations was taken as proof of the doctrine. The implications are profound: every soul currently inhabiting a body has undergone countless deaths and rebirths; the being before you (human, animal, plant) may house a soul known to you from previous lives; all life is sacred; and the present life is neither the first nor, unless something is done, the last.
+        </p>
+        <p>
+          The soul's situation is understood as a <strong class="text-amber-300">fall</strong> — from a condition of divine contemplation and unity (the soul's proper home in the realm of mathematical-divine reality, in proximity to the divine source) into the body (described as the <em>soma</em>, the prison or tomb of the soul, in a pun the Pythagoreans shared with the Platonists and Orphics). The body is not evil in itself but represents a diminution and entrapping of the soul's infinite capacity — the soul has been drawn downward by its attachment to the senses and the material world, and must work its way back through successive purifications. The path of purification (<em>katharsis</em>) is the cultivation of philosophical understanding — especially mathematics and music — which train the soul to contemplate eternal, immutable truths rather than mutable, sensory appearances, and thereby loosen the soul's attachment to the bodily realm.
+        </p>
+        <p>
+          The <strong class="text-amber-300">harmony of the soul</strong> — the healthy, just, and wise soul is one in which the various parts are in correct mathematical proportion; disease (physical and psychological) is a disharmony, a disruption of the correct ratios; healing restores harmony; virtue is the harmony of the soul's parts. This idea passes directly into Plato (the <em>Republic</em>'s account of justice as the harmony of the soul's three parts, and the <em>Laws</em>' medical-musical theory of education) and from Plato into the entire Western philosophical tradition. The soul's ultimate liberation (if fully purified) involves escape from the cycle of reincarnation and return to the divine — a return to the realm of pure number and harmony from which it fell.
+        </p>
+        <p>
+          The <strong class="text-amber-300">eschatological vision</strong> is coherent if not detailed: the soul that has not purified itself sufficiently returns after death to another embodiment — in a human being if the soul retains some dignity, in an animal if it has descended to bestial passions; the soul that is purified through the Pythagorean path of mathematical-musical-philosophical practice eventually escapes the cycle and dwells in the realm of pure intelligences, participating eternally in the divine harmony. Plutarch (a Platonist with deep Pythagorean sympathies) and Porphyry preserve fragments suggesting that the purified soul ascends through the planetary spheres, leaving behind successive layers of its lower nature (emotion, desire, memory) as it rises, until the pure soul stands in the presence of the divine source — a schema that will be developed in extraordinary detail by the Neoplatonists.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section: Key Figures -->
+    <section class="rounded-2xl p-8 space-y-6" style="background: linear-gradient(135deg, rgba(180,83,9,0.12), rgba(120,53,15,0.07));">
+      <h2 class="font-cinzel text-2xl text-amber-300 text-center tracking-wide">Key Figures in the Tradition</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="os-card">
+          <div class="text-4xl mb-3">🧮</div>
+          <h3 class="font-cinzel text-lg text-amber-300 mb-2">Pythagoras of Samos (c. 570–495 BCE)</h3>
+          <p class="text-amber-100/70 text-sm leading-relaxed">The founder — mathematician, cosmologist, philosopher, wonder-worker, and the first man in the Western tradition to call himself a philosopher ('lover of wisdom') rather than a <em>sophos</em> ('wise man'). His refusal to claim wisdom for himself, insisting only on love of wisdom, was itself a spiritual statement.</p>
+        </div>
+        <div class="os-card">
+          <div class="text-4xl mb-3">👩‍🔬</div>
+          <h3 class="font-cinzel text-lg text-amber-300 mb-2">Theano of Croton (c. 546 BCE)</h3>
+          <p class="text-amber-100/70 text-sm leading-relaxed">Wife (or daughter) of Pythagoras and a distinguished philosopher in her own right. She is credited with writings on mathematics, on the golden mean, on piety, and on the education of children. Her reported reply when asked what was the proper period for a woman to become pure after lying with a man — 'Immediately, if it is her own husband; never, if it is someone else's' — gives a sense of her wit as well as her ethical seriousness.</p>
+        </div>
+        <div class="os-card">
+          <div class="text-4xl mb-3">🌍</div>
+          <h3 class="font-cinzel text-lg text-amber-300 mb-2">Philolaus of Croton (c. 470–385 BCE)</h3>
+          <p class="text-amber-100/70 text-sm leading-relaxed">The first Pythagorean to commit the teaching to writing (previous transmission had been strictly oral). He proposed a revolutionary cosmology in which the Earth, the sun, the moon, the planets, and the fixed stars all circle a central Fire (the 'Hearth of the Universe') — an anticipation of heliocentrism more than a century before Aristarchus. His three books on nature, rhythm, and the soul survive in fragments.</p>
+        </div>
+        <div class="os-card">
+          <div class="text-4xl mb-3">⚙️</div>
+          <h3 class="font-cinzel text-lg text-amber-300 mb-2">Archytas of Tarentum (c. 428–350 BCE)</h3>
+          <p class="text-amber-100/70 text-sm leading-relaxed">Mathematician, mechanical engineer, philosopher, and seven-time elected general of Tarentum. He solved the problem of doubling the cube using three-dimensional geometry, founded the science of mechanics, invented the screw and the pulley, and was a close friend and influence on Plato. He represents Pythagoreanism fully integrated with practical and political life.</p>
+        </div>
+        <div class="os-card">
+          <div class="text-4xl mb-3">📚</div>
+          <h3 class="font-cinzel text-lg text-amber-300 mb-2">Nicomachus of Gerasa (c. 60–120 CE)</h3>
+          <p class="text-amber-100/70 text-sm leading-relaxed">Neo-Pythagorean mathematician and philosopher whose <em>Introduction to Arithmetic</em> became the standard mathematical textbook of late antiquity and the Middle Ages (translated by Boethius, it remained in use for over a millennium). His <em>Theologumena Arithmeticae</em> explores the theological significance of the numbers one through ten — a direct development of the ancient Pythagorean number symbolism.</p>
+        </div>
+        <div class="os-card">
+          <div class="text-4xl mb-3">🏛️</div>
+          <h3 class="font-cinzel text-lg text-amber-300 mb-2">Iamblichus of Chalcis (c. 245–325 CE)</h3>
+          <p class="text-amber-100/70 text-sm leading-relaxed">Neoplatonist philosopher and the most systematic theologian of the Pythagorean tradition. His <em>On the Pythagorean Life</em> (<em>De Vita Pythagorica</em>) is the most extensive surviving ancient account of the brotherhood, and his <em>Protrepticus</em> preserves many fragments of early Pythagorean teaching. He made Pythagoras the culminating figure of the entire theurgic-philosophical tradition.</p>
+        </div>
+        <div class="os-card">
+          <div class="text-4xl mb-3">🎵</div>
+          <h3 class="font-cinzel text-lg text-amber-300 mb-2">Boethius (c. 480–524 CE)</h3>
+          <p class="text-amber-100/70 text-sm leading-relaxed">Roman philosopher and the great transmitter of Pythagorean musical theory to the Latin West. His <em>De institutione musica</em> divided music into <em>musica mundana</em> (the harmony of the spheres), <em>musica humana</em> (the harmony of the soul), and <em>musica instrumentalis</em> (audible music) — a Pythagorean schema that governed Western musical theory until the Renaissance. Executed by the Ostrogothic king Theodoric, he wrote the <em>Consolation of Philosophy</em> whilst awaiting death.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Legacy & Influence -->
+    <section class="rounded-2xl p-8 space-y-6" style="background: linear-gradient(135deg, rgba(180,83,9,0.12), rgba(120,53,15,0.07));">
+      <h2 class="font-cinzel text-2xl text-amber-300 text-center tracking-wide">Legacy &amp; Influence</h2>
+      <div class="space-y-4 text-sm text-amber-100/80 leading-relaxed max-w-4xl mx-auto">
+        <p>
+          The influence of Pythagoreanism on <strong class="text-amber-300">Plato</strong> is so deep that the Platonic and Pythagorean traditions can barely be disentangled. Plato visited the Pythagoreans of southern Italy (Philolaus's circle in Tarentum, and Archytas personally) at least twice; his <em>Timaeus</em> — the account of the cosmos as a living rational being constructed by a divine craftsman according to mathematical proportions — is essentially a Pythagorean cosmology in Platonic dress. The <em>Phaedo</em>'s arguments for the soul's immortality draw on Pythagorean metempsychosis; the <em>Republic</em>'s myth of Er (with its planetary music and choice of lives) is Pythagorean in structure; Plato explicitly acknowledges the Pythagorean identification of philosophy as the purification and liberation of the soul from the body's entanglements.
+        </p>
+        <p>
+          <strong class="text-amber-300">Neoplatonism</strong> (3rd–6th centuries CE) was, in significant part, a synthesis of Platonic and Pythagorean philosophy. Plotinus's <em>Enneads</em>, while primarily Platonic in structure, are saturated with Pythagorean number symbolism and cosmological ideas. Porphyry and Iamblichus made explicit the Pythagorean dimension — Iamblichus placed Pythagoras at the culmination of the entire theurgic tradition, above even Plato; his <em>On the Pythagorean Life</em> presents Pythagoras as the embodiment of the divine wisdom that descends periodically to humanity; the Pythagorean curriculum (arithmetic, geometry, music, astronomy — the quadrivium) became the standard preparation for Platonic philosophy in the Neoplatonic school.
+        </p>
+        <p>
+          The influence on Western esotericism is pervasive and multi-directional. <strong class="text-amber-300">Kabbalah</strong>'s gematria (assigning numerical values to Hebrew letters and deriving hidden meanings from numerical correspondences) has clear structural parallels with Pythagorean number symbolism, though direct historical dependency is debated; the Kabbalistic Tree of Life's ten sefirot has invited comparison with the Pythagorean decad since the Renaissance. <strong class="text-amber-300">Hermeticism</strong>'s mathematical cosmology (as in the Hermetic text <em>Kore Kosmou</em> and the <em>Asclepius</em>) owes much to Pythagorean ideas mediated through Platonism. <strong class="text-amber-300">Renaissance Neoplatonism</strong> (Ficino, Pico della Mirandola, Francesco Giorgio Veneto) explicitly embraced the Pythagorean musical-numerical cosmology as the key to the <em>prisca theologia</em> — the ancient wisdom underlying all true religions.
+        </p>
+        <p>
+          <strong class="text-amber-300">Freemasonry</strong> incorporated Pythagorean symbolism centrally — the 47th Problem of Euclid (the Pythagorean theorem) appears on the Master Mason's apron, presented as the greatest theorem in geometry; the figure of Pythagoras himself is honoured in Masonic ritual as a predecessor of the craft; the Masonic emphasis on geometry as the sacred science underlying architecture, nature, and divine order is directly Pythagorean in inspiration. <strong class="text-amber-300">Sacred geometry</strong> in contemporary spirituality — the Flower of Life, the Fibonacci spiral, the golden ratio, the Platonic solids — descends directly from Pythagorean-Platonic traditions. The Pythagorean vision of a cosmos governed by mathematical harmony, perceptible to the purified mind through disciplined study, remains one of the most persistent and powerful ideas in the Western spiritual imagination.
+        </p>
+      </div>
+    </section>
+
+  </div>
+
+  <footer class="relative z-10 text-center py-8 text-amber-300/50 text-xs">
+    <p class="italic">"Know thyself." — Temple of Apollo at Delphi</p>
+    <p class="mt-2">Esoteric Wisdom · Built with ✨ in Rust</p>
+    <p class="mt-2"><a href="/home" class="hover:text-amber-300 transition-colors">← Back to Home</a></p>
+  </footer>
+
+  <script>
+    const sf = document.getElementById('starfield');
+    for (let i = 0; i < 180; i++) {
+      const s = document.createElement('div');
+      s.className = 'star';
+      const size = Math.random() * 2.5 + 0.5;
+      s.style.cssText = `width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--dur:${2+Math.random()*4}s;--delay:${Math.random()*5}s;opacity:${0.2+Math.random()*0.8};`;
+      sf.appendChild(s);
+    }
+  </script>
+</body>
+</html>

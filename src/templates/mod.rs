@@ -402,3 +402,35 @@ pub struct ChaldeaOraclesTemplate;
 #[derive(Template)]
 #[template(path = "orphic_hymns.html")]
 pub struct OrphicHymnsTemplate;
+
+#[derive(Template)]
+#[template(path = "orders_societies.html")]
+pub struct OrdersSocietiesTemplate;
+
+#[derive(Template)]
+#[template(path = "essenes.html")]
+pub struct EssenesTemplate;
+
+#[derive(Template)]
+#[template(path = "pythagorean_brotherhood.html")]
+pub struct PythagoreanBrotherhoodTemplate;
+
+#[derive(Template)]
+#[template(path = "eleusinian_mysteries.html")]
+pub struct EleusinianMysteriesTemplate;
+
+#[derive(Template)]
+#[template(path = "orphic_mysteries.html")]
+pub struct OrphicMysteriesTemplate;
+
+#[derive(Template)]
+#[template(path = "mithraic_mysteries.html")]
+pub struct MithraicMysteriesTemplate;
+
+#[derive(Template)]
+#[template(path = "dionysian_mysteries.html")]
+pub struct DionysianMysteriesTemplate;
+
+#[derive(Template)]
+#[template(path = "egyptian_mystery_schools.html")]
+pub struct EgyptianMysterySchoolsTemplate;

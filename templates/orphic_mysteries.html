@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Orphic Mysteries — Esoteric Wisdom</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <meta property="og:title" content="Orphic Mysteries — Esoteric Wisdom" />
+  <meta property="og:description" content="The initiatory tradition of Orpheus — the cosmic egg, the soul's divine origin and fall, the gold tablets for the afterlife journey, and the path of ritual purity toward divine remembrance." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://esoteric-wisdom.onrender.com/orders-societies/orphic-mysteries" />
+  <meta property="og:image" content="https://esoteric-wisdom.onrender.com/og-image.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <style>
+    body { font-family: 'Raleway', sans-serif; }
+    .font-cinzel { font-family: 'Cinzel Decorative', cursive; }
+    @keyframes twinkle { 0%,100%{opacity:0.2;transform:scale(1);} 50%{opacity:1;transform:scale(1.4);} }
+    @keyframes float { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-12px);} }
+    @keyframes shimmer { 0%{background-position:0% 50%;} 100%{background-position:200% 50%;} }
+    .star { position:absolute; width:2px; height:2px; background:white; border-radius:50%; animation:twinkle 3s infinite; }
+    .aurora-text {
+      background: linear-gradient(90deg, #b45309, #d97706, #92400e, #fde68a, #b45309);
+      background-size: 300% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 6s linear infinite;
+    }
+    .floating { animation: float 4s ease-in-out infinite; }
+    .nav-link { position:relative; transition:all 0.3s; }
+    .nav-link::after { content:''; position:absolute; bottom:-2px; left:0; width:0; height:1px; background:#f59e0b; transition:width 0.3s; }
+    .nav-link:hover::after { width:100%; }
+    .os-card {
+      background: linear-gradient(135deg, rgba(180,83,9,0.12), rgba(120,53,15,0.08));
+      border: 1px solid rgba(180,83,9,0.25);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      transition: all 0.3s;
+    }
+    .os-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 0 24px rgba(180,83,9,0.20);
+      border-color: rgba(180,83,9,0.5);
+    }
+  </style>
+</head>
+<body class="min-h-screen text-amber-100 overflow-x-hidden"
+      style="background: radial-gradient(ellipse at top, #1a0e00 0%, #2d1a00 25%, #0a0500 60%, #000000 100%);">
+
+  <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+
+  <nav class="sticky top-0 z-50 flex items-center justify-between px-6 py-3 bg-black/40 backdrop-blur-md border-b border-amber-700/30 flex-wrap gap-y-2">
+    <a href="/home" class="font-cinzel text-amber-300 text-sm tracking-widest shrink-0">✦ Esoteric Wisdom ✦</a>
+    <div class="flex items-center gap-x-3 gap-y-1 text-xs text-violet-200 flex-wrap justify-end">
+      <a href="/astrology" class="nav-link hover:text-amber-300 transition-colors">Astrology</a>
+      <a href="/meditation" class="nav-link hover:text-amber-300 transition-colors">Meditation</a>
+      <a href="/tarot/select" class="nav-link hover:text-amber-300 transition-colors">Tarot</a>
+      <a href="/numerology" class="nav-link hover:text-amber-300 transition-colors">Numerology</a>
+      <a href="/crystals" class="nav-link hover:text-amber-300 transition-colors">Crystals</a>
+      <a href="/runes" class="nav-link hover:text-amber-300 transition-colors">Runes</a>
+      <a href="/shamanism" class="nav-link hover:text-amber-300 transition-colors">Shamanism</a>
+      <a href="/druidism" class="nav-link hover:text-amber-300 transition-colors">Druidism</a>
+      <a href="/akashic-records" class="nav-link hover:text-amber-300 transition-colors">Akashic Records</a>
+      <a href="/wicca" class="nav-link hover:text-amber-300 transition-colors">Wicca</a>
+      <a href="/alchemy" class="nav-link hover:text-amber-300 transition-colors">Alchemy</a>
+      <a href="/gateway-process" class="nav-link hover:text-amber-300 transition-colors">Gateway Process</a>
+      <a href="/remote-viewing" class="nav-link hover:text-amber-300 transition-colors">Remote Viewing</a>
+      <a href="/khasarov-mirror" class="nav-link hover:text-amber-300 transition-colors">Khasarov Mirror</a>
+      <a href="/western-esotericism" class="nav-link hover:text-amber-300 transition-colors">Western Esotericism</a>
+      <a href="/eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Eastern Esotericism</a>
+      <a href="/indigenous-esotericism" class="nav-link hover:text-amber-300 transition-colors">Indigenous Esotericism</a>
+      <a href="/middle-eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Middle Eastern Mysteries</a>
+      <a href="/esoteric-practices" class="nav-link hover:text-amber-300 transition-colors">Esoteric Practices</a>
+      <a href="/esoteric-corpora" class="nav-link hover:text-amber-300 transition-colors">Sacred Texts</a>
+      <a href="/orders-societies" class="nav-link text-amber-300 font-semibold transition-colors">Orders &amp; Societies</a>
+      <a href="/journal/reflections" class="nav-link text-emerald-300 hover:text-emerald-200 transition-colors">✨ Reflections</a>
+      <a href="https://ko-fi.com/esotericwisdom" target="_blank" rel="noopener noreferrer"
+         class="px-3 py-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-white font-semibold hover:scale-105 transition-transform shrink-0">☕ Support</a>
+    </div>
+  </nav>
+
+  <div class="relative z-10 max-w-6xl mx-auto space-y-10 pt-6 px-4 pb-12">
+
+    <!-- Breadcrumb -->
+    <div class="text-sm text-amber-300/70">
+      <a href="/orders-societies" class="hover:text-amber-200 transition-colors">← Orders, Societies &amp; Movements</a>
+    </div>
+
+    <!-- Hero -->
+    <div class="text-center space-y-6 py-8">
+      <div class="text-7xl floating">🎶</div>
+      <h1 class="font-cinzel text-4xl md:text-5xl aurora-text leading-tight">The Orphic Mysteries</h1>
+      <p class="text-amber-100/70 text-base md:text-lg leading-relaxed max-w-3xl mx-auto">
+        Before Plato, before Pythagoras, the Orphic tradition laid down a vision of the soul as a fallen divine being, trapped in successive incarnations, capable of liberation through purity, memory, and the correct performance of sacred rites. In the graves of Italy and Greece, golden tablets inscribed with the soul's instructions await the moment of death.
+      </p>
+    </div>
+
+    <!-- Section: Orpheus & the Origins of Orphism -->
+    <section class="rounded-2xl p-8 space-y-6" style="background: linear-gradient(135deg, rgba(180,83,9,0.12), rgba(120,53,15,0.07));">
+      <h2 class="font-cinzel text-2xl text-amber-300 text-center tracking-wide">Orpheus &amp; the Origins of Orphism</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm text-amber-100/80 leading-relaxed">
+        <div class="space-y-4">
+          <p>Orpheus as the mythological founder — the Thracian bard whose music charmed stones, beasts, and rivers; who descended into the underworld to retrieve his beloved Eurydice, charming even Hades and Persephone with his lyre; who was torn apart by the Maenads (in most accounts, because he had spurned them after Eurydice's final loss, or because he had abandoned Dionysian excess for solar, Apollonian practice) — his severed head continuing to sing and prophesy even as it floated down the river Hebrus to the sea; who was honoured as the founder of religious mysteries, the author of sacred hymns, the teacher of initiation. The paradox of Orpheus — the supreme musician who loses what he loves most precisely because he turns to look — is the paradox of the human soul: it possesses the power of divine music (the capacity for spiritual realisation) but is undone by looking backward (attachment to the material world).</p>
+          <p>Orphism as a religious movement probably emerging by the 6th century BCE, possibly earlier in oral tradition; its relationship to the Dionysian tradition is complex — Orpheus is in the myth both a devotee of Dionysus (his lyre is in some accounts given to him by the god) and a reformer who turns from Dionysian ecstasis toward an Apollonian solar mysticism (he worshipped the sun as the supreme divine principle, calling it Apollo); the Orphic tradition systematises and moralises the Dionysian religious inheritance, transforming the raw ecstasy of the Bacchic cult into an ordered path of asceticism, purification, and moral discipline; the <strong class="text-amber-300">Orpheotelestai</strong> — itinerant initiatory specialists who offered private Orphic rites to individuals and families — are distinguished in the ancient sources from civic religious officials; they carried books, performed purifications, and promised their clients a blessed afterlife; Plato (Republic 364b–c) describes them with scepticism but clearly knows them well.</p>
+          <p>The social setting and transmission — unlike the Eleusinian Mysteries (which were a civic institution administered by specific priestly families) or the Pythagorean Brotherhood (a settled philosophical community), the Orphic tradition was disseminated through itinerant initiators, through the circulation of sacred texts (the Orphic poems, theogonies, and hymns), and through the private ritual practice of individuals and groups; this gave Orphism a more diffuse, bookish, and democratising character — the sacred texts could be carried anywhere, copied, and interpreted without institutional sanction; the tradition was thus both more adaptable and more vulnerable to syncretism and elaboration; by the Hellenistic period, Orphic texts circulated widely, and the boundary between Orphism, Pythagoreanism, and Platonism had become fluid.</p>
+        </div>
+        <div class="space-y-4">
+          <p>The ancient sources for Orphism are primarily of two kinds: the sacred texts themselves (the Orphic theogonies, the gold tablets, the Orphic Hymns) and the testimonies of external observers (Plato, Aristotle, Herodotus, and later Neoplatonists who treated the Orphic texts as theological authorities). The quality of ancient scholarship on Orphism was high — the Neoplatonist Proclus (5th century CE) wrote detailed commentaries on the Orphic Rhapsodies (a collected Orphic theogony); Damascius's Problems and Solutions concerning First Principles quotes extensively from Orphic texts; the Derveni Papyrus (see below) shows that sophisticated allegorical interpretation of Orphic texts was already practised in the 4th century BCE. The result is a tradition unusually well-attested for its antiquity and diffuseness.</p>
+          <p>The relationship between Orphism and Pythagoreanism — perhaps the most intimate intellectual connection in ancient Greek thought; both traditions share metempsychosis (transmigration of souls), vegetarianism (abstention from meat and beans on grounds of potential soul-bearing), the divine origin and fall of the soul, the concept of the body as the soul's prison, and the aspiration to escape the cycle of reincarnation; Herodotus (II.81) notes that the Egyptians who prohibit wool garments from entering their temples share this practice with the Pythagoreans and the Orphics; Pythagoras is even said in some sources to have composed certain Orphic texts himself; the probable historical relationship is that the Orphic tradition (older and less structured) provided the mythological-theological raw material that Pythagorean philosophy then systematised into a rational metaphysical framework.</p>
+          <p>Orphism and the wider Greek world — despite its non-civic character, the Orphic tradition intersected with Greek civic religion at many points: the god Dionysus, central to Orphic theology, was also the god of the City Dionysia and Lenaia (the civic theatrical festivals of Athens); the Eleusinian Mysteries had Orphic elements (the Persephone myth is central to both); the gold tablets found at Thurii and Petelia were buried with individuals who evidently participated in ordinary civic life while also holding Orphic initiatory commitments; the tradition was thus not separatist (as the Essenes were) but lived within society while maintaining an esoteric inner commitment.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: The Orphic Cosmogony -->
+    <section class="rounded-2xl p-8 space-y-6" style="background: linear-gradient(135deg, rgba(180,83,9,0.12), rgba(120,53,15,0.07));">
+      <h2 class="font-cinzel text-2xl text-amber-300 text-center tracking-wide">The Orphic Cosmogony</h2>
+      <div class="space-y-4 text-sm text-amber-100/80 leading-relaxed max-w-4xl mx-auto">
+        <p>The Orphic cosmogony — the account of the origin of the world — survives in several variant forms (the Eudemian, the Hieronyman, the Rhapsodic theogonies) which share a common basic structure while differing in detail. The earliest form known to us begins with a primeval <strong class="text-amber-300">cosmic egg</strong> floating in darkness and watery chaos — a shining egg whose two halves will become earth and sky; from this egg hatches <strong class="text-amber-300">Phanes</strong> (the Shining One), also called Protogonos (First-Born), Ericapaeus, and in some versions Eros; Phanes is a golden-winged bisexual deity of blinding radiance, simultaneously male and female, containing within himself the seeds of all subsequent existence; the bull and the lion roar on either side of him as he emerges; he contains within his body the plans of all beings not yet created.</p>
+        <p>The subsequent generations of gods follow — Nyx (Night), born from Phanes or his consort, surrounds the egg-universe in her black wings; Ouranos (Sky) and Gaia (Earth) emerge; then the familiar Hesiodic succession of Kronos, Rhea, and their children. The crucial Orphic innovation comes with <strong class="text-amber-300">Zeus</strong>, who is advised by Nyx to swallow Phanes, thereby containing all of creation within himself and becoming the all-inclusive principle of reality: 'Zeus was first, Zeus last, Zeus the gleaming lightning. Zeus is the head, Zeus the middle, from Zeus all things have their completion. Zeus is the foundation of Earth and the starry Heaven. Zeus was born male, Zeus is the undying bride. Zeus is the breath of all, Zeus is the gust of relentless fire. Zeus is the root of the sea, Zeus is the sun and moon. Zeus is the king, Zeus is the first founder of all things.' This hymn to Zeus as the all-containing divine principle represents a striking move toward monotheism within a polytheistic framework.</p>
+        <p>The central Orphic myth — the myth most directly relevant to the initiatory tradition — concerns <strong class="text-amber-300">Dionysus Zagreus</strong>, son of Zeus and the goddess Persephone. The infant Dionysus, enthroned as king of the gods by his father Zeus, is enticed by the Titans (the primordial giants, enemies of the Olympians) who offer him toys — a top, a bull-roarer, knucklebones, a mirror, golden apples; fascinated, the child Dionysus follows them, and the Titans seize him, tear him apart (sparagmos), and eat him raw (omophagia). Zeus, enraged, strikes the Titans with his thunderbolts and destroys them; but he rescues the heart of Dionysus (preserved by Athena, or swallowed whole by Demeter) from which a new Dionysus is born; from the ashes of the Titans, mixed with earth, the race of humanity is created.</p>
+        <p>This myth provides the Orphic <strong class="text-amber-300">anthropology</strong> — the understanding of what human beings are and why they are divided against themselves. Humans are composed of Titanic ash (the material, mortal, lower nature — the inheritance of the Titans who murdered and consumed the divine child) and of the Dionysiac substance consumed and preserved within the Titans (the divine spark, the soul's immortal essence). Every human being is simultaneously Titanic and Dionysiac — simultaneously creature of matter and heir of divinity. The task of the Orphic initiate is to work off the Titanic inheritance through successive incarnations of increasing purity until the Dionysiac element is fully restored to the divine source — this is the meaning of the Orphic initiatory life, and it explains why Orphism demands vegetarianism (the Titans ate flesh; the initiate who eats flesh re-enacts the Titanic crime) and moral purification (the Titanic nature is violent, consuming, self-centred; the Dionysiac nature is radiant, generous, divine).</p>
+      </div>
+    </section>
+
+    <!-- Section: The Soul's Journey & the Gold Tablets -->
+    <section class="rounded-2xl p-8 space-y-6" style="background: linear-gradient(135deg, rgba(180,83,9,0.12), rgba(120,53,15,0.07));">
+      <h2 class="font-cinzel text-2xl text-amber-300 text-center tracking-wide">The Soul's Journey &amp; the Gold Tablets</h2>
+      <div class="space-y-4 text-sm text-amber-100/80 leading-relaxed max-w-4xl mx-auto">
+        <p>The most remarkable material evidence for Orphic belief comes from the <strong class="text-amber-300">Orphic gold tablets</strong> (lamellae aureae) — small sheets of gold, typically a few centimetres in length, inscribed with hexameter verse and folded or rolled up, found buried in graves across the Greek world over a period of some eight centuries (5th century BCE to 3rd century CE): at Thurii and Petelia in southern Italy, at Hipponion in Bruttium, at Pharsalus and Pelinna in Thessaly, at Eleutherna in Crete, at Pherae, and in Cyprus and Macedonia. Over forty examples are now known. They were placed in the mouth or on the chest of the deceased — the instructions for the soul at the moment of death and in the afterlife journey.</p>
+        <p>The content of the tablets varies but follows consistent patterns. The soul, arriving in the underworld, encounters two springs: the spring of <strong class="text-amber-300">Lethe</strong> (Forgetfulness) — whose waters must be avoided — and the spring of <strong class="text-amber-300">Mnemosyne</strong> (Memory) — whose waters must be drunk. The instruction is explicit: 'You will find on the left of the house of Hades a spring, and by the side of it a white cypress standing; to this spring approach not. You will find another, from the Lake of Memory cool water flowing; in front of it are guardians. Say: "I am a child of Earth and of starry Heaven; but my race is of Heaven alone. This you know yourselves. And lo, I am parched with thirst and I perish. Give me quickly the cool water flowing from the Lake of Memory."' The guardians give the water; the soul drinks and is transformed, recovering its divine origin.</p>
+        <p>The declaration 'I am a child of Earth and of starry Heaven, but my race is of Heaven alone' is the Orphic anthropological credo — acknowledging both the earthly (Titanic) and the heavenly (Dionysiac) dimension of human nature while asserting the fundamental priority of the heavenly origin. This declaration must be spoken from genuine knowledge — not repeated as a formula but understood as a truth — which is why the initiatory life of purification and study is necessary preparation; without it, the soul arrives at death unprepared, drinks from the spring of Lethe (the ordinary unconscious dead drink from Lethe as a matter of course, forgetting their previous lives and returning to incarnation), and is swept back into the cycle.</p>
+        <p>Some of the tablets also instruct the soul in the encounter with the judges of the dead and with Persephone herself — the soul must declare its identity to the queen of the underworld: 'I come from the pure, O Pure Queen of the earthly ones, Eucles and Eubouleus and you other Immortal Gods! I too claim to be of your blessed race. But Fate and the other Immortals struck me down, and the star-blazing thunderbolt. And I flew out from the heavy painful circle, and stepped onto the crown with swift feet, and slipped into the bosom of Mistress Persephone. And she sent me on to the seats of the blessed.' The Orphic soul has won its liberation — the 'heavy painful circle' of reincarnations is ended, and the soul rests in the 'seats of the blessed', or is reborn as a god.</p>
+      </div>
+    </section>
+
+    <!-- Section: Orphic Initiatory Practices -->
+    <section class="rounded-2xl p-8 space-y-6" style="background: linear-gradient(135deg, rgba(180,83,9,0.12), rgba(120,53,15,0.07));">
+      <h2 class="font-cinzel text-2xl text-amber-300 text-center tracking-wide">Orphic Initiatory Practices</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm text-amber-100/80 leading-relaxed">
+        <div class="space-y-4">
+          <p>The requirements of the Orphic life were demanding by the standards of ordinary Greek religious practice. The most fundamental was <strong class="text-amber-300">vegetarianism</strong> — abstention from the flesh of all animals, since any animal might house a transmigrating soul; abstention from eggs (similarly, eggs represent new life, potential souls); abstention from beans (shared with the Pythagoreans); abstention from wool garments (the wool-bearing animal might be a reincarnated soul). These restrictions are not mere dietary preferences but theological positions — each abstention is a daily enactment of the belief that all life is animated by souls in various stages of the great cycle, and that the Titanic act of eating flesh must not be repeated by the initiate who aspires to transcend the Titanic nature.</p>
+          <p>The broader requirements of purity (katharsis) included sexual continence (or at least strict limits on sexual activity), avoidance of certain ritual pollutions, regular ritual immersion, and the maintenance of ritual purity in all areas of life. The <strong class="text-amber-300">Orphic Hymns</strong> (87 surviving hymns, probably composed in the 2nd–3rd century CE but preserving much older material, likely for use by a Dionysian thiasos in Asia Minor) give us our most complete picture of Orphic liturgical practice — each hymn is addressed to a specific deity and prescribes a specific incense (frankincense for Hecate, storax for Persephone, aromatic herbs for the Winds) to be burned at the time of recitation; the collection as a whole constitutes a complete liturgical system for honouring the divine hierarchy from the Protogonos to the most specific natural forces.</p>
+        </div>
+        <div class="space-y-4">
+          <p>The initiatory rites of the Orphic tradition — about which we know less than about the Eleusinian Mysteries — apparently included symbolic death and rebirth sequences (as suggested by the gold tablet formula of 'having died' and 'having been born'); the use of the gold tablet itself is both a product of the initiatory life (the tablet encodes what the soul has learned through its Orphic practice) and a continuing initiatory act (it is the instrument of the soul's correct navigation of the afterlife); the instruction to 'say this' and 'do this' at specific moments of the underworld journey means the tablet represents a programme of action, not merely a statement of belief.</p>
+          <p>The <strong class="text-amber-300">Villa of the Mysteries</strong> frieze at Pompeii (c. 60–50 BCE) — a room-sized sequence of painted panels depicting a ritual sequence — has been interpreted by many scholars as a Dionysiac (and possibly Orphic) initiatory rite: a young woman reads from a scroll (the sacred text), a figure unveils a ritual object (possibly a phallus in a basket, the liknon — a winnowing basket associated with Dionysus), a girl is flagellated while a winged female figure watches, and the sequence ends with a joyful dance; this sequence corresponds broadly to the initiatory structure of preparation, ordeal, and celebratory emergence; it remains the most complete visual record of any ancient mystery initiation.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Key Texts -->
+    <section class="rounded-2xl p-8 space-y-6" style="background: linear-gradient(135deg, rgba(180,83,9,0.12), rgba(120,53,15,0.07));">
+      <h2 class="font-cinzel text-2xl text-amber-300 text-center tracking-wide">Key Texts</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div class="os-card">
+          <div class="text-4xl mb-3">📜</div>
+          <h3 class="font-cinzel text-lg text-amber-300 mb-2">The Derveni Papyrus (c. 340 BCE)</h3>
+          <p class="text-amber-100/70 text-sm leading-relaxed">Discovered in 1962 in a burial mound near Thessaloniki, the Derveni Papyrus is the oldest surviving European book — a charred but partially legible papyrus roll containing both a theogony attributed to Orpheus and a sophisticated allegorical-philosophical commentary on it. The commentary interprets the Orphic cosmogony in terms of Presocratic natural philosophy (air as the primal substance, the gods as allegorical representations of physical forces). The papyrus demonstrates that the Orphic texts were already the subject of serious scholarly analysis in the 4th century BCE and that allegorical interpretation was the standard method for reconciling sacred myth with philosophical reason.</p>
+        </div>
+        <div class="os-card">
+          <div class="text-4xl mb-3">🥇</div>
+          <h3 class="font-cinzel text-lg text-amber-300 mb-2">The Orphic Gold Tablets (5th c. BCE – 3rd c. CE)</h3>
+          <p class="text-amber-100/70 text-sm leading-relaxed">Over forty small sheets of gold inscribed with hexameter verses, found in graves across Greece, Italy, Crete, and Cyprus. They span eight centuries and show remarkable consistency in their core instructions (avoid Lethe, seek Mnemosyne, declare your divine origin), testifying to the continuity of an Orphic initiatory tradition across a vast geographical and temporal range. The most complete examples, from Thurii in southern Italy, provide the fullest accounts of the soul's underworld journey.</p>
+        </div>
+        <div class="os-card">
+          <div class="text-4xl mb-3">🎵</div>
+          <h3 class="font-cinzel text-lg text-amber-300 mb-2">The Orphic Hymns (2nd–3rd c. CE)</h3>
+          <p class="text-amber-100/70 text-sm leading-relaxed">A collection of 87 hymns in hexameters addressed to the full range of Greek divinities, each with a prescribed incense for ritual use. Probably compiled for use by a Dionysian thiasos in Asia Minor, they represent the most complete surviving liturgical system of the Orphic-Dionysian tradition and preserve theological material considerably older than their present form. They remain in active use in modern Hellenic polytheist and Orphic revival communities.</p>
+        </div>
+        <div class="os-card">
+          <div class="text-4xl mb-3">📖</div>
+          <h3 class="font-cinzel text-lg text-amber-300 mb-2">Orphic Theogonies (preserved in fragments)</h3>
+          <p class="text-amber-100/70 text-sm leading-relaxed">Several distinct Orphic theogonies are known from fragments quoted by later authors: the Eudemian theogony (known to Aristotle), the Hieronyman theogony (quoted by later Neoplatonists), and the Rhapsodic theogony or 'Orphic Rhapsodies' (a comprehensive synthesis in 24 rhapsodies, heavily used by the Neoplatonists, particularly Proclus and Damascius). Together these fragments reveal a rich and evolving theological tradition working through the implications of the cosmic egg, Phanes, and Dionysus Zagreus across many centuries.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Legacy & Influence -->
+    <section class="rounded-2xl p-8 space-y-6" style="background: linear-gradient(135deg, rgba(180,83,9,0.12), rgba(120,53,15,0.07));">
+      <h2 class="font-cinzel text-2xl text-amber-300 text-center tracking-wide">Legacy &amp; Influence</h2>
+      <div class="space-y-4 text-sm text-amber-100/80 leading-relaxed max-w-4xl mx-auto">
+        <p>The most immediate and profound legacy of Orphism was its influence on <strong class="text-amber-300">Plato</strong>. The Phaedo's arguments for the soul's immortality, the Meno's theory of learning as recollection (anamnesis — the soul 'remembers' what it already knows from previous lives), the Phaedrus's myth of the soul's fall from the divine realm, the Republic's Myth of Er with its account of the soul's afterlife journey and choice of lives, the Timaeus's account of the soul's creation from the same stuff as the World Soul — all draw deeply and explicitly from Orphic sources. Plato's ambivalence toward the Orpheotelestai (he mocks their commercialism) while appropriating their theological insights reflects the complex relationship between philosophy and popular religion in 5th–4th century Athens.</p>
+        <p><strong class="text-amber-300">Neoplatonism</strong> (3rd–6th centuries CE) made the Orphic texts into a canon of theological revelation alongside Homer and Hesiod. Porphyry, Iamblichus, and Proclus all wrote commentaries on Orphic texts; Proclus's Platonic Theology uses the Orphic Rhapsodies as one of its primary sources alongside Plato; Damascius's Problems and Solutions uses the various Orphic theogonies as starting points for an investigation of first principles; the Neoplatonist school effectively treated the Orphic poems as the ancient Greek equivalent of sacred scripture — divinely inspired texts requiring philosophical exegesis to yield their deeper meaning.</p>
+        <p>The structural parallels between Orphic theology and <strong class="text-amber-300">Gnosticism</strong> are striking: both traditions posit a divine origin for the soul, a fall or imprisonment in matter (in Gnosticism through the Demiurge's creation; in Orphism through the Titanic crime), a hostile material world, and a path of gnosis (saving knowledge) back to the divine source; both use the language of 'light' for the soul and 'darkness' or 'clay' for the material body; both offer liberation not through ethical achievement alone but through the correct knowledge of one's divine origin. Scholarly opinion on direct influence versus independent development is divided, but the convergence is real and historically significant.</p>
+        <p>The contemporary revival of Orphic practice — through Hellenistic polytheism, Neopaganism, and the academic study of ancient Mediterranean religion — has brought these texts and ideas back into active use. The Orphic Hymns are recited in modern ritual contexts; the gold tablets have inspired meditative practices around dying and the afterlife; the cosmology of Phanes and the cosmic egg has attracted artists, poets, and thinkers drawn to the vision of a universe born from a radiant, bisexual, all-containing divine principle. Orphism remains, three millennia after its origins, one of the most psychologically and spiritually resonant of all ancient religious traditions — a system that takes seriously both the depth of human suffering and the reality of divine beauty, and that refuses to resolve the tension between them cheaply.</p>
+      </div>
+    </section>
+
+  </div>
+
+  <footer class="relative z-10 text-center py-8 text-amber-300/50 text-xs">
+    <p class="italic">"Know thyself." — Temple of Apollo at Delphi</p>
+    <p class="mt-2">Esoteric Wisdom · Built with ✨ in Rust</p>
+    <p class="mt-2"><a href="/home" class="hover:text-amber-300 transition-colors">← Back to Home</a></p>
+  </footer>
+
+<script>
+  const sf = document.getElementById('starfield');
+  for (let i = 0; i < 180; i++) {
+    const s = document.createElement('div');
+    s.className = 'star';
+    const size = Math.random() * 2.5 + 0.5;
+    s.style.cssText = `width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--dur:${2+Math.random()*4}s;--delay:${Math.random()*5}s;opacity:${0.2+Math.random()*0.8};`;
+    sf.appendChild(s);
+  }
+</script>
+</body>
+</html>

@@ -21,6 +21,7 @@ mod eastern_esotericism;
 mod indigenous_esotericism;
 mod middle_eastern_esotericism;
 mod esoteric_practices;
+mod orders_societies;
 mod esoteric_corpora;
 mod templates;
 
@@ -67,6 +68,7 @@ async fn main() -> anyhow::Result<()> {
         .nest("/middle-eastern-esotericism", middle_eastern_esotericism::routes())
         .nest("/esoteric-practices", esoteric_practices::routes())
         .nest("/esoteric-corpora", esoteric_corpora::routes())
+        .nest("/orders-societies", orders_societies::routes())
         .layer(CookieManagerLayer::new())
         .with_state(state);
 
