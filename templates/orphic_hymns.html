@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Orphic Hymns — Esoteric Texts &amp; Corpora</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <meta property="og:title" content="Orphic Hymns — Esoteric Texts &amp; Corpora" />
+  <meta property="og:description" content="Eighty-seven hymns to the gods of the Orphic tradition — ritual invocations used in initiatory ceremonies from antiquity to the Renaissance." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://esoteric-wisdom.onrender.com/esoteric-corpora/orphic-hymns" />
+  <meta property="og:image" content="https://esoteric-wisdom.onrender.com/og-image.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Raleway', sans-serif; }
+    .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+
+    @keyframes twinkle { 0%,100% { opacity: 0.2; } 50% { opacity: 1; } }
+    .star { position: absolute; border-radius: 50%; background: white; animation: twinkle var(--dur,3s) ease-in-out infinite; animation-delay: var(--delay,0s); }
+
+    @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+    .floating { animation: float 5s ease-in-out infinite; }
+
+    @keyframes shimmer {
+      0% { background-position: -200% center; }
+      100% { background-position: 200% center; }
+    }
+
+    .nav-link { position: relative; transition: all 0.3s; }
+    .nav-link::after {
+      content: ''; position: absolute; bottom: -2px; left: 0;
+      width: 0; height: 2px;
+      background: linear-gradient(90deg, #f59e0b, #a78bfa);
+      transition: width 0.3s;
+    }
+    .nav-link:hover::after { width: 100%; }
+
+    .aurora-text {
+      background: linear-gradient(90deg, #d8b4fe, #a855f7, #f0abfc, #7c3aed, #d8b4fe);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 4s linear infinite;
+    }
+
+    .corpus-card {
+      background: linear-gradient(135deg, rgba(168,85,247,0.07), rgba(124,58,237,0.04));
+      border: 1px solid rgba(168,85,247,0.2);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+    .corpus-card:hover {
+      transform: translateY(-6px) scale(1.01);
+      box-shadow: 0 0 28px 5px rgba(168,85,247,0.25);
+      border-color: rgba(168,85,247,0.5);
+    }
+  </style>
+</head>
+<body class="min-h-screen text-purple-100 overflow-x-hidden" style="background: radial-gradient(ellipse at top, #0a0520 0%, #180830 20%, #050210 55%, #000000 100%);">
+
+  <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+
+  <!-- NAV -->
+  <nav class="sticky top-0 z-50 flex items-center justify-between px-6 py-3 bg-black/40 backdrop-blur-md border-b border-violet-500/20 flex-wrap gap-y-2">
+    <a href="/home" class="font-cinzel text-amber-300 text-sm tracking-widest shrink-0">✦ Esoteric Wisdom ✦</a>
+    <div class="flex items-center gap-x-3 gap-y-1 text-xs text-violet-200 flex-wrap justify-end">
+      <a href="/astrology" class="nav-link hover:text-amber-300 transition-colors">Astrology</a>
+      <a href="/meditation" class="nav-link hover:text-amber-300 transition-colors">Meditation</a>
+      <a href="/tarot/select" class="nav-link hover:text-amber-300 transition-colors">Tarot</a>
+      <a href="/numerology" class="nav-link hover:text-amber-300 transition-colors">Numerology</a>
+      <a href="/crystals" class="nav-link hover:text-amber-300 transition-colors">Crystals</a>
+      <a href="/runes" class="nav-link hover:text-amber-300 transition-colors">Runes</a>
+      <a href="/shamanism" class="nav-link hover:text-amber-300 transition-colors">Shamanism</a>
+      <a href="/druidism" class="nav-link hover:text-amber-300 transition-colors">Druidism</a>
+      <a href="/akashic-records" class="nav-link hover:text-amber-300 transition-colors">Akashic Records</a>
+      <a href="/wicca" class="nav-link hover:text-amber-300 transition-colors">Wicca</a>
+      <a href="/alchemy" class="nav-link hover:text-amber-300 transition-colors">Alchemy</a>
+      <a href="/gateway-process" class="nav-link hover:text-amber-300 transition-colors">Gateway Process</a>
+      <a href="/remote-viewing" class="nav-link hover:text-amber-300 transition-colors">Remote Viewing</a>
+      <a href="/khasarov-mirror" class="nav-link hover:text-amber-300 transition-colors">Khasarov Mirror</a>
+      <a href="/western-esotericism" class="nav-link hover:text-amber-300 transition-colors">Western Esotericism</a>
+      <a href="/eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Eastern Esotericism</a>
+      <a href="/indigenous-esotericism" class="nav-link hover:text-amber-300 transition-colors">Indigenous Esotericism</a>
+      <a href="/middle-eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Middle Eastern Mysteries</a>
+      <a href="/esoteric-practices" class="nav-link hover:text-amber-300 transition-colors">Esoteric Practices</a>
+      <a href="/esoteric-corpora" class="nav-link text-amber-300 font-semibold">Sacred Texts</a>
+      <a href="/journal/reflections" class="nav-link text-emerald-300 hover:text-emerald-200 transition-colors">✨ Reflections</a>
+      <a href="https://ko-fi.com/esotericwisdom" target="_blank" rel="noopener noreferrer"
+         class="px-3 py-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-white font-semibold hover:scale-105 transition-transform shrink-0">☕ Support</a>
+    </div>
+  </nav>
+
+  <!-- CONTENT WRAPPER -->
+  <div class="relative z-10 max-w-5xl mx-auto space-y-10 pt-6 px-4 pb-12">
+
+    <!-- BREADCRUMB -->
+    <div>
+      <a href="/esoteric-corpora" class="text-xs text-purple-300/60 hover:text-purple-300 transition-colors">← Esoteric Texts &amp; Corpora</a>
+    </div>
+
+    <!-- HERO -->
+    <section class="text-center py-12 space-y-6">
+      <div class="text-7xl floating">🎵</div>
+      <h1 class="font-cinzel text-4xl md:text-5xl font-bold aurora-text leading-tight">
+        Orphic Hymns
+      </h1>
+      <p class="max-w-3xl mx-auto text-purple-200/80 text-lg leading-relaxed">
+        Eighty-seven hexameter hymns to the gods, attributed to Orpheus — composed between the 2nd and 4th centuries CE for use in Orphic mystery rites, each addressed to a deity with a specified incense offering, accumulating a collective portrait of the divine in its multiplicity and unity.
+      </p>
+    </section>
+
+    <!-- DISCLAIMER -->
+    <section class="rounded-2xl p-6 space-y-4" style="background: linear-gradient(135deg, rgba(180,60,0,0.15), rgba(120,30,0,0.08)); border: 1px solid rgba(251,146,60,0.3);">
+      <div class="flex items-start gap-4">
+        <span class="text-3xl flex-shrink-0">⚠️</span>
+        <div>
+          <h2 class="font-cinzel text-lg text-amber-300 mb-2">For Educational &amp; Informational Purposes Only</h2>
+          <p class="text-amber-100/85 text-sm leading-relaxed">
+            The content on this page is provided solely for educational and historical study. The texts and practices described here derive from diverse sacred traditions and carry genuine power within those contexts. Readers are encouraged to approach these traditions with respect and discernment. Attempting advanced practices described in these texts without proper guidance from a qualified teacher is not recommended and may carry psychological or spiritual risks. If you are drawn to pursue any of these practices, seek instruction from a qualified, lineage-authorised teacher within the tradition in question.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT ARE THE ORPHIC HYMNS? -->
+    <section class="rounded-2xl p-8 space-y-6" style="background: linear-gradient(135deg, rgba(168,85,247,0.1), rgba(124,58,237,0.06));">
+      <h2 class="font-cinzel text-2xl text-purple-300 text-center tracking-wide">What Are the Orphic Hymns?</h2>
+      <div class="space-y-4 text-sm text-purple-100/80 leading-relaxed max-w-4xl mx-auto">
+        <p>
+          The Orphic Hymns are a collection of eighty-seven Greek hexameter hymns attributed to the legendary musician and mystic <strong class="text-purple-200">Orpheus</strong> — the Thracian poet and musician whose descent to the underworld to retrieve his dead wife Eurydice made him the archetypal figure of the mystic who crosses the boundary between the living and the dead, and whose singing could charm animals, trees, and stones. The hymns are addressed to a wide range of Greek deities and personified cosmic forces, each preceded by a heading specifying the incense or aromatic substance (<em>thumiama</em>) to be used when the hymn is sung. This specification — "use storax" for Hecate, "use frankincense" for Helios, "use myrrh" for Selene — makes immediately clear that these are not literary exercises but practical ritual texts, intended to be performed as part of specific religious ceremonies.
+        </p>
+        <p>
+          Modern scholarship places the composition of the Orphic Hymns in the 2nd–4th centuries CE, most likely in Asia Minor (possibly in the region of Pergamon or Sardis), where they appear to have been used in the ceremonies of an Orphic cult community — a private religious association whose members participated in mystery initiations inspired by Orphic mythology. The hymns' rich accumulation of divine epithets, their theological synthesis of diverse Greek religious traditions (including Stoic, Platonic, and mystery-cult elements), and their systematic coverage of the divine hierarchy — from the primordial Protogonos (First-Born) through the Olympian gods, the chthonic deities, the seasons, the stars, and the personified virtues — make them an extraordinarily comprehensive devotional map of the Greek polytheistic cosmos.
+        </p>
+        <p>
+          The literary style of the Orphic Hymns is characterised by the dense accumulation of <strong class="text-purple-200">epithets</strong> — divine names and attributes piled upon one another in an incantatory rhythm. The Hymn to Hecate, for example, addresses her as "Einodian, Hecate, lovely dame, / Of earthly, watery and celestial frame, / Sepulchral, in a saffron veil array'd, / Pleased with dark ghosts that wander through the shade." This technique — known in Greek as <em>klēsis</em>, or invocation — is not mere poetic decoration but a theological act: each epithet summons a specific aspect of the deity, and the cumulative list is meant to ensure that the invocation reaches all the dimensions of the god's being.
+        </p>
+      </div>
+    </section>
+
+    <!-- ORPHISM -->
+    <section class="space-y-6">
+      <h2 class="font-cinzel text-2xl text-purple-300 text-center tracking-wide">Orphism — The Religious Movement</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-purple-200">Orpheus: Myth &amp; Mystery</h3>
+          <p class="text-purple-100/70 text-sm leading-relaxed">Orpheus — musician, poet, prophet, and psychopomp — was the central figure of the Orphic religious tradition. His myth encompassed his miraculous musical powers (his singing moved not only humans and animals but inanimate nature), his katabasis (descent to Hades to rescue Eurydice, whom he lost again through turning back), his death at the hands of the Maenads (who tore him apart — a death reminiscent of the Dionysiac sparagmos), and the continued oracular power of his severed head. This combination of musical genius, journey to the underworld, and violent death made Orpheus the paradigmatic initiate — one who had crossed the boundaries of life and death and returned with wisdom about the soul's destiny.</p>
+        </div>
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-purple-200">The Orphic Cosmogony</h3>
+          <p class="text-purple-100/70 text-sm leading-relaxed">The Orphic tradition developed an elaborate cosmogony — a myth of cosmic origins — that influenced Neoplatonic philosophy and the Gnostic tradition. In the Rhapsodic Theogony (the most complete surviving Orphic cosmological text), the universe begins with <strong class="text-purple-200">Chronos</strong> (Time) producing the Cosmic Egg from which <strong class="text-purple-200">Phanes-Protogonos</strong> (the First-Born, also called Eros and Metis) emerges — a hermaphroditic, golden-winged deity of immense creative power who carries within himself the seeds of all creation. The subsequent Orphic mythology traces the lineage of the gods through Zeus, Dionysus, and the creation of humanity from the ashes of the Titans who devoured the infant Dionysus.</p>
+        </div>
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-purple-200">The Orphic Anthropology</h3>
+          <p class="text-purple-100/70 text-sm leading-relaxed">The Orphic explanation of human nature is rooted in the myth of the Titans' destruction of the infant Dionysus: Zeus destroyed the Titans with his thunderbolt and from their ashes created humanity. Since the Titans had previously consumed Dionysus, human beings contain within them both the earthly, heavy element of the Titans and the divine, luminous spark of Dionysus. The Orphic life — vegetarianism, ritual purity, initiation, and ultimately liberation — was aimed at gradually purifying the Dionysiac element from the Titanic "pollution," liberating the divine spark through successive incarnations until it achieved freedom from the cycle of rebirth.</p>
+        </div>
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-purple-200">The Gold Tablets</h3>
+          <p class="text-purple-100/70 text-sm leading-relaxed">Among the most important Orphic documents are the <strong class="text-purple-200">Gold Tablets</strong> — small inscribed gold leaves found in graves across the Greek world from the 5th century BCE onwards. These tablets contain instructions for the soul's journey after death: passwords for the underworld guardians, instructions to drink from the spring of Memory rather than Lethe (Forgetfulness), and declarations of the soul's divine nature ("I am a child of Earth and starry Heaven"). These texts represent the practical eschatological dimension of the Orphic tradition and are contemporary with the earliest Orphic evidence.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- THE HYMNS -->
+    <section class="rounded-2xl p-8 space-y-5" style="background: linear-gradient(135deg, rgba(168,85,247,0.1), rgba(124,58,237,0.06));">
+      <h2 class="font-cinzel text-2xl text-purple-300 text-center tracking-wide">Structure &amp; Notable Hymns</h2>
+      <div class="space-y-4 text-sm text-purple-100/80 leading-relaxed max-w-4xl mx-auto">
+        <p>
+          The eighty-seven hymns are organised roughly in order of cosmic hierarchy, beginning with the most primal divine forces and descending through the Olympian gods, chthonic deities, seasonal and celestial powers, and personalised abstractions. Each hymn typically begins with an invocation naming the deity and accumulating epithets, moves through a central section describing the deity's domains and functions, and concludes with a petition — requesting the deity's blessing, presence, or assistance in the rite. The structure is simultaneously liturgical (following a repeating pattern) and cosmological (mapping the divine totality).
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="rounded-xl p-4" style="background: rgba(168,85,247,0.05); border: 1px solid rgba(168,85,247,0.15);">
+            <p class="text-purple-200 font-semibold text-xs mb-2">Hymn 1 — To Hecate</p>
+            <p class="text-xs text-purple-100/70 leading-relaxed">The collection opens with one of the most celebrated of all the hymns — the invocation of Hecate as the liminal goddess of crossroads, night, and magic. Addressed with the fumigation of storax, she is "earthly, watery and celestial," ruling the soul's passage between the worlds. The Hymn to Hecate became enormously important in Renaissance magic and remains one of the most widely used texts in contemporary Pagan and Wiccan practice.</p>
+          </div>
+          <div class="rounded-xl p-4" style="background: rgba(168,85,247,0.05); border: 1px solid rgba(168,85,247,0.15);">
+            <p class="text-purple-200 font-semibold text-xs mb-2">Hymn 6 — To Protogonos</p>
+            <p class="text-xs text-purple-100/70 leading-relaxed">The Hymn to Protogonos (the First-Born, or Phanes-Eros) addresses the primordial hermaphroditic divinity who emerged from the Cosmic Egg and whose creative power generated all subsequent gods and the cosmos. This hymn preserves important evidence of the Orphic theogony and its understanding of primordial creative power as simultaneously masculine and feminine.</p>
+          </div>
+          <div class="rounded-xl p-4" style="background: rgba(168,85,247,0.05); border: 1px solid rgba(168,85,247,0.15);">
+            <p class="text-purple-200 font-semibold text-xs mb-2">Hymn 29 — To Persephone</p>
+            <p class="text-xs text-purple-100/70 leading-relaxed">The Queen of the Dead and daughter of Demeter, who was abducted by Hades and whose annual return from the underworld mythologises the death and rebirth of the grain. The Orphic Persephone is the mistress of souls in the underworld — the ultimate recipient of the dying initiate's prayers and the guarantor of the soul's favourable reception in the realm of the dead. Her hymn invokes her dual nature as both life-giving daughter and death-ruling queen.</p>
+          </div>
+          <div class="rounded-xl p-4" style="background: rgba(168,85,247,0.05); border: 1px solid rgba(168,85,247,0.15);">
+            <p class="text-purple-200 font-semibold text-xs mb-2">Hymn 30 — To Dionysus</p>
+            <p class="text-xs text-purple-100/70 leading-relaxed">The central Orphic deity — Dionysus in his various manifestations (Lysios, the Liberator; Bassareus; Erikepas; Bromios) — receives a hymn of particular richness, emphasising his nature as the divine spark within humanity, the twice-born god (born of Semele and reborn of Zeus), the bringer of ecstatic liberation and the lord of the mystical vine. For the Orphic community, Dionysus was the model for the initiate's own path of suffering, death, and divine rebirth.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- USE IN RITUAL -->
+    <section class="space-y-6">
+      <h2 class="font-cinzel text-2xl text-purple-300 text-center tracking-wide">Use in Ritual</h2>
+      <div class="corpus-card max-w-4xl mx-auto space-y-4">
+        <p class="text-purple-100/80 text-sm leading-relaxed">
+          The Orphic Hymns were not literary texts to be read but performative ritual texts to be sung or chanted with incense burning. Each hymn carries its specific <strong class="text-purple-200"><em>thumiama</em></strong> (fumigation) instruction — the aromatic substance whose smoke is understood to be the physical manifestation of the deity's presence and the means by which the deity's attention is attracted and their blessing solicited. The hymn creates a sonic sacred space; the incense creates an aromatic sacred space; together they constitute a complete ritual environment in which the deity is present and responsive.
+        </p>
+        <p class="text-purple-100/80 text-sm leading-relaxed">
+          The range of incenses specified is itself a complete cosmological map: frankincense for Helios (the Sun), myrrh for Selene (the Moon), storax for Hecate and Hermes (chthonic-liminal deities), aromatic herbs for deities of particular natural domains, mixed aromatic fumigations for complex or syncretic divine figures. The system of correspondences between incenses, deities, and cosmic functions is a practical application of the principle of sympathetic magic that underlies Hermetic and astrological practice: like attracts like; the aromatic quality of the incense resonates with the deity's nature and draws their presence.
+        </p>
+        <p class="text-purple-100/80 text-sm leading-relaxed">
+          In the context of Orphic initiatory ceremonies, the hymns would have been sung at different points of the rite — invoking the relevant deities for each stage of the initiation, creating a ritual journey through the divine cosmos that mirrored the soul's own cosmic journey described in Orphic mythology. The initiate, through the ritual performances, was experientially rehearsing the soul's post-mortem passage through the underworld and its eventual return to the divine realm — making the mythological narrative a present, embodied reality.
+        </p>
+      </div>
+    </section>
+
+    <!-- RENAISSANCE AND MODERN RECEPTION -->
+    <section class="rounded-2xl p-8 space-y-5" style="background: linear-gradient(135deg, rgba(168,85,247,0.1), rgba(124,58,237,0.06));">
+      <h2 class="font-cinzel text-2xl text-purple-300 text-center tracking-wide">Renaissance &amp; Modern Reception</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-purple-100/80 leading-relaxed">
+        <div class="space-y-4">
+          <p><strong class="text-purple-200">Marsilio Ficino (1433–1499).</strong> Ficino's engagement with the Orphic Hymns was central to his project of Renaissance Hermeticism. He translated them from Greek into Latin, studied them alongside the Corpus Hermeticum and the Platonic dialogues, and used them in his practice of "natural magic" — singing hymns accompanied by the lyre under astrologically favourable conditions, as a means of attracting celestial influences into his body and soul. Ficino's identification of Orpheus as one of the prisci theologi — the ancient theologians who preserved the original divine wisdom — gave the Orphic Hymns a status comparable to the Platonic dialogues in the Renaissance philosophical canon.</p>
+          <p><strong class="text-purple-200">Pico della Mirandola (1463–1494).</strong> Ficino's brilliant young friend and the most ambitious Renaissance synthesiser of esoteric traditions used the Orphic Hymns as part of his project of reconciling Kabbalah, Neoplatonism, Hermeticism, and Christian theology. In his famous <em>Oration on the Dignity of Man</em> — often called the "Manifesto of the Renaissance" — Pico places Orpheus alongside Moses, Plato, and other sages as a recipient and transmitter of the divine wisdom about human nature's unique position in the cosmic hierarchy.</p>
+        </div>
+        <div class="space-y-4">
+          <p><strong class="text-purple-200">Thomas Taylor (1758–1835).</strong> The English Platonist and translator whose English version of the Orphic Hymns (1792) made them available to the Romantic poets. William Blake, Percy Bysshe Shelley, John Keats, and Samuel Taylor Coleridge were all influenced by Taylor's translations, which presented the Orphic tradition as the fountain-head of all poetry, philosophy, and religious insight. Taylor's vision of Orphism as the root of Western civilisation — combining the Platonic, Hermetic, and Orphic traditions into a single "theurgic" whole — exercised a formative influence on the entire Romantic movement's engagement with ancient wisdom.</p>
+          <p><strong class="text-purple-200">Modern Pagan &amp; Hellenist Communities.</strong> The Orphic Hymns are among the most actively used ancient ritual texts in contemporary Pagan practice. Hellenist communities (practitioners of ancient Greek religion) regularly use them in devotional ceremonies, either in the original Greek or in Thomas Taylor's or more recent translations. Their practical format — each hymn complete with its incense specification — makes them ideal for immediate ritual use, and their theological depth rewards contemplative study alongside practical devotion.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- KEY SCHOLARS -->
+    <section class="space-y-6">
+      <h2 class="font-cinzel text-2xl text-purple-300 text-center tracking-wide">Key Scholars</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-purple-200">Martin West (1937–2015)</h3>
+          <p class="text-purple-100/70 text-sm leading-relaxed">The British classical scholar whose monograph <em>The Orphic Poems</em> (1983) remains the standard scholarly treatment of the entire Orphic literary tradition — cosmogony, theogony, the Derveni Papyrus, the Gold Tablets, and the Hymns. West's rigorous philological approach, combined with his encyclopaedic knowledge of Greek and Near Eastern religious traditions, provided the definitive academic framework for understanding Orphism's place in ancient religion. His work is essential for anyone seeking a historical understanding of the traditions behind the Orphic Hymns.</p>
+        </div>
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-purple-200">Alberto Bernabé (b. 1945)</h3>
+          <p class="text-purple-100/70 text-sm leading-relaxed">The Spanish classical philologist whose critical edition of Orphic fragments — <em>Poetae Epici Graeci: Testimonia et Fragmenta, Pars II: Orphicorum et Orphicis Similium Testimonia et Fragmenta</em> (2004–2007) — is the definitive scholarly collection of all surviving Orphic texts and testimonies. Bernabé's work supersedes the earlier collection of Kern (1922) and provides the most complete picture of Orphism as a literary-religious phenomenon, with detailed commentary situating each fragment in its historical and literary context.</p>
+        </div>
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-purple-200">Apostolos Athanassakis (b. 1935)</h3>
+          <p class="text-purple-100/70 text-sm leading-relaxed">The American classicist whose translation <em>The Orphic Hymns: Text, Translation, and Notes</em> (1977; revised with Benjamin Wolkow, 2013) is the most widely used scholarly English edition. Athanassakis's translation succeeds in preserving the liturgical, rhythmic character of the originals while providing accurate renderings of the complex Greek, and his notes are particularly valuable for identifying the specific Greek religious contexts for each deity and explaining the significance of the fumigations specified. For the student who wants to use the hymns for devotional purposes with scholarly grounding, this is the essential edition.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="text-center mt-4">
+      <a href="/esoteric-corpora" class="text-purple-400/60 hover:text-purple-300 text-sm transition-colors">← Esoteric Texts &amp; Corpora</a>
+    </div>
+
+  </div><!-- end content wrapper -->
+
+  <footer class="relative z-10 text-center py-8 text-purple-400/40 text-xs mt-8">
+    <p class="italic">"I call on Hecate of the roads and crossroads, lovely dame, of earthly, watery and celestial frame." — Orphic Hymn 1, To Hecate</p>
+    <p class="mt-2">Esoteric Wisdom · Built with ✨ in Rust</p>
+    <p class="mt-2"><a href="/home" class="hover:text-purple-300 transition-colors">← Back to Portal</a></p>
+  </footer>
+
+  <script>
+    const sf = document.getElementById('starfield');
+    for (let i = 0; i < 200; i++) {
+      const s = document.createElement('div');
+      s.className = 'star';
+      const size = Math.random() * 2.5 + 0.5;
+      s.style.cssText = `width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--dur:${2+Math.random()*4}s;--delay:${Math.random()*5}s;opacity:${0.2+Math.random()*0.8};`;
+      sf.appendChild(s);
+    }
+  </script>
+
+</body>
+</html>

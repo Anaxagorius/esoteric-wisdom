@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book of the Law — Esoteric Texts &amp; Corpora</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <meta property="og:title" content="Book of the Law — Esoteric Texts &amp; Corpora" />
+  <meta property="og:description" content="Liber AL vel Legis — the foundational text of Thelema, channelled by Aleister Crowley in Cairo in 1904." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://esoteric-wisdom.onrender.com/esoteric-corpora/book-of-the-law" />
+  <meta property="og:image" content="https://esoteric-wisdom.onrender.com/og-image.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Raleway', sans-serif; }
+    .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+
+    @keyframes twinkle { 0%,100% { opacity: 0.2; } 50% { opacity: 1; } }
+    .star { position: absolute; border-radius: 50%; background: white; animation: twinkle var(--dur,3s) ease-in-out infinite; animation-delay: var(--delay,0s); }
+
+    @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+    .floating { animation: float 5s ease-in-out infinite; }
+
+    @keyframes shimmer {
+      0% { background-position: -200% center; }
+      100% { background-position: 200% center; }
+    }
+
+    .nav-link { position: relative; transition: all 0.3s; }
+    .nav-link::after {
+      content: ''; position: absolute; bottom: -2px; left: 0;
+      width: 0; height: 2px;
+      background: linear-gradient(90deg, #f59e0b, #a78bfa);
+      transition: width 0.3s;
+    }
+    .nav-link:hover::after { width: 100%; }
+
+    .aurora-text {
+      background: linear-gradient(90deg, #c084fc, #a855f7, #e879f9, #9333ea, #c084fc);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 4s linear infinite;
+    }
+
+    .corpus-card {
+      background: linear-gradient(135deg, rgba(168,85,247,0.07), rgba(147,51,234,0.04));
+      border: 1px solid rgba(168,85,247,0.2);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+    .corpus-card:hover {
+      transform: translateY(-6px) scale(1.01);
+      box-shadow: 0 0 28px 5px rgba(168,85,247,0.25);
+      border-color: rgba(168,85,247,0.5);
+    }
+  </style>
+</head>
+<body class="min-h-screen text-violet-100 overflow-x-hidden" style="background: radial-gradient(ellipse at top, #0f0020 0%, #180030 20%, #050010 55%, #000000 100%);">
+
+  <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+
+  <!-- NAV -->
+  <nav class="sticky top-0 z-50 flex items-center justify-between px-6 py-3 bg-black/40 backdrop-blur-md border-b border-violet-500/20 flex-wrap gap-y-2">
+    <a href="/home" class="font-cinzel text-amber-300 text-sm tracking-widest shrink-0">✦ Esoteric Wisdom ✦</a>
+    <div class="flex items-center gap-x-3 gap-y-1 text-xs text-violet-200 flex-wrap justify-end">
+      <a href="/astrology" class="nav-link hover:text-amber-300 transition-colors">Astrology</a>
+      <a href="/meditation" class="nav-link hover:text-amber-300 transition-colors">Meditation</a>
+      <a href="/tarot/select" class="nav-link hover:text-amber-300 transition-colors">Tarot</a>
+      <a href="/numerology" class="nav-link hover:text-amber-300 transition-colors">Numerology</a>
+      <a href="/crystals" class="nav-link hover:text-amber-300 transition-colors">Crystals</a>
+      <a href="/runes" class="nav-link hover:text-amber-300 transition-colors">Runes</a>
+      <a href="/shamanism" class="nav-link hover:text-amber-300 transition-colors">Shamanism</a>
+      <a href="/druidism" class="nav-link hover:text-amber-300 transition-colors">Druidism</a>
+      <a href="/akashic-records" class="nav-link hover:text-amber-300 transition-colors">Akashic Records</a>
+      <a href="/wicca" class="nav-link hover:text-amber-300 transition-colors">Wicca</a>
+      <a href="/alchemy" class="nav-link hover:text-amber-300 transition-colors">Alchemy</a>
+      <a href="/gateway-process" class="nav-link hover:text-amber-300 transition-colors">Gateway Process</a>
+      <a href="/remote-viewing" class="nav-link hover:text-amber-300 transition-colors">Remote Viewing</a>
+      <a href="/khasarov-mirror" class="nav-link hover:text-amber-300 transition-colors">Khasarov Mirror</a>
+      <a href="/western-esotericism" class="nav-link hover:text-amber-300 transition-colors">Western Esotericism</a>
+      <a href="/eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Eastern Esotericism</a>
+      <a href="/indigenous-esotericism" class="nav-link hover:text-amber-300 transition-colors">Indigenous Esotericism</a>
+      <a href="/middle-eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Middle Eastern Mysteries</a>
+      <a href="/esoteric-practices" class="nav-link hover:text-amber-300 transition-colors">Esoteric Practices</a>
+      <a href="/esoteric-corpora" class="nav-link text-amber-300 font-semibold">Sacred Texts</a>
+      <a href="/journal/reflections" class="nav-link text-emerald-300 hover:text-emerald-200 transition-colors">✨ Reflections</a>
+      <a href="https://ko-fi.com/esotericwisdom" target="_blank" rel="noopener noreferrer"
+         class="px-3 py-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-white font-semibold hover:scale-105 transition-transform shrink-0">☕ Support</a>
+    </div>
+  </nav>
+
+  <!-- CONTENT WRAPPER -->
+  <div class="relative z-10 max-w-5xl mx-auto space-y-10 pt-6 px-4 pb-12">
+
+    <!-- BREADCRUMB -->
+    <div>
+      <a href="/esoteric-corpora" class="text-xs text-violet-300/60 hover:text-violet-300 transition-colors">← Esoteric Texts &amp; Corpora</a>
+    </div>
+
+    <!-- HERO -->
+    <section class="text-center py-12 space-y-6">
+      <div class="text-7xl floating">🌟</div>
+      <h1 class="font-cinzel text-4xl md:text-5xl font-bold aurora-text leading-tight">
+        Book of the Law
+      </h1>
+      <p class="max-w-3xl mx-auto text-violet-200/80 text-lg leading-relaxed">
+        <em>Liber AL vel Legis</em> — "The Book of the Law" — dictated to Aleister Crowley over three days in Cairo in April 1904 by the entity Aiwass, inaugurating the Aeon of Horus and proclaiming the central law of the new age: "Do what thou wilt shall be the whole of the Law."
+      </p>
+    </section>
+
+    <!-- DISCLAIMER -->
+    <section class="rounded-2xl p-6 space-y-4" style="background: linear-gradient(135deg, rgba(180,60,0,0.15), rgba(120,30,0,0.08)); border: 1px solid rgba(251,146,60,0.3);">
+      <div class="flex items-start gap-4">
+        <span class="text-3xl flex-shrink-0">⚠️</span>
+        <div>
+          <h2 class="font-cinzel text-lg text-amber-300 mb-2">For Educational &amp; Informational Purposes Only</h2>
+          <p class="text-amber-100/85 text-sm leading-relaxed">
+            The content on this page is provided solely for educational and historical study. The texts and practices described here derive from diverse sacred traditions and carry genuine power within those contexts. Readers are encouraged to approach these traditions with respect and discernment. Attempting advanced practices described in these texts without proper guidance from a qualified teacher is not recommended and may carry psychological or spiritual risks. If you are drawn to pursue any of these practices, seek instruction from a qualified, lineage-authorised teacher within the tradition in question.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT IS LIBER AL? -->
+    <section class="rounded-2xl p-8 space-y-6" style="background: linear-gradient(135deg, rgba(168,85,247,0.1), rgba(147,51,234,0.06));">
+      <h2 class="font-cinzel text-2xl text-violet-300 text-center tracking-wide">What Is Liber AL vel Legis?</h2>
+      <div class="space-y-4 text-sm text-violet-100/80 leading-relaxed max-w-4xl mx-auto">
+        <p>
+          <em>Liber AL vel Legis</em> — "The Book of the Law" — is the central sacred scripture of <strong class="text-violet-200">Thelema</strong>, the spiritual-philosophical system founded by Aleister Crowley (1875–1947). Written in 220 verses distributed across three chapters, it presents itself as a received text — a channelled or dictated revelation from a non-human intelligence — rather than a composition in the ordinary sense. Its language is poetic, elliptical, and deliberately difficult: "The study of this Book is forbidden. It is wise to destroy this copy after the first reading. Whosoever disregards this does so at his own risk and peril." This paradoxical instruction is itself characteristic of the text's recursive, challenging style.
+        </p>
+        <p>
+          The Book of the Law occupies a unique position in the history of Western esotericism. Unlike the Corpus Hermeticum or the Zohar — ancient texts whose origins are obscured by centuries — Liber AL is historically precise in its claimed genesis: Cairo, Egypt, April 8–10, 1904, dictated at exactly noon each day over one hour. This specificity is both a strength and a vulnerability: it makes the circumstances of its reception examinable in ways that older revelations are not, and has generated enormous scholarly and devotional debate about its nature and status.
+        </p>
+        <p>
+          Within the Thelemic system, the Book of the Law announces a cosmic epochal change: the end of the <strong class="text-violet-200">Aeon of Osiris</strong> (the age of dying and resurrecting gods, of Christianity and similar religions of sacrifice and suffering) and the inauguration of the <strong class="text-violet-200">Aeon of Horus</strong> — a new age characterised by the assertion of individual will, the recognition of each person's unique divine nature, and the rejection of slave-morality in favour of active, joyful self-determination. This historico-cosmic framework, drawing on Egyptian mythology re-interpreted through Crowley's own visionary lens, provides the context within which the Book's central teachings are to be understood.
+        </p>
+      </div>
+    </section>
+
+    <!-- THE CAIRO WORKING -->
+    <section class="space-y-6">
+      <h2 class="font-cinzel text-2xl text-violet-300 text-center tracking-wide">The Cairo Working</h2>
+      <div class="corpus-card max-w-4xl mx-auto space-y-4">
+        <p class="text-violet-100/80 text-sm leading-relaxed">
+          In the spring of 1904, Aleister Crowley and his wife <strong class="text-violet-200">Rose Edith Kelly</strong> were honeymooning in Cairo when Rose began receiving what she described as messages from the gods. Crowley, sceptical, tested her with detailed questions about Egyptian mythology to which she should not have known the answers — and was astonished by the accuracy of her responses. She identified the source as the god <strong class="text-violet-200">Horus</strong>, directing Crowley to the Stele of Revealing in the Boulaq Museum of Cairo: an ancient Egyptian funerary tablet depicting Horus in the form of Ra-Hoor-Khuit, whose museum exhibit number was 666 — a number of deep personal significance to Crowley.
+        </p>
+        <p class="text-violet-100/80 text-sm leading-relaxed">
+          On April 8, 1904, Crowley entered a room in their Cairo apartment at noon and heard a disembodied voice — calm, measured, with a slight accent he later described as "of a man of culture" — begin to dictate. The entity identified itself as <strong class="text-violet-200">Aiwass</strong>, the minister of Hoor-paar-kraat (Harpocrates, the god of silence). Over three successive days, at exactly noon, Crowley transcribed the three chapters of Liber AL. Rose's role in the reception diminished after the first intimations; Crowley was the principal receiver and scribe. The original handwritten manuscript, with its marginal corrections and annotations, survived and remains in the archives of the O.T.O. — a primary document for scholars studying the text's genesis.
+        </p>
+        <p class="text-violet-100/80 text-sm leading-relaxed">
+          Crowley's initial attitude to the received text was ambivalent — even hostile. He found Chapter III, in particular, disturbing in its imagery, and initially set the manuscript aside for several years. It was only around 1909, upon re-reading it, that he became convinced of its genuine significance and began to regard Liber AL as the founding document of a new spiritual dispensation, to which his entire subsequent career as "the Great Beast 666" and "the Prophet of the New Aeon" was the response.
+        </p>
+      </div>
+    </section>
+
+    <!-- THE THREE CHAPTERS -->
+    <section class="rounded-2xl p-8 space-y-5" style="background: linear-gradient(135deg, rgba(168,85,247,0.1), rgba(147,51,234,0.06));">
+      <h2 class="font-cinzel text-2xl text-violet-300 text-center tracking-wide">The Three Chapters</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div class="space-y-3">
+          <h3 class="font-cinzel text-sm text-violet-200">Chapter I — Nuit</h3>
+          <p class="text-violet-100/70 text-sm leading-relaxed">The first chapter is spoken by <strong class="text-violet-200">Nuit</strong> — the Egyptian sky goddess, here reimagined as the infinite expanse of starry space, the totality of all possible experience. Her message is one of unbound love, joy, and the invitation to realise one's identity with the Infinite: "Every man and every woman is a star." Nuit represents the principle of infinite possibility — the divine Feminine as the totality of what is, was, and can be. Her primary commandment is to seek one's own "True Will" — the unique divine purpose that defines each individual being.</p>
+        </div>
+        <div class="space-y-3">
+          <h3 class="font-cinzel text-sm text-violet-200">Chapter II — Hadit</h3>
+          <p class="text-violet-100/70 text-sm leading-relaxed">The second chapter is spoken by <strong class="text-violet-200">Hadit</strong> — the complementary principle to Nuit: the infinitely contracted point, the winged serpent that is the centre of every star. Where Nuit is infinite space, Hadit is infinite consciousness — the innermost point of individual being that is identical with the ultimate. Hadit's teachings are more demanding and paradoxical than Nuit's, with a more martial, ruthless quality: "I am the warrior Lord of the Forties; the Eighties cower before me and are abased." Chapter II deals most extensively with death, the after-death state, and the nature of the immortal soul.</p>
+        </div>
+        <div class="space-y-3">
+          <h3 class="font-cinzel text-sm text-violet-200">Chapter III — Ra-Hoor-Khuit</h3>
+          <p class="text-violet-100/70 text-sm leading-relaxed">The third chapter is spoken by <strong class="text-violet-200">Ra-Hoor-Khuit</strong> — the hawk-headed solar war god, who announces his enthronement as the lord of the new Aeon. This is the most controversial chapter — confrontational, even violent in places, with passages about trampling down the followers of older religions and the law of strength. Thelemic interpreters read these passages symbolically — as the overcoming of internal psychological and spiritual obstacles rather than literal violence — but they have generated considerable misunderstanding. Ra-Hoor-Khuit appoints Crowley as his prophet and provides specific instructions for Thelemic practice and organisation.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- KEY DOCTRINES -->
+    <section class="space-y-6">
+      <h2 class="font-cinzel text-2xl text-violet-300 text-center tracking-wide">Key Doctrines</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-violet-200">True Will</h3>
+          <p class="text-violet-100/70 text-sm leading-relaxed">The central concept of Thelema — "Do what thou wilt shall be the whole of the Law" — is frequently misunderstood as a charter for selfish self-indulgence. In Crowley's elaboration, the "will" in question is not the ego's passing desires but the <em>True Will</em> (<em>Thelema</em>) — the unique, deep purpose of each individual soul, analogous to a star's orbital path. To do one's True Will is not hedonism but the most rigorous form of self-knowledge and self-discipline: discovering what you fundamentally are, in your deepest nature, and enacting that with complete commitment. Interference with another's True Will — attempting to divert their orbit — is the primary Thelemic sin.</p>
+        </div>
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-violet-200">The Aeon of Horus</h3>
+          <p class="text-violet-100/70 text-sm leading-relaxed">Crowley proposed a tripartite scheme of cosmic history — the Aeon of Isis (goddess-worship, matriarchy, the ancient world), the Aeon of Osiris (the dying-and-rising god, patriarchal religions, Christianity, Islam), and the Aeon of Horus (the crowned and conquering child, the assertion of individual divinity, Thelema). The inauguration of the Aeon of Horus in 1904 does not mean an immediate transformation of the world but the setting of a new spiritual tone that will gradually permeate human consciousness over the coming centuries. The practitioner of Thelema lives as if already in the new Aeon — claiming their divine nature in the midst of a world still largely governed by Osirian values.</p>
+        </div>
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-violet-200">Love Under Will</h3>
+          <p class="text-violet-100/70 text-sm leading-relaxed">The second Law of Thelema — "Love is the law, love under will" — qualifies the first. Will alone, without love, becomes tyranny; love alone, without will, becomes sentimentality. The integration of both — directed love, willed devotion, the magnetic force of eros guided by the clear light of True Will — is the supreme Thelemic practice. The term "love" here encompasses all forms of connection, attraction, and union: sexual, devotional, intellectual, and mystical. The Great Work of Thelemic magic is the alchemical marriage of will and love in the practitioner's own consciousness.</p>
+        </div>
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-violet-200">The Holy Guardian Angel</h3>
+          <p class="text-violet-100/70 text-sm leading-relaxed">While not explicitly named in the Book of the Law, the concept of the <em>Holy Guardian Angel</em> (HGA) — the divine higher self of each individual, whose "Knowledge and Conversation" is the central initiatory goal of Thelemic magic — is implicit throughout. The HGA represents the practitioner's True Will made conscious and personal; achieving Knowledge and Conversation of the HGA is the threshold experience that resolves all confusion about one's purpose and destiny. Crowley considered the attainment of the Knowledge and Conversation of the HGA — through the elaborate magical programme of Abramelin and similar systems — the essential first step in the Great Work.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- HISTORICAL IMPACT -->
+    <section class="rounded-2xl p-8 space-y-5" style="background: linear-gradient(135deg, rgba(168,85,247,0.1), rgba(147,51,234,0.06));">
+      <h2 class="font-cinzel text-2xl text-violet-300 text-center tracking-wide">Historical Impact</h2>
+      <div class="space-y-4 text-sm text-violet-100/80 leading-relaxed max-w-4xl mx-auto">
+        <p>
+          The Book of the Law became the founding document of two major initiatic organisations: the <strong class="text-violet-200">A∴A∴</strong> (Argenteum Astrum — the Silver Star), Crowley's own magical order dedicated to individual spiritual development through the Thelemic system, and the <strong class="text-violet-200">O.T.O.</strong> (Ordo Templi Orientis — Order of the Eastern Temple), an older fraternal order that Crowley reformulated along Thelemic lines and which continues to operate internationally today. Both organisations use the Book of the Law as their central sacred text and Crowley's massive magical diary <em>The Equinox</em> as their primary reference work.
+        </p>
+        <p>
+          Crowley's influence on 20th-century occultism has been immense — and deeply contested. He is simultaneously revered as a genuine prophet and magical genius and condemned as a dangerous charlatan. His impact can be traced through Gerald Gardner (whose Wicca drew on Thelemic ritual), Jack Parsons (the rocket scientist and O.T.O. member who conducted Thelemic workings in California in the 1940s), the Church of Satan (Anton LaVey's 1966 organisation, significantly influenced by Crowley), the psychedelic movement (Timothy Leary declared himself Crowley's successor), and a vast range of contemporary magical and countercultural movements.
+        </p>
+      </div>
+    </section>
+
+    <!-- KEY SCHOLARS -->
+    <section class="space-y-6">
+      <h2 class="font-cinzel text-2xl text-violet-300 text-center tracking-wide">Key Scholars &amp; Interpreters</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-violet-200">Kenneth Grant (1924–2011)</h3>
+          <p class="text-violet-100/70 text-sm leading-relaxed">Crowley's last initiated student and the most controversial interpreter of his legacy. Grant's "Typhonian Trilogies" — nine volumes published between 1972 and 2002 — developed Thelema in a highly personal direction, connecting it with Lovecraftian mythology, Draconian magic, and his own visionary explorations. Grant's approach is more literary than practical, but his detailed analyses of the Book of the Law's hidden ciphers and his development of the concept of the "Maatian current" have been enormously influential in left-hand-path magical circles.</p>
+        </div>
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-violet-200">Israel Regardie (1907–1985)</h3>
+          <p class="text-violet-100/70 text-sm leading-relaxed">Crowley's former personal secretary and one of the most important transmitters of his legacy, whose decision to publish the secret rituals of the Hermetic Order of the Golden Dawn (1937–40) — against strong opposition — made the single most influential body of Western magical material available to the public. Regardie's commentaries on the Book of the Law, and his broader programme of integrating Thelemic magic with Jungian psychology and Wilhelm Reich's character analysis, shaped the mainstream of serious Western occultism through the latter half of the 20th century.</p>
+        </div>
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-violet-200">Lon Milo DuQuette (b. 1948)</h3>
+          <p class="text-violet-100/70 text-sm leading-relaxed">The American O.T.O. officer and prolific author whose accessible, humorous, and intellectually serious books on Thelema have introduced Crowley's system to a new generation. DuQuette's <em>The Magick of Aleister Crowley: A Handbook of the Rituals of Thelema</em> (1993, revised 2003) and <em>Understanding Aleister Crowley's Thoth Tarot</em> (2003) have been particularly influential. His approach — self-deprecating about occultism's more grandiose claims while deeply committed to the genuine transformative potential of the Thelemic path — represents a healthy corrective to both credulous enthusiasm and dismissive scepticism.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="text-center mt-4">
+      <a href="/esoteric-corpora" class="text-violet-400/60 hover:text-violet-300 text-sm transition-colors">← Esoteric Texts &amp; Corpora</a>
+    </div>
+
+  </div><!-- end content wrapper -->
+
+  <footer class="relative z-10 text-center py-8 text-violet-400/40 text-xs mt-8">
+    <p class="italic">"Do what thou wilt shall be the whole of the Law. Love is the law, love under will." — Liber AL vel Legis I:40</p>
+    <p class="mt-2">Esoteric Wisdom · Built with ✨ in Rust</p>
+    <p class="mt-2"><a href="/home" class="hover:text-violet-300 transition-colors">← Back to Portal</a></p>
+  </footer>
+
+  <script>
+    const sf = document.getElementById('starfield');
+    for (let i = 0; i < 200; i++) {
+      const s = document.createElement('div');
+      s.className = 'star';
+      const size = Math.random() * 2.5 + 0.5;
+      s.style.cssText = `width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--dur:${2+Math.random()*4}s;--delay:${Math.random()*5}s;opacity:${0.2+Math.random()*0.8};`;
+      sf.appendChild(s);
+    }
+  </script>
+
+</body>
+</html>

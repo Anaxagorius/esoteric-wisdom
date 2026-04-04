@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zohar — Esoteric Texts &amp; Corpora</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <meta property="og:title" content="Zohar — Esoteric Texts &amp; Corpora" />
+  <meta property="og:description" content="The foundational work of Kabbalistic mysticism — the Book of Splendour, attributed to Shimon bar Yochai and revealed by Moses de León in 13th-century Castile." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://esoteric-wisdom.onrender.com/esoteric-corpora/zohar" />
+  <meta property="og:image" content="https://esoteric-wisdom.onrender.com/og-image.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Raleway', sans-serif; }
+    .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+
+    @keyframes twinkle { 0%,100% { opacity: 0.2; } 50% { opacity: 1; } }
+    .star { position: absolute; border-radius: 50%; background: white; animation: twinkle var(--dur,3s) ease-in-out infinite; animation-delay: var(--delay,0s); }
+
+    @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+    .floating { animation: float 5s ease-in-out infinite; }
+
+    @keyframes shimmer {
+      0% { background-position: -200% center; }
+      100% { background-position: 200% center; }
+    }
+
+    .nav-link { position: relative; transition: all 0.3s; }
+    .nav-link::after {
+      content: ''; position: absolute; bottom: -2px; left: 0;
+      width: 0; height: 2px;
+      background: linear-gradient(90deg, #f59e0b, #a78bfa);
+      transition: width 0.3s;
+    }
+    .nav-link:hover::after { width: 100%; }
+
+    .aurora-text {
+      background: linear-gradient(90deg, #818cf8, #6366f1, #a5b4fc, #4f46e5, #818cf8);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 4s linear infinite;
+    }
+
+    .corpus-card {
+      background: linear-gradient(135deg, rgba(99,102,241,0.08), rgba(79,70,229,0.04));
+      border: 1px solid rgba(99,102,241,0.25);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+    .corpus-card:hover {
+      transform: translateY(-6px) scale(1.01);
+      box-shadow: 0 0 28px 5px rgba(99,102,241,0.25);
+      border-color: rgba(99,102,241,0.5);
+    }
+
+    .timeline-item {
+      border-left: 2px solid rgba(99,102,241,0.3);
+      padding-left: 1.25rem;
+      padding-bottom: 1.25rem;
+      position: relative;
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -5px; top: 4px;
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: #818cf8;
+      box-shadow: 0 0 8px rgba(99,102,241,0.7);
+    }
+  </style>
+</head>
+<body class="min-h-screen text-indigo-100 overflow-x-hidden" style="background: radial-gradient(ellipse at top, #0a0520 0%, #12083a 20%, #050210 55%, #000000 100%);">
+
+  <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+
+  <!-- NAV -->
+  <nav class="sticky top-0 z-50 flex items-center justify-between px-6 py-3 bg-black/40 backdrop-blur-md border-b border-violet-500/20 flex-wrap gap-y-2">
+    <a href="/home" class="font-cinzel text-amber-300 text-sm tracking-widest shrink-0">✦ Esoteric Wisdom ✦</a>
+    <div class="flex items-center gap-x-3 gap-y-1 text-xs text-violet-200 flex-wrap justify-end">
+      <a href="/astrology" class="nav-link hover:text-amber-300 transition-colors">Astrology</a>
+      <a href="/meditation" class="nav-link hover:text-amber-300 transition-colors">Meditation</a>
+      <a href="/tarot/select" class="nav-link hover:text-amber-300 transition-colors">Tarot</a>
+      <a href="/numerology" class="nav-link hover:text-amber-300 transition-colors">Numerology</a>
+      <a href="/crystals" class="nav-link hover:text-amber-300 transition-colors">Crystals</a>
+      <a href="/runes" class="nav-link hover:text-amber-300 transition-colors">Runes</a>
+      <a href="/shamanism" class="nav-link hover:text-amber-300 transition-colors">Shamanism</a>
+      <a href="/druidism" class="nav-link hover:text-amber-300 transition-colors">Druidism</a>
+      <a href="/akashic-records" class="nav-link hover:text-amber-300 transition-colors">Akashic Records</a>
+      <a href="/wicca" class="nav-link hover:text-amber-300 transition-colors">Wicca</a>
+      <a href="/alchemy" class="nav-link hover:text-amber-300 transition-colors">Alchemy</a>
+      <a href="/gateway-process" class="nav-link hover:text-amber-300 transition-colors">Gateway Process</a>
+      <a href="/remote-viewing" class="nav-link hover:text-amber-300 transition-colors">Remote Viewing</a>
+      <a href="/khasarov-mirror" class="nav-link hover:text-amber-300 transition-colors">Khasarov Mirror</a>
+      <a href="/western-esotericism" class="nav-link hover:text-amber-300 transition-colors">Western Esotericism</a>
+      <a href="/eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Eastern Esotericism</a>
+      <a href="/indigenous-esotericism" class="nav-link hover:text-amber-300 transition-colors">Indigenous Esotericism</a>
+      <a href="/middle-eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Middle Eastern Mysteries</a>
+      <a href="/esoteric-practices" class="nav-link hover:text-amber-300 transition-colors">Esoteric Practices</a>
+      <a href="/esoteric-corpora" class="nav-link text-amber-300 font-semibold">Sacred Texts</a>
+      <a href="/journal/reflections" class="nav-link text-emerald-300 hover:text-emerald-200 transition-colors">✨ Reflections</a>
+      <a href="https://ko-fi.com/esotericwisdom" target="_blank" rel="noopener noreferrer"
+         class="px-3 py-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-white font-semibold hover:scale-105 transition-transform shrink-0">☕ Support</a>
+    </div>
+  </nav>
+
+  <!-- CONTENT WRAPPER -->
+  <div class="relative z-10 max-w-5xl mx-auto space-y-10 pt-6 px-4 pb-12">
+
+    <!-- BREADCRUMB -->
+    <div>
+      <a href="/esoteric-corpora" class="text-xs text-indigo-300/60 hover:text-indigo-300 transition-colors">← Esoteric Texts &amp; Corpora</a>
+    </div>
+
+    <!-- HERO -->
+    <section class="text-center py-12 space-y-6">
+      <div class="text-7xl floating">✡️</div>
+      <h1 class="font-cinzel text-4xl md:text-5xl font-bold aurora-text leading-tight">
+        Zohar
+      </h1>
+      <p class="max-w-3xl mx-auto text-indigo-200/80 text-lg leading-relaxed">
+        The <em>Sefer ha-Zohar</em> — the "Book of Splendour" — is the central sacred text of Kabbalistic mysticism. A vast Aramaic work presenting itself as the teachings of the 2nd-century sage Shimon bar Yochai, it appeared in 13th-century Castile and irrevocably transformed the landscape of Jewish spirituality.
+      </p>
+    </section>
+
+    <!-- DISCLAIMER -->
+    <section class="rounded-2xl p-6 space-y-4" style="background: linear-gradient(135deg, rgba(180,60,0,0.15), rgba(120,30,0,0.08)); border: 1px solid rgba(251,146,60,0.3);">
+      <div class="flex items-start gap-4">
+        <span class="text-3xl flex-shrink-0">⚠️</span>
+        <div>
+          <h2 class="font-cinzel text-lg text-amber-300 mb-2">For Educational &amp; Informational Purposes Only</h2>
+          <p class="text-amber-100/85 text-sm leading-relaxed">
+            The content on this page is provided solely for educational and historical study. The texts and practices described here derive from diverse sacred traditions and carry genuine power within those contexts. Readers are encouraged to approach these traditions with respect and discernment. Attempting advanced practices described in these texts without proper guidance from a qualified teacher is not recommended and may carry psychological or spiritual risks. If you are drawn to pursue any of these practices, seek instruction from a qualified, lineage-authorised teacher within the tradition in question.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT IS THE ZOHAR? -->
+    <section class="rounded-2xl p-8 space-y-6" style="background: linear-gradient(135deg, rgba(99,102,241,0.1), rgba(79,70,229,0.06));">
+      <h2 class="font-cinzel text-2xl text-indigo-300 text-center tracking-wide">What Is the Zohar?</h2>
+      <div class="space-y-4 text-sm text-indigo-100/80 leading-relaxed max-w-4xl mx-auto">
+        <p>
+          The <em>Sefer ha-Zohar</em> — the "Book of Splendour" — is the foundational sacred text of Jewish mysticism, the Kabbalah. Written primarily in Aramaic (with some sections in Hebrew), it takes the form of a mystical commentary on the Torah, organised around the wanderings and discourses of the 2nd-century rabbi <strong class="text-indigo-200">Shimon bar Yochai</strong> and his circle of disciples. The surface narrative presents these sages in the hills of Roman Palestine, encountering pilgrims, debating scripture, and receiving celestial illuminations as they walk from town to town — a richly imagined literary landscape that frames some of the most profound mystical speculation in the history of religion.
+        </p>
+        <p>
+          The Zohar is not a single coherent treatise but an immense and varied literary corpus — in its main printed edition running to over twenty-three volumes in the standard Vilna printing — encompassing mystical midrash (scriptural commentary and elaboration), theosophical speculation about the inner life of God, descriptions of celestial palaces and infernal realms, accounts of the soul's origin and destiny, erotic mysticism centred on the sacred marriage of masculine and feminine divine principles, ethical teaching, and passages of extraordinary poetic beauty. Its sheer diversity testifies both to the richness of the Kabbalistic vision and to the complex compositional history of the text.
+        </p>
+        <p>
+          The Zohar's central theological contribution is its development of the doctrine of the <strong class="text-indigo-200">Sefirot</strong> — ten divine emanations through which the infinite, unknowable God (<em>Ein Sof</em>, "Without End") manifests and acts in the world. The Sefirot are not merely abstract philosophical categories but living divine powers, each with its own character, symbolic associations, and interrelationships — forming together a complex "body" of the divine that is simultaneously a map of cosmic reality and a guide to the inner life of the soul. Meditation on the Sefirot, understanding their relationships, and cultivating the virtues associated with each became the central practise of Kabbalistic spiritual life.
+        </p>
+      </div>
+    </section>
+
+    <!-- ORIGINS & AUTHORSHIP -->
+    <section class="rounded-2xl p-8 space-y-5" style="background: linear-gradient(135deg, rgba(79,70,229,0.1), rgba(55,48,163,0.06));">
+      <h2 class="font-cinzel text-2xl text-indigo-300 text-center tracking-wide">Origins &amp; Authorship</h2>
+      <div class="space-y-4 text-sm text-indigo-100/80 leading-relaxed max-w-4xl mx-auto">
+        <p>
+          The question of the Zohar's authorship was one of the most contentious in the history of Jewish scholarship. The text presents itself as the ancient wisdom of Shimon bar Yochai (c. 100–160 CE) and his companions, suggesting an antiquity placing it alongside the Mishnah and the early Midrashim. The first appearance of Zoharic texts in history, however, occurs in the late 13th century in Castile, when <strong class="text-indigo-200">Moses de León</strong> (c. 1240–1305) began distributing sections of the text to other Kabbalists. He attributed the work to Shimon bar Yochai, claiming to have obtained an ancient manuscript.
+        </p>
+        <p>
+          The strongest case for de León's own authorship was made by the great 20th-century scholar of Kabbalah, <strong class="text-indigo-200">Gershom Scholem</strong> (1897–1982). In his magisterial <em>Major Trends in Jewish Mysticism</em> (1941) and his encyclopaedia article on the Zohar, Scholem marshalled extensive philological evidence: the Zohar contains numerous anachronisms (references to medieval Jewish institutions, post-Talmudic texts, and Spanish customs that could not have existed in 2nd-century Palestine), its Aramaic is artificial and shows the influence of Spanish Hebrew, and its theological concerns are characteristic of 13th-century Kabbalah rather than the Tannaitic period. Scholem concluded that Moses de León was the sole or principal author, composing the Zohar as an inspired literary and spiritual creation rather than a fraud — a <em>pseudepigraph</em> in a tradition that had always understood sacred writing as channelled divine wisdom rather than individual authorship.
+        </p>
+        <p>
+          More recent scholarship, particularly the work of <strong class="text-indigo-200">Yehuda Liebes</strong> and <strong class="text-indigo-200">Daniel Abrams</strong>, has refined this picture, suggesting that the Zohar may be the product of a circle of Kabbalists around Moses de León rather than a single author — a creative communal enterprise in which multiple voices contributed to an emergent canonical text. Whatever its compositional history, the Zohar's status as sacred scripture within Judaism — and its influence on the entire subsequent development of Kabbalah — is beyond question.
+        </p>
+      </div>
+    </section>
+
+    <!-- STRUCTURE & CONTENTS -->
+    <section class="space-y-6">
+      <h2 class="font-cinzel text-2xl text-indigo-300 text-center tracking-wide">Structure &amp; Contents</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-indigo-200">The Main Zohar</h3>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">The bulk of the Zoharic corpus, organised as a mystical commentary on the five books of the Torah. The narrative follows Shimon bar Yochai and his companions — his son Eleazar, Abba, Yose, Yehuda, Yitzhak, Hiyya, and others — as they travel, study, encounter strangers, and receive celestial illuminations. The commentary ranges from relatively straightforward homiletical interpretation to passages of the most abstruse theosophical complexity.</p>
+        </div>
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-indigo-200">Idra Rabba &amp; Idra Zuṭa</h3>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">The "Greater Assembly" and "Lesser Assembly" — two climactic sections describing the most secret Kabbalistic teachings revealed by Shimon bar Yochai to his innermost circle. The Idra Rabba contains the most detailed descriptions of the divine physiognomy (<em>Shi'ur Qomah</em> — the mystical measurement of the divine body), while the Idra Zuṭa records Shimon's deathbed teachings and his luminous departure from the world.</p>
+        </div>
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-indigo-200">Sifra de-Tzniuta</h3>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">The "Book of Concealment" — a cryptic and highly compressed section of the Zohar, just five short chapters, dealing with the most hidden aspects of the divine nature. It served as the basis for the Lurianic Kabbalist Hayyim Vital's commentary and was considered the most esoteric stratum of the entire Zoharic corpus. Its dense, allusive style has generated centuries of interpretation and debate.</p>
+        </div>
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-indigo-200">Tiqqunei Zohar</h3>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">Seventy (or more) "emendations" or "rectifications" of the first word of the Torah (<em>Bereshit</em>, "In the beginning"), each offering a different mystical interpretation. The Tiqqunei Zohar, while preserved alongside the main Zohar, is now generally believed to be the work of a different author working somewhat later, and its more systematic and somewhat more accessible style has made it particularly widely studied.</p>
+        </div>
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-indigo-200">Zohar Ḥadash</h3>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">The "New Zohar" — additional Zoharic texts, primarily on the books of Ruth, Song of Songs, and Lamentations, that were not included in the main printed editions. First published in Salonika in 1597 from manuscripts in the possession of Safedian Kabbalists, the Zohar Ḥadash represents another stratum of Zoharic composition and demonstrates the continued vitality of the Zoharic literary tradition in the centuries following the initial composition.</p>
+        </div>
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-indigo-200">Ra'ya Mehemna</h3>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">The "Faithful Shepherd" — a section woven throughout the main Zohar in which Moses (the "Faithful Shepherd") appears to Shimon bar Yochai and his circle to explain the mystical meaning of the Torah's commandments. The Ra'ya Mehemna is now generally considered a later addition to the Zoharic corpus, composed by a different hand with a more messianic and eschatological orientation than the main body of the text.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- KEY THEMES -->
+    <section class="rounded-2xl p-8 space-y-6" style="background: linear-gradient(135deg, rgba(99,102,241,0.1), rgba(79,70,229,0.06));">
+      <h2 class="font-cinzel text-2xl text-indigo-300 text-center tracking-wide">Key Themes</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-indigo-100/80 leading-relaxed">
+        <div class="space-y-4">
+          <p><strong class="text-indigo-200">Ein Sof — The Infinite.</strong> The ultimate divine reality in the Zohar is <em>Ein Sof</em> — "Without End" or "Infinite" — a designation emphasising that God in his innermost nature utterly transcends all attributes, qualities, and concepts. Ein Sof cannot be described, named, or even properly said to exist in the way that finite things exist. This radical apophatic theology prevents any idolatrous reduction of God to a concept and points towards the mystical silence beyond all speech.</p>
+          <p><strong class="text-indigo-200">The Sefirot.</strong> The ten Sefirot — Keter (Crown), Ḥokhmah (Wisdom), Binah (Understanding), Ḥesed (Loving-kindness), Gevurah (Strength), Tiferet (Beauty), Netzaḥ (Eternity), Hod (Splendour), Yesod (Foundation), and Malkhut (Kingdom) — are the ten divine emanations through which Ein Sof manifests and through which divine energy flows into the world. The Zohar presents them as a living organic system, a cosmic Tree of Life with intricate interrelationships, polarities, and pathways.</p>
+          <p><strong class="text-indigo-200">The Shekhinah.</strong> The tenth Sefirah, Malkhut, is identified with the <em>Shekhinah</em> — the feminine divine presence, the "dwelling" of God in the world. The Shekhinah goes into exile with Israel at the destruction of the Temple; her reunion with the masculine divine principle (Tiferet) is the ultimate cosmic and eschatological goal. The Zohar's erotic mysticism — including its famous image of the sacred marriage (<em>hieros gamos</em>) of Sabbath as the union of the divine bride and bridegroom — centred on this theme.</p>
+        </div>
+        <div class="space-y-4">
+          <p><strong class="text-indigo-200">Torah as Divine Body.</strong> The Zohar understands the Torah not merely as a legal or narrative text but as the very body of God — a living organism whose every word, letter, and cantillation mark encodes infinite divine meaning. The mystical enterprise of Torah study is thus not merely intellectual but participatory — a practice through which the Kabbalist enters into the divine life itself. The Zohar presents multiple levels of Torah interpretation (the simple meaning, the allegorical, the Talmudic-legal, and the mystical) in the famous acronym <em>PaRDeS</em>.</p>
+          <p><strong class="text-indigo-200">Divine Sparks &amp; Teshuvah.</strong> The Zohar teaches that human souls contain sparks of divine light that fell from the divine realm at the moment of primordial cosmic contraction. Through <em>teshuvah</em> (return, repentance) — moral and spiritual rectification of one's deeds and intentions — these sparks are progressively liberated and restored to their divine source. The cumulative teshuvah of Israel is the process by which the Shekhinah is gathered from exile and the cosmic harmony disrupted by Adam's sin is ultimately restored.</p>
+          <p><strong class="text-indigo-200">The Mystical Significance of the Sabbath.</strong> No theme in the Zohar is treated with greater love and richness than the Sabbath. The Sabbath is the Shekhinah herself — the divine Queen, the Sabbath Bride, who arrives every Friday evening and whose presence saturates the world with a quality of divine light and rest unavailable on other days. The Zoharic Sabbath liturgy and practice became the model for the spectacular Sabbath mysticism of the Safed school and ultimately for Hasidic spirituality.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- HISTORICAL IMPACT -->
+    <section class="space-y-6">
+      <h2 class="font-cinzel text-2xl text-indigo-300 text-center tracking-wide">Historical Impact</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-indigo-200">The Safed School</h3>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">In 16th-century Safed (northern Palestine), the Zohar became the central sacred text of the most creative period of Kabbalistic development since its composition. Moses Cordovero (1522–1570) produced the most systematic philosophical exposition of the Zoharic system, while Isaac Luria (1534–1572) — the "Ari," the Holy Lion — developed the revolutionary Lurianic Kabbalah, building on Zoharic foundations but introducing radically new doctrines of tzimtzum (divine contraction), shevirat ha-kelim (the breaking of the vessels), and tikkun (cosmic rectification).</p>
+        </div>
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-indigo-200">The Sabbatian Movement</h3>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">The messianic movement centred on Sabbatai Zevi (1626–1676) — the most significant messianic episode in post-biblical Jewish history — was saturated in Zoharic and Lurianic imagery. Sabbatai's prophet Nathan of Gaza interpreted the movement in Kabbalistic terms, and the crisis provoked by Sabbatai's conversion to Islam under Ottoman pressure generated profound theological reflection on the relationship between tikkun, exile, and the nature of holy sinfulness.</p>
+        </div>
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-indigo-200">Hasidism</h3>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">The Hasidic movement, founded by the Baal Shem Tov (Israel ben Eliezer, c. 1698–1760) in 18th-century Poland, democratised the Zohar's mystical vision, making its central insights accessible to ordinary Jews through story, song, and joyful devotion. Hasidic masters reinterpreted the Zohar's theosophy as a guide to inner psychological transformation, and the Zohar itself became a devotional text — its study considered meritorious even for those who could not fully understand its meaning.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- KEY SCHOLARS -->
+    <section class="rounded-2xl p-8 space-y-5" style="background: linear-gradient(135deg, rgba(79,70,229,0.1), rgba(55,48,163,0.06));">
+      <h2 class="font-cinzel text-2xl text-indigo-300 text-center tracking-wide">Key Scholars</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-indigo-100/80 leading-relaxed">
+        <div>
+          <p class="text-indigo-200 font-semibold">Gershom Scholem (1897–1982)</p>
+          <p>The founder of the modern academic study of Kabbalah and the greatest Zohar scholar of the 20th century. His works — <em>Major Trends in Jewish Mysticism</em> (1941), <em>Sabbatai Sevi</em> (1973), <em>Kabbalah</em> (1974) — established the historical and philological foundations of Zoharic scholarship and remain indispensable starting points. His argument for Moses de León's authorship fundamentally reframed the text without diminishing its spiritual significance.</p>
+        </div>
+        <div>
+          <p class="text-indigo-200 font-semibold">Isaiah Tishby (1908–1992)</p>
+          <p>The Israeli scholar whose monumental <em>The Wisdom of the Zohar</em> (3 vols., Hebrew 1949–61; English 1989) remains the most comprehensive systematic anthology and analysis of Zoharic thought. Tishby organised the vast Zoharic material by theme — God, Torah, Israel, the soul, messianism, eschatology — providing detailed translations and scholarly commentary that made the Zohar's teaching accessible without reducing its complexity.</p>
+        </div>
+        <div>
+          <p class="text-indigo-200 font-semibold">Yehuda Liebes (b. 1947)</p>
+          <p>Scholem's foremost student and successor at the Hebrew University of Jerusalem, whose research refined and complicated Scholem's account of the Zohar's origins. Liebes proposed that the Zohar was the product of a circle rather than a single author, developed the concept of the Zoharic myth as a living mystical drama, and illuminated the erotic and antinomian dimensions of Zoharic thought with particular insight. His essays collected in <em>Studies in the Zohar</em> (English 1993) are essential reading.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="text-center mt-4">
+      <a href="/esoteric-corpora" class="text-indigo-400/60 hover:text-indigo-300 text-sm transition-colors">← Esoteric Texts &amp; Corpora</a>
+    </div>
+
+  </div><!-- end content wrapper -->
+
+  <footer class="relative z-10 text-center py-8 text-indigo-400/40 text-xs mt-8">
+    <p class="italic">"The Torah's beginning is hidden and its end is hidden; its middle is concealed and its concealment is concealed." — Zohar I:1a</p>
+    <p class="mt-2">Esoteric Wisdom · Built with ✨ in Rust</p>
+    <p class="mt-2"><a href="/home" class="hover:text-indigo-300 transition-colors">← Back to Portal</a></p>
+  </footer>
+
+  <script>
+    const sf = document.getElementById('starfield');
+    for (let i = 0; i < 200; i++) {
+      const s = document.createElement('div');
+      s.className = 'star';
+      const size = Math.random() * 2.5 + 0.5;
+      s.style.cssText = `width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--dur:${2+Math.random()*4}s;--delay:${Math.random()*5}s;opacity:${0.2+Math.random()*0.8};`;
+      sf.appendChild(s);
+    }
+  </script>
+
+</body>
+</html>

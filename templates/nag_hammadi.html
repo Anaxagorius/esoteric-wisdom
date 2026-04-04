@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nag Hammadi Library — Esoteric Texts &amp; Corpora</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <meta property="og:title" content="Nag Hammadi Library — Esoteric Texts &amp; Corpora" />
+  <meta property="og:description" content="The 1945 discovery that transformed our understanding of Gnosticism — fifty-two Coptic texts preserved in clay jars for sixteen centuries." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://esoteric-wisdom.onrender.com/esoteric-corpora/nag-hammadi" />
+  <meta property="og:image" content="https://esoteric-wisdom.onrender.com/og-image.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Raleway', sans-serif; }
+    .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+
+    @keyframes twinkle { 0%,100% { opacity: 0.2; } 50% { opacity: 1; } }
+    .star { position: absolute; border-radius: 50%; background: white; animation: twinkle var(--dur,3s) ease-in-out infinite; animation-delay: var(--delay,0s); }
+
+    @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+    .floating { animation: float 5s ease-in-out infinite; }
+
+    @keyframes shimmer {
+      0% { background-position: -200% center; }
+      100% { background-position: 200% center; }
+    }
+
+    .nav-link { position: relative; transition: all 0.3s; }
+    .nav-link::after {
+      content: ''; position: absolute; bottom: -2px; left: 0;
+      width: 0; height: 2px;
+      background: linear-gradient(90deg, #f59e0b, #a78bfa);
+      transition: width 0.3s;
+    }
+    .nav-link:hover::after { width: 100%; }
+
+    .aurora-text {
+      background: linear-gradient(90deg, #d97706, #b45309, #fbbf24, #92400e, #d97706);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 4s linear infinite;
+    }
+
+    .corpus-card {
+      background: linear-gradient(135deg, rgba(180,83,9,0.08), rgba(120,53,15,0.05));
+      border: 1px solid rgba(180,83,9,0.25);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+    .corpus-card:hover {
+      transform: translateY(-6px) scale(1.01);
+      box-shadow: 0 0 28px 5px rgba(180,83,9,0.25);
+      border-color: rgba(180,83,9,0.5);
+    }
+
+    .timeline-item {
+      border-left: 2px solid rgba(180,83,9,0.3);
+      padding-left: 1.25rem;
+      padding-bottom: 1.25rem;
+      position: relative;
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -5px; top: 4px;
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: #d97706;
+      box-shadow: 0 0 8px rgba(180,83,9,0.6);
+    }
+  </style>
+</head>
+<body class="min-h-screen text-amber-100 overflow-x-hidden" style="background: radial-gradient(ellipse at top, #1a0f00 0%, #2a1800 20%, #0a0600 55%, #000000 100%);">
+
+  <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+
+  <!-- NAV -->
+  <nav class="sticky top-0 z-50 flex items-center justify-between px-6 py-3 bg-black/40 backdrop-blur-md border-b border-violet-500/20 flex-wrap gap-y-2">
+    <a href="/home" class="font-cinzel text-amber-300 text-sm tracking-widest shrink-0">✦ Esoteric Wisdom ✦</a>
+    <div class="flex items-center gap-x-3 gap-y-1 text-xs text-violet-200 flex-wrap justify-end">
+      <a href="/astrology" class="nav-link hover:text-amber-300 transition-colors">Astrology</a>
+      <a href="/meditation" class="nav-link hover:text-amber-300 transition-colors">Meditation</a>
+      <a href="/tarot/select" class="nav-link hover:text-amber-300 transition-colors">Tarot</a>
+      <a href="/numerology" class="nav-link hover:text-amber-300 transition-colors">Numerology</a>
+      <a href="/crystals" class="nav-link hover:text-amber-300 transition-colors">Crystals</a>
+      <a href="/runes" class="nav-link hover:text-amber-300 transition-colors">Runes</a>
+      <a href="/shamanism" class="nav-link hover:text-amber-300 transition-colors">Shamanism</a>
+      <a href="/druidism" class="nav-link hover:text-amber-300 transition-colors">Druidism</a>
+      <a href="/akashic-records" class="nav-link hover:text-amber-300 transition-colors">Akashic Records</a>
+      <a href="/wicca" class="nav-link hover:text-amber-300 transition-colors">Wicca</a>
+      <a href="/alchemy" class="nav-link hover:text-amber-300 transition-colors">Alchemy</a>
+      <a href="/gateway-process" class="nav-link hover:text-amber-300 transition-colors">Gateway Process</a>
+      <a href="/remote-viewing" class="nav-link hover:text-amber-300 transition-colors">Remote Viewing</a>
+      <a href="/khasarov-mirror" class="nav-link hover:text-amber-300 transition-colors">Khasarov Mirror</a>
+      <a href="/western-esotericism" class="nav-link hover:text-amber-300 transition-colors">Western Esotericism</a>
+      <a href="/eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Eastern Esotericism</a>
+      <a href="/indigenous-esotericism" class="nav-link hover:text-amber-300 transition-colors">Indigenous Esotericism</a>
+      <a href="/middle-eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Middle Eastern Mysteries</a>
+      <a href="/esoteric-practices" class="nav-link hover:text-amber-300 transition-colors">Esoteric Practices</a>
+      <a href="/esoteric-corpora" class="nav-link text-amber-300 font-semibold">Sacred Texts</a>
+      <a href="/journal/reflections" class="nav-link text-emerald-300 hover:text-emerald-200 transition-colors">✨ Reflections</a>
+      <a href="https://ko-fi.com/esotericwisdom" target="_blank" rel="noopener noreferrer"
+         class="px-3 py-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-white font-semibold hover:scale-105 transition-transform shrink-0">☕ Support</a>
+    </div>
+  </nav>
+
+  <!-- CONTENT WRAPPER -->
+  <div class="relative z-10 max-w-5xl mx-auto space-y-10 pt-6 px-4 pb-12">
+
+    <!-- BREADCRUMB -->
+    <div>
+      <a href="/esoteric-corpora" class="text-xs text-amber-300/60 hover:text-amber-300 transition-colors">← Esoteric Texts &amp; Corpora</a>
+    </div>
+
+    <!-- HERO -->
+    <section class="text-center py-12 space-y-6">
+      <div class="text-7xl floating">🏺</div>
+      <h1 class="font-cinzel text-4xl md:text-5xl font-bold aurora-text leading-tight">
+        Nag Hammadi Library
+      </h1>
+      <p class="max-w-3xl mx-auto text-amber-200/80 text-lg leading-relaxed">
+        Thirteen leather-bound codices discovered in Upper Egypt in December 1945 — fifty-two Gnostic texts sealed in a clay jar and buried beside a cliff face for sixteen centuries, their recovery transforming everything scholars thought they knew about early Christianity and Gnosticism.
+      </p>
+    </section>
+
+    <!-- WHAT IS THE NAG HAMMADI LIBRARY? -->
+    <section class="rounded-2xl p-8 space-y-6" style="background: linear-gradient(135deg, rgba(180,83,9,0.1), rgba(120,53,15,0.06));">
+      <h2 class="font-cinzel text-2xl text-amber-300 text-center tracking-wide">What Is the Nag Hammadi Library?</h2>
+      <div class="space-y-4 text-sm text-amber-100/80 leading-relaxed max-w-4xl mx-auto">
+        <p>
+          The Nag Hammadi Library is a collection of thirteen Coptic-language papyrus codices (bound books) containing fifty-two texts, discovered near the town of Nag Hammadi in Upper Egypt in December 1945. The codices are dated to approximately the 4th century CE, though the texts themselves — most originally composed in Greek — are generally older, with some going back to the 1st or 2nd century CE. Together they represent the largest surviving cache of primary Gnostic literature and the most significant archaeological discovery for the history of early Christianity since the identification of the Dead Sea Scrolls.
+        </p>
+        <p>
+          Before this discovery, our knowledge of <strong class="text-amber-200">Gnosticism</strong> — the diverse family of religious movements that flourished in the 2nd and 3rd centuries CE, characterised by the conviction that the material world was created by an inferior or ignorant divine being and that salvation came through esoteric knowledge (<em>gnosis</em>) of one's divine origin — rested almost entirely on hostile descriptions by its orthodox Christian opponents: Irenaeus of Lyon, Hippolytus of Rome, Tertullian, and Epiphanius. These heresiologists (writers against heresy) preserved extensive quotations and summaries of Gnostic doctrines, but always in the context of refuting them.
+        </p>
+        <p>
+          The Nag Hammadi texts gave Gnosticism its voice back. For the first time, scholars could read the Gnostics' own scriptures, hymns, cosmological revelations, and wisdom sayings in something approaching their original form. The resulting picture was both more diverse and more intellectually sophisticated than the heresiological portrait had suggested. The texts ranged from elaborate mythological narratives of cosmic creation and fall to collections of Jesus's sayings that bore little resemblance to canonical Gospel material, from philosophical meditations on the nature of consciousness to liturgical poems of great beauty.
+        </p>
+        <p>
+          The codices were most likely buried around 390 CE — possibly by monks from the nearby Pachomian monastery of St Phoibammon, hiding texts that had been condemned following Athanasius of Alexandria's Easter Letter of 367 CE, in which he listed the canonical books of the New Testament and ordered all others to be destroyed. That this act of preservation was carried out at all, and that the jar remained undisturbed for over fifteen centuries, is one of the most remarkable accidents of intellectual history.
+        </p>
+      </div>
+    </section>
+
+    <!-- THE DISCOVERY -->
+    <section class="rounded-2xl p-8 space-y-5" style="background: linear-gradient(135deg, rgba(120,53,15,0.1), rgba(92,30,5,0.06));">
+      <h2 class="font-cinzel text-2xl text-amber-300 text-center tracking-wide">The Discovery</h2>
+      <div class="space-y-4 text-sm text-amber-100/80 leading-relaxed max-w-4xl mx-auto">
+        <p>
+          In December 1945, a young Egyptian farmer named <strong class="text-amber-200">Muhammad Ali al-Samman</strong> was digging for sabakh (soft soil used as fertiliser) near the cliffs of Jabal al-Tarif, roughly eight kilometres from Nag Hammadi. His mattock struck a large red earthenware jar, about sixty centimetres tall, sealed with a bowl fixed with bitumen. He initially hesitated to open it, fearing it might contain a djinn, but the hope of finding gold overcame his reticence. Inside was not gold but thirteen leather-bound codices wrapped in leather — and at least one loose text found separately.
+        </p>
+        <p>
+          The subsequent history of the codices is a tangled tale of peasant feuds, blood vengeance, antiquities smuggling, and scholarly competition. Muhammad Ali and his brothers killed a man shortly after the discovery — a rival in a long-running family feud — and his mother, fearing a police search of the house, burned several of the papyrus leaves as fuel. Some codices were sold through antiquities dealers in Cairo; others came to the attention of the Coptic Museum in Cairo, which eventually acquired most of them. One codex (Codex I, also called the Jung Codex) was purchased by a Zürich foundation and presented to the psychologist Carl Jung on his 80th birthday in 1953 — a remarkable convergence of the greatest mythologist of the unconscious and the most mythologically rich texts to emerge from antiquity.
+        </p>
+        <p>
+          After years of academic and political obstacles, the complete texts were eventually published by the UNESCO-sponsored international Coptic Gnostic Library project, with the definitive English edition — <em>The Nag Hammadi Library in English</em>, edited by James M. Robinson — appearing in 1977. This publication opened the texts to the general public for the first time and launched a revolution in the study of early Christianity and Gnosticism that continues to this day.
+        </p>
+      </div>
+    </section>
+
+    <!-- KEY TEXTS -->
+    <section class="space-y-6">
+      <h2 class="font-cinzel text-2xl text-amber-300 text-center tracking-wide">Key Texts</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-amber-200">Gospel of Thomas (Codex II)</h3>
+          <p class="text-amber-100/70 text-sm leading-relaxed">A collection of 114 sayings attributed to Jesus, introduced by the line "These are the secret words which the living Jesus spoke, and Didymos Judas Thomas wrote." With no narrative framework, no miracles, and no passion story, the Gospel of Thomas presents Jesus purely as a wisdom teacher whose sayings point toward the discovery of the divine within. Many of its sayings have parallels in the canonical Gospels; others are entirely unknown. Scholars debate whether it preserves genuine early traditions predating the canonical Gospels or represents later Gnostic reinterpretation.</p>
+        </div>
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-amber-200">Gospel of Philip (Codex II)</h3>
+          <p class="text-amber-100/70 text-sm leading-relaxed">A Valentinian Gnostic text taking the form of a collection of meditations and homilies rather than a narrative Gospel. Famous for its description of the bridal chamber as the supreme sacrament — a ritual of sacred union representing the soul's mystical marriage with its angelic counterpart — and for a much-debated passage suggesting a close physical relationship between Jesus and Mary Magdalene. The text explores the nature of light, truth, and the sacramental life with great sophistication.</p>
+        </div>
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-amber-200">Gospel of Truth (Codex I)</h3>
+          <p class="text-amber-100/70 text-sm leading-relaxed">A beautifully written homiletical meditation on the nature of ignorance and its overcoming through gnosis, possibly composed by Valentinus himself (2nd century CE) or one of his disciples. It describes the Aeons of the divine Pleroma, the fall into ignorance resulting from the lack of knowledge of the Father, and the incarnation of the divine Word as the revelation that heals this cosmic wound. One of the most literary and philosophically refined texts in the entire collection.</p>
+        </div>
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-amber-200">Apocryphon of John (Codices II, III, IV)</h3>
+          <p class="text-amber-100/70 text-sm leading-relaxed">Preserved in four separate copies (the most widely copied text in the library), this elaborate revelation discourse presents John the son of Zebedee receiving a visionary encounter with the resurrected Christ, who reveals the true Gnostic cosmogony. The text describes the transcendent Father, the divine Barbelo (the First Thought), the creation of the Aeons of the Pleroma, the fall of Sophia and the creation of Yaldabaoth (the Demiurge), the creation of the material world and human beings, and the secret history of the divine spark imprisoned in matter. It represents the most detailed surviving account of Sethian Gnostic mythology.</p>
+        </div>
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-amber-200">Thunder: Perfect Mind (Codex VI)</h3>
+          <p class="text-amber-100/70 text-sm leading-relaxed">One of the most extraordinary texts in the library — a series of self-proclamations by a female divine figure speaking in a series of startling paradoxes: "I am the first and the last. I am the honoured one and the scorned one. I am the whore and the holy one." The speaker's identity has been variously identified as Sophia, Isis, the divine Feminine, or a heavenly Eve. The text has no parallel in ancient literature and has exerted a powerful influence on feminist theology and religious studies since its discovery.</p>
+        </div>
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-amber-200">Trimorphic Protennoia (Codex XIII)</h3>
+          <p class="text-amber-100/70 text-sm leading-relaxed">A three-part revelation discourse in which the divine First Thought (Protennoia) — the Father's primordial feminine principle — descends three times into the world: as Voice (Father), as Speech (Mother), and as Word or Logos (Son). The third descent, as the Logos who clothes himself in human form, has striking parallels with the Prologue of the Gospel of John, and has fuelled considerable debate about the relationship between Sethian Gnosticism and the Johannine tradition.</p>
+        </div>
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-amber-200">Hypostasis of the Archons (Codex II)</h3>
+          <p class="text-amber-100/70 text-sm leading-relaxed">A Sethian Gnostic text retelling Genesis from a radical perspective: the God who creates the world in Genesis is identified as the Demiurge Samael (Yaldabaoth), a blind and arrogant being who falsely proclaims himself the only God. The serpent of Eden is reread as a positive figure — a teacher sent by the divine Feminine to awaken humanity to knowledge of their true origin. The text participates in a broader tradition of Gnostic "counter-readings" of the Hebrew Bible.</p>
+        </div>
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-amber-200">Allogenes the Stranger (Codex XI)</h3>
+          <p class="text-amber-100/70 text-sm leading-relaxed">A highly philosophical Sethian text in which Allogenes ("the Stranger," i.e., one who belongs to another generation — the divine race of Seth) receives revelations about the nature of the transcendent divine triad: the Invisible Spirit, Barbelo, and the Autogenes (Self-Generated). The text's engagement with Middle Platonic and proto-Plotinian concepts of the absolute One places it at the frontier between Gnosticism and Neoplatonic philosophy, and it was apparently known to Porphyry, who records that Plotinus refuted it.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- GNOSTIC COSMOLOGY -->
+    <section class="rounded-2xl p-8 space-y-6" style="background: linear-gradient(135deg, rgba(180,83,9,0.1), rgba(120,53,15,0.06));">
+      <h2 class="font-cinzel text-2xl text-amber-300 text-center tracking-wide">Gnostic Cosmology</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm text-amber-100/80 leading-relaxed">
+        <div class="space-y-4">
+          <p>
+            The cosmological framework shared by many (though not all) of the Nag Hammadi texts posits a fundamental distinction between the divine realm and the material world. At the summit of reality stands the <strong class="text-amber-200">Pleroma</strong> — the divine Fullness, an eternal realm of light inhabited by the ultimate transcendent God (variously called the Invisible Spirit, the Father, the Monad, or the Forefather) and a series of divine beings called <strong class="text-amber-200">Aeons</strong> (from Greek <em>aiōn</em>, "eternity" or "age"). The Aeons exist as pairs (<em>syzygies</em>) — male-female complements who together constitute the divine fullness.
+          </p>
+          <p>
+            The material world comes into being through a cosmic catastrophe involving one of the lower Aeons, most commonly identified as <strong class="text-amber-200">Sophia</strong> ("Wisdom"). In her desire to know the Father directly — without the mediation of her consort — Sophia generates a formless, deficient being that she hides in shame from the Pleroma. This deficient being is the <strong class="text-amber-200">Demiurge</strong> (Greek <em>dēmiourgos</em>, "craftsman") — the creator of the material world. Ignorant of the true God above him, the Demiurge creates the cosmos and humanity, boasting that there is no god other than himself. In Sethian texts, this figure is called <strong class="text-amber-200">Yaldabaoth</strong> or Samael; in Valentinian texts, he is a less negative figure, an inferior craftsman who does his best with imperfect materials.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <p>
+            Human beings, in the Gnostic understanding, contain within them a <strong class="text-amber-200">divine spark</strong> — a fragment of light that fell from the Pleroma during the cosmic drama surrounding Sophia's fall. This spark is the true inner person, the pneumatic (spiritual) self that is essentially divine and therefore alien to the material world the Demiurge created to contain it. The tragedy of human existence is that most people are unaware of this divine spark, identifying instead with the material body and soul that the Demiurge and his Archons (subordinate cosmic rulers) constructed.
+          </p>
+          <p>
+            The role of the Gnostic revealer — Christ, Seth, Zoroaster, the divine Feminine, or various celestial messengers depending on the specific text — is to awaken the pneumatics to their true nature, providing them with the gnosis necessary to navigate through the Archons' realm after death and return to the Pleroma. This knowledge includes not just theological insight but often specific liturgical formulas, hymns, and passwords needed at the various cosmic checkpoints guarding the ascent. The Gnostic path is thus both a philosophy and a ritual programme of liberation.
+          </p>
+          <p>
+            Not all the Nag Hammadi texts share this elaborate mythological cosmology. The <strong class="text-amber-200">Gospel of Thomas</strong>, for instance, has no Demiurge, no Sophia, no Archons — only wisdom sayings pointing towards the realisation of the divine Kingdom as something present here and now, discovered through inner awakening rather than cosmic escape. This diversity within the library cautions against treating "Gnosticism" as a monolithic system.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- KEY SCHOLARS -->
+    <section class="space-y-6">
+      <h2 class="font-cinzel text-2xl text-amber-300 text-center tracking-wide">Key Scholars</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-amber-200">James M. Robinson (1924–2016)</h3>
+          <p class="text-amber-100/70 text-sm leading-relaxed">The American biblical scholar who directed the international project that produced the definitive English translation, <em>The Nag Hammadi Library in English</em> (1977; revised 1988). Robinson's tenacious editorial leadership over two decades, navigating institutional obstacles, political conflicts, and competing scholarly agendas, was essential to bringing this foundational edition into existence.</p>
+        </div>
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-amber-200">Elaine Pagels (b. 1943)</h3>
+          <p class="text-amber-100/70 text-sm leading-relaxed">The Princeton religious historian whose popular yet rigorous study <em>The Gnostic Gospels</em> (1979) — which won both the National Book Award and the National Book Critics Circle Award — introduced the Nag Hammadi texts to a general readership. Her subsequent works, including <em>Beyond Belief</em> (2003) and <em>The Johannine Gospel in Gnostic Exegesis</em>, have consistently illuminated the Gnostic texts' relationship to canonical Christianity and their enduring relevance to questions of spiritual authority and religious diversity.</p>
+        </div>
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-amber-200">Hans Jonas (1903–1993)</h3>
+          <p class="text-amber-100/70 text-sm leading-relaxed">The German-American philosopher and student of Martin Heidegger whose monumental study <em>The Gnostic Religion: The Message of the Alien God and the Beginnings of Christianity</em> (1958) remains the most philosophically penetrating interpretation of Gnosticism as a coherent existential vision. Jonas argued that Gnosticism anticipated modern nihilism and existentialism in its portrait of the human being as a stranger thrown into an alien and hostile cosmos — but pointed towards transcendence as the answer rather than despair.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="text-center mt-4">
+      <a href="/esoteric-corpora" class="text-amber-400/60 hover:text-amber-300 text-sm transition-colors">← Esoteric Texts &amp; Corpora</a>
+    </div>
+
+  </div><!-- end content wrapper -->
+
+  <footer class="relative z-10 text-center py-8 text-amber-400/40 text-xs mt-8">
+    <p class="italic">"The Kingdom of the Father is spread out upon the earth, and men do not see it." — Gospel of Thomas, Saying 113</p>
+    <p class="mt-2">Esoteric Wisdom · Built with ✨ in Rust</p>
+    <p class="mt-2"><a href="/home" class="hover:text-amber-300 transition-colors">← Back to Portal</a></p>
+  </footer>
+
+  <script>
+    const sf = document.getElementById('starfield');
+    for (let i = 0; i < 200; i++) {
+      const s = document.createElement('div');
+      s.className = 'star';
+      const size = Math.random() * 2.5 + 0.5;
+      s.style.cssText = `width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--dur:${2+Math.random()*4}s;--delay:${Math.random()*5}s;opacity:${0.2+Math.random()*0.8};`;
+      sf.appendChild(s);
+    }
+  </script>
+
+</body>
+</html>

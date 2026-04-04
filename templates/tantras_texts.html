@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tantras — Esoteric Texts &amp; Corpora</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <meta property="og:title" content="Tantras — Esoteric Texts &amp; Corpora" />
+  <meta property="og:description" content="The Tantric scriptural corpus of Hindu and Buddhist traditions — the secret technologies of consciousness transformation." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://esoteric-wisdom.onrender.com/esoteric-corpora/tantras" />
+  <meta property="og:image" content="https://esoteric-wisdom.onrender.com/og-image.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Raleway', sans-serif; }
+    .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+
+    @keyframes twinkle { 0%,100% { opacity: 0.2; } 50% { opacity: 1; } }
+    .star { position: absolute; border-radius: 50%; background: white; animation: twinkle var(--dur,3s) ease-in-out infinite; animation-delay: var(--delay,0s); }
+
+    @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+    .floating { animation: float 5s ease-in-out infinite; }
+
+    @keyframes shimmer {
+      0% { background-position: -200% center; }
+      100% { background-position: 200% center; }
+    }
+
+    .nav-link { position: relative; transition: all 0.3s; }
+    .nav-link::after {
+      content: ''; position: absolute; bottom: -2px; left: 0;
+      width: 0; height: 2px;
+      background: linear-gradient(90deg, #f59e0b, #a78bfa);
+      transition: width 0.3s;
+    }
+    .nav-link:hover::after { width: 100%; }
+
+    .aurora-text {
+      background: linear-gradient(90deg, #f43f5e, #e11d48, #fb7185, #be123c, #f43f5e);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 4s linear infinite;
+    }
+
+    .corpus-card {
+      background: linear-gradient(135deg, rgba(244,63,94,0.07), rgba(190,18,60,0.04));
+      border: 1px solid rgba(244,63,94,0.2);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+    .corpus-card:hover {
+      transform: translateY(-6px) scale(1.01);
+      box-shadow: 0 0 28px 5px rgba(244,63,94,0.25);
+      border-color: rgba(244,63,94,0.5);
+    }
+  </style>
+</head>
+<body class="min-h-screen text-rose-100 overflow-x-hidden" style="background: radial-gradient(ellipse at top, #1a0010 0%, #2a0020 20%, #0a000a 55%, #000000 100%);">
+
+  <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+
+  <!-- NAV -->
+  <nav class="sticky top-0 z-50 flex items-center justify-between px-6 py-3 bg-black/40 backdrop-blur-md border-b border-violet-500/20 flex-wrap gap-y-2">
+    <a href="/home" class="font-cinzel text-amber-300 text-sm tracking-widest shrink-0">✦ Esoteric Wisdom ✦</a>
+    <div class="flex items-center gap-x-3 gap-y-1 text-xs text-violet-200 flex-wrap justify-end">
+      <a href="/astrology" class="nav-link hover:text-amber-300 transition-colors">Astrology</a>
+      <a href="/meditation" class="nav-link hover:text-amber-300 transition-colors">Meditation</a>
+      <a href="/tarot/select" class="nav-link hover:text-amber-300 transition-colors">Tarot</a>
+      <a href="/numerology" class="nav-link hover:text-amber-300 transition-colors">Numerology</a>
+      <a href="/crystals" class="nav-link hover:text-amber-300 transition-colors">Crystals</a>
+      <a href="/runes" class="nav-link hover:text-amber-300 transition-colors">Runes</a>
+      <a href="/shamanism" class="nav-link hover:text-amber-300 transition-colors">Shamanism</a>
+      <a href="/druidism" class="nav-link hover:text-amber-300 transition-colors">Druidism</a>
+      <a href="/akashic-records" class="nav-link hover:text-amber-300 transition-colors">Akashic Records</a>
+      <a href="/wicca" class="nav-link hover:text-amber-300 transition-colors">Wicca</a>
+      <a href="/alchemy" class="nav-link hover:text-amber-300 transition-colors">Alchemy</a>
+      <a href="/gateway-process" class="nav-link hover:text-amber-300 transition-colors">Gateway Process</a>
+      <a href="/remote-viewing" class="nav-link hover:text-amber-300 transition-colors">Remote Viewing</a>
+      <a href="/khasarov-mirror" class="nav-link hover:text-amber-300 transition-colors">Khasarov Mirror</a>
+      <a href="/western-esotericism" class="nav-link hover:text-amber-300 transition-colors">Western Esotericism</a>
+      <a href="/eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Eastern Esotericism</a>
+      <a href="/indigenous-esotericism" class="nav-link hover:text-amber-300 transition-colors">Indigenous Esotericism</a>
+      <a href="/middle-eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Middle Eastern Mysteries</a>
+      <a href="/esoteric-practices" class="nav-link hover:text-amber-300 transition-colors">Esoteric Practices</a>
+      <a href="/esoteric-corpora" class="nav-link text-amber-300 font-semibold">Sacred Texts</a>
+      <a href="/journal/reflections" class="nav-link text-emerald-300 hover:text-emerald-200 transition-colors">✨ Reflections</a>
+      <a href="https://ko-fi.com/esotericwisdom" target="_blank" rel="noopener noreferrer"
+         class="px-3 py-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-white font-semibold hover:scale-105 transition-transform shrink-0">☕ Support</a>
+    </div>
+  </nav>
+
+  <!-- CONTENT WRAPPER -->
+  <div class="relative z-10 max-w-5xl mx-auto space-y-10 pt-6 px-4 pb-12">
+
+    <!-- BREADCRUMB -->
+    <div>
+      <a href="/esoteric-corpora" class="text-xs text-rose-300/60 hover:text-rose-300 transition-colors">← Esoteric Texts &amp; Corpora</a>
+    </div>
+
+    <!-- HERO -->
+    <section class="text-center py-12 space-y-6">
+      <div class="text-7xl floating">🌺</div>
+      <h1 class="font-cinzel text-4xl md:text-5xl font-bold aurora-text leading-tight">
+        Tantras
+      </h1>
+      <p class="max-w-3xl mx-auto text-rose-200/80 text-lg leading-relaxed">
+        The vast revealed scriptural corpus of Hindu and Buddhist Tantra — texts spoken by Śiva, Śakti, or the Buddhas themselves, containing the most sophisticated and powerful technologies of consciousness transformation ever systematised.
+      </p>
+    </section>
+
+    <!-- DISCLAIMER -->
+    <section class="rounded-2xl p-6 space-y-4" style="background: linear-gradient(135deg, rgba(180,60,0,0.15), rgba(120,30,0,0.08)); border: 1px solid rgba(251,146,60,0.3);">
+      <div class="flex items-start gap-4">
+        <span class="text-3xl flex-shrink-0">⚠️</span>
+        <div>
+          <h2 class="font-cinzel text-lg text-amber-300 mb-2">For Educational &amp; Informational Purposes Only</h2>
+          <p class="text-amber-100/85 text-sm leading-relaxed">
+            The content on this page is provided solely for educational and historical study. The texts and practices described here derive from diverse sacred traditions and carry genuine power within those contexts. Readers are encouraged to approach these traditions with respect and discernment. Attempting advanced practices described in these texts without proper guidance from a qualified teacher is not recommended and may carry psychological or spiritual risks. If you are drawn to pursue any of these practices, seek instruction from a qualified, lineage-authorised teacher within the tradition in question.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT ARE THE TANTRAS? -->
+    <section class="rounded-2xl p-8 space-y-6" style="background: linear-gradient(135deg, rgba(244,63,94,0.1), rgba(190,18,60,0.06));">
+      <h2 class="font-cinzel text-2xl text-rose-300 text-center tracking-wide">What Are the Tantras?</h2>
+      <div class="space-y-4 text-sm text-rose-100/80 leading-relaxed max-w-4xl mx-auto">
+        <p>
+          The word <em>tantra</em> derives from Sanskrit roots meaning "to weave" or "to expand" — suggesting both a woven text (a treatise or scripture) and a systematic body of knowledge that weaves together multiple levels of reality into a coherent practice. The Tantras are a vast body of Sanskrit texts — numbering in the hundreds — that form the scriptural foundation of the <strong class="text-rose-200">Āgamic traditions</strong> (from <em>āgama</em>, "that which has come down") in Hinduism and Buddhism. They present themselves as direct revelations from the supreme deity — Śiva, Śakti, Viṣṇu, or the Buddhas and Bodhisattvas — transmitted to humanity as a more direct and powerful path than the Vedic tradition for the conditions of the current age.
+        </p>
+        <p>
+          It is essential to begin by distinguishing the scholarly and traditional understanding of Tantra from its popular Western distortion as primarily a system of sacred sexuality. While some Tantric texts and traditions do incorporate sexual practices as part of a carefully structured ritual and yogic framework — and these are treated with great seriousness within the traditions concerned — the Tantric corpus as a whole is an immensely rich body of yogic, philosophical, cosmological, ritual, and devotional material whose central concern is <strong class="text-rose-200">liberation</strong> (<em>moksha</em> or <em>mukti</em>) and, in many traditions, the attainment of divine powers (<em>siddhi</em>) as evidence of spiritual realisation. The "sexual" Tantras represent a specialised subset of a much larger whole and were always intended for advanced practitioners under strict initiatic supervision.
+        </p>
+        <p>
+          The Tantric traditions began emerging into historical visibility in India from approximately the 5th century CE, reaching their classical flowering between the 8th and 12th centuries — a period that produced the greatest philosophical syntheses (the Kashmir Shaivism of Abhinavagupta, the Bengali Shaiva Siddhānta), the most sophisticated ritual manuals, and the most elaborate yogic systems. Buddhist Tantra (<em>Vajrayāna</em>) developed along a parallel trajectory, reaching its most elaborate form in the Anuttarayoga Tantras of 8th–10th century India before being carried to Tibet, where it continued to develop in extraordinary richness.
+        </p>
+      </div>
+    </section>
+
+    <!-- THE TANTRIC CANON -->
+    <section class="space-y-6">
+      <h2 class="font-cinzel text-2xl text-rose-300 text-center tracking-wide">The Tantric Canon</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-rose-200">Mahānirvāṇa Tantra</h3>
+          <p class="text-rose-100/70 text-sm leading-relaxed">One of the best-known Hindu Tantras in the West, largely due to Arthur Avalon's 1913 translation. A Shakta text presenting itself as a dialogue between Śiva and his consort Pārvatī (Devī), it covers ritual worship, mantra, yantra, and the famous <em>pañcamakāra</em> (five M's) — the five ritual substances used in certain Kaula rites. The Mahānirvāṇa Tantra was particularly influential in the Bengali Tantric revival of the 18th–19th centuries and remains a primary text for Shakta practitioners in the Bengali tradition.</p>
+        </div>
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-rose-200">Kulārṇava Tantra</h3>
+          <p class="text-rose-100/70 text-sm leading-relaxed">The most widely cited and authoritative of the Kaula Tantras — the tradition centred on the "Kula" (family or clan) as the primordial divine energy. The Kulārṇava's seventeen chapters cover the nature of the Kula tradition, the guru-disciple relationship, initiation (<em>dīkṣā</em>), the practice of the pañcamakāra, mantras and their correct use, the nature of the supreme reality (Parama Śiva), and the signs of a true Tantric adept. It is notable for its extensive and sophisticated treatment of the guru's role and its strong emphasis that Tantric practice without proper initiation is not merely ineffective but positively harmful.</p>
+        </div>
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-rose-200">Vijñāna Bhairava Tantra</h3>
+          <p class="text-rose-100/70 text-sm leading-relaxed">A Kashmir Shaiva text of exceptional profundity and practical richness — 112 dhāraṇās (contemplative techniques) for realising the nature of Bhairava (the supreme Śiva as terrible, overwhelming reality). The techniques range from breath awareness and sensory concentration to sudden shock recognition of pure awareness in extreme states of pleasure, pain, or blissful dissolution. Abhinavagupta's commentary (<em>Vivṛti</em>) treats it as one of the most concise expressions of the non-dual recognition (<em>pratyabhijñā</em>) teaching. Jaideva Singh's 1979 translation remains the most accessible English version.</p>
+        </div>
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-rose-200">Guhyasamāja Tantra</h3>
+          <p class="text-rose-100/70 text-sm leading-relaxed">The "Secret Assembly" Tantra — the earliest and most important of the Buddhist Mahāyoga (Father) Tantras, composed around the 3rd–5th century CE. The Guhyasamāja presents the Buddha Akṣobhya seated at the centre of a five-Buddha maṇḍala with his consort Sparśavajrā, with all five Buddhas engaged in union with their consorts — a radical image of enlightenment as inseparable from compassion-wisdom. Nāgārjuna's commentary and its transmission through Āryadeva into the Tibetan tradition made the Guhyasamāja the foundation of the complete-stage (<em>sampannakrama</em>) practices in Tibetan Buddhism.</p>
+        </div>
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-rose-200">Hevajra Tantra</h3>
+          <p class="text-rose-100/70 text-sm leading-relaxed">One of the most important of the Buddhist Anuttarayoga Tantras, the Hevajra presents an eight-armed, dancing Hevajra (the "He Vajra" — the wrathful vajra-holding deity who embodies great bliss) surrounded by a maṇḍala of Ḍākinīs. The text emphasises the central Mahāyoga teaching that all phenomena are empty of inherent existence and that this emptiness (<em>śūnyatā</em>) is inseparable from great bliss (<em>mahāsukha</em>) — the "innate bliss" that is the natural state of awakened mind. The Sakya school of Tibetan Buddhism treats the Hevajra as one of its central tantras.</p>
+        </div>
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-rose-200">Kālachakra Tantra</h3>
+          <p class="text-rose-100/70 text-sm leading-relaxed">The "Wheel of Time" Tantra — the last of the great Indian Buddhist Tantras to appear (c. 10th–11th century) and in many respects the most cosmologically comprehensive. The Kālachakra system integrates Buddhist philosophy with astronomical-astrological calculation, cosmological speculation, and the most detailed map of the subtle body and its transformation through yoga. It is famous in the West for the Dalai Lama's practice of conferring the Kālachakra initiation in public venues with tens of thousands of participants — an historically unprecedented sharing of tantric empowerment.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- STRUCTURE -->
+    <section class="rounded-2xl p-8 space-y-5" style="background: linear-gradient(135deg, rgba(244,63,94,0.1), rgba(190,18,60,0.06));">
+      <h2 class="font-cinzel text-2xl text-rose-300 text-center tracking-wide">Structure of Tantric Texts</h2>
+      <div class="space-y-4 text-sm text-rose-100/80 leading-relaxed max-w-4xl mx-auto">
+        <p>
+          Many Hindu Tantras are organised into four <em>pādas</em> (sections or feet), each addressing a different dimension of the Tantric path. This fourfold structure varies between traditions but typically includes:
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="rounded-xl p-4" style="background: rgba(244,63,94,0.05); border: 1px solid rgba(244,63,94,0.15);">
+            <p class="text-rose-200 font-semibold text-xs mb-2">Vidyā Pāda — Knowledge Section</p>
+            <p class="text-xs leading-relaxed">Philosophical and cosmological teaching: the nature of ultimate reality, the divine hierarchy, the nature of consciousness, the structure of the subtle body, the relationship between liberation and worldly power. The doctrinal foundation without which the subsequent practices lack meaning.</p>
+          </div>
+          <div class="rounded-xl p-4" style="background: rgba(244,63,94,0.05); border: 1px solid rgba(244,63,94,0.15);">
+            <p class="text-rose-200 font-semibold text-xs mb-2">Yoga Pāda — Yoga Section</p>
+            <p class="text-xs leading-relaxed">The inner practices: breath control (<em>prāṇāyāma</em>), visualisation, mantra repetition (<em>japa</em>), concentration (<em>dhāraṇā</em>), meditation (<em>dhyāna</em>), and the more advanced practices of kuṇḍalinī yoga and the various stages of samādhi. The internal technology for transforming consciousness.</p>
+          </div>
+          <div class="rounded-xl p-4" style="background: rgba(244,63,94,0.05); border: 1px solid rgba(244,63,94,0.15);">
+            <p class="text-rose-200 font-semibold text-xs mb-2">Kriyā Pāda — Ritual Section</p>
+            <p class="text-xs leading-relaxed">External ritual practices: the installation of deities, construction of temple sanctuaries, procedures for consecration, daily worship (<em>pūjā</em>), fire ceremony (<em>homa</em>), and the elaborate ritual of initiation (<em>dīkṣā</em>) by which the guru transmits the tradition to the disciple. The embodied, enacted dimension of Tantric practice.</p>
+          </div>
+          <div class="rounded-xl p-4" style="background: rgba(244,63,94,0.05); border: 1px solid rgba(244,63,94,0.15);">
+            <p class="text-rose-200 font-semibold text-xs mb-2">Caryā Pāda — Conduct Section</p>
+            <p class="text-xs leading-relaxed">The rules of conduct for the initiated practitioner: diet, daily schedule, obligations to the guru and fellow initiates, ethical precepts, the code of behaviour in ordinary life that supports and expresses the inner transformation. The integration of Tantric practice into the fabric of daily life.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KEY THEMES -->
+    <section class="space-y-6">
+      <h2 class="font-cinzel text-2xl text-rose-300 text-center tracking-wide">Key Themes</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-rose-200">Śiva-Śakti</h3>
+          <p class="text-rose-100/70 text-sm leading-relaxed">The central theological dyad of Hindu Tantra: Śiva as pure consciousness (chit), and Śakti as the dynamic power (śakti) that enacts creation, maintenance, and dissolution. The entire cosmos is the play (<em>līlā</em>) of their union — a continuous creative-erotic dance that the practitioner is invited to recognise as the very nature of their own awareness. The integration of this divine dyad within oneself is the goal of the Tantric path.</p>
+        </div>
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-rose-200">The Subtle Body</h3>
+          <p class="text-rose-100/70 text-sm leading-relaxed">Tantric texts present detailed maps of the subtle body (<em>sūkṣma śarīra</em>) — the energetic infrastructure underlying the physical organism. This includes the nāḍīs (subtle channels), cakras (energy centres at spinal levels), and the kuṇḍalinī-śakti (dormant divine energy coiled at the base of the spine). The Tantric yogic practices systematically work with this subtle anatomy to awaken kuṇḍalinī and guide her ascent through the cakras to the crown (<em>sahasrāra</em>), where individual consciousness merges with the universal.</p>
+        </div>
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-rose-200">Mantra, Yantra, Mudrā</h3>
+          <p class="text-rose-100/70 text-sm leading-relaxed">The three primary instruments of Tantric practice: <em>mantra</em> (sacred sound — the deity in sonic form), <em>yantra</em> (geometric diagram — the deity in visual form), and <em>mudrā</em> (sacred gesture — the deity in physical form). Together, these three technologies engage the practitioner's voice, vision, and body simultaneously in the work of transformation, creating a complete multi-modal sacred environment in which ordinary consciousness is progressively replaced by divine awareness.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TRANSMISSION -->
+    <section class="rounded-2xl p-8 space-y-5" style="background: linear-gradient(135deg, rgba(244,63,94,0.1), rgba(190,18,60,0.06));">
+      <h2 class="font-cinzel text-2xl text-rose-300 text-center tracking-wide">Transmission &amp; the Guru</h2>
+      <div class="space-y-4 text-sm text-rose-100/80 leading-relaxed max-w-4xl mx-auto">
+        <p>
+          No aspect of the Tantric tradition is more universally emphasised than the absolute necessity of receiving the teaching from a qualified, lineage-authorised guru through formal initiation (<em>dīkṣā</em>). This requirement is not merely a social or institutional formality but reflects a deep understanding of how Tantric knowledge operates: the power of the practices derives not primarily from information about techniques but from the direct energetic transmission (<em>śaktipāta</em> — "descent of grace/power") that flows from a realised teacher to a prepared student. Without this transmission, the Tantric texts remain, as the tradition repeatedly emphasises, "empty letters" — technically readable but spiritually inert.
+        </p>
+        <p>
+          The Kulārṇava Tantra states this emphatically: "The guru is the very face of Śiva. There is no liberation without the guru. The disciple should meditate on the guru as Śiva himself — not as an ordinary human being." This is not a call to blind obedience but to a relationship of profound mutual commitment: the guru accepts responsibility for the disciple's spiritual development, and the disciple surrenders the ego-barriers that would prevent the transmission from taking root. The tradition warns with equal vehemence against false gurus — those who exploit the relationship for personal gain — and against the attempt to practise Tantric methods without proper initiation.
+        </p>
+      </div>
+    </section>
+
+    <!-- KEY SCHOLARS -->
+    <section class="space-y-6">
+      <h2 class="font-cinzel text-2xl text-rose-300 text-center tracking-wide">Key Scholars</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-rose-200">Arthur Avalon / John Woodroffe (1865–1936)</h3>
+          <p class="text-rose-100/70 text-sm leading-relaxed">The British judge and Sanskrit scholar who, under the pseudonym "Arthur Avalon," produced the first systematic presentation of the Hindu Tantric tradition in English, including <em>The Serpent Power</em> (1919), <em>Shakti and Shakta</em> (1918), and dozens of Sanskrit text editions and translations. Woodroffe's work — undertaken in close collaboration with Bengali Tantric scholars — introduced the Tantras to a Western audience for the first time and remains foundational, despite its occasional imprecisions.</p>
+        </div>
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-rose-200">Alexis Sanderson (b. 1948)</h3>
+          <p class="text-rose-100/70 text-sm leading-relaxed">The Oxford Indologist widely regarded as the greatest living authority on the Shaiva and Tantric traditions. Sanderson's scholarship — particularly his papers on the Shaiva Age, the Trika system, and the history of the Śaiva Siddhānta — has fundamentally transformed the academic understanding of Tantra, demonstrating its historical priority over and influence on Buddhist Vajrayāna, and providing the most rigorous analysis of the Tantric scriptural canon yet produced.</p>
+        </div>
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-rose-200">André Padoux (1920–2020)</h3>
+          <p class="text-rose-100/70 text-sm leading-relaxed">The French Indologist whose lifelong study of Tantric mantra theory and the Vāc (divine speech) tradition of Kashmir Shaivism produced the most comprehensive Western analysis of the role of sound and language in the Tantric vision. His major works — <em>Vāc: The Concept of the Word in Selected Hindu Tantras</em> (1990) and <em>The Hindu Tantric World</em> (2017) — represent the definitive Western scholarly treatment of the theoretical foundations of Tantric practice.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="text-center mt-4">
+      <a href="/esoteric-corpora" class="text-rose-400/60 hover:text-rose-300 text-sm transition-colors">← Esoteric Texts &amp; Corpora</a>
+    </div>
+
+  </div><!-- end content wrapper -->
+
+  <footer class="relative z-10 text-center py-8 text-rose-400/40 text-xs mt-8">
+    <p class="italic">"The great Tantric teaching is this: everything that exists is the form of consciousness." — Abhinavagupta, Tantrāloka</p>
+    <p class="mt-2">Esoteric Wisdom · Built with ✨ in Rust</p>
+    <p class="mt-2"><a href="/home" class="hover:text-rose-300 transition-colors">← Back to Portal</a></p>
+  </footer>
+
+  <script>
+    const sf = document.getElementById('starfield');
+    for (let i = 0; i < 200; i++) {
+      const s = document.createElement('div');
+      s.className = 'star';
+      const size = Math.random() * 2.5 + 0.5;
+      s.style.cssText = `width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--dur:${2+Math.random()*4}s;--delay:${Math.random()*5}s;opacity:${0.2+Math.random()*0.8};`;
+      sf.appendChild(s);
+    }
+  </script>
+
+</body>
+</html>

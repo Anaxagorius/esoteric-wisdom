@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Esoteric Texts &amp; Corpora — Esoteric Wisdom</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <meta property="og:title" content="Esoteric Texts &amp; Corpora — Esoteric Wisdom" />
+  <meta property="og:description" content="Sacred scriptures and esoteric texts from across the world's mystical traditions — from the Corpus Hermeticum and Zohar to the Tibetan Book of the Dead and Chaldean Oracles." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://esoteric-wisdom.onrender.com/esoteric-corpora" />
+  <meta property="og:image" content="https://esoteric-wisdom.onrender.com/og-image.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Raleway', sans-serif; }
+    .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+
+    @keyframes twinkle { 0%,100% { opacity: 0.2; } 50% { opacity: 1; } }
+    .star { position: absolute; border-radius: 50%; background: white; animation: twinkle var(--dur,3s) ease-in-out infinite; animation-delay: var(--delay,0s); }
+
+    @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+    .floating { animation: float 5s ease-in-out infinite; }
+
+    @keyframes shimmer {
+      0% { background-position: -200% center; }
+      100% { background-position: 200% center; }
+    }
+
+    .nav-link { position: relative; transition: all 0.3s; }
+    .nav-link::after {
+      content: ''; position: absolute; bottom: -2px; left: 0;
+      width: 0; height: 2px;
+      background: linear-gradient(90deg, #f59e0b, #a78bfa);
+      transition: width 0.3s;
+    }
+    .nav-link:hover::after { width: 100%; }
+
+    .aurora-text {
+      background: linear-gradient(90deg, #2dd4bf, #06b6d4, #67e8f9, #22d3ee, #2dd4bf);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 4s linear infinite;
+    }
+
+    @keyframes teal-glow {
+      0%, 100% { box-shadow: 0 0 10px 2px rgba(20,184,166,0.2); }
+      50% { box-shadow: 0 0 28px 6px rgba(20,184,166,0.45); }
+    }
+
+    .corpus-card {
+      background: linear-gradient(135deg, rgba(20,184,166,0.07), rgba(6,148,162,0.04));
+      border: 1px solid rgba(20,184,166,0.2);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+    .corpus-card:hover {
+      transform: translateY(-6px) scale(1.01);
+      box-shadow: 0 0 28px 5px rgba(20,184,166,0.3);
+      border-color: rgba(20,184,166,0.5);
+    }
+  </style>
+</head>
+<body class="min-h-screen text-teal-100 overflow-x-hidden" style="background: radial-gradient(ellipse at top, #001a1a 0%, #002233 25%, #000d0d 60%, #000000 100%);">
+
+  <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+
+  <!-- NAV -->
+  <nav class="sticky top-0 z-50 flex items-center justify-between px-6 py-3 bg-black/40 backdrop-blur-md border-b border-violet-500/20 flex-wrap gap-y-2">
+    <a href="/home" class="font-cinzel text-amber-300 text-sm tracking-widest shrink-0">✦ Esoteric Wisdom ✦</a>
+    <div class="flex items-center gap-x-3 gap-y-1 text-xs text-violet-200 flex-wrap justify-end">
+      <a href="/astrology" class="nav-link hover:text-amber-300 transition-colors">Astrology</a>
+      <a href="/meditation" class="nav-link hover:text-amber-300 transition-colors">Meditation</a>
+      <a href="/tarot/select" class="nav-link hover:text-amber-300 transition-colors">Tarot</a>
+      <a href="/numerology" class="nav-link hover:text-amber-300 transition-colors">Numerology</a>
+      <a href="/crystals" class="nav-link hover:text-amber-300 transition-colors">Crystals</a>
+      <a href="/runes" class="nav-link hover:text-amber-300 transition-colors">Runes</a>
+      <a href="/shamanism" class="nav-link hover:text-amber-300 transition-colors">Shamanism</a>
+      <a href="/druidism" class="nav-link hover:text-amber-300 transition-colors">Druidism</a>
+      <a href="/akashic-records" class="nav-link hover:text-amber-300 transition-colors">Akashic Records</a>
+      <a href="/wicca" class="nav-link hover:text-amber-300 transition-colors">Wicca</a>
+      <a href="/alchemy" class="nav-link hover:text-amber-300 transition-colors">Alchemy</a>
+      <a href="/gateway-process" class="nav-link hover:text-amber-300 transition-colors">Gateway Process</a>
+      <a href="/remote-viewing" class="nav-link hover:text-amber-300 transition-colors">Remote Viewing</a>
+      <a href="/khasarov-mirror" class="nav-link hover:text-amber-300 transition-colors">Khasarov Mirror</a>
+      <a href="/western-esotericism" class="nav-link hover:text-amber-300 transition-colors">Western Esotericism</a>
+      <a href="/eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Eastern Esotericism</a>
+      <a href="/indigenous-esotericism" class="nav-link hover:text-amber-300 transition-colors">Indigenous Esotericism</a>
+      <a href="/middle-eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Middle Eastern Mysteries</a>
+      <a href="/esoteric-practices" class="nav-link hover:text-amber-300 transition-colors">Esoteric Practices</a>
+      <a href="/esoteric-corpora" class="nav-link text-amber-300 font-semibold">Sacred Texts</a>
+      <a href="/journal/reflections" class="nav-link text-emerald-300 hover:text-emerald-200 transition-colors">✨ Reflections</a>
+      <a href="https://ko-fi.com/esotericwisdom" target="_blank" rel="noopener noreferrer"
+         class="px-3 py-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-white font-semibold hover:scale-105 transition-transform shrink-0">☕ Support</a>
+    </div>
+  </nav>
+
+  <!-- CONTENT WRAPPER -->
+  <div class="relative z-10 max-w-6xl mx-auto space-y-10 pt-6 px-4 pb-12">
+
+    <!-- HERO -->
+    <section class="text-center py-14 space-y-6">
+      <div class="text-7xl floating">📜</div>
+      <h1 class="font-cinzel text-4xl md:text-6xl font-bold aurora-text leading-tight">
+        Esoteric Texts &amp; Corpora
+      </h1>
+      <p class="max-w-3xl mx-auto text-teal-200/80 text-lg leading-relaxed">
+        The sacred scriptures, revealed wisdom, and esoteric literature of humanity's mystical traditions — from Hermetic dialogues composed in Alexandria to Tibetan terma treasures hidden in rock, from Kabbalistic revelations in mediaeval Languedoc to theurgical oracles of late antiquity.
+      </p>
+    </section>
+
+    <!-- WHAT ARE ESOTERIC CORPORA? -->
+    <section class="rounded-2xl p-8 space-y-6" style="background: linear-gradient(135deg, rgba(20,184,166,0.1), rgba(6,148,162,0.06));">
+      <h2 class="font-cinzel text-2xl text-teal-300 text-center tracking-wide">What Are Esoteric Corpora?</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm text-teal-100/80 leading-relaxed">
+        <div class="space-y-4">
+          <p>
+            Every living spiritual tradition rests upon a foundation of texts — scriptures, commentaries, hymns, manuals, and oracular utterances that transmit its central insights across time. In esoteric traditions, however, the relationship between practitioner and text carries a distinctive quality: these writings are understood not merely as historical documents or philosophical treatises, but as living transmissions. Reading them with the right disposition and under proper guidance is itself a practice — an encounter with the divine intelligence that breathed through their authors.
+          </p>
+          <p>
+            The term <em>corpora</em> (plural of <em>corpus</em>) refers to a body of texts sharing a common origin, tradition, or theme. The Corpus Hermeticum is a body of Hermetic dialogues; the Nag Hammadi Library is a body of Gnostic codices; the Tantras form a vast body of revealed scriptures within Hindu and Buddhist traditions. Each corpus represents a distinct current within the broader ocean of esoteric knowledge, shaped by the culture, language, and historical moment in which it emerged.
+          </p>
+          <p>
+            What unites these otherwise diverse texts is their orientation towards <strong class="text-teal-200">gnosis</strong> — direct experiential knowledge of ultimate reality, whatever name that reality carries in a given tradition. Whether the Hermetic tractates speak of the Divine Nous, the Kabbalistic texts describe Ein Sof (the Infinite), the Upanishads proclaim the identity of Ātman and Brahman, or the Tibetan Book of the Dead guides the dying consciousness towards recognition of the clear light — all are pointing to the same fundamental insight: that the ground of being is luminous awareness, and that the human being's deepest nature is not separate from it.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <p>
+            The texts gathered here represent thirteen of the most significant esoteric scriptures in the world's mystical heritage. They span roughly three millennia, from the earliest strands of the Upanishads (c. 800 BCE) to the composition of the Book of the Law in 1904 CE. They were written in Sanskrit, Aramaic, Greek, Arabic, Latin, Coptic, and English. They were produced in India, Egypt, Babylon, Palestine, Andalusia, Provence, Tibet, and Cairo. Each was, in its own way, the product of an extraordinary encounter between a human consciousness and something that lay beyond the ordinary bounds of mind.
+          </p>
+          <p>
+            Approaching these texts demands a combination of scholarly rigour and contemplative openness. The best modern scholarship — represented by figures such as Gershom Scholem on Kabbalah, Frances Yates on Hermeticism, Alexis Sanderson on Tantra, and Geoffrey Samuel on Tibetan Buddhism — has enormously enriched our understanding of these traditions without diminishing their living power. The serious student draws on both dimensions: reading the critical editions, understanding the historical context, and then sitting with the texts themselves in the spirit of sincere inquiry.
+          </p>
+          <p>
+            <em>Note:</em> Several of the pages in this section include educational disclaimers where the texts describe practices that carry genuine spiritual or psychological significance. These disclaimers are provided out of respect for the traditions concerned — not to discourage sincere study, but to encourage it under proper guidance.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- GRID OF CARDS -->
+    <section class="space-y-6">
+      <h2 class="font-cinzel text-2xl text-teal-300 text-center tracking-wide">The Sacred Library</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
+        <a href="/esoteric-corpora/corpus-hermeticum" class="corpus-card space-y-3 block">
+          <div class="text-4xl">☿</div>
+          <h3 class="font-cinzel text-base text-teal-200">Corpus Hermeticum</h3>
+          <p class="text-teal-100/70 text-sm leading-relaxed">The foundational texts of Hermeticism, attributed to Hermes Trismegistus — seventeen tractates on the nature of God, mind, and cosmic reality. The source of the doctrine "as above, so below."</p>
+          <span class="text-teal-400 text-xs font-semibold tracking-wider">Explore →</span>
+        </a>
+
+        <a href="/esoteric-corpora/nag-hammadi" class="corpus-card space-y-3 block">
+          <div class="text-4xl">🏺</div>
+          <h3 class="font-cinzel text-base text-teal-200">Nag Hammadi Library</h3>
+          <p class="text-teal-100/70 text-sm leading-relaxed">The 1945 discovery that transformed our understanding of Gnosticism — fifty-two Coptic texts including the Gospel of Thomas, preserved in clay jars for sixteen centuries.</p>
+          <span class="text-teal-400 text-xs font-semibold tracking-wider">Explore →</span>
+        </a>
+
+        <a href="/esoteric-corpora/zohar" class="corpus-card space-y-3 block">
+          <div class="text-4xl">✡️</div>
+          <h3 class="font-cinzel text-base text-teal-200">Zohar</h3>
+          <p class="text-teal-100/70 text-sm leading-relaxed">The foundational work of Kabbalistic mysticism — the "Book of Splendour" attributed to Shimon bar Yochai, revealed to the world by Moses de León in 13th-century Castile.</p>
+          <span class="text-teal-400 text-xs font-semibold tracking-wider">Explore →</span>
+        </a>
+
+        <a href="/esoteric-corpora/sefer-yetzirah" class="corpus-card space-y-3 block">
+          <div class="text-4xl">🔤</div>
+          <h3 class="font-cinzel text-base text-teal-200">Sefer Yetzirah</h3>
+          <p class="text-teal-100/70 text-sm leading-relaxed">The "Book of Formation" — the earliest Kabbalistic text, describing creation through the twenty-two letters of the Hebrew alphabet and ten sefirot, in as few as 1,300 words.</p>
+          <span class="text-teal-400 text-xs font-semibold tracking-wider">Explore →</span>
+        </a>
+
+        <a href="/esoteric-corpora/sefer-bahir" class="corpus-card space-y-3 block">
+          <div class="text-4xl">✨</div>
+          <h3 class="font-cinzel text-base text-teal-200">Sefer Bahir</h3>
+          <p class="text-teal-100/70 text-sm leading-relaxed">The "Book of Illumination" — the first Kabbalistic text to develop the doctrine of the sefirot as cosmic divine forces, emerging in 12th-century Provence under mysterious circumstances.</p>
+          <span class="text-teal-400 text-xs font-semibold tracking-wider">Explore →</span>
+        </a>
+
+        <a href="/esoteric-corpora/emerald-tablet" class="corpus-card space-y-3 block">
+          <div class="text-4xl">💎</div>
+          <h3 class="font-cinzel text-base text-teal-200">Emerald Tablet</h3>
+          <p class="text-teal-100/70 text-sm leading-relaxed">Tabula Smaragdina — the legendary thirteen-line alchemical text attributed to Hermes Trismegistus, containing the axiom "As above, so below" that became the cornerstone of Western alchemy.</p>
+          <span class="text-teal-400 text-xs font-semibold tracking-wider">Explore →</span>
+        </a>
+
+        <a href="/esoteric-corpora/upanishads" class="corpus-card space-y-3 block">
+          <div class="text-4xl">🕉️</div>
+          <h3 class="font-cinzel text-base text-teal-200">Upanishads</h3>
+          <p class="text-teal-100/70 text-sm leading-relaxed">The philosophical culmination of the Vedas — 108 texts exploring the nature of Brahman, Ātman, and the path to liberation, forming the bedrock of all Hindu esoteric thought.</p>
+          <span class="text-teal-400 text-xs font-semibold tracking-wider">Explore →</span>
+        </a>
+
+        <a href="/esoteric-corpora/tantras" class="corpus-card space-y-3 block">
+          <div class="text-4xl">🌺</div>
+          <h3 class="font-cinzel text-base text-teal-200">Tantras</h3>
+          <p class="text-teal-100/70 text-sm leading-relaxed">The vast scriptural corpus of Hindu and Buddhist Tantra — texts revealed by Śiva, Śakti, or the Buddhas, containing the secret technologies of consciousness transformation.</p>
+          <span class="text-teal-400 text-xs font-semibold tracking-wider">Explore →</span>
+        </a>
+
+        <a href="/esoteric-corpora/tibetan-book-dead" class="corpus-card space-y-3 block">
+          <div class="text-4xl">☸️</div>
+          <h3 class="font-cinzel text-base text-teal-200">Tibetan Book of the Dead</h3>
+          <p class="text-teal-100/70 text-sm leading-relaxed">The Bardo Thödol — Padmasambhava's guide to navigating the intermediate states between death and rebirth, revealed as a terma treasure by Karma Lingpa in the 14th century.</p>
+          <span class="text-teal-400 text-xs font-semibold tracking-wider">Explore →</span>
+        </a>
+
+        <a href="/esoteric-corpora/book-of-the-law" class="corpus-card space-y-3 block">
+          <div class="text-4xl">🌟</div>
+          <h3 class="font-cinzel text-base text-teal-200">Book of the Law</h3>
+          <p class="text-teal-100/70 text-sm leading-relaxed">Liber AL vel Legis — the foundational text of Thelema, channelled by Aleister Crowley in Cairo in 1904, inaugurating the Aeon of Horus and proclaiming "Do what thou wilt."</p>
+          <span class="text-teal-400 text-xs font-semibold tracking-wider">Explore →</span>
+        </a>
+
+        <a href="/esoteric-corpora/picatrix" class="corpus-card space-y-3 block">
+          <div class="text-4xl">🌙</div>
+          <h3 class="font-cinzel text-base text-teal-200">Picatrix</h3>
+          <p class="text-teal-100/70 text-sm leading-relaxed">The Ghāyat al-Ḥakīm — the greatest grimoire of mediaeval astrological magic, compiled in Andalusia and translated from Arabic into Latin in 1256 for Alfonso X of Castile.</p>
+          <span class="text-teal-400 text-xs font-semibold tracking-wider">Explore →</span>
+        </a>
+
+        <a href="/esoteric-corpora/chaldean-oracles" class="corpus-card space-y-3 block">
+          <div class="text-4xl">🔥</div>
+          <h3 class="font-cinzel text-base text-teal-200">Chaldean Oracles</h3>
+          <p class="text-teal-100/70 text-sm leading-relaxed">Hexameter verses attributed to Julian the Theurgist (2nd century CE) — the foundational scripture of Neoplatonic theurgy, exerting enormous influence on Iamblichus, Proclus, and late antique religion.</p>
+          <span class="text-teal-400 text-xs font-semibold tracking-wider">Explore →</span>
+        </a>
+
+        <a href="/esoteric-corpora/orphic-hymns" class="corpus-card space-y-3 block">
+          <div class="text-4xl">🎵</div>
+          <h3 class="font-cinzel text-base text-teal-200">Orphic Hymns</h3>
+          <p class="text-teal-100/70 text-sm leading-relaxed">Eighty-seven hymns to the gods of the Orphic tradition — ritual invocations used in initiatory ceremonies from antiquity to the Renaissance, rediscovered and translated by Ficino and Thomas Taylor.</p>
+          <span class="text-teal-400 text-xs font-semibold tracking-wider">Explore →</span>
+        </a>
+
+      </div>
+    </section>
+
+  </div><!-- end content wrapper -->
+
+  <footer class="relative z-10 text-center py-8 text-teal-400/40 text-xs mt-8">
+    <p class="italic">"The reading of sacred texts is itself a form of prayer." — attributed to the Hermetic tradition</p>
+    <p class="mt-2">Esoteric Wisdom · Built with ✨ in Rust</p>
+    <p class="mt-2"><a href="/home" class="hover:text-teal-300 transition-colors">← Back to Portal</a></p>
+  </footer>
+
+  <script>
+    const sf = document.getElementById('starfield');
+    for (let i = 0; i < 200; i++) {
+      const s = document.createElement('div');
+      s.className = 'star';
+      const size = Math.random() * 2.5 + 0.5;
+      s.style.cssText = `width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--dur:${2+Math.random()*4}s;--delay:${Math.random()*5}s;opacity:${0.2+Math.random()*0.8};`;
+      sf.appendChild(s);
+    }
+  </script>
+
+</body>
+</html>

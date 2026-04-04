@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Corpus Hermeticum — Esoteric Texts &amp; Corpora</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <meta property="og:title" content="Corpus Hermeticum — Esoteric Texts &amp; Corpora" />
+  <meta property="og:description" content="The seventeen tractates of the Corpus Hermeticum — the foundational texts of the Hermetic tradition, attributed to Hermes Trismegistus." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://esoteric-wisdom.onrender.com/esoteric-corpora/corpus-hermeticum" />
+  <meta property="og:image" content="https://esoteric-wisdom.onrender.com/og-image.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Raleway', sans-serif; }
+    .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+
+    @keyframes twinkle { 0%,100% { opacity: 0.2; } 50% { opacity: 1; } }
+    .star { position: absolute; border-radius: 50%; background: white; animation: twinkle var(--dur,3s) ease-in-out infinite; animation-delay: var(--delay,0s); }
+
+    @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+    .floating { animation: float 5s ease-in-out infinite; }
+
+    @keyframes shimmer {
+      0% { background-position: -200% center; }
+      100% { background-position: 200% center; }
+    }
+
+    .nav-link { position: relative; transition: all 0.3s; }
+    .nav-link::after {
+      content: ''; position: absolute; bottom: -2px; left: 0;
+      width: 0; height: 2px;
+      background: linear-gradient(90deg, #f59e0b, #a78bfa);
+      transition: width 0.3s;
+    }
+    .nav-link:hover::after { width: 100%; }
+
+    .aurora-text {
+      background: linear-gradient(90deg, #fbbf24, #f59e0b, #fcd34d, #d97706, #fbbf24);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 4s linear infinite;
+    }
+
+    .corpus-card {
+      background: linear-gradient(135deg, rgba(251,191,36,0.07), rgba(217,119,6,0.04));
+      border: 1px solid rgba(251,191,36,0.2);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+    .corpus-card:hover {
+      transform: translateY(-6px) scale(1.01);
+      box-shadow: 0 0 28px 5px rgba(251,191,36,0.3);
+      border-color: rgba(251,191,36,0.5);
+    }
+
+    .timeline-item {
+      border-left: 2px solid rgba(251,191,36,0.3);
+      padding-left: 1.25rem;
+      padding-bottom: 1.25rem;
+      position: relative;
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -5px; top: 4px;
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: #fbbf24;
+      box-shadow: 0 0 8px rgba(251,191,36,0.6);
+    }
+  </style>
+</head>
+<body class="min-h-screen text-amber-100 overflow-x-hidden" style="background: radial-gradient(ellipse at top, #1c0a00 0%, #2d1a00 20%, #0a0500 55%, #000000 100%);">
+
+  <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+
+  <!-- NAV -->
+  <nav class="sticky top-0 z-50 flex items-center justify-between px-6 py-3 bg-black/40 backdrop-blur-md border-b border-violet-500/20 flex-wrap gap-y-2">
+    <a href="/home" class="font-cinzel text-amber-300 text-sm tracking-widest shrink-0">✦ Esoteric Wisdom ✦</a>
+    <div class="flex items-center gap-x-3 gap-y-1 text-xs text-violet-200 flex-wrap justify-end">
+      <a href="/astrology" class="nav-link hover:text-amber-300 transition-colors">Astrology</a>
+      <a href="/meditation" class="nav-link hover:text-amber-300 transition-colors">Meditation</a>
+      <a href="/tarot/select" class="nav-link hover:text-amber-300 transition-colors">Tarot</a>
+      <a href="/numerology" class="nav-link hover:text-amber-300 transition-colors">Numerology</a>
+      <a href="/crystals" class="nav-link hover:text-amber-300 transition-colors">Crystals</a>
+      <a href="/runes" class="nav-link hover:text-amber-300 transition-colors">Runes</a>
+      <a href="/shamanism" class="nav-link hover:text-amber-300 transition-colors">Shamanism</a>
+      <a href="/druidism" class="nav-link hover:text-amber-300 transition-colors">Druidism</a>
+      <a href="/akashic-records" class="nav-link hover:text-amber-300 transition-colors">Akashic Records</a>
+      <a href="/wicca" class="nav-link hover:text-amber-300 transition-colors">Wicca</a>
+      <a href="/alchemy" class="nav-link hover:text-amber-300 transition-colors">Alchemy</a>
+      <a href="/gateway-process" class="nav-link hover:text-amber-300 transition-colors">Gateway Process</a>
+      <a href="/remote-viewing" class="nav-link hover:text-amber-300 transition-colors">Remote Viewing</a>
+      <a href="/khasarov-mirror" class="nav-link hover:text-amber-300 transition-colors">Khasarov Mirror</a>
+      <a href="/western-esotericism" class="nav-link hover:text-amber-300 transition-colors">Western Esotericism</a>
+      <a href="/eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Eastern Esotericism</a>
+      <a href="/indigenous-esotericism" class="nav-link hover:text-amber-300 transition-colors">Indigenous Esotericism</a>
+      <a href="/middle-eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Middle Eastern Mysteries</a>
+      <a href="/esoteric-practices" class="nav-link hover:text-amber-300 transition-colors">Esoteric Practices</a>
+      <a href="/esoteric-corpora" class="nav-link text-amber-300 font-semibold">Sacred Texts</a>
+      <a href="/journal/reflections" class="nav-link text-emerald-300 hover:text-emerald-200 transition-colors">✨ Reflections</a>
+      <a href="https://ko-fi.com/esotericwisdom" target="_blank" rel="noopener noreferrer"
+         class="px-3 py-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-white font-semibold hover:scale-105 transition-transform shrink-0">☕ Support</a>
+    </div>
+  </nav>
+
+  <!-- CONTENT WRAPPER -->
+  <div class="relative z-10 max-w-5xl mx-auto space-y-10 pt-6 px-4 pb-12">
+
+    <!-- BREADCRUMB -->
+    <div>
+      <a href="/esoteric-corpora" class="text-xs text-amber-300/60 hover:text-amber-300 transition-colors">← Esoteric Texts &amp; Corpora</a>
+    </div>
+
+    <!-- HERO -->
+    <section class="text-center py-12 space-y-6">
+      <div class="text-7xl floating">☿</div>
+      <h1 class="font-cinzel text-4xl md:text-5xl font-bold aurora-text leading-tight">
+        Corpus Hermeticum
+      </h1>
+      <p class="max-w-3xl mx-auto text-amber-200/80 text-lg leading-relaxed">
+        The seventeen tractates attributed to Hermes Trismegistus — the foundational texts of the Hermetic tradition, composed in Hellenistic Alexandria between the 1st and 3rd centuries CE, and rediscovered by Renaissance Florence to explosive intellectual effect.
+      </p>
+    </section>
+
+    <!-- DISCLAIMER -->
+    <section class="rounded-2xl p-6 space-y-4" style="background: linear-gradient(135deg, rgba(180,60,0,0.15), rgba(120,30,0,0.08)); border: 1px solid rgba(251,146,60,0.3);">
+      <div class="flex items-start gap-4">
+        <span class="text-3xl flex-shrink-0">⚠️</span>
+        <div>
+          <h2 class="font-cinzel text-lg text-amber-300 mb-2">For Educational &amp; Informational Purposes Only</h2>
+          <p class="text-amber-100/85 text-sm leading-relaxed">
+            The content on this page is provided solely for educational and historical study. The texts and practices described here derive from diverse sacred traditions and carry genuine power within those contexts. Readers are encouraged to approach these traditions with respect and discernment. Attempting advanced practices described in these texts without proper guidance from a qualified teacher is not recommended and may carry psychological or spiritual risks. If you are drawn to pursue any of these practices, seek instruction from a qualified, lineage-authorised teacher within the tradition in question.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT IS THE CORPUS HERMETICUM? -->
+    <section class="rounded-2xl p-8 space-y-6" style="background: linear-gradient(135deg, rgba(180,83,9,0.12), rgba(120,53,15,0.07));">
+      <h2 class="font-cinzel text-2xl text-amber-300 text-center tracking-wide">What Is the Corpus Hermeticum?</h2>
+      <div class="space-y-4 text-sm text-amber-100/80 leading-relaxed max-w-4xl mx-auto">
+        <p>
+          The <em>Corpus Hermeticum</em> is a collection of seventeen philosophical dialogues in Greek, composed in Roman Egypt between approximately 100 and 300 CE. Attributed to the legendary figure of <strong class="text-amber-200">Hermes Trismegistus</strong> — "Hermes the Thrice-Great," a syncretism of the Greek messenger-god Hermes and the Egyptian god of wisdom Thoth — these texts represent the most sustained and intellectually sophisticated body of philosophical Hermeticism to survive from antiquity. They are the primary source for the Hermetic worldview and have exercised an influence on Western esoteric thought matched by few other works.
+        </p>
+        <p>
+          The dialogues are presented as revelations: direct transmissions of divine wisdom from superior minds to human recipients. In the opening tractate, the <strong class="text-amber-200">Poimandres</strong>, the narrator receives a cosmic vision from Poimandres — "the Shepherd of Men," identified as the Divine Mind itself — who reveals the structure of creation and the human soul's predicament and path of liberation. In subsequent tractates, Hermes transmits wisdom to his son Tat and his disciple Asclepius in intimate philosophical conversations, covering such themes as the nature of God, the creation of the world, the soul's descent through the planetary spheres, the practice of <em>gnosis</em> (direct experiential knowledge of the divine), and the process of spiritual regeneration (<em>palingenesia</em>).
+        </p>
+        <p>
+          The philosophical content draws on several currents circulating in Alexandria: <strong class="text-amber-200">Middle Platonism</strong> (the universe ordered by a transcendent Nous or Mind, with intermediary divine powers), <strong class="text-amber-200">Stoic physics</strong> (a fiery rational principle, the <em>logos</em>, pervading all things), <strong class="text-amber-200">Egyptian religious thought</strong> (the primacy of divine knowledge, the soul's afterlife journey, the sacred nature of the created world), and elements of <strong class="text-amber-200">Jewish monotheism</strong> in the framing of a single, ineffable supreme God. The result is a unique synthesis that is both philosophically serious and spiritually urgent — a vision of the cosmos as a living, breathing, mind-infused whole, and of the human being as a divine creature temporarily exiled in matter, capable of recovering its divine nature through gnosis.
+        </p>
+        <p>
+          The central soteriological insight of the Corpus Hermeticum is that knowledge — not merely intellectual knowledge, but direct, transformative, experiential <em>gnosis</em> — is the vehicle of liberation. The soul that comes to know its own nature as a reflection of the Divine Mind (<em>Nous</em>) is freed from its entanglement in the material world and begins its ascent through the seven planetary spheres, shedding at each level the qualities it acquired during its downward passage, until it stands naked and luminous before the divine source. This is not mere metaphor — the Corpus presents it as a real process, achievable in life through spiritual practice, and completed after death in the soul's final return to God.
+        </p>
+      </div>
+    </section>
+
+    <!-- THE SEVENTEEN TRACTATES -->
+    <section class="space-y-6">
+      <h2 class="font-cinzel text-2xl text-amber-300 text-center tracking-wide">The Seventeen Tractates</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+        <div class="corpus-card space-y-2">
+          <h3 class="font-cinzel text-sm text-amber-200">I — Poimandres</h3>
+          <p class="text-amber-100/70 text-xs leading-relaxed">The visionary encounter with Poimandres — the Divine Mind — who reveals the creation of the cosmos, the descent of the soul through the planetary spheres, and the path of gnosis and ascent. The single most important Hermetic text, from which all subsequent Hermeticism derives its central cosmological and soteriological framework.</p>
+        </div>
+
+        <div class="corpus-card space-y-2">
+          <h3 class="font-cinzel text-sm text-amber-200">II — A Discourse of Hermes to Asclepius</h3>
+          <p class="text-amber-100/70 text-xs leading-relaxed">A dialogue on the nature of the incorporeal, the relationship between movement and rest, and the concept that God is the container of all things rather than being contained by space. Introduces the fundamental Hermetic principle that the divine is not a thing among other things but the very ground of being.</p>
+        </div>
+
+        <div class="corpus-card space-y-2">
+          <h3 class="font-cinzel text-sm text-amber-200">III — The Sacred Discourse</h3>
+          <p class="text-amber-100/70 text-xs leading-relaxed">A brief but dense cosmogony describing the creation of the world by the divine light and word (<em>logos</em>), the formation of the seven planetary governors, and the establishment of the natural order. One of the most compressed and beautiful expressions of the Hermetic vision of a cosmos saturated with divine intelligence.</p>
+        </div>
+
+        <div class="corpus-card space-y-2">
+          <h3 class="font-cinzel text-sm text-amber-200">IV — The Mixing Bowl or The Monad</h3>
+          <p class="text-amber-100/70 text-xs leading-relaxed">God sends a great mixing bowl (<em>krater</em>) filled with Nous down to earth, inviting those with the capacity to immerse themselves in it and thereby receive intelligence. Those who do rise towards the Monad; those who lack the capacity remain enslaved to matter. A powerful image of divine grace operating within human freedom.</p>
+        </div>
+
+        <div class="corpus-card space-y-2">
+          <h3 class="font-cinzel text-sm text-amber-200">V — That God Is Not Manifest, and Yet Most Manifest</h3>
+          <p class="text-amber-100/70 text-xs leading-relaxed">A paradoxical meditation on divine transcendence and immanence: God is invisible because he is the very ground of all visibility; he is unknowable by ordinary means precisely because he is the source of all knowledge. One of the most philosophically nuanced tractates, anticipating the negative theology (<em>apophasis</em>) of later Neoplatonism.</p>
+        </div>
+
+        <div class="corpus-card space-y-2">
+          <h3 class="font-cinzel text-sm text-amber-200">VI — In God Alone Is Good</h3>
+          <p class="text-amber-100/70 text-xs leading-relaxed">An argument that genuine goodness is not to be found in the material world — which is governed by change, desire, and suffering — but only in God, who is the sole and self-sufficient Good. The soul that seeks goodness in material things mistakes the shadow for the light, the copy for the original.</p>
+        </div>
+
+        <div class="corpus-card space-y-2">
+          <h3 class="font-cinzel text-sm text-amber-200">VII — The Greatest Evil in Humanity Is Ignorance of God</h3>
+          <p class="text-amber-100/70 text-xs leading-relaxed">A passionate exhortation to wake from spiritual ignorance — characterised as the greatest evil afflicting humanity — and to pursue gnosis. The soul drunk on the wine of ignorance stumbles through life without perceiving its divine origin or destiny. One of the most rhetorically forceful of the tractates.</p>
+        </div>
+
+        <div class="corpus-card space-y-2">
+          <h3 class="font-cinzel text-sm text-amber-200">VIII — That None of the Existent Things Perishes</h3>
+          <p class="text-amber-100/70 text-xs leading-relaxed">A meditation on the nature of change, death, and immortality: nothing truly perishes in the cosmos, for all change is transformation rather than annihilation. The apparent death of living things is in reality the dissolution of one composite into its constituent elements, which then reform in new configurations — an endless dance of cosmic recycling governed by divine providence.</p>
+        </div>
+
+        <div class="corpus-card space-y-2">
+          <h3 class="font-cinzel text-sm text-amber-200">IX — On Thought and Sensation</h3>
+          <p class="text-amber-100/70 text-xs leading-relaxed">An exploration of the relationship between mind (<em>nous</em>), reason (<em>logos</em>), sensation (<em>aisthēsis</em>), and the soul. The tractate argues that the highest knowledge transcends sensory perception and operates through the direct, wordless apprehension of the divine mind — the beginning of the Hermetic contemplative epistemology.</p>
+        </div>
+
+        <div class="corpus-card space-y-2">
+          <h3 class="font-cinzel text-sm text-amber-200">X — The Key</h3>
+          <p class="text-amber-100/70 text-xs leading-relaxed">One of the most comprehensive and systematic tractates, functioning as a summary of Hermetic teaching on the soul, the cosmos, the planetary governors, and the path of ascent. Hermes presents this teaching to Tat as the "key" that will unlock all previous learning. Includes a famous description of the soul's reception of divine nous as a garment of fire.</p>
+        </div>
+
+        <div class="corpus-card space-y-2">
+          <h3 class="font-cinzel text-sm text-amber-200">XI — Mind to Hermes</h3>
+          <p class="text-amber-100/70 text-xs leading-relaxed">A dialogue in which Mind (<em>Nous</em>) speaks directly to Hermes, instructing him in the nature of God as the all-containing One who encompasses all places, times, and qualities without being limited by any of them. Contains the celebrated instruction: "Increase yourself to immeasurable size; make a leap clear of all body; raise yourself above all time; become eternity and thus you will understand God."</p>
+        </div>
+
+        <div class="corpus-card space-y-2">
+          <h3 class="font-cinzel text-sm text-amber-200">XII — On Mind and the Senses</h3>
+          <p class="text-amber-100/70 text-xs leading-relaxed">A technical philosophical dialogue between Hermes and his son Tat on the relationship between mind, soul, and body, and the role of logos as the instrument through which mind acts in the world. Introduces the concept of the daimon — the individual's divine guardian — and the hierarchy of consciousness from matter to divine nous.</p>
+        </div>
+
+        <div class="corpus-card space-y-2">
+          <h3 class="font-cinzel text-sm text-amber-200">XIII — The Secret Sermon on the Mountain</h3>
+          <p class="text-amber-100/70 text-xs leading-relaxed">Perhaps the most mystical and practically oriented of all the tractates: a description of the experience of spiritual rebirth (<em>palingenesia</em>). Tat asks Hermes to teach him the inner meaning of the rebirth mentioned in an earlier discourse. Hermes describes the twelve irrational qualities of matter that are expelled in the moment of rebirth, replaced by ten divine powers — resulting in a completely transformed being who knows themselves as divine.</p>
+        </div>
+
+        <div class="corpus-card space-y-2">
+          <h3 class="font-cinzel text-sm text-amber-200">XIV — A Letter from Hermes to Asclepius</h3>
+          <p class="text-amber-100/70 text-xs leading-relaxed">A brief epistolary text in which Hermes writes to Asclepius urging him to share the wisdom he has received with others who are ready to receive it, thereby perpetuating the chain of spiritual transmission. Reflects the Hermetic understanding that wisdom is not merely private illumination but carries a responsibility of transmission.</p>
+        </div>
+
+        <div class="corpus-card space-y-2">
+          <h3 class="font-cinzel text-sm text-amber-200">XVI — Asclepius to King Ammon</h3>
+          <p class="text-amber-100/70 text-xs leading-relaxed">A letter from Asclepius to the Egyptian king Ammon, arguing that true Hermetic wisdom cannot be adequately translated — that the Greek language, with its rhetoric and ambiguity, distorts the directness and sacred power of the original Egyptian. A fascinating meta-commentary on the problems of translation and the relationship between language and spiritual truth.</p>
+        </div>
+
+        <div class="corpus-card space-y-2">
+          <h3 class="font-cinzel text-sm text-amber-200">XVII &amp; XVIII — On the Soul; On Decans and Stars</h3>
+          <p class="text-amber-100/70 text-xs leading-relaxed">Two shorter tractates rounding out the collection. Tractate XVII is fragmentary, touching on the soul's nature and its relationship to the cosmos. Tractate XVIII argues that the king is more truly divine than the fixed stars in one respect, since he illuminates and governs the human community as the sun governs the cosmos — a piece of royal Hermetic theology addressed to an Egyptian ruler.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- HISTORICAL JOURNEY -->
+    <section class="rounded-2xl p-8 space-y-6" style="background: linear-gradient(135deg, rgba(120,53,15,0.12), rgba(92,30,5,0.07));">
+      <h2 class="font-cinzel text-2xl text-amber-300 text-center tracking-wide">Historical Journey</h2>
+      <div class="max-w-3xl mx-auto space-y-0">
+
+        <div class="timeline-item">
+          <p class="text-amber-300 text-xs font-semibold tracking-wider uppercase mb-1">c. 100–300 CE</p>
+          <p class="text-amber-100/80 text-sm leading-relaxed"><strong class="text-amber-200">Composition in Alexandria.</strong> The Hermetic dialogues are composed in Greek by unknown authors working in the rich multicultural environment of Roman Egypt. Drawing on Platonic, Stoic, Egyptian, and Jewish sources, they represent the most philosophically ambitious expression of Egyptian religious thought in the Hellenistic period.</p>
+        </div>
+
+        <div class="timeline-item">
+          <p class="text-amber-300 text-xs font-semibold tracking-wider uppercase mb-1">c. 200–400 CE</p>
+          <p class="text-amber-100/80 text-sm leading-relaxed"><strong class="text-amber-200">Patristic Engagement.</strong> Early Christian writers including Tertullian, Lactantius, and Cyril of Alexandria engage with Hermetic texts — typically treating Hermes Trismegistus as a pagan prophet who anticipated Christian revelation. Lactantius quotes extensively from the Hermetic texts, preserving their reputation as ancient wisdom throughout the early Christian period.</p>
+        </div>
+
+        <div class="timeline-item">
+          <p class="text-amber-300 text-xs font-semibold tracking-wider uppercase mb-1">1463 CE</p>
+          <p class="text-amber-100/80 text-sm leading-relaxed"><strong class="text-amber-200">Florence &amp; the Medici.</strong> Leonardo of Pistoia brings a Greek manuscript of the Corpus Hermeticum to Florence. Cosimo de' Medici is so struck by its apparent antiquity and importance that he orders Marsilio Ficino to suspend his translation of Plato and translate the Hermetic texts immediately. The instruction reveals the Renaissance conviction that these texts were older and more fundamental than Plato himself.</p>
+        </div>
+
+        <div class="timeline-item">
+          <p class="text-amber-300 text-xs font-semibold tracking-wider uppercase mb-1">1471 CE</p>
+          <p class="text-amber-100/80 text-sm leading-relaxed"><strong class="text-amber-200">Ficino's Translation Published.</strong> Ficino's Latin <em>Pimander</em> is published and becomes an immediate sensation, running to numerous editions across Europe within decades. The texts are received as authentic revelations of the <em>prisca theologia</em> — the primordial divine wisdom — and exercise a transformative influence on Renaissance philosophy, art, and occultism.</p>
+        </div>
+
+        <div class="timeline-item">
+          <p class="text-amber-300 text-xs font-semibold tracking-wider uppercase mb-1">1614 CE</p>
+          <p class="text-amber-100/80 text-sm leading-relaxed"><strong class="text-amber-200">Casaubon's Dating.</strong> The classical scholar Isaac Casaubon publishes a detailed philological analysis demonstrating that the Corpus Hermeticum cannot have been written before the 1st century CE — dismantling the Renaissance belief in its extreme antiquity. This scholarly revolution does not diminish the texts' philosophical significance, but fundamentally reframes their historical context.</p>
+        </div>
+
+        <div class="timeline-item">
+          <p class="text-amber-300 text-xs font-semibold tracking-wider uppercase mb-1">20th–21st Century</p>
+          <p class="text-amber-100/80 text-sm leading-relaxed"><strong class="text-amber-200">Modern Scholarship.</strong> A renaissance of serious scholarship on the Hermetica unfolds, led by Walter Scott's critical edition (1924–36), A.D. Nock and A.-J. Festugière's definitive French edition (1945–54), Brian Copenhaver's landmark English translation (1992), and Garth Fowden's intellectual history <em>The Egyptian Hermes</em> (1986). The Corpus is now understood as a primary document of Hellenistic religious philosophy of the first rank.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- KEY THEMES -->
+    <section class="space-y-6">
+      <h2 class="font-cinzel text-2xl text-amber-300 text-center tracking-wide">Key Themes</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-amber-200">Gnosis — Transformative Knowledge</h3>
+          <p class="text-amber-100/70 text-sm leading-relaxed">Throughout the Corpus, <em>gnosis</em> is presented not as intellectual knowledge (<em>epistēmē</em>) but as a direct, personal, transformative encounter with the divine. The Greek <em>gignōskō</em> ("to know") carries a sense of intimate, experiential acquaintance — the same word used in the Septuagint for Adam "knowing" Eve. To know God in the Hermetic sense is to be fundamentally changed by that knowing.</p>
+        </div>
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-amber-200">The Divine Mind (Nous)</h3>
+          <p class="text-amber-100/70 text-sm leading-relaxed">The supreme principle in the Corpus Hermeticum is variously called the One, God, the Father, or the Divine Mind (<em>Nous</em>). This Nous is not a personal deity with attributes but the pure, self-knowing intelligence that is the ground of all being. The human mind is not merely analogous to this Nous but participates in it — a spark of the divine fire temporarily housed in material form.</p>
+        </div>
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-amber-200">The Soul's Ascent</h3>
+          <p class="text-amber-100/70 text-sm leading-relaxed">A recurring motif across multiple tractates is the soul's ascent through the seven planetary spheres (Moon, Mercury, Venus, Sun, Mars, Jupiter, Saturn), shedding at each level the qualities acquired during its descent. This is not merely a cosmological map but a practical guide: the practitioner can, through gnosis and purification, undertake this ascent while still alive, prefiguring the complete liberation that occurs at physical death.</p>
+        </div>
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-amber-200">"As Above, So Below"</h3>
+          <p class="text-amber-100/70 text-sm leading-relaxed">The principle of universal correspondence — most famously expressed in the Emerald Tablet but implicit throughout the Corpus — holds that the structure of the macrocosm (the cosmos) is mirrored in the microcosm (the human being). The human being is a living image of the universe; to understand oneself is to understand the cosmos. This correspondence is not merely structural but operational: what occurs in the celestial realm resonates through all lower levels of being.</p>
+        </div>
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-amber-200">Spiritual Rebirth (Palingenesia)</h3>
+          <p class="text-amber-100/70 text-sm leading-relaxed">Tractate XIII presents the most detailed Hermetic account of spiritual rebirth: the systematic replacement of the twelve irrational qualities of the lower soul (ignorance, grief, intemperance, desire, injustice, avarice, falsehood, envy, deceit, anger, rashness, malice) by ten divine powers, culminating in the emergence of a completely new being who knows themselves as essentially divine and immortal.</p>
+        </div>
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-amber-200">The Sanctity of the Cosmos</h3>
+          <p class="text-amber-100/70 text-sm leading-relaxed">Unlike some Gnostic systems that view the material world as a prison created by an evil or ignorant demiurge, the Corpus Hermeticum generally presents the cosmos as beautiful, good, and a manifestation of divine order. The problem is not the world itself but human ignorance of its divine nature. This "optimistic" Hermeticism stands in productive tension with the more world-denying strands of Hermetic thought.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- KEY SCHOLARS -->
+    <section class="rounded-2xl p-8 space-y-5" style="background: linear-gradient(135deg, rgba(180,83,9,0.1), rgba(92,30,5,0.06));">
+      <h2 class="font-cinzel text-2xl text-amber-300 text-center tracking-wide">Key Scholars &amp; Translators</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-amber-100/80 leading-relaxed">
+        <div class="space-y-3">
+          <div>
+            <p class="text-amber-200 font-semibold">Marsilio Ficino (1433–1499)</p>
+            <p>The Florentine Platonist whose 1463 Latin translation of the Corpus Hermeticum as <em>Pimander</em> introduced these texts to the Renaissance world. Ficino also translated Plato, Plotinus, and Proclus, creating the intellectual framework of Renaissance Neoplatonism. His conviction that Hermetic wisdom represented the <em>prisca theologia</em> — the ancient original theology — shaped European esoteric thought for two centuries.</p>
+          </div>
+          <div>
+            <p class="text-amber-200 font-semibold">Isaac Casaubon (1559–1614)</p>
+            <p>The Swiss-born classical scholar who in 1614 demolished the Renaissance dating of the Corpus Hermeticum through rigorous philological analysis, demonstrating that the texts post-date rather than predate the Platonic philosophy they incorporate. His work initiated a fundamental reframing of Hermeticism's historical status, though it took centuries for the scholarly consensus to fully absorb its implications.</p>
+          </div>
+        </div>
+        <div class="space-y-3">
+          <div>
+            <p class="text-amber-200 font-semibold">Frances Yates (1899–1981)</p>
+            <p>The British historian whose groundbreaking study <em>Giordano Bruno and the Hermetic Tradition</em> (1964) restored Hermeticism to its central place in the history of Renaissance thought, arguing that the Hermetic vision of the <em>magus</em> — the human being as active transformer of the world through knowledge of its hidden forces — was a crucial precondition for the emergence of modern science. While some of her specific claims have been refined, her fundamental insight transformed the historiography of early modern science and magic.</p>
+          </div>
+          <div>
+            <p class="text-amber-200 font-semibold">Brian Copenhaver (b. 1937)</p>
+            <p>The American historian of philosophy whose English translation <em>Hermetica: The Greek Corpus Hermeticum and the Latin Asclepius</em> (Cambridge, 1992) remains the standard scholarly edition in English. Copenhaver's introduction and notes provide an essential guide to the philosophical context of the texts and their place within the broader landscape of Hellenistic religious philosophy. His work is the starting point for any serious modern study of the Corpus.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="text-center mt-4">
+      <a href="/esoteric-corpora" class="text-amber-400/60 hover:text-amber-300 text-sm transition-colors">← Esoteric Texts &amp; Corpora</a>
+    </div>
+
+  </div><!-- end content wrapper -->
+
+  <footer class="relative z-10 text-center py-8 text-amber-400/40 text-xs mt-8">
+    <p class="italic">"If you do not make yourself equal to God, you cannot understand God." — Corpus Hermeticum XI</p>
+    <p class="mt-2">Esoteric Wisdom · Built with ✨ in Rust</p>
+    <p class="mt-2"><a href="/home" class="hover:text-amber-300 transition-colors">← Back to Portal</a></p>
+  </footer>
+
+  <script>
+    const sf = document.getElementById('starfield');
+    for (let i = 0; i < 200; i++) {
+      const s = document.createElement('div');
+      s.className = 'star';
+      const size = Math.random() * 2.5 + 0.5;
+      s.style.cssText = `width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--dur:${2+Math.random()*4}s;--delay:${Math.random()*5}s;opacity:${0.2+Math.random()*0.8};`;
+      sf.appendChild(s);
+    }
+  </script>
+
+</body>
+</html>

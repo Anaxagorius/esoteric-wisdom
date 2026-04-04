@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Upanishads — Esoteric Texts &amp; Corpora</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <meta property="og:title" content="Upanishads — Esoteric Texts &amp; Corpora" />
+  <meta property="og:description" content="The philosophical culmination of the Vedas — 108 texts exploring Brahman, Ātman, and the nature of liberation." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://esoteric-wisdom.onrender.com/esoteric-corpora/upanishads" />
+  <meta property="og:image" content="https://esoteric-wisdom.onrender.com/og-image.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Raleway', sans-serif; }
+    .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+
+    @keyframes twinkle { 0%,100% { opacity: 0.2; } 50% { opacity: 1; } }
+    .star { position: absolute; border-radius: 50%; background: white; animation: twinkle var(--dur,3s) ease-in-out infinite; animation-delay: var(--delay,0s); }
+
+    @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+    .floating { animation: float 5s ease-in-out infinite; }
+
+    @keyframes shimmer {
+      0% { background-position: -200% center; }
+      100% { background-position: 200% center; }
+    }
+
+    .nav-link { position: relative; transition: all 0.3s; }
+    .nav-link::after {
+      content: ''; position: absolute; bottom: -2px; left: 0;
+      width: 0; height: 2px;
+      background: linear-gradient(90deg, #f59e0b, #a78bfa);
+      transition: width 0.3s;
+    }
+    .nav-link:hover::after { width: 100%; }
+
+    .aurora-text {
+      background: linear-gradient(90deg, #fb923c, #f97316, #fdba74, #ea580c, #fb923c);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 4s linear infinite;
+    }
+
+    .corpus-card {
+      background: linear-gradient(135deg, rgba(251,146,60,0.07), rgba(234,88,12,0.04));
+      border: 1px solid rgba(251,146,60,0.2);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+    .corpus-card:hover {
+      transform: translateY(-6px) scale(1.01);
+      box-shadow: 0 0 28px 5px rgba(251,146,60,0.25);
+      border-color: rgba(251,146,60,0.5);
+    }
+  </style>
+</head>
+<body class="min-h-screen text-orange-100 overflow-x-hidden" style="background: radial-gradient(ellipse at top, #1a0a00 0%, #2d1a00 20%, #0a0500 55%, #000000 100%);">
+
+  <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+
+  <!-- NAV -->
+  <nav class="sticky top-0 z-50 flex items-center justify-between px-6 py-3 bg-black/40 backdrop-blur-md border-b border-violet-500/20 flex-wrap gap-y-2">
+    <a href="/home" class="font-cinzel text-amber-300 text-sm tracking-widest shrink-0">✦ Esoteric Wisdom ✦</a>
+    <div class="flex items-center gap-x-3 gap-y-1 text-xs text-violet-200 flex-wrap justify-end">
+      <a href="/astrology" class="nav-link hover:text-amber-300 transition-colors">Astrology</a>
+      <a href="/meditation" class="nav-link hover:text-amber-300 transition-colors">Meditation</a>
+      <a href="/tarot/select" class="nav-link hover:text-amber-300 transition-colors">Tarot</a>
+      <a href="/numerology" class="nav-link hover:text-amber-300 transition-colors">Numerology</a>
+      <a href="/crystals" class="nav-link hover:text-amber-300 transition-colors">Crystals</a>
+      <a href="/runes" class="nav-link hover:text-amber-300 transition-colors">Runes</a>
+      <a href="/shamanism" class="nav-link hover:text-amber-300 transition-colors">Shamanism</a>
+      <a href="/druidism" class="nav-link hover:text-amber-300 transition-colors">Druidism</a>
+      <a href="/akashic-records" class="nav-link hover:text-amber-300 transition-colors">Akashic Records</a>
+      <a href="/wicca" class="nav-link hover:text-amber-300 transition-colors">Wicca</a>
+      <a href="/alchemy" class="nav-link hover:text-amber-300 transition-colors">Alchemy</a>
+      <a href="/gateway-process" class="nav-link hover:text-amber-300 transition-colors">Gateway Process</a>
+      <a href="/remote-viewing" class="nav-link hover:text-amber-300 transition-colors">Remote Viewing</a>
+      <a href="/khasarov-mirror" class="nav-link hover:text-amber-300 transition-colors">Khasarov Mirror</a>
+      <a href="/western-esotericism" class="nav-link hover:text-amber-300 transition-colors">Western Esotericism</a>
+      <a href="/eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Eastern Esotericism</a>
+      <a href="/indigenous-esotericism" class="nav-link hover:text-amber-300 transition-colors">Indigenous Esotericism</a>
+      <a href="/middle-eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Middle Eastern Mysteries</a>
+      <a href="/esoteric-practices" class="nav-link hover:text-amber-300 transition-colors">Esoteric Practices</a>
+      <a href="/esoteric-corpora" class="nav-link text-amber-300 font-semibold">Sacred Texts</a>
+      <a href="/journal/reflections" class="nav-link text-emerald-300 hover:text-emerald-200 transition-colors">✨ Reflections</a>
+      <a href="https://ko-fi.com/esotericwisdom" target="_blank" rel="noopener noreferrer"
+         class="px-3 py-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-white font-semibold hover:scale-105 transition-transform shrink-0">☕ Support</a>
+    </div>
+  </nav>
+
+  <!-- CONTENT WRAPPER -->
+  <div class="relative z-10 max-w-5xl mx-auto space-y-10 pt-6 px-4 pb-12">
+
+    <!-- BREADCRUMB -->
+    <div>
+      <a href="/esoteric-corpora" class="text-xs text-orange-300/60 hover:text-orange-300 transition-colors">← Esoteric Texts &amp; Corpora</a>
+    </div>
+
+    <!-- HERO -->
+    <section class="text-center py-12 space-y-6">
+      <div class="text-7xl floating">🕉️</div>
+      <h1 class="font-cinzel text-4xl md:text-5xl font-bold aurora-text leading-tight">
+        Upanishads
+      </h1>
+      <p class="max-w-3xl mx-auto text-orange-200/80 text-lg leading-relaxed">
+        The philosophical culmination of the Vedas — 108 texts composed between 800 BCE and 200 CE that explore the nature of ultimate reality (Brahman), the individual self (Ātman), and the liberating recognition that these two are, in their deepest nature, one and the same.
+      </p>
+    </section>
+
+    <!-- WHAT ARE THE UPANISHADS? -->
+    <section class="rounded-2xl p-8 space-y-6" style="background: linear-gradient(135deg, rgba(251,146,60,0.1), rgba(234,88,12,0.06));">
+      <h2 class="font-cinzel text-2xl text-orange-300 text-center tracking-wide">What Are the Upanishads?</h2>
+      <div class="space-y-4 text-sm text-orange-100/80 leading-relaxed max-w-4xl mx-auto">
+        <p>
+          The word <em>Upanishad</em> derives from Sanskrit: <em>upa</em> (near), <em>ni</em> (down), and <em>shad</em> (to sit) — "sitting down near" a teacher. This etymology encapsulates the central mode of transmission of Upanishadic wisdom: intimate, oral, personal instruction from a qualified teacher to a prepared student. The teaching is not a doctrine to be announced from a podium but a living insight to be transmitted in the silence of close discipleship — a pointing-out of what the student has always already been.
+        </p>
+        <p>
+          The Upanishads form the final portion of the Vedic revelation (<em>Veda</em> = knowledge) and are therefore called <em>Vedānta</em> — "the end of the Vedas" — both in the literal sense of being the concluding portions of the Vedic texts and in the philosophical sense of representing the culmination of Vedic insight. Where the earlier portions of the Vedas (the Saṃhitās, Brāhmaṇas, and Āraṇyakas) are concerned primarily with ritual, cosmology, and the correct performance of sacred ceremonies, the Upanishads turn the inquiry inward: who is the one who performs the ritual? What is the self that moves through birth and death? What is the nature of the Brahman that the rituals celebrate and invoke?
+        </p>
+        <p>
+          Tradition counts 108 Upanishads, though many of these are late sectarian texts. The core group of <strong class="text-orange-200">ten to thirteen "principal" Upanishads</strong> — those that received commentaries from the 8th-century philosopher Adi Shankara — represents the foundational stratum: texts of extraordinary depth and beauty that have shaped Indian philosophy, religion, and spirituality across three millennia and that continue to exercise a profound influence on world philosophy and contemplative practice. Arthur Schopenhauer, who encountered them in a Latin translation from the Persian in 1814, wrote that the Upanishads had been "the solace of my life" and would "be the solace of my death."
+        </p>
+      </div>
+    </section>
+
+    <!-- PRINCIPAL UPANISHADS -->
+    <section class="space-y-6">
+      <h2 class="font-cinzel text-2xl text-orange-300 text-center tracking-wide">The Principal Upanishads</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+        <div class="corpus-card space-y-2">
+          <h3 class="font-cinzel text-sm text-orange-200">Bṛhadāraṇyaka Upanishad</h3>
+          <p class="text-orange-100/70 text-xs leading-relaxed">The longest and most philosophically rich of all the principal Upanishads, belonging to the Śukla Yajurveda. It contains the famous teaching of Yājñavalkya — the greatest philosophical genius in the Upanishadic literature — including his declaration "neti, neti" ("not this, not this") as the method of approaching Brahman, and his profound dialogue with his wife Maitreyī on the nature of the self and immortality. It is the primary source of the <em>Ātman-Brahman</em> identity teaching in its most rigorous philosophical form.</p>
+        </div>
+
+        <div class="corpus-card space-y-2">
+          <h3 class="font-cinzel text-sm text-orange-200">Chāndogya Upanishad</h3>
+          <p class="text-orange-100/70 text-xs leading-relaxed">One of the two oldest and longest Upanishads, belonging to the Sāmaveda. Famous above all for the dialogue between Uddālaka Āruṇi and his son Śvetaketu, which contains the nine repetitions of the mahāvākya (great saying) <strong class="text-orange-200">"Tat tvam asi"</strong> — "That thou art" — identifying the individual self (ātman) with ultimate reality (Brahman). Also contains the teaching of Brahman as the subtle essence pervading all things, like salt dissolved in water: present everywhere but imperceptible by ordinary means.</p>
+        </div>
+
+        <div class="corpus-card space-y-2">
+          <h3 class="font-cinzel text-sm text-orange-200">Taittirīya Upanishad</h3>
+          <p class="text-orange-100/70 text-xs leading-relaxed">Belonging to the Kṛṣṇa Yajurveda, this Upanishad is famous for its teaching of the five <em>kośas</em> (sheaths) — the five layers of the human being from the outermost physical body to the innermost bliss-body — and for the three-section "Brahmananda Vallī" with its account of the nested levels of bliss from human joy to divine ānanda. The third section, "Bhṛgu Vallī," describes the student Bhṛgu's progressive realisation of Brahman through successive stages of understanding.</p>
+        </div>
+
+        <div class="corpus-card space-y-2">
+          <h3 class="font-cinzel text-sm text-orange-200">Kena Upanishad</h3>
+          <p class="text-orange-100/70 text-xs leading-relaxed">Its title is the first word: "by whom" — "Impelled by what does the mind go forth?" The Kena poses the fundamental epistemological question of the Upanishadic tradition: Brahman cannot be known as an object because it is the very subject that knows. "That which is not thought by the mind, but by which, the sages say, the mind is thought — know that alone as Brahman." One of the most philosophically demanding of the Upanishads, anticipating the "self-referential" structure of consciousness that continues to preoccupy contemporary philosophy of mind.</p>
+        </div>
+
+        <div class="corpus-card space-y-2">
+          <h3 class="font-cinzel text-sm text-orange-200">Kaṭha Upanishad</h3>
+          <p class="text-orange-100/70 text-xs leading-relaxed">The dramatic dialogue between the young Brahmin Naciketas and Yama, the god of death, who reluctantly reveals the secret of immortality. Yama offers Naciketas worldly pleasures and powers as substitutes; Naciketas refuses everything except the teaching about what lies beyond death. The Kaṭha contains some of the Upanishads' most celebrated formulations, including the image of the body as a chariot, the intellect as the charioteer, the mind as the reins, and the Ātman as the lord of the chariot.</p>
+        </div>
+
+        <div class="corpus-card space-y-2">
+          <h3 class="font-cinzel text-sm text-orange-200">Īśā Upanishad</h3>
+          <p class="text-orange-100/70 text-xs leading-relaxed">The shortest of the principal Upanishads — only eighteen verses — and perhaps the most concentrated expression of the Vedantic vision. It opens with the declaration that "all this" — the entire cosmos — is pervaded by the Lord (<em>Īśā</em>); the practitioner is to renounce the fruits of action and thereby live in the world without bondage. The Īśā maintains a remarkable balance between worldly engagement and transcendent renunciation, and was Gandhi's favourite scriptural text — he described it as containing the essence of all religion.</p>
+        </div>
+
+        <div class="corpus-card space-y-2">
+          <h3 class="font-cinzel text-sm text-orange-200">Muṇḍaka Upanishad</h3>
+          <p class="text-orange-100/70 text-xs leading-relaxed">A teaching in poetic verse on the two kinds of knowledge: the lower knowledge of the Vedic sciences, and the higher knowledge (<em>parā vidyā</em>) by which the imperishable Brahman is known. Contains the celebrated image of two birds sitting together on the same tree: one eats the fruits, the other merely watches — an image of the individual self (caught in action and its fruits) and the witnessing Ātman (the pure awareness that is Brahman). The Muṇḍaka emphasises that Brahman can only be known through a qualified teacher with whom the student sits "with fuel in hand" — the traditional gesture of approaching a guru for teaching.</p>
+        </div>
+
+        <div class="corpus-card space-y-2">
+          <h3 class="font-cinzel text-sm text-orange-200">Māṇḍūkya Upanishad</h3>
+          <p class="text-orange-100/70 text-xs leading-relaxed">The shortest of all the principal Upanishads — only twelve verses — yet considered by Adi Shankara sufficient on its own for liberation. It analyses the sacred syllable <em>AUM</em> into its four constituents (A, U, M, and the silence that underlies them), correlating them with the four states of consciousness: waking, dreaming, deep sleep, and the fourth (<em>turīya</em>) — the witnessing awareness that underlies and pervades all three ordinary states. The Māṇḍūkya is the principal scriptural source for all subsequent non-dual (Advaita) teaching.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- THE ESOTERIC INTERPRETATION -->
+    <section class="rounded-2xl p-8 space-y-5" style="background: linear-gradient(135deg, rgba(251,146,60,0.1), rgba(234,88,12,0.06));">
+      <h2 class="font-cinzel text-2xl text-orange-300 text-center tracking-wide">The Esoteric Interpretation</h2>
+      <div class="space-y-4 text-sm text-orange-100/80 leading-relaxed max-w-4xl mx-auto">
+        <p>
+          The Upanishads are esoteric texts in the most precise sense: their deepest meaning is not available to casual reading but requires initiation, preparation, and transmission by a qualified teacher. The tradition identifies three prerequisites for receiving the teaching: <em>viveka</em> (discrimination between the real and the unreal), <em>vairāgya</em> (dispassion toward transient things), <em>mumukṣutva</em> (burning desire for liberation), and the <em>ṣaṭsampatti</em> (six disciplines of mind-training). Without these, the words of the Upanishads remain philosophy; with them, they become transformative revelation.
+        </p>
+        <p>
+          The central Upanishadic teaching — summarised in the four <em>mahāvākyas</em> or "great sayings" (<em>Prajñānam Brahma</em> — "Consciousness is Brahman"; <em>Aham Brahmāsmi</em> — "I am Brahman"; <em>Tat tvam asi</em> — "That thou art"; <em>Ayam Ātmā Brahma</em> — "This Self is Brahman") — is that the individual Ātman and the universal Brahman are identical. This is not a metaphysical claim to be added to one's stock of philosophical beliefs but a direct insight to be realised in immediate experience. The guru's role is not to give the student information about Brahman but to point to what the student already and always is — removing the misidentification with body and mind that prevents the Ātman from recognising its own infinite nature.
+        </p>
+        <p>
+          The method of <strong class="text-orange-200">neti, neti</strong> — "not this, not this" — developed in the Bṛhadāraṇyaka Upanishad, is the primary contemplative technique of the Advaita tradition. By systematically negating every object of experience as "not the Ātman" (not the body, not the breath, not the mind, not the intellect, not the ego), the practitioner progressively strips away misidentification until what remains is the unobjectifiable, self-luminous awareness that cannot be negated because it is the very act of negating.
+        </p>
+      </div>
+    </section>
+
+    <!-- KEY THEMES -->
+    <section class="space-y-6">
+      <h2 class="font-cinzel text-2xl text-orange-300 text-center tracking-wide">Key Themes</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
+        <div class="corpus-card space-y-2">
+          <h3 class="font-cinzel text-xs text-orange-200">Brahman</h3>
+          <p class="text-orange-100/70 text-xs leading-relaxed">Ultimate reality — infinite, eternal, self-luminous being-consciousness-bliss (<em>sat-chit-ānanda</em>). Neither a personal God nor an abstract principle but the ground of all being, which the Upanishads approach through both apophatic negation and cataphatic description depending on the level of the enquiry.</p>
+        </div>
+
+        <div class="corpus-card space-y-2">
+          <h3 class="font-cinzel text-xs text-orange-200">Ātman</h3>
+          <p class="text-orange-100/70 text-xs leading-relaxed">The individual self — not the ego-self of ordinary experience, but the witnessing awareness that underlies all experience. The Upanishads' most radical claim is that this witnessing awareness (<em>sākṣi-chaitanya</em>) is identical with Brahman — not a fragment or part of it, but numerically identical with the infinite ground of being.</p>
+        </div>
+
+        <div class="corpus-card space-y-2">
+          <h3 class="font-cinzel text-xs text-orange-200">Māyā</h3>
+          <p class="text-orange-100/70 text-xs leading-relaxed">The divine creative power that projects the appearance of multiplicity on the undivided Brahman. Māyā is not "illusion" in the sense of non-existence but in the sense of <em>mithyā</em> — apparent reality that depends on something else (Brahman) for its existence. The world is real as appearance; it is "illusion" only in the sense that it is not ultimately what it appears to be.</p>
+        </div>
+
+        <div class="corpus-card space-y-2">
+          <h3 class="font-cinzel text-xs text-orange-200">Moksha</h3>
+          <p class="text-orange-100/70 text-xs leading-relaxed">Liberation — the direct recognition of one's identity with Brahman. In Advaita Vedānta, moksha is not a state to be achieved in the future but a recognition of what is always already the case. The liberated being (<em>jīvanmukta</em>) continues to live in the world but without the fundamental ignorance (<em>avidyā</em>) that causes suffering and rebirth.</p>
+        </div>
+
+        <div class="corpus-card space-y-2">
+          <h3 class="font-cinzel text-xs text-orange-200">Four States of Consciousness</h3>
+          <p class="text-orange-100/70 text-xs leading-relaxed">Waking (<em>jāgrat</em>), dreaming (<em>svapna</em>), deep sleep (<em>suṣupti</em>), and the fourth (<em>turīya</em>) — the pure witnessing awareness underlying all three. This analysis, developed in the Māṇḍūkya Upanishad, became the foundation for all subsequent Hindu contemplative science of consciousness and anticipates many concerns of modern consciousness studies.</p>
+        </div>
+
+        <div class="corpus-card space-y-2">
+          <h3 class="font-cinzel text-xs text-orange-200">Neti Neti</h3>
+          <p class="text-orange-100/70 text-xs leading-relaxed">"Not this, not this" — the via negativa of Vedantic enquiry. By systematically negating every identifiable object or quality as "not the Ātman," the practitioner arrives at the unobjectifiable, self-luminous awareness that is Brahman. This apophatic method parallels the negative theology of Neoplatonism and the Christian mystic tradition of Pseudo-Dionysius.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- KEY SCHOLARS -->
+    <section class="rounded-2xl p-8 space-y-5" style="background: linear-gradient(135deg, rgba(251,146,60,0.1), rgba(234,88,12,0.06));">
+      <h2 class="font-cinzel text-2xl text-orange-300 text-center tracking-wide">Key Commentators &amp; Scholars</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-orange-100/80 leading-relaxed">
+        <div class="space-y-3">
+          <div>
+            <p class="text-orange-200 font-semibold">Adi Shankara (c. 788–820 CE)</p>
+            <p>The founder of Advaita Vedānta ("non-dual Vedānta") — the philosophical school that interprets the Upanishadic identity of Ātman and Brahman in the most radical non-dual sense. Shankara's commentaries on the ten principal Upanishads, the Bhagavad Gītā, and the Brahma Sūtras established the interpretive framework that has dominated mainstream Hindu philosophy ever since. He also established four monastic centres (<em>maṭhas</em>) across India that continue to transmit the Advaita tradition to this day.</p>
+          </div>
+          <div>
+            <p class="text-orange-200 font-semibold">Swami Vivekananda (1863–1902)</p>
+            <p>The Bengali monk and disciple of Sri Ramakrishna who introduced Vedānta to the West at the Parliament of the World's Religions in Chicago in 1893. Vivekananda's passionate, intellectually rigorous presentation of Advaita Vedānta as a universal philosophy — compatible with science and addressing all human beings regardless of religion — inaugurated the modern global reception of the Upanishads and influenced thinkers from William James to Aldous Huxley.</p>
+          </div>
+        </div>
+        <div class="space-y-3">
+          <div>
+            <p class="text-orange-200 font-semibold">Paul Deussen (1845–1919)</p>
+            <p>The German Indologist and close friend of Friedrich Nietzsche whose monumental <em>The Philosophy of the Upanishads</em> (1899; English translation 1906) was the first comprehensive philosophical analysis of the Upanishadic texts available to a Western audience. Deussen argued that the Upanishads represented the highest achievement of human philosophical thought, anticipating and surpassing Kant and Schopenhauer, and his translations and analyses remain valuable even today for their combination of philological rigour and philosophical sensitivity.</p>
+          </div>
+          <div>
+            <p class="text-orange-200 font-semibold">Sarvepalli Radhakrishnan (1888–1975)</p>
+            <p>The Indian philosopher and statesman (later President of India) whose two-volume translation and commentary <em>The Principal Upanishads</em> (1953) became the standard English scholarly reference for a generation. Radhakrishnan's interpretive framework — presenting Vedānta as compatible with modern science and as a universal philosophical-religious vision transcending cultural boundaries — made him the most influential interpreter of the Upanishads in 20th-century Western academic philosophy.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="text-center mt-4">
+      <a href="/esoteric-corpora" class="text-orange-400/60 hover:text-orange-300 text-sm transition-colors">← Esoteric Texts &amp; Corpora</a>
+    </div>
+
+  </div><!-- end content wrapper -->
+
+  <footer class="relative z-10 text-center py-8 text-orange-400/40 text-xs mt-8">
+    <p class="italic">"Tat tvam asi — That thou art." — Chāndogya Upanishad 6.8.7</p>
+    <p class="mt-2">Esoteric Wisdom · Built with ✨ in Rust</p>
+    <p class="mt-2"><a href="/home" class="hover:text-orange-300 transition-colors">← Back to Portal</a></p>
+  </footer>
+
+  <script>
+    const sf = document.getElementById('starfield');
+    for (let i = 0; i < 200; i++) {
+      const s = document.createElement('div');
+      s.className = 'star';
+      const size = Math.random() * 2.5 + 0.5;
+      s.style.cssText = `width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--dur:${2+Math.random()*4}s;--delay:${Math.random()*5}s;opacity:${0.2+Math.random()*0.8};`;
+      sf.appendChild(s);
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tibetan Book of the Dead — Esoteric Texts &amp; Corpora</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <meta property="og:title" content="Tibetan Book of the Dead — Esoteric Texts &amp; Corpora" />
+  <meta property="og:description" content="The Bardo Thödol — Padmasambhava's guide to liberation through the intermediate states between death and rebirth." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://esoteric-wisdom.onrender.com/esoteric-corpora/tibetan-book-dead" />
+  <meta property="og:image" content="https://esoteric-wisdom.onrender.com/og-image.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Raleway', sans-serif; }
+    .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+
+    @keyframes twinkle { 0%,100% { opacity: 0.2; } 50% { opacity: 1; } }
+    .star { position: absolute; border-radius: 50%; background: white; animation: twinkle var(--dur,3s) ease-in-out infinite; animation-delay: var(--delay,0s); }
+
+    @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+    .floating { animation: float 5s ease-in-out infinite; }
+
+    @keyframes shimmer {
+      0% { background-position: -200% center; }
+      100% { background-position: 200% center; }
+    }
+
+    .nav-link { position: relative; transition: all 0.3s; }
+    .nav-link::after {
+      content: ''; position: absolute; bottom: -2px; left: 0;
+      width: 0; height: 2px;
+      background: linear-gradient(90deg, #f59e0b, #a78bfa);
+      transition: width 0.3s;
+    }
+    .nav-link:hover::after { width: 100%; }
+
+    .aurora-text {
+      background: linear-gradient(90deg, #fb923c, #f97316, #fbbf24, #ea580c, #fb923c);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 4s linear infinite;
+    }
+
+    .corpus-card {
+      background: linear-gradient(135deg, rgba(251,146,60,0.08), rgba(234,88,12,0.05));
+      border: 1px solid rgba(251,146,60,0.22);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+    .corpus-card:hover {
+      transform: translateY(-6px) scale(1.01);
+      box-shadow: 0 0 28px 5px rgba(251,146,60,0.25);
+      border-color: rgba(251,146,60,0.5);
+    }
+  </style>
+</head>
+<body class="min-h-screen text-orange-100 overflow-x-hidden" style="background: radial-gradient(ellipse at top, #1a0800 0%, #2a1200 20%, #0a0400 55%, #000000 100%);">
+
+  <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+
+  <!-- NAV -->
+  <nav class="sticky top-0 z-50 flex items-center justify-between px-6 py-3 bg-black/40 backdrop-blur-md border-b border-violet-500/20 flex-wrap gap-y-2">
+    <a href="/home" class="font-cinzel text-amber-300 text-sm tracking-widest shrink-0">✦ Esoteric Wisdom ✦</a>
+    <div class="flex items-center gap-x-3 gap-y-1 text-xs text-violet-200 flex-wrap justify-end">
+      <a href="/astrology" class="nav-link hover:text-amber-300 transition-colors">Astrology</a>
+      <a href="/meditation" class="nav-link hover:text-amber-300 transition-colors">Meditation</a>
+      <a href="/tarot/select" class="nav-link hover:text-amber-300 transition-colors">Tarot</a>
+      <a href="/numerology" class="nav-link hover:text-amber-300 transition-colors">Numerology</a>
+      <a href="/crystals" class="nav-link hover:text-amber-300 transition-colors">Crystals</a>
+      <a href="/runes" class="nav-link hover:text-amber-300 transition-colors">Runes</a>
+      <a href="/shamanism" class="nav-link hover:text-amber-300 transition-colors">Shamanism</a>
+      <a href="/druidism" class="nav-link hover:text-amber-300 transition-colors">Druidism</a>
+      <a href="/akashic-records" class="nav-link hover:text-amber-300 transition-colors">Akashic Records</a>
+      <a href="/wicca" class="nav-link hover:text-amber-300 transition-colors">Wicca</a>
+      <a href="/alchemy" class="nav-link hover:text-amber-300 transition-colors">Alchemy</a>
+      <a href="/gateway-process" class="nav-link hover:text-amber-300 transition-colors">Gateway Process</a>
+      <a href="/remote-viewing" class="nav-link hover:text-amber-300 transition-colors">Remote Viewing</a>
+      <a href="/khasarov-mirror" class="nav-link hover:text-amber-300 transition-colors">Khasarov Mirror</a>
+      <a href="/western-esotericism" class="nav-link hover:text-amber-300 transition-colors">Western Esotericism</a>
+      <a href="/eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Eastern Esotericism</a>
+      <a href="/indigenous-esotericism" class="nav-link hover:text-amber-300 transition-colors">Indigenous Esotericism</a>
+      <a href="/middle-eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Middle Eastern Mysteries</a>
+      <a href="/esoteric-practices" class="nav-link hover:text-amber-300 transition-colors">Esoteric Practices</a>
+      <a href="/esoteric-corpora" class="nav-link text-amber-300 font-semibold">Sacred Texts</a>
+      <a href="/journal/reflections" class="nav-link text-emerald-300 hover:text-emerald-200 transition-colors">✨ Reflections</a>
+      <a href="https://ko-fi.com/esotericwisdom" target="_blank" rel="noopener noreferrer"
+         class="px-3 py-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-white font-semibold hover:scale-105 transition-transform shrink-0">☕ Support</a>
+    </div>
+  </nav>
+
+  <!-- CONTENT WRAPPER -->
+  <div class="relative z-10 max-w-5xl mx-auto space-y-10 pt-6 px-4 pb-12">
+
+    <!-- BREADCRUMB -->
+    <div>
+      <a href="/esoteric-corpora" class="text-xs text-orange-300/60 hover:text-orange-300 transition-colors">← Esoteric Texts &amp; Corpora</a>
+    </div>
+
+    <!-- HERO -->
+    <section class="text-center py-12 space-y-6">
+      <div class="text-7xl floating">☸️</div>
+      <h1 class="font-cinzel text-4xl md:text-5xl font-bold aurora-text leading-tight">
+        Tibetan Book of the Dead
+      </h1>
+      <p class="max-w-3xl mx-auto text-orange-200/80 text-lg leading-relaxed">
+        <em>Bardo Thödol</em> — "Liberation Through Hearing in the Intermediate State." Composed by Padmasambhava, hidden as a terma treasure for five centuries, and discovered by Karma Lingpa in the 14th century — a complete guide for navigating the luminous chaos between death and rebirth.
+      </p>
+    </section>
+
+    <!-- DISCLAIMER -->
+    <section class="rounded-2xl p-6 space-y-4" style="background: linear-gradient(135deg, rgba(180,60,0,0.15), rgba(120,30,0,0.08)); border: 1px solid rgba(251,146,60,0.3);">
+      <div class="flex items-start gap-4">
+        <span class="text-3xl flex-shrink-0">⚠️</span>
+        <div>
+          <h2 class="font-cinzel text-lg text-amber-300 mb-2">For Educational &amp; Informational Purposes Only</h2>
+          <p class="text-amber-100/85 text-sm leading-relaxed">
+            The content on this page is provided solely for educational and historical study. The texts and practices described here derive from diverse sacred traditions and carry genuine power within those contexts. Readers are encouraged to approach these traditions with respect and discernment. Attempting advanced practices described in these texts without proper guidance from a qualified teacher is not recommended and may carry psychological or spiritual risks. If you are drawn to pursue any of these practices, seek instruction from a qualified, lineage-authorised teacher within the tradition in question.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT IS THE BARDO THÖDOL? -->
+    <section class="rounded-2xl p-8 space-y-6" style="background: linear-gradient(135deg, rgba(251,146,60,0.1), rgba(234,88,12,0.06));">
+      <h2 class="font-cinzel text-2xl text-orange-300 text-center tracking-wide">What Is the Bardo Thödol?</h2>
+      <div class="space-y-4 text-sm text-orange-100/80 leading-relaxed max-w-4xl mx-auto">
+        <p>
+          The <em>Bardo Thödol</em> — conventionally known in the West as the "Tibetan Book of the Dead" following W.Y. Evans-Wentz's 1927 translation — is one of the most extraordinary spiritual texts in human history. Its Tibetan title means "Liberation Through Hearing in the Intermediate State" (<em>bar do thos grol</em>): the conviction that even at the moment of death, or in the confusing luminous experiences that follow it, a consciousness that hears and recognises the teaching can achieve liberation from the cycle of death and rebirth (<em>saṃsāra</em>) — or at least a more favourable rebirth. Reading the text aloud to the dying or recently deceased is a traditional Tibetan practice, based on the belief that consciousness remains present and receptive to sound for some time after the physical body ceases to function.
+        </p>
+        <p>
+          The text belongs to the <em>terma</em> tradition — one of the most distinctive and important elements of Tibetan Buddhism. A <em>terma</em> ("treasure") is a sacred teaching that was hidden by Padmasambhava (Guru Rinpoche — the 8th-century Indian tantric master who is credited with bringing Buddhism to Tibet) or one of his close disciples, to be rediscovered at a future time when its teaching would be needed. Termas can be concealed physically (in rocks, lakes, or temples), mentally (in the mind-streams of the teacher's disciples, to be revealed in a future life as a visionary discovery), or in the "space of dharmatā" (the ground of phenomena itself). The Bardo Thödol was physically discovered in the 14th century by <strong class="text-orange-200">Karma Lingpa</strong> (1326–1386) on the mountain of Gampodar in central Tibet.
+        </p>
+        <p>
+          The text forms part of a larger cycle known as the <em>Profound Dharma of Self-Liberation through the Intent of the Peaceful and Wrathful Ones</em> (<em>Zab chos zhi khro dgongs pa rang grol</em>). Within this cycle, the Bardo Thödol is specifically the portion addressed to the consciousness of the dying and deceased person, guiding them through the three bardos (intermediate states) with precise instructions for recognition and liberation. The text is always used in conjunction with empowerments, reading transmissions, and teaching from a qualified lama within the Nyingma lineage — it is not a self-help manual but a liturgical text embedded in a living transmission.</p>
+      </div>
+    </section>
+
+    <!-- PADMASAMBHAVA & THE TERMA TRADITION -->
+    <section class="space-y-6">
+      <h2 class="font-cinzel text-2xl text-orange-300 text-center tracking-wide">Padmasambhava &amp; the Terma Tradition</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-orange-200">Padmasambhava — Guru Rinpoche</h3>
+          <p class="text-orange-100/70 text-sm leading-relaxed">Padmasambhava — "Lotus-Born," known in Tibet as Guru Rinpoche ("Precious Teacher") — is regarded in the Nyingma school of Tibetan Buddhism as the "second Buddha." According to tradition, he was miraculously born in a lotus flower on Lake Dhanakosha in Oddiyana (northwest India/Pakistan), mastered all the Tantric teachings of India, was invited to Tibet by King Trisong Detsen in the 8th century, subdued the local spirits, and established Buddhism firmly in the Land of Snows. He concealed thousands of terma teachings throughout Tibet — to be revealed by specific <em>tertöns</em> (treasure-revealers) in future centuries when they would be needed. His presence in Tibetan Buddhism as both historical master and living spiritual force is unparalleled.</p>
+        </div>
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-orange-200">Karma Lingpa &amp; the Discovery</h3>
+          <p class="text-orange-100/70 text-sm leading-relaxed">Karma Lingpa (1326–1386) is credited with discovering the Bardo Thödol cycle on Gampodar mountain in the Dakpo region of southern Tibet at the age of fifteen. According to tradition, he received the transmission in a vision and extracted the physical text from the earth. The entire cycle was then transmitted through several generations of lineage holders before being compiled into its present form and becoming widely distributed. The Bardo Thödol tradition was particularly associated with the Nyingma (<em>rNying ma</em> — "Ancient") school, the oldest school of Tibetan Buddhism, which preserves the original transmissions of Padmasambhava's teaching.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- THE THREE BARDOS -->
+    <section class="rounded-2xl p-8 space-y-5" style="background: linear-gradient(135deg, rgba(251,146,60,0.1), rgba(234,88,12,0.06));">
+      <h2 class="font-cinzel text-2xl text-orange-300 text-center tracking-wide">The Three Bardos</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div class="space-y-3">
+          <h3 class="font-cinzel text-sm text-orange-200">Bardo of Dying (Chikhai Bardo)</h3>
+          <p class="text-orange-100/70 text-sm leading-relaxed">The first intermediate state — the moment of death itself, and the period immediately following. As the consciousness begins to withdraw from the body, the elements dissolve in sequence: earth into water, water into fire, fire into air, air into consciousness. Through these dissolutions, the dying person experiences a sequence of increasingly subtle states, culminating in the appearance of the <strong class="text-orange-200">clear light of dharmata</strong> — the luminous emptiness that is the ground of all mind. This is the supreme opportunity for liberation: if the dying consciousness recognises this light as its own nature, it achieves Buddhahood at that very moment. The text provides detailed instructions for this recognition.</p>
+        </div>
+        <div class="space-y-3">
+          <h3 class="font-cinzel text-sm text-orange-200">Bardo of Dharmata (Chönyid Bardo)</h3>
+          <p class="text-orange-100/70 text-sm leading-relaxed">If liberation is not achieved at the moment of death, consciousness enters the second bardo — the bardo of dharmata (the nature of phenomena). During this intermediate state, which lasts approximately fourteen days in the text's symbolic time-frame, the consciousness encounters the <strong class="text-orange-200">forty-two peaceful and fifty-eight wrathful deities</strong> — radiant mandalas of light and sound arising from the pure awareness of the consciousness itself. Each deity is accompanied by both a brilliant, coloured, frightening light (the deity's pure awareness) and a dull, comfortable light (the temptation of a lower realm). The instructions of the Bardo Thödol guide the consciousness to merge with the brilliant lights and avoid the seductive dull ones — to recognise the deity's light as one's own mind.</p>
+        </div>
+        <div class="space-y-3">
+          <h3 class="font-cinzel text-sm text-orange-200">Bardo of Becoming (Sipai Bardo)</h3>
+          <p class="text-orange-100/70 text-sm leading-relaxed">The third and final bardo — the process of seeking a new rebirth if liberation has not been achieved in the previous two. The consciousness, now in a "mental body" with the ability to move instantaneously through space and time, encounters the after-death judgment presided over by the Lord of Death (Yama Dharmarāja), who weighs the white and black pebbles of good and bad actions. The text provides instructions for choosing a good rebirth (ideally in a land where the Dharma flourishes and qualified teachers are available), and for recognising spiritual teachers in the new life. The entire cycle can begin again, with the possibility of liberation in the next life if this one ends without full realisation.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PEACEFUL AND WRATHFUL DEITIES -->
+    <section class="space-y-6">
+      <h2 class="font-cinzel text-2xl text-orange-300 text-center tracking-wide">The Peaceful &amp; Wrathful Deities</h2>
+      <div class="corpus-card max-w-4xl mx-auto space-y-4">
+        <p class="text-orange-100/80 text-sm leading-relaxed">
+          The hundred deities encountered in the Chönyid bardo — forty-two peaceful and fifty-eight wrathful — are not external beings but projections of the consciousness itself: the five Buddha families (Vairocana, Akṣobhya, Ratnasambhava, Amitābha, Amoghasiddhi) and their consorts, Bodhisattvas and Ḍākinīs, gate-keepers and wrathful Herukas, arising in their proper sequence over the fourteen-day period of this bardo.
+        </p>
+        <p class="text-orange-100/80 text-sm leading-relaxed">
+          The <strong class="text-orange-200">peaceful deities</strong> appear in the first seven days as radiant mandalas of pure coloured light — each accompanied by the brilliant light of that Buddha family's pure wisdom, and simultaneously by the dull, murky light of a lower realm reflecting that family's corresponding poison (ignorance, anger, pride, desire, envy). The instruction is always the same: recognise the brilliant light as your own mind; do not be seduced by the comfortable dull light.
+        </p>
+        <p class="text-orange-100/80 text-sm leading-relaxed">
+          The <strong class="text-orange-200">wrathful deities</strong> — fifty-eight blood-drinking Herukas — appear in the second seven days as terrifying manifestations of the same five Buddha families in their wrathful aspect. These overwhelming, roaring figures of flame and blood represent the same wisdom energies as the peaceful deities, now appearing in their fierce form because the consciousness has missed the earlier opportunities for recognition. The text emphasises: do not fear them; recognise them as your own mind's projections; they cannot harm you.
+        </p>
+        <p class="text-orange-100/80 text-sm leading-relaxed">
+          The entire sequence is a profoundly compassionate pedagogical design: at each stage, the consciousness is given another opportunity to recognise its own luminous nature. The deities are not judges or executioners but mirrors — radiant reflections of the consciousness's own deepest wisdom, appearing in successively more dramatic forms to penetrate through the habits of delusion.
+        </p>
+      </div>
+    </section>
+
+    <!-- WESTERN RECEPTION -->
+    <section class="rounded-2xl p-8 space-y-5" style="background: linear-gradient(135deg, rgba(251,146,60,0.1), rgba(234,88,12,0.06));">
+      <h2 class="font-cinzel text-2xl text-orange-300 text-center tracking-wide">Western Reception</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-orange-100/80 leading-relaxed">
+        <div>
+          <p class="text-orange-200 font-semibold">W.Y. Evans-Wentz (1878–1965)</p>
+          <p>The American writer and Theosophist who, working with the Tibetan Lama Kazi Dawa-Samdup, produced the first English translation of the Bardo Thödol in 1927, titling it <em>The Tibetan Book of the Dead</em>. Evans-Wentz's presentation — heavily influenced by Theosophy and by his own comparative religious framework — was not an accurate rendering of Tibetan Buddhism but it introduced the text to an enormous Western audience and sparked decades of fascinated engagement with Tibetan Buddhist ideas about death and consciousness.</p>
+        </div>
+        <div>
+          <p class="text-orange-200 font-semibold">Carl Jung (1875–1961)</p>
+          <p>Jung's "Psychological Commentary" on Evans-Wentz's translation (1935; expanded 1953) was one of his most significant encounters with Eastern religious thought. Jung interpreted the Bardo Thödol as a psychological guide — the deities as autonomous complexes arising from the unconscious, the bardos as stages of psychological transformation. While acknowledging that his interpretation stripped away the metaphysical dimensions of the text, Jung argued that its psychological insights were of universal human significance and anticipated his own theory of the collective unconscious and the process of individuation.</p>
+        </div>
+        <div>
+          <p class="text-orange-200 font-semibold">Timothy Leary &amp; the Psychedelic Adaptation</p>
+          <p>In 1964, Timothy Leary, Ralph Metzner, and Richard Alpert (later Ram Dass) published <em>The Psychedelic Experience</em> — an adaptation of the Bardo Thödol as a guide to LSD sessions, based on the belief that psychedelic states closely paralleled the bardo experiences. While this adaptation was strongly criticised by Tibetan Buddhist scholars as a fundamental misreading, it introduced the Bardo Thödol to an entirely new generation and contributed to the psychedelic movement's engagement with Eastern religious thought. It also stimulated serious academic interest in the text.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- KEY SCHOLARS -->
+    <section class="space-y-6">
+      <h2 class="font-cinzel text-2xl text-orange-300 text-center tracking-wide">Key Scholars &amp; Translators</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-orange-200">Chogyam Trungpa (1939–1987)</h3>
+          <p class="text-orange-100/70 text-sm leading-relaxed">The Tibetan Rinpoche and founder of Shambhala International who, with Francesca Fremantle, produced the most authoritative English translation of the Bardo Thödol (1975). Trungpa's translation and his extensive commentary (published as <em>The Tibetan Book of the Dead: The Great Liberation Through Hearing in the Bardo</em>) corrected many of Evans-Wentz's interpretive distortions and made the text available in an accurate, living Buddhist framework for the first time. His approach — presenting the text as a practical guide to working with mind in both life and death — has been enormously influential.</p>
+        </div>
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-orange-200">Francesca Fremantle</h3>
+          <p class="text-orange-100/70 text-sm leading-relaxed">The British Sanskrit and Tibetan scholar whose co-translation with Chogyam Trungpa brought rigorous textual scholarship to bear on the Bardo Thödol. Fremantle's subsequent solo work <em>Luminous Emptiness: Understanding the Tibetan Book of the Dead</em> (2001) provides the most comprehensive English-language commentary on the text — situating it carefully within the broader context of Tibetan Buddhism, Vajrayāna doctrine, and the Nyingma terma tradition, while remaining accessible to non-specialist readers.</p>
+        </div>
+
+        <div class="corpus-card space-y-3">
+          <h3 class="font-cinzel text-sm text-orange-200">Robert Thurman (b. 1941)</h3>
+          <p class="text-orange-100/70 text-sm leading-relaxed">The American Buddhist scholar, close disciple of His Holiness the Dalai Lama, and first American ordained as a Tibetan Buddhist monk, whose translation <em>The Tibetan Book of the Dead: Liberation Through Understanding in the Between</em> (1994) introduced the text to yet another generation with fresh translations ("the Between" for <em>bardo</em>) and extensive contextual material on Tibetan Buddhist philosophy. Thurman's lively, somewhat provocative style — presenting the Bardo Thödol as the most sophisticated science of consciousness in human history — opened productive debate about the relationship between Buddhist phenomenology and modern cognitive science.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="text-center mt-4">
+      <a href="/esoteric-corpora" class="text-orange-400/60 hover:text-orange-300 text-sm transition-colors">← Esoteric Texts &amp; Corpora</a>
+    </div>
+
+  </div><!-- end content wrapper -->
+
+  <footer class="relative z-10 text-center py-8 text-orange-400/40 text-xs mt-8">
+    <p class="italic">"O nobly born, recognise the clear light of your own nature." — Bardo Thödol</p>
+    <p class="mt-2">Esoteric Wisdom · Built with ✨ in Rust</p>
+    <p class="mt-2"><a href="/home" class="hover:text-orange-300 transition-colors">← Back to Portal</a></p>
+  </footer>
+
+  <script>
+    const sf = document.getElementById('starfield');
+    for (let i = 0; i < 200; i++) {
+      const s = document.createElement('div');
+      s.className = 'star';
+      const size = Math.random() * 2.5 + 0.5;
+      s.style.cssText = `width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--dur:${2+Math.random()*4}s;--delay:${Math.random()*5}s;opacity:${0.2+Math.random()*0.8};`;
+      sf.appendChild(s);
+    }
+  </script>
+
+</body>
+</html>
