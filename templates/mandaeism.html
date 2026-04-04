@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mandaeism — Esoteric Wisdom</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <meta property="og:title" content="Mandaeism — Esoteric Wisdom" />
+  <meta property="og:description" content="The world's oldest continuously practised Gnostic religion — a living tradition of water rituals, light-cosmology, and initiatory knowledge preserved for over two millennia." />
+  <meta property="og:type" content="website" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <style>
+    body { font-family: 'Raleway', sans-serif; }
+    .font-cinzel { font-family: 'Cinzel Decorative', cursive; }
+    @keyframes twinkle { 0%,100%{opacity:0.2;transform:scale(1);} 50%{opacity:1;transform:scale(1.4);} }
+    @keyframes float { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-12px);} }
+    @keyframes shimmer { 0%{background-position:0% 50%;} 100%{background-position:200% 50%;} }
+    .star { position:absolute; width:2px; height:2px; background:white; border-radius:50%; animation:twinkle 3s infinite; }
+    .aurora-text { background: linear-gradient(90deg, #22d3ee, #67e8f9, #06b6d4, #a5f3fc, #22d3ee); background-size:300% auto; -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; animation:shimmer 6s linear infinite; }
+    .floating { animation: float 4s ease-in-out infinite; }
+    .nav-link { position:relative; transition:all 0.3s; }
+    .nav-link::after { content:''; position:absolute; bottom:-2px; left:0; width:0; height:1px; background:#f59e0b; transition:width 0.3s; }
+    .nav-link:hover::after { width:100%; }
+    .sub-card { background: linear-gradient(135deg, rgba(0,80,100,0.18), rgba(0,50,70,0.10)); border: 1px solid rgba(34,211,238,0.25); border-radius: 1rem; padding: 1.5rem; transition: all 0.3s; }
+    .sub-card:hover { transform: translateY(-4px); box-shadow: 0 0 24px rgba(34,211,238,0.18); border-color: rgba(34,211,238,0.5); }
+  </style>
+</head>
+<body class="min-h-screen text-cyan-100 overflow-x-hidden" style="background: radial-gradient(ellipse at top, #001a1f 0%, #002d35 25%, #000a0d 60%, #000000 100%);">
+  <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+  <nav class="sticky top-0 z-50 flex items-center justify-between px-6 py-3 bg-black/40 backdrop-blur-md border-b border-amber-700/30 flex-wrap gap-y-2">
+    <a href="/home" class="font-cinzel text-amber-300 text-sm tracking-widest shrink-0">✦ Esoteric Wisdom ✦</a>
+    <div class="flex items-center gap-x-3 gap-y-1 text-xs text-violet-200 flex-wrap justify-end">
+      <a href="/astrology" class="nav-link hover:text-amber-300 transition-colors">Astrology</a>
+      <a href="/meditation" class="nav-link hover:text-amber-300 transition-colors">Meditation</a>
+      <a href="/tarot/select" class="nav-link hover:text-amber-300 transition-colors">Tarot</a>
+      <a href="/numerology" class="nav-link hover:text-amber-300 transition-colors">Numerology</a>
+      <a href="/crystals" class="nav-link hover:text-amber-300 transition-colors">Crystals</a>
+      <a href="/runes" class="nav-link hover:text-amber-300 transition-colors">Runes</a>
+      <a href="/shamanism" class="nav-link hover:text-amber-300 transition-colors">Shamanism</a>
+      <a href="/druidism" class="nav-link hover:text-amber-300 transition-colors">Druidism</a>
+      <a href="/akashic-records" class="nav-link hover:text-amber-300 transition-colors">Akashic Records</a>
+      <a href="/wicca" class="nav-link hover:text-amber-300 transition-colors">Wicca</a>
+      <a href="/alchemy" class="nav-link hover:text-amber-300 transition-colors">Alchemy</a>
+      <a href="/gateway-process" class="nav-link hover:text-amber-300 transition-colors">Gateway Process</a>
+      <a href="/remote-viewing" class="nav-link hover:text-amber-300 transition-colors">Remote Viewing</a>
+      <a href="/khasarov-mirror" class="nav-link hover:text-amber-300 transition-colors">Khasarov Mirror</a>
+      <a href="/western-esotericism" class="nav-link hover:text-amber-300 transition-colors">Western Esotericism</a>
+      <a href="/eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Eastern Esotericism</a>
+      <a href="/indigenous-esotericism" class="nav-link hover:text-amber-300 transition-colors">Indigenous Esotericism</a>
+      <a href="/middle-eastern-esotericism" class="nav-link text-amber-300 font-semibold">Middle Eastern Mysteries</a>
+      <a href="/journal/reflections" class="nav-link text-emerald-300 hover:text-emerald-200 transition-colors">✨ Reflections</a>
+      <a href="https://ko-fi.com/esotericwisdom" target="_blank" rel="noopener noreferrer" class="px-3 py-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-white font-semibold hover:scale-105 transition-transform shrink-0">☕ Support</a>
+    </div>
+  </nav>
+
+  <div class="relative z-10 max-w-6xl mx-auto space-y-10 pt-6 px-4 pb-12">
+    <div class="text-sm text-cyan-300/70">
+      <a href="/middle-eastern-esotericism" class="hover:text-cyan-200 transition-colors">← Middle Eastern &amp; Ancient Mysteries</a>
+    </div>
+
+    <section class="text-center py-16 space-y-6">
+      <div class="text-7xl floating">💧</div>
+      <h1 class="font-cinzel text-4xl md:text-6xl font-bold aurora-text leading-tight">Mandaeism</h1>
+      <p class="max-w-3xl mx-auto text-cyan-200/80 text-lg leading-relaxed">The world's oldest continuously practised Gnostic religion — a living tradition of water rituals, light-cosmology, and sacred knowledge maintained by a remarkable community in the rivers of Mesopotamia and, today, in diaspora communities across the world.</p>
+    </section>
+
+    <!-- INTRODUCTION -->
+    <section class="rounded-2xl p-8 space-y-6" style="background: linear-gradient(135deg, rgba(0,80,100,0.12), rgba(0,50,70,0.07));">
+      <h2 class="font-cinzel text-2xl text-cyan-300 text-center tracking-wide">Introduction</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm text-cyan-100/80 leading-relaxed">
+        <div class="space-y-4">
+          <p>Mandaeism is one of the world's most extraordinary and least-known religious traditions — a <strong class="text-cyan-300">living Gnostic religion</strong> that has maintained continuous practice from antiquity to the present day, making it the oldest surviving Gnostic tradition on Earth. The name "Mandaean" derives from <em>manda</em> — the Mandaic word for "knowledge" (cognate with the Greek <em>gnosis</em>) — and the tradition's full self-designation is <em>Mandayye</em>, "the Knowers." The Mandaeans inhabit a spiritual universe of extraordinary complexity: a cosmos of multiple worlds and heavenly realms, of divine beings (Uthra) who govern the world of light and demonic forces who preside over the material world, of the human soul as a spark of divine light trapped in matter and seeking its return to the Alma d-Nhura, the World of Light from which it originally descended.</p>
+          <p>The origins of Mandaeism are debated. The tradition itself claims continuity with the first humans, and associates its most revered human figure with <strong class="text-cyan-300">John the Baptist</strong> — whom Mandaeans regard as their greatest prophet. Modern scholarship has traced the tradition's roots to the Jordan valley region in the first century CE, suggesting that Mandaeism may have emerged from the same complex of Jewish baptismal movements that produced John the Baptist and, through him, early Christianity. The Mandaeans subsequently migrated to Mesopotamia, settling in the river valleys of what is now southern Iraq and the Khuzestan province of Iran, where they maintained their tradition through centuries of Muslim, Christian, and Jewish neighbours, protected (with varying success) by their classification as "People of the Book."</p>
+        </div>
+        <div class="space-y-4">
+          <p>The sacred scripture of the Mandaeans — the <strong class="text-cyan-300">Ginza Rba</strong> (Great Treasure) — is a substantial collection of hymns, prayers, cosmological narratives, and ethical teachings. It is divided into two parts: the Right Ginza (for the living) and the Left Ginza (for the dead and the soul's journey after death). The Ginza contains some of the most beautiful religious literature of the ancient world — lyric passages of astonishing power describing the soul's longing for its divine homeland, the hostility of the material world, and the comfort of the divine light. The Mandaean corpus also includes the Canonical Prayerbook, the Book of the Zodiac (Asfar Malwashe), the Book of the Souls (Sidra d-Nismata), and various liturgical and ritual texts.</p>
+          <p>The most distinctive and central practice of Mandaeism is <strong class="text-cyan-300">Masbuta</strong> — full-immersion baptism in flowing (ideally running) water, performed repeatedly throughout the believer's life as a ritual of purification, spiritual renewal, and connection with the divine light. Unlike Christian baptism, which is performed once, Masbuta is a practice for life — performed on specific occasions (at initiation, at religious festivals, before and after significant life events, and whenever spiritual purification is needed). The flowing water (yardna) is understood as a living, sacred entity — a manifestation of divine light — and the act of immersion in it is understood as a genuine contact with the World of Light, a temporary return of the soul to its divine source.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CORE CONCEPTS -->
+    <section class="space-y-6">
+      <h2 class="font-cinzel text-2xl text-cyan-300 text-center tracking-wide">Core Concepts</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div class="sub-card space-y-3">
+          <div class="text-3xl">✨</div>
+          <h3 class="font-cinzel text-base text-cyan-200">Manda d-Hiia (Knowledge of Life)</h3>
+          <p class="text-xs text-cyan-100/70 leading-relaxed">The central divine figure of Mandaeism — whose very name means "Knowledge of Life" — a great Uthra (divine being) who descends from the World of Light to bring saving knowledge to humanity. Manda d-Hiia is the Mandaean equivalent of the Gnostic Revealer or Saviour figure — not a judge but an illuminator, one who comes to awaken the divine spark in human souls and reveal the path back to the World of Light. The tradition bearing his name takes its identity from this mission of gnosis and liberation.</p>
+        </div>
+        <div class="sub-card space-y-3">
+          <div class="text-3xl">💧</div>
+          <h3 class="font-cinzel text-base text-cyan-200">Masbuta (Baptism)</h3>
+          <p class="text-xs text-cyan-100/70 leading-relaxed">The central sacramental rite of Mandaeism — full-immersion baptism in flowing water, performed repeatedly throughout life as purification, spiritual renewal, and communion with the divine. The yardna (flowing water) is regarded as a living sacred substance. Masbuta is administered by a priest (Tarmida) and involves multiple immersions, the application of sesame oil, the receiving of a myrtle crown, and the consumption of consecrated water and bread. It is the sacrament that connects the Mandaean believer to the World of Light.</p>
+        </div>
+        <div class="sub-card space-y-3">
+          <div class="text-3xl">🌟</div>
+          <h3 class="font-cinzel text-base text-cyan-200">Uthra (Divine Being)</h3>
+          <p class="text-xs text-cyan-100/70 leading-relaxed">The divine beings who inhabit the World of Light — comparable to angels in function but constituting a complex hierarchy of luminous entities, each responsible for aspects of the divine order. The Uthra assist human souls on their journey through the afterlife's heavenly realms, and the great Uthra like Manda d-Hiia and Hibil Ziwa (Abel) are central salvific figures. The Uthra are characterised by their luminosity, their goodness, and their care for human souls struggling in the material world.</p>
+        </div>
+        <div class="sub-card space-y-3">
+          <div class="text-3xl">🌬️</div>
+          <h3 class="font-cinzel text-base text-cyan-200">Ruha (Spirit)</h3>
+          <p class="text-xs text-cyan-100/70 leading-relaxed">In Mandaean cosmology, Ruha is a complex and ambiguous figure — the spirit or breath associated with the material world, often identified with the adversarial forces that created the physical cosmos and imprisoned divine sparks within it. Ruha is the mother of the seven planets and the twelve zodiacal signs, whose influence traps souls in the cycle of material existence. Understanding and transcending Ruha's influence is part of the Mandaean spiritual journey toward liberation from material bondage.</p>
+        </div>
+        <div class="sub-card space-y-3">
+          <div class="text-3xl">🌍</div>
+          <h3 class="font-cinzel text-base text-cyan-200">Tibil (Material World)</h3>
+          <p class="text-xs text-cyan-100/70 leading-relaxed">The material world — neither wholly evil nor wholly good in Mandaean thought, but a place of exile and challenge for the divine spark. Tibil was created by subordinate divine beings (not by the supreme God directly), and its creation involved a series of misadventures and the entrapment of fragments of divine light within material bodies. The Mandaean does not flee the world but lives within it as an ethical being, performing the rituals that maintain their connection to the World of Light while awaiting the soul's eventual liberation.</p>
+        </div>
+        <div class="sub-card space-y-3">
+          <div class="text-3xl">🌅</div>
+          <h3 class="font-cinzel text-base text-cyan-200">Alma d-Nhura (World of Light)</h3>
+          <p class="text-xs text-cyan-100/70 leading-relaxed">The supreme reality in Mandaean cosmology — the World of Light from which all souls originally descended and to which the purified soul returns after death. The World of Light is inhabited by the supreme divine being (variously named Hayyi Rabbi, "Great Life," or Pirauhe) and the countless Uthra. The soul's journey through the afterlife — described in elaborate detail in the Mandaean texts — involves passing through a series of heavenly gatekeepers and eventually ascending to reunion with the divine light that is its true home and nature.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- THE MANDAEAN PRIESTHOOD -->
+    <section class="rounded-2xl p-8 space-y-6" style="background: linear-gradient(135deg, rgba(0,80,100,0.12), rgba(0,50,70,0.07));">
+      <h2 class="font-cinzel text-2xl text-cyan-300 text-center tracking-wide">The Mandaean Priesthood</h2>
+      <div class="space-y-4 text-sm text-cyan-100/80 leading-relaxed max-w-4xl mx-auto">
+        <p>The Mandaean priesthood is a hereditary institution of remarkable antiquity — one of the few fully functioning ancient priestly lineages still operating in the modern world. The priestly hierarchy consists of two main grades: the <strong class="text-cyan-300">Tarmida</strong> (priest, literally "disciple") and the <strong class="text-cyan-300">Ganzibra</strong> (treasurer, the highest priestly grade). Priestly initiation is an extended process involving multiple stages of purification, water baptisms, and transmission of sacred knowledge; only the son of a priest who has undergone the complete initiation process may himself become a priest. The Ganzibra has authority to perform all rituals, including the highest Zidqa Brikha (sacred meal) and the Masiqta (mass for the dead), and is responsible for the preservation and transmission of sacred texts.</p>
+        <p>The survival of the Mandaean community and its priesthood through centuries of persecution, displacement, and diaspora is one of the most remarkable stories in the history of religion. At various points, the community has faced near-extinction — through forced conversion, epidemic disease that decimated the priestly line, and, most recently, the catastrophic violence of the post-2003 Iraq war, which caused the near-complete flight of Mandaeans from their ancestral homeland in southern Iraq. From a population of perhaps 60,000 to 70,000 in Iraq before 2003, the community has been reduced to a few thousand in its original location, with the majority now in diaspora — in Australia, Sweden, the United States, Germany, and elsewhere. Despite this traumatic displacement, the Mandaean priesthood has maintained its ritual life, adapting with remarkable ingenuity to the requirement of flowing water in countries where natural rivers are not available or not ritually appropriate.</p>
+      </div>
+    </section>
+
+    <!-- COSMOLOGY OF LIGHT AND DARKNESS -->
+    <section class="space-y-6">
+      <h2 class="font-cinzel text-2xl text-cyan-300 text-center tracking-wide">Cosmology of Light and Darkness</h2>
+      <div class="space-y-4 text-sm text-cyan-100/80 leading-relaxed max-w-4xl mx-auto">
+        <p>The Mandaean cosmological myth is one of the most elaborate and evocative in any Gnostic tradition — a vast drama of creation, fall, and redemption that unfolds across cosmic aeons. In the beginning was the World of Light — a realm of pure luminous being, inhabited by the Great Life (Hayyi Rabbi) and countless divine beings (Uthra) of graduated beauty and power. From the interactions and, in some versions, the errors or transgressions within this divine realm, the material world was generated — not by the supreme God directly, but by subordinate beings who lacked the wisdom or authority for the work they undertook. The material cosmos is therefore a flawed creation: not wholly evil (it contains fragments of the original light), but not the intended expression of divine will.</p>
+        <p>The human being, in Mandaean understanding, is a <strong class="text-cyan-300">divine spark</strong> — a piece of the World of Light — imprisoned in a material body by the accident or malice of the lower creative forces. The soul does not originally belong here; its true home is the World of Light, and its life in the material world is a period of exile, testing, and, if it maintains its purity through the sacramental life of the community, purification. Death is not an ending but a transition: the soul, purified by a life of Masbuta and ethical living, makes its way upward through the heavenly realms (purgatorial stations where accumulated sins are cleansed) and eventually achieves reunion with the World of Light. The souls of the impure undergo further cycles of purification; the truly wicked may be imprisoned in the realm of darkness. This afterlife geography is elaborated in extraordinary detail in the Mandaean texts, and represents one of the most sophisticated eschatological visions in the ancient world.</p>
+      </div>
+    </section>
+
+    <!-- RECOMMENDED READING -->
+    <section class="space-y-6">
+      <h2 class="font-cinzel text-2xl text-cyan-300 text-center tracking-wide">Recommended Reading</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div class="sub-card space-y-3">
+          <div class="text-3xl">📖</div>
+          <h3 class="font-cinzel text-base text-cyan-200">E.S. Drower</h3>
+          <p class="text-xs text-cyan-100/70 leading-relaxed"><em>The Mandaeans of Iraq and Iran</em> (1937) — the foundational ethnographic and religious study of the Mandaean community by the British diplomat's wife who spent years learning Mandaic and gaining the trust of the Mandaean priests. Drower's sympathetic and meticulous account remains the essential starting point for Western study of the tradition. Her translation of the <em>Ginza Rba</em> (The Canonical Prayerbook of the Mandaeans) provides the most accessible entry into the sacred texts.</p>
+        </div>
+        <div class="sub-card space-y-3">
+          <div class="text-3xl">📚</div>
+          <h3 class="font-cinzel text-base text-cyan-200">Kurt Rudolph</h3>
+          <p class="text-xs text-cyan-100/70 leading-relaxed"><em>Gnosis: The Nature and History of Gnosticism</em> (1977; English translation 1983) — the definitive scholarly overview of Gnosticism, with substantial attention to Mandaeism as the most fully preserved Gnostic tradition. Rudolph's treatment places Mandaeism within its full historical and comparative context while respecting its particularity. His specialist work on Mandaean texts and rituals remains the standard reference for advanced students.</p>
+        </div>
+        <div class="sub-card space-y-3">
+          <div class="text-3xl">💧</div>
+          <h3 class="font-cinzel text-base text-cyan-200">Jorunn Buckley</h3>
+          <p class="text-xs text-cyan-100/70 leading-relaxed"><em>The Mandaeans: Ancient Texts and Modern People</em> (2002) — the essential contemporary study that bridges the scholarly and the human, examining Mandaean texts and ritual in relation to the living community's modern situation. Buckley's work is particularly valuable for its attention to the role of women in Mandaean tradition and for its engagement with the contemporary diaspora. Her documentary film work has also brought the community to wider attention.</p>
+        </div>
+        <div class="sub-card space-y-3">
+          <div class="text-3xl">🌊</div>
+          <h3 class="font-cinzel text-base text-cyan-200">Charles Häberl</h3>
+          <p class="text-xs text-cyan-100/70 leading-relaxed"><em>The Book of Kings and the Explanations of This World</em> (2022) — Häberl's translation of the Asfar Malwashe, a Mandaean text of remarkable cosmological and astrological interest. His ongoing scholarly work on Mandaean language and literature represents the cutting edge of academic Mandaean studies, and his engagement with living Mandaean communities in the diaspora demonstrates the importance of combining textual scholarship with community relationship.</p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script>
+    const sf = document.getElementById('starfield');
+    for (let i = 0; i < 120; i++) {
+      const s = document.createElement('div');
+      s.className = 'star';
+      s.style.cssText = `left:${Math.random()*100}%;top:${Math.random()*100}%;animation-delay:${Math.random()*4}s;animation-duration:${2+Math.random()*3}s;opacity:${0.2+Math.random()*0.8}`;
+      sf.appendChild(s);
+    }
+  </script>
+</body>
+</html>

@@ -238,3 +238,31 @@ pub struct HawaiianHunaTemplate;
 #[derive(Template)]
 #[template(path = "inuit_angakkuq.html")]
 pub struct InuitAngakkuqTemplate;
+
+#[derive(Template)]
+#[template(path = "middle_eastern_esotericism.html")]
+pub struct MiddleEasternEsotericismTemplate;
+
+#[derive(Template)]
+#[template(path = "sufism.html")]
+pub struct SufismTemplate;
+
+#[derive(Template)]
+#[template(path = "zoroastrianism.html")]
+pub struct ZoroastrianismTemplate;
+
+#[derive(Template)]
+#[template(path = "mandaeism.html")]
+pub struct MandaeismTemplate;
+
+#[derive(Template)]
+#[template(path = "kemetism.html")]
+pub struct KemetismTemplate;
+
+#[derive(Template)]
+#[template(path = "mesopotamian_mysteries.html")]
+pub struct MesopotamianMysteriesTemplate;
+
+#[derive(Template)]
+#[template(path = "merkabah.html")]
+pub struct MerkabahTemplate;
