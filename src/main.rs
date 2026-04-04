@@ -41,6 +41,7 @@ async fn main() -> anyhow::Result<()> {
         .route("/", get(landing))
         .route("/home", get(app_landing))
         .route("/favicon.svg", get(favicon))
+        .route("/og-image.png", get(og_image))
         .nest("/admin", admin::routes())
         .nest("/auth", auth::routes())
         .nest("/astrology", astrology::routes())
@@ -93,6 +94,13 @@ async fn favicon() -> impl IntoResponse {
     (
         [(header::CONTENT_TYPE, "image/svg+xml")],
         include_bytes!("../static/favicon.svg").as_ref(),
+    )
+}
+
+async fn og_image() -> impl IntoResponse {
+    (
+        [(header::CONTENT_TYPE, "image/png")],
+        include_bytes!("../static/og-image.png").as_ref(),
     )
 }
 
