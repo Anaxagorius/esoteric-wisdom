@@ -16,6 +16,11 @@ use crate::templates::{
     GeomancyTemplate,
     ScryingTemplate,
     PalmistryTemplate,
+    EsotericMeditationTemplate,
+    EsotericAstrologyTemplate,
+    EsotericTarotTemplate,
+    EsotericRunesTemplate,
+    EsotericNumerologyTemplate,
 };
 use crate::state::AppState;
 
@@ -32,10 +37,15 @@ pub fn routes() -> Router<AppState> {
         .route("/astral-travel", get(astral_travel))
         .route("/dream-incubation", get(dream_incubation))
         .route("/vision-quests", get(vision_quests))
+        .route("/meditation", get(esoteric_meditation))
         .route("/i-ching", get(i_ching))
         .route("/geomancy", get(geomancy))
         .route("/scrying", get(scrying))
         .route("/palmistry", get(palmistry))
+        .route("/astrology", get(esoteric_astrology))
+        .route("/tarot", get(esoteric_tarot))
+        .route("/runes", get(esoteric_runes))
+        .route("/numerology", get(esoteric_numerology))
 }
 
 async fn hub() -> impl IntoResponse {
@@ -96,4 +106,24 @@ async fn scrying() -> impl IntoResponse {
 
 async fn palmistry() -> impl IntoResponse {
     HtmlTemplate(PalmistryTemplate)
+}
+
+async fn esoteric_meditation() -> impl IntoResponse {
+    HtmlTemplate(EsotericMeditationTemplate)
+}
+
+async fn esoteric_astrology() -> impl IntoResponse {
+    HtmlTemplate(EsotericAstrologyTemplate)
+}
+
+async fn esoteric_tarot() -> impl IntoResponse {
+    HtmlTemplate(EsotericTarotTemplate)
+}
+
+async fn esoteric_runes() -> impl IntoResponse {
+    HtmlTemplate(EsotericRunesTemplate)
+}
+
+async fn esoteric_numerology() -> impl IntoResponse {
+    HtmlTemplate(EsotericNumerologyTemplate)
 }
