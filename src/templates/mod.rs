@@ -346,3 +346,59 @@ pub struct EsotericRunesTemplate;
 #[derive(Template)]
 #[template(path = "esoteric_numerology.html")]
 pub struct EsotericNumerologyTemplate;
+
+#[derive(Template)]
+#[template(path = "esoteric_corpora.html")]
+pub struct EsotericCorporaTemplate;
+
+#[derive(Template)]
+#[template(path = "corpus_hermeticum.html")]
+pub struct CorpusHermeticumTemplate;
+
+#[derive(Template)]
+#[template(path = "nag_hammadi.html")]
+pub struct NagHammadiTemplate;
+
+#[derive(Template)]
+#[template(path = "zohar.html")]
+pub struct ZoharTemplate;
+
+#[derive(Template)]
+#[template(path = "sefer_yetzirah.html")]
+pub struct SeferYetzirahTemplate;
+
+#[derive(Template)]
+#[template(path = "sefer_bahir.html")]
+pub struct SeferBahirTemplate;
+
+#[derive(Template)]
+#[template(path = "emerald_tablet.html")]
+pub struct EmeraldTabletTemplate;
+
+#[derive(Template)]
+#[template(path = "upanishads_esoteric.html")]
+pub struct UpanishadsEsotericTemplate;
+
+#[derive(Template)]
+#[template(path = "tantras_texts.html")]
+pub struct TantrasTextsTemplate;
+
+#[derive(Template)]
+#[template(path = "tibetan_book_dead.html")]
+pub struct TibetanBookDeadTemplate;
+
+#[derive(Template)]
+#[template(path = "book_of_the_law.html")]
+pub struct BookOfTheLawTemplate;
+
+#[derive(Template)]
+#[template(path = "picatrix.html")]
+pub struct PicatrixTemplate;
+
+#[derive(Template)]
+#[template(path = "chaldean_oracles.html")]
+pub struct ChaldeaOraclesTemplate;
+
+#[derive(Template)]
+#[template(path = "orphic_hymns.html")]
+pub struct OrphicHymnsTemplate;
