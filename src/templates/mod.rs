@@ -266,3 +266,63 @@ pub struct MesopotamianMysteriesTemplate;
 #[derive(Template)]
 #[template(path = "merkabah.html")]
 pub struct MerkabahTemplate;
+
+#[derive(Template)]
+#[template(path = "esoteric_practices.html")]
+pub struct EsotericPracticesTemplate;
+
+#[derive(Template)]
+#[template(path = "initiation_rites.html")]
+pub struct InitiationRitesTemplate;
+
+#[derive(Template)]
+#[template(path = "theurgy.html")]
+pub struct TheurgyTemplate;
+
+#[derive(Template)]
+#[template(path = "hermetic_prayer.html")]
+pub struct HermeticPrayerTemplate;
+
+#[derive(Template)]
+#[template(path = "invocation_evocation.html")]
+pub struct InvocationEvocationTemplate;
+
+#[derive(Template)]
+#[template(path = "sacred_geometry.html")]
+pub struct SacredGeometryTemplate;
+
+#[derive(Template)]
+#[template(path = "mantra_vibration.html")]
+pub struct MantraVibrationTemplate;
+
+#[derive(Template)]
+#[template(path = "breathwork.html")]
+pub struct BreathworkTemplate;
+
+#[derive(Template)]
+#[template(path = "astral_travel.html")]
+pub struct AstralTravelTemplate;
+
+#[derive(Template)]
+#[template(path = "dream_incubation.html")]
+pub struct DreamIncubationTemplate;
+
+#[derive(Template)]
+#[template(path = "vision_quests.html")]
+pub struct VisionQuestsTemplate;
+
+#[derive(Template)]
+#[template(path = "i_ching.html")]
+pub struct IChingTemplate;
+
+#[derive(Template)]
+#[template(path = "geomancy.html")]
+pub struct GeomancyTemplate;
+
+#[derive(Template)]
+#[template(path = "scrying.html")]
+pub struct ScryingTemplate;
+
+#[derive(Template)]
+#[template(path = "palmistry.html")]
+pub struct PalmistryTemplate;

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Initiation Rites — Esoteric Wisdom</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <meta property="og:title" content="Initiation Rites — Esoteric Wisdom" />
+  <meta property="og:description" content="Threshold ceremonies of death and rebirth — the initiatory rites through which esoteric traditions across the world transform the candidate and confer access to sacred knowledge." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://esoteric-wisdom.onrender.com/esoteric-practices/initiation-rites" />
+  <meta property="og:image" content="https://esoteric-wisdom.onrender.com/og-image.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Raleway', sans-serif; }
+    .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+
+    @keyframes twinkle { 0%,100% { opacity: 0.2; } 50% { opacity: 1; } }
+    .star { position: absolute; width: 2px; height: 2px; border-radius: 50%; background: white; animation: twinkle var(--dur,3s) ease-in-out infinite; animation-delay: var(--delay,0s); }
+
+    @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+    .floating { animation: float 5s ease-in-out infinite; }
+
+    @keyframes shimmer {
+      0% { background-position: -200% center; }
+      100% { background-position: 200% center; }
+    }
+
+    .nav-link { position: relative; transition: all 0.3s; }
+    .nav-link::after {
+      content: ''; position: absolute; bottom: -2px; left: 0;
+      width: 0; height: 2px;
+      background: linear-gradient(90deg, #f59e0b, #a78bfa);
+      transition: width 0.3s;
+    }
+    .nav-link:hover::after { width: 100%; }
+
+    .aurora-text {
+      background: linear-gradient(90deg, #f59e0b, #818cf8, #a78bfa, #fbbf24, #6366f1, #f59e0b);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 4s linear infinite;
+    }
+
+    @keyframes indigo-glow {
+      0%, 100% { box-shadow: 0 0 10px 2px rgba(99,102,241,0.25); }
+      50% { box-shadow: 0 0 28px 6px rgba(99,102,241,0.55); }
+    }
+
+    .esoteric-card {
+      background: linear-gradient(135deg, rgba(79,70,229,0.07), rgba(49,46,129,0.04));
+      border: 1px solid rgba(99,102,241,0.2);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+    .esoteric-card:hover {
+      transform: translateY(-6px) scale(1.01);
+      box-shadow: 0 0 28px 5px rgba(99,102,241,0.3);
+      border-color: rgba(99,102,241,0.5);
+    }
+    .esoteric-card.pulse {
+      animation: indigo-glow 3s ease-in-out infinite;
+    }
+
+    .practice-card {
+      background: linear-gradient(135deg, rgba(79,70,229,0.06), rgba(49,46,129,0.04));
+      border: 1px solid rgba(99,102,241,0.15);
+      border-radius: 0.75rem;
+      padding: 1.25rem;
+      transition: border-color 0.3s, background 0.3s;
+    }
+    .practice-card:hover {
+      border-color: rgba(99,102,241,0.4);
+      background: linear-gradient(135deg, rgba(79,70,229,0.1), rgba(49,46,129,0.06));
+    }
+  </style>
+</head>
+<body class="min-h-screen text-indigo-100 overflow-x-hidden" style="background: radial-gradient(ellipse at top, #0c0a1e 0%, #1a1040 25%, #060412 60%, #000000 100%);">
+
+  <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+
+  <nav class="sticky top-0 z-50 flex items-center justify-between px-6 py-3 bg-black/40 backdrop-blur-md border-b border-violet-500/20 flex-wrap gap-y-2">
+    <a href="/home" class="font-cinzel text-amber-300 text-sm tracking-widest shrink-0">✦ Esoteric Wisdom ✦</a>
+    <div class="flex items-center gap-x-3 gap-y-1 text-xs text-violet-200 flex-wrap justify-end">
+      <a href="/astrology" class="nav-link hover:text-amber-300 transition-colors">Astrology</a>
+      <a href="/meditation" class="nav-link hover:text-amber-300 transition-colors">Meditation</a>
+      <a href="/tarot/select" class="nav-link hover:text-amber-300 transition-colors">Tarot</a>
+      <a href="/numerology" class="nav-link hover:text-amber-300 transition-colors">Numerology</a>
+      <a href="/crystals" class="nav-link hover:text-amber-300 transition-colors">Crystals</a>
+      <a href="/runes" class="nav-link hover:text-amber-300 transition-colors">Runes</a>
+      <a href="/shamanism" class="nav-link hover:text-amber-300 transition-colors">Shamanism</a>
+      <a href="/druidism" class="nav-link hover:text-amber-300 transition-colors">Druidism</a>
+      <a href="/akashic-records" class="nav-link hover:text-amber-300 transition-colors">Akashic Records</a>
+      <a href="/wicca" class="nav-link hover:text-amber-300 transition-colors">Wicca</a>
+      <a href="/alchemy" class="nav-link hover:text-amber-300 transition-colors">Alchemy</a>
+      <a href="/gateway-process" class="nav-link hover:text-amber-300 transition-colors">Gateway Process</a>
+      <a href="/remote-viewing" class="nav-link hover:text-amber-300 transition-colors">Remote Viewing</a>
+      <a href="/khasarov-mirror" class="nav-link hover:text-amber-300 transition-colors">Khasarov Mirror</a>
+      <a href="/western-esotericism" class="nav-link hover:text-amber-300 transition-colors">Western Esotericism</a>
+      <a href="/eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Eastern Esotericism</a>
+      <a href="/indigenous-esotericism" class="nav-link hover:text-amber-300 transition-colors">Indigenous Esotericism</a>
+      <a href="/middle-eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Middle Eastern Mysteries</a>
+      <a href="/esoteric-practices" class="nav-link text-amber-300 font-semibold">Esoteric Practices</a>
+      <a href="/journal/reflections" class="nav-link text-emerald-300 hover:text-emerald-200 transition-colors">✨ Reflections</a>
+      <a href="https://ko-fi.com/esotericwisdom" target="_blank" rel="noopener noreferrer"
+         class="px-3 py-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-white font-semibold hover:scale-105 transition-transform shrink-0">☕ Support</a>
+    </div>
+  </nav>
+
+  <div class="relative z-10 max-w-6xl mx-auto space-y-10 pt-6 px-4 pb-12">
+
+    <div>
+      <a href="/esoteric-practices" class="text-xs text-indigo-300/60 hover:text-indigo-300 transition-colors">← Esoteric Practices &amp; Disciplines</a>
+    </div>
+
+    <section class="text-center py-14 space-y-6">
+      <div class="text-7xl floating">🔥</div>
+      <h1 class="font-cinzel text-4xl md:text-6xl font-bold aurora-text leading-tight">
+        Initiation Rites
+      </h1>
+      <p class="max-w-3xl mx-auto text-indigo-200/80 text-lg leading-relaxed">
+        The threshold ceremonies of the world's esoteric traditions — structured rites of death and rebirth through which the uninitiated self is dissolved and a new order of being is born.
+      </p>
+    </section>
+
+    <section class="rounded-2xl p-8 space-y-6" style="background: linear-gradient(135deg, rgba(79,70,229,0.15), rgba(49,46,129,0.08));">
+      <h2 class="font-cinzel text-2xl text-indigo-300 text-center tracking-wide">What Are Initiation Rites?</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm text-indigo-100/80 leading-relaxed">
+        <div class="space-y-4">
+          <p>
+            The anthropologist Arnold van Gennep, in his landmark 1909 work <em>Les Rites de Passage</em>, identified a universal three-stage structure underlying the initiatory rites of cultures from every continent and epoch. The first stage, <strong class="text-indigo-200">separation</strong>, removes the candidate from their ordinary social context — physically, symbolically, or both. The second stage, <strong class="text-indigo-200">liminality</strong> (from the Latin <em>limen</em>, threshold), is the intermediate state in which the candidate exists between categories: neither what they were nor what they will become. The third stage, <strong class="text-indigo-200">reintegration</strong>, returns the candidate to the community — but now as a transformed being with a new status, new knowledge, and new obligations. This tripartite structure recurs with striking consistency across the Eleusinian Mysteries of ancient Greece, the lodge workings of Freemasonry, the Tantric diksha of India, and the shamanic initiatory sickness of Siberian and Central Asian tradition.
+          </p>
+          <p>
+            It is crucial to distinguish genuine initiatory transformation from mere exoteric membership or credential conferral. Modern Western culture has largely reduced initiation to graduation ceremonies, professional licencing, and social club inductions — processes that confer status but rarely produce genuine ontological change. By contrast, the esoteric understanding of initiation holds that something irreversible occurs at the threshold: the candidate undergoes a real death of one mode of being and a genuine birth into another. The Eleusinian initiates were said to face death differently thereafter — not because they had been told something, but because they had <em>experienced</em> something that could not be communicated in ordinary language. Sophocles wrote of the initiates: "Thrice blessed are those mortals who see these rites before they depart to Hades; for them alone there is life there; for all others, there is only misery."
+          </p>
+          <p>
+            The historical breadth of initiatory practice is staggering. The <strong class="text-indigo-200">Eleusinian Mysteries</strong>, celebrated at Eleusis near Athens from at least the 7th century BCE until their suppression in 392 CE, were the most celebrated initiation rites of the ancient Mediterranean world. The Lesser Mysteries held in spring at Agrai prepared candidates for the Greater Mysteries held in September — the <em>telestai</em> (the initiates) numbered among them Plato, Sophocles, Pindar, and Marcus Aurelius. In India, the <strong class="text-indigo-200">Tantric diksha</strong> (initiation) is the indispensable gateway to all advanced practice: without formal initiation by a qualified guru in an established lineage, the mantras and rituals of Tantra are considered inert, their activating power absent. The Sufi <strong class="text-indigo-200">bay'a</strong> (oath of allegiance) is the act by which the aspirant pledges their hand to the sheikh, establishing the transmission chain (<em>silsila</em>) through which baraka (divine grace) flows.
+          </p>
+          <p>
+            The psychological and metaphysical significance of the death-and-rebirth pattern deserves careful attention. At the psychological level, initiation works by inducing a genuine dissolution of the ordinary ego-structure — through ordeal, sensory deprivation, extreme darkness or light, the shock of sacred revelation, or the terror of confronting ultimate questions about identity and mortality. What reassembles after the dissolution is a self with different priorities, different allegiances, and a different relationship to fear. At the metaphysical level, the esoteric traditions insist that something more than psychology is involved: that the initiatory transmission genuinely confers a new relationship with a reality that transcends ordinary consciousness, whether understood as a deity, a lineage-force, an aspect of the higher self, or the ground of being itself.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <p>
+            <strong class="text-indigo-200">Freemasonry</strong> offers the most widely practised system of esoteric initiation in the modern Western world. The three degrees of Craft Masonry — Entered Apprentice, Fellow Craft, and Master Mason — are structured rites of instruction, ordeal, and revelation. The third degree, in which the candidate enacts the death of Hiram Abiff (the legendary architect of Solomon's Temple) and is raised from the "grave" by the Master of the lodge, is a direct working of the death-and-rebirth pattern. The Scottish Rite extends this to 33 degrees, each adding new layers of symbolic instruction in the Western esoteric synthesis of Hermeticism, Kabbalah, Neoplatonism, and Christian mysticism. Whatever one's view of the organisation's broader history, the ritualism itself represents a sophisticated attempt to use dramatic enactment to produce genuine interior change.
+          </p>
+          <p>
+            In shamanic traditions — particularly those of Siberia, Central Asia, and the indigenous peoples of North and South America — initiation frequently takes the form of what Mircea Eliade termed <strong class="text-indigo-200">initiatory sickness</strong>. The future shaman experiences a severe, often life-threatening illness or psychological crisis in which their ordinary self is metaphorically torn apart, consumed, and reconstituted by spiritual beings. This involuntary dismemberment and reassembly by non-human powers is not a performance enacted by a social institution but a direct encounter with the spirit world that permanently restructures the candidate's relationship to reality. The shaman who survives this crisis emerges with abilities — visionary access, healing power, communication with spirits — that are understood as genuine gifts of the crisis itself.
+          </p>
+          <p>
+            Contemporary Western occultism, from the Golden Dawn system of Mathers and Westcott to the various Thelemic, Wiccan, and chaos magic currents, has continued to develop and adapt the initiatory tradition. The Golden Dawn's elaborate grade system — from Neophyte through the seven grades of the Outer Order to the hidden grades of the Inner Order — drew on Masonic, Rosicrucian, Kabbalistic, and Hermetic sources to construct a comprehensive curriculum in which each initiation ceremony was understood to awaken specific spiritual faculties corresponding to the Sephiroth of the Tree of Life. Aleister Crowley's A∴A∴ system and Paul Foster Case's B.O.T.A. represent further developments of this initiatory architecture.
+          </p>
+          <p>
+            The role of <strong class="text-indigo-200">secrecy</strong> in initiatory traditions deserves reflection. The information revealed in initiation is typically bound by oaths of secrecy — not because the content is so extraordinary that it would cause harm to the uninitiated, but because secrecy is structurally necessary for the initiatory mechanism to function. The power of the revelation lies partly in its being reserved for those who have undergone the preparatory process: the same content communicated to an unprepared person produces none of the same effect. The great irony is that in the information age, when the content of most initiatory ceremonies has been published and is freely available online, those who consume this content without the initiatory context consistently report that it produces nothing of the transformative power described by initiates. This confirms the esoteric understanding that initiation is not primarily about information but about transmission.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="space-y-6">
+      <h2 class="font-cinzel text-2xl text-indigo-300 text-center tracking-wide">Key Concepts &amp; Forms</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+        <div class="esoteric-card space-y-3">
+          <div class="text-3xl">🔺</div>
+          <h3 class="font-cinzel text-base text-indigo-200">Van Gennep's Three Stages</h3>
+          <p class="text-indigo-300/60 text-xs uppercase tracking-wider">Separation · Liminality · Reintegration</p>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">
+            Arnold van Gennep's tripartite schema remains the most powerful analytical framework for understanding initiation across cultures. The liminal phase — the threshold state between former and future identities — is characterised by ambiguity, formlessness, and radical openness. Victor Turner, building on van Gennep, showed that in this phase the candidate experiences <em>communitas</em>: a levelling of ordinary social distinctions that creates profound bonds among those who undergo the ordeal together. The liminal period is simultaneously the most dangerous and the most sacred moment in the initiatory process.
+          </p>
+        </div>
+
+        <div class="esoteric-card space-y-3">
+          <div class="text-3xl">🌾</div>
+          <h3 class="font-cinzel text-base text-indigo-200">The Eleusinian Mysteries</h3>
+          <p class="text-indigo-300/60 text-xs uppercase tracking-wider">c. 1500 BCE – 392 CE</p>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">
+            The most celebrated initiation rites of the ancient world, held at Eleusis and connected to the myth of Demeter and Persephone. The climactic revelation of the Greater Mysteries — the <em>epopteia</em> — involved the display of sacred objects, the enactment of Persephone's descent and return, and a final vision described by initiates only in the most oblique terms. The classicist Walter Burkert and the controversial Wasson-Hofmann-Ruck hypothesis suggest that a psychoactive kykeon (barley drink) may have catalysed the visionary experience. Whatever the mechanism, initiates consistently described a confrontation with death that permanently transformed their relationship to it.
+          </p>
+        </div>
+
+        <div class="esoteric-card space-y-3">
+          <div class="text-3xl">🏛️</div>
+          <h3 class="font-cinzel text-base text-indigo-200">Masonic Initiation</h3>
+          <p class="text-indigo-300/60 text-xs uppercase tracking-wider">The Three Craft Degrees</p>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">
+            Freemasonry preserves one of the most widely practised systems of ritual initiation in the modern world. The candidate is prepared in a state of ritual blindness, symbolically stripped of worldly possessions and status, conducted through a series of ordeals involving darkness and the symbolism of death, and finally raised into the light of the lodge as a newly constituted being. The third degree's dramatic enactment of the raising of Hiram Abiff directly echoes the death-and-rebirth pattern found in the ancient Mystery schools. Albert Pike's <em>Morals and Dogma</em> remains the most comprehensive Western study of the Masonic initiatory architecture and its symbolic correspondences.
+          </p>
+        </div>
+
+        <div class="esoteric-card space-y-3">
+          <div class="text-3xl">🕉️</div>
+          <h3 class="font-cinzel text-base text-indigo-200">Tantric Diksha</h3>
+          <p class="text-indigo-300/60 text-xs uppercase tracking-wider">The Initiatory Empowerment</p>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">
+            In the Tantric traditions of both Hindu and Buddhist lineages, <em>diksha</em> (Sanskrit: initiation, literally "that which is given") is not merely a social ceremony but a literal transmission of energy, blessing, and capacity from guru to disciple. The initiation establishes the <em>guru-shishya</em> (teacher-disciple) relationship and opens the subtle-body channels to receive the specific practices of the lineage. Different levels of diksha — samaya diksha (preparatory), nirvana diksha (liberating), and abhisheka (empowerment) in Vajrayana — confer progressively deeper access. Without this transmission, the Tantric texts insist, the mantras and visualisation practices are merely sounds and images, devoid of their liberating power.
+          </p>
+        </div>
+
+        <div class="esoteric-card space-y-3">
+          <div class="text-3xl">🤝</div>
+          <h3 class="font-cinzel text-base text-indigo-200">The Sufi Bay'a</h3>
+          <p class="text-indigo-300/60 text-xs uppercase tracking-wider">The Pledge of Allegiance</p>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">
+            The Sufi <em>bay'a</em> — the pledge of allegiance given by the aspirant to the sheikh — is modelled on the account in the Quran of the companions pledging their hands to the Prophet under a tree at Hudaybiyya. In Sufi understanding, the hand of the sheikh is the hand of the Prophet, which is the hand of God: the chain of transmission (<em>silsila</em>) connecting initiate to initiate all the way back to the Prophet is a living conduit of divine grace (<em>baraka</em>). The <em>bay'a</em> commits the murid (aspirant) to a path of spiritual obedience (<em>tawba</em>, turning) and confers upon them the specific practices — dhikr formulas, awrad (devotional prayers), and sohbet (spiritual conversation) — that characterise their order.
+          </p>
+        </div>
+
+        <div class="esoteric-card space-y-3">
+          <div class="text-3xl">💀</div>
+          <h3 class="font-cinzel text-base text-indigo-200">Shamanic Initiatory Sickness</h3>
+          <p class="text-indigo-300/60 text-xs uppercase tracking-wider">The Involuntary Dismemberment</p>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">
+            Mircea Eliade's systematic study of shamanism documented the widespread cross-cultural pattern of shamanic calling through involuntary crisis: severe illness, madness, near-death experience, or visionary assault by spirits. In Siberian traditions, the future shaman's body is symbolically dismembered by helping spirits — bones are exposed, flesh is consumed, organs are replaced — and the reconstructed shaman returns with new capacities unavailable before the crisis. This pattern represents initiation not as a socially organised ceremony but as a direct, often unwanted encounter with the sacred powers that permanently restructures the initiate's constitution. The "wounded healer" archetype of modern Jungian psychology derives from this initiatory pattern.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="rounded-2xl p-8 space-y-6" style="background: linear-gradient(135deg, rgba(79,70,229,0.15), rgba(49,46,129,0.08));">
+      <h2 class="font-cinzel text-2xl text-indigo-300 text-center tracking-wide">The Threshold and Its Mystery</h2>
+      <div class="space-y-5 text-sm text-indigo-100/80 leading-relaxed max-w-4xl mx-auto">
+        <p>
+          The most profound thing that can be said about genuine initiation is that it is <strong class="text-indigo-200">irreversible</strong>. This is precisely what distinguishes it from education, training, or the acquisition of knowledge and skill. One can forget what one has been taught; one cannot un-cross a threshold that has genuinely been crossed. The Eleusinian initiates could not uninitiate themselves. The Tantric disciple cannot receive the diksha in reverse. This irreversibility is not a matter of social or legal obligation — it is ontological. Something in the structure of the being has changed, and this change is permanent.
+        </p>
+        <p>
+          The role of the <strong class="text-indigo-200">guardian or initiator</strong> — the person or persons who preside over the threshold — is absolutely central to this irreversibility. The initiator does not merely instruct or perform a ceremony: they hold the threshold. In the Tantric tradition, the guru transmits a living force — <em>shakti</em> — that activates what was latent in the disciple. In the Masonic tradition, the Worshipful Master and the officers of the lodge collectively embody the dramatis personae of the cosmic drama being enacted. In the shamanic context, the initiating spirits — however they are understood — perform the actual work; the human practitioner presiding over a vision quest ceremony is more witness than agent. What they all share is a function that cannot be self-performed: the other is structurally necessary.
+        </p>
+        <p>
+          This is why, in every serious esoteric tradition, initiation cannot be self-administered. The solitary practitioner who "initiates themselves" from a book may gain knowledge, may indeed undergo genuine experiences — but what they cannot receive is transmission. They cannot transmit to themselves what they do not already possess, and what they do not possess is precisely what initiation confers: a living connection to a lineage, a tradition, a current of awakened awareness that pre-exists and transcends the individual. The contemporary tendency to regard all spiritual experience as accessible through personal effort and internet research — while containing genuine partial truth — misses this irreducible structural requirement. The threshold requires a guardian, because the crossing is into something that exceeds the individual self.
+        </p>
+        <p>
+          And yet there is a paradox at the heart of initiation that the traditions themselves acknowledge. If the initiatory transformation is genuine, it reveals what was already present — <em>discovers</em> rather than <em>creates</em>. The Hermetic axiom "Know thyself" suggests that all initiation is, at the deepest level, a recognition: the initiated being was always already present, waiting beneath the uninitiated self. The death of the old self in initiation is the death of what was never truly alive in the fullest sense. What is born in the rebirth is simply what was always real. This is why the great initiatory traditions speak not of <em>making</em> initiates but of <em>calling forth</em>, <em>revealing</em>, or <em>awakening</em> something that was already there — dormant, waiting, luminous.
+        </p>
+      </div>
+    </section>
+
+    <div class="text-center mt-4">
+      <a href="/esoteric-practices" class="text-indigo-400/60 hover:text-indigo-300 text-sm transition-colors">← Esoteric Practices &amp; Disciplines</a>
+    </div>
+
+  </div>
+
+  <footer class="relative z-10 text-center py-8 text-indigo-400/40 text-xs mt-8">
+    <p class="italic">"The first step towards wisdom is to know what you do not know." — Socratic principle of the Mysteries</p>
+    <p class="mt-2">Esoteric Wisdom · Built with ✨ in Rust</p>
+    <p class="mt-2"><a href="/home" class="hover:text-indigo-300 transition-colors">← Back to Portal</a></p>
+  </footer>
+
+  <script>
+  const sf = document.getElementById('starfield');
+  for (let i = 0; i < 200; i++) {
+    const s = document.createElement('div');
+    s.className = 'star';
+    s.style.left = Math.random() * 100 + '%';
+    s.style.top = Math.random() * 100 + '%';
+    s.style.animationDelay = Math.random() * 3 + 's';
+    s.style.animationDuration = (2 + Math.random() * 3) + 's';
+    sf.appendChild(s);
+  }
+</script>
+
+</body>
+</html>

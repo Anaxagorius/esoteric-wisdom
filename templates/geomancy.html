@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Geomancy — Esoteric Wisdom</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <meta property="og:title" content="Geomancy — Esoteric Wisdom" />
+  <meta property="og:description" content="Divination by earth — the systematic art of the 16 geomantic figures, their Arabic and African roots, and their flowering in medieval and Renaissance Europe as a complete divinatory science." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://esoteric-wisdom.onrender.com/esoteric-practices/geomancy" />
+  <meta property="og:image" content="https://esoteric-wisdom.onrender.com/og-image.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Raleway', sans-serif; }
+    .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+    @keyframes twinkle { 0%,100% { opacity: 0.2; } 50% { opacity: 1; } }
+    .star { position: absolute; width: 2px; height: 2px; border-radius: 50%; background: white; animation: twinkle var(--dur,3s) ease-in-out infinite; animation-delay: var(--delay,0s); }
+    @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+    .floating { animation: float 5s ease-in-out infinite; }
+    @keyframes shimmer { 0% { background-position: -200% center; } 100% { background-position: 200% center; } }
+    .nav-link { position: relative; transition: all 0.3s; }
+    .nav-link::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: linear-gradient(90deg, #f59e0b, #a78bfa); transition: width 0.3s; }
+    .nav-link:hover::after { width: 100%; }
+    .aurora-text { background: linear-gradient(90deg, #f59e0b, #818cf8, #a78bfa, #fbbf24, #6366f1, #f59e0b); background-size: 200% auto; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; animation: shimmer 4s linear infinite; }
+    @keyframes indigo-glow { 0%, 100% { box-shadow: 0 0 10px 2px rgba(99,102,241,0.25); } 50% { box-shadow: 0 0 28px 6px rgba(99,102,241,0.55); } }
+    .esoteric-card { background: linear-gradient(135deg, rgba(79,70,229,0.07), rgba(49,46,129,0.04)); border: 1px solid rgba(99,102,241,0.2); border-radius: 1rem; padding: 1.5rem; transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; }
+    .esoteric-card:hover { transform: translateY(-6px) scale(1.01); box-shadow: 0 0 28px 5px rgba(99,102,241,0.3); border-color: rgba(99,102,241,0.5); }
+    .practice-card { background: linear-gradient(135deg, rgba(79,70,229,0.06), rgba(49,46,129,0.04)); border: 1px solid rgba(99,102,241,0.15); border-radius: 0.75rem; padding: 1.25rem; transition: border-color 0.3s, background 0.3s; }
+    .practice-card:hover { border-color: rgba(99,102,241,0.4); background: linear-gradient(135deg, rgba(79,70,229,0.1), rgba(49,46,129,0.06)); }
+  </style>
+</head>
+<body class="min-h-screen text-indigo-100 overflow-x-hidden" style="background: radial-gradient(ellipse at top, #0c0a1e 0%, #1a1040 25%, #060412 60%, #000000 100%);">
+
+  <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+
+  <nav class="sticky top-0 z-50 flex items-center justify-between px-6 py-3 bg-black/40 backdrop-blur-md border-b border-violet-500/20 flex-wrap gap-y-2">
+    <a href="/home" class="font-cinzel text-amber-300 text-sm tracking-widest shrink-0">✦ Esoteric Wisdom ✦</a>
+    <div class="flex items-center gap-x-3 gap-y-1 text-xs text-violet-200 flex-wrap justify-end">
+      <a href="/astrology" class="nav-link hover:text-amber-300 transition-colors">Astrology</a>
+      <a href="/meditation" class="nav-link hover:text-amber-300 transition-colors">Meditation</a>
+      <a href="/tarot/select" class="nav-link hover:text-amber-300 transition-colors">Tarot</a>
+      <a href="/numerology" class="nav-link hover:text-amber-300 transition-colors">Numerology</a>
+      <a href="/crystals" class="nav-link hover:text-amber-300 transition-colors">Crystals</a>
+      <a href="/runes" class="nav-link hover:text-amber-300 transition-colors">Runes</a>
+      <a href="/shamanism" class="nav-link hover:text-amber-300 transition-colors">Shamanism</a>
+      <a href="/druidism" class="nav-link hover:text-amber-300 transition-colors">Druidism</a>
+      <a href="/akashic-records" class="nav-link hover:text-amber-300 transition-colors">Akashic Records</a>
+      <a href="/wicca" class="nav-link hover:text-amber-300 transition-colors">Wicca</a>
+      <a href="/alchemy" class="nav-link hover:text-amber-300 transition-colors">Alchemy</a>
+      <a href="/gateway-process" class="nav-link hover:text-amber-300 transition-colors">Gateway Process</a>
+      <a href="/remote-viewing" class="nav-link hover:text-amber-300 transition-colors">Remote Viewing</a>
+      <a href="/khasarov-mirror" class="nav-link hover:text-amber-300 transition-colors">Khasarov Mirror</a>
+      <a href="/western-esotericism" class="nav-link hover:text-amber-300 transition-colors">Western Esotericism</a>
+      <a href="/eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Eastern Esotericism</a>
+      <a href="/indigenous-esotericism" class="nav-link hover:text-amber-300 transition-colors">Indigenous Esotericism</a>
+      <a href="/middle-eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Middle Eastern Mysteries</a>
+      <a href="/esoteric-practices" class="nav-link text-amber-300 font-semibold">Esoteric Practices</a>
+      <a href="/journal/reflections" class="nav-link text-emerald-300 hover:text-emerald-200 transition-colors">✨ Reflections</a>
+      <a href="https://ko-fi.com/esotericwisdom" target="_blank" rel="noopener noreferrer"
+         class="px-3 py-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-white font-semibold hover:scale-105 transition-transform shrink-0">☕ Support</a>
+    </div>
+  </nav>
+
+  <div class="relative z-10 max-w-6xl mx-auto space-y-10 pt-6 px-4 pb-12">
+
+    <div>
+      <a href="/esoteric-practices" class="text-xs text-indigo-300/60 hover:text-indigo-300 transition-colors">← Esoteric Practices &amp; Disciplines</a>
+    </div>
+
+    <section class="text-center py-14 space-y-6">
+      <div class="text-7xl floating">🌍</div>
+      <h1 class="font-cinzel text-4xl md:text-6xl font-bold aurora-text leading-tight">
+        Geomancy
+      </h1>
+      <p class="max-w-3xl mx-auto text-indigo-200/80 text-lg leading-relaxed">
+        The ancient art of divination by earth — a complete and systematic divinatory science employing 16 binary figures generated by random earth-markings or dots, interpreted through a complex system of elemental, planetary, and astrological correspondences.
+      </p>
+    </section>
+
+    <section class="rounded-2xl p-8 space-y-6" style="background: linear-gradient(135deg, rgba(79,70,229,0.15), rgba(49,46,129,0.08));">
+      <h2 class="font-cinzel text-2xl text-indigo-300 text-center tracking-wide">What Is Geomancy?</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm text-indigo-100/80 leading-relaxed">
+        <div class="space-y-4">
+          <p>
+            European geomancy — specifically the tradition known in Arabic as <strong class="text-indigo-200">ilm al-raml</strong> (the science of sand) — is a complete system of divination based on the generation and interpretation of 16 binary figures, each composed of four rows of one or two dots. These figures are generated by making a rapid series of marks in sand or earth (or, in later practice, dots on paper), counting whether each row contains an odd or even number of marks, and representing odd counts by a single dot and even counts by two dots. The result is one of 16 possible four-row combinations, each with a name, a set of elemental and planetary attributions, and a distinctive interpretive character. The system is then constructed by generating four initial figures (the "four mothers"), deriving four further figures (the "four daughters") by rearranging their rows, computing four more (the "four nephews") by adding pairs of preceding figures, then combining to produce two "witnesses" and finally a "judge" — the figure that delivers the oracle's primary response.
+          </p>
+          <p>
+            The Arabic origins of European geomancy are well established. <strong class="text-indigo-200">Ilm al-raml</strong> (literally "knowledge of sand") appears in Arabic texts from at least the 9th century CE, with several treatises attributed to earlier authors and to semi-legendary origins involving angelic revelation. The tradition was transmitted into medieval Europe through two principal channels: the translations produced in <strong class="text-indigo-200">12th-century Spain</strong> (particularly Toledo) and <strong class="text-indigo-200">Sicily</strong>, where Arabic learning was systematically rendered into Latin for the benefit of European scholars. Hugo of Santalla, Gerard of Cremona, and other translators working in Spain produced Latin versions of Arabic geomantic texts that made the system available to European practitioners. By the 13th century, geomancy was firmly established in the European divinatory curriculum, with figures like <strong class="text-indigo-200">Albertus Magnus</strong> and <strong class="text-indigo-200">Roger Bacon</strong> referencing it, and the earliest vernacular treatises appearing in French and English.
+          </p>
+          <p>
+            The <strong class="text-indigo-200">16 geomantic figures</strong> and their Latin names represent one of the most distinctive and immediately recognisable aspects of the system. Their names, inherited from the Arabic originals with varying degrees of translation fidelity, include: <strong class="text-indigo-200">Puer</strong> (the boy — Mars, fire, rash and passionate), <strong class="text-indigo-200">Amissio</strong> (loss — Venus retrograde), <strong class="text-indigo-200">Albus</strong> (the white figure — Mercury, clear and thoughtful), <strong class="text-indigo-200">Populus</strong> (the people — Moon, crowd and community), <strong class="text-indigo-200">Fortuna Major</strong> and <strong class="text-indigo-200">Fortuna Minor</strong> (great and lesser fortune), <strong class="text-indigo-200">Puella</strong> (the girl — Venus, beauty), <strong class="text-indigo-200">Rubeus</strong> (the red figure — Mars, violence and passion), <strong class="text-indigo-200">Acquisitio</strong> (gain), <strong class="text-indigo-200">Carcer</strong> (prison — Saturn, limitation), <strong class="text-indigo-200">Tristitia</strong> (sadness — Saturn, grief), <strong class="text-indigo-200">Laetitia</strong> (joy — Jupiter), <strong class="text-indigo-200">Cauda Draconis</strong> (tail of the dragon — South Node), <strong class="text-indigo-200">Caput Draconis</strong> (head of the dragon — North Node), <strong class="text-indigo-200">Conjunctio</strong> (conjunction — Mercury, combination), and <strong class="text-indigo-200">Via</strong> (the way — Moon, movement and change).
+          </p>
+          <p>
+            The geomantic chart's structure — with its four mothers, four daughters, four nephews, two witnesses, judge, and reconciler — provides a graduated reading of any situation. The <strong class="text-indigo-200">houses</strong> (the 12 positions of the geomantic shield chart) correspond directly to the 12 houses of horoscopic astrology and provide the framework within which each figure's significance is contextualised: the first house governs the querent (the questioner), the second house governs resources and money, the seventh house governs relationships and opponents, the tenth house governs career and public standing, and so on. The system achieves remarkable depth by combining the inherent character of each figure with its house placement, its relationship to figures in other houses (via the doctrine of aspects), and the overall testimony of the witnesses and judge. A skilled geomancer can read a chart of considerable complexity from these elements.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <p>
+            The parallel tradition of <strong class="text-indigo-200">Ifa</strong> in the Yoruba tradition of West Africa represents one of the world's most comprehensive and sophisticated divination systems — and one that shares striking structural similarities with Arabic-European geomancy, though the relationship between the two traditions is contested. Ifa is the oracle of the deity Orunmila, the Orisha of wisdom, and is practised by the <em>babalawo</em> (father of secrets) — an initiated divination priest who undergoes years of training in the memorisation and interpretation of the 256 Odu (verses, literally "chapters") of the Ifa corpus. The 256 Odu are generated by a 4-position binary system (the <em>opele</em> divining chain or the <em>ikin</em> palm nuts), producing 16 principal figures (like the 16 geomantic figures) which are then combined in pairs to produce 256 possibilities (analogous to the 64 hexagrams of the I Ching, but on a larger scale). Whether ilm al-raml and Ifa descend from a common ancestor or developed independently remains an open question.
+          </p>
+          <p>
+            The Renaissance flowering of European geomancy produced some of the most sophisticated treatments of the art. <strong class="text-indigo-200">Heinrich Cornelius Agrippa</strong> (1486–1535) devoted three chapters of his <em>De Occulta Philosophia</em> (1531) to geomancy, firmly integrating it within the broader Hermetic synthesis. <strong class="text-indigo-200">Christopher Cattan</strong>'s <em>La Géomancie</em> (1558), translated into English in 1591, provided the most comprehensive Renaissance treatment in a vernacular language and remained influential for centuries. <strong class="text-indigo-200">John Michael Greer</strong>'s <em>The Art and Practice of Geomancy</em> (2009) is the most thorough modern handbook, combining a complete traditional presentation with Greer's own insights as a practising geomancer of many decades' experience. <strong class="text-indigo-200">Christopher Warnock</strong> has also contributed significantly to the contemporary revival of traditional geomancy through his Renaissance Astrology programme.
+          </p>
+          <p>
+            Geomancy occupies a distinctive position among the Western divinatory arts: it is simultaneously one of the most mathematically rigorous (the chart construction follows precise rules with no ambiguity), one of the most systematically integrated with Western astrology (sharing the planetary and elemental attribution system), and one of the most accessible (requiring no special objects, only a writing implement and surface). The Golden Dawn incorporated a version of geomancy into its curriculum, and A.E. Waite, Israel Regardie, and Aleister Crowley all addressed it. The contemporary Western esoteric revival has seen a renaissance of serious geomantic study, with practitioners returning to the primary Renaissance sources and developing refined interpretive methodologies.
+          </p>
+          <p>
+            The philosophical underpinning of geomantic divination is essentially the same as that of other terrestrial oracles: the doctrine of <strong class="text-indigo-200">macrocosm-microcosm correspondence</strong> — the understanding that the same cosmic intelligence that governs the movements of planets and the patterns of nature also governs the fall of dots on sand or the rhythm of marks made in a moment of focused attention. The practitioner does not need to believe that the dots are magically arranged by external forces; the more sophisticated Hermetic view is that the practitioner's own hand, in a state of receptive intention, spontaneously produces a configuration that reflects — through the mechanism of synchronicity or through some more direct sympathetic connection — the actual quality of the situation being enquired about. The intelligence is in the moment, not in the mechanism.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="space-y-6">
+      <h2 class="font-cinzel text-2xl text-indigo-300 text-center tracking-wide">Key Concepts &amp; Traditions</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+        <div class="esoteric-card space-y-3">
+          <div class="text-3xl">⚫</div>
+          <h3 class="font-cinzel text-base text-indigo-200">The 16 Geomantic Figures</h3>
+          <p class="text-indigo-300/60 text-xs uppercase tracking-wider">The Alphabet of Earth</p>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">The 16 geomantic figures — each a unique four-row binary pattern of one or two dots — are the fundamental vocabulary of the geomantic system. Each figure has a distinct character, a planetary ruler, an elemental affinity, a directional association, and a specific set of topics for which it is particularly favourable or unfavourable. Puer is Martian and fiery; Albus is Mercurial and airy; Carcer is Saturnine and earthy; Laetitia is Jovial and airy. Learning the 16 figures — their names, shapes, attributions, and characteristic qualities — is the essential first step in geomantic study, analogous to learning the tarot's Major Arcana or the I Ching's 64 hexagrams.</p>
+        </div>
+
+        <div class="esoteric-card space-y-3">
+          <div class="text-3xl">🏜️</div>
+          <h3 class="font-cinzel text-base text-indigo-200">Arabic Ilm al-Raml</h3>
+          <p class="text-indigo-300/60 text-xs uppercase tracking-wider">The Science of Sand</p>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">The Arabic tradition of ilm al-raml — the knowledge of sand — is the direct ancestor of European geomancy. Its Arabic treatises, some attributed to the legendary sage Idris (Enoch), al-Ghazali, and others, circulated widely in the medieval Islamic world and were translated into Latin in the 12th century. The Arabic system already contained all the essential elements of the European tradition: the 16 figures, the shield chart with its mothers, daughters, nephews, witnesses, and judge, and the planetary-elemental correspondences. The Arabic tradition continues today, with ilm al-raml practitioners active across North Africa and the Middle East.</p>
+        </div>
+
+        <div class="esoteric-card space-y-3">
+          <div class="text-3xl">🛡️</div>
+          <h3 class="font-cinzel text-base text-indigo-200">The Geomantic Chart</h3>
+          <p class="text-indigo-300/60 text-xs uppercase tracking-wider">Shield Chart &amp; House Chart</p>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">A complete geomantic reading uses both the "shield chart" (which shows the generation of figures from mothers through to the judge) and the "house chart" (which places the 12 derived figures in the 12 astrological houses for contextual interpretation). The shield chart shows the overall dynamic of the situation and produces the judge's verdict; the house chart provides the detailed contextual analysis — who is involved, what the specific circumstances are, what obstacles or assistance are present. The interaction between these two levels of reading gives geomancy its characteristic analytical depth and practical specificity.</p>
+        </div>
+
+        <div class="esoteric-card space-y-3">
+          <div class="text-3xl">🪐</div>
+          <h3 class="font-cinzel text-base text-indigo-200">Elemental &amp; Planetary Attributions</h3>
+          <p class="text-indigo-300/60 text-xs uppercase tracking-wider">The Astrological Framework</p>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">Each of the 16 geomantic figures is attributed to one of the seven traditional planets (Saturn, Jupiter, Mars, Sun, Venus, Mercury, Moon) and one of the four elements (fire, earth, air, water). Via and Populus are attributed to the Moon; Fortuna Major and Minor to the Sun; Albus and Conjunctio to Mercury; Puella and Amissio to Venus; Puer and Rubeus to Mars; Acquisitio and Laetitia to Jupiter; Carcer and Tristitia to Saturn; Caput and Cauda Draconis to the lunar nodes. These attributions integrate geomancy with horoscopic astrology and allow the geomancer to draw on the full symbolism of the Western astrological tradition in their interpretations.</p>
+        </div>
+
+        <div class="esoteric-card space-y-3">
+          <div class="text-3xl">🌍</div>
+          <h3 class="font-cinzel text-base text-indigo-200">West African Ifa</h3>
+          <p class="text-indigo-300/60 text-xs uppercase tracking-wider">256 Odu of the Yoruba Oracle</p>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">The Yoruba Ifa oracle — transmitted through the initiated babalawo (divination priest) — generates 256 possible Odu (chapters) through a 4-position binary system analogous to geomancy's 16-figure system expanded to a second order of combination. Each Odu contains extensive oral literature — poems, myths, proverbs, prescriptions, and prohibitions — that the babalawo draws on to provide guidance. Ifa was recognised by UNESCO in 2005 as an Intangible Cultural Heritage of Humanity. Its structural similarities to geomancy and the I Ching suggest that binary divination systems may represent a universal human approach to creating symbolic vocabularies for mapping the full range of transformative possibilities.</p>
+        </div>
+
+        <div class="esoteric-card space-y-3">
+          <div class="text-3xl">📚</div>
+          <h3 class="font-cinzel text-base text-indigo-200">Christopher Warnock's Revival</h3>
+          <p class="text-indigo-300/60 text-xs uppercase tracking-wider">Traditional Geomancy Restored</p>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">Christopher Warnock's Renaissance Astrology programme, based in Iowa, has been central to the contemporary revival of traditional geomancy in the English-speaking world. His online courses, based on careful study of primary Renaissance texts (particularly Cattan and Agrippa), have trained hundreds of practitioners in rigorous traditional technique. John Michael Greer's <em>The Art and Practice of Geomancy</em> and <em>Earth Divination, Earth Magic</em> provide the most comprehensive modern handbook treatments. Together, these authors have restored geomancy to serious study after a century of relative neglect and established a community of practice with high standards of traditional scholarship and practical application.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="rounded-2xl p-8 space-y-6" style="background: linear-gradient(135deg, rgba(79,70,229,0.15), rgba(49,46,129,0.08));">
+      <h2 class="font-cinzel text-2xl text-indigo-300 text-center tracking-wide">The Intelligence of Earth</h2>
+      <div class="space-y-5 text-sm text-indigo-100/80 leading-relaxed max-w-4xl mx-auto">
+        <p>
+          The cosmological underpinning of geomancy — the philosophical justification for why marks made in sand or dots struck on paper can provide meaningful responses to genuine questions — is rooted in the doctrine of the cosmos as a unified, intelligent, and responsive system. In the Hermetic and Neoplatonic framework within which the Arabic and European geomantic traditions developed, the material world is not a dead mechanism but a living expression of divine intelligence: the same cosmic mind that governs the movements of stars and planets also governs the fall of sand grains, the growth of plants, and the spontaneous movements of the diviner's hand in a state of receptive attention.
+        </p>
+        <p>
+          The specific claim that geomancy makes is more subtle than this general principle suggests, however. It is not that God or the cosmos <em>controls</em> the marks made in earth to produce a divinatorily meaningful figure. It is rather that the practitioner, in a state of genuine attentiveness and sincere question, is themselves a <strong class="text-indigo-200">microcosm of the cosmos</strong> — and their spontaneous action in generating the figures reflects, through the mechanism of sympathetic correspondence, the same quality that pervades the moment of asking. The marks are not controlled from outside; they are generated from within by a hand that is already embedded in the web of cosmic correspondence that the system maps. The geomancer's hand, at the moment of casting, is not a random noise generator: it is an expression of the same intelligence that is present in the situation being enquired about.
+        </p>
+        <p>
+          This is why the quality of the geomancer's preparation — their sincerity, their clarity of question, their freedom from pre-formed opinions about what the oracle "should" say — matters so greatly. The doctrine of the macrocosm-microcosm does not guarantee that every casual mark in sand will be a reliable oracle; it guarantees only that a practitioner who has refined their inner instrument through training and discipline, who approaches each consultation with genuine attentiveness, and who asks questions with genuine need to know rather than the desire to confirm an already-made decision, will find in the figures a reliable reflection of the situation's deeper reality. Geomancy, like all the great divinatory arts, requires the development of the diviner as much as the mastery of the system. The oracle speaks when the practitioner is ready to hear what it says.
+        </p>
+      </div>
+    </section>
+
+    <div class="text-center mt-4">
+      <a href="/esoteric-practices" class="text-indigo-400/60 hover:text-indigo-300 text-sm transition-colors">← Esoteric Practices &amp; Disciplines</a>
+    </div>
+
+  </div>
+
+  <footer class="relative z-10 text-center py-8 text-indigo-400/40 text-xs mt-8">
+    <p class="italic">"In the art of geomancy the whole of nature speaks." — Medieval geomantic treatise</p>
+    <p class="mt-2">Esoteric Wisdom · Built with ✨ in Rust</p>
+    <p class="mt-2"><a href="/home" class="hover:text-indigo-300 transition-colors">← Back to Portal</a></p>
+  </footer>
+
+  <script>
+  const sf = document.getElementById('starfield');
+  for (let i = 0; i < 200; i++) {
+    const s = document.createElement('div');
+    s.className = 'star';
+    s.style.left = Math.random() * 100 + '%';
+    s.style.top = Math.random() * 100 + '%';
+    s.style.animationDelay = Math.random() * 3 + 's';
+    s.style.animationDuration = (2 + Math.random() * 3) + 's';
+    sf.appendChild(s);
+  }
+</script>
+
+</body>
+</html>

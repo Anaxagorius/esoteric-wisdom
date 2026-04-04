@@ -20,6 +20,7 @@ mod western_esotericism;
 mod eastern_esotericism;
 mod indigenous_esotericism;
 mod middle_eastern_esotericism;
+mod esoteric_practices;
 mod templates;
 
 use axum::{Router, routing::get, extract::State, response::IntoResponse, http::{StatusCode, header}};
@@ -63,6 +64,7 @@ async fn main() -> anyhow::Result<()> {
         .nest("/eastern-esotericism", eastern_esotericism::routes())
         .nest("/indigenous-esotericism", indigenous_esotericism::routes())
         .nest("/middle-eastern-esotericism", middle_eastern_esotericism::routes())
+        .nest("/esoteric-practices", esoteric_practices::routes())
         .layer(CookieManagerLayer::new())
         .with_state(state);
 
