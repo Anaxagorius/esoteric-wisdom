@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hawaiian Huna — Esoteric Wisdom</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <meta property="og:title" content="Hawaiian Huna — Esoteric Wisdom" />
+  <meta property="og:description" content="The esoteric philosophy of ancient Hawai'i — the three selves, mana, the High Self, and the hidden science behind traditional Hawaiian healing and spiritual practice." />
+  <meta property="og:type" content="website" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <style>
+    body { font-family: 'Raleway', sans-serif; }
+    .font-cinzel { font-family: 'Cinzel Decorative', cursive; }
+    @keyframes twinkle { 0%,100%{opacity:0.2;transform:scale(1);} 50%{opacity:1;transform:scale(1.4);} }
+    @keyframes float { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-12px);} }
+    @keyframes shimmer { 0%{background-position:0% 50%;} 100%{background-position:200% 50%;} }
+    .star { position:absolute; width:2px; height:2px; background:white; border-radius:50%; animation:twinkle 3s infinite; }
+    .aurora-text {
+      background: linear-gradient(90deg, #4ade80, #86efac, #d4d4aa, #6ee7b7, #4ade80);
+      background-size:300% auto;
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+      background-clip:text;
+      animation:shimmer 6s linear infinite;
+    }
+    .floating { animation: float 4s ease-in-out infinite; }
+    .nav-link { position:relative; transition:all 0.3s; }
+    .nav-link::after { content:''; position:absolute; bottom:-2px; left:0; width:0; height:1px; background:#f59e0b; transition:width 0.3s; }
+    .nav-link:hover::after { width:100%; }
+    .sub-card {
+      background: linear-gradient(135deg, rgba(30,80,20,0.18), rgba(10,40,5,0.10));
+      border: 1px solid rgba(74,222,128,0.30);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      transition: all 0.3s;
+    }
+    .sub-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 0 24px rgba(74,222,128,0.18);
+      border-color: rgba(74,222,128,0.55);
+    }
+    .scholar-card {
+      background: linear-gradient(135deg, rgba(20,60,15,0.18), rgba(8,30,4,0.10));
+      border: 1px solid rgba(110,231,183,0.25);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      transition: all 0.3s;
+    }
+    .scholar-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 0 20px rgba(110,231,183,0.15);
+      border-color: rgba(110,231,183,0.50);
+    }
+  </style>
+</head>
+<body class="min-h-screen text-green-100 overflow-x-hidden"
+      style="background: radial-gradient(ellipse at top, #0a1a0a 0%, #1a2d10 25%, #050a04 60%, #000000 100%);">
+
+  <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+
+  <!-- NAVIGATION -->
+  <nav class="sticky top-0 z-50 flex items-center justify-between px-6 py-3 bg-black/40 backdrop-blur-md border-b border-green-700/30 flex-wrap gap-y-2">
+    <a href="/home" class="font-cinzel text-amber-300 text-sm tracking-widest shrink-0">✦ Esoteric Wisdom ✦</a>
+    <div class="flex items-center gap-x-3 gap-y-1 text-xs text-green-200 flex-wrap justify-end">
+      <a href="/astrology" class="nav-link hover:text-amber-300 transition-colors">Astrology</a>
+      <a href="/meditation" class="nav-link hover:text-amber-300 transition-colors">Meditation</a>
+      <a href="/tarot/select" class="nav-link hover:text-amber-300 transition-colors">Tarot</a>
+      <a href="/numerology" class="nav-link hover:text-amber-300 transition-colors">Numerology</a>
+      <a href="/crystals" class="nav-link hover:text-amber-300 transition-colors">Crystals</a>
+      <a href="/runes" class="nav-link hover:text-amber-300 transition-colors">Runes</a>
+      <a href="/shamanism" class="nav-link hover:text-amber-300 transition-colors">Shamanism</a>
+      <a href="/druidism" class="nav-link hover:text-amber-300 transition-colors">Druidism</a>
+      <a href="/akashic-records" class="nav-link hover:text-amber-300 transition-colors">Akashic Records</a>
+      <a href="/wicca" class="nav-link hover:text-amber-300 transition-colors">Wicca</a>
+      <a href="/alchemy" class="nav-link hover:text-amber-300 transition-colors">Alchemy</a>
+      <a href="/gateway-process" class="nav-link hover:text-amber-300 transition-colors">Gateway Process</a>
+      <a href="/remote-viewing" class="nav-link hover:text-amber-300 transition-colors">Remote Viewing</a>
+      <a href="/khasarov-mirror" class="nav-link hover:text-amber-300 transition-colors">Khasarov Mirror</a>
+      <a href="/western-esotericism" class="nav-link hover:text-amber-300 transition-colors">Western Esotericism</a>
+      <a href="/eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Eastern Esotericism</a>
+      <a href="/indigenous-esotericism" class="nav-link text-amber-300 font-semibold">Indigenous Esotericism</a>
+      <a href="/journal/reflections" class="nav-link text-emerald-300 hover:text-emerald-200 transition-colors">✨ Reflections</a>
+      <a href="https://ko-fi.com/esotericwisdom" target="_blank" rel="noopener noreferrer"
+         class="px-3 py-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-white font-semibold hover:scale-105 transition-transform shrink-0">☕ Support</a>
+    </div>
+  </nav>
+
+  <div class="relative z-10 max-w-6xl mx-auto space-y-10 pt-6 px-4 pb-12">
+
+    <!-- BREADCRUMB -->
+    <div class="text-sm text-green-300/70">
+      <a href="/indigenous-esotericism" class="hover:text-green-200 transition-colors">← Indigenous &amp; Shamanic Esotericism</a>
+    </div>
+
+    <!-- HERO -->
+    <section class="text-center py-16 space-y-6">
+      <div class="text-7xl floating">🌺</div>
+      <h1 class="font-cinzel text-4xl md:text-6xl font-bold aurora-text leading-tight">Hawaiian Huna</h1>
+      <p class="max-w-3xl mx-auto text-green-200/80 text-lg leading-relaxed">
+        The esoteric philosophy of ancient Hawai'i — the three selves, mana, the High Self, and
+        the hidden science behind traditional Hawaiian healing, prayer, and spiritual practice
+        preserved by the Kahuna across generations.
+      </p>
+    </section>
+
+    <!-- SECTION 1: Introduction -->
+    <section class="rounded-2xl p-8 space-y-6"
+             style="background: linear-gradient(135deg, rgba(20,60,10,0.12), rgba(5,25,3,0.07));">
+      <h2 class="font-cinzel text-2xl text-green-300 text-center tracking-wide">The Hidden Science of the Kahuna</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm text-green-100/80 leading-relaxed">
+        <div class="space-y-4">
+          <p>
+            The word "Huna" (pronounced HOO-nah) means "secret" or "hidden" in the Hawaiian
+            language — the concealed, the esoteric, the inner dimension of things. In the context
+            of Hawaiian spiritual tradition, Huna refers to the body of esoteric knowledge
+            preserved and transmitted by the Kahuna — the "keepers of the secret," Hawai'i's
+            traditional spiritual and practical experts whose knowledge encompassed healing,
+            navigation, prayer, prophecy, canoe-building, astronomy, and much more. The Hawaiian
+            spiritual tradition is one of the most sophisticated indigenous esoteric systems in
+            the Pacific, and one that contains striking parallels to other esoteric traditions
+            worldwide, particularly in its system of the three selves and its understanding of
+            spiritual energy.
+          </p>
+          <p>
+            Before exploring the system, an important historical note is necessary. "Huna" as a
+            formalised, named system was largely codified and systematised by Max Freedom Long
+            (1890–1971), an American schoolteacher who lived in Hawai'i and became fascinated by
+            the Kahuna traditions after witnessing events he could not explain through conventional
+            Western frameworks. Long's books — particularly <em>Recovering the Ancient Magic</em>
+            (1936) and <em>The Secret Science Behind Miracles</em> (1948) — drew on the earlier work
+            of William Tufts Brigham (curator of the Bernice Pauahi Bishop Museum) and on his own
+            analysis of the Hawaiian language to reconstruct what he believed was the original
+            Kahuna esoteric system. Long's work is influential and contains genuine insights, but
+            it is important to recognise that his synthesis is a 20th-century reconstruction rather
+            than an unbroken traditional transmission.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <p>
+            The three selves — Unihipili, Uhane, and Aumakua — form the central framework of Huna
+            psychology and spirituality. In the Huna system as systematised by Long, the human
+            being is understood as consisting of three distinct selves or aspects of consciousness,
+            each with its own nature, capacities, and role. The Unihipili (the low self,
+            subconscious, or body self) is the part of us that is connected to the body, holds all
+            memories and emotions, communicates with the physical world, and serves as the channel
+            through which our prayers and intentions reach the High Self. The Uhane (the middle
+            self, the conscious/talking self) is the everyday rational mind — the aspect of us that
+            thinks, plans, reasons, and makes decisions. The Aumakua (the High Self, superconscious,
+            or utterly trustworthy parental self) is the divine aspect of the individual — the higher
+            consciousness that is in direct contact with spiritual reality and guides the individual
+            soul across multiple lifetimes.
+          </p>
+          <p>
+            The correspondence between the Huna three selves and the Western psychological categories
+            of unconscious, conscious, and superconscious is striking, and has led many researchers
+            and practitioners to see in Huna a confirmation of the universality of these distinctions.
+            The Unihipili corresponds closely to what Freud called the unconscious and what modern
+            psychology calls the somatic unconscious; the Uhane is the everyday waking mind; the
+            Aumakua is the Jungian Self, the Higher Self of Theosophy, or the Holy Guardian Angel of
+            Western esotericism. Whether these correspondences reveal a shared universal truth about
+            the structure of human consciousness, or whether they reflect Long's own syncretistic
+            framework, remains an open question — but the practical utility of the three-selves model
+            as a working framework for healing and spiritual development is attested by thousands of
+            practitioners worldwide.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: The Three Selves -->
+    <section class="space-y-6">
+      <h2 class="font-cinzel text-2xl text-green-300 text-center tracking-wide">The Three Selves</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <div class="sub-card space-y-3">
+          <div class="text-3xl">🌱</div>
+          <h3 class="font-cinzel text-base text-green-200">Unihipili (The Low Self / Body Self)</h3>
+          <p class="text-xs text-green-100/70 leading-relaxed">
+            The subconscious self in Huna — the aspect of the human being connected to the body,
+            the emotions, and the memory. The Unihipili is not "lower" in the sense of inferior
+            but in the sense of being the foundation, the root, the earth aspect of the human
+            being. It stores all memories, including those from past lives; it controls bodily
+            functions; it generates and holds mana (spiritual power); and crucially, it is the
+            intermediary through which the Uhane (conscious self) communicates with the Aumakua
+            (High Self). All prayers, if they are to be effective, must be properly communicated
+            to and carried by the Unihipili. A blocked or uncooperative Unihipili — often due
+            to unresolved emotional issues or "complexes" — can prevent the effective passage
+            of prayer to the High Self.
+          </p>
+        </div>
+
+        <div class="sub-card space-y-3">
+          <div class="text-3xl">🧠</div>
+          <h3 class="font-cinzel text-base text-green-200">Uhane (The Middle Self / Talking Self)</h3>
+          <p class="text-xs text-green-100/70 leading-relaxed">
+            The conscious, rational, ego-level self — the "I" of ordinary waking experience.
+            The Uhane thinks, plans, communicates in language, and makes decisions. In Huna,
+            the Uhane is responsible for the spiritual development of the Unihipili — for
+            educating it, healing its emotional wounds, maintaining the conditions for effective
+            prayer, and directing the overall spiritual life of the individual. Without a clear,
+            intentional Uhane, the Unihipili is directionless and the Aumakua unreachable.
+            Meditation, self-reflection, and conscious self-development are the primary practices
+            through which the Uhane fulfils its role as guide and educator of the body self.
+          </p>
+        </div>
+
+        <div class="sub-card space-y-3">
+          <div class="text-3xl">✨</div>
+          <h3 class="font-cinzel text-base text-green-200">Aumakua (The High Self / Superconscious)</h3>
+          <p class="text-xs text-green-100/70 leading-relaxed">
+            The divine aspect of the individual — utterly trustworthy, all-loving, and in direct
+            communication with the spiritual dimension of reality. The Aumakua is simultaneously
+            personal (your own High Self, the divine aspect of your own being) and universal (all
+            Aumakua are connected as expressions of the divine). In Huna practice, the primary
+            spiritual goal is to establish a clear, open channel of communication with the Aumakua
+            through the purified Unihipili. The Aumakua responds to prayers carried on the aka
+            cord (the silver thread of mana and intention) by the Unihipili, and can act in the
+            world to bring about the desired conditions — but only if the path is clear.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 3: Mana and Healing -->
+    <section class="rounded-2xl p-8 space-y-6"
+             style="background: linear-gradient(135deg, rgba(15,50,8,0.14), rgba(4,20,2,0.08));">
+      <h2 class="font-cinzel text-2xl text-green-300 text-center tracking-wide">Mana and Healing</h2>
+      <div class="space-y-5 text-sm text-green-100/80 leading-relaxed">
+        <p>
+          Mana is the Hawaiian concept of spiritual power — the invisible, life-giving force that
+          flows through all things and that can be accumulated, directed, and transmitted by skilled
+          practitioners. In Polynesian cultures across the Pacific (mana appears in different forms
+          in Māori, Tongan, Samoan, and Fijian traditions), mana is not merely symbolic but a real
+          energetic reality — the spiritual substance of the universe itself. A person of great mana
+          radiates an almost tangible presence; their words carry power; their touch can heal. In
+          Huna psychology, mana is generated primarily by the Unihipili through breathing and
+          physical vitality, stored in the aka body (the subtle body), and can be accumulated through
+          proper breathing, prayer, and spiritual practice for use in healing, ceremony, and petition
+          to the High Self.
+        </p>
+        <p>
+          Ho'oponopono — the Hawaiian practice of reconciliation, forgiveness, and the correction of
+          errors — is one of the most beautiful and practically powerful of all Hawaiian spiritual
+          technologies, and one that has had remarkable global reach in recent decades largely through
+          the work of Morrnah Nalamaku Simeona (1913–1992) and her student Dr Ihaleakalā Hew Len. In
+          its traditional form, Ho'oponopono was a group process facilitated by a healer (Kahuna) or
+          family elder in which community members came together to resolve conflict, forgive injuries,
+          and restore right relationship. The four key phrases of modern Ho'oponopono — "I love you,
+          I'm sorry, please forgive me, thank you" — represent an act of total responsibility for
+          one's experience: the recognition that everything in one's reality is a reflection of one's
+          own inner state, and that healing any problem requires healing one's relationship to it from
+          within.
+        </p>
+        <p>
+          Lomilomi — traditional Hawaiian massage — is one of the most profound forms of sacred
+          healing art in the Pacific. More than a physical massage technique, lomilomi is understood
+          as a spiritual healing practice: the practitioner works not only on the physical body but
+          on the entire energetic being of the recipient, using long, flowing strokes that move in
+          rhythmic patterns inspired by the movement of ocean waves. Traditional lomilomi was
+          transmitted within families and carried specific ceremonial prayers and intentions. The
+          practitioner prepares themselves through prayer and the accumulation of mana before
+          working, and the session is understood as a ceremony of love, forgiveness, and restoration
+          — a full-body ho'oponopono enacted through touch.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION 4: The Kahuna -->
+    <section class="rounded-2xl p-8 space-y-6"
+             style="background: linear-gradient(135deg, rgba(10,40,5,0.14), rgba(3,15,1,0.08));">
+      <h2 class="font-cinzel text-2xl text-green-300 text-center tracking-wide">The Kahuna</h2>
+      <div class="space-y-5 text-sm text-green-100/80 leading-relaxed">
+        <p>
+          The word "Kahuna" means "keeper of the secret" or "expert in the secret" — from <em>ka</em>
+          (the) + <em>huna</em> (secret, concealed). Kahuna were the specialists and experts of
+          traditional Hawaiian society, holding knowledge in virtually every domain of life — and in
+          each domain, the knowledge had both a practical and a sacred dimension. The Kahuna were not
+          a single category but many: the Kahuna lapa'au (healing Kahuna) specialised in herbal
+          medicine, diagnosis, and treatment; the Kahuna nui (high Kahuna) performed the most
+          important religious ceremonies; the Kahuna kalai wa'a (canoe-building Kahuna) held the
+          sacred knowledge of canoe construction including the prayers and ceremonies required to
+          make a vessel seaworthy; the Kahuna kilokilo (prophet) could read signs in the stars,
+          clouds, and natural phenomena to forecast events; the Kahuna ho'opāpā were masters of
+          philosophical debate. Each speciality represented decades of apprenticeship and the
+          transmission of a complete, sacred body of knowledge.
+        </p>
+        <p>
+          The transmission of Kahuna knowledge operated within family lineages (hālau) — the
+          knowledge was passed from parent to child, uncle to nephew, elder to apprentice, within
+          specific family groups who held the rights and responsibilities associated with particular
+          domains of practice. This family-based transmission system meant that Kahuna knowledge
+          was extraordinarily stable and precise across generations; it also meant that the
+          near-destruction of Hawaiian culture after Western contact in 1778 and the conversion
+          campaigns of Christian missionaries beginning in the 1820s was catastrophically effective.
+          Within a generation or two, the political, social, and religious structures that supported
+          Kahuna transmission were destroyed, and much knowledge that had taken millennia to
+          accumulate was lost.
+        </p>
+        <p>
+          The near-destruction of Hawaiian spiritual traditions is one of the great cultural tragedies
+          of the colonial era. The arrival of Captain James Cook in 1778 initiated a process of
+          demographic collapse (disease killed approximately 90% of the native Hawaiian population
+          within a century), political transformation (the abolition of the kapu system in 1819),
+          and cultural suppression that devastated the institutions through which Kahuna knowledge
+          was transmitted. The Hawaiian language was banned in schools from 1896 to 1986. The hula
+          — which is not merely a dance but an encoded archive of Hawaiian cosmological knowledge —
+          was suppressed by missionaries who considered it immoral. The remarkable renaissance of
+          Hawaiian culture that has been underway since the 1970s — re-establishing the language,
+          the hula, the traditional navigation (Hōkūle'a), and aspects of Kahuna knowledge — is one
+          of the most inspiring stories of cultural resilience and recovery in the world.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION 5: Recommended Reading -->
+    <section class="space-y-6">
+      <h2 class="font-cinzel text-2xl text-green-300 text-center tracking-wide">Recommended Reading</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <div class="scholar-card">
+          <h3 class="font-cinzel text-base text-amber-300 mb-1">Max Freedom Long</h3>
+          <p class="text-green-300/70 text-xs mb-2 tracking-wide">1890–1971 · Huna Researcher &amp; Author</p>
+          <p class="text-green-100/70 text-sm leading-relaxed">
+            The foundational texts of the modern Huna movement, in which Long presents his
+            reconstruction of the ancient Kahuna system based on linguistic analysis of the
+            Hawaiian language and accounts of Kahuna practices. Long's synthesis drew on decades
+            of research and correspondence with practitioners and scholars worldwide. Essential
+            for understanding the Huna framework, though best read with awareness that Long's
+            synthesis is a 20th-century reconstruction rather than an unbroken traditional
+            transmission.
+          </p>
+          <p class="text-green-200/50 text-xs mt-3 italic">
+            Key works: <em>The Secret Science Behind Miracles</em> (1948);
+            <em>Growing Into Light</em> (1955)
+          </p>
+        </div>
+
+        <div class="scholar-card">
+          <h3 class="font-cinzel text-base text-amber-300 mb-1">Serge Kahili King</h3>
+          <p class="text-green-300/70 text-xs mb-2 tracking-wide">Contemporary · Hawaiian Shamanism Author</p>
+          <p class="text-green-100/70 text-sm leading-relaxed">
+            One of the most prolific and accessible writers on Hawaiian shamanism and Huna,
+            King claims lineage from a Hawaiian Kahuna. His work extends the Huna framework
+            into practical applications for modern life, particularly through the Huna philosophy
+            of the seven principles (Ike, Kala, Makia, Manawa, Aloha, Mana, Pono). King's
+            accessible style and emphasis on practical application have made his books some of
+            the most widely read introductions to Hawaiian spiritual philosophy.
+          </p>
+          <p class="text-green-200/50 text-xs mt-3 italic">
+            Key works: <em>Urban Shaman</em> (1990); <em>Kahuna Healing</em> (1983)
+          </p>
+        </div>
+
+        <div class="scholar-card">
+          <h3 class="font-cinzel text-base text-amber-300 mb-1">Mary Kawena Pukui</h3>
+          <p class="text-green-300/70 text-xs mb-2 tracking-wide">1895–1986 · Hawaiian Cultural Practitioner &amp; Scholar</p>
+          <p class="text-green-100/70 text-sm leading-relaxed">
+            The definitive insider account of traditional Hawaiian cultural and spiritual practices
+            by one of the most important Hawaiian cultural practitioners of the 20th century.
+            Pukui was also the primary author of the Hawaiian-English Dictionary — the most
+            comprehensive dictionary of the Hawaiian language — and her knowledge of traditional
+            Hawaiian culture was encyclopaedic. Her <em>Nana I Ke Kumu</em> (Look to the Source)
+            remains the most authoritative study of Hawaiian beliefs, practices, and values from
+            an insider perspective.
+          </p>
+          <p class="text-green-200/50 text-xs mt-3 italic">
+            Key works: <em>Nana I Ke Kumu (Look to the Source)</em> (1972, 2 vols., with E.S.C. Handy)
+          </p>
+        </div>
+
+        <div class="scholar-card">
+          <h3 class="font-cinzel text-base text-amber-300 mb-1">Nana Veary</h3>
+          <p class="text-green-300/70 text-xs mb-2 tracking-wide">1908–1994 · Hawaiian Spiritual Teacher</p>
+          <p class="text-green-100/70 text-sm leading-relaxed">
+            A deeply personal account of Kahuna spiritual practices and Ho'oponopono by a
+            Hawaiian woman who received traditional teachings from her aunt and who taught these
+            practices widely on the mainland United States. Veary's warm, accessible style makes
+            this one of the most personally resonant introductions to authentic Hawaiian spiritual
+            practice available. Her account of receiving and transmitting traditional Hawaiian
+            healing knowledge stands as a testament to the resilience of indigenous wisdom in
+            the face of cultural suppression.
+          </p>
+          <p class="text-green-200/50 text-xs mt-3 italic">
+            Key works: <em>Change We Must: My Spiritual Journey</em> (1989)
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <section class="text-center py-10 space-y-6 border-t border-green-700/30">
+      <blockquote class="max-w-2xl mx-auto">
+        <p class="text-green-200/70 text-base italic leading-relaxed">
+          "Aloha is the intelligence with which we meet life. It is not merely a greeting
+          but a way of being — the recognition that the divine in me meets the divine in
+          you, and that all life is held in this meeting."
+        </p>
+        <footer class="text-green-300/50 text-xs mt-3 tracking-wide">
+          — Hawaiian teaching on Aloha
+        </footer>
+      </blockquote>
+      <div>
+        <a href="/home" class="inline-flex items-center gap-2 text-sm text-green-300/70 hover:text-amber-300 transition-colors">
+          ← Back to Portal
+        </a>
+      </div>
+    </section>
+
+  </div>
+
+  <script>
+  const sf = document.getElementById('starfield');
+  for (let i = 0; i < 200; i++) {
+    const s = document.createElement('div');
+    s.className = 'star';
+    s.style.left = Math.random() * 100 + '%';
+    s.style.top = Math.random() * 100 + '%';
+    s.style.animationDelay = Math.random() * 3 + 's';
+    s.style.animationDuration = (2 + Math.random() * 3) + 's';
+    sf.appendChild(s);
+  }
+  </script>
+</body>
+</html>

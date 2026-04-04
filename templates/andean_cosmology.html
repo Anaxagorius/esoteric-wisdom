@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Andean Cosmology — Esoteric Wisdom</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <meta property="og:title" content="Andean Cosmology — Esoteric Wisdom" />
+  <meta property="og:description" content="The living wisdom of the Andes — Pachamama, Apus, Ayni, and the cosmic vision of the Q'ero and Inca spiritual lineages." />
+  <meta property="og:type" content="website" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <style>
+    body { font-family: 'Raleway', sans-serif; }
+    .font-cinzel { font-family: 'Cinzel Decorative', cursive; }
+    @keyframes twinkle { 0%,100%{opacity:0.2;transform:scale(1);} 50%{opacity:1;transform:scale(1.4);} }
+    @keyframes float { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-12px);} }
+    @keyframes shimmer { 0%{background-position:0% 50%;} 100%{background-position:200% 50%;} }
+    .star { position:absolute; width:2px; height:2px; background:white; border-radius:50%; animation:twinkle 3s infinite; }
+    .aurora-text {
+      background: linear-gradient(90deg, #4ade80, #86efac, #d4d4aa, #6ee7b7, #4ade80);
+      background-size:300% auto;
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+      background-clip:text;
+      animation:shimmer 6s linear infinite;
+    }
+    .floating { animation: float 4s ease-in-out infinite; }
+    .nav-link { position:relative; transition:all 0.3s; }
+    .nav-link::after { content:''; position:absolute; bottom:-2px; left:0; width:0; height:1px; background:#f59e0b; transition:width 0.3s; }
+    .nav-link:hover::after { width:100%; }
+    .sub-card {
+      background: linear-gradient(135deg, rgba(30,80,20,0.18), rgba(10,40,5,0.10));
+      border: 1px solid rgba(74,222,128,0.30);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      transition: all 0.3s;
+    }
+    .sub-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 0 24px rgba(74,222,128,0.18);
+      border-color: rgba(74,222,128,0.55);
+    }
+    .scholar-card {
+      background: linear-gradient(135deg, rgba(20,60,15,0.18), rgba(8,30,4,0.10));
+      border: 1px solid rgba(110,231,183,0.25);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      transition: all 0.3s;
+    }
+    .scholar-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 0 20px rgba(110,231,183,0.15);
+      border-color: rgba(110,231,183,0.50);
+    }
+  </style>
+</head>
+<body class="min-h-screen text-green-100 overflow-x-hidden"
+      style="background: radial-gradient(ellipse at top, #0a1a0a 0%, #1a2d10 25%, #050a04 60%, #000000 100%);">
+
+  <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+
+  <!-- NAVIGATION -->
+  <nav class="sticky top-0 z-50 flex items-center justify-between px-6 py-3 bg-black/40 backdrop-blur-md border-b border-green-700/30 flex-wrap gap-y-2">
+    <a href="/home" class="font-cinzel text-amber-300 text-sm tracking-widest shrink-0">✦ Esoteric Wisdom ✦</a>
+    <div class="flex items-center gap-x-3 gap-y-1 text-xs text-green-200 flex-wrap justify-end">
+      <a href="/astrology" class="nav-link hover:text-amber-300 transition-colors">Astrology</a>
+      <a href="/meditation" class="nav-link hover:text-amber-300 transition-colors">Meditation</a>
+      <a href="/tarot/select" class="nav-link hover:text-amber-300 transition-colors">Tarot</a>
+      <a href="/numerology" class="nav-link hover:text-amber-300 transition-colors">Numerology</a>
+      <a href="/crystals" class="nav-link hover:text-amber-300 transition-colors">Crystals</a>
+      <a href="/runes" class="nav-link hover:text-amber-300 transition-colors">Runes</a>
+      <a href="/shamanism" class="nav-link hover:text-amber-300 transition-colors">Shamanism</a>
+      <a href="/druidism" class="nav-link hover:text-amber-300 transition-colors">Druidism</a>
+      <a href="/akashic-records" class="nav-link hover:text-amber-300 transition-colors">Akashic Records</a>
+      <a href="/wicca" class="nav-link hover:text-amber-300 transition-colors">Wicca</a>
+      <a href="/alchemy" class="nav-link hover:text-amber-300 transition-colors">Alchemy</a>
+      <a href="/gateway-process" class="nav-link hover:text-amber-300 transition-colors">Gateway Process</a>
+      <a href="/remote-viewing" class="nav-link hover:text-amber-300 transition-colors">Remote Viewing</a>
+      <a href="/khasarov-mirror" class="nav-link hover:text-amber-300 transition-colors">Khasarov Mirror</a>
+      <a href="/western-esotericism" class="nav-link hover:text-amber-300 transition-colors">Western Esotericism</a>
+      <a href="/eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Eastern Esotericism</a>
+      <a href="/indigenous-esotericism" class="nav-link text-amber-300 font-semibold">Indigenous Esotericism</a>
+      <a href="/journal/reflections" class="nav-link text-emerald-300 hover:text-emerald-200 transition-colors">✨ Reflections</a>
+      <a href="https://ko-fi.com/esotericwisdom" target="_blank" rel="noopener noreferrer"
+         class="px-3 py-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-white font-semibold hover:scale-105 transition-transform shrink-0">☕ Support</a>
+    </div>
+  </nav>
+
+  <div class="relative z-10 max-w-6xl mx-auto space-y-10 pt-6 px-4 pb-12">
+
+    <!-- BREADCRUMB -->
+    <div class="text-sm text-green-300/70">
+      <a href="/indigenous-esotericism" class="hover:text-green-200 transition-colors">← Indigenous &amp; Shamanic Esotericism</a>
+    </div>
+
+    <!-- HERO -->
+    <section class="text-center py-16 space-y-6">
+      <div class="text-7xl floating">🏔️</div>
+      <h1 class="font-cinzel text-4xl md:text-6xl font-bold aurora-text leading-tight">Andean Cosmology</h1>
+      <p class="max-w-3xl mx-auto text-green-200/80 text-lg leading-relaxed">
+        The living wisdom of the Andes — Pachamama, the Apus, Ayni, and the cosmic vision of the
+        Q'ero and Inca spiritual lineages, preserved unbroken in the high peaks of Peru and now
+        offered to a world in need of re-sacralisation.
+      </p>
+    </section>
+
+    <!-- SECTION 1: What Is Andean Cosmology? -->
+    <section class="rounded-2xl p-8 space-y-6"
+             style="background: linear-gradient(135deg, rgba(20,60,10,0.12), rgba(5,25,3,0.07));">
+      <h2 class="font-cinzel text-2xl text-green-300 text-center tracking-wide">What Is Andean Cosmology?</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm text-green-100/80 leading-relaxed">
+        <div class="space-y-4">
+          <p>
+            The Andean spiritual tradition is one of the most sophisticated and ecologically rooted
+            cosmologies ever developed. Centred on the Andes mountains of South America — primarily
+            Peru, Bolivia, and Ecuador — it emerged from the Inca civilisation but roots deeper still
+            into pre-Inca cultures stretching back thousands of years. At its heart is the understanding
+            that the universe is alive, conscious, and structured into three interpenetrating worlds.
+            The material world in which humans live (Kay Pacha) is not primary but is nested within
+            higher and lower dimensions of reality that are directly accessible through spiritual
+            practice, ceremony, and right relationship with the living Earth.
+          </p>
+          <p>
+            The three worlds of Andean cosmology form the foundational structure of the entire
+            tradition. Hanan Pacha — the Upper World or Celestial World — is the realm of the stars,
+            the sun (Inti), the moon (Mama Killa), the cosmic archetypes, and the high-level spiritual
+            beings who oversee the unfolding of creation. Kay Pacha — the Middle World or Here and Now
+            World — is the ordinary world of human beings, plants, animals, rivers, and daily life: the
+            world in which the great drama of existence unfolds moment by moment. Ukhu Pacha — the Lower
+            World or Inner World — is not a place of punishment or damnation but the underworld, the
+            realm of the unconscious, the root world, the seeds and origins of things, and the ancestors
+            in their most primal and generative form. All three worlds are considered sacred and equally
+            necessary; the cosmos requires all three to function, and the skilled paqo moves fluidly
+            between them.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <p>
+            Pachamama — Earth Mother — is the central deity and foundational presence of Andean
+            spirituality. She is not a metaphor for the Earth nor a symbol of nature in the abstract,
+            but the literal living spirit of the Earth itself: a being of immense consciousness,
+            patience, and generosity who sustains all life within her body. The Andean relationship to
+            Pachamama is one of profound reciprocity — she gives ceaselessly (food, water, shelter,
+            beauty, the very ground beneath one's feet) and the people give back through offerings,
+            ceremony, gratitude, and right relationship. This reciprocity is not optional or merely
+            ritual; it is the foundational ethical orientation of Andean life, the axis around which
+            all other relationships are organised.
+          </p>
+          <p>
+            The Apus — the mountain deities — are the great spiritual presences who inhabit the high
+            peaks of the Andes. Each major mountain is an Apu, a living being of enormous spiritual
+            power who oversees the territory surrounding it and the communities living within that
+            territory. The relationship between communities and their Apus is one of the most
+            distinctive features of Andean cosmology: the Apus are not distant gods requiring elaborate
+            temple rituals but present, accessible, demanding, and generous beings who communicate with
+            their communities through the voices of the paqos (medicine people) and through natural
+            signs, weather patterns, and omens in the landscape. The great Apu Ausangate, towering
+            above Cusco at 6,384 metres, is considered the most powerful Apu in the southern Andes and
+            the presiding spirit of the entire Q'ero territory.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: Key Concepts -->
+    <section class="space-y-6">
+      <h2 class="font-cinzel text-2xl text-green-300 text-center tracking-wide">Key Concepts</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <div class="sub-card space-y-3">
+          <div class="text-3xl">🌿</div>
+          <h3 class="font-cinzel text-base text-green-200">Ayni (Sacred Reciprocity)</h3>
+          <p class="text-xs text-green-100/70 leading-relaxed">
+            The foundational ethical and spiritual law of Andean cosmology — the principle of sacred
+            reciprocity that governs all relationships in the living universe. Ayni means to give and
+            receive in perfect balance, maintaining the flow of kawsay (living energy) between humans,
+            the earth, the Apus, and the cosmos. Every despacho ceremony, every prayer, every offering
+            is an act of ayni. To live in ayni is to live in right relationship with all of existence;
+            to violate ayni is to disrupt the flow of life itself.
+          </p>
+        </div>
+
+        <div class="sub-card space-y-3">
+          <div class="text-3xl">🌍</div>
+          <h3 class="font-cinzel text-base text-green-200">Pachamama (Earth Mother)</h3>
+          <p class="text-xs text-green-100/70 leading-relaxed">
+            The living goddess of the earth — not symbolic but literally the conscious being who is
+            the planet itself. Pachamama is the source of all food, shelter, and material abundance;
+            she is honoured in daily life, in major ceremonies, and in the despacho offering. The
+            August Pachamama ceremony — performed at the beginning of the Andean agricultural year —
+            is the most important of the Andean ritual calendar, a time when the Earth is said to
+            "open her mouth" and receive offerings most directly into her living body.
+          </p>
+        </div>
+
+        <div class="sub-card space-y-3">
+          <div class="text-3xl">🏔️</div>
+          <h3 class="font-cinzel text-base text-green-200">The Apus (Mountain Deities)</h3>
+          <p class="text-xs text-green-100/70 leading-relaxed">
+            The great guardian spirits of the Andean peaks — living beings of immense power and wisdom
+            who oversee territories, communities, and the spiritual development of individual
+            practitioners. Each Apu has a distinct personality and speciality. Ausangate, near Cusco,
+            is considered the most powerful Apu in the southern Andes. Salkantay is the wild, untamed
+            Apu of transformation. Huascarán in the north holds the wisdom of the old ones. The Apus
+            speak to those who know how to listen.
+          </p>
+        </div>
+
+        <div class="sub-card space-y-3">
+          <div class="text-3xl">🌐</div>
+          <h3 class="font-cinzel text-base text-green-200">The Three Worlds</h3>
+          <p class="text-xs text-green-100/70 leading-relaxed">
+            Hanan Pacha (Upper World), Kay Pacha (Middle World), and Ukhu Pacha (Lower World) —
+            the three-layered cosmological structure of Andean reality. Not separate realms but
+            interpenetrating dimensions of a single living reality, each accessible to the trained
+            paqo. The three worlds correspond to the three aspects of the self: the high self aligned
+            with Hanan Pacha, the everyday self of Kay Pacha, and the deep ancestral unconscious of
+            Ukhu Pacha. Mastery of the Andean path requires fluency in all three.
+          </p>
+        </div>
+
+        <div class="sub-card space-y-3">
+          <div class="text-3xl">✨</div>
+          <h3 class="font-cinzel text-base text-green-200">The Munay-Ki</h3>
+          <p class="text-xs text-green-100/70 leading-relaxed">
+            The nine initiatory rites of the Inka medicine tradition, transmitted from Q'ero paqos
+            to Western practitioners beginning in the 1990s. The rites include the Bands of Power,
+            the Harmony Rite, the Seer's Rite, the Daykeeper's Rite, the Wisdomkeeper's Rite, the
+            Earthkeeper's Rite, the Starkeeper's Rite, the Creator Rite, and the Rite of the Womb
+            (for women). Each rite plants a seed of spiritual awakening in the luminous energy field
+            (poqpo) that surrounds and interpenetrates the physical body.
+          </p>
+        </div>
+
+        <div class="sub-card space-y-3">
+          <div class="text-3xl">🌺</div>
+          <h3 class="font-cinzel text-base text-green-200">Despacho Ceremony</h3>
+          <p class="text-xs text-green-100/70 leading-relaxed">
+            The central ritual technology of Andean spiritual practice — a mandala-like offering made
+            from over 200 sacred ingredients (flowers, seeds, sweets, llama fat, shells, gold and
+            silver paper, and more) assembled in prayer and offered to Pachamama, the Apus, or
+            specific cosmic forces. The despacho is a physical act of ayni, a way of giving back to
+            the living cosmos what the cosmos has given. It is simultaneously prayer, meditation, art,
+            and direct communication with the spirit world.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 3: The Q'ero and the Prophecy of the Eagle and Condor -->
+    <section class="rounded-2xl p-8 space-y-6"
+             style="background: linear-gradient(135deg, rgba(15,50,8,0.14), rgba(4,20,2,0.08));">
+      <h2 class="font-cinzel text-2xl text-green-300 text-center tracking-wide">
+        The Q'ero and the Prophecy of the Eagle and Condor
+      </h2>
+      <div class="space-y-5 text-sm text-green-100/80 leading-relaxed">
+        <p>
+          The Q'ero people are a Quechua-speaking indigenous community living at altitudes of
+          4,500–5,000 metres in the Peruvian Andes, in the remote Paucartambo province near
+          Ausangate mountain. They are widely regarded as the last surviving lineage keepers of
+          the Inca spiritual tradition — the "keepers of the ancient ways" who retreated into the
+          high mountains when the Spanish conquistadors arrived in the 16th century and there
+          preserved, in unbroken lineage, the ritual knowledge, initiatory practices, and
+          cosmological understanding of the Inca tradition. Isolated for nearly four centuries by
+          altitude, remoteness, and the deliberate preservation of their culture, the Q'ero kept
+          alive what would otherwise have been extinguished: the living transmission of Andean
+          medicine work, the despacho ceremonies, the karpay initiations, and the great prophecies
+          of Pachakuti.
+        </p>
+        <p>
+          The Q'ero first came to widespread attention in 1955 when Oscar Núñez del Prado, a
+          Peruvian anthropologist from the University of Cusco, "discovered" them (though they had
+          always known precisely where they were). But it was in the 1990s that the Q'ero began
+          fulfilling what their own prophecy required of them — the transmission of their sacred
+          knowledge to the West, and to humanity at large. Their most important prophecy, the
+          Pachakuti, speaks of a period of upheaval and transformation followed by a new world
+          order based on relationship, reciprocity, and the re-sacralisation of the Earth. The
+          prophecy of the Eagle and the Condor speaks of the reunification of the peoples of
+          North and South America — the Eagle people (North America, the rational and technological
+          mind) and the Condor people (South America, heart consciousness and earth wisdom) — flying
+          together in the same sky. The reunification of Eagle and Condor heralds the beginning of
+          a new era of planetary healing and the restoration of balance between masculine and
+          feminine, mind and heart, technology and spirit.
+        </p>
+        <p>
+          The transmission of Andean wisdom to the West accelerated dramatically through the work
+          of anthropologist and medical researcher Alberto Villoldo, who spent years studying with
+          Q'ero paqos including Don Manuel Quispe and Antonio Morales. Villoldo's Four Winds
+          Society has trained thousands of Western practitioners in the Munay-Ki rites and the
+          broader framework of Andean shamanic cosmology. Juan Núñez del Prado (son of Oscar) and
+          his collaborators have also been instrumental in bringing authentic Q'ero teachings to
+          international audiences with scholarly rigour and deep respect for their living context.
+          The Q'ero themselves see this transmission not as a loss of sacred knowledge but as a
+          fulfilment of their sacred duty — and as the beginning of what they call the Fifth Sun,
+          a new era of planetary healing that requires the wisdom of the mountains to be distributed
+          across the world. For the Q'ero, the opening to the West was not a capitulation to
+          modernity but the cosmic moment their prophecy had always been pointing towards.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION 4: Practices and Initiations -->
+    <section class="space-y-6">
+      <h2 class="font-cinzel text-2xl text-green-300 text-center tracking-wide">Practices and Initiations</h2>
+      <div class="space-y-5 text-sm text-green-100/80 leading-relaxed rounded-2xl p-8"
+           style="background: linear-gradient(135deg, rgba(20,55,12,0.10), rgba(6,22,3,0.06));">
+        <p>
+          The despacho ceremony is the most frequently practised ritual in the Andean tradition
+          and serves as a direct act of communication with the living cosmos. A despacho is
+          assembled as a kind of mandala: a large sheet of paper upon which the practitioner or
+          Q'ero paqo arranges over 200 ingredients in prayer, each ingredient carrying a specific
+          symbolic and energetic weight. White carnations for the Apus, red flowers for Pachamama,
+          gold and silver paper for the solar and lunar forces, llama fat for nourishment and
+          protection, seeds for new beginnings, sweets for the joy of life, seashells for the
+          waters of creation, and personal prayers folded into every layer. The assembled despacho
+          is folded carefully into a bundle, prayed over with full collective intention, and then
+          offered by burning (to the Apus and Hanan Pacha), burying in the earth (to Pachamama
+          and Ukhu Pacha), or placing in running water (to the river spirits and the flow of life).
+          Each method of offering carries a different energetic signature and is chosen according
+          to the purpose of the ceremony.
+        </p>
+        <p>
+          Karpay is the Quechua word for energetic transmission or initiation — the direct transfer
+          of spiritual power, wisdom, and healing capacity from a paqo to a student or recipient.
+          In the Andean tradition, karpay operates through the luminous energy field (poqpo) that
+          surrounds and interpenetrates the physical body — a field of living energy that carries
+          the imprints of ancestral patterns, personal history, and spiritual potential. The most
+          important karpay transmissions are the nine Munay-Ki rites, which originate in the
+          initiatory practices of the Q'ero lineage. Each rite installs a specific "seed" in the
+          practitioner's luminous energy field that unfolds over time through practice, ceremony,
+          and spiritual development. According to Andean understanding, these transmissions
+          physically alter the luminous body and its relationship to the three worlds.
+        </p>
+        <p>
+          Coca leaf divination (coca kintu) is one of the most ancient and continuously practised
+          spiritual technologies of the Andean world. The coca leaf is sacred in Andean cosmology —
+          a mediator between the human world and the spirit world, a gift of Pachamama, and a tool
+          of spiritual communication of extraordinary refinement. A paqo reads coca leaves to divine
+          the present situation, the ancestral patterns at work in a person's life, the will of the
+          Apus, or the correct timing and composition for ceremony. A coca kintu — three perfect
+          leaves held together as a prayer — is the most basic unit of Andean offering, used to
+          communicate with Pachamama, the Apus, and all the living forces of the cosmos. Kawsay —
+          living energy — is the animating force of the Andean cosmos; everything that exists
+          participates in the flow of kawsay, and the paqo's fundamental work is tracking, clearing,
+          and cultivating this living energy within the individual, the community, and the land,
+          restoring the sacred reciprocity that is the natural condition of all life.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION 5: Sacred Timeline -->
+    <section class="space-y-6">
+      <h2 class="font-cinzel text-2xl text-green-300 text-center tracking-wide">Sacred Timeline</h2>
+      <div class="space-y-4">
+        <div class="flex gap-4 items-start">
+          <div class="w-36 shrink-0 text-xs text-green-400 font-semibold pt-1">c. 3000–1000 BCE</div>
+          <div class="sub-card flex-1 text-xs text-green-100/80">
+            The earliest Andean civilisations — Caral, Chavín de Huántar — develop the foundational
+            cosmological frameworks of Andean spirituality: reverence for Pachamama, the mountain
+            spirits, the three worlds, and the sacred relationship between human communities and the
+            living landscape. The Chavín tradition establishes iconographic traditions of the jaguar,
+            the condor, and the serpent that will persist throughout Andean history.
+          </div>
+        </div>
+        <div class="flex gap-4 items-start">
+          <div class="w-36 shrink-0 text-xs text-green-400 font-semibold pt-1">c. 600–1000 CE</div>
+          <div class="sub-card flex-1 text-xs text-green-100/80">
+            The Tiwanaku and Wari civilisations flourish; the cosmological system of Hanan Pacha,
+            Kay Pacha, and Ukhu Pacha is fully articulated in ritual architecture, textiles, and
+            ceremony. The gateway of the sun at Tiwanaku encodes solar and astronomical knowledge
+            into stone that still commands reverence from pilgrims today.
+          </div>
+        </div>
+        <div class="flex gap-4 items-start">
+          <div class="w-36 shrink-0 text-xs text-green-400 font-semibold pt-1">c. 1438–1533 CE</div>
+          <div class="sub-card flex-1 text-xs text-green-100/80">
+            The height of the Inca Empire (Tawantinsuyu) — the four quarters of the world united
+            under Inca governance. Cusco is the navel of the world (qosqo = navel); the Coricancha
+            temple is the spiritual centre of the empire, housing the golden disc of Inti (the sun).
+            The ceque system organises sacred sites radiating from Cusco as a living cosmological map.
+          </div>
+        </div>
+        <div class="flex gap-4 items-start">
+          <div class="w-36 shrink-0 text-xs text-green-400 font-semibold pt-1">1532–1533 CE</div>
+          <div class="sub-card flex-1 text-xs text-green-100/80">
+            Spanish conquest under Francisco Pizarro. The Inca emperor Atahualpa is captured and
+            executed; the empire collapses with extraordinary speed. Extirpación de idolatrías
+            campaigns systematically attempt to destroy Andean spiritual practices. Many lineage
+            holders retreat to the high mountains, preserving the living tradition in places the
+            Spanish cannot easily reach.
+          </div>
+        </div>
+        <div class="flex gap-4 items-start">
+          <div class="w-36 shrink-0 text-xs text-green-400 font-semibold pt-1">1955 CE</div>
+          <div class="sub-card flex-1 text-xs text-green-100/80">
+            Oscar Núñez del Prado of the University of Cusco makes first formal academic contact
+            with the Q'ero people at an altitude of 4,600 metres in the Paucartambo province —
+            confirming their existence as the last unbroken lineage of Inca spiritual practitioners.
+            The Q'ero are brought to Cusco to present their ceremonies at the Qoyllur Riti festival.
+          </div>
+        </div>
+        <div class="flex gap-4 items-start">
+          <div class="w-36 shrink-0 text-xs text-green-400 font-semibold pt-1">1990s–present</div>
+          <div class="sub-card flex-1 text-xs text-green-100/80">
+            The Q'ero begin transmitting the Munay-Ki rites and Andean wisdom teachings to Western
+            practitioners — the fulfilment of the Pachakuti prophecy. Alberto Villoldo founds the
+            Four Winds Society; Elizabeth Jenkins establishes the Wiraqocha Foundation. Thousands
+            receive the Munay-Ki initiations worldwide. The tradition enters a new phase of global
+            relevance, carrying the living wisdom of the Andes into the 21st century.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: Recommended Reading -->
+    <section class="space-y-6">
+      <h2 class="font-cinzel text-2xl text-green-300 text-center tracking-wide">Recommended Reading</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <div class="scholar-card">
+          <h3 class="font-cinzel text-base text-amber-300 mb-1">Alberto Villoldo</h3>
+          <p class="text-green-300/70 text-xs mb-2 tracking-wide">Medical Anthropologist · Four Winds Society</p>
+          <p class="text-green-100/70 text-sm leading-relaxed">
+            Medical anthropologist and founder of the Four Winds Society, Villoldo spent years
+            studying directly with Q'ero paqos in the Peruvian Andes. His work is the most
+            accessible and comprehensive introduction to Andean shamanic cosmology and the Munay-Ki
+            initiatory rites available in English, written with both scholarly grounding and the
+            authority of direct transmission from living lineage holders.
+          </p>
+          <p class="text-green-200/50 text-xs mt-3 italic">
+            Key works: <em>The Four Winds: A Shaman's Odyssey into the Amazon</em>;
+            <em>Shaman, Healer, Sage</em> (2000)
+          </p>
+        </div>
+
+        <div class="scholar-card">
+          <h3 class="font-cinzel text-base text-amber-300 mb-1">Elizabeth Jenkins</h3>
+          <p class="text-green-300/70 text-xs mb-2 tracking-wide">Contemporary · Q'ero Tradition</p>
+          <p class="text-green-100/70 text-sm leading-relaxed">
+            One of the foremost Western authorities on Q'ero tradition, Jenkins has worked directly
+            with Q'ero elders including don Agustín Pauqar Qente and has written with exceptional
+            intimacy and clarity about the initiatory experience of Andean practice. Her work
+            conveys both the cosmological depth of the tradition and the lived reality of receiving
+            transmission from living lineage holders in the high Andes.
+          </p>
+          <p class="text-green-200/50 text-xs mt-3 italic">
+            Key works: <em>Initiation: A Woman's Spiritual Adventure in the Heart of the Andes</em>
+            (1997); <em>The Next Step: The Munay-Ki Rites and the Prophecy of the Eagle and Condor</em>
+          </p>
+        </div>
+
+        <div class="scholar-card">
+          <h3 class="font-cinzel text-base text-amber-300 mb-1">Juan Núñez del Prado</h3>
+          <p class="text-green-300/70 text-xs mb-2 tracking-wide">Contemporary · Andean Mysticism Scholar</p>
+          <p class="text-green-100/70 text-sm leading-relaxed">
+            Son of the anthropologist who first made contact with the Q'ero; a leading scholar and
+            practitioner of Andean mysticism who has written extensively on the structure of Andean
+            initiatory cosmology and the meaning of the Pachakuti prophecy. His work is notable for
+            combining rigorous scholarly analysis with the authority of one born into direct
+            relationship with Q'ero lineage holders over multiple generations.
+          </p>
+          <p class="text-green-200/50 text-xs mt-3 italic">
+            Key works: Writings on the Andean initiatory path and the Q'ero prophetic tradition
+          </p>
+        </div>
+
+        <div class="scholar-card">
+          <h3 class="font-cinzel text-base text-amber-300 mb-1">José María Arguedas</h3>
+          <p class="text-green-300/70 text-xs mb-2 tracking-wide">1911–1969 · Novelist, Anthropologist &amp; Poet</p>
+          <p class="text-green-100/70 text-sm leading-relaxed">
+            Peruvian novelist, anthropologist, and poet whose entire life's work was the
+            documentation and celebration of Andean and Quechua culture. Raised partly by
+            Quechua-speaking indigenous communities after his mother's death, Arguedas wrote from
+            the inside of the tradition. His novel <em>The Fox from Up Above and the Fox from Down
+            Below</em> and his scholarly writings on Andean mythology are essential for understanding
+            the literary and civilisational depth of Andean culture.
+          </p>
+          <p class="text-green-200/50 text-xs mt-3 italic">
+            Key works: <em>The Fox from Up Above and the Fox from Down Below</em>;
+            <em>Deep Rivers</em>; scholarly writings on Andean myth and Quechua cosmology
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <section class="text-center py-10 space-y-6 border-t border-green-700/30">
+      <blockquote class="max-w-2xl mx-auto">
+        <p class="text-green-200/70 text-base italic leading-relaxed">
+          "Ayni kausay — to live in reciprocity is to live in the fullness of life. Give to the
+          Earth, to the Apus, to one another, and the living cosmos will give back without measure."
+        </p>
+        <footer class="text-green-300/50 text-xs mt-3 tracking-wide">
+          — Q'ero teaching on ayni
+        </footer>
+      </blockquote>
+      <div>
+        <a href="/home" class="inline-flex items-center gap-2 text-sm text-green-300/70 hover:text-amber-300 transition-colors">
+          ← Back to Portal
+        </a>
+      </div>
+    </section>
+
+  </div>
+
+  <script>
+  const sf = document.getElementById('starfield');
+  for (let i = 0; i < 200; i++) {
+    const s = document.createElement('div');
+    s.className = 'star';
+    s.style.left = Math.random() * 100 + '%';
+    s.style.top = Math.random() * 100 + '%';
+    s.style.animationDelay = Math.random() * 3 + 's';
+    s.style.animationDuration = (2 + Math.random() * 3) + 's';
+    sf.appendChild(s);
+  }
+  </script>
+</body>
+</html>
