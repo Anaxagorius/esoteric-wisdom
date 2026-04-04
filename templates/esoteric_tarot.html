@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tarot — Esoteric Traditions — Esoteric Wisdom</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <meta property="og:title" content="Tarot — Esoteric Traditions — Esoteric Wisdom" />
+  <meta property="og:description" content="The 78-card system as a portable initiatory curriculum — from Court de Gébelin and Etteilla to the Golden Dawn's Qabalistic synthesis, Crowley's Thoth Tarot, and the Major Arcana as 22 paths on the Tree of Life." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://esoteric-wisdom.onrender.com/esoteric-practices/tarot" />
+  <meta property="og:image" content="https://esoteric-wisdom.onrender.com/og-image.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Raleway', sans-serif; }
+    .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+    @keyframes twinkle { 0%,100% { opacity: 0.2; } 50% { opacity: 1; } }
+    .star { position: absolute; width: 2px; height: 2px; border-radius: 50%; background: white; animation: twinkle var(--dur,3s) ease-in-out infinite; animation-delay: var(--delay,0s); }
+    @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+    .floating { animation: float 5s ease-in-out infinite; }
+    @keyframes shimmer { 0% { background-position: -200% center; } 100% { background-position: 200% center; } }
+    .nav-link { position: relative; transition: all 0.3s; }
+    .nav-link::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: linear-gradient(90deg, #f59e0b, #a78bfa); transition: width 0.3s; }
+    .nav-link:hover::after { width: 100%; }
+    .aurora-text { background: linear-gradient(90deg, #f59e0b, #818cf8, #a78bfa, #fbbf24, #6366f1, #f59e0b); background-size: 200% auto; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; animation: shimmer 4s linear infinite; }
+    @keyframes indigo-glow { 0%, 100% { box-shadow: 0 0 10px 2px rgba(99,102,241,0.25); } 50% { box-shadow: 0 0 28px 6px rgba(99,102,241,0.55); } }
+    .esoteric-card { background: linear-gradient(135deg, rgba(79,70,229,0.07), rgba(49,46,129,0.04)); border: 1px solid rgba(99,102,241,0.2); border-radius: 1rem; padding: 1.5rem; transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; }
+    .esoteric-card:hover { transform: translateY(-6px) scale(1.01); box-shadow: 0 0 28px 5px rgba(99,102,241,0.3); border-color: rgba(99,102,241,0.5); }
+    .practice-card { background: linear-gradient(135deg, rgba(79,70,229,0.06), rgba(49,46,129,0.04)); border: 1px solid rgba(99,102,241,0.15); border-radius: 0.75rem; padding: 1.25rem; transition: border-color 0.3s, background 0.3s; }
+    .practice-card:hover { border-color: rgba(99,102,241,0.4); background: linear-gradient(135deg, rgba(79,70,229,0.1), rgba(49,46,129,0.06)); }
+  </style>
+</head>
+<body class="min-h-screen text-indigo-100 overflow-x-hidden" style="background: radial-gradient(ellipse at top, #0c0a1e 0%, #1a1040 25%, #060412 60%, #000000 100%);">
+
+  <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+
+  <nav class="sticky top-0 z-50 flex items-center justify-between px-6 py-3 bg-black/40 backdrop-blur-md border-b border-violet-500/20 flex-wrap gap-y-2">
+    <a href="/home" class="font-cinzel text-amber-300 text-sm tracking-widest shrink-0">✦ Esoteric Wisdom ✦</a>
+    <div class="flex items-center gap-x-3 gap-y-1 text-xs text-violet-200 flex-wrap justify-end">
+      <a href="/astrology" class="nav-link hover:text-amber-300 transition-colors">Astrology</a>
+      <a href="/meditation" class="nav-link hover:text-amber-300 transition-colors">Meditation</a>
+      <a href="/tarot/select" class="nav-link hover:text-amber-300 transition-colors">Tarot</a>
+      <a href="/numerology" class="nav-link hover:text-amber-300 transition-colors">Numerology</a>
+      <a href="/crystals" class="nav-link hover:text-amber-300 transition-colors">Crystals</a>
+      <a href="/runes" class="nav-link hover:text-amber-300 transition-colors">Runes</a>
+      <a href="/shamanism" class="nav-link hover:text-amber-300 transition-colors">Shamanism</a>
+      <a href="/druidism" class="nav-link hover:text-amber-300 transition-colors">Druidism</a>
+      <a href="/akashic-records" class="nav-link hover:text-amber-300 transition-colors">Akashic Records</a>
+      <a href="/wicca" class="nav-link hover:text-amber-300 transition-colors">Wicca</a>
+      <a href="/alchemy" class="nav-link hover:text-amber-300 transition-colors">Alchemy</a>
+      <a href="/gateway-process" class="nav-link hover:text-amber-300 transition-colors">Gateway Process</a>
+      <a href="/remote-viewing" class="nav-link hover:text-amber-300 transition-colors">Remote Viewing</a>
+      <a href="/khasarov-mirror" class="nav-link hover:text-amber-300 transition-colors">Khasarov Mirror</a>
+      <a href="/western-esotericism" class="nav-link hover:text-amber-300 transition-colors">Western Esotericism</a>
+      <a href="/eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Eastern Esotericism</a>
+      <a href="/indigenous-esotericism" class="nav-link hover:text-amber-300 transition-colors">Indigenous Esotericism</a>
+      <a href="/middle-eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Middle Eastern Mysteries</a>
+      <a href="/esoteric-practices" class="nav-link text-amber-300 font-semibold">Esoteric Practices</a>
+      <a href="/journal/reflections" class="nav-link text-emerald-300 hover:text-emerald-200 transition-colors">✨ Reflections</a>
+      <a href="https://ko-fi.com/esotericwisdom" target="_blank" rel="noopener noreferrer"
+         class="px-3 py-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-white font-semibold hover:scale-105 transition-transform shrink-0">☕ Support</a>
+    </div>
+  </nav>
+
+  <div class="relative z-10 max-w-6xl mx-auto space-y-10 pt-6 px-4 pb-12">
+
+    <div>
+      <a href="/esoteric-practices" class="text-xs text-indigo-300/60 hover:text-indigo-300 transition-colors">← Esoteric Practices &amp; Disciplines</a>
+    </div>
+
+    <section class="text-center py-14 space-y-6">
+      <div class="text-7xl floating">🃏</div>
+      <h1 class="font-cinzel text-4xl md:text-6xl font-bold aurora-text leading-tight">
+        Tarot — Esoteric Traditions
+      </h1>
+      <p class="max-w-3xl mx-auto text-indigo-200/80 text-lg leading-relaxed">
+        The 78-card system as a portable initiatory curriculum — encoding the whole of Western esoteric cosmology in a sequence of archetypal images, the Major Arcana as 22 paths on the Tree of Life, and every reading an encounter with the deeper intelligence of the soul.
+      </p>
+    </section>
+
+    <section class="rounded-2xl p-8 space-y-6" style="background: linear-gradient(135deg, rgba(79,70,229,0.15), rgba(49,46,129,0.08));">
+      <h2 class="font-cinzel text-2xl text-indigo-300 text-center tracking-wide">Tarot as Esoteric System</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm text-indigo-100/80 leading-relaxed">
+        <div class="space-y-4">
+          <p>
+            The tarot as we know it originated in northern Italy in the early 15th century as a card game — the <em>tarocchi</em> — played by the aristocracy of Milan, Ferrara, and Bologna. The earliest surviving complete decks (the Visconti-Sforza tarots, c. 1440–1480) were luxury objects, hand-painted for the noble families who commissioned them, and bear no evidence of esoteric intent. For the first three centuries of the tarot's existence, there is no record of its use for divination or as a vehicle for esoteric teaching. The transformation of tarot from card game into esoteric system is a product of the late 18th century — specifically of the moment in 1781 when the Swiss pastor <strong class="text-indigo-200">Antoine Court de Gébelin</strong> published an essay claiming, entirely without evidence, that the Major Arcana of the tarot were the surviving pages of a lost sacred Egyptian book, the Book of Thoth, brought to Europe by Egyptian priests and preserved in disguised form as a card game.
+          </p>
+          <p>
+            Court de Gébelin's Egyptian theory was historically unfounded — there is no connection between the tarot and ancient Egypt — but it was extraordinarily generative. It created a hermeneutic framework that transformed the tarot cards from secular images into sacred symbols, each encoding a fragment of esoteric wisdom that could be decoded by the initiated reader. Within a decade, the professional cartomancer <strong class="text-indigo-200">Etteilla</strong> (Jean-Baptiste Alliette, 1738–1791) had produced the first tarot designed specifically for divinatory purposes, with interpretive keywords for each card printed directly on the image. Etteilla's work established the tarot as a divinatory tool and created many of the interpretive conventions — the distinction between upright and reversed meanings, the sequential narrative of the Major Arcana — that remain standard in popular tarot practice to this day.
+          </p>
+          <p>
+            The decisive transformation of tarot into a vehicle for serious esoteric teaching came with the <strong class="text-indigo-200">Hermetic Order of the Golden Dawn</strong>, founded in London in 1888. The Golden Dawn's co-founders — S.L. MacGregor Mathers, William Wynn Westcott, and William Robert Woodman — synthesised Kabbalah, Hermeticism, astrology, and ceremonial magic into a comprehensive initiatory system, and the tarot was central to this synthesis. Mathers correlated each of the 22 Major Arcana cards with one of the 22 Hebrew letters, one of the 22 paths of the Kabbalistic Tree of Life, and an astrological correspondence (planet, zodiac sign, or element). The Minor Arcana were allocated to the four elemental worlds of Kabbalistic cosmology (Atziluth, Briah, Yetzirah, Assiah) and the ten sephiroth of the Tree of Life. The result was a comprehensive symbolic codex in which every card in the deck expressed a precisely defined point within the integrated map of Western esoteric cosmology.
+          </p>
+          <p>
+            The Rider-Waite-Smith deck, commissioned by Arthur Edward Waite and illustrated by Pamela Colman Smith (both Golden Dawn members) and published in 1909, was the first tarot to provide fully illustrated scenes for all 78 cards — previously the Minor Arcana cards (equivalent to standard playing cards) showed only the relevant number of suit symbols, with no scene. This innovation, combined with Waite's accompanying handbook <em>The Pictorial Key to the Tarot</em>, made esoteric tarot accessible to a vastly wider audience and established the visual vocabulary that dominates Western tarot illustration to this day. The Rider-Waite-Smith deck remains, by any measure, the most influential tarot in history.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <p>
+            <strong class="text-indigo-200">Aleister Crowley</strong> (1875–1947), the most controversial figure in 20th-century Western esotericism and a former Golden Dawn initiate, collaborated with the artist Lady Frieda Harris between 1938 and 1943 to produce the Thoth Tarot — the most intellectually ambitious and symbolically dense tarot deck ever created. Harris was a student of projective geometry and used the mathematical principles of perspective and dimensional transformation throughout the deck's imagery, creating images of extraordinary visual power. Crowley's accompanying text, <em>The Book of Thoth</em> (1944), is an extraordinarily learned and challenging work that covers Kabbalistic, astrological, I Ching, numerical, and Thelemic symbolism with equal facility. The Thoth Tarot makes several significant departures from the Rider-Waite-Smith tradition: the Justice card is renamed Adjustment, Strength is renamed Lust, the Wheel of Fortune is renamed Fortune, and the World is renamed the Universe. The Aeon card (replacing the Last Judgement) reflects Crowley's Thelemic philosophy, in which a new cosmic age — the Aeon of Horus — has replaced the dying Aeon of Osiris. The Thoth Tarot remains the preferred tool of many serious practitioners of ceremonial magic.
+          </p>
+          <p>
+            The esoteric understanding of the <strong class="text-indigo-200">Major Arcana</strong> as a sequential initiatory narrative is one of the most powerful frameworks for working with the tarot. The sequence from The Fool (0 or 22) through the numbered trumps to The World (XXI) describes a complete journey of the soul: from the initial state of innocent potential (The Fool), through the polarities of power and wisdom (The Magician and The High Priestess), the powers of creation and authority (The Empress and The Emperor), to the great turning points of life — the confrontation with death (Death, XIII), the experience of dissolution and loss (The Tower, XVI), the encounter with the unconscious (The Moon, XVIII), and ultimately the attainment of integrated wholeness (The World, XXI). Worked with as a contemplative sequence rather than a divinatory tool, the Major Arcana provides a map of the inner journey as precise as any initiatory curriculum in the Western tradition.
+          </p>
+          <p>
+            In its esoteric dimension, a tarot reading is not a matter of mechanical symbol-matching but a synchronistic event — a moment in which the specific cards drawn, in their specific positions, constitute a symbolic mirror of the actual quality of the enquirer's situation as it exists at the level of the soul. The skilled esoteric tarot reader does not merely "know the meanings" of the cards: they hold the reading as a contemplative encounter with a living symbolic intelligence, reading the specific configuration of images as one might read a dream — attending to the relationships between cards, the tensions and harmonies in the layout, the unexpected juxtapositions that point to truths not accessible through discursive analysis. This contemplative dimension of tarot practice is what the esoteric traditions have always understood the cards to be for: not mere fortune-telling, but an education in symbolic intelligence and a training in the perception of meaning in the flux of experience.
+          </p>
+          <p>
+            The <strong class="text-indigo-200">four suits</strong> of the Minor Arcana — Wands, Cups, Swords, Pentacles (or Discs) — correspond in the Golden Dawn system to the four Kabbalistic worlds: Atziluth (the archetypal world of pure fire and the divine will), Briah (the creative world of water and the divine intellect), Yetzirah (the formative world of air and the divine imagination), and Assiah (the material world of earth and the divine kingdom). This mapping means that each pip card (the Ace through Ten of each suit) describes a specific state of manifestation of a specific elemental energy at a specific level of the Tree of Life — creating a 40-card system of extraordinary systematic completeness that, fully understood, provides a complete map of the dynamics of manifest existence.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="space-y-6">
+      <h2 class="font-cinzel text-2xl text-indigo-300 text-center tracking-wide">Key Traditions &amp; Concepts</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+        <div class="esoteric-card space-y-3">
+          <div class="text-3xl">🌟</div>
+          <h3 class="font-cinzel text-base text-indigo-200">The Major Arcana as Initiatory Journey</h3>
+          <p class="text-indigo-300/60 text-xs uppercase tracking-wider">The Fool's Journey</p>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">The 22 Major Arcana cards, understood as a sequential initiatory curriculum, describe the complete arc of the soul's journey from innocent potential to realised wholeness. Each trump represents an archetypal encounter or stage of development that every soul must navigate: the encounter with authority (Hierophant, Emperor, Empress); the confrontation with love and desire (The Lovers); the test of will and self-mastery (The Chariot, Strength); the night of the soul (The Hermit, The Hanged Man, Death); the experience of catastrophic disruption (The Tower); the long passage through the unconscious (The Star, The Moon); and the final integration (The Sun, Judgement, The World). Working with this sequence contemplatively — meditating on each card in turn over a period of months or years — is one of the most powerful self-development practices available in the Western esoteric tradition.</p>
+        </div>
+
+        <div class="esoteric-card space-y-3">
+          <div class="text-3xl">🌳</div>
+          <h3 class="font-cinzel text-base text-indigo-200">Qabalistic Attribution</h3>
+          <p class="text-indigo-300/60 text-xs uppercase tracking-wider">The Tree of Life and the 22 Paths</p>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">The Kabbalistic Tree of Life consists of ten sephiroth (emanations) connected by 22 paths, each path corresponding to one Hebrew letter and, in the Golden Dawn synthesis, to one Major Arcana card. The Fool is attributed to Aleph (Ox, the breath of life) and the path between Kether (Crown) and Chokmah (Wisdom). The High Priestess is attributed to Gimel (Camel) and the path between Kether and Tiphareth (Beauty). The Devil is attributed to Ayin (Eye) and the path between Tiphareth and Hod (Splendour). This attribution transforms the tarot deck into a three-dimensional navigational map of the sephirothic cosmos — each card encoding not just a symbol but a specific energy of cosmic manifestation and a specific stage of the soul's ascent and descent through the Tree's structure.</p>
+        </div>
+
+        <div class="esoteric-card space-y-3">
+          <div class="text-3xl">🏛️</div>
+          <h3 class="font-cinzel text-base text-indigo-200">The Golden Dawn Synthesis</h3>
+          <p class="text-indigo-300/60 text-xs uppercase tracking-wider">Mathers, Waite, and the Esoteric Codex</p>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">The Hermetic Order of the Golden Dawn's contribution to tarot history cannot be overstated. Mathers's systematic attribution of the 22 Major Arcana to the Hebrew alphabet, the 22 paths of the Tree of Life, and the astrological correspondences created the first fully integrated esoteric reading system — one in which every card in the deck occupied a precisely defined position within a comprehensive symbolic cosmology. The Order's curriculum required initiates to study and meditate upon the tarot cards as part of their ritual and philosophical training. Waite's subsequent Rider-Waite-Smith deck made this esoteric synthesis publicly accessible for the first time, encoding Golden Dawn symbolism into the images in a form legible to the informed reader — though Waite deliberately altered some attributions and concealed others, preserving some degree of initiatory privacy.</p>
+        </div>
+
+        <div class="esoteric-card space-y-3">
+          <div class="text-3xl">☀️</div>
+          <h3 class="font-cinzel text-base text-indigo-200">Crowley's Thoth Tarot</h3>
+          <p class="text-indigo-300/60 text-xs uppercase tracking-wider">The Book of Thoth and the Aeon of Horus</p>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">Crowley's Thoth Tarot, painted by Frieda Harris under his precise direction, represents the most ambitious realisation of esoteric tarot in the tradition. Harris's use of projective geometry — she was a student of Rudolf Steiner's teachings on the subject — gives the cards an uncanny sense of dimensional depth, as forms interpenetrate and transform across the card surface. Crowley's <em>Book of Thoth</em> commentary synthesises a century of Golden Dawn scholarship with Crowley's own Thelemic philosophy, Qabalistic analysis, and esoteric numerology. The Aeon card — depicting the child Horus enthroned between Nuit (the night sky) and Hadit (the winged globe of the solar disk) — represents Crowley's proclamation of a new cosmic age in which the old solar-Osirian religion of sacrifice and resurrection has given way to a new dispensation centred on direct magical will and the affirmation of existence.</p>
+        </div>
+
+        <div class="esoteric-card space-y-3">
+          <div class="text-3xl">🌊</div>
+          <h3 class="font-cinzel text-base text-indigo-200">The Four Suits as Elemental Worlds</h3>
+          <p class="text-indigo-300/60 text-xs uppercase tracking-wider">Kabbalistic Cosmology in the Minor Arcana</p>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">The four suits of the Minor Arcana correspond to the four Kabbalistic worlds of creation: Wands to Atziluth (the archetypal world of pure fire, the divine will), Cups to Briah (the creative world of water, the divine understanding), Swords to Yetzirah (the formative world of air, the divine imagination), and Pentacles or Discs to Assiah (the material world of earth, the divine kingdom). Each Ace is the pure essence of its element in its world; each numbered card (Two through Ten) describes a specific state of that energy as it manifests through the corresponding sephirah on the Tree of Life. The Two of Cups, for example, is Venus in Cancer — the sephirah of Chokmah (Wisdom, cosmic love) expressed through the watery world of Briah: a state of perfect, overflowing relatedness.</p>
+        </div>
+
+        <div class="esoteric-card space-y-3">
+          <div class="text-3xl">🗺️</div>
+          <h3 class="font-cinzel text-base text-indigo-200">Etteilla and the Divinatory Tradition</h3>
+          <p class="text-indigo-300/60 text-xs uppercase tracking-wider">The First Professional Cartomancer</p>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">Jean-Baptiste Alliette (1738–1791), who worked under the anagram "Etteilla," was the first professional tarot card reader and the first to produce a tarot deck designed specifically for divination (as distinct from the card games for which tarot was originally created). His <em>Etteilla</em> deck (1789) and his teaching texts established many of the foundational conventions of tarot divination: the use of keywords printed on the cards, the distinction between upright and reversed meanings, and the organisation of the 22 Major Arcana as a sequential narrative of creation and evolution. While Etteilla's Egyptian mythology was entirely fictional (as was Court de Gébelin's), his practical divinatory system — particularly his approach to reading card combinations and spreads — established the template for all subsequent Western tarot divination.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="rounded-2xl p-8 space-y-6" style="background: linear-gradient(135deg, rgba(79,70,229,0.15), rgba(49,46,129,0.08));">
+      <h2 class="font-cinzel text-2xl text-indigo-300 text-center tracking-wide">The Book of Thoth in Your Hands</h2>
+      <div class="space-y-5 text-sm text-indigo-100/80 leading-relaxed max-w-4xl mx-auto">
+        <p>
+          The tarot's extraordinary durability — its continued vitality through more than two centuries of esoteric use, the proliferation of thousands of new decks, the global community of practitioners and scholars — is not explained by its historical origins (a 15th-century card game) or by any quality of the cards themselves. It is explained by the fact that the Major Arcana, whatever their original purpose, encode a symbolic vocabulary of great depth and universality: the 22 archetypal images of the Major Arcana correspond not to any particular cultural tradition but to structures of human experience that recur in every culture and every life. The confrontation with death, the experience of the tower struck by lightning, the long walk by moonlight through unfamiliar territory, the radiant integration of the dancing figure in the laurel wreath — these are not the symbols of any tradition but of the human soul's journey as it is lived in every generation.
+        </p>
+        <p>
+          This is why the tarot continues to generate new decks of remarkable originality and power — because the 22 Major Arcana are not merely a set of images but a <strong class="text-indigo-200">structural template</strong> onto which any sufficiently rich symbolic system can be mapped. The Thoth Tarot maps Thelemic cosmology onto the Fool's journey; various decks have mapped the Arthurian legends, the Taoist I Ching, the Norse mythology, the Aztec sacred calendar, and scores of other symbolic traditions onto the same 22-card framework. This generative flexibility demonstrates that the tarot's core is not a set of fixed meanings but a set of formal relationships — a grammar of archetypal experience — that can express itself through an unlimited variety of symbolic vocabularies.
+        </p>
+        <p>
+          The serious esoteric student of the tarot, however, is advised to go deep with one system rather than broad across many. The Golden Dawn attribution system — linking each Major Arcana card to a Hebrew letter, a path on the Tree of Life, and an astrological correspondence — provides the most complete and internally consistent framework for esoteric tarot study, and its depths are sufficient for a lifetime's serious engagement. Working through the deck systematically — meditating on each card's correspondence, tracing the paths on the Tree, reading the astrological associations, comparing Waite's and Crowley's versions of each image, and observing the cards as they appear in readings with increasing frequency over months and years — constitutes one of the most thorough and transformative courses of self-education available in the Western esoteric tradition. The 78 cards are, as Crowley titled his final work on them, nothing less than a portable Book of Thoth.
+        </p>
+      </div>
+    </section>
+
+    <div class="text-center mt-4">
+      <a href="/esoteric-practices" class="text-indigo-400/60 hover:text-indigo-300 text-sm transition-colors">← Esoteric Practices &amp; Disciplines</a>
+    </div>
+
+  </div>
+
+  <footer class="relative z-10 text-center py-8 text-indigo-400/40 text-xs mt-8">
+    <p class="italic">"The Tarot is a pictorial Text-Book of the Qabalah." — Aleister Crowley, <em>The Book of Thoth</em></p>
+    <p class="mt-2">Esoteric Wisdom · Built with ✨ in Rust</p>
+    <p class="mt-2"><a href="/home" class="hover:text-indigo-300 transition-colors">← Back to Portal</a></p>
+  </footer>
+
+  <script>
+  const sf = document.getElementById('starfield');
+  for (let i = 0; i < 200; i++) {
+    const s = document.createElement('div');
+    s.className = 'star';
+    s.style.left = Math.random() * 100 + '%';
+    s.style.top = Math.random() * 100 + '%';
+    s.style.animationDelay = Math.random() * 3 + 's';
+    s.style.animationDuration = (2 + Math.random() * 3) + 's';
+    sf.appendChild(s);
+  }
+</script>
+
+</body>
+</html>

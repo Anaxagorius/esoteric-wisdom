@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Runes — Initiatory Usage — Esoteric Wisdom</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <meta property="og:title" content="Runes — Initiatory Usage — Esoteric Wisdom" />
+  <meta property="og:description" content="The Elder Futhark as a system of initiatory symbols — Odin's self-sacrifice on Yggdrasil, runic stave-work and galdr, the runes as forces of cosmic principle, and the esoteric Norse tradition of runic self-knowledge." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://esoteric-wisdom.onrender.com/esoteric-practices/runes" />
+  <meta property="og:image" content="https://esoteric-wisdom.onrender.com/og-image.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Raleway', sans-serif; }
+    .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+    @keyframes twinkle { 0%,100% { opacity: 0.2; } 50% { opacity: 1; } }
+    .star { position: absolute; width: 2px; height: 2px; border-radius: 50%; background: white; animation: twinkle var(--dur,3s) ease-in-out infinite; animation-delay: var(--delay,0s); }
+    @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+    .floating { animation: float 5s ease-in-out infinite; }
+    @keyframes shimmer { 0% { background-position: -200% center; } 100% { background-position: 200% center; } }
+    .nav-link { position: relative; transition: all 0.3s; }
+    .nav-link::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: linear-gradient(90deg, #f59e0b, #a78bfa); transition: width 0.3s; }
+    .nav-link:hover::after { width: 100%; }
+    .aurora-text { background: linear-gradient(90deg, #f59e0b, #818cf8, #a78bfa, #fbbf24, #6366f1, #f59e0b); background-size: 200% auto; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; animation: shimmer 4s linear infinite; }
+    @keyframes indigo-glow { 0%, 100% { box-shadow: 0 0 10px 2px rgba(99,102,241,0.25); } 50% { box-shadow: 0 0 28px 6px rgba(99,102,241,0.55); } }
+    .esoteric-card { background: linear-gradient(135deg, rgba(79,70,229,0.07), rgba(49,46,129,0.04)); border: 1px solid rgba(99,102,241,0.2); border-radius: 1rem; padding: 1.5rem; transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; }
+    .esoteric-card:hover { transform: translateY(-6px) scale(1.01); box-shadow: 0 0 28px 5px rgba(99,102,241,0.3); border-color: rgba(99,102,241,0.5); }
+    .practice-card { background: linear-gradient(135deg, rgba(79,70,229,0.06), rgba(49,46,129,0.04)); border: 1px solid rgba(99,102,241,0.15); border-radius: 0.75rem; padding: 1.25rem; transition: border-color 0.3s, background 0.3s; }
+    .practice-card:hover { border-color: rgba(99,102,241,0.4); background: linear-gradient(135deg, rgba(79,70,229,0.1), rgba(49,46,129,0.06)); }
+  </style>
+</head>
+<body class="min-h-screen text-indigo-100 overflow-x-hidden" style="background: radial-gradient(ellipse at top, #0c0a1e 0%, #1a1040 25%, #060412 60%, #000000 100%);">
+
+  <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+
+  <nav class="sticky top-0 z-50 flex items-center justify-between px-6 py-3 bg-black/40 backdrop-blur-md border-b border-violet-500/20 flex-wrap gap-y-2">
+    <a href="/home" class="font-cinzel text-amber-300 text-sm tracking-widest shrink-0">✦ Esoteric Wisdom ✦</a>
+    <div class="flex items-center gap-x-3 gap-y-1 text-xs text-violet-200 flex-wrap justify-end">
+      <a href="/astrology" class="nav-link hover:text-amber-300 transition-colors">Astrology</a>
+      <a href="/meditation" class="nav-link hover:text-amber-300 transition-colors">Meditation</a>
+      <a href="/tarot/select" class="nav-link hover:text-amber-300 transition-colors">Tarot</a>
+      <a href="/numerology" class="nav-link hover:text-amber-300 transition-colors">Numerology</a>
+      <a href="/crystals" class="nav-link hover:text-amber-300 transition-colors">Crystals</a>
+      <a href="/runes" class="nav-link hover:text-amber-300 transition-colors">Runes</a>
+      <a href="/shamanism" class="nav-link hover:text-amber-300 transition-colors">Shamanism</a>
+      <a href="/druidism" class="nav-link hover:text-amber-300 transition-colors">Druidism</a>
+      <a href="/akashic-records" class="nav-link hover:text-amber-300 transition-colors">Akashic Records</a>
+      <a href="/wicca" class="nav-link hover:text-amber-300 transition-colors">Wicca</a>
+      <a href="/alchemy" class="nav-link hover:text-amber-300 transition-colors">Alchemy</a>
+      <a href="/gateway-process" class="nav-link hover:text-amber-300 transition-colors">Gateway Process</a>
+      <a href="/remote-viewing" class="nav-link hover:text-amber-300 transition-colors">Remote Viewing</a>
+      <a href="/khasarov-mirror" class="nav-link hover:text-amber-300 transition-colors">Khasarov Mirror</a>
+      <a href="/western-esotericism" class="nav-link hover:text-amber-300 transition-colors">Western Esotericism</a>
+      <a href="/eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Eastern Esotericism</a>
+      <a href="/indigenous-esotericism" class="nav-link hover:text-amber-300 transition-colors">Indigenous Esotericism</a>
+      <a href="/middle-eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Middle Eastern Mysteries</a>
+      <a href="/esoteric-practices" class="nav-link text-amber-300 font-semibold">Esoteric Practices</a>
+      <a href="/journal/reflections" class="nav-link text-emerald-300 hover:text-emerald-200 transition-colors">✨ Reflections</a>
+      <a href="https://ko-fi.com/esotericwisdom" target="_blank" rel="noopener noreferrer"
+         class="px-3 py-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-white font-semibold hover:scale-105 transition-transform shrink-0">☕ Support</a>
+    </div>
+  </nav>
+
+  <div class="relative z-10 max-w-6xl mx-auto space-y-10 pt-6 px-4 pb-12">
+
+    <div>
+      <a href="/esoteric-practices" class="text-xs text-indigo-300/60 hover:text-indigo-300 transition-colors">← Esoteric Practices &amp; Disciplines</a>
+    </div>
+
+    <section class="text-center py-14 space-y-6">
+      <div class="text-7xl floating">ᚱ</div>
+      <h1 class="font-cinzel text-4xl md:text-6xl font-bold aurora-text leading-tight">
+        Runes — Initiatory Usage
+      </h1>
+      <p class="max-w-3xl mx-auto text-indigo-200/80 text-lg leading-relaxed">
+        The Elder Futhark as a system of initiatory symbols — each rune a force of cosmic principle received through Odin's self-sacrifice on Yggdrasil, employed in galdr, stave-work, and runic meditation as a path of self-knowledge and cosmological alignment.
+      </p>
+    </section>
+
+    <section class="rounded-2xl p-8 space-y-6" style="background: linear-gradient(135deg, rgba(79,70,229,0.15), rgba(49,46,129,0.08));">
+      <h2 class="font-cinzel text-2xl text-indigo-300 text-center tracking-wide">The Runes as Initiatory Symbols</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm text-indigo-100/80 leading-relaxed">
+        <div class="space-y-4">
+          <p>
+            The runes are, on one level, the writing system used by the Germanic and Scandinavian peoples of the early medieval period: the Elder Futhark, a 24-character alphabet attested in inscriptions from approximately 150 CE onwards, was used to write Old Norse and related languages across Northern Europe until it was gradually supplanted by the Latin alphabet following Christianisation. The oldest known runic inscription — the Vimose comb from Denmark (c. 160 CE) — bears only a single word: <em>harja</em> (warrior or comb). Thousands of runic inscriptions survive, on stone memorials, on weapons and tools, on jewellery and personal objects, many of them clearly serving memorial, commemorative, and — in a significant proportion of cases — magical purposes.
+          </p>
+          <p>
+            But the runes are, on another and deeper level, something more than an alphabet. The Norse and Germanic tradition understood each runic character not merely as a letter but as a <strong class="text-indigo-200">principle of existence</strong> — a force of nature, a mythological quality, a cosmic pattern that was simultaneously present in the natural world, in the structure of language, and in the inner life of the practitioner who worked with it. This understanding is not a modern invention: it is explicit in the three surviving <strong class="text-indigo-200">runic poems</strong> — the Old Norwegian Runic Poem, the Old Icelandic Runic Poem, and the Old English Runic Poem — each of which provides a series of verses, one for each rune, describing its qualities, associations, and significance in terms that range from the practical to the mythological to the deeply contemplative. Fehu (cattle, mobile wealth) speaks not just of livestock but of the nature of abundance, its dangers, and its proper stewardship. Isa (ice) speaks not just of frozen water but of stillness, the suspension of motion, the dangerous beauty of the frozen world. Each poem-verse is a meditation prompt as much as a mnemonic device.
+          </p>
+          <p>
+            The mythological account of the runes' origin is one of the most powerful initiatory narratives in any tradition. <em>Hávamál</em> (Sayings of the High One), preserved in the Codex Regius (c. 1270 CE), contains Odin's account of his own self-initiation: <em>"I know that I hung on the windswept tree, nine nights long, wounded by a spear, given to Odin, myself given to myself, on that tree of which no one knows from what roots it springs. Neither bread nor drink was given to me from below, I peered down, I took the runes, screaming I took them, then fell down from there."</em> Odin — the Allfather, the god of wisdom, poetry, war, and magic — achieved the gift of the runes not through study or transmission from another but through <strong class="text-indigo-200">self-sacrifice</strong>: nine days and nights suspended on the World Tree Yggdrasil, spear-wounded, without food or drink, staring downward into the abyss beneath the roots, until the runes rose to meet him. The pattern is unmistakeable: this is the shamanic initiation par excellence — the initiatory death, the period in the void, the emergence with a gift for the community that transcends ordinary human capacity.
+          </p>
+          <p>
+            The runes were not invented by Odin in the sense of being fabricated; they were <em>discovered</em> — perceived in the structure of reality itself by a consciousness that had been stretched by extremity to the point where what was previously invisible became visible. This understanding — that the runes are not human creations but cosmic realities that the prepared consciousness can perceive — is fundamental to the esoteric use of runes. The practitioner who works with the runes is not wielding arbitrary symbols but aligning themselves with specific forces of the universe that the rune-names point to. Fehu is not just a symbol for "cattle wealth" but a specific quality of cosmic energy — creative, abundant, volatile, potentially dangerous — that was present before the Elder Futhark alphabet existed and will be present after all alphabets have been forgotten.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <p>
+            The practical esoteric use of runes in the Norse tradition takes three primary forms: <strong class="text-indigo-200">galdr</strong>, <strong class="text-indigo-200">stave-work</strong>, and <strong class="text-indigo-200">runic meditation</strong>. Galdr (from the Old Norse root meaning to sing or chant) is the practice of vocalising the rune names — usually in extended form, repeating and varying the sound — to produce specific effects in consciousness, in the subtle body, and in the surrounding field of reality. The medieval sagas contain numerous references to galdr as a form of magic worked through voice: characters carve runes and then "sing" them to activate their power. The specific phonemic qualities of each rune name — the fricative breath of Fehu, the resonant depth of Mannaz, the sharp clarity of Tiwaz — are understood as sonic forms of the same force expressed visually in the rune's angular stave shape.
+          </p>
+          <p>
+            Stave-work — the carving or drawing of runic inscriptions for talismanic or protective purposes — is one of the most widely attested forms of runic magic. The Eddic poem <em>Sigrdrífumál</em> provides one of the most explicit catalogue accounts, listing the categories of runic use: victory runes (carved on sword hilts), ale runes (protective magic for drink), birth runes (to ease childbirth), wave runes (for protection at sea), limb runes (for healing), mind runes (for wisdom). The practice of combining multiple runes into a single <strong class="text-indigo-200">bind-rune</strong> — a composite stave in which the forms of several individual runes are overlaid — creates a concentrated symbol that combines the qualities of its constituent runes. The <em>ægishjálmur</em> (Helm of Awe) and the <em>vegvísir</em> (Runic Compass) are among the most famous bind-runes from the Icelandic magical manuscripts, still widely used in contemporary practice.
+          </p>
+          <p>
+            The modern revival of esoteric runic practice owes its most significant debt to <strong class="text-indigo-200">Edred Thorsson</strong> (Stephen Edred Flowers, b. 1953), whose doctoral dissertation on "Runes and Magic" at the University of Texas (1984) provided the first academically rigorous synthesis of runic history and esoteric practice, and whose founding of the <strong class="text-indigo-200">Rune-Gild</strong> in 1980 created an initiatory organisation devoted to the serious study and practice of runic magic. Thorsson's system, drawing on the historical runic poems, the Eddic sources, and the academic runology of scholars like Klaus Düwel and Wolfgang Krause, provides a comprehensive framework for runic study and practice that is both historically grounded and practically focused. His approach distinguishes sharply between the historical-academic study of runes and their esoteric use as instruments of self-transformation — insisting that both dimensions must be engaged for the practice to be authentic.
+          </p>
+          <p>
+            The shadow of the 19th and early 20th century appropriation of runes by German nationalist and, subsequently, National Socialist ideology — most notoriously through the work of Guido von List (1848–1919), whose invented "Armanen" rune system became intertwined with Ariosophic racial mythology — has complicated the contemporary reception of runic esoteric practice. The appropriation of the SS-rune and other runic symbols by Nazi Germany created associations that still colour popular perceptions of runic work. Responsible contemporary practitioners are scrupulous in distinguishing the historically attested Norse tradition from its 20th-century political distortions, and in insisting that the runes belong to no racial or national group but to the universal heritage of human symbolic exploration.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="space-y-6">
+      <h2 class="font-cinzel text-2xl text-indigo-300 text-center tracking-wide">Key Traditions &amp; Methods</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+        <div class="esoteric-card space-y-3">
+          <div class="text-3xl">🌳</div>
+          <h3 class="font-cinzel text-base text-indigo-200">Odin's Ordeal on Yggdrasil</h3>
+          <p class="text-indigo-300/60 text-xs uppercase tracking-wider">The Mythological Source</p>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">Odin's nine-night vigil on the World Tree — self-wounded, self-given, without food or drink — is the archetypal initiatory narrative that underlies the entire esoteric runic tradition. It encodes the universal initiatory pattern: the voluntary submission to a death-like extremity, the encounter with the void, and the emergence bearing a gift that transforms both the initiate and their community. For the runic practitioner, working with the runes is a continuation of Odin's ordeal on a smaller scale: each sustained engagement with a rune — in meditation, in galdr, in carving — is a miniature form of the same willing self-exposure to forces larger than the ego. The practitioner who approaches the runes as instruments of power to be wielded has misunderstood them; the practitioner who approaches them as teachers whose lessons require submission and stillness is in the spirit of the original tradition.</p>
+        </div>
+
+        <div class="esoteric-card space-y-3">
+          <div class="text-3xl">ᚠ</div>
+          <h3 class="font-cinzel text-base text-indigo-200">The Elder Futhark</h3>
+          <p class="text-indigo-300/60 text-xs uppercase tracking-wider">24 Runes in Three Aettir</p>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">The Elder Futhark — 24 runes divided into three groups of eight (aettir: families or eights) — is the oldest and most esotericly complete runic system. The first aett (Fehu to Wunjo) is associated with the Vanir gods and with the forces of creation, abundance, communication, and joy. The second aett (Hagalaz to Sowilo) is associated with disruption, necessity, constraint, movement, and illumination — the forces of challenge and transformation. The third aett (Tiwaz to Othala) is associated with the divine order, fertility, consciousness, ancestral inheritance, and wholeness. Understanding the runes in their aett context — rather than as isolated symbols — reveals the internal logic of the system: three octaves of eight principles each, describing the complete range of forces that govern existence from creation through transformation to completion.</p>
+        </div>
+
+        <div class="esoteric-card space-y-3">
+          <div class="text-3xl">🎵</div>
+          <h3 class="font-cinzel text-base text-indigo-200">Galdr — Runic Sound Magic</h3>
+          <p class="text-indigo-300/60 text-xs uppercase tracking-wider">Singing the Cosmic Forces</p>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">Galdr (Old Norse: to sing, chant, or crow) is the practice of vocalising runic forces through the sustained singing or chanting of rune names. The technique involves sounding the rune name in various ways — elongated, varied in pitch and volume, repeated in rhythmic patterns — to attune the practitioner's voice, body, and consciousness to the force the rune embodies. The medieval <em>Sigrdrífumál</em> explicitly states that runes must not only be carved but spoken (rista, literally "to scratch") and sung to become active. Contemporary practitioners typically work with the reconstructed proto-Germanic sounds of the Elder Futhark names (Fehu, Uruz, Thurisaz, Ansuz, etc.) rather than modern Anglicised versions, working from the sonic qualities of the original sounds as the most direct access to the runes' energetic character.</p>
+        </div>
+
+        <div class="esoteric-card space-y-3">
+          <div class="text-3xl">🪨</div>
+          <h3 class="font-cinzel text-base text-indigo-200">Stave-Work and Bind-Runes</h3>
+          <p class="text-indigo-300/60 text-xs uppercase tracking-wider">Talismanic Inscription</p>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">The carving, drawing, or painting of runic staves for talismanic and protective purposes is one of the oldest and most practically oriented dimensions of runic work. The surviving runic inscriptions on weapons, jewellery, memorial stones, and personal objects demonstrate the widespread use of specific runes and runic combinations for protective, commemorative, and magical purposes throughout the Norse and Germanic world. Bind-runes — composite symbols combining two or more individual rune forms into a single integrated design — represent a higher-order form of this practice, in which the combined qualities of the constituent runes create a specific energetic signature. The <em>ægishjálmur</em> (Helm of Awe), used for protection and psychological invincibility, is the most famous bind-rune in the tradition and is still widely used in contemporary protective magic.</p>
+        </div>
+
+        <div class="esoteric-card space-y-3">
+          <div class="text-3xl">📚</div>
+          <h3 class="font-cinzel text-base text-indigo-200">Edred Thorsson and the Rune-Gild</h3>
+          <p class="text-indigo-300/60 text-xs uppercase tracking-wider">The Modern Initiatory Tradition</p>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">Stephen Edred Flowers (writing as Edred Thorsson) is the most significant figure in the academic-esoteric synthesis of runic study in the 20th and 21st centuries. His doctoral thesis "Runes and Magic" (University of Texas, 1984) provided the first academically grounded modern treatment of runic magic, and his prolific body of work — including <em>Futhark: A Handbook of Rune Magic</em> (1984), <em>Runelore</em> (1987), and <em>Rune Might</em> (2018) — has defined the contemporary field. The Rune-Gild, which Thorsson founded in 1980 and which continues to operate as a working initiatory body, provides a nine-grade initiatory structure for serious runic study organised around the nine worlds of Norse cosmology and Odin's nine-night ordeal. The Gild's approach is scholarly, demanding, and explicitly anti-fascist in its insistence that the runes belong to no political ideology.</p>
+        </div>
+
+        <div class="esoteric-card space-y-3">
+          <div class="text-3xl">🎲</div>
+          <h3 class="font-cinzel text-base text-indigo-200">Runic Divination</h3>
+          <p class="text-indigo-300/60 text-xs uppercase tracking-wider">Oracular Casting and Reading</p>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">The use of runic lots for divination is attested in classical sources: Tacitus, writing in the 1st century CE, describes the Germanic practice of cutting strips from a fruit-bearing tree, marking them with signs, casting them randomly on a white cloth, and reading the significant ones with prayer to the gods. This is recognisably a runic divination practice. The modern use of 24 rune stones or tiles, drawn or cast from a bag and interpreted according to each rune's character and position, represents a development of this ancient practice. The skilled runic diviner does not merely "look up meanings" but enters into contemplative dialogue with the runes drawn, attending to the specific qualities of the forces indicated and their relevance to the question's context — working from a thorough internalised knowledge of each rune's character, mythological associations, and the wisdom encoded in the runic poems.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="rounded-2xl p-8 space-y-6" style="background: linear-gradient(135deg, rgba(79,70,229,0.15), rgba(49,46,129,0.08));">
+      <h2 class="font-cinzel text-2xl text-indigo-300 text-center tracking-wide">The Runes as Living Forces</h2>
+      <div class="space-y-5 text-sm text-indigo-100/80 leading-relaxed max-w-4xl mx-auto">
+        <p>
+          What distinguishes the initiatory use of runes from their use as a mere divinatory tool or historical curiosity is the understanding that the runes are <em>alive</em> — that each of the 24 staves of the Elder Futhark is not a symbol pointing to a force but an actual instance of that force, a visible form through which a specific quality of cosmic energy can be directly engaged. The practitioner who carves Tiwaz on an object is not labelling it with a word meaning "justice" or "war god"; they are invoking the specific principle that the angular T-shape encodes — the force of cosmic order and sacrifice for the common good, the energy that governs the proper relationship between individual will and collective necessity — and drawing it into the object and into the carver's own field of consciousness through the act of inscription.
+        </p>
+        <p>
+          This understanding has significant implications for how the runes are studied and practised. The traditional injunction — found in both ancient and modern runic teaching — is that the practitioner must <em>know</em> the runes before they can <em>use</em> them; and that knowing means not intellectual familiarity with their meanings but direct experiential contact with the forces they embody. The recommended approach in serious contemporary runic practice is the sustained <strong class="text-indigo-200">rune-stading</strong> — a practice in which the practitioner holds the physical posture corresponding to a specific rune (each of the 24 Elder Futhark runes has a body posture that mirrors its visual form) while vocalising the rune name in galdr and holding the mind in contemplation of the force the rune embodies. Practised consistently, this approach develops a living relationship with each of the 24 runic forces that goes far beyond intellectual knowledge — a relationship in which the practitioner's own body and consciousness become instruments through which the cosmic forces can express themselves more fully.
+        </p>
+        <p>
+          The runes, in the end, are not a technology of power to be mastered but a tradition of wisdom to be entered. Odin did not hang on Yggdrasil to acquire a weapon: he hung there to acquire understanding — the deepest understanding available to a being willing to sacrifice everything that obscures it. The practitioner who approaches the runes with this understanding — with willingness to be changed by the encounter rather than the expectation of emerging with enhanced capabilities — is in the authentic lineage of the tradition. The runes ask of their students the same quality of surrender that Odin offered on the tree: a genuine willingness to discover that the reality of things is larger, stranger, and more demanding than any previous conception of it.
+        </p>
+      </div>
+    </section>
+
+    <div class="text-center mt-4">
+      <a href="/esoteric-practices" class="text-indigo-400/60 hover:text-indigo-300 text-sm transition-colors">← Esoteric Practices &amp; Disciplines</a>
+    </div>
+
+  </div>
+
+  <footer class="relative z-10 text-center py-8 text-indigo-400/40 text-xs mt-8">
+    <p class="italic">"I know that I hung on the windswept tree, nine nights long, wounded by a spear, given to Odin, myself given to myself." — Hávamál</p>
+    <p class="mt-2">Esoteric Wisdom · Built with ✨ in Rust</p>
+    <p class="mt-2"><a href="/home" class="hover:text-indigo-300 transition-colors">← Back to Portal</a></p>
+  </footer>
+
+  <script>
+  const sf = document.getElementById('starfield');
+  for (let i = 0; i < 200; i++) {
+    const s = document.createElement('div');
+    s.className = 'star';
+    s.style.left = Math.random() * 100 + '%';
+    s.style.top = Math.random() * 100 + '%';
+    s.style.animationDelay = Math.random() * 3 + 's';
+    s.style.animationDuration = (2 + Math.random() * 3) + 's';
+    sf.appendChild(s);
+  }
+</script>
+
+</body>
+</html>

@@ -326,3 +326,23 @@ pub struct ScryingTemplate;
 #[derive(Template)]
 #[template(path = "palmistry.html")]
 pub struct PalmistryTemplate;
+
+#[derive(Template)]
+#[template(path = "esoteric_meditation.html")]
+pub struct EsotericMeditationTemplate;
+
+#[derive(Template)]
+#[template(path = "esoteric_astrology.html")]
+pub struct EsotericAstrologyTemplate;
+
+#[derive(Template)]
+#[template(path = "esoteric_tarot.html")]
+pub struct EsotericTarotTemplate;
+
+#[derive(Template)]
+#[template(path = "esoteric_runes.html")]
+pub struct EsotericRunesTemplate;
+
+#[derive(Template)]
+#[template(path = "esoteric_numerology.html")]
+pub struct EsotericNumerologyTemplate;

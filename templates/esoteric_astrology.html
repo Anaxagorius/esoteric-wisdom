@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Esoteric Astrology — Esoteric Wisdom</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <meta property="og:title" content="Esoteric Astrology — Esoteric Wisdom" />
+  <meta property="og:description" content="The spiritual dimension of astrology — from Hellenistic soul-astrology and Neoplatonic planetary spheres to Alice Bailey's ray-based esoteric astrology, Hermetic astrological magic, and the natal chart as a map of the soul's evolutionary arc." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://esoteric-wisdom.onrender.com/esoteric-practices/astrology" />
+  <meta property="og:image" content="https://esoteric-wisdom.onrender.com/og-image.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Raleway', sans-serif; }
+    .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+    @keyframes twinkle { 0%,100% { opacity: 0.2; } 50% { opacity: 1; } }
+    .star { position: absolute; width: 2px; height: 2px; border-radius: 50%; background: white; animation: twinkle var(--dur,3s) ease-in-out infinite; animation-delay: var(--delay,0s); }
+    @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+    .floating { animation: float 5s ease-in-out infinite; }
+    @keyframes shimmer { 0% { background-position: -200% center; } 100% { background-position: 200% center; } }
+    .nav-link { position: relative; transition: all 0.3s; }
+    .nav-link::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: linear-gradient(90deg, #f59e0b, #a78bfa); transition: width 0.3s; }
+    .nav-link:hover::after { width: 100%; }
+    .aurora-text { background: linear-gradient(90deg, #f59e0b, #818cf8, #a78bfa, #fbbf24, #6366f1, #f59e0b); background-size: 200% auto; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; animation: shimmer 4s linear infinite; }
+    @keyframes indigo-glow { 0%, 100% { box-shadow: 0 0 10px 2px rgba(99,102,241,0.25); } 50% { box-shadow: 0 0 28px 6px rgba(99,102,241,0.55); } }
+    .esoteric-card { background: linear-gradient(135deg, rgba(79,70,229,0.07), rgba(49,46,129,0.04)); border: 1px solid rgba(99,102,241,0.2); border-radius: 1rem; padding: 1.5rem; transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; }
+    .esoteric-card:hover { transform: translateY(-6px) scale(1.01); box-shadow: 0 0 28px 5px rgba(99,102,241,0.3); border-color: rgba(99,102,241,0.5); }
+    .practice-card { background: linear-gradient(135deg, rgba(79,70,229,0.06), rgba(49,46,129,0.04)); border: 1px solid rgba(99,102,241,0.15); border-radius: 0.75rem; padding: 1.25rem; transition: border-color 0.3s, background 0.3s; }
+    .practice-card:hover { border-color: rgba(99,102,241,0.4); background: linear-gradient(135deg, rgba(79,70,229,0.1), rgba(49,46,129,0.06)); }
+  </style>
+</head>
+<body class="min-h-screen text-indigo-100 overflow-x-hidden" style="background: radial-gradient(ellipse at top, #0c0a1e 0%, #1a1040 25%, #060412 60%, #000000 100%);">
+
+  <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+
+  <nav class="sticky top-0 z-50 flex items-center justify-between px-6 py-3 bg-black/40 backdrop-blur-md border-b border-violet-500/20 flex-wrap gap-y-2">
+    <a href="/home" class="font-cinzel text-amber-300 text-sm tracking-widest shrink-0">✦ Esoteric Wisdom ✦</a>
+    <div class="flex items-center gap-x-3 gap-y-1 text-xs text-violet-200 flex-wrap justify-end">
+      <a href="/astrology" class="nav-link hover:text-amber-300 transition-colors">Astrology</a>
+      <a href="/meditation" class="nav-link hover:text-amber-300 transition-colors">Meditation</a>
+      <a href="/tarot/select" class="nav-link hover:text-amber-300 transition-colors">Tarot</a>
+      <a href="/numerology" class="nav-link hover:text-amber-300 transition-colors">Numerology</a>
+      <a href="/crystals" class="nav-link hover:text-amber-300 transition-colors">Crystals</a>
+      <a href="/runes" class="nav-link hover:text-amber-300 transition-colors">Runes</a>
+      <a href="/shamanism" class="nav-link hover:text-amber-300 transition-colors">Shamanism</a>
+      <a href="/druidism" class="nav-link hover:text-amber-300 transition-colors">Druidism</a>
+      <a href="/akashic-records" class="nav-link hover:text-amber-300 transition-colors">Akashic Records</a>
+      <a href="/wicca" class="nav-link hover:text-amber-300 transition-colors">Wicca</a>
+      <a href="/alchemy" class="nav-link hover:text-amber-300 transition-colors">Alchemy</a>
+      <a href="/gateway-process" class="nav-link hover:text-amber-300 transition-colors">Gateway Process</a>
+      <a href="/remote-viewing" class="nav-link hover:text-amber-300 transition-colors">Remote Viewing</a>
+      <a href="/khasarov-mirror" class="nav-link hover:text-amber-300 transition-colors">Khasarov Mirror</a>
+      <a href="/western-esotericism" class="nav-link hover:text-amber-300 transition-colors">Western Esotericism</a>
+      <a href="/eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Eastern Esotericism</a>
+      <a href="/indigenous-esotericism" class="nav-link hover:text-amber-300 transition-colors">Indigenous Esotericism</a>
+      <a href="/middle-eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Middle Eastern Mysteries</a>
+      <a href="/esoteric-practices" class="nav-link text-amber-300 font-semibold">Esoteric Practices</a>
+      <a href="/journal/reflections" class="nav-link text-emerald-300 hover:text-emerald-200 transition-colors">✨ Reflections</a>
+      <a href="https://ko-fi.com/esotericwisdom" target="_blank" rel="noopener noreferrer"
+         class="px-3 py-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-white font-semibold hover:scale-105 transition-transform shrink-0">☕ Support</a>
+    </div>
+  </nav>
+
+  <div class="relative z-10 max-w-6xl mx-auto space-y-10 pt-6 px-4 pb-12">
+
+    <div>
+      <a href="/esoteric-practices" class="text-xs text-indigo-300/60 hover:text-indigo-300 transition-colors">← Esoteric Practices &amp; Disciplines</a>
+    </div>
+
+    <section class="text-center py-14 space-y-6">
+      <div class="text-7xl floating">⭐</div>
+      <h1 class="font-cinzel text-4xl md:text-6xl font-bold aurora-text leading-tight">
+        Esoteric Astrology
+      </h1>
+      <p class="max-w-3xl mx-auto text-indigo-200/80 text-lg leading-relaxed">
+        The spiritual dimension of astrology — the natal chart as a map of the soul's evolutionary mission, the planets as grades of initiation, and the heavens as a living language through which the divine intelligence speaks to those trained to hear it.
+      </p>
+    </section>
+
+    <section class="rounded-2xl p-8 space-y-6" style="background: linear-gradient(135deg, rgba(79,70,229,0.15), rgba(49,46,129,0.08));">
+      <h2 class="font-cinzel text-2xl text-indigo-300 text-center tracking-wide">What Is Esoteric Astrology?</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm text-indigo-100/80 leading-relaxed">
+        <div class="space-y-4">
+          <p>
+            Esoteric astrology is distinguished from its more familiar exoteric counterpart by its central question. Exoteric astrology asks: <em>What will happen to this person, and what is their personality?</em> Esoteric astrology asks: <em>What is the evolutionary purpose of this soul's incarnation, and what spiritual work is this life designed to accomplish?</em> The same chart, read from an esoteric perspective, becomes not a map of fate but a <strong class="text-indigo-200">curriculum</strong> — a description of the soul's chosen challenges, capacities, and developmental arc across a lifetime. This shift in framing transforms astrology from a divinatory system into a branch of initiatory philosophy.
+          </p>
+          <p>
+            The esoteric interpretation of astrology has deep roots in the ancient world. The <strong class="text-indigo-200">Neoplatonic doctrine of the soul's descent through the planetary spheres</strong> — articulated by Macrobius, Porphyry, and Proclus, and implicit in the <em>Corpus Hermeticum</em> — held that the soul, before birth, passes through each of the seven planetary spheres in turn, acquiring at each sphere a specific quality or faculty: from Saturn, the reasoning faculty; from Jupiter, the capacity for practical wisdom; from Mars, boldness and impulsiveness; from the Sun, royal virtue and the capacity to govern; from Venus, desire; from Mercury, the capacity for gain; from the Moon, the power of growth and reproduction. Birth into the material world is thus the culmination of a cosmic journey during which the soul is clothed in the qualities appropriate to its particular mission, described by the planetary positions at birth. Death reverses this process — the soul ascends back through the spheres, returning each borrowed quality as it goes.
+          </p>
+          <p>
+            This Neoplatonic framework was preserved and elaborated within the Western esoteric tradition. <strong class="text-indigo-200">Marsilio Ficino</strong> (1433–1499), the great Florentine Platonist, practised <em>astrological magic</em> — the deliberate cultivation of specific planetary influences through talismans, music, dietary regimes, and ritual — as a therapeutic and spiritual discipline. His <em>De vita coelitus comparanda</em> (How Life Is to Be Drawn from the Heavens) is a remarkable synthesis of Neoplatonic cosmology, Hermetic magic, and medical theory, representing one of the most sophisticated attempts to work practically with astrological intelligences in any period of Western history. The system assumes that the planets are not merely physical bodies but <em>intelligences</em> — living cosmic powers with which the practitioner can enter into a relationship of receptivity and alignment.
+          </p>
+          <p>
+            The 20th century saw a major systematisation of esoteric astrology through the work of <strong class="text-indigo-200">Alice Bailey</strong> (1880–1949), who received (through her collaboration with a Tibetan teacher she called the Djwhal Khul) a comprehensive body of esoteric teaching that included a detailed treatment of astrology from the perspective of the soul's evolutionary journey. Bailey's <em>Esoteric Astrology</em> (1951) proposed a set of <em>soul-centred rulers</em> for each zodiac sign, distinct from the personality-centred rulers of exoteric tradition, and introduced the concept of the <strong class="text-indigo-200">seven rays</strong> — fundamental energies or qualities that express through the planets and signs and shape both individual and collective evolution. In Bailey's system, the rising sign indicates not the mask worn in daily life but the soul's primary mode of service in the current incarnation; the Sun sign reflects the soul's life purpose; and the Moon sign represents the past-life conditioning that must be transcended.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <p>
+            <strong class="text-indigo-200">Hermetic astrological magic</strong>, preserved in the Arabic grimoire <em>Picatrix</em> (a Latin translation of the Arabic <em>Ghayat al-Hakim</em>, c. 10th century) and systematised by Agrippa in <em>De Occulta Philosophia</em>, represents a specifically practical dimension of esoteric astrology: the construction of talismans under auspicious astrological elections (carefully chosen moments when the planets are in favourable configurations) to embody and preserve specific planetary influences. The talisman is understood as a vessel for the planetary spirit — not a superstitious charm but, in the Hermetic view, a material object that has been impressed with the character of a specific cosmic intelligence through the use of appropriate images, metals, incenses, prayers, and timing. Christopher Warnock's contemporary Renaissance Astrology programme has revived this tradition on the basis of careful textual scholarship, producing talismans constructed according to classical methods.
+          </p>
+          <p>
+            Hindu <strong class="text-indigo-200">Jyotish</strong> (Vedic astrology) represents a parallel and independent tradition of spiritual astrology with its own extraordinary depth. Where Western astrology is primarily a system of character and event interpretation, Jyotish carries an explicitly dharmic dimension: the natal chart reveals the <em>karma</em> accumulated across previous lives, the soul's <em>dharma</em> (life purpose and duty), and the specific lessons the current incarnation is designed to address. The <em>nakshatras</em> — 27 lunar mansions that divide the zodiac into finer degrees than the 12 signs — are one of Jyotish's most distinctive features, each carrying a specific mythological identity, planetary ruler, and interpretive quality. Jyotish uses a <em>sidereal</em> zodiac (based on the actual position of constellations) rather than the tropical zodiac of Western astrology, and employs a distinctive system of planetary periods (<em>dashas</em>) that describes the unfolding of karma over a lifetime with remarkable predictive precision.
+          </p>
+          <p>
+            In the contemporary West, the work of <strong class="text-indigo-200">Carl Jung</strong> gave astrology a new intellectual legitimacy. Jung corresponded with astrologers, conducted a study correlating astrological aspects with psychological characteristics in married couples (the results of which he found suggestive), and developed his concept of <em>synchronicity</em> — meaningful coincidence without causal connection — partly under the influence of his engagement with astrology. He described the horoscope as a <em>mandala of the psyche</em>: a symbolic representation of the totality of the individual that, properly interpreted, could illuminate psychological dynamics inaccessible to other methods of analysis. Liz Greene's synthesis of Jungian psychology and esoteric astrology, developed at the Centre for Psychological Astrology she co-founded in London, represents one of the most intellectually sophisticated contemporary frameworks for astrological interpretation.
+          </p>
+          <p>
+            What unites these diverse approaches — Neoplatonic, Hermetic, Bailey's esoteric system, Jyotish, Jungian-psychological — is the conviction that the natal chart is not merely a snapshot of the sky at the moment of birth but a <strong class="text-indigo-200">symbolic structure</strong> that encodes, in the language of celestial correspondences, something essential about the quality of the soul's purpose, the nature of its challenges, and the arc of its evolutionary journey. Esoteric astrology practised with this understanding becomes something far richer than prediction or personality profiling: it becomes a contemplative discipline, a tool for self-knowledge, and ultimately a means of aligning the personal will with the soul's deeper intention.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="space-y-6">
+      <h2 class="font-cinzel text-2xl text-indigo-300 text-center tracking-wide">Key Traditions &amp; Concepts</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+        <div class="esoteric-card space-y-3">
+          <div class="text-3xl">🌐</div>
+          <h3 class="font-cinzel text-base text-indigo-200">Soul Descent through the Spheres</h3>
+          <p class="text-indigo-300/60 text-xs uppercase tracking-wider">Neoplatonic Astral Doctrine</p>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">The Neoplatonic doctrine of the soul's pre-natal descent through the seven planetary spheres — elaborated in Macrobius's <em>Commentary on the Dream of Scipio</em> and implicit throughout the Hermetic corpus — holds that birth into the material world is the culmination of a cosmic journey. Each planetary sphere clothes the soul in specific qualities: Saturn gives discernment, Jupiter practical wisdom, Mars vital energy, the Sun royal splendour, Venus aesthetic sensibility, Mercury communicative faculty, the Moon reproductive vitality. The natal chart describes this clothing — the precise configuration of qualities acquired for this particular incarnation's mission. Esoteric reading of the chart asks not "what are my characteristics?" but "what are the tools this soul has chosen for this life's work?"</p>
+        </div>
+
+        <div class="esoteric-card space-y-3">
+          <div class="text-3xl">🔮</div>
+          <h3 class="font-cinzel text-base text-indigo-200">Alice Bailey's Esoteric Astrology</h3>
+          <p class="text-indigo-300/60 text-xs uppercase tracking-wider">The Seven Rays &amp; Soul-Centred Rulers</p>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">Bailey's system, transmitted through her collaboration with the Tibetan teacher Djwhal Khul, introduces soul-centred planetary rulerships distinct from the personality-centred rulers of exoteric tradition: the soul ruler of Aries is Mercury; of Taurus, Vulcan; of Gemini, Venus; of Cancer, Neptune; and so forth. Combined with the seven rays — fundamental energetic qualities that express through planets (the first ray through Vulcan and Pluto; the second through the Sun and Jupiter; the third through Saturn and Earth; the fourth through Mercury and Moon; the fifth through Venus; the sixth through Mars and Neptune; the seventh through Uranus) — Bailey's system provides a detailed map of the soul's specific energetic constitution and evolutionary tasks. Her <em>Esoteric Astrology</em> remains the most comprehensive esoteric treatment of astrology in the English language.</p>
+        </div>
+
+        <div class="esoteric-card space-y-3">
+          <div class="text-3xl">🏺</div>
+          <h3 class="font-cinzel text-base text-indigo-200">Hermetic Astrological Magic</h3>
+          <p class="text-indigo-300/60 text-xs uppercase tracking-wider">Picatrix and the Talisman Tradition</p>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">The <em>Picatrix</em> — a vast compendium of astrological magic compiled in Arabic (probably 10th century CE) and translated into Latin in the 13th century — is the foundational text of Hermetic astrological magic. It provides detailed instructions for constructing talismans under specific planetary elections, including the appropriate metal, image, incense, prayer, and ritual actions for each planet and sign. The Hermetic understanding is that the planet is a living intelligence whose influence can be concentrated and stabilised in a material object when the conditions are right — specifically, when the planet is strongly placed (dignified, angular, well-aspected) at the moment of the talisman's creation. Ficino, Agrippa, and John Dee all worked within this tradition, and Christopher Warnock's contemporary work represents its most careful modern revival.</p>
+        </div>
+
+        <div class="esoteric-card space-y-3">
+          <div class="text-3xl">🌺</div>
+          <h3 class="font-cinzel text-base text-indigo-200">Jyotish — Vedic Astrology</h3>
+          <p class="text-indigo-300/60 text-xs uppercase tracking-wider">Karma, Dharma, and the Nakshatras</p>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">Jyotish ("science of light") is one of the six <em>vedangas</em> (limbs of the Vedas) and has been practised continuously in India for at least 3,000 years. Its sidereal zodiac, 27 nakshatras (lunar mansions), and elaborate system of planetary periods (<em>dashas</em>) give it technical characteristics quite distinct from Western astrology. The <em>dasha</em> system — which divides a lifetime into sequential periods ruled by each of the nine planets (<em>navagrahas</em>) according to the Moon's nakshatra at birth — is one of Jyotish's most powerful tools for identifying the timing of major life themes. In its spiritual dimension, Jyotish interprets the chart as a map of karmic inheritance from previous lives and the dharmic challenges and opportunities of the current incarnation, with specific houses and planets indicating the areas in which past-life karma is being worked out.</p>
+        </div>
+
+        <div class="esoteric-card space-y-3">
+          <div class="text-3xl">🌍</div>
+          <h3 class="font-cinzel text-base text-indigo-200">The Thema Mundi</h3>
+          <p class="text-indigo-300/60 text-xs uppercase tracking-wider">The Chart of the World's Birth</p>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">The <em>Thema Mundi</em> — the mythological natal chart of the cosmos itself, attributed to Hermes Trismegistus and preserved in Hellenistic astrological sources — places Cancer rising with the Moon in Cancer, Leo on the second house with the Sun in Leo, Virgo with Mercury in Virgo, Libra with Venus in Libra, Scorpio with Mars in Scorpio, Sagittarius with Jupiter in Sagittarius, and Capricorn with Saturn in Capricorn. This arrangement, in which each planet occupies its own sign, encodes the foundational doctrine of domicile rulership and the essential character of each planetary principle. The Thema Mundi functions as a cosmological archetype — a demonstration that the structure of the zodiac is not arbitrary but encodes the order of creation itself, with the lights (Sun and Moon) positioned at the heart of the summer solstice in their own signs.</p>
+        </div>
+
+        <div class="esoteric-card space-y-3">
+          <div class="text-3xl">🧠</div>
+          <h3 class="font-cinzel text-base text-indigo-200">Jungian Psychological Astrology</h3>
+          <p class="text-indigo-300/60 text-xs uppercase tracking-wider">The Horoscope as Mandala of the Psyche</p>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">Carl Jung's engagement with astrology — evident in his correspondence with astrologers, his development of synchronicity theory, and his description of the horoscope as a "mandala of the psyche" — gave astrology a new intellectual framework in the 20th century. Jung understood the natal chart not as a deterministic map of fate but as a symbolic representation of the individual's psychological totality — the distribution of archetypal energies (planets) through the spectrum of possible expressions (signs) in the context of specific life domains (houses). Liz Greene and Howard Sasportas, working at the Centre for Psychological Astrology in London, developed this approach into the most intellectually rigorous contemporary astrological school — one that honours both the symbolic depth of the tradition and the psychological insights of depth analysis.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="rounded-2xl p-8 space-y-6" style="background: linear-gradient(135deg, rgba(79,70,229,0.15), rgba(49,46,129,0.08));">
+      <h2 class="font-cinzel text-2xl text-indigo-300 text-center tracking-wide">The Heavens as Mirror of the Soul</h2>
+      <div class="space-y-5 text-sm text-indigo-100/80 leading-relaxed max-w-4xl mx-auto">
+        <p>
+          Esoteric astrology rests on a metaphysical claim that is both ancient and radical: that the arrangement of celestial bodies at the moment of birth does not merely correlate with the individual's personality and life events by some mechanical causal process, but reflects — through the principle of cosmic correspondence — the quality of the soul's intention for this particular incarnation. The medieval Hermetic formula <em>as above, so below</em> is not, in this understanding, a poetic metaphor: it is a technical description of the cosmos as a unified field of meaning in which every level mirrors every other level, and in which the moment of birth is not a random event but a moment in which a particular configuration of cosmic energies crystallises around the new life entering the world.
+        </p>
+        <p>
+          This understanding transforms the relationship of the practitioner to their natal chart. In exoteric astrology, the chart is something that happens to you — a given, a fate, a set of influences to which you are subject. In esoteric astrology, the chart is something you chose — not consciously, in the ordinary sense, but at the level of the soul's own intention, before birth. The challenging Saturn placement is not a misfortune but a choice: a specific lesson, a particular form of mastery that this soul has determined to develop in this lifetime. The powerful Venus configuration is not mere luck but the soul's deliberate provision of resources appropriate to its work. The practitioner who approaches their chart from this standpoint ceases to be a victim of their astrological inheritance and becomes, instead, its <strong class="text-indigo-200">conscious steward</strong> — working with the energies as a sculptor works with the specific qualities of their material, discovering in the apparent limitations of the chart the hidden intelligence of a deeper purpose.
+        </p>
+        <p>
+          The practical implication is that esoteric astrology is, above all, a contemplative discipline. The serious practitioner does not merely study their chart: they meditate upon it, work with its symbols in ritual and visualisation, and use it as a continuous mirror against which to test their self-knowledge and track their inner development. The chart never changes — the positions of the planets at birth are fixed — but the practitioner's understanding of what it means deepens continuously as their experience of life, practice, and self-observation accumulates. An esoteric astrologer who reads the same chart at twenty-five and again at sixty-five is not reading the same document: they are reading a text that has grown richer with each decade of lived engagement.
+        </p>
+      </div>
+    </section>
+
+    <div class="text-center mt-4">
+      <a href="/esoteric-practices" class="text-indigo-400/60 hover:text-indigo-300 text-sm transition-colors">← Esoteric Practices &amp; Disciplines</a>
+    </div>
+
+  </div>
+
+  <footer class="relative z-10 text-center py-8 text-indigo-400/40 text-xs mt-8">
+    <p class="italic">"The stars do not compel; they incline. The soul that knows itself is free within the inclination." — Hermetic teaching</p>
+    <p class="mt-2">Esoteric Wisdom · Built with ✨ in Rust</p>
+    <p class="mt-2"><a href="/home" class="hover:text-indigo-300 transition-colors">← Back to Portal</a></p>
+  </footer>
+
+  <script>
+  const sf = document.getElementById('starfield');
+  for (let i = 0; i < 200; i++) {
+    const s = document.createElement('div');
+    s.className = 'star';
+    s.style.left = Math.random() * 100 + '%';
+    s.style.top = Math.random() * 100 + '%';
+    s.style.animationDelay = Math.random() * 3 + 's';
+    s.style.animationDuration = (2 + Math.random() * 3) + 's';
+    sf.appendChild(s);
+  }
+</script>
+
+</body>
+</html>

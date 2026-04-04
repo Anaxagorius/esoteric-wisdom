@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meditation — Esoteric Forms — Esoteric Wisdom</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <meta property="og:title" content="Meditation — Esoteric Forms — Esoteric Wisdom" />
+  <meta property="og:description" content="The contemplative disciplines of the esoteric traditions — from Yogic samadhi and Buddhist jhana to Hermetic theoria, Sufi muraqaba, and Neoplatonic henosis — each a systematic method for encountering the ground of being." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://esoteric-wisdom.onrender.com/esoteric-practices/meditation" />
+  <meta property="og:image" content="https://esoteric-wisdom.onrender.com/og-image.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Raleway', sans-serif; }
+    .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+    @keyframes twinkle { 0%,100% { opacity: 0.2; } 50% { opacity: 1; } }
+    .star { position: absolute; width: 2px; height: 2px; border-radius: 50%; background: white; animation: twinkle var(--dur,3s) ease-in-out infinite; animation-delay: var(--delay,0s); }
+    @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+    .floating { animation: float 5s ease-in-out infinite; }
+    @keyframes shimmer { 0% { background-position: -200% center; } 100% { background-position: 200% center; } }
+    .nav-link { position: relative; transition: all 0.3s; }
+    .nav-link::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: linear-gradient(90deg, #f59e0b, #a78bfa); transition: width 0.3s; }
+    .nav-link:hover::after { width: 100%; }
+    .aurora-text { background: linear-gradient(90deg, #f59e0b, #818cf8, #a78bfa, #fbbf24, #6366f1, #f59e0b); background-size: 200% auto; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; animation: shimmer 4s linear infinite; }
+    @keyframes indigo-glow { 0%, 100% { box-shadow: 0 0 10px 2px rgba(99,102,241,0.25); } 50% { box-shadow: 0 0 28px 6px rgba(99,102,241,0.55); } }
+    .esoteric-card { background: linear-gradient(135deg, rgba(79,70,229,0.07), rgba(49,46,129,0.04)); border: 1px solid rgba(99,102,241,0.2); border-radius: 1rem; padding: 1.5rem; transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; }
+    .esoteric-card:hover { transform: translateY(-6px) scale(1.01); box-shadow: 0 0 28px 5px rgba(99,102,241,0.3); border-color: rgba(99,102,241,0.5); }
+    .practice-card { background: linear-gradient(135deg, rgba(79,70,229,0.06), rgba(49,46,129,0.04)); border: 1px solid rgba(99,102,241,0.15); border-radius: 0.75rem; padding: 1.25rem; transition: border-color 0.3s, background 0.3s; }
+    .practice-card:hover { border-color: rgba(99,102,241,0.4); background: linear-gradient(135deg, rgba(79,70,229,0.1), rgba(49,46,129,0.06)); }
+  </style>
+</head>
+<body class="min-h-screen text-indigo-100 overflow-x-hidden" style="background: radial-gradient(ellipse at top, #0c0a1e 0%, #1a1040 25%, #060412 60%, #000000 100%);">
+
+  <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+
+  <nav class="sticky top-0 z-50 flex items-center justify-between px-6 py-3 bg-black/40 backdrop-blur-md border-b border-violet-500/20 flex-wrap gap-y-2">
+    <a href="/home" class="font-cinzel text-amber-300 text-sm tracking-widest shrink-0">✦ Esoteric Wisdom ✦</a>
+    <div class="flex items-center gap-x-3 gap-y-1 text-xs text-violet-200 flex-wrap justify-end">
+      <a href="/astrology" class="nav-link hover:text-amber-300 transition-colors">Astrology</a>
+      <a href="/meditation" class="nav-link hover:text-amber-300 transition-colors">Meditation</a>
+      <a href="/tarot/select" class="nav-link hover:text-amber-300 transition-colors">Tarot</a>
+      <a href="/numerology" class="nav-link hover:text-amber-300 transition-colors">Numerology</a>
+      <a href="/crystals" class="nav-link hover:text-amber-300 transition-colors">Crystals</a>
+      <a href="/runes" class="nav-link hover:text-amber-300 transition-colors">Runes</a>
+      <a href="/shamanism" class="nav-link hover:text-amber-300 transition-colors">Shamanism</a>
+      <a href="/druidism" class="nav-link hover:text-amber-300 transition-colors">Druidism</a>
+      <a href="/akashic-records" class="nav-link hover:text-amber-300 transition-colors">Akashic Records</a>
+      <a href="/wicca" class="nav-link hover:text-amber-300 transition-colors">Wicca</a>
+      <a href="/alchemy" class="nav-link hover:text-amber-300 transition-colors">Alchemy</a>
+      <a href="/gateway-process" class="nav-link hover:text-amber-300 transition-colors">Gateway Process</a>
+      <a href="/remote-viewing" class="nav-link hover:text-amber-300 transition-colors">Remote Viewing</a>
+      <a href="/khasarov-mirror" class="nav-link hover:text-amber-300 transition-colors">Khasarov Mirror</a>
+      <a href="/western-esotericism" class="nav-link hover:text-amber-300 transition-colors">Western Esotericism</a>
+      <a href="/eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Eastern Esotericism</a>
+      <a href="/indigenous-esotericism" class="nav-link hover:text-amber-300 transition-colors">Indigenous Esotericism</a>
+      <a href="/middle-eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Middle Eastern Mysteries</a>
+      <a href="/esoteric-practices" class="nav-link text-amber-300 font-semibold">Esoteric Practices</a>
+      <a href="/journal/reflections" class="nav-link text-emerald-300 hover:text-emerald-200 transition-colors">✨ Reflections</a>
+      <a href="https://ko-fi.com/esotericwisdom" target="_blank" rel="noopener noreferrer"
+         class="px-3 py-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-white font-semibold hover:scale-105 transition-transform shrink-0">☕ Support</a>
+    </div>
+  </nav>
+
+  <div class="relative z-10 max-w-6xl mx-auto space-y-10 pt-6 px-4 pb-12">
+
+    <div>
+      <a href="/esoteric-practices" class="text-xs text-indigo-300/60 hover:text-indigo-300 transition-colors">← Esoteric Practices &amp; Disciplines</a>
+    </div>
+
+    <section class="text-center py-14 space-y-6">
+      <div class="text-7xl floating">🧘</div>
+      <h1 class="font-cinzel text-4xl md:text-6xl font-bold aurora-text leading-tight">
+        Meditation — Esoteric Forms
+      </h1>
+      <p class="max-w-3xl mx-auto text-indigo-200/80 text-lg leading-relaxed">
+        The contemplative disciplines of the esoteric traditions — from Yogic samadhi and Buddhist jhana to Hermetic theoria, Sufi muraqaba, and Neoplatonic henosis — each a systematic method for encountering and ultimately merging with the ground of being.
+      </p>
+    </section>
+
+    <section class="rounded-2xl p-8 space-y-6" style="background: linear-gradient(135deg, rgba(79,70,229,0.15), rgba(49,46,129,0.08));">
+      <h2 class="font-cinzel text-2xl text-indigo-300 text-center tracking-wide">What Is Esoteric Meditation?</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm text-indigo-100/80 leading-relaxed">
+        <div class="space-y-4">
+          <p>
+            Esoteric meditation is categorically distinct from the secular mindfulness movement that has become familiar in contemporary Western culture. Where secular mindfulness aims primarily at stress reduction, psychological wellbeing, and the cultivation of present-moment attention, the contemplative disciplines of the esoteric traditions are directed towards a far more radical goal: the <strong class="text-indigo-200">transformation of the practitioner's fundamental mode of being</strong> — the dissolution of contracted, ego-centred consciousness and the realisation of a more comprehensive identity with the divine ground of existence. Secular mindfulness is therapeutic; esoteric meditation is ontological. The practitioner is not being calmed — they are being unmade and remade.
+          </p>
+          <p>
+            The Hindu Yogic tradition, systematised by <strong class="text-indigo-200">Patañjali</strong> in the <em>Yoga Sutras</em> (c. 400 CE), provides the most architecturally complete account of the esoteric meditation process in any tradition. The eight limbs of ashtanga yoga — from ethical discipline (yama and niyama) through postural practice (asana) and breath regulation (pranayama) to the three inner limbs of dharana (concentration), dhyana (sustained meditative absorption), and finally samadhi (non-dual contemplative absorption) — constitute a complete graduated curriculum leading from ordinary consciousness to states in which the distinction between the meditator, the act of meditating, and the object of meditation dissolves entirely. The highest samadhi, <em>nirbija samadhi</em> (seedless absorption), is held to produce the direct realisation of the nature of pure consciousness — purusha — untethered from the modifications of the mind.
+          </p>
+          <p>
+            The Buddhist contemplative tradition elaborates similar structures with distinctive emphases. The <strong class="text-indigo-200">jhanas</strong> — the eight meditative absorptions described in the Pali Canon and systematised by Buddhaghosa in the <em>Visuddhimagga</em> — represent a graduated series of states of increasing unification, stillness, and luminosity, culminating in the four formless absorptions. Theravada tradition distinguishes sharply between <em>samatha</em> (the cultivation of mental calm and the jhanas) and <em>vipassana</em> (insight meditation directed towards the direct perception of impermanence, suffering, and non-self). Mahayana and Vajrayana traditions greatly expand this framework: the <em>Dzogchen</em> practice of <em>rigpa</em> recognition and the Mahamudra tradition of recognising the mind's <strong class="text-indigo-200">luminous emptiness</strong> represent perhaps the most radical formulations of esoteric meditation anywhere in the world's contemplative heritage.
+          </p>
+          <p>
+            Neoplatonic contemplation — <strong class="text-indigo-200">theoria</strong> — represents the Western esoteric tradition's most sustained and philosophically rigorous account of meditative experience. For Plotinus, the culminating act of philosophy is not the construction of arguments but the direct <em>henosis</em> (union) of the individual soul with the One — the first principle, beyond being and beyond intellect. This union cannot be achieved by discursive thought, which remains within the realm of duality; it requires the soul's withdrawal of attention from all external objects and from the intellectual activity of the <em>nous</em> (divine intellect) itself, until what remains is the soul's own ground — which is also, in that moment of simplification, the ground of everything. Plotinus describes having achieved this union several times during his life, each occasion a wordless simplicity beyond all description.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <p>
+            The Hermetic tradition's account of meditation is embedded within the <em>Corpus Hermeticum</em> and finds its clearest expression in the tractate <em>The Secret Discourse on the Mountain</em> (Tractate XIII), which describes the regeneration of the soul through a series of ten divine powers that displace the twelve tormenting powers of fate. This "rebirth" is not metaphorical; Hermetic meditation, as practised in late antique Egypt and preserved in the Hermetic texts, involved actual altered states of consciousness in which the practitioner experienced themselves as cosmic, divine, and boundless — the <strong class="text-indigo-200">Poimandres vision</strong> in Tractate I describing an ascent through the planetary spheres in which the soul sheds the attributes acquired at birth and arrives at the eighth sphere in a state of luminous emptiness before dissolving into the Father.
+          </p>
+          <p>
+            <strong class="text-indigo-200">Sufi muraqaba</strong> (from the Arabic root meaning "to watch" or "to observe") is the central contemplative practice of Islamic mysticism, involving the sustained focusing of inner attention on the divine presence — first as an external reality (the divine attributes and names), then as increasingly intimate until the veil between the mystic and the divine dissolves in <em>fana</em> (annihilation of the self in the divine) and the subsequent stabilisation of the divine presence in <em>baqa</em> (subsistence in the divine after annihilation). The great Sufi masters — Rumi, Ibn Arabi, al-Hallaj, Junayd of Baghdad — mapped the stages of this inner journey with extraordinary precision and left a body of contemplative literature unsurpassed in its psychological subtlety and metaphysical depth.
+          </p>
+          <p>
+            The Christian mystical tradition developed its own accounts of transformative contemplation: the <strong class="text-indigo-200">Hesychast</strong> tradition of the Eastern Church, centred on the constant repetition of the Jesus Prayer ("Lord Jesus Christ, Son of God, have mercy on me, a sinner") as a vehicle for the descent of the mind into the heart and the direct perception of the Uncreated Light — the same light witnessed on Mount Tabor at the Transfiguration — represents one of the most precisely documented inner traditions in Western religious history. Gregory Palamas defended the reality of this practice against the charge that direct experience of the divine was impossible, arguing that while the divine <em>essence</em> remains unknowable, the divine <em>energies</em> can be directly participated. In the Kabbalistic tradition, <strong class="text-indigo-200">hitbonenut</strong> — prolonged contemplation of a concept or divine name until the intellect exhausts itself and the divine light shines through — represents the meditative core of Chabad Hasidic practice, as systematised by Schneur Zalman of Liadi.
+          </p>
+          <p>
+            What unites these diverse traditions — Hindu, Buddhist, Neoplatonic, Hermetic, Sufi, Christian, Jewish — is a structural conviction: that ordinary discursive consciousness is a contraction of something larger, that the ordinary sense of being a separate self embedded in a world of objects is not the final truth of what we are, and that there exists a set of disciplines — specific, teachable, transmissible — through which the practitioner can directly encounter and ultimately identify with the ground of consciousness that underlies and pervades all experience. The specific metaphysical frameworks differ enormously; the experiential territory they map is strikingly similar.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="space-y-6">
+      <h2 class="font-cinzel text-2xl text-indigo-300 text-center tracking-wide">Key Traditions &amp; Methods</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+        <div class="esoteric-card space-y-3">
+          <div class="text-3xl">🕉️</div>
+          <h3 class="font-cinzel text-base text-indigo-200">Samadhi — Yogic Absorption</h3>
+          <p class="text-indigo-300/60 text-xs uppercase tracking-wider">Patañjali's Eight Limbs</p>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">The eighth and culminating limb of Patañjali's ashtanga yoga, samadhi is not a single state but a spectrum of deepening non-dual absorption. Samprajnata samadhi retains a subtle cognitive content (the object of meditation is still present as a trace); asamprajnata samadhi dissolves even this, leaving only the light of pure consciousness. The Yoga tradition identifies four stages of sabija (seeded) samadhi and ultimately the seedless state that dissolves the last traces of the contracted self. Samadhi, in its highest forms, is understood not as a temporary altered state but as the permanent recognition of the nature of consciousness — <em>kaivalya</em>, the aloneness of pure awareness.</p>
+        </div>
+
+        <div class="esoteric-card space-y-3">
+          <div class="text-3xl">☸️</div>
+          <h3 class="font-cinzel text-base text-indigo-200">Buddhist Jhana &amp; Rigpa</h3>
+          <p class="text-indigo-300/60 text-xs uppercase tracking-wider">From Pali Canon to Dzogchen</p>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">The Pali Canon describes eight jhanas — four form absorptions and four formless absorptions — accessible through the development of one-pointed concentration (samadhi). Each jhana is characterised by specific mental factors (applied thought, sustained thought, joy, happiness, equanimity) progressively shed as the absorption deepens. The Tibetan Dzogchen tradition cuts through the gradual approach: the direct recognition of <em>rigpa</em> (the naked awareness that is the mind's actual nature) is transmitted directly from master to student, bypassing the graduated path. Both approaches point to the same recognition — that the nature of mind is primordially pure, luminous, and aware — through radically different methodologies.</p>
+        </div>
+
+        <div class="esoteric-card space-y-3">
+          <div class="text-3xl">🌀</div>
+          <h3 class="font-cinzel text-base text-indigo-200">Neoplatonic Theoria &amp; Henosis</h3>
+          <p class="text-indigo-300/60 text-xs uppercase tracking-wider">Plotinus and the Flight of the Alone</p>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">For Plotinus, the contemplative ascent involves a progressive withdrawal of the soul from sensation, then imagination, then discursive reason, until the soul rests in its own ground as pure intellect (<em>nous</em>). Beyond even this, the soul may experience moments of <em>henosis</em> — union with the One, the source beyond being and intellect — in which all distinction, including the distinction between the contemplating soul and the object of contemplation, dissolves. Plotinus described these moments as an "awakening to oneself" that is simultaneously the discovery of the ground of all things. Porphyry records that Plotinus achieved this union four times during the years he knew him. The method is apophatic: the progressive negation of every attribute until only the undescribable simplicity remains.</p>
+        </div>
+
+        <div class="esoteric-card space-y-3">
+          <div class="text-3xl">🌙</div>
+          <h3 class="font-cinzel text-base text-indigo-200">Sufi Muraqaba &amp; Fana</h3>
+          <p class="text-indigo-300/60 text-xs uppercase tracking-wider">The Watchfulness of the Heart</p>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">Muraqaba — sustained inner watchfulness of the divine presence — is the contemplative backbone of Sufi practice, complementing the vocal and rhythmic practice of <em>dhikr</em> (remembrance). In the tariqa (Sufi order) system, the student practises muraqaba under the guidance of a sheikh, who transmits specific focuses of contemplation appropriate to the student's level. Advanced muraqaba practices in traditions like the Naqshbandiyya involve holding the awareness in the spiritual heart (the <em>qalb</em>) as the locus of divine presence, until the sense of a separate contemplating self dissolves into <em>fana fi'llah</em> — annihilation in God. The subsequent state of <em>baqa</em> (subsistence) represents not the loss of individuality but its transformation: the mystic continues to act in the world, but from the standpoint of the divine rather than the ego.</p>
+        </div>
+
+        <div class="esoteric-card space-y-3">
+          <div class="text-3xl">✝️</div>
+          <h3 class="font-cinzel text-base text-indigo-200">Hesychasm &amp; the Uncreated Light</h3>
+          <p class="text-indigo-300/60 text-xs uppercase tracking-wider">The Prayer of the Heart</p>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">The Hesychast tradition of Eastern Orthodox Christianity — centred on the monasteries of Mount Athos — teaches the descent of the mind into the heart as the primary movement of contemplative practice. The Jesus Prayer ("Lord Jesus Christ, Son of God, have mercy on me, a sinner"), practised with controlled breath and bodily stillness, eventually becomes self-repeating — the prayer of the heart rather than the lips — and leads to the perception of the Uncreated Light, the same divine radiance witnessed at the Transfiguration. Gregory Palamas (1296–1359) provided the theological defence of this direct experience against rationalist critics, distinguishing the unknowable divine essence from the divine energies that can be participated by the prepared contemplative. The Philokalia, a collection of Hesychast texts, remains the foundational anthology of this tradition.</p>
+        </div>
+
+        <div class="esoteric-card space-y-3">
+          <div class="text-3xl">✡️</div>
+          <h3 class="font-cinzel text-base text-indigo-200">Kabbalistic Hitbonenut</h3>
+          <p class="text-indigo-300/60 text-xs uppercase tracking-wider">Chabad Contemplative Practice</p>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">The Chabad Hasidic tradition, founded by Schneur Zalman of Liadi (1745–1812), developed hitbonenut — prolonged intellectual contemplation of a divine concept — as its central meditative practice. The practitioner takes a teaching about divine reality (for example, the Kabbalistic doctrine of <em>tzimtzum</em> — the divine contraction that creates space for existence) and contemplates it with increasing intensity until the intellect exhausts its ordinary analytical capacity and the divine light shines through the concept as through a transparent vessel. Hitbonenut is not a relaxation of thought but its intensification to the point of self-transcendence. Schneur Zalman distinguished this practice from mere study: the goal is not to understand the concept intellectually but to be transformed by it — to allow the divine wisdom embedded in the idea to restructure the practitioner's mode of being.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="rounded-2xl p-8 space-y-6" style="background: linear-gradient(135deg, rgba(79,70,229,0.15), rgba(49,46,129,0.08));">
+      <h2 class="font-cinzel text-2xl text-indigo-300 text-center tracking-wide">The Ground of Contemplation</h2>
+      <div class="space-y-5 text-sm text-indigo-100/80 leading-relaxed max-w-4xl mx-auto">
+        <p>
+          The most remarkable fact about the esoteric meditation traditions is their convergence. Despite the profound differences in their metaphysical frameworks — the Advaita Vedanta's non-dual Brahman, the Buddhist <em>sunyata</em> (emptiness), the Neoplatonic One, the Hermetic <em>nous</em>, the Sufi divine essence, the Christian Uncreated Light, the Kabbalistic <em>Ayin</em> (nothingness) — the contemplatives who have gone furthest in each tradition describe, with striking consistency, the same territory: a state in which the ordinary sense of being a bounded, separate self dissolves; in which a luminous, spacious, and utterly still awareness is recognised as the actual ground of all experience; and in which this recognition carries with it a quality of absolute certainty — not the certainty of a belief arrived at by argument, but the direct self-evidence of a reality that is simply too obvious to be doubted.
+        </p>
+        <p>
+          This convergence has been noted by comparative mystics from Aldous Huxley (<em>The Perennial Philosophy</em>, 1945) to Huston Smith, Fritjof Schuon, and Rene Guenon — and it has also been contested, most forcefully by scholars like Steven Katz who argue that all mystical experience is culturally constructed and that the apparent similarities are superficial. The debate remains unresolved. What is clear is that the serious practice of any of these traditions — pursued with genuine commitment, under qualified guidance, and over sufficient time — produces experiential states that practitioners unanimously describe as the most real, most certain, and most transformative of their lives. Whatever the correct metaphysical interpretation of these states, their transformative power is not in question.
+        </p>
+        <p>
+          The practical implication for the contemporary student is that access to authentic esoteric meditation does not require the adoption of any particular religious framework. The techniques themselves — the graduated contemplative methods, the breath practices, the attentional disciplines, the specific objects of meditation — can be engaged directly, and the experiential territory they access is available to any practitioner who brings to them the necessary qualities: <strong class="text-indigo-200">sincerity</strong>, <strong class="text-indigo-200">perseverance</strong>, <strong class="text-indigo-200">qualified guidance</strong>, and the willingness to discover that the self one thought one was is not the whole of what one is. The traditions insist, however, that the guidance of a qualified teacher — someone who has traversed the territory and can recognise both genuine progress and the characteristic pitfalls — remains irreplaceable. The map is not the territory, and the territory of esoteric meditation is one that requires a guide who knows it from the inside.
+        </p>
+      </div>
+    </section>
+
+    <div class="text-center mt-4">
+      <a href="/esoteric-practices" class="text-indigo-400/60 hover:text-indigo-300 text-sm transition-colors">← Esoteric Practices &amp; Disciplines</a>
+    </div>
+
+  </div>
+
+  <footer class="relative z-10 text-center py-8 text-indigo-400/40 text-xs mt-8">
+    <p class="italic">"The goal of meditation is not to have better thoughts but to discover the thinker — and find that the thinker is the universe." — Traditional Vedantic teaching</p>
+    <p class="mt-2">Esoteric Wisdom · Built with ✨ in Rust</p>
+    <p class="mt-2"><a href="/home" class="hover:text-indigo-300 transition-colors">← Back to Portal</a></p>
+  </footer>
+
+  <script>
+  const sf = document.getElementById('starfield');
+  for (let i = 0; i < 200; i++) {
+    const s = document.createElement('div');
+    s.className = 'star';
+    s.style.left = Math.random() * 100 + '%';
+    s.style.top = Math.random() * 100 + '%';
+    s.style.animationDelay = Math.random() * 3 + 's';
+    s.style.animationDuration = (2 + Math.random() * 3) + 's';
+    sf.appendChild(s);
+  }
+</script>
+
+</body>
+</html>
