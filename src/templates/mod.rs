@@ -434,3 +434,27 @@ pub struct DionysianMysteriesTemplate;
 #[derive(Template)]
 #[template(path = "egyptian_mystery_schools.html")]
 pub struct EgyptianMysterySchoolsTemplate;
+
+#[derive(Template)]
+#[template(path = "knights_templar.html")]
+pub struct KnightsTemplarTemplate;
+
+#[derive(Template)]
+#[template(path = "rosicrucian_orders.html")]
+pub struct RosicrucianOrdersTemplate;
+
+#[derive(Template)]
+#[template(path = "freemasonry_esoteric.html")]
+pub struct FreemasonryEsotericTemplate;
+
+#[derive(Template)]
+#[template(path = "martinism.html")]
+pub struct MartinismTemplate;
+
+#[derive(Template)]
+#[template(path = "illuminism.html")]
+pub struct IlluminismTemplate;
+
+#[derive(Template)]
+#[template(path = "sufi_orders_esoteric.html")]
+pub struct SufiOrdersEsotericTemplate;
