@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Esoteric Figures — Esoteric Wisdom</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <meta property="og:title" content="Esoteric Figures — Esoteric Wisdom" />
+  <meta property="og:description" content="Explore the great sages, prophets, mystics, and occultists who shaped the Western esoteric tradition — from Hermes Trismegistus and Pythagoras to Blavatsky, Steiner, and Dion Fortune." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://esoteric-wisdom.onrender.com/esoteric-figures/" />
+  <meta property="og:image" content="https://esoteric-wisdom.onrender.com/og-image.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <style>
+    body { font-family: 'Raleway', sans-serif; }
+    .font-cinzel { font-family: 'Cinzel Decorative', cursive; }
+    @keyframes twinkle { 0%,100%{opacity:0.2;transform:scale(1);} 50%{opacity:1;transform:scale(1.4);} }
+    @keyframes float { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-12px);} }
+    @keyframes shimmer { 0%{background-position:0% 50%;} 100%{background-position:200% 50%;} }
+    .star { position:absolute; width:2px; height:2px; background:white; border-radius:50%; animation:twinkle 3s infinite; }
+    .aurora-text {
+      background: linear-gradient(90deg, #b45309, #d97706, #92400e, #fde68a, #b45309);
+      background-size: 300% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 6s linear infinite;
+    }
+    .floating { animation: float 4s ease-in-out infinite; }
+    .nav-link { position:relative; transition:all 0.3s; }
+    .nav-link::after { content:''; position:absolute; bottom:-2px; left:0; width:0; height:1px; background:#f59e0b; transition:width 0.3s; }
+    .nav-link:hover::after { width:100%; }
+    .fig-card {
+      background: linear-gradient(135deg, rgba(180,83,9,0.12), rgba(120,53,15,0.08));
+      border: 1px solid rgba(180,83,9,0.25);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      transition: all 0.3s;
+      display: block;
+    }
+    .fig-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 28px rgba(180,83,9,0.22);
+      border-color: rgba(180,83,9,0.5);
+    }
+  </style>
+</head>
+<body class="min-h-screen text-amber-100 overflow-x-hidden"
+      style="background: radial-gradient(ellipse at top, #1a0e00 0%, #2d1a00 25%, #0a0500 60%, #000000 100%);">
+
+  <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+
+  <nav class="sticky top-0 z-50 flex items-center justify-between px-6 py-3 bg-black/40 backdrop-blur-md border-b border-amber-700/30 flex-wrap gap-y-2">
+    <a href="/home" class="font-cinzel text-amber-300 text-sm tracking-widest shrink-0">✦ Esoteric Wisdom ✦</a>
+    <div class="flex items-center gap-x-3 gap-y-1 text-xs text-violet-200 flex-wrap justify-end">
+      <a href="/astrology" class="nav-link hover:text-amber-300 transition-colors">Astrology</a>
+      <a href="/meditation" class="nav-link hover:text-amber-300 transition-colors">Meditation</a>
+      <a href="/tarot/select" class="nav-link hover:text-amber-300 transition-colors">Tarot</a>
+      <a href="/numerology" class="nav-link hover:text-amber-300 transition-colors">Numerology</a>
+      <a href="/crystals" class="nav-link hover:text-amber-300 transition-colors">Crystals</a>
+      <a href="/runes" class="nav-link hover:text-amber-300 transition-colors">Runes</a>
+      <a href="/shamanism" class="nav-link hover:text-amber-300 transition-colors">Shamanism</a>
+      <a href="/druidism" class="nav-link hover:text-amber-300 transition-colors">Druidism</a>
+      <a href="/akashic-records" class="nav-link hover:text-amber-300 transition-colors">Akashic Records</a>
+      <a href="/wicca" class="nav-link hover:text-amber-300 transition-colors">Wicca</a>
+      <a href="/alchemy" class="nav-link hover:text-amber-300 transition-colors">Alchemy</a>
+      <a href="/gateway-process" class="nav-link hover:text-amber-300 transition-colors">Gateway Process</a>
+      <a href="/remote-viewing" class="nav-link hover:text-amber-300 transition-colors">Remote Viewing</a>
+      <a href="/khasarov-mirror" class="nav-link hover:text-amber-300 transition-colors">Khasarov Mirror</a>
+      <a href="/western-esotericism" class="nav-link hover:text-amber-300 transition-colors">Western Esotericism</a>
+      <a href="/eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Eastern Esotericism</a>
+      <a href="/indigenous-esotericism" class="nav-link hover:text-amber-300 transition-colors">Indigenous Esotericism</a>
+      <a href="/middle-eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Middle Eastern Mysteries</a>
+      <a href="/esoteric-practices" class="nav-link hover:text-amber-300 transition-colors">Esoteric Practices</a>
+      <a href="/esoteric-corpora" class="nav-link hover:text-amber-300 transition-colors">Sacred Texts</a>
+      <a href="/esoteric-figures" class="nav-link text-amber-300 font-semibold transition-colors">Esoteric Figures</a>
+      <a href="/orders-societies" class="nav-link hover:text-amber-300 transition-colors">Orders &amp; Societies</a>
+      <a href="/mythologies-cosmologies" class="nav-link hover:text-amber-300 transition-colors">Mythologies &amp; Cosmologies</a>
+      <a href="/journal/reflections" class="nav-link text-emerald-300 hover:text-emerald-200 transition-colors">✨ Reflections</a>
+      <a href="https://ko-fi.com/esotericwisdom" target="_blank" rel="noopener noreferrer"
+         class="px-3 py-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-white font-semibold hover:scale-105 transition-transform shrink-0">☕ Support</a>
+    </div>
+  </nav>
+
+  <div class="relative z-10 max-w-6xl mx-auto px-4 pt-6 pb-12 space-y-10">
+
+    <div class="text-sm text-amber-300/70">
+      <a href="/home" class="hover:text-amber-200 transition-colors">← Back to Portal</a>
+    </div>
+
+    <section class="text-center py-10 space-y-5">
+      <div class="text-7xl floating">🌟</div>
+      <h1 class="font-cinzel text-4xl md:text-5xl aurora-text leading-tight">Esoteric Figures</h1>
+      <p class="max-w-3xl mx-auto text-amber-200/80 text-lg leading-relaxed">
+        The great sages, prophets, initiates, and occultists who received, transmitted, and transformed the hidden wisdom of the ages — from the mythic founders of the primordial tradition to the historical masters who shaped Western esotericism.
+      </p>
+    </section>
+
+    <!-- SECTION 1: ARCHETYPAL & MYTHIC FIGURES -->
+    <section class="space-y-6">
+      <div class="text-center space-y-2">
+        <h2 class="font-cinzel text-2xl text-amber-300 tracking-wide">Archetypal &amp; Mythic Figures</h2>
+        <p class="text-amber-200/60 text-sm max-w-2xl mx-auto">Legendary sages and divine-human intermediaries who stand at the mythic origins of the esoteric tradition, revered across cultures and ages as the first transmitters of sacred wisdom.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+        <a href="/esoteric-figures/hermes-trismegistus" class="fig-card space-y-3">
+          <div class="text-3xl">☿</div>
+          <h3 class="font-cinzel text-sm text-amber-200">Hermes Trismegistus</h3>
+          <p class="text-amber-300/50 text-xs uppercase tracking-wider">Thrice-Great Sage</p>
+          <p class="text-amber-100/70 text-sm leading-relaxed">The legendary author of the Hermetic Corpus and patron of alchemy, astrology, and sacred philosophy — a syncretic figure uniting Greek Hermes and Egyptian Thoth as the fount of primordial wisdom.</p>
+        </a>
+
+        <a href="/esoteric-figures/thoth" class="fig-card space-y-3">
+          <div class="text-3xl">𓅝</div>
+          <h3 class="font-cinzel text-sm text-amber-200">Thoth</h3>
+          <p class="text-amber-300/50 text-xs uppercase tracking-wider">Lord of Divine Words</p>
+          <p class="text-amber-100/70 text-sm leading-relaxed">The ibis-headed Egyptian god of writing, magic, wisdom, and the moon — divine scribe, guardian of the scales of Maat, and master of all sacred knowledge from the Book of Thoth to the Emerald Tablet.</p>
+        </a>
+
+        <a href="/esoteric-figures/enoch-metatron" class="fig-card space-y-3">
+          <div class="text-3xl">📖</div>
+          <h3 class="font-cinzel text-sm text-amber-200">Enoch / Metatron</h3>
+          <p class="text-amber-300/50 text-xs uppercase tracking-wider">The Translated One</p>
+          <p class="text-amber-100/70 text-sm leading-relaxed">The antediluvian patriarch who "walked with God" and was taken up without dying — and his angelic counterpart Metatron, the celestial scribe who stands at the throne of glory and holds the Akashic Record of all creation.</p>
+        </a>
+
+        <a href="/esoteric-figures/orpheus" class="fig-card space-y-3">
+          <div class="text-3xl">🎵</div>
+          <h3 class="font-cinzel text-sm text-amber-200">Orpheus</h3>
+          <p class="text-amber-300/50 text-xs uppercase tracking-wider">Divine Poet &amp; Mystagogue</p>
+          <p class="text-amber-100/70 text-sm leading-relaxed">The poet-prophet of Thrace who descended to Hades and returned, founded the Orphic mysteries of reincarnation and purification, and whose divine song moves rocks, tames beasts, and opens the gates of the underworld.</p>
+        </a>
+
+        <a href="/esoteric-figures/melchizedek" class="fig-card space-y-3">
+          <div class="text-3xl">👑</div>
+          <h3 class="font-cinzel text-sm text-amber-200">Melchizedek</h3>
+          <p class="text-amber-300/50 text-xs uppercase tracking-wider">Priest-King of Salem</p>
+          <p class="text-amber-100/70 text-sm leading-relaxed">The mysterious priest-king without genealogy, without beginning of days or end of life, who offered bread and wine to Abraham and represents the eternal order of initiation that stands outside time and lineage.</p>
+        </a>
+
+        <a href="/esoteric-figures/zoroaster" class="fig-card space-y-3">
+          <div class="text-3xl">🔥</div>
+          <h3 class="font-cinzel text-sm text-amber-200">Zoroaster</h3>
+          <p class="text-amber-300/50 text-xs uppercase tracking-wider">Prophet of Ahura Mazda</p>
+          <p class="text-amber-100/70 text-sm leading-relaxed">The ancient Iranian prophet-mage whose revelation of the cosmic struggle between light and darkness shaped Judaism, Christianity, Islam, and the Western magical tradition, while founding the oldest living prophetic religion.</p>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- SECTION 2: HISTORICAL INFLUENCERS -->
+    <section class="space-y-6">
+      <div class="text-center space-y-2">
+        <h2 class="font-cinzel text-2xl text-amber-300 tracking-wide">Historical Influencers</h2>
+        <p class="text-amber-200/60 text-sm max-w-2xl mx-auto">The philosophers, mystics, physicians, and occultists whose documented lives and writings shaped the Western esoteric tradition across the centuries, from ancient Greece to the 20th century.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+        <a href="/esoteric-figures/pythagoras" class="fig-card space-y-3">
+          <div class="text-3xl">△</div>
+          <h3 class="font-cinzel text-sm text-amber-200">Pythagoras</h3>
+          <p class="text-amber-300/50 text-xs uppercase tracking-wider">Master of Number</p>
+          <p class="text-amber-100/70 text-sm leading-relaxed">The philosopher-mathematician of Samos who founded the first Western esoteric brotherhood — the Pythagorean school — and whose doctrines of number, harmony, metempsychosis, and cosmic music became foundational to all subsequent Western esotericism.</p>
+        </a>
+
+        <a href="/esoteric-figures/plotinus" class="fig-card space-y-3">
+          <div class="text-3xl">🌊</div>
+          <h3 class="font-cinzel text-sm text-amber-200">Plotinus</h3>
+          <p class="text-amber-300/50 text-xs uppercase tracking-wider">Father of Neoplatonism</p>
+          <p class="text-amber-100/70 text-sm leading-relaxed">The founder of Neoplatonism whose <em>Enneads</em> describe the soul's emanation from and return to the transcendent One — a system of such philosophical precision and spiritual power that it shaped mysticism in every subsequent Western tradition.</p>
+        </a>
+
+        <a href="/esoteric-figures/iamblichus" class="fig-card space-y-3">
+          <div class="text-3xl">⚡</div>
+          <h3 class="font-cinzel text-sm text-amber-200">Iamblichus</h3>
+          <p class="text-amber-300/50 text-xs uppercase tracking-wider">Theurgist &amp; Philosopher</p>
+          <p class="text-amber-100/70 text-sm leading-relaxed">The Syrian Neoplatonist who transformed Greek philosophy into a complete system of ritual theurgy — divine working — in which sacrifices, hymns, symbols, and sacred images draw down divine power and facilitate the soul's ascent to the gods.</p>
+        </a>
+
+        <a href="/esoteric-figures/paracelsus" class="fig-card space-y-3">
+          <div class="text-3xl">⚗️</div>
+          <h3 class="font-cinzel text-sm text-amber-200">Paracelsus</h3>
+          <p class="text-amber-300/50 text-xs uppercase tracking-wider">Physician-Magus</p>
+          <p class="text-amber-100/70 text-sm leading-relaxed">The stormy Swiss-German physician and alchemist who revolutionised Renaissance medicine and magic with his doctrine of signatures, his tria prima of sulphur, mercury, and salt, and his vision of nature as a living spiritual system.</p>
+        </a>
+
+        <a href="/esoteric-figures/marsilio-ficino" class="fig-card space-y-3">
+          <div class="text-3xl">📜</div>
+          <h3 class="font-cinzel text-sm text-amber-200">Marsilio Ficino</h3>
+          <p class="text-amber-300/50 text-xs uppercase tracking-wider">Renaissance Platonist</p>
+          <p class="text-amber-100/70 text-sm leading-relaxed">Head of the Platonic Academy of Florence and translator of Plato and the Hermetic Corpus, whose vision of the <em>prisca theologia</em> — the primordial universal wisdom — launched the Renaissance esoteric movement and shaped Western thought for centuries.</p>
+        </a>
+
+        <a href="/esoteric-figures/jacob-boehme" class="fig-card space-y-3">
+          <div class="text-3xl">✨</div>
+          <h3 class="font-cinzel text-sm text-amber-200">Jacob Boehme</h3>
+          <p class="text-amber-300/50 text-xs uppercase tracking-wider">Shoemaker-Sage</p>
+          <p class="text-amber-100/70 text-sm leading-relaxed">The German Lutheran shoemaker whose visionary illuminations produced one of the most profound bodies of Christian theosophical writing ever created — a dialectical vision of the divine life as the interplay of light and darkness, wrath and love.</p>
+        </a>
+
+        <a href="/esoteric-figures/emanuel-swedenborg" class="fig-card space-y-3">
+          <div class="text-3xl">🌌</div>
+          <h3 class="font-cinzel text-sm text-amber-200">Emanuel Swedenborg</h3>
+          <p class="text-amber-300/50 text-xs uppercase tracking-wider">Visionary of the Spiritual World</p>
+          <p class="text-amber-100/70 text-sm leading-relaxed">The Swedish scientist who became the 18th century's most systematic visionary, claiming daily journeys in the spiritual world and producing detailed descriptions of heaven, hell, and the angelic life that shaped Spiritualism, Theosophy, and the New Age.</p>
+        </a>
+
+        <a href="/esoteric-figures/helena-blavatsky" class="fig-card space-y-3">
+          <div class="text-3xl">🌍</div>
+          <h3 class="font-cinzel text-sm text-amber-200">Helena Blavatsky</h3>
+          <p class="text-amber-300/50 text-xs uppercase tracking-wider">Mother of Theosophy</p>
+          <p class="text-amber-100/70 text-sm leading-relaxed">Co-founder of the Theosophical Society and author of <em>The Secret Doctrine</em> — the most influential esotericist of the 19th century, whose synthesis of Eastern and Western wisdom traditions shaped every subsequent development in modern Western esotericism.</p>
+        </a>
+
+        <a href="/esoteric-figures/rudolf-steiner" class="fig-card space-y-3">
+          <div class="text-3xl">🌱</div>
+          <h3 class="font-cinzel text-sm text-amber-200">Rudolf Steiner</h3>
+          <p class="text-amber-300/50 text-xs uppercase tracking-wider">Founder of Anthroposophy</p>
+          <p class="text-amber-100/70 text-sm leading-relaxed">The Austrian philosopher and esotericist who founded Anthroposophy and transformed it into practical realities: Waldorf education, biodynamic farming, Anthroposophical medicine, and a comprehensive spiritual science of human evolution.</p>
+        </a>
+
+        <a href="/esoteric-figures/dion-fortune" class="fig-card space-y-3">
+          <div class="text-3xl">🌙</div>
+          <h3 class="font-cinzel text-sm text-amber-200">Dion Fortune</h3>
+          <p class="text-amber-300/50 text-xs uppercase tracking-wider">Mistress of the Western Path</p>
+          <p class="text-amber-100/70 text-sm leading-relaxed">British occultist, novelist, and founder of the Society of the Inner Light — whose <em>Mystical Qabalah</em>, occult novels, and integration of depth psychology with Hermetic practice defined modern Western magical tradition.</p>
+        </a>
+
+        <a href="/esoteric-figures/eliphas-levi" class="fig-card space-y-3">
+          <div class="text-3xl">⚗️</div>
+          <h3 class="font-cinzel text-sm text-amber-200">Éliphas Lévi</h3>
+          <p class="text-amber-300/50 text-xs uppercase tracking-wider">Father of Modern Occultism</p>
+          <p class="text-amber-100/70 text-sm leading-relaxed">The French ex-seminarian whose <em>Dogme et Rituel de la Haute Magie</em> launched the modern Western occult revival, linked the Tarot to the Kabbalah, defined the Astral Light, and provided the Golden Dawn with its foundational conceptual framework.</p>
+        </a>
+
+        <a href="/esoteric-figures/papus" class="fig-card space-y-3">
+          <div class="text-3xl">🃏</div>
+          <h3 class="font-cinzel text-sm text-amber-200">Papus</h3>
+          <p class="text-amber-300/50 text-xs uppercase tracking-wider">Organiser of the Occult Revival</p>
+          <p class="text-amber-100/70 text-sm leading-relaxed">Gérard Encausse — physician, prolific author, and founder of the Martinist Order — who revitalised French occultism at the fin de siècle, popularised the Tarot and Kabbalah, and extended Martinism across Europe and to the Russian imperial court.</p>
+        </a>
+
+      </div>
+    </section>
+
+  </div>
+
+  <footer class="relative z-10 text-center py-8 text-amber-300/50 text-xs">
+    <p class="italic">"The initiates of all ages have known that wisdom is transmitted, not taught." — Western Esoteric maxim</p>
+    <p class="mt-2">Esoteric Wisdom · Built with ✨ in Rust</p>
+  </footer>
+
+<script>
+  const sf = document.getElementById('starfield');
+  for (let i = 0; i < 200; i++) {
+    const s = document.createElement('div');
+    s.className = 'star';
+    const size = Math.random() * 2.5 + 0.5;
+    s.style.cssText = `width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--dur:${2+Math.random()*4}s;--delay:${Math.random()*5}s;opacity:${0.2+Math.random()*0.8};`;
+    sf.appendChild(s);
+  }
+</script>
+</body>
+</html>

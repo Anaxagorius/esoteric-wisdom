@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Éliphas Lévi — Esoteric Wisdom</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <meta property="og:title" content="Éliphas Lévi — Esoteric Wisdom" />
+  <meta property="og:description" content="Explore Éliphas Lévi — French occultist, author of Dogme et Rituel de la Haute Magie, and the father of the modern Western occult revival." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://esoteric-wisdom.onrender.com/esoteric-figures/eliphas-levi/" />
+  <meta property="og:image" content="https://esoteric-wisdom.onrender.com/og-image.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <style>
+    body { font-family: 'Raleway', sans-serif; }
+    .font-cinzel { font-family: 'Cinzel Decorative', cursive; }
+    @keyframes twinkle { 0%,100%{opacity:0.2;transform:scale(1);} 50%{opacity:1;transform:scale(1.4);} }
+    @keyframes float { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-12px);} }
+    @keyframes shimmer { 0%{background-position:0% 50%;} 100%{background-position:200% 50%;} }
+    .star { position:absolute; width:2px; height:2px; background:white; border-radius:50%; animation:twinkle 3s infinite; }
+    .aurora-text {
+      background: linear-gradient(90deg, #b45309, #d97706, #92400e, #fde68a, #b45309);
+      background-size: 300% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 6s linear infinite;
+    }
+    .floating { animation: float 4s ease-in-out infinite; }
+    .nav-link { position:relative; transition:all 0.3s; }
+    .nav-link::after { content:''; position:absolute; bottom:-2px; left:0; width:0; height:1px; background:#f59e0b; transition:width 0.3s; }
+    .nav-link:hover::after { width:100%; }
+    .os-card {
+      background: linear-gradient(135deg, rgba(180,83,9,0.12), rgba(120,53,15,0.08));
+      border: 1px solid rgba(180,83,9,0.25);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      transition: all 0.3s;
+    }
+    .os-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 0 24px rgba(180,83,9,0.20);
+      border-color: rgba(180,83,9,0.5);
+    }
+  </style>
+</head>
+<body class="min-h-screen text-amber-100 overflow-x-hidden"
+      style="background: radial-gradient(ellipse at top, #1a0e00 0%, #2d1a00 25%, #0a0500 60%, #000000 100%);">
+
+  <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+
+  <nav class="sticky top-0 z-50 flex items-center justify-between px-6 py-3 bg-black/40 backdrop-blur-md border-b border-amber-700/30 flex-wrap gap-y-2">
+    <a href="/home" class="font-cinzel text-amber-300 text-sm tracking-widest shrink-0">✦ Esoteric Wisdom ✦</a>
+    <div class="flex items-center gap-x-3 gap-y-1 text-xs text-violet-200 flex-wrap justify-end">
+      <a href="/astrology" class="nav-link hover:text-amber-300 transition-colors">Astrology</a>
+      <a href="/meditation" class="nav-link hover:text-amber-300 transition-colors">Meditation</a>
+      <a href="/tarot/select" class="nav-link hover:text-amber-300 transition-colors">Tarot</a>
+      <a href="/numerology" class="nav-link hover:text-amber-300 transition-colors">Numerology</a>
+      <a href="/crystals" class="nav-link hover:text-amber-300 transition-colors">Crystals</a>
+      <a href="/runes" class="nav-link hover:text-amber-300 transition-colors">Runes</a>
+      <a href="/shamanism" class="nav-link hover:text-amber-300 transition-colors">Shamanism</a>
+      <a href="/druidism" class="nav-link hover:text-amber-300 transition-colors">Druidism</a>
+      <a href="/akashic-records" class="nav-link hover:text-amber-300 transition-colors">Akashic Records</a>
+      <a href="/wicca" class="nav-link hover:text-amber-300 transition-colors">Wicca</a>
+      <a href="/alchemy" class="nav-link hover:text-amber-300 transition-colors">Alchemy</a>
+      <a href="/gateway-process" class="nav-link hover:text-amber-300 transition-colors">Gateway Process</a>
+      <a href="/remote-viewing" class="nav-link hover:text-amber-300 transition-colors">Remote Viewing</a>
+      <a href="/khasarov-mirror" class="nav-link hover:text-amber-300 transition-colors">Khasarov Mirror</a>
+      <a href="/western-esotericism" class="nav-link hover:text-amber-300 transition-colors">Western Esotericism</a>
+      <a href="/eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Eastern Esotericism</a>
+      <a href="/indigenous-esotericism" class="nav-link hover:text-amber-300 transition-colors">Indigenous Esotericism</a>
+      <a href="/middle-eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Middle Eastern Mysteries</a>
+      <a href="/esoteric-practices" class="nav-link hover:text-amber-300 transition-colors">Esoteric Practices</a>
+      <a href="/esoteric-corpora" class="nav-link hover:text-amber-300 transition-colors">Sacred Texts</a>
+      <a href="/esoteric-figures" class="nav-link text-amber-300 font-semibold transition-colors">Esoteric Figures</a>
+      <a href="/orders-societies" class="nav-link hover:text-amber-300 transition-colors">Orders &amp; Societies</a>
+      <a href="/mythologies-cosmologies" class="nav-link hover:text-amber-300 transition-colors">Mythologies &amp; Cosmologies</a>
+      <a href="/journal/reflections" class="nav-link text-emerald-300 hover:text-emerald-200 transition-colors">✨ Reflections</a>
+      <a href="https://ko-fi.com/esotericwisdom" target="_blank" rel="noopener noreferrer"
+         class="px-3 py-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-white font-semibold hover:scale-105 transition-transform shrink-0">☕ Support</a>
+    </div>
+  </nav>
+
+  <div class="relative z-10 max-w-4xl mx-auto px-4 pt-6 pb-12 space-y-6">
+    <div class="text-sm text-amber-300/70 mb-6">
+      <a href="/esoteric-figures" class="hover:text-amber-200 transition-colors">← Esoteric Figures</a>
+    </div>
+
+    <div class="text-center py-8">
+      <div class="text-6xl mb-4 floating">⚗️</div>
+      <h1 class="font-cinzel text-3xl md:text-4xl aurora-text mb-4">Éliphas Lévi</h1>
+      <p class="text-amber-200/80 max-w-2xl mx-auto leading-relaxed">Éliphas Lévi (1810–1875), born Alphonse Louis Constant, was the French occultist whose works — above all <em>Dogme et Rituel de la Haute Magie</em> (1854–56) and <em>Histoire de la Magie</em> (1860) — inaugurated the modern Western occult revival and provided the conceptual framework that would shape Freemasonry's higher degrees, the Hermetic Order of the Golden Dawn, Aleister Crowley's Thelema, and virtually all subsequent ceremonial magic.</p>
+    </div>
+
+    <div class="os-card">
+      <h2 class="font-cinzel text-xl text-amber-300 mb-3">Life &amp; Formation</h2>
+      <div class="text-amber-100/80 leading-relaxed space-y-3">
+        <p>Alphonse Louis Constant was born in Paris in 1810, the son of a poor shoemaker. Educated at the seminary of Saint-Sulpice for the Catholic priesthood, he was deeply formed by Catholic theology and mysticism — an influence he never entirely escaped. However, he was expelled from the seminary before ordination, apparently after falling in love, and spent years in poverty writing political and socialist pamphlets that twice landed him in prison. He married the young sculptress Noémi Cadiot in 1846, but the marriage was later annulled.</p>
+        <p>His discovery of occultism came in his forties, through his encounters with the Polish mystic Józef Maria Hoene-Wroński, from whom he adopted the concept of the "Absolute," and through his immersion in the works of the Renaissance magicians — particularly Cornelius Agrippa, Paracelsus, and Pico della Mirandola. He also studied Hebrew and immersed himself in the Kabbalistic tradition. The Hebrew pen name "Éliphas Lévi" — a Hebraisation of "Alphonse Louis" — reflected his conviction that the key to the Western occult tradition lay in the Kabbalah.</p>
+      </div>
+    </div>
+
+    <div class="os-card">
+      <h2 class="font-cinzel text-xl text-amber-300 mb-3">Dogme et Rituel &amp; the Astral Light</h2>
+      <div class="text-amber-100/80 leading-relaxed space-y-3">
+        <p><em>Dogme et Rituel de la Haute Magie</em> — translated into English by A. E. Waite as <em>Transcendental Magic: Its Doctrine and Ritual</em> — was published in two volumes in 1854 and 1856 and immediately transformed the landscape of Western occultism. Written with extraordinary rhetorical power — Lévi was a gifted stylist whose purple prose matched the grandeur of his subject — the work presented a comprehensive synthesis of the Western magical tradition: Kabbalah, Hermetism, alchemy, Tarot, ceremonial magic, and the astral light.</p>
+        <p>At the centre of Lévi's magical theory is the concept of the "Astral Light" — a universal fluid or medium that permeates all of nature and that the magician learns to direct by an act of concentrated will. The Astral Light is the medium through which magical effects are produced, the substratum in which the images of thought and imagination take on quasi-material form, and the "great magical agent" by which the adept operates upon the physical and psychic worlds. This concept — which drew on Mesmer's "animal magnetism," Reichenbach's "Odic force," and older magical theories of a universal spirit — proved enormously influential, reappearing in various forms in Theosophy, the Golden Dawn, and most subsequent magical systems.</p>
+        <p>Lévi also established the definitive identification of the twenty-two Major Arcana of the Tarot with the twenty-two letters of the Hebrew alphabet — an identification that had been suggested by Court de Gébelin in 1781 but that Lévi systematically developed and incorporated into the Kabbalistic framework of the Tree of Life. This identification became the foundation of the Golden Dawn's Tarot system (developed by MacGregor Mathers and refined by A. E. Waite and Pamela Colman Smith in the famous Rider-Waite deck) and remains the basis of most contemporary Hermetic Tarot practice.</p>
+      </div>
+    </div>
+
+    <div class="os-card">
+      <h2 class="font-cinzel text-xl text-amber-300 mb-3">Baphomet &amp; the Necromantic Ritual</h2>
+      <div class="text-amber-100/80 leading-relaxed space-y-3">
+        <p>Lévi's image of Baphomet — the androgynous, goat-headed figure seated in the Witch's Sabbath posture, with "SOLVE" inscribed on one arm and "COAGULA" on the other — is his most famous visual contribution to Western occultism. Drawn by Lévi himself to illustrate <em>Dogme et Rituel</em>, the image was intended as a symbol of the reconciliation of opposites — male and female, animal and divine, above and below — and of the fundamental principle of magical equilibrium. Lévi explicitly connected Baphomet with the goat of the Witches' Sabbath and with the demonised image of the "Black Goat" of popular superstition, arguing that this image represented not a devil but a misunderstood symbol of nature's generative and transformative power.</p>
+        <p>Lévi's account of his own evocation of the shade of Apollonius of Tyana — conducted at the request of an unnamed English noblewoman in London in 1854 — is one of the most celebrated episodes in the literature of ceremonial magic. After two weeks of preparation including fasting, meditations, and ritual purifications, Lévi performed the evocation. He describes encountering a grey figure that appeared in the magic circle, an experience of overwhelming cold and psychic pressure, and apparent answers to two of the three questions he had brought. Whether the episode is literally accurate or represents a psychological experience of unusual intensity, it illustrates Lévi's claim that the methods of ceremonial magic actually work — that they do produce results, even if those results are to be understood in psychological rather than literal terms.</p>
+      </div>
+    </div>
+
+    <div class="os-card">
+      <h2 class="font-cinzel text-xl text-amber-300 mb-3">Legacy &amp; Influence</h2>
+      <div class="text-amber-100/80 leading-relaxed space-y-3">
+        <p>Lévi died in Paris in 1875, the same year as the founding of the Theosophical Society — and indeed Madame Blavatsky, who arrived in New York in 1873, had read Lévi and absorbed much of his framework into her own synthesis. The young Aleister Crowley was convinced that he was a reincarnation of Lévi — Lévi having died in May 1875 and Crowley having been born in October of the same year — a belief that may have been narcissistic fantasy but that testifies to Lévi's enormous influence on the subsequent tradition.</p>
+        <p>The Hermetic Order of the Golden Dawn, founded in 1888, built directly on Lévi's synthesis. MacGregor Mathers' system of Qabalistic magic, his ordering of the Tarot Major Arcana, his colour scales and elemental attributions — all derive in significant measure from Lévi. Waite's scholarship and Mathers' ritual systems together transformed Lévi's brilliant but unsystematic synthesis into a coherent initiatic curriculum that shaped the whole subsequent development of Western ceremonial magic.</p>
+        <p>Lévi has also been influential in popular culture through his Baphomet image, which has been adopted — and usually misunderstood — by Satanist organisations, heavy metal bands, and popular mythology as a symbol of devil worship. Lévi himself was a deeply Catholic thinker who never renounced his Christian faith and who explicitly rejected Satanism; the appropriation of his symbol for anti-Christian purposes would have horrified him. His true legacy lies in the tradition of philosophically serious, intellectually rigorous occultism that runs from him through the Golden Dawn, Crowley, Dion Fortune, and the full body of 20th century ceremonial magic.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="relative z-10 text-center py-8 text-amber-300/50 text-xs">
+    <p class="italic">"Magic is the divinity of man achieved in union with faith." — Éliphas Lévi</p>
+    <p class="mt-2">Esoteric Wisdom · Built with ✨ in Rust</p>
+    <p class="mt-2"><a href="/esoteric-figures" class="hover:text-amber-300 transition-colors">← Esoteric Figures</a></p>
+  </footer>
+
+<script>
+  const sf = document.getElementById('starfield');
+  for (let i = 0; i < 180; i++) {
+    const s = document.createElement('div');
+    s.className = 'star';
+    const size = Math.random() * 2.5 + 0.5;
+    s.style.cssText = `width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--dur:${2+Math.random()*4}s;--delay:${Math.random()*5}s;opacity:${0.2+Math.random()*0.8};`;
+    sf.appendChild(s);
+  }
+</script>
+</body>
+</html>

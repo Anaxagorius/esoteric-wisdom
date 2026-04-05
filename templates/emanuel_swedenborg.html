@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Emanuel Swedenborg — Esoteric Wisdom</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <meta property="og:title" content="Emanuel Swedenborg — Esoteric Wisdom" />
+  <meta property="og:description" content="Explore Emanuel Swedenborg — Swedish scientist, visionary, and mystic whose revelations of the spiritual world shaped modern spiritualism and esotericism." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://esoteric-wisdom.onrender.com/esoteric-figures/emanuel-swedenborg/" />
+  <meta property="og:image" content="https://esoteric-wisdom.onrender.com/og-image.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <style>
+    body { font-family: 'Raleway', sans-serif; }
+    .font-cinzel { font-family: 'Cinzel Decorative', cursive; }
+    @keyframes twinkle { 0%,100%{opacity:0.2;transform:scale(1);} 50%{opacity:1;transform:scale(1.4);} }
+    @keyframes float { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-12px);} }
+    @keyframes shimmer { 0%{background-position:0% 50%;} 100%{background-position:200% 50%;} }
+    .star { position:absolute; width:2px; height:2px; background:white; border-radius:50%; animation:twinkle 3s infinite; }
+    .aurora-text {
+      background: linear-gradient(90deg, #b45309, #d97706, #92400e, #fde68a, #b45309);
+      background-size: 300% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 6s linear infinite;
+    }
+    .floating { animation: float 4s ease-in-out infinite; }
+    .nav-link { position:relative; transition:all 0.3s; }
+    .nav-link::after { content:''; position:absolute; bottom:-2px; left:0; width:0; height:1px; background:#f59e0b; transition:width 0.3s; }
+    .nav-link:hover::after { width:100%; }
+    .os-card {
+      background: linear-gradient(135deg, rgba(180,83,9,0.12), rgba(120,53,15,0.08));
+      border: 1px solid rgba(180,83,9,0.25);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      transition: all 0.3s;
+    }
+    .os-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 0 24px rgba(180,83,9,0.20);
+      border-color: rgba(180,83,9,0.5);
+    }
+  </style>
+</head>
+<body class="min-h-screen text-amber-100 overflow-x-hidden"
+      style="background: radial-gradient(ellipse at top, #1a0e00 0%, #2d1a00 25%, #0a0500 60%, #000000 100%);">
+
+  <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+
+  <nav class="sticky top-0 z-50 flex items-center justify-between px-6 py-3 bg-black/40 backdrop-blur-md border-b border-amber-700/30 flex-wrap gap-y-2">
+    <a href="/home" class="font-cinzel text-amber-300 text-sm tracking-widest shrink-0">✦ Esoteric Wisdom ✦</a>
+    <div class="flex items-center gap-x-3 gap-y-1 text-xs text-violet-200 flex-wrap justify-end">
+      <a href="/astrology" class="nav-link hover:text-amber-300 transition-colors">Astrology</a>
+      <a href="/meditation" class="nav-link hover:text-amber-300 transition-colors">Meditation</a>
+      <a href="/tarot/select" class="nav-link hover:text-amber-300 transition-colors">Tarot</a>
+      <a href="/numerology" class="nav-link hover:text-amber-300 transition-colors">Numerology</a>
+      <a href="/crystals" class="nav-link hover:text-amber-300 transition-colors">Crystals</a>
+      <a href="/runes" class="nav-link hover:text-amber-300 transition-colors">Runes</a>
+      <a href="/shamanism" class="nav-link hover:text-amber-300 transition-colors">Shamanism</a>
+      <a href="/druidism" class="nav-link hover:text-amber-300 transition-colors">Druidism</a>
+      <a href="/akashic-records" class="nav-link hover:text-amber-300 transition-colors">Akashic Records</a>
+      <a href="/wicca" class="nav-link hover:text-amber-300 transition-colors">Wicca</a>
+      <a href="/alchemy" class="nav-link hover:text-amber-300 transition-colors">Alchemy</a>
+      <a href="/gateway-process" class="nav-link hover:text-amber-300 transition-colors">Gateway Process</a>
+      <a href="/remote-viewing" class="nav-link hover:text-amber-300 transition-colors">Remote Viewing</a>
+      <a href="/khasarov-mirror" class="nav-link hover:text-amber-300 transition-colors">Khasarov Mirror</a>
+      <a href="/western-esotericism" class="nav-link hover:text-amber-300 transition-colors">Western Esotericism</a>
+      <a href="/eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Eastern Esotericism</a>
+      <a href="/indigenous-esotericism" class="nav-link hover:text-amber-300 transition-colors">Indigenous Esotericism</a>
+      <a href="/middle-eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Middle Eastern Mysteries</a>
+      <a href="/esoteric-practices" class="nav-link hover:text-amber-300 transition-colors">Esoteric Practices</a>
+      <a href="/esoteric-corpora" class="nav-link hover:text-amber-300 transition-colors">Sacred Texts</a>
+      <a href="/esoteric-figures" class="nav-link text-amber-300 font-semibold transition-colors">Esoteric Figures</a>
+      <a href="/orders-societies" class="nav-link hover:text-amber-300 transition-colors">Orders &amp; Societies</a>
+      <a href="/mythologies-cosmologies" class="nav-link hover:text-amber-300 transition-colors">Mythologies &amp; Cosmologies</a>
+      <a href="/journal/reflections" class="nav-link text-emerald-300 hover:text-emerald-200 transition-colors">✨ Reflections</a>
+      <a href="https://ko-fi.com/esotericwisdom" target="_blank" rel="noopener noreferrer"
+         class="px-3 py-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-white font-semibold hover:scale-105 transition-transform shrink-0">☕ Support</a>
+    </div>
+  </nav>
+
+  <div class="relative z-10 max-w-4xl mx-auto px-4 pt-6 pb-12 space-y-6">
+    <div class="text-sm text-amber-300/70 mb-6">
+      <a href="/esoteric-figures" class="hover:text-amber-200 transition-colors">← Esoteric Figures</a>
+    </div>
+
+    <div class="text-center py-8">
+      <div class="text-6xl mb-4 floating">🌌</div>
+      <h1 class="font-cinzel text-3xl md:text-4xl aurora-text mb-4">Emanuel Swedenborg</h1>
+      <p class="text-amber-200/80 max-w-2xl mx-auto leading-relaxed">Emanuel Swedenborg (1688–1772) was a Swedish scientist, engineer, and statesman who, at the age of fifty-six, underwent a dramatic spiritual crisis that transformed him into the most prolific and systematic visionary of the 18th century. For the remaining three decades of his life he claimed to travel daily in the spiritual world, conversing with angels and spirits and receiving revelations that he transcribed in dozens of volumes of extraordinary scope and detail.</p>
+    </div>
+
+    <div class="os-card">
+      <h2 class="font-cinzel text-xl text-amber-300 mb-3">The Scientist &amp; the Crisis</h2>
+      <div class="text-amber-100/80 leading-relaxed space-y-3">
+        <p>Before his mystical awakening, Swedenborg was one of the most accomplished polymaths of his age. Born in Stockholm in 1688 to a bishop father who instilled a deep Lutheran piety, he received an exceptional education and spent years travelling Europe, studying with the greatest scientists of the day. He made significant contributions to metallurgy, mechanics, astronomy, physiology, and anatomy — his anatomical treatises on the brain and nervous system anticipate several later discoveries — and served for decades as Assessor Extraordinary on the Swedish Board of Mines. He was also a member of the Swedish House of Nobility.</p>
+        <p>In 1744–45, Swedenborg began recording a series of increasingly intense dreams and visions in his private <em>Journal of Dreams</em>. The climactic experience came in London in April 1745, when, by his account, Christ appeared to him in a vision and commissioned him to reveal the true spiritual meaning of the scriptures to humankind. From that point, Swedenborg's life was transformed: he gradually withdrew from scientific work and devoted himself entirely to his visionary theology, claiming that his spiritual senses had been opened so that he could perceive the spiritual world simultaneously with the physical world.</p>
+      </div>
+    </div>
+
+    <div class="os-card">
+      <h2 class="font-cinzel text-xl text-amber-300 mb-3">The Spiritual World &amp; Doctrine of Correspondences</h2>
+      <div class="text-amber-100/80 leading-relaxed space-y-3">
+        <p>Swedenborg's theology rests on two foundational principles: the doctrine of correspondences and the reality of the spiritual world as a realm parallel to and interpenetrating the physical world. The doctrine of correspondences — which Swedenborg elaborated at enormous length in his <em>Arcana Coelestia</em> (Heavenly Arcana, 8 volumes, 1749–56), a verse-by-verse spiritual commentary on Genesis and Exodus — holds that every natural object and phenomenon corresponds to and symbolically represents a spiritual reality. The sun of the natural world corresponds to the divine love; fire corresponds to spiritual love and hatred; water corresponds to spiritual truth; mountains correspond to higher states of love and wisdom. By reading these correspondences, the spiritual meaning hidden within the literal words of scripture is revealed.</p>
+        <p>Swedenborg's descriptions of the spiritual world in works such as <em>Heaven and Hell</em> (1758), <em>Conjugial Love</em> (1768), and <em>True Christian Religion</em> (1771) present an extraordinarily detailed and coherent geography of the afterlife. Heaven, for Swedenborg, is organised into three distinct regions corresponding to three degrees of love and wisdom. Hell is not a punishment imposed by God but a state freely chosen by those who have made selfishness and evil the centre of their lives: the spiritual world is simply the revelation of what each soul truly is.</p>
+        <p>One of Swedenborg's most distinctive teachings concerns the nature of marriage and love. In <em>Conjugial Love</em>, he argued that true marriage is a spiritual union that continues and is perfected after death — the union of two souls who together constitute one complete spiritual being, representing the union of love and wisdom. This doctrine of the "conjugial angel" — the married couple as the image of divine love — had a profound influence on later spiritualist and New Age concepts of twin flames and soul mates.</p>
+      </div>
+    </div>
+
+    <div class="os-card">
+      <h2 class="font-cinzel text-xl text-amber-300 mb-3">Psychic Phenomena &amp; Contemporary Impact</h2>
+      <div class="text-amber-100/80 leading-relaxed space-y-3">
+        <p>Swedenborg's contemporaries were fascinated and troubled by accounts of apparent paranormal phenomena associated with him. The most celebrated case was the "Stockholm fire" incident of 1759, reported by several reliable witnesses including the philosopher Immanuel Kant, who investigated it carefully. Swedenborg was at a dinner party in Gothenburg when he reportedly described, in real time, a fire raging in Stockholm — 300 miles away — including its progress and the moment of its arrest. When a courier arrived two days later, his account matched Swedenborg's description precisely. Kant, though ultimately sceptical of Swedenborg's theological claims, found the fire incident and other reported phenomena too well-attested to dismiss.</p>
+        <p>The philosopher Immanuel Kant wrote a critical but ambivalent analysis of Swedenborg in <em>Dreams of a Spirit-Seer</em> (1766), acknowledging the uncanny quality of Swedenborg's claims while resisting their metaphysical implications. This encounter with Swedenborg was, according to some scholars, one of the stimuli that drove Kant toward his critical philosophy — the attempt to establish the proper limits of human knowledge and the dangers of metaphysical overreach.</p>
+      </div>
+    </div>
+
+    <div class="os-card">
+      <h2 class="font-cinzel text-xl text-amber-300 mb-3">Legacy &amp; the New Church</h2>
+      <div class="text-amber-100/80 leading-relaxed space-y-3">
+        <p>Shortly after Swedenborg's death in 1772, his followers organised the "New Church" (formally the General Conference of the New Church or the New Jerusalem Church), founded in England in 1787, to propagate his theological teachings. Though never large, the Swedenborgian church attracted intellectually distinguished members including the poet William Blake (who was deeply influenced by and deeply critical of Swedenborg), the poet Samuel Taylor Coleridge, and the philosopher and theologian Henry James Sr. (father of the novelist Henry James and the psychologist William James).</p>
+        <p>Swedenborg's broader influence on Western culture and esotericism was enormous. The 19th-century American Spiritualist movement — the movement that held séances to communicate with the dead — drew directly on Swedenborg's vision of the spiritual world as a realm inhabited by spirits who could communicate with the living. The Transcendentalists, particularly Ralph Waldo Emerson, were profoundly influenced by Swedenborg's doctrine of correspondences, which Emerson acknowledged in his essay on Swedenborg in <em>Representative Men</em> (1850). Helena Blavatsky's Theosophy, Rudolf Steiner's Anthroposophy, and numerous New Age teachings all show significant Swedenborgian influence, particularly in their detailed descriptions of the afterlife and the spiritual world.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="relative z-10 text-center py-8 text-amber-300/50 text-xs">
+    <p class="italic">"The angels of heaven are not known by their wings, but by their love." — Emanuel Swedenborg</p>
+    <p class="mt-2">Esoteric Wisdom · Built with ✨ in Rust</p>
+    <p class="mt-2"><a href="/esoteric-figures" class="hover:text-amber-300 transition-colors">← Esoteric Figures</a></p>
+  </footer>
+
+<script>
+  const sf = document.getElementById('starfield');
+  for (let i = 0; i < 180; i++) {
+    const s = document.createElement('div');
+    s.className = 'star';
+    const size = Math.random() * 2.5 + 0.5;
+    s.style.cssText = `width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--dur:${2+Math.random()*4}s;--delay:${Math.random()*5}s;opacity:${0.2+Math.random()*0.8};`;
+    sf.appendChild(s);
+  }
+</script>
+</body>
+</html>
