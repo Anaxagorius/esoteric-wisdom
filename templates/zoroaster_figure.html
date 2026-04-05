@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Zoroaster — Esoteric Wisdom</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <meta property="og:title" content="Zoroaster — Esoteric Wisdom" />
+  <meta property="og:description" content="Explore Zoroaster (Zarathustra) — ancient Iranian prophet, founder of Zoroastrianism, and visionary of the cosmic struggle between light and darkness." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://esoteric-wisdom.onrender.com/esoteric-figures/zoroaster/" />
+  <meta property="og:image" content="https://esoteric-wisdom.onrender.com/og-image.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <style>
+    body { font-family: 'Raleway', sans-serif; }
+    .font-cinzel { font-family: 'Cinzel Decorative', cursive; }
+    @keyframes twinkle { 0%,100%{opacity:0.2;transform:scale(1);} 50%{opacity:1;transform:scale(1.4);} }
+    @keyframes float { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-12px);} }
+    @keyframes shimmer { 0%{background-position:0% 50%;} 100%{background-position:200% 50%;} }
+    .star { position:absolute; width:2px; height:2px; background:white; border-radius:50%; animation:twinkle 3s infinite; }
+    .aurora-text {
+      background: linear-gradient(90deg, #b45309, #d97706, #92400e, #fde68a, #b45309);
+      background-size: 300% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 6s linear infinite;
+    }
+    .floating { animation: float 4s ease-in-out infinite; }
+    .nav-link { position:relative; transition:all 0.3s; }
+    .nav-link::after { content:''; position:absolute; bottom:-2px; left:0; width:0; height:1px; background:#f59e0b; transition:width 0.3s; }
+    .nav-link:hover::after { width:100%; }
+    .os-card {
+      background: linear-gradient(135deg, rgba(180,83,9,0.12), rgba(120,53,15,0.08));
+      border: 1px solid rgba(180,83,9,0.25);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      transition: all 0.3s;
+    }
+    .os-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 0 24px rgba(180,83,9,0.20);
+      border-color: rgba(180,83,9,0.5);
+    }
+  </style>
+</head>
+<body class="min-h-screen text-amber-100 overflow-x-hidden"
+      style="background: radial-gradient(ellipse at top, #1a0e00 0%, #2d1a00 25%, #0a0500 60%, #000000 100%);">
+
+  <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+
+  <nav class="sticky top-0 z-50 flex items-center justify-between px-6 py-3 bg-black/40 backdrop-blur-md border-b border-amber-700/30 flex-wrap gap-y-2">
+    <a href="/home" class="font-cinzel text-amber-300 text-sm tracking-widest shrink-0">✦ Esoteric Wisdom ✦</a>
+    <div class="flex items-center gap-x-3 gap-y-1 text-xs text-violet-200 flex-wrap justify-end">
+      <a href="/astrology" class="nav-link hover:text-amber-300 transition-colors">Astrology</a>
+      <a href="/meditation" class="nav-link hover:text-amber-300 transition-colors">Meditation</a>
+      <a href="/tarot/select" class="nav-link hover:text-amber-300 transition-colors">Tarot</a>
+      <a href="/numerology" class="nav-link hover:text-amber-300 transition-colors">Numerology</a>
+      <a href="/crystals" class="nav-link hover:text-amber-300 transition-colors">Crystals</a>
+      <a href="/runes" class="nav-link hover:text-amber-300 transition-colors">Runes</a>
+      <a href="/shamanism" class="nav-link hover:text-amber-300 transition-colors">Shamanism</a>
+      <a href="/druidism" class="nav-link hover:text-amber-300 transition-colors">Druidism</a>
+      <a href="/akashic-records" class="nav-link hover:text-amber-300 transition-colors">Akashic Records</a>
+      <a href="/wicca" class="nav-link hover:text-amber-300 transition-colors">Wicca</a>
+      <a href="/alchemy" class="nav-link hover:text-amber-300 transition-colors">Alchemy</a>
+      <a href="/gateway-process" class="nav-link hover:text-amber-300 transition-colors">Gateway Process</a>
+      <a href="/remote-viewing" class="nav-link hover:text-amber-300 transition-colors">Remote Viewing</a>
+      <a href="/khasarov-mirror" class="nav-link hover:text-amber-300 transition-colors">Khasarov Mirror</a>
+      <a href="/western-esotericism" class="nav-link hover:text-amber-300 transition-colors">Western Esotericism</a>
+      <a href="/eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Eastern Esotericism</a>
+      <a href="/indigenous-esotericism" class="nav-link hover:text-amber-300 transition-colors">Indigenous Esotericism</a>
+      <a href="/middle-eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Middle Eastern Mysteries</a>
+      <a href="/esoteric-practices" class="nav-link hover:text-amber-300 transition-colors">Esoteric Practices</a>
+      <a href="/esoteric-corpora" class="nav-link hover:text-amber-300 transition-colors">Sacred Texts</a>
+      <a href="/esoteric-figures" class="nav-link text-amber-300 font-semibold transition-colors">Esoteric Figures</a>
+      <a href="/orders-societies" class="nav-link hover:text-amber-300 transition-colors">Orders &amp; Societies</a>
+      <a href="/mythologies-cosmologies" class="nav-link hover:text-amber-300 transition-colors">Mythologies &amp; Cosmologies</a>
+      <a href="/journal/reflections" class="nav-link text-emerald-300 hover:text-emerald-200 transition-colors">✨ Reflections</a>
+      <a href="https://ko-fi.com/esotericwisdom" target="_blank" rel="noopener noreferrer"
+         class="px-3 py-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-white font-semibold hover:scale-105 transition-transform shrink-0">☕ Support</a>
+    </div>
+  </nav>
+
+  <div class="relative z-10 max-w-4xl mx-auto px-4 pt-6 pb-12 space-y-6">
+    <div class="text-sm text-amber-300/70 mb-6">
+      <a href="/esoteric-figures" class="hover:text-amber-200 transition-colors">← Esoteric Figures</a>
+    </div>
+
+    <div class="text-center py-8">
+      <div class="text-6xl mb-4 floating">🔥</div>
+      <h1 class="font-cinzel text-3xl md:text-4xl aurora-text mb-4">Zoroaster</h1>
+      <p class="text-amber-200/80 max-w-2xl mx-auto leading-relaxed">Zoroaster — known in the Avestan language as Zarathustra — was the ancient Iranian prophet and poet-sage who founded Zoroastrianism, one of the world's oldest monotheistic religions. His vision of a cosmos ordered by the eternal conflict between Ahura Mazda (Wise Lord) and Angra Mainyu (Destructive Spirit) shaped not only Persian religion but profoundly influenced Judaism, Christianity, Islam, and the Western esoteric tradition.</p>
+    </div>
+
+    <div class="os-card">
+      <h2 class="font-cinzel text-xl text-amber-300 mb-3">Life &amp; Historical Context</h2>
+      <div class="text-amber-100/80 leading-relaxed space-y-3">
+        <p>The dating of Zoroaster remains one of the most contested questions in the history of religion. Ancient Greek sources placed him extraordinarily early — 6,000 or even 6,000 years before the Trojan War — reflecting the Greek perception of him as a figure of primordial antiquity and magical power. Modern scholars have proposed dates ranging from approximately 1500–1000 BCE (based on the archaic language of the <em>Gathas</em>, Zoroaster's own hymns) to the 7th–6th century BCE, roughly contemporary with the Hebrew prophets and the Upanishadic sages of India.</p>
+        <p>The <em>Gathas</em> — seventeen hymns preserved in the sacred text of the <em>Avesta</em> — are our most direct source for Zoroaster's own thought and experience. In these intensely personal poems, composed in an archaic dialect of Old Avestan, Zoroaster describes his prophetic call, his struggles against opponents who worshipped the <em>daēvas</em> (demonised deities), and his vision of a cosmic moral order governed by Ahura Mazda. The hymns reveal a man of extraordinary spiritual vision and also of considerable personal suffering: he complains of persecution, of exile, of the difficulty of finding patrons willing to support his reform of the traditional Iranian religion.</p>
+        <p>Zoroaster's eventual patron was King Vishtaspa (possibly the father of Darius the Great, though this identification is disputed), whose conversion to the new faith gave Zoroastrianism the royal support it needed to spread. The prophet himself was said to have been martyred during the sack of the sacred fire-temple at Balkh — a death that reinforced the paradigm of the prophet as a figure who suffers for the truth he proclaims.</p>
+      </div>
+    </div>
+
+    <div class="os-card">
+      <h2 class="font-cinzel text-xl text-amber-300 mb-3">Cosmic Dualism &amp; Sacred Fire</h2>
+      <div class="text-amber-100/80 leading-relaxed space-y-3">
+        <p>The cardinal doctrine of Zoroastrianism is ethical and cosmic dualism: the universe is the battleground of two primal spirits — Spenta Mainyu, the Holy Spirit (later identified with Ahura Mazda himself) and Angra Mainyu (Ahriman), the Destructive Spirit. These two spirits chose, at the beginning of time, between truth and falsehood, life and death, light and darkness. Every human being is called to choose likewise, and the collective choices of humanity determine the outcome of the cosmic conflict, which will culminate in the <em>Frashokereti</em> — the final renovation of the world, in which evil is annihilated and all of creation returns to its original purity.</p>
+        <p>Fire held supreme sacred significance in Zoroastrian worship as the visible emblem of Ahura Mazda's divine light and truth (<em>asha</em>). The great fire temples of ancient Iran — Adur Gushnasp, Adur Farnbag, and Adur Burzen-Mihr — were regarded as sacred centres of cosmic energy, and the maintenance of the sacred flame was a priestly duty of the highest importance. The <em>Magi</em>, the Zoroastrian priestly caste of the Medes and Persians, became famous throughout the ancient world as astrologers, diviners, and fire-priests — and it is from this caste that the word "magic" ultimately derives.</p>
+      </div>
+    </div>
+
+    <div class="os-card">
+      <h2 class="font-cinzel text-xl text-amber-300 mb-3">Influence on Western Esotericism</h2>
+      <div class="text-amber-100/80 leading-relaxed space-y-3">
+        <p>In the Graeco-Roman world, Zoroaster was regarded with immense reverence as the archetypal magus — a figure of supreme wisdom who had mastered the secrets of astronomy, astrology, natural magic, and the hidden powers of the cosmos. He was credited with having invented magic and astrology, and his name was attached to numerous spurious texts on these subjects. The <em>Chaldaean Oracles</em> — a second-century CE text of enormous influence in later Neoplatonism and Hermetism — was attributed to a "Julianus the Theurgist" but claimed to represent the wisdom of Zoroaster and the Chaldaean magi.</p>
+        <p>Zoroastrian eschatology — its doctrines of the Last Judgement, the individual soul's fate after death (the crossing of the Chinvat Bridge, where the soul encounters its own deeds made flesh), the resurrection of the body, and the final renovation of the cosmos — profoundly shaped Jewish apocalypticism during the Persian period (6th–4th centuries BCE), and through Judaism influenced Christianity and Islam. Scholars have traced striking parallels between Zoroastrian doctrines and the Dead Sea Scrolls' dualism of the Sons of Light and Sons of Darkness.</p>
+        <p>Nietzsche's <em>Also Sprach Zarathustra</em> (1883–85) gave Zoroaster a second life in Western philosophical culture, using the prophet as a mouthpiece for the proclamation of the Superman and the transvaluation of all values — though Nietzsche's Zarathustra is a deliberate inversion of the historical prophet's ethical dualism. Nonetheless, this literary resurrection ensured that the name Zarathustra would resonate in Western culture far beyond its specifically religious context.</p>
+      </div>
+    </div>
+
+    <div class="os-card">
+      <h2 class="font-cinzel text-xl text-amber-300 mb-3">Legacy</h2>
+      <div class="text-amber-100/80 leading-relaxed space-y-3">
+        <p>Zoroastrianism survives today primarily among the Parsis of India (descendants of Iranian Zoroastrians who fled the Islamic conquest of Persia in the 7th–10th centuries CE) and the remaining Zoroastrians of Iran. Despite its relatively small numbers — perhaps 100,000–200,000 adherents worldwide — the tradition maintains its ancient liturgical language, its sacred fire temples, and its distinctive moral framework of good thoughts, good words, and good deeds (<em>humata, hūkhta, hvarshta</em>).</p>
+        <p>Zoroaster's legacy in the history of religion is disproportionate to the current size of his tradition. His radical monotheism, his ethical dualism, his doctrine of free moral choice as the engine of cosmic history, and his vision of a universal eschatological renovation have shaped the three great Abrahamic faiths and through them the moral consciousness of Western civilisation. In the Western esoteric tradition, he continues to represent the archetype of the prophet-mage: the figure who receives divine revelation and translates it into a practical teaching for the transformation of the world.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="relative z-10 text-center py-8 text-amber-300/50 text-xs">
+    <p class="italic">"Good thoughts, good words, good deeds." — Zoroastrian maxim</p>
+    <p class="mt-2">Esoteric Wisdom · Built with ✨ in Rust</p>
+    <p class="mt-2"><a href="/esoteric-figures" class="hover:text-amber-300 transition-colors">← Esoteric Figures</a></p>
+  </footer>
+
+<script>
+  const sf = document.getElementById('starfield');
+  for (let i = 0; i < 180; i++) {
+    const s = document.createElement('div');
+    s.className = 'star';
+    const size = Math.random() * 2.5 + 0.5;
+    s.style.cssText = `width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--dur:${2+Math.random()*4}s;--delay:${Math.random()*5}s;opacity:${0.2+Math.random()*0.8};`;
+    sf.appendChild(s);
+  }
+</script>
+</body>
+</html>

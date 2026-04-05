@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jacob Boehme — Esoteric Wisdom</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <meta property="og:title" content="Jacob Boehme — Esoteric Wisdom" />
+  <meta property="og:description" content="Explore Jacob Boehme — German mystic, shoemaker-sage, and visionary whose theosophical writings on the divine nature profoundly influenced Western esotericism." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://esoteric-wisdom.onrender.com/esoteric-figures/jacob-boehme/" />
+  <meta property="og:image" content="https://esoteric-wisdom.onrender.com/og-image.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <style>
+    body { font-family: 'Raleway', sans-serif; }
+    .font-cinzel { font-family: 'Cinzel Decorative', cursive; }
+    @keyframes twinkle { 0%,100%{opacity:0.2;transform:scale(1);} 50%{opacity:1;transform:scale(1.4);} }
+    @keyframes float { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-12px);} }
+    @keyframes shimmer { 0%{background-position:0% 50%;} 100%{background-position:200% 50%;} }
+    .star { position:absolute; width:2px; height:2px; background:white; border-radius:50%; animation:twinkle 3s infinite; }
+    .aurora-text {
+      background: linear-gradient(90deg, #b45309, #d97706, #92400e, #fde68a, #b45309);
+      background-size: 300% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 6s linear infinite;
+    }
+    .floating { animation: float 4s ease-in-out infinite; }
+    .nav-link { position:relative; transition:all 0.3s; }
+    .nav-link::after { content:''; position:absolute; bottom:-2px; left:0; width:0; height:1px; background:#f59e0b; transition:width 0.3s; }
+    .nav-link:hover::after { width:100%; }
+    .os-card {
+      background: linear-gradient(135deg, rgba(180,83,9,0.12), rgba(120,53,15,0.08));
+      border: 1px solid rgba(180,83,9,0.25);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      transition: all 0.3s;
+    }
+    .os-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 0 24px rgba(180,83,9,0.20);
+      border-color: rgba(180,83,9,0.5);
+    }
+  </style>
+</head>
+<body class="min-h-screen text-amber-100 overflow-x-hidden"
+      style="background: radial-gradient(ellipse at top, #1a0e00 0%, #2d1a00 25%, #0a0500 60%, #000000 100%);">
+
+  <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+
+  <nav class="sticky top-0 z-50 flex items-center justify-between px-6 py-3 bg-black/40 backdrop-blur-md border-b border-amber-700/30 flex-wrap gap-y-2">
+    <a href="/home" class="font-cinzel text-amber-300 text-sm tracking-widest shrink-0">✦ Esoteric Wisdom ✦</a>
+    <div class="flex items-center gap-x-3 gap-y-1 text-xs text-violet-200 flex-wrap justify-end">
+      <a href="/astrology" class="nav-link hover:text-amber-300 transition-colors">Astrology</a>
+      <a href="/meditation" class="nav-link hover:text-amber-300 transition-colors">Meditation</a>
+      <a href="/tarot/select" class="nav-link hover:text-amber-300 transition-colors">Tarot</a>
+      <a href="/numerology" class="nav-link hover:text-amber-300 transition-colors">Numerology</a>
+      <a href="/crystals" class="nav-link hover:text-amber-300 transition-colors">Crystals</a>
+      <a href="/runes" class="nav-link hover:text-amber-300 transition-colors">Runes</a>
+      <a href="/shamanism" class="nav-link hover:text-amber-300 transition-colors">Shamanism</a>
+      <a href="/druidism" class="nav-link hover:text-amber-300 transition-colors">Druidism</a>
+      <a href="/akashic-records" class="nav-link hover:text-amber-300 transition-colors">Akashic Records</a>
+      <a href="/wicca" class="nav-link hover:text-amber-300 transition-colors">Wicca</a>
+      <a href="/alchemy" class="nav-link hover:text-amber-300 transition-colors">Alchemy</a>
+      <a href="/gateway-process" class="nav-link hover:text-amber-300 transition-colors">Gateway Process</a>
+      <a href="/remote-viewing" class="nav-link hover:text-amber-300 transition-colors">Remote Viewing</a>
+      <a href="/khasarov-mirror" class="nav-link hover:text-amber-300 transition-colors">Khasarov Mirror</a>
+      <a href="/western-esotericism" class="nav-link hover:text-amber-300 transition-colors">Western Esotericism</a>
+      <a href="/eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Eastern Esotericism</a>
+      <a href="/indigenous-esotericism" class="nav-link hover:text-amber-300 transition-colors">Indigenous Esotericism</a>
+      <a href="/middle-eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Middle Eastern Mysteries</a>
+      <a href="/esoteric-practices" class="nav-link hover:text-amber-300 transition-colors">Esoteric Practices</a>
+      <a href="/esoteric-corpora" class="nav-link hover:text-amber-300 transition-colors">Sacred Texts</a>
+      <a href="/esoteric-figures" class="nav-link text-amber-300 font-semibold transition-colors">Esoteric Figures</a>
+      <a href="/orders-societies" class="nav-link hover:text-amber-300 transition-colors">Orders &amp; Societies</a>
+      <a href="/mythologies-cosmologies" class="nav-link hover:text-amber-300 transition-colors">Mythologies &amp; Cosmologies</a>
+      <a href="/journal/reflections" class="nav-link text-emerald-300 hover:text-emerald-200 transition-colors">✨ Reflections</a>
+      <a href="https://ko-fi.com/esotericwisdom" target="_blank" rel="noopener noreferrer"
+         class="px-3 py-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-white font-semibold hover:scale-105 transition-transform shrink-0">☕ Support</a>
+    </div>
+  </nav>
+
+  <div class="relative z-10 max-w-4xl mx-auto px-4 pt-6 pb-12 space-y-6">
+    <div class="text-sm text-amber-300/70 mb-6">
+      <a href="/esoteric-figures" class="hover:text-amber-200 transition-colors">← Esoteric Figures</a>
+    </div>
+
+    <div class="text-center py-8">
+      <div class="text-6xl mb-4 floating">✨</div>
+      <h1 class="font-cinzel text-3xl md:text-4xl aurora-text mb-4">Jacob Boehme</h1>
+      <p class="text-amber-200/80 max-w-2xl mx-auto leading-relaxed">Jacob Boehme (1575–1624) was a German Lutheran mystic and theosophist whose visionary writings — dense, ecstatic, and profoundly original — constitute one of the most extraordinary bodies of Christian mystical theology ever produced. A humble shoemaker from Görlitz in Silesia, Boehme received illuminations of extraordinary depth that he struggled to record in a language of symbolic power unequalled in the Western mystical tradition.</p>
+    </div>
+
+    <div class="os-card">
+      <h2 class="font-cinzel text-xl text-amber-300 mb-3">Illumination &amp; Early Writings</h2>
+      <div class="text-amber-100/80 leading-relaxed space-y-3">
+        <p>Jacob Boehme was born in Alt Seidenberg (now Stary Zawidów in Poland) in 1575 and trained as a shoemaker, setting up his own shop in Görlitz around 1599. By his own account, he had experienced mystical illuminations from childhood, but his decisive breakthrough came around 1600 when, gazing at a pewter dish glinting in sunlight, he entered a state of ecstatic vision in which "the gate was opened to me, that in one quarter of an hour I saw and knew more than if I had been many years together at an university." In this illumination, Boehme claimed to have perceived the inner nature of all things — the relationships between the divine and the created world, the nature of good and evil, and the hidden spiritual dynamics of the cosmos.</p>
+        <p>Boehme spent the following twelve years digesting and reflecting upon his illumination before writing his first work, <em>Morgenröte im Aufgang</em> (Aurora, or the Dawning of the Day, c. 1612). When a copy circulated among the Görlitz clergy, the Lutheran pastor Gregorius Richter reacted with outrage, denouncing Boehme from the pulpit and demanding that he cease writing. Boehme obeyed for seven years — until 1619, when a further burst of illumination impelled him to write his mature works, including <em>De tribus principiis</em> (The Three Principles of the Divine Essence), <em>De signatura rerum</em> (The Signature of All Things), and <em>Mysterium magnum</em> (The Great Mystery), a vast commentary on Genesis.</p>
+      </div>
+    </div>
+
+    <div class="os-card">
+      <h2 class="font-cinzel text-xl text-amber-300 mb-3">The Ungrund &amp; Divine Self-Disclosure</h2>
+      <div class="text-amber-100/80 leading-relaxed space-y-3">
+        <p>At the heart of Boehme's theosophy lies the concept of the <em>Ungrund</em> — the "groundless ground" or "abyss" — the ultimate divine reality prior to any differentiation or self-determination. The Ungrund is neither being nor non-being, neither light nor darkness, neither will nor desire: it is the absolute, undifferentiated infinity from which all things emerge. In this concept, Boehme anticipated much of later German Idealist philosophy — Kant's noumenon, Schelling's Absolute, Hegel's Spirit — and the Kabbalistic concept of the <em>Ein Sof</em> (the Infinite) has been seen as a possible influence on his thought.</p>
+        <p>From the Ungrund, God awakens to self-knowledge through a process Boehme describes in alchemical and cosmological imagery. The eternal will "desires" itself, and through this desire creates the "dark fire" of contraction and self-assertion (the Father principle), which is then transformed by the "light fire" of love and self-giving (the Son principle), with the Holy Spirit as the harmonising and outward-flowing principle. Evil, for Boehme, is not a separate creation but the necessary dark pole of divine reality — the wrath and contraction of the Father that, when it erupts beyond its proper function, produces the world of fallen existence. This profoundly dialectical vision of the divine nature as necessarily containing both light and darkness, wrath and love, would exercise an enormous influence on later German philosophy and theology.</p>
+      </div>
+    </div>
+
+    <div class="os-card">
+      <h2 class="font-cinzel text-xl text-amber-300 mb-3">The Signature of All Things</h2>
+      <div class="text-amber-100/80 leading-relaxed space-y-3">
+        <p><em>De signatura rerum</em> (The Signature of All Things, 1621) is perhaps Boehme's most practically accessible work. Drawing on the Paracelsian doctrine of signatures — the idea that every natural object bears an outward sign or signature of its inner spiritual quality — Boehme developed an elaborate hermeneutic of nature as a living spiritual language. Every plant, stone, animal, and natural phenomenon reveals, through its form, colour, fragrance, and behaviour, the spiritual forces that have brought it into being and that dwell within it. The study of signatures is thus a form of spiritual reading — a decoding of the "Book of Nature" that complements and illumines the reading of the scriptures.</p>
+        <p>This doctrine of natural signatures had profound implications for medicine, alchemy, and magic, and Boehme's elaboration of it drew on the whole tradition of Renaissance natural magic from Paracelsus and the Hermetic tradition. It also expressed Boehme's fundamental conviction that the material world is not a fallen prison from which the soul must escape but a symbolic expression of the divine life — a "great mystery" in which the inner nature of God is made visible to those with eyes to see.</p>
+      </div>
+    </div>
+
+    <div class="os-card">
+      <h2 class="font-cinzel text-xl text-amber-300 mb-3">Legacy &amp; Influence</h2>
+      <div class="text-amber-100/80 leading-relaxed space-y-3">
+        <p>Boehme died in 1624, reconciled with his church but never fully understood by his contemporaries. His posthumous influence, however, was vast and enduring. His works were translated into Dutch, English, French, and Latin within decades of his death and circulated widely among the pietist, theosophical, and mystical circles that flourished in 17th and 18th century Europe. The Behmenists — English followers of Boehme in the late 17th century — included figures such as John Pordage, Jane Leade, and the Philadelphian Society, who developed his ideas in a decidedly mystical and millenarian direction.</p>
+        <p>In the 18th and 19th centuries, Boehme's influence extended to some of the greatest figures in German intellectual culture. Johann Georg Hamann, the "Magus of the North," drew deeply on Boehme's vision of nature as divine language. Friedrich Schelling's Naturphilosophie and his philosophy of freedom (especially the <em>Philosophical Investigations into the Essence of Human Freedom</em>, 1809) show unmistakable Boehmean influences in their treatment of the dark ground of God and the nature of evil. Hegel acknowledged Boehme as "the first German philosopher" and praised his dialectical vision of the divine life. Friedrich von Hardenberg (Novalis) and other German Romantics absorbed Boehmean themes into their poetic cosmologies.</p>
+        <p>In the Western esoteric tradition proper, Boehme influenced Rosicrucianism, Freemasonry, Theosophy, and the Anthroposophy of Rudolf Steiner, who regarded Boehme as one of the great initiates of the Western esoteric stream. His vision of the cosmos as a living drama of divine self-disclosure — in which light and darkness, love and wrath, are the two poles of one divine life — remains one of the most profound and original contributions to the spiritual philosophy of the Western world.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="relative z-10 text-center py-8 text-amber-300/50 text-xs">
+    <p class="italic">"In Yes and No all things consist." — Jacob Boehme</p>
+    <p class="mt-2">Esoteric Wisdom · Built with ✨ in Rust</p>
+    <p class="mt-2"><a href="/esoteric-figures" class="hover:text-amber-300 transition-colors">← Esoteric Figures</a></p>
+  </footer>
+
+<script>
+  const sf = document.getElementById('starfield');
+  for (let i = 0; i < 180; i++) {
+    const s = document.createElement('div');
+    s.className = 'star';
+    const size = Math.random() * 2.5 + 0.5;
+    s.style.cssText = `width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--dur:${2+Math.random()*4}s;--delay:${Math.random()*5}s;opacity:${0.2+Math.random()*0.8};`;
+    sf.appendChild(s);
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Helena Blavatsky — Esoteric Wisdom</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <meta property="og:title" content="Helena Blavatsky — Esoteric Wisdom" />
+  <meta property="og:description" content="Explore Helena Petrovna Blavatsky — co-founder of the Theosophical Society, author of The Secret Doctrine, and pivotal figure in modern Western esotericism." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://esoteric-wisdom.onrender.com/esoteric-figures/helena-blavatsky/" />
+  <meta property="og:image" content="https://esoteric-wisdom.onrender.com/og-image.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <style>
+    body { font-family: 'Raleway', sans-serif; }
+    .font-cinzel { font-family: 'Cinzel Decorative', cursive; }
+    @keyframes twinkle { 0%,100%{opacity:0.2;transform:scale(1);} 50%{opacity:1;transform:scale(1.4);} }
+    @keyframes float { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-12px);} }
+    @keyframes shimmer { 0%{background-position:0% 50%;} 100%{background-position:200% 50%;} }
+    .star { position:absolute; width:2px; height:2px; background:white; border-radius:50%; animation:twinkle 3s infinite; }
+    .aurora-text {
+      background: linear-gradient(90deg, #b45309, #d97706, #92400e, #fde68a, #b45309);
+      background-size: 300% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 6s linear infinite;
+    }
+    .floating { animation: float 4s ease-in-out infinite; }
+    .nav-link { position:relative; transition:all 0.3s; }
+    .nav-link::after { content:''; position:absolute; bottom:-2px; left:0; width:0; height:1px; background:#f59e0b; transition:width 0.3s; }
+    .nav-link:hover::after { width:100%; }
+    .os-card {
+      background: linear-gradient(135deg, rgba(180,83,9,0.12), rgba(120,53,15,0.08));
+      border: 1px solid rgba(180,83,9,0.25);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      transition: all 0.3s;
+    }
+    .os-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 0 24px rgba(180,83,9,0.20);
+      border-color: rgba(180,83,9,0.5);
+    }
+  </style>
+</head>
+<body class="min-h-screen text-amber-100 overflow-x-hidden"
+      style="background: radial-gradient(ellipse at top, #1a0e00 0%, #2d1a00 25%, #0a0500 60%, #000000 100%);">
+
+  <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+
+  <nav class="sticky top-0 z-50 flex items-center justify-between px-6 py-3 bg-black/40 backdrop-blur-md border-b border-amber-700/30 flex-wrap gap-y-2">
+    <a href="/home" class="font-cinzel text-amber-300 text-sm tracking-widest shrink-0">✦ Esoteric Wisdom ✦</a>
+    <div class="flex items-center gap-x-3 gap-y-1 text-xs text-violet-200 flex-wrap justify-end">
+      <a href="/astrology" class="nav-link hover:text-amber-300 transition-colors">Astrology</a>
+      <a href="/meditation" class="nav-link hover:text-amber-300 transition-colors">Meditation</a>
+      <a href="/tarot/select" class="nav-link hover:text-amber-300 transition-colors">Tarot</a>
+      <a href="/numerology" class="nav-link hover:text-amber-300 transition-colors">Numerology</a>
+      <a href="/crystals" class="nav-link hover:text-amber-300 transition-colors">Crystals</a>
+      <a href="/runes" class="nav-link hover:text-amber-300 transition-colors">Runes</a>
+      <a href="/shamanism" class="nav-link hover:text-amber-300 transition-colors">Shamanism</a>
+      <a href="/druidism" class="nav-link hover:text-amber-300 transition-colors">Druidism</a>
+      <a href="/akashic-records" class="nav-link hover:text-amber-300 transition-colors">Akashic Records</a>
+      <a href="/wicca" class="nav-link hover:text-amber-300 transition-colors">Wicca</a>
+      <a href="/alchemy" class="nav-link hover:text-amber-300 transition-colors">Alchemy</a>
+      <a href="/gateway-process" class="nav-link hover:text-amber-300 transition-colors">Gateway Process</a>
+      <a href="/remote-viewing" class="nav-link hover:text-amber-300 transition-colors">Remote Viewing</a>
+      <a href="/khasarov-mirror" class="nav-link hover:text-amber-300 transition-colors">Khasarov Mirror</a>
+      <a href="/western-esotericism" class="nav-link hover:text-amber-300 transition-colors">Western Esotericism</a>
+      <a href="/eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Eastern Esotericism</a>
+      <a href="/indigenous-esotericism" class="nav-link hover:text-amber-300 transition-colors">Indigenous Esotericism</a>
+      <a href="/middle-eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Middle Eastern Mysteries</a>
+      <a href="/esoteric-practices" class="nav-link hover:text-amber-300 transition-colors">Esoteric Practices</a>
+      <a href="/esoteric-corpora" class="nav-link hover:text-amber-300 transition-colors">Sacred Texts</a>
+      <a href="/esoteric-figures" class="nav-link text-amber-300 font-semibold transition-colors">Esoteric Figures</a>
+      <a href="/orders-societies" class="nav-link hover:text-amber-300 transition-colors">Orders &amp; Societies</a>
+      <a href="/mythologies-cosmologies" class="nav-link hover:text-amber-300 transition-colors">Mythologies &amp; Cosmologies</a>
+      <a href="/journal/reflections" class="nav-link text-emerald-300 hover:text-emerald-200 transition-colors">✨ Reflections</a>
+      <a href="https://ko-fi.com/esotericwisdom" target="_blank" rel="noopener noreferrer"
+         class="px-3 py-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-white font-semibold hover:scale-105 transition-transform shrink-0">☕ Support</a>
+    </div>
+  </nav>
+
+  <div class="relative z-10 max-w-4xl mx-auto px-4 pt-6 pb-12 space-y-6">
+    <div class="text-sm text-amber-300/70 mb-6">
+      <a href="/esoteric-figures" class="hover:text-amber-200 transition-colors">← Esoteric Figures</a>
+    </div>
+
+    <div class="text-center py-8">
+      <div class="text-6xl mb-4 floating">🌍</div>
+      <h1 class="font-cinzel text-3xl md:text-4xl aurora-text mb-4">Helena Blavatsky</h1>
+      <p class="text-amber-200/80 max-w-2xl mx-auto leading-relaxed">Helena Petrovna Blavatsky (1831–1891) was the most influential esotericist of the 19th century and one of the founding figures of modern Western esotericism. Co-founder of the Theosophical Society (1875) and author of <em>Isis Unveiled</em> (1877) and <em>The Secret Doctrine</em> (1888), she synthesised Eastern and Western esoteric traditions into a grand cosmological system that shaped the entire subsequent development of occultism, the New Age movement, and academic religious studies.</p>
+    </div>
+
+    <div class="os-card">
+      <h2 class="font-cinzel text-xl text-amber-300 mb-3">Life &amp; Travels</h2>
+      <div class="text-amber-100/80 leading-relaxed space-y-3">
+        <p>Helena Petrovna von Hahn was born in Ekaterinoslav (now Dnipro, Ukraine) in 1831 to a noble Russian family. Her father was a colonel of artillery and her mother a celebrated novelist. From childhood she claimed unusual psychic abilities and a passionate interest in the occult. At seventeen she made a brief and disastrous marriage to a much older military governor, Nikifor Blavatsky, from whom she separated within weeks and whose name she retained throughout her life.</p>
+        <p>The following two decades of Blavatsky's life are extensively documented — largely by herself — but also shrouded in controversy. She claimed to have travelled to Tibet, where she spent years studying with the "Masters" or "Mahatmas" — spiritually advanced beings who had transcended ordinary human limitations and who guided the spiritual development of humanity from their Himalayan retreats. She also claimed extensive travels in Egypt, the Americas, and elsewhere, studying with various teachers and investigating occult phenomena. The verifiable record shows extensive travels through Europe, the Americas, India, and Egypt, interspersed with periods of intense writing and study.</p>
+        <p>In 1873, Blavatsky arrived in New York, where she was immediately drawn into the circles of American Spiritualism — the movement that claimed to communicate with the dead through mediums. In 1875, together with the American lawyer and journalist Henry Steel Olcott and others, she co-founded the Theosophical Society, with the stated aims of forming a universal brotherhood of humanity, studying comparative religion and philosophy, and investigating unexplained laws of nature and the powers latent in humanity.</p>
+      </div>
+    </div>
+
+    <div class="os-card">
+      <h2 class="font-cinzel text-xl text-amber-300 mb-3">The Secret Doctrine &amp; Theosophical Cosmology</h2>
+      <div class="text-amber-100/80 leading-relaxed space-y-3">
+        <p><em>The Secret Doctrine</em> (1888) — Blavatsky's masterwork — is a vast two-volume work of over 1,400 pages presenting what she claimed was the ancient wisdom underlying all the world's religions: the "Secret Doctrine" of the primordial tradition preserved by the Masters in their Himalayan retreats. Drawing on an enormous range of sources — Hindu and Buddhist scriptures, Kabbalah, Neoplatonism, Hermetism, Gnosticism, modern science, and her own purported revelations — Blavatsky constructed a grand cosmological narrative encompassing the evolution of the cosmos, the spiritual hierarchies that govern it, and the evolutionary journey of humanity through successive "root races" and planetary cycles.</p>
+        <p>At the heart of Theosophical cosmology are the principles of cosmic cyclical evolution — the universe passing through immense cycles of manifestation and withdrawal (manvantaras and pralayas) — and the spiritual evolution of individual souls through successive reincarnations on the path toward divine self-realisation. Human beings are not fixed in their current form but are evolving spiritual beings who have passed through mineral, vegetable, and animal kingdoms and who are destined to transcend their current condition and develop fully divine powers.</p>
+        <p>The "root races" doctrine — Blavatsky's account of humanity's evolution through five (and eventually seven) great epochs, each dominated by a distinct humanity — was one of the most influential and also most controversial aspects of Theosophical teaching. The five root races included the Polarians, Hyperboreans, Lemurians, Atlanteans, and the current Aryan root race. While Blavatsky's intent was spiritual-evolutionary rather than racial, her use of the term "Aryan" and her hierarchical account of human development were later misappropriated by racist ideologues — a misuse that she would certainly have rejected.</p>
+      </div>
+    </div>
+
+    <div class="os-card">
+      <h2 class="font-cinzel text-xl text-amber-300 mb-3">The Mahatmas &amp; Controversy</h2>
+      <div class="text-amber-100/80 leading-relaxed space-y-3">
+        <p>Central to Blavatsky's claims was the existence of the "Masters" or "Mahatmas" — adepts of extraordinary spiritual development who lived primarily in Tibet and who had commissioned her to present their teachings to the Western world. The Masters communicated with her (and occasionally with others) through "precipitated letters" — messages that appeared apparently from nowhere — and through her mediumistic faculties. Two of the principal Masters, Koot Hoomi and Morya, carried on an extensive correspondence with the British journalist A. P. Sinnett, preserved in the <em>Mahatma Letters</em> (published 1923).</p>
+        <p>In 1884, the Society for Psychical Research sent Richard Hodgson to investigate the Theosophical headquarters at Adyar, India. Hodgson's 1885 report concluded that Blavatsky had fraudulently manufactured the "Mahatma phenomena" using concealed compartments in a specially built "shrine" cabinet. This report devastated the Theosophical Society and permanently damaged Blavatsky's reputation in mainstream circles. Later scholars — notably Vernon Harrison of the SPR itself, in a 1986 re-analysis — have questioned the adequacy of Hodgson's investigation and suggested that his conclusions were premature; the question of the phenomena's authenticity remains contested to this day.</p>
+      </div>
+    </div>
+
+    <div class="os-card">
+      <h2 class="font-cinzel text-xl text-amber-300 mb-3">Legacy &amp; Influence</h2>
+      <div class="text-amber-100/80 leading-relaxed space-y-3">
+        <p>Whatever the ultimate verdict on Blavatsky's claimed sources and phenomena, her influence on subsequent Western culture has been extraordinary. Theosophy provided the framework within which the modern New Age movement developed, introducing to the Western mainstream the concepts of karma, reincarnation, chakras, spiritual hierarchy, and the Masters — concepts that now permeate popular spirituality. The Theosophical Society also played a crucial role in the revival of Buddhism and Hinduism in Asia (particularly through Olcott's work in Sri Lanka) and in promoting the study of Asian religions in the West.</p>
+        <p>Blavatsky's direct influence on 20th century esotericism was equally vast. Rudolf Steiner began his career as a Theosophist before founding Anthroposophy. Alice Bailey, who claimed to channell a Master called Djwhal Khul, developed a vast body of "Arcane" teaching that built directly on Blavatsky's foundations. The Hermetic Order of the Golden Dawn, Thelema, Wicca, and countless other 20th century movements all operated within a conceptual universe largely shaped by Theosophical ideas. Even in the academic world, the systematic study of Western esotericism as a legitimate field of religious and intellectual history — initiated by scholars such as Antoine Faivre and Wouter Hanegraaff — begins with the recognition of Theosophy as a decisive moment in the modern history of esotericism.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="relative z-10 text-center py-8 text-amber-300/50 text-xs">
+    <p class="italic">"There is no religion higher than truth." — Theosophical Society motto (attributed to Blavatsky)</p>
+    <p class="mt-2">Esoteric Wisdom · Built with ✨ in Rust</p>
+    <p class="mt-2"><a href="/esoteric-figures" class="hover:text-amber-300 transition-colors">← Esoteric Figures</a></p>
+  </footer>
+
+<script>
+  const sf = document.getElementById('starfield');
+  for (let i = 0; i < 180; i++) {
+    const s = document.createElement('div');
+    s.className = 'star';
+    const size = Math.random() * 2.5 + 0.5;
+    s.style.cssText = `width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--dur:${2+Math.random()*4}s;--delay:${Math.random()*5}s;opacity:${0.2+Math.random()*0.8};`;
+    sf.appendChild(s);
+  }
+</script>
+</body>
+</html>
