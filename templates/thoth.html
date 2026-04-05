@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thoth — Esoteric Wisdom</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <meta property="og:title" content="Thoth — Esoteric Wisdom" />
+  <meta property="og:description" content="Explore Thoth — the Egyptian god of wisdom, writing, and magic, cosmic scribe of the divine order and ancestor of the Hermetic tradition." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://esoteric-wisdom.onrender.com/esoteric-figures/thoth/" />
+  <meta property="og:image" content="https://esoteric-wisdom.onrender.com/og-image.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <style>
+    body { font-family: 'Raleway', sans-serif; }
+    .font-cinzel { font-family: 'Cinzel Decorative', cursive; }
+    @keyframes twinkle { 0%,100%{opacity:0.2;transform:scale(1);} 50%{opacity:1;transform:scale(1.4);} }
+    @keyframes float { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-12px);} }
+    @keyframes shimmer { 0%{background-position:0% 50%;} 100%{background-position:200% 50%;} }
+    .star { position:absolute; width:2px; height:2px; background:white; border-radius:50%; animation:twinkle 3s infinite; }
+    .aurora-text {
+      background: linear-gradient(90deg, #b45309, #d97706, #92400e, #fde68a, #b45309);
+      background-size: 300% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 6s linear infinite;
+    }
+    .floating { animation: float 4s ease-in-out infinite; }
+    .nav-link { position:relative; transition:all 0.3s; }
+    .nav-link::after { content:''; position:absolute; bottom:-2px; left:0; width:0; height:1px; background:#f59e0b; transition:width 0.3s; }
+    .nav-link:hover::after { width:100%; }
+    .os-card {
+      background: linear-gradient(135deg, rgba(180,83,9,0.12), rgba(120,53,15,0.08));
+      border: 1px solid rgba(180,83,9,0.25);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      transition: all 0.3s;
+    }
+    .os-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 0 24px rgba(180,83,9,0.20);
+      border-color: rgba(180,83,9,0.5);
+    }
+  </style>
+</head>
+<body class="min-h-screen text-amber-100 overflow-x-hidden"
+      style="background: radial-gradient(ellipse at top, #1a0e00 0%, #2d1a00 25%, #0a0500 60%, #000000 100%);">
+
+  <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+
+  <nav class="sticky top-0 z-50 flex items-center justify-between px-6 py-3 bg-black/40 backdrop-blur-md border-b border-amber-700/30 flex-wrap gap-y-2">
+    <a href="/home" class="font-cinzel text-amber-300 text-sm tracking-widest shrink-0">✦ Esoteric Wisdom ✦</a>
+    <div class="flex items-center gap-x-3 gap-y-1 text-xs text-violet-200 flex-wrap justify-end">
+      <a href="/astrology" class="nav-link hover:text-amber-300 transition-colors">Astrology</a>
+      <a href="/meditation" class="nav-link hover:text-amber-300 transition-colors">Meditation</a>
+      <a href="/tarot/select" class="nav-link hover:text-amber-300 transition-colors">Tarot</a>
+      <a href="/numerology" class="nav-link hover:text-amber-300 transition-colors">Numerology</a>
+      <a href="/crystals" class="nav-link hover:text-amber-300 transition-colors">Crystals</a>
+      <a href="/runes" class="nav-link hover:text-amber-300 transition-colors">Runes</a>
+      <a href="/shamanism" class="nav-link hover:text-amber-300 transition-colors">Shamanism</a>
+      <a href="/druidism" class="nav-link hover:text-amber-300 transition-colors">Druidism</a>
+      <a href="/akashic-records" class="nav-link hover:text-amber-300 transition-colors">Akashic Records</a>
+      <a href="/wicca" class="nav-link hover:text-amber-300 transition-colors">Wicca</a>
+      <a href="/alchemy" class="nav-link hover:text-amber-300 transition-colors">Alchemy</a>
+      <a href="/gateway-process" class="nav-link hover:text-amber-300 transition-colors">Gateway Process</a>
+      <a href="/remote-viewing" class="nav-link hover:text-amber-300 transition-colors">Remote Viewing</a>
+      <a href="/khasarov-mirror" class="nav-link hover:text-amber-300 transition-colors">Khasarov Mirror</a>
+      <a href="/western-esotericism" class="nav-link hover:text-amber-300 transition-colors">Western Esotericism</a>
+      <a href="/eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Eastern Esotericism</a>
+      <a href="/indigenous-esotericism" class="nav-link hover:text-amber-300 transition-colors">Indigenous Esotericism</a>
+      <a href="/middle-eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Middle Eastern Mysteries</a>
+      <a href="/esoteric-practices" class="nav-link hover:text-amber-300 transition-colors">Esoteric Practices</a>
+      <a href="/esoteric-corpora" class="nav-link hover:text-amber-300 transition-colors">Sacred Texts</a>
+      <a href="/esoteric-figures" class="nav-link text-amber-300 font-semibold transition-colors">Esoteric Figures</a>
+      <a href="/orders-societies" class="nav-link hover:text-amber-300 transition-colors">Orders &amp; Societies</a>
+      <a href="/mythologies-cosmologies" class="nav-link hover:text-amber-300 transition-colors">Mythologies &amp; Cosmologies</a>
+      <a href="/journal/reflections" class="nav-link text-emerald-300 hover:text-emerald-200 transition-colors">✨ Reflections</a>
+      <a href="https://ko-fi.com/esotericwisdom" target="_blank" rel="noopener noreferrer"
+         class="px-3 py-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-white font-semibold hover:scale-105 transition-transform shrink-0">☕ Support</a>
+    </div>
+  </nav>
+
+  <div class="relative z-10 max-w-4xl mx-auto px-4 pt-6 pb-12 space-y-6">
+    <div class="text-sm text-amber-300/70 mb-6">
+      <a href="/esoteric-figures" class="hover:text-amber-200 transition-colors">← Esoteric Figures</a>
+    </div>
+
+    <div class="text-center py-8">
+      <div class="text-6xl mb-4 floating">𓁟</div>
+      <h1 class="font-cinzel text-3xl md:text-4xl aurora-text mb-4">Thoth</h1>
+      <p class="text-amber-200/80 max-w-2xl mx-auto leading-relaxed">Thoth — the ibis-headed Egyptian god of wisdom, writing, magic, and the moon — stands as one of the most ancient and complex deities in the Egyptian pantheon. As the divine scribe who recorded the fates of souls, the keeper of all sacred knowledge, and the maintainer of cosmic order, Thoth's legacy extends far beyond the borders of ancient Egypt into the Hermetic tradition, Western esotericism, and the sacred sciences of astrology and alchemy.</p>
+    </div>
+
+    <div class="os-card">
+      <h2 class="font-cinzel text-xl text-amber-300 mb-3">Origins &amp; Mythology</h2>
+      <div class="text-amber-100/80 leading-relaxed space-y-3">
+        <p>Thoth was among the most ancient and revered deities of the Egyptian pantheon, whose origins reach back to the earliest dynasties and possibly to the pre-dynastic period. His primary cult centre was the city of Khmun (later called Hermopolis Magna by the Greeks), located in Middle Egypt, where he was worshipped as the chief deity of the Ogdoad — the eight primordial deities who existed before creation. In this cosmological role, Thoth was associated with the primordial waters of Nun and the mysterious forces that preceded the ordered universe.</p>
+        <p>Thoth's iconography is primarily that of a man with the head of an ibis, the elegant wading bird associated with scholarly patience and the probing of hidden depths. He was also depicted as a baboon (the sacred hamadryas baboon, whose chattering at dawn seemed to greet the rising sun), and sometimes as a fully human figure wearing the crescent moon and full moon disc upon his head. Both forms emphasised his lunar associations: as lord of the moon, Thoth governed the measurement of time, the calculation of festivals, and the intercalary days he won at dice from Khonsu (the moon god) to add to the year — the five epagomenal days on which Osiris, Horus the Elder, Set, Isis, and Nephthys were born.</p>
+        <p>Regarding his origins within the divine family, Thoth was considered in most traditions to be self-created, or born from the lips of Ra as the creative word. In some traditions, particularly in the mythology associated with the conflict between Horus and Set, Thoth is said to have sprung from the forehead of Set after Horus smote him — an image clearly analogous to the birth of Athena from Zeus's head. This origin story emphasised Thoth's role as a mediator and peacemaker between opposing forces.</p>
+      </div>
+    </div>
+
+    <div class="os-card">
+      <h2 class="font-cinzel text-xl text-amber-300 mb-3">Thoth as Cosmic Scribe</h2>
+      <div class="text-amber-100/80 leading-relaxed space-y-3">
+        <p>Thoth's supreme function in Egyptian religion was as the divine scribe — the recorder of all things, the measurer of time, and the keeper of the cosmic balance. In the elaborate ritual of the Judgement of the Dead depicted throughout the <em>Book of the Dead</em>, Thoth stands beside the Great Scales upon which the heart of the deceased is weighed against the feather of Ma'at (truth and cosmic order). As Anubis, the jackal-headed god, adjusts the scales, Thoth carefully records the verdict with his writing palette and stylus. Should the heart balance perfectly against the feather of Ma'at, Thoth announces the deceased's worthiness to enter the Field of Reeds (the Egyptian paradise). Should the heart prove heavier — weighted down by sin and dishonesty — it is devoured by the monstrous Ammit, and the soul ceases to exist.</p>
+        <p>In this role, Thoth functions as the divine guarantor of Ma'at — the principle of truth, justice, and cosmic order that sustained the entire Egyptian universe. He kept records not only of individual souls but of cosmic events: the movements of the stars, the flooding of the Nile, the decrees of the divine council. His title "Lord of Divine Words" (<em>Nb Mdw Ntr</em>) reflected his governance over all forms of sacred writing and communication, including the hieroglyphic script itself, which the Egyptians called "the words of the gods" (<em>Mdw Ntr</em> — "divine speech").</p>
+        <p>The 42 Assessors of Ma'at, who sit in judgement alongside Osiris and Thoth in the Hall of Two Truths, each embody a specific sin that the deceased must confess to having avoided — the famous "Negative Confession." Thoth's role in orchestrating this tribunal reinforced his position as the supreme arbiter of divine justice, the cosmic administrator whose records could neither be falsified nor ignored.</p>
+      </div>
+    </div>
+
+    <div class="os-card">
+      <h2 class="font-cinzel text-xl text-amber-300 mb-3">The Books of Thoth</h2>
+      <div class="text-amber-100/80 leading-relaxed space-y-3">
+        <p>According to Egyptian tradition, Thoth authored 42 sacred books — one for each of the 42 nomes (administrative districts) of Egypt and one for each of the 42 sins of the Negative Confession. These books were said to contain all knowledge: the secrets of medicine, mathematics, astronomy, geography, theology, hymns, ritual procedures, and the interpretation of dreams. They were kept in the innermost sanctuaries of Egyptian temples, accessible only to the highest-ranking priests, who were themselves sometimes called "Servants of Thoth" or "House of Life" scribes.</p>
+        <p>The most celebrated account of the quest for the Books of Thoth appears in the Demotic papyrus tale of Setne Khamwas (son of Ramesses II), who seeks the magical book of Thoth buried in the tomb of the prince Naneferkaptah. The story warns of the terrifying consequences of attempting to possess Thoth's forbidden knowledge without divine authorisation — a theme echoed in countless subsequent esoteric traditions about the dangerous nature of hidden wisdom.</p>
+        <p>The Greek-Egyptian religious synthesis of the Hellenistic period identified Thoth's 42 books with the Hermetic philosophical and technical literature attributed to Hermes Trismegistus. The early Christian writer Clement of Alexandria (c. 150–215 CE) provided a famous description of an Egyptian priestly procession in which priests carried volumes from the 42 books of Hermes — covering hymns, astrology, cosmology, ritual, hieroglyphics, geography, medicine, and priestly regulations — demonstrating the continuity between the ancient Egyptian Thoth tradition and the Hellenistic Hermetic corpus.</p>
+      </div>
+    </div>
+
+    <div class="os-card">
+      <h2 class="font-cinzel text-xl text-amber-300 mb-3">Thoth in Magic &amp; Ritual</h2>
+      <div class="text-amber-100/80 leading-relaxed space-y-3">
+        <p>Magic — <em>heka</em> in Egyptian — was among the most sacred and powerful forces in the Egyptian universe, and Thoth was its supreme master. <em>Heka</em> was not merely the craft of spells and charms but a primordial creative force that existed before the gods themselves, described in texts as having "encircled" the Two Lands before creation. As the lord of sacred speech and the inventor of writing, Thoth commanded the utterance and inscription through which <em>heka</em> was channelled and deployed.</p>
+        <p>Throughout the vast corpus of Egyptian magical and religious literature — from the Pyramid Texts of the Old Kingdom (c. 2400 BCE) through the <em>Book of the Dead</em> to the late magical papyri of the Roman period — Thoth appears as the model magician, the deity who empowers human practitioners with the knowledge and authority to perform effective magical operations. Spells are frequently attributed to his authorship, invoked in his name, or sealed with his authority. The formulae "as Thoth has decreed" or "the spell of Thoth" appear throughout magical texts as guarantees of efficacy.</p>
+        <p>Thoth's most celebrated magical feat was his central role in the resurrection of Osiris. When Set dismembered Osiris's body into fourteen (or in some versions seventy-two) pieces and scattered them across Egypt, it was Thoth who instructed Isis and Nephthys in the resurrection rituals and provided the sacred spells by which Osiris was temporarily revived, allowing him to father Horus before descending to his role as king of the dead. In this myth, Thoth's magic appears not as a dark or transgressive power but as a healing, restorative force aligned with Ma'at and the preservation of cosmic order. His role as divine physician and healer also extended to the use of lunar magic in medical treatments, where the cyclical phases of the moon were understood to govern the efficacy of medicinal plants and healing procedures.</p>
+      </div>
+    </div>
+
+    <div class="os-card">
+      <h2 class="font-cinzel text-xl text-amber-300 mb-3">The Hermetic Connection</h2>
+      <div class="text-amber-100/80 leading-relaxed space-y-3">
+        <p>The identification of the Egyptian Thoth with the Greek Hermes — both gods of wisdom, writing, and mediation between worlds — was a natural development of the religious synthesis of Hellenistic Egypt. By the 3rd century BCE, Greek-speaking Egyptians were freely equating the two deities, and the city of Khmun had been renamed Hermopolis ("City of Hermes"). This theological fusion produced the composite figure of Hermes Trismegistus ("Thrice-Great Hermes"), who combined the philosophical sophistication of the Greek Hermes tradition with the cosmic authority and sacred learning of the Egyptian Thoth.</p>
+        <p>The philosophical Hermetic texts — the <em>Corpus Hermeticum</em>, the <em>Asclepius</em>, and related writings — are best understood as the cultural descendants of the Egyptian Books of Thoth: documents claiming to transmit the primordial divine wisdom that Thoth/Hermes had revealed to initiated sages. The specifically Egyptian character of the Hermetic tradition is visible in its cosmological framework, its emphasis on the soul's journey through the afterlife, its reverence for the divine image and sacred rite, and its understanding of the cosmos as a living, divinely animated whole.</p>
+        <p>In Neoplatonic and late antique philosophical circles, the Hermetic texts were read alongside Plato, Pythagoras, and the Chaldean Oracles as witnesses to the <em>prisca theologia</em> — the ancient theology that all philosophies and religions ultimately reflected. Through this Neoplatonic reception, Thoth's ancient wisdom entered the mainstream of Western philosophical and mystical thought, where it has remained as an enduring presence: in alchemy, astrology, Kabbalah, ceremonial magic, Freemasonry, Rosicrucianism, Theosophy, and the contemporary study of Western esotericism.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="relative z-10 text-center py-8 text-amber-300/50 text-xs">
+    <p class="italic">"Know thyself." — Temple of Apollo at Delphi</p>
+    <p class="mt-2">Esoteric Wisdom · Built with ✨ in Rust</p>
+    <p class="mt-2"><a href="/esoteric-figures" class="hover:text-amber-300 transition-colors">← Esoteric Figures</a></p>
+  </footer>
+
+<script>
+  const sf = document.getElementById('starfield');
+  for (let i = 0; i < 180; i++) {
+    const s = document.createElement('div');
+    s.className = 'star';
+    const size = Math.random() * 2.5 + 0.5;
+    s.style.cssText = `width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--dur:${2+Math.random()*4}s;--delay:${Math.random()*5}s;opacity:${0.2+Math.random()*0.8};`;
+    sf.appendChild(s);
+  }
+</script>
+</body>
+</html>

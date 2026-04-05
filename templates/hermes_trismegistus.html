@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hermes Trismegistus — Esoteric Wisdom</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <meta property="og:title" content="Hermes Trismegistus — Esoteric Wisdom" />
+  <meta property="og:description" content="Explore Hermes Trismegistus — the Thrice-Great sage, author of the Hermetic Corpus, and patron of alchemy, astrology, and sacred wisdom." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://esoteric-wisdom.onrender.com/esoteric-figures/hermes-trismegistus/" />
+  <meta property="og:image" content="https://esoteric-wisdom.onrender.com/og-image.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <style>
+    body { font-family: 'Raleway', sans-serif; }
+    .font-cinzel { font-family: 'Cinzel Decorative', cursive; }
+    @keyframes twinkle { 0%,100%{opacity:0.2;transform:scale(1);} 50%{opacity:1;transform:scale(1.4);} }
+    @keyframes float { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-12px);} }
+    @keyframes shimmer { 0%{background-position:0% 50%;} 100%{background-position:200% 50%;} }
+    .star { position:absolute; width:2px; height:2px; background:white; border-radius:50%; animation:twinkle 3s infinite; }
+    .aurora-text {
+      background: linear-gradient(90deg, #b45309, #d97706, #92400e, #fde68a, #b45309);
+      background-size: 300% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 6s linear infinite;
+    }
+    .floating { animation: float 4s ease-in-out infinite; }
+    .nav-link { position:relative; transition:all 0.3s; }
+    .nav-link::after { content:''; position:absolute; bottom:-2px; left:0; width:0; height:1px; background:#f59e0b; transition:width 0.3s; }
+    .nav-link:hover::after { width:100%; }
+    .os-card {
+      background: linear-gradient(135deg, rgba(180,83,9,0.12), rgba(120,53,15,0.08));
+      border: 1px solid rgba(180,83,9,0.25);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      transition: all 0.3s;
+    }
+    .os-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 0 24px rgba(180,83,9,0.20);
+      border-color: rgba(180,83,9,0.5);
+    }
+  </style>
+</head>
+<body class="min-h-screen text-amber-100 overflow-x-hidden"
+      style="background: radial-gradient(ellipse at top, #1a0e00 0%, #2d1a00 25%, #0a0500 60%, #000000 100%);">
+
+  <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+
+  <nav class="sticky top-0 z-50 flex items-center justify-between px-6 py-3 bg-black/40 backdrop-blur-md border-b border-amber-700/30 flex-wrap gap-y-2">
+    <a href="/home" class="font-cinzel text-amber-300 text-sm tracking-widest shrink-0">✦ Esoteric Wisdom ✦</a>
+    <div class="flex items-center gap-x-3 gap-y-1 text-xs text-violet-200 flex-wrap justify-end">
+      <a href="/astrology" class="nav-link hover:text-amber-300 transition-colors">Astrology</a>
+      <a href="/meditation" class="nav-link hover:text-amber-300 transition-colors">Meditation</a>
+      <a href="/tarot/select" class="nav-link hover:text-amber-300 transition-colors">Tarot</a>
+      <a href="/numerology" class="nav-link hover:text-amber-300 transition-colors">Numerology</a>
+      <a href="/crystals" class="nav-link hover:text-amber-300 transition-colors">Crystals</a>
+      <a href="/runes" class="nav-link hover:text-amber-300 transition-colors">Runes</a>
+      <a href="/shamanism" class="nav-link hover:text-amber-300 transition-colors">Shamanism</a>
+      <a href="/druidism" class="nav-link hover:text-amber-300 transition-colors">Druidism</a>
+      <a href="/akashic-records" class="nav-link hover:text-amber-300 transition-colors">Akashic Records</a>
+      <a href="/wicca" class="nav-link hover:text-amber-300 transition-colors">Wicca</a>
+      <a href="/alchemy" class="nav-link hover:text-amber-300 transition-colors">Alchemy</a>
+      <a href="/gateway-process" class="nav-link hover:text-amber-300 transition-colors">Gateway Process</a>
+      <a href="/remote-viewing" class="nav-link hover:text-amber-300 transition-colors">Remote Viewing</a>
+      <a href="/khasarov-mirror" class="nav-link hover:text-amber-300 transition-colors">Khasarov Mirror</a>
+      <a href="/western-esotericism" class="nav-link hover:text-amber-300 transition-colors">Western Esotericism</a>
+      <a href="/eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Eastern Esotericism</a>
+      <a href="/indigenous-esotericism" class="nav-link hover:text-amber-300 transition-colors">Indigenous Esotericism</a>
+      <a href="/middle-eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Middle Eastern Mysteries</a>
+      <a href="/esoteric-practices" class="nav-link hover:text-amber-300 transition-colors">Esoteric Practices</a>
+      <a href="/esoteric-corpora" class="nav-link hover:text-amber-300 transition-colors">Sacred Texts</a>
+      <a href="/esoteric-figures" class="nav-link text-amber-300 font-semibold transition-colors">Esoteric Figures</a>
+      <a href="/orders-societies" class="nav-link hover:text-amber-300 transition-colors">Orders &amp; Societies</a>
+      <a href="/mythologies-cosmologies" class="nav-link hover:text-amber-300 transition-colors">Mythologies &amp; Cosmologies</a>
+      <a href="/journal/reflections" class="nav-link text-emerald-300 hover:text-emerald-200 transition-colors">✨ Reflections</a>
+      <a href="https://ko-fi.com/esotericwisdom" target="_blank" rel="noopener noreferrer"
+         class="px-3 py-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-white font-semibold hover:scale-105 transition-transform shrink-0">☕ Support</a>
+    </div>
+  </nav>
+
+  <div class="relative z-10 max-w-4xl mx-auto px-4 pt-6 pb-12 space-y-6">
+    <div class="text-sm text-amber-300/70 mb-6">
+      <a href="/esoteric-figures" class="hover:text-amber-200 transition-colors">← Esoteric Figures</a>
+    </div>
+
+    <div class="text-center py-8">
+      <div class="text-6xl mb-4 floating">☿</div>
+      <h1 class="font-cinzel text-3xl md:text-4xl aurora-text mb-4">Hermes Trismegistus</h1>
+      <p class="text-amber-200/80 max-w-2xl mx-auto leading-relaxed">Hermes Trismegistus — the 'Thrice-Great Hermes' — stands at the crossroads of Greek and Egyptian civilisation as the legendary author of the Hermetic writings. Revered as the patron of alchemy, astrology, and sacred philosophy, he was venerated as the fount of a primordial wisdom that predated — and prefigured — all subsequent religious revelation.</p>
+    </div>
+
+    <div class="os-card">
+      <h2 class="font-cinzel text-xl text-amber-300 mb-3">Origins &amp; Identity</h2>
+      <div class="text-amber-100/80 leading-relaxed space-y-3">
+        <p>The name "Hermes Trismegistus" emerges from the religious and intellectual ferment of Hellenistic Egypt, most probably between the 3rd and 1st centuries BCE. The figure represents a syncretism of the Greek messenger-god Hermes — patron of eloquence, writing, and hidden knowledge — with the Egyptian god Thoth, the ibis-headed lord of wisdom, writing, and divine reckoning. Both deities presided over the transmission of sacred knowledge, making their identification a natural consequence of the Greek-Egyptian religious exchange that flourished following Alexander the Great's conquest of Egypt in 332 BCE.</p>
+        <p>The epithet "Trismegistos" (Thrice-Great) is drawn directly from Egyptian priestly titles. Egyptian priests frequently designated Thoth as "the Great, the Great, the Great" — a superlative indicating divine pre-eminence — and the Greeks rendered this as "Trismegistos." The primary seat of Thoth-worship was the Egyptian city of Khmun, which the Greeks renamed Hermopolis Magna ("the Great City of Hermes"), acknowledging this divine identification.</p>
+        <p>As a legendary figure, Hermes Trismegistus was credited in antiquity with authoring thousands of sacred texts encompassing theology, cosmology, astrology, alchemy, medicine, and magic. The early Christian writer Lactantius (c. 250–325 CE) cited him as a prophet who foretold the coming of Christ, and Augustine of Hippo engaged seriously with the Hermetic writings, even as he condemned their demonological elements. This Christian acceptance of the legendary Hermes as a pre-Christian sage granted the Hermetic tradition an extraordinary longevity and prestige in Western culture.</p>
+      </div>
+    </div>
+
+    <div class="os-card">
+      <h2 class="font-cinzel text-xl text-amber-300 mb-3">The Hermetic Corpus</h2>
+      <div class="text-amber-100/80 leading-relaxed space-y-3">
+        <p>The primary surviving body of Hermetic literature consists of the <em>Corpus Hermeticum</em>, a collection of seventeen Greek philosophical dialogues and discourses in which Hermes Trismegistus instructs his disciples — most notably his son Tat and the divine Asclepius — on matters of cosmology, the nature of the soul, and the path to divine gnosis. The most celebrated of these is <em>Poimandres</em> (or <em>Poemandres</em>), the opening treatise, in which Hermes receives a cosmic vision from the Divine Mind (Nous) depicting the creation of the universe and the soul's heavenward return.</p>
+        <p>The <em>Asclepius</em>, preserved in a Latin translation once attributed to Apuleius, is another major Hermetic text, containing the famous "lament" over Egypt's future spiritual desolation and a discussion of the animated statues of the gods. Together with various alchemical, astrological, and magical writings attributed to Hermes, these texts constituted the body of "philosophical Hermetism" that profoundly influenced late antique Neoplatonism and early Christian theology.</p>
+        <p>The <em>Corpus Hermeticum</em> was brought to Florence in 1460 by a monk named Leonardo da Pistoia, who acquired the manuscript in Macedonia. Cosimo de' Medici was so excited by its arrival that he commanded his scholar Marsilio Ficino to set aside his translation of Plato and translate the Hermetic texts immediately. Ficino published his Latin translation, the <em>Pimander</em>, in 1463, unleashing the Hermetic texts upon the Renaissance world. For over a century, scholars believed these writings to be of enormous antiquity — pre-Mosaic, as old as the Patriarchs, composed by an Egyptian sage who was a contemporary of Moses. This belief was shattered in 1614 when the classical scholar Isaac Casaubon demonstrated through philological analysis that the Greek style of the <em>Corpus Hermeticum</em> dated it to the 1st–3rd centuries CE, not to ancient Egypt. Nevertheless, the Hermetic tradition continued to flourish.</p>
+      </div>
+    </div>
+
+    <div class="os-card">
+      <h2 class="font-cinzel text-xl text-amber-300 mb-3">The Emerald Tablet</h2>
+      <div class="text-amber-100/80 leading-relaxed space-y-3">
+        <p>The <em>Tabula Smaragdina</em> — the Emerald Tablet — is perhaps the most celebrated and influential short text in the entire Western esoteric tradition. Attributed to Hermes Trismegistus and supposedly engraved upon a slab of emerald found in his tomb, it contains, in extraordinarily compressed form, the fundamental principle of Hermetic philosophy: "That which is above is like that which is below, and that which is below is like that which is above, to accomplish the miracles of the one thing" (<em>ut supra, ita infra</em> in Latin). This principle of cosmic correspondence — the macrocosm mirroring the microcosm and vice versa — became the philosophical foundation of alchemy, astrology, and Hermetic magic throughout the medieval and Renaissance periods.</p>
+        <p>The earliest known sources for the Emerald Tablet are Arabic. The text appears in the <em>Book of the Secret of Creation</em> (<em>Kitāb sirr al-khalīqa</em>), attributed to the legendary sage Balinus (identified with Apollonius of Tyana) and probably compiled around the 6th–8th centuries CE. The great Arab alchemist Jābir ibn Ḥayyān (c. 721–815 CE) cited it and built his alchemical theory largely upon its principles. A Latin translation appeared in the 12th century, and from that point the Emerald Tablet became the foundational text of European alchemy, quoted, glossed, and elaborated by every major alchemist from Albertus Magnus and Roger Bacon to Paracelsus, Isaac Newton (who wrote his own translation), and beyond.</p>
+      </div>
+    </div>
+
+    <div class="os-card">
+      <h2 class="font-cinzel text-xl text-amber-300 mb-3">Core Teachings</h2>
+      <div class="text-amber-100/80 leading-relaxed space-y-3">
+        <p>The philosophical Hermetic texts present a sophisticated theology centred on the concept of Nous — the Divine Mind or Intellect — as the ultimate principle of reality. In <em>Poimandres</em>, Hermes receives a vision of an infinite Light (identified as the Divine Mind) from which descends a Creative Word (Logos) that brings order to the primordial chaos. The human being was created by the Demiurge in the image of the Logos and possesses a divine spark that enables the ascent back to the Father of all.</p>
+        <p>Central to Hermetic soteriology is the concept of the seven planetary spheres and the soul's passage through them. At death (or through mystical initiation), the soul ascends through the seven spheres — Moon, Mercury, Venus, Sun, Mars, Jupiter, Saturn — progressively divesting itself of the negative qualities it acquired during its descent into incarnation: at the lunar sphere it surrenders its impulse to increase and decrease; at Mercury, the capacity for deception; at Venus, the appetite for desire; at the Sun, arrogance; and so forth. Having shed these "coats" of the lower nature, the purified soul enters the Ogdoad — the realm beyond the seven spheres — and participates in the divine chorus of praise to the Father, before ultimately dissolving into the powers of the highest realm. This framework of the soul's ascent and descent through the planetary spheres would profoundly influence Neoplatonism, Gnosticism, and early Christian mysticism.</p>
+        <p>Gnosis — direct, experiential knowledge of the divine — is the supreme goal of Hermetic practice. This is not merely intellectual knowledge but a transformation of consciousness in which the practitioner comes to recognise their fundamental identity with the Divine Mind. "The human being who knows himself or herself as divine is divine," the Hermetic texts declare. This emphasis on transformative inner knowledge rather than external ritual or moral adherence made Hermetism a perpetually attractive current within Western spirituality.</p>
+      </div>
+    </div>
+
+    <div class="os-card">
+      <h2 class="font-cinzel text-xl text-amber-300 mb-3">Legacy &amp; Influence</h2>
+      <div class="text-amber-100/80 leading-relaxed space-y-3">
+        <p>The Hermetic tradition inaugurated by the discovery of the <em>Corpus Hermeticum</em> in the 15th century had an extraordinary influence on the subsequent development of Western culture. Marsilio Ficino, who made the first Latin translation, incorporated Hermetic ideas into his Neoplatonic synthesis and used them to develop his theory of natural magic and the influence of the heavenly bodies on human health and consciousness. Pico della Mirandola, Ficino's brilliant young contemporary, combined Hermetism with Kabbalah and Neoplatonism in his celebrated <em>Oration on the Dignity of Man</em> (1486), creating the intellectual manifesto of Renaissance humanism.</p>
+        <p>The Hermetic tradition fed directly into the Rosicrucian manifestos of the early 17th century (<em>Fama Fraternitatis</em>, 1614), which envisioned a secret brotherhood of initiates dedicated to the universal reformation of knowledge along Hermetic lines. Freemasonry absorbed significant Hermetic symbolism, particularly in its higher degrees. The 18th and 19th centuries saw the continued influence of Hermetism in the work of Emanuel Swedenborg, William Blake, and the Romantics, before Helena Blavatsky's Theosophy and the Hermetic Order of the Golden Dawn gave the tradition renewed institutional form. Today, academic scholars such as Wouter Hanegraaff and Antoine Faivre have established Western esotericism — with Hermetism at its core — as a legitimate field of historical and philosophical inquiry.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="relative z-10 text-center py-8 text-amber-300/50 text-xs">
+    <p class="italic">"Know thyself." — Temple of Apollo at Delphi</p>
+    <p class="mt-2">Esoteric Wisdom · Built with ✨ in Rust</p>
+    <p class="mt-2"><a href="/esoteric-figures" class="hover:text-amber-300 transition-colors">← Esoteric Figures</a></p>
+  </footer>
+
+<script>
+  const sf = document.getElementById('starfield');
+  for (let i = 0; i < 180; i++) {
+    const s = document.createElement('div');
+    s.className = 'star';
+    const size = Math.random() * 2.5 + 0.5;
+    s.style.cssText = `width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--dur:${2+Math.random()*4}s;--delay:${Math.random()*5}s;opacity:${0.2+Math.random()*0.8};`;
+    sf.appendChild(s);
+  }
+</script>
+</body>
+</html>

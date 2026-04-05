@@ -502,3 +502,79 @@ pub struct ChakricSystemsTemplate;
 #[derive(Template)]
 #[template(path = "sephirothic_hierarchies.html")]
 pub struct SephirothicHierarchiesTemplate;
+
+#[derive(Template)]
+#[template(path = "esoteric_figures.html")]
+pub struct EsotericFiguresTemplate;
+
+#[derive(Template)]
+#[template(path = "hermes_trismegistus.html")]
+pub struct HermesTrismegistusTemplate;
+
+#[derive(Template)]
+#[template(path = "thoth.html")]
+pub struct ThothTemplate;
+
+#[derive(Template)]
+#[template(path = "enoch_metatron.html")]
+pub struct EnochMetatronTemplate;
+
+#[derive(Template)]
+#[template(path = "orpheus.html")]
+pub struct OrpheusFigureTemplate;
+
+#[derive(Template)]
+#[template(path = "melchizedek.html")]
+pub struct MelchizedekTemplate;
+
+#[derive(Template)]
+#[template(path = "zoroaster_figure.html")]
+pub struct ZoroasterFigureTemplate;
+
+#[derive(Template)]
+#[template(path = "pythagoras.html")]
+pub struct PythagorasFigureTemplate;
+
+#[derive(Template)]
+#[template(path = "plotinus.html")]
+pub struct PlatinusTemplate;
+
+#[derive(Template)]
+#[template(path = "iamblichus.html")]
+pub struct IamblicusTemplate;
+
+#[derive(Template)]
+#[template(path = "paracelsus.html")]
+pub struct ParacelsusTemplate;
+
+#[derive(Template)]
+#[template(path = "marsilio_ficino.html")]
+pub struct MarsilisFicinoTemplate;
+
+#[derive(Template)]
+#[template(path = "jacob_boehme.html")]
+pub struct JacobBohmeTemplate;
+
+#[derive(Template)]
+#[template(path = "emanuel_swedenborg.html")]
+pub struct EmanuelSwedenborgTemplate;
+
+#[derive(Template)]
+#[template(path = "helena_blavatsky.html")]
+pub struct HelenaBlavatskyTemplate;
+
+#[derive(Template)]
+#[template(path = "rudolf_steiner.html")]
+pub struct RudolfSteinerTemplate;
+
+#[derive(Template)]
+#[template(path = "dion_fortune.html")]
+pub struct DionFortuneTemplate;
+
+#[derive(Template)]
+#[template(path = "eliphas_levi.html")]
+pub struct EliphasLeviTemplate;
+
+#[derive(Template)]
+#[template(path = "papus.html")]
+pub struct PapusTemplate;
