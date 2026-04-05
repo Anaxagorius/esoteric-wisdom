@@ -458,3 +458,7 @@ pub struct IlluminismTemplate;
 #[derive(Template)]
 #[template(path = "sufi_orders_esoteric.html")]
 pub struct SufiOrdersEsotericTemplate;
+
+#[derive(Template)]
+#[template(path = "modern_contemporary_orders.html")]
+pub struct ModernContemporaryOrdersTemplate;

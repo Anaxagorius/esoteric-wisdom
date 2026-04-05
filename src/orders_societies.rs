@@ -15,6 +15,7 @@ use crate::templates::{
     MartinismTemplate,
     IlluminismTemplate,
     SufiOrdersEsotericTemplate,
+    ModernContemporaryOrdersTemplate,
 };
 use crate::state::AppState;
 
@@ -34,6 +35,7 @@ pub fn routes() -> Router<AppState> {
         .route("/martinism", get(martinism))
         .route("/illuminism", get(illuminism))
         .route("/sufi-orders", get(sufi_orders))
+        .route("/modern-contemporary", get(modern_contemporary))
 }
 
 async fn hub() -> impl IntoResponse {
@@ -90,4 +92,8 @@ async fn illuminism() -> impl IntoResponse {
 
 async fn sufi_orders() -> impl IntoResponse {
     HtmlTemplate(SufiOrdersEsotericTemplate)
+}
+
+async fn modern_contemporary() -> impl IntoResponse {
+    HtmlTemplate(ModernContemporaryOrdersTemplate)
 }
