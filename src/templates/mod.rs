@@ -462,3 +462,43 @@ pub struct SufiOrdersEsotericTemplate;
 #[derive(Template)]
 #[template(path = "modern_contemporary_orders.html")]
 pub struct ModernContemporaryOrdersTemplate;
+
+#[derive(Template)]
+#[template(path = "esoteric_mythologies_cosmologies.html")]
+pub struct EsotericMythologiesCosmologiesTemplate;
+
+#[derive(Template)]
+#[template(path = "gnostic_aeons.html")]
+pub struct GnosticAeonsTemplate;
+
+#[derive(Template)]
+#[template(path = "demiurge_myth.html")]
+pub struct DemiurgeMythTemplate;
+
+#[derive(Template)]
+#[template(path = "sophia_traditions.html")]
+pub struct SophiaTraditionsTemplate;
+
+#[derive(Template)]
+#[template(path = "tree_of_life_cosmology.html")]
+pub struct TreeOfLifeCosmologyTemplate;
+
+#[derive(Template)]
+#[template(path = "emanation_theories.html")]
+pub struct EmanationTheoriesTemplate;
+
+#[derive(Template)]
+#[template(path = "platonic_world_soul.html")]
+pub struct PlatonicWorldSoulTemplate;
+
+#[derive(Template)]
+#[template(path = "astral_planes.html")]
+pub struct AstralPlanesTemplate;
+
+#[derive(Template)]
+#[template(path = "chakric_systems.html")]
+pub struct ChakricSystemsTemplate;
+
+#[derive(Template)]
+#[template(path = "sephirothic_hierarchies.html")]
+pub struct SephirothicHierarchiesTemplate;
