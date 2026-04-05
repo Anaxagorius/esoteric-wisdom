@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Esoteric Mythologies &amp; Cosmologies — Esoteric Wisdom</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <meta property="og:title" content="Esoteric Mythologies &amp; Cosmologies — Esoteric Wisdom" />
+  <meta property="og:description" content="Gnostic Aeons, the Demiurge, Sophia, the Kabbalistic Tree of Life, Platonic World Soul, Akashic Records, astral planes, chakras, and Sephirothic hierarchies — the great cosmological maps of esoteric tradition." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://esoteric-wisdom.onrender.com/mythologies-cosmologies/" />
+  <meta property="og:image" content="https://esoteric-wisdom.onrender.com/og-image.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Raleway', sans-serif; }
+    .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+    @keyframes twinkle { 0%,100% { opacity: 0.2; } 50% { opacity: 1; } }
+    .star { position: absolute; border-radius: 50%; background: white; animation: twinkle var(--dur,3s) ease-in-out infinite; animation-delay: var(--delay,0s); }
+    @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+    .floating { animation: float 5s ease-in-out infinite; }
+    @keyframes shimmer { 0% { background-position: -200% center; } 100% { background-position: 200% center; } }
+    .nav-link { position: relative; transition: all 0.3s; }
+    .nav-link::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: linear-gradient(90deg, #f59e0b, #a78bfa); transition: width 0.3s; }
+    .nav-link:hover::after { width: 100%; }
+    .aurora-text {
+      background: linear-gradient(90deg, #818cf8, #6366f1, #a5b4fc, #4f46e5, #818cf8);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 4s linear infinite;
+    }
+    .myth-card {
+      background: linear-gradient(135deg, rgba(99,102,241,0.10), rgba(67,56,202,0.06));
+      border: 1px solid rgba(99,102,241,0.25);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+    .myth-card:hover {
+      transform: translateY(-6px) scale(1.01);
+      box-shadow: 0 0 28px 5px rgba(99,102,241,0.25);
+      border-color: rgba(99,102,241,0.5);
+    }
+    .text-card {
+      background: linear-gradient(135deg, rgba(99,102,241,0.08), rgba(55,48,163,0.04));
+      border: 1px solid rgba(99,102,241,0.18);
+      border-radius: 0.75rem;
+      padding: 1.25rem;
+      transition: border-color 0.3s;
+    }
+    .text-card:hover { border-color: rgba(99,102,241,0.4); }
+  </style>
+</head>
+<body class="min-h-screen text-indigo-100 overflow-x-hidden" style="background: radial-gradient(ellipse at top, #050714 0%, #080d2b 25%, #020410 60%, #000000 100%);">
+
+  <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+
+  <!-- NAV -->
+  <nav class="sticky top-0 z-50 flex items-center justify-between px-6 py-3 bg-black/40 backdrop-blur-md border-b border-indigo-500/20 flex-wrap gap-y-2">
+    <a href="/home" class="font-cinzel text-amber-300 text-sm tracking-widest shrink-0">&#10022; Esoteric Wisdom &#10022;</a>
+    <div class="flex items-center gap-x-3 gap-y-1 text-xs text-indigo-200/80 flex-wrap justify-end">
+      <a href="/astrology" class="nav-link hover:text-amber-300 transition-colors">Astrology</a>
+      <a href="/meditation" class="nav-link hover:text-amber-300 transition-colors">Meditation</a>
+      <a href="/tarot/select" class="nav-link hover:text-amber-300 transition-colors">Tarot</a>
+      <a href="/numerology" class="nav-link hover:text-amber-300 transition-colors">Numerology</a>
+      <a href="/crystals" class="nav-link hover:text-amber-300 transition-colors">Crystals</a>
+      <a href="/runes" class="nav-link hover:text-amber-300 transition-colors">Runes</a>
+      <a href="/shamanism" class="nav-link hover:text-amber-300 transition-colors">Shamanism</a>
+      <a href="/druidism" class="nav-link hover:text-amber-300 transition-colors">Druidism</a>
+      <a href="/akashic-records" class="nav-link hover:text-amber-300 transition-colors">Akashic Records</a>
+      <a href="/wicca" class="nav-link hover:text-amber-300 transition-colors">Wicca</a>
+      <a href="/alchemy" class="nav-link hover:text-amber-300 transition-colors">Alchemy</a>
+      <a href="/gateway-process" class="nav-link hover:text-amber-300 transition-colors">Gateway Process</a>
+      <a href="/remote-viewing" class="nav-link hover:text-amber-300 transition-colors">Remote Viewing</a>
+      <a href="/khasarov-mirror" class="nav-link hover:text-amber-300 transition-colors">Khasarov Mirror</a>
+      <a href="/western-esotericism" class="nav-link hover:text-amber-300 transition-colors">Western Esotericism</a>
+      <a href="/eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Eastern Esotericism</a>
+      <a href="/indigenous-esotericism" class="nav-link hover:text-amber-300 transition-colors">Indigenous Esotericism</a>
+      <a href="/middle-eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Middle Eastern Mysteries</a>
+      <a href="/esoteric-practices" class="nav-link hover:text-amber-300 transition-colors">Esoteric Practices</a>
+      <a href="/esoteric-corpora" class="nav-link hover:text-amber-300 transition-colors">Sacred Texts</a>
+      <a href="/orders-societies" class="nav-link hover:text-amber-300 transition-colors">Orders &amp; Societies</a>
+      <a href="/mythologies-cosmologies" class="nav-link text-amber-300 font-semibold">Mythologies &amp; Cosmologies</a>
+      <a href="/journal/reflections" class="nav-link text-emerald-300 hover:text-emerald-200 transition-colors">&#10024; Reflections</a>
+      <a href="https://ko-fi.com/esotericwisdom" target="_blank" rel="noopener noreferrer"
+         class="px-3 py-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-white font-semibold hover:scale-105 transition-transform shrink-0">&#9749; Support</a>
+    </div>
+  </nav>
+
+  <!-- CONTENT WRAPPER -->
+  <div class="relative z-10 max-w-6xl mx-auto space-y-10 pt-6 px-4 pb-12">
+
+    <!-- BREADCRUMB -->
+    <div>
+      <a href="/home" class="text-xs text-indigo-300/60 hover:text-indigo-300 transition-colors">&larr; Back to Portal</a>
+    </div>
+
+    <!-- HERO -->
+    <section class="text-center py-14 space-y-6">
+      <div class="text-7xl floating">&#127756;</div>
+      <h1 class="font-cinzel text-4xl md:text-6xl font-bold aurora-text leading-tight">
+        Esoteric Mythologies &amp; Cosmologies
+      </h1>
+      <p class="max-w-3xl mx-auto text-indigo-200/80 text-lg leading-relaxed">
+        The grand architectures of invisible reality &mdash; from Gnostic Aeons and Demiurgic myth to the Kabbalistic Tree of Life, Platonic World Soul, and the subtle anatomy of the cosmos.
+      </p>
+    </section>
+
+    <!-- SECTION 1: WHAT ARE ESOTERIC MYTHOLOGIES & COSMOLOGIES? -->
+    <section class="rounded-2xl p-8 space-y-6" style="background: linear-gradient(135deg, rgba(99,102,241,0.12), rgba(67,56,202,0.07));">
+      <h2 class="font-cinzel text-2xl text-indigo-300 text-center tracking-wide">What Are Esoteric Mythologies &amp; Cosmologies?</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm text-indigo-100/80 leading-relaxed">
+        <div class="space-y-4">
+          <p>
+            Across the great esoteric traditions of the world, one of the most consistent preoccupations has been the construction of <strong class="text-indigo-200">cosmological maps</strong> &mdash; detailed, systematic accounts of the invisible structure of reality. These are not merely creation myths in the popular sense: they are, at their best, philosophically rigorous, experientially grounded, and spiritually functional maps of the totality of existence, extending from the most transcendent levels of divine being all the way down through successive worlds and planes to the material cosmos we inhabit.
+          </p>
+          <p>
+            The word <em>cosmology</em> derives from the Greek <em>kosmos</em> (&#954;&#972;&#963;&#956;&#959;&#962;), meaning &ldquo;order&rdquo; or &ldquo;adornment&rdquo; &mdash; the universe understood as a beautifully ordered whole. Esoteric cosmologies go further than their scientific counterparts: they map not only the physical universe but the <strong class="text-indigo-200">invisible dimensions</strong> of which the physical is merely the outermost and densest expression. They describe the divine realms, the angelic hierarchies, the subtle planes, the forces and intelligences that interpenetrate physical existence, and the processes by which the soul moves through these realms in its journey from divine origin to material incarnation and back.
+          </p>
+          <p>
+            The myths that belong to this tradition are equally distinctive. Esoteric mythology is not primarily concerned with the heroic exploits of anthropomorphic gods &mdash; though it may employ such imagery. Its central subject matter is the <strong class="text-indigo-200">drama of divine self-unfolding</strong>: how the One becomes Many, how the infinite divine fullness comes to be expressed in the multiplicity of finite existence, what goes wrong (or appears to go wrong) in this process of emanation and involution, and how the return journey &mdash; the path of ascent and reintegration &mdash; is accomplished.
+          </p>
+          <p>
+            These mythologies share certain structural features that recur with remarkable consistency across radically different cultures and historical periods: a <strong class="text-indigo-200">transcendent source</strong> beyond all description or predication; a process of <strong class="text-indigo-200">emanation or creation</strong> by which successive levels of being arise from this source; an account of <strong class="text-indigo-200">fall or involution</strong> by which consciousness descends into ever denser and more limited modes of being; and a <strong class="text-indigo-200">path of return</strong> or liberation by which the divine spark within the individual can re-ascend to its source.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <p>
+            The Gnostic traditions &mdash; Valentinian, Sethian, Basilidean, Mandaean, and others &mdash; produced some of the most elaborate and philosophically sophisticated cosmologies of the ancient world. Their accounts of the Pleroma (the divine fullness), the hierarchy of Aeons, the drama of Sophia&rsquo;s fall, and the Demiurge&rsquo;s creation of the material world represent a systematic attempt to account for the existence of suffering and limitation within a universe that originates from an entirely good and transcendent divine source.
+          </p>
+          <p>
+            The Kabbalistic tradition, crystallising in medieval Provence and Spain and reaching full expression in the Zohar and the later Lurianic Kabbalah, produced the most detailed and influential <strong class="text-indigo-200">cosmological system</strong> in the Western esoteric tradition: the Etz Chayyim or Tree of Life, with its ten Sephiroth (divine attributes or emanations), twenty-two connecting Paths, and its expression across four levels of reality. This system became the organising framework for the entirety of Hermetic and ceremonial magic in the Western tradition, absorbing Neoplatonic, Gnostic, astrological, and angelic lore into a single comprehensive map.
+          </p>
+          <p>
+            The Neoplatonic tradition, above all the philosophy of Plotinus and his successors, contributed the theoretical framework of <strong class="text-indigo-200">emanation</strong> that underlies much esoteric cosmology. Plotinus&rsquo;s account of the three primary hypostases &mdash; the One, Intellect (Nous), and Soul &mdash; and his description of the process by which each level of being &ldquo;overflows&rdquo; naturally into the next provided esoteric thinkers of all persuasions with a model of how the One becomes Many without diminishing or fragmenting.
+          </p>
+          <p>
+            The Indian and Tibetan traditions offer their own extraordinarily developed cosmological systems: the chakric model of the subtle body (the luminous energy centres through which divine force circulates), the system of subtle planes and bodies found in Tantric and Theosophical literature, and the various Tantric and Vedantic accounts of the divine self-manifestation through the play of Shiva and Shakti. These systems complement and cross-illuminate the Western cosmological traditions with which they share deep structural similarities, pointing towards underlying truths about the nature of consciousness and reality that transcend any single cultural expression.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: TOPIC GRID -->
+    <section class="space-y-6">
+      <h2 class="font-cinzel text-2xl text-indigo-300 text-center tracking-wide">Explore the Cosmological Map</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+        <a href="/mythologies-cosmologies/gnostic-aeons" class="myth-card space-y-3 block">
+          <div class="text-3xl">&#127775;</div>
+          <h3 class="font-cinzel text-sm text-indigo-200">Gnostic Aeons</h3>
+          <p class="text-indigo-300/60 text-xs uppercase tracking-wider">The Divine Pleroma</p>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">
+            The eternal divine emanations that constitute the Pleroma &mdash; the fullness of God &mdash; in Gnostic cosmology. Understand the Valentinian thirty-Aeon system, the Sethian divine hierarchy with Barbelo at its summit, and the inner drama of divine self-knowledge whose crisis produces the cosmos.
+          </p>
+        </a>
+
+        <a href="/mythologies-cosmologies/demiurge-myth" class="myth-card space-y-3 block">
+          <div class="text-3xl">&#9889;</div>
+          <h3 class="font-cinzel text-sm text-indigo-200">The Demiurge Myth</h3>
+          <p class="text-indigo-300/60 text-xs uppercase tracking-wider">Creator &amp; Craftsman</p>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">
+            From Plato&rsquo;s benevolent craftsman-god in the Timaeus to the ignorant and arrogant Yaldabaoth of Gnostic mythology &mdash; explore the radical theology of the secondary creator and its profound implications for understanding evil, matter, and liberation.
+          </p>
+        </a>
+
+        <a href="/mythologies-cosmologies/sophia-traditions" class="myth-card space-y-3 block">
+          <div class="text-3xl">&#127771;</div>
+          <h3 class="font-cinzel text-sm text-indigo-200">Sophia Traditions</h3>
+          <p class="text-indigo-300/60 text-xs uppercase tracking-wider">Divine Wisdom</p>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">
+            The feminine face of divine wisdom &mdash; from her appearance in the Hebrew scriptures as God&rsquo;s companion at creation, through her role as fallen Aeon in Gnostic cosmology, to her significance in Christian mysticism, the Orthodox tradition, and the Theosophical movement.
+          </p>
+        </a>
+
+        <a href="/mythologies-cosmologies/tree-of-life-cosmology" class="myth-card space-y-3 block">
+          <div class="text-3xl">&#127795;</div>
+          <h3 class="font-cinzel text-sm text-indigo-200">Kabbalistic Tree of Life</h3>
+          <p class="text-indigo-300/60 text-xs uppercase tracking-wider">Etz Chayyim</p>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">
+            The supreme cosmological diagram of Western esotericism &mdash; the Etz Chayyim with its ten Sephiroth, twenty-two Paths, three Pillars, and four Worlds. A complete map of divine manifestation, the human psyche, and the path of mystical return.
+          </p>
+        </a>
+
+        <a href="/mythologies-cosmologies/emanation-theories" class="myth-card space-y-3 block">
+          <div class="text-3xl">&#10024;</div>
+          <h3 class="font-cinzel text-sm text-indigo-200">Emanation Theories</h3>
+          <p class="text-indigo-300/60 text-xs uppercase tracking-wider">The One Becoming Many</p>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">
+            How the transcendent One overflows into the multiplicity of existence &mdash; exploring Plotinian Neoplatonism, Gnostic emanation, Kabbalistic Tzimtzum and Or Ein Sof, Islamic Neoplatonism, and the Theosophical doctrine of planes and sub-planes.
+          </p>
+        </a>
+
+        <a href="/mythologies-cosmologies/platonic-world-soul" class="myth-card space-y-3 block">
+          <div class="text-3xl">&#128302;</div>
+          <h3 class="font-cinzel text-sm text-indigo-200">Platonic World Soul</h3>
+          <p class="text-indigo-300/60 text-xs uppercase tracking-wider">Anima Mundi</p>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">
+            The living rational principle that animates the cosmos &mdash; Plato&rsquo;s great cosmological contribution, developed by Plotinus into the third hypostasis, revived in Renaissance Hermeticism by Ficino, and resonant in contemporary deep ecology and Gaia theory.
+          </p>
+        </a>
+
+        <a href="/akashic-records" class="myth-card space-y-3 block">
+          <div class="text-3xl">&#128218;</div>
+          <h3 class="font-cinzel text-sm text-indigo-200">Akashic Records</h3>
+          <p class="text-indigo-300/60 text-xs uppercase tracking-wider">The Cosmic Memory</p>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">
+            The universal field of consciousness in which every thought, action, and event throughout all of time is impressed and preserved &mdash; from the Sanskrit concept of Akasha through Theosophical cosmology, Rudolf Steiner&rsquo;s Chronicle of the World, and contemporary intuitive access.
+          </p>
+        </a>
+
+        <a href="/mythologies-cosmologies/astral-planes" class="myth-card space-y-3 block">
+          <div class="text-3xl">&#127754;</div>
+          <h3 class="font-cinzel text-sm text-indigo-200">Astral Planes &amp; Subtle Bodies</h3>
+          <p class="text-indigo-300/60 text-xs uppercase tracking-wider">The Invisible Dimensions</p>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">
+            The layered architecture of reality beyond the physical &mdash; the subtle vehicles of the soul, the planes of astral and mental existence, the Theosophical seven-plane system, and the traditions of conscious astral exploration across cultures and centuries.
+          </p>
+        </a>
+
+        <a href="/mythologies-cosmologies/chakric-systems" class="myth-card space-y-3 block">
+          <div class="text-3xl">&#127800;</div>
+          <h3 class="font-cinzel text-sm text-indigo-200">Chakric Systems</h3>
+          <p class="text-indigo-300/60 text-xs uppercase tracking-wider">Luminous Wheels of Force</p>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">
+            The luminous centres of vital energy that constitute the subtle body &mdash; the seven-chakra system of the Tantric tradition, the Kundalini Shakti, Tibetan Buddhist variations, the Sufi lataif, and the chakras as a vertical axis of the cosmos within the human form.
+          </p>
+        </a>
+
+        <a href="/mythologies-cosmologies/sephirothic-hierarchies" class="myth-card space-y-3 block">
+          <div class="text-3xl">&#127963;</div>
+          <h3 class="font-cinzel text-sm text-indigo-200">Sephirothic Hierarchies</h3>
+          <p class="text-indigo-300/60 text-xs uppercase tracking-wider">Grades of Divine Presence</p>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">
+            The vertical reading of the Tree of Life as a hierarchy of divine self-disclosure &mdash; angels and archangels at each Sephirah, the divine Names, the shadow-side Qliphoth, and the complete forty-fold structure of reality across the Four Worlds.
+          </p>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- SECTION 3: KEY THEMES -->
+    <section class="rounded-2xl p-8 space-y-6" style="background: linear-gradient(135deg, rgba(99,102,241,0.09), rgba(55,48,163,0.05));">
+      <h2 class="font-cinzel text-2xl text-indigo-300 text-center tracking-wide">Key Themes Across the Traditions</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+
+        <div class="text-card space-y-2">
+          <h3 class="font-cinzel text-xs text-amber-300 tracking-wider">The Transcendent Source</h3>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">Every esoteric cosmology posits a single ineffable source &mdash; the Gnostic Monad, Plotinus&rsquo;s One, the Kabbalistic Ein Sof, the Tantric Shiva-Shakti in their primordial union &mdash; from which all else proceeds and to which all else returns.</p>
+        </div>
+
+        <div class="text-card space-y-2">
+          <h3 class="font-cinzel text-xs text-amber-300 tracking-wider">Hierarchies of Being</h3>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">Reality is understood as a <em>plenum</em> of graded being: every possible degree of divine self-expression exists, from the most transcendent to the most dense. Nothing is absent from the great chain; each level is necessary to the whole.</p>
+        </div>
+
+        <div class="text-card space-y-2">
+          <h3 class="font-cinzel text-xs text-amber-300 tracking-wider">The Macrocosm&ndash;Microcosm</h3>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">The Hermetic maxim &ldquo;As above, so below&rdquo; &mdash; the human being is a living image of the cosmos. The chakric system recapitulates the cosmic planes; the Sephiroth map the human psyche; the Aeons are the eternal archetypes of human faculties.</p>
+        </div>
+
+        <div class="text-card space-y-2">
+          <h3 class="font-cinzel text-xs text-amber-300 tracking-wider">Fall and Return</h3>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">The universal mythological structure: a descent of divine consciousness into matter (whether voluntary, through overreaching, or through forgetfulness), followed by a process of awakening, purification, and reascent to the divine source.</p>
+        </div>
+
+        <div class="text-card space-y-2">
+          <h3 class="font-cinzel text-xs text-amber-300 tracking-wider">The Feminine Divine</h3>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">Sophia, Shekinah, Shakti, Anima Mundi &mdash; the feminine principle appears across esoteric cosmologies as the mediating force between the transcendent Father and the created world, as the world-soul, and as the impulse towards manifestation.</p>
+        </div>
+
+        <div class="text-card space-y-2">
+          <h3 class="font-cinzel text-xs text-amber-300 tracking-wider">Gnosis as Liberation</h3>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">Knowledge &mdash; but not merely intellectual knowledge: direct, transformative, experiential recognition of one&rsquo;s own divine nature and of the true structure of reality &mdash; is in all these traditions the key to liberation from limitation and the completion of the return journey.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="text-center mt-4">
+      <a href="/home" class="text-indigo-400/60 hover:text-indigo-300 text-sm transition-colors">&larr; Back to Portal</a>
+    </div>
+
+  </div><!-- end content wrapper -->
+
+  <footer class="relative z-10 text-center py-8 text-indigo-400/40 text-xs mt-8">
+    <p class="italic">&ldquo;The cosmos is a work of art, and the artist is the World Soul.&rdquo; &mdash; Plotinus, <em>Enneads</em> III.8</p>
+    <p class="mt-2">Esoteric Wisdom &middot; Built with &#10024; in Rust</p>
+    <p class="mt-2"><a href="/home" class="hover:text-indigo-300 transition-colors">&larr; Back to Portal</a></p>
+  </footer>
+
+  <script>
+    const sf = document.getElementById('starfield');
+    for (let i = 0; i < 120; i++) {
+      const s = document.createElement('div');
+      s.className = 'star';
+      s.style.cssText = `left:${Math.random()*100}%;top:${Math.random()*100}%;width:${Math.random()*2+1}px;height:${Math.random()*2+1}px;--dur:${Math.random()*4+2}s;--delay:${Math.random()*4}s`;
+      sf.appendChild(s);
+    }
+  </script>
+
+</body>
+</html>
