@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sophia Traditions — Esoteric Wisdom</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <meta property="og:title" content="Sophia Traditions — Esoteric Wisdom" />
+  <meta property="og:description" content="Divine Wisdom — the feminine face of God, the fallen Aeon, the World Soul, and the ever-present guide drawing souls back to the light." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://esoteric-wisdom.onrender.com/mythologies-cosmologies/sophia-traditions" />
+  <meta property="og:image" content="https://esoteric-wisdom.onrender.com/og-image.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Raleway', sans-serif; }
+    .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+    @keyframes twinkle { 0%,100% { opacity: 0.2; } 50% { opacity: 1; } }
+    .star { position: absolute; border-radius: 50%; background: white; animation: twinkle var(--dur,3s) ease-in-out infinite; animation-delay: var(--delay,0s); }
+    @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+    .floating { animation: float 5s ease-in-out infinite; }
+    @keyframes shimmer { 0% { background-position: -200% center; } 100% { background-position: 200% center; } }
+    .nav-link { position: relative; transition: all 0.3s; }
+    .nav-link::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: linear-gradient(90deg, #f59e0b, #a78bfa); transition: width 0.3s; }
+    .nav-link:hover::after { width: 100%; }
+    .aurora-text {
+      background: linear-gradient(90deg, #818cf8, #6366f1, #a5b4fc, #4f46e5, #818cf8);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 4s linear infinite;
+    }
+    .myth-card {
+      background: linear-gradient(135deg, rgba(99,102,241,0.10), rgba(67,56,202,0.06));
+      border: 1px solid rgba(99,102,241,0.25);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+    .myth-card:hover {
+      transform: translateY(-6px) scale(1.01);
+      box-shadow: 0 0 28px 5px rgba(99,102,241,0.25);
+      border-color: rgba(99,102,241,0.5);
+    }
+    .text-card {
+      background: linear-gradient(135deg, rgba(99,102,241,0.08), rgba(55,48,163,0.04));
+      border: 1px solid rgba(99,102,241,0.18);
+      border-radius: 0.75rem;
+      padding: 1.25rem;
+      transition: border-color 0.3s;
+    }
+    .text-card:hover { border-color: rgba(99,102,241,0.4); }
+  </style>
+</head>
+<body class="min-h-screen text-indigo-100 overflow-x-hidden" style="background: radial-gradient(ellipse at top, #050714 0%, #080d2b 25%, #020410 60%, #000000 100%);">
+
+  <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+
+  <!-- NAV -->
+  <nav class="sticky top-0 z-50 flex items-center justify-between px-6 py-3 bg-black/40 backdrop-blur-md border-b border-indigo-500/20 flex-wrap gap-y-2">
+    <a href="/home" class="font-cinzel text-amber-300 text-sm tracking-widest shrink-0">&#10022; Esoteric Wisdom &#10022;</a>
+    <div class="flex items-center gap-x-3 gap-y-1 text-xs text-indigo-200/80 flex-wrap justify-end">
+      <a href="/astrology" class="nav-link hover:text-amber-300 transition-colors">Astrology</a>
+      <a href="/meditation" class="nav-link hover:text-amber-300 transition-colors">Meditation</a>
+      <a href="/tarot/select" class="nav-link hover:text-amber-300 transition-colors">Tarot</a>
+      <a href="/numerology" class="nav-link hover:text-amber-300 transition-colors">Numerology</a>
+      <a href="/crystals" class="nav-link hover:text-amber-300 transition-colors">Crystals</a>
+      <a href="/runes" class="nav-link hover:text-amber-300 transition-colors">Runes</a>
+      <a href="/shamanism" class="nav-link hover:text-amber-300 transition-colors">Shamanism</a>
+      <a href="/druidism" class="nav-link hover:text-amber-300 transition-colors">Druidism</a>
+      <a href="/akashic-records" class="nav-link hover:text-amber-300 transition-colors">Akashic Records</a>
+      <a href="/wicca" class="nav-link hover:text-amber-300 transition-colors">Wicca</a>
+      <a href="/alchemy" class="nav-link hover:text-amber-300 transition-colors">Alchemy</a>
+      <a href="/gateway-process" class="nav-link hover:text-amber-300 transition-colors">Gateway Process</a>
+      <a href="/remote-viewing" class="nav-link hover:text-amber-300 transition-colors">Remote Viewing</a>
+      <a href="/khasarov-mirror" class="nav-link hover:text-amber-300 transition-colors">Khasarov Mirror</a>
+      <a href="/western-esotericism" class="nav-link hover:text-amber-300 transition-colors">Western Esotericism</a>
+      <a href="/eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Eastern Esotericism</a>
+      <a href="/indigenous-esotericism" class="nav-link hover:text-amber-300 transition-colors">Indigenous Esotericism</a>
+      <a href="/middle-eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Middle Eastern Mysteries</a>
+      <a href="/esoteric-practices" class="nav-link hover:text-amber-300 transition-colors">Esoteric Practices</a>
+      <a href="/esoteric-corpora" class="nav-link hover:text-amber-300 transition-colors">Sacred Texts</a>
+      <a href="/orders-societies" class="nav-link hover:text-amber-300 transition-colors">Orders &amp; Societies</a>
+      <a href="/mythologies-cosmologies" class="nav-link text-amber-300 font-semibold">Mythologies &amp; Cosmologies</a>
+      <a href="/journal/reflections" class="nav-link text-emerald-300 hover:text-emerald-200 transition-colors">&#10024; Reflections</a>
+      <a href="https://ko-fi.com/esotericwisdom" target="_blank" rel="noopener noreferrer"
+         class="px-3 py-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-white font-semibold hover:scale-105 transition-transform shrink-0">&#9749; Support</a>
+    </div>
+  </nav>
+
+  <!-- CONTENT WRAPPER -->
+  <div class="relative z-10 max-w-6xl mx-auto space-y-10 pt-6 px-4 pb-12">
+
+    <!-- BREADCRUMB -->
+    <div>
+      <a href="/mythologies-cosmologies" class="text-xs text-indigo-300/60 hover:text-indigo-300 transition-colors">&larr; Mythologies &amp; Cosmologies</a>
+    </div>
+
+    <!-- HERO -->
+    <section class="text-center py-14 space-y-6">
+      <div class="text-7xl floating">&#127771;</div>
+      <h1 class="font-cinzel text-4xl md:text-6xl font-bold aurora-text leading-tight">
+        Sophia Traditions
+      </h1>
+      <p class="max-w-3xl mx-auto text-indigo-200/80 text-lg leading-relaxed">
+        Divine Wisdom &mdash; the feminine face of God, the fallen Aeon, the World Soul, and the ever-present guide drawing souls back to the light.
+      </p>
+    </section>
+
+    <!-- SECTION 1: HEBREW TRADITION -->
+    <section class="rounded-2xl p-8 space-y-6" style="background: linear-gradient(135deg, rgba(99,102,241,0.12), rgba(67,56,202,0.07));">
+      <h2 class="font-cinzel text-2xl text-indigo-300 text-center tracking-wide">Sophia in the Hebrew Tradition</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm text-indigo-100/80 leading-relaxed">
+        <div class="space-y-4">
+          <p>
+            The figure of Sophia &mdash; divine Wisdom &mdash; makes her earliest sustained appearance in the Hebrew wisdom literature, particularly in <strong class="text-indigo-200">Proverbs 8</strong>. Here, Wisdom (Hebrew: <em>Chokmah</em>, &#1495;&#1499;&#1502;&#1492;) speaks in the first person in a remarkable self-disclosure: she was with God at the beginning of creation, &ldquo;beside him, like a master workman&rdquo;, rejoicing before him daily, delighting in the inhabited world and finding joy in the children of humanity. This passage presents Wisdom not as an abstract attribute but as a <strong class="text-indigo-200">personal divine being</strong>, present with God before the creation of the world and participating in the act of creation as God&rsquo;s companion and co-worker.
+          </p>
+          <p>
+            The theological implications of Proverbs 8 generated intense debate among Jewish and early Christian interpreters. Was Wisdom a divine person in her own right, or merely a literary personification of an attribute? Was she created before all else (&ldquo;The Lord created me at the beginning of his work, the first of his acts of old&rdquo;, Proverbs 8:22), and if so, was she a creature or a co-eternal divine being? These questions prefigured the later Christological debates, since early Christian thinkers frequently identified Christ with the Wisdom of Proverbs 8.
+          </p>
+          <p>
+            The deuterocanonical <strong class="text-indigo-200">Book of Wisdom</strong> (Wisdom of Solomon, c. 1st century BCE) deepens the portrait of divine Wisdom. Here Sophia is described as &ldquo;a breath of the power of God, and a pure emanation of the glory of the Almighty&rdquo; (7:25) &mdash; language that anticipates Neoplatonic emanation theology. She is described as &ldquo;more beautiful than the sun, and excels every constellation of the stars&rdquo; (7:29), and as a world-soul who pervades all things: &ldquo;she reaches mightily from one end of the earth to the other, and she orders all things well&rdquo; (8:1). The Book of Wisdom&rsquo;s Sophia is thus a cosmic figure, not merely a personification of human prudence.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <p>
+            <strong class="text-indigo-200">Ben Sira (Sirach)</strong>, written c. 180 BCE, presents a slightly different and historically very significant picture of Wisdom. In chapter 24, Sophia speaks again in the first person, describing how she came forth from the mouth of the Most High, covered the earth like a mist, and then sought a dwelling place among all nations &mdash; until God assigned her a permanent dwelling in <strong class="text-indigo-200">Israel</strong>, specifically identifying her with the Torah, the Law of Moses. This identification of divine Wisdom with Torah became enormously influential in subsequent Jewish theology, effectively domesticating the potentially subversive figure of the cosmic, feminine Wisdom by identifying her with the Jewish religious law. But the earlier, more expansive Wisdom figure of Proverbs 8 and the Wisdom of Solomon continued to exert influence on both Jewish mysticism and early Christianity.
+          </p>
+          <p>
+            In Jewish mysticism, the <strong class="text-indigo-200">Shekinah</strong> &mdash; the divine indwelling presence, grammatically feminine in Hebrew &mdash; bears significant structural resemblance to Sophia. In Kabbalistic theology, the Shekinah is associated with the tenth Sephirah, Malkuth, and is understood as the divine presence that descends into the world and dwells with Israel in exile. Like Sophia, the Shekinah is an aspect of the divine that participates in the world&rsquo;s suffering &mdash; she goes into exile with the people of Israel &mdash; and her ultimate restoration is the goal of Kabbalistic practice and eschatological hope. The Kabbalistic <em>tikkun olam</em> (repair of the world) involves reuniting the Shekinah with the higher Sephiroth, restoring the cosmic wholeness that was shattered by the primordial fall.
+          </p>
+          <p>
+            The Greek word <em>Sophia</em> (&#963;&#959;&#966;&#943;&#945;) simply means &ldquo;wisdom&rdquo; or &ldquo;skill&rdquo; &mdash; the same root from which &ldquo;philosophy&rdquo; (love of wisdom) derives. But in the context of the Septuagint (the Greek translation of the Hebrew scriptures), it became the vehicle for translating the Hebrew <em>Chokmah</em>, and thus the Greek word Sophia became saturated with the rich theological content of the Hebrew wisdom tradition, acquiring a cosmic and quasi-divine status that the ordinary Greek word did not naturally carry.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: SOPHIA IN GNOSTIC COSMOLOGY -->
+    <section class="rounded-2xl p-8 space-y-5" style="background: linear-gradient(135deg, rgba(99,102,241,0.09), rgba(55,48,163,0.05));">
+      <h2 class="font-cinzel text-2xl text-indigo-300 text-center tracking-wide">Sophia in Gnostic Cosmology</h2>
+      <div class="text-sm text-indigo-100/80 leading-relaxed space-y-4 max-w-4xl mx-auto">
+        <p>
+          In Gnostic cosmology, Sophia occupies the most pivotal position of any Aeon: she is at once the last and most vulnerable member of the Pleroma, the initiator of the cosmological drama that produces the material world, the mother (however inadvertent) of the Demiurge, and ultimately the figure whose rescue and restoration provides the teleological goal of the entire cosmic process. Sophia&rsquo;s story is the <strong class="text-indigo-200">central myth of Gnosticism</strong> &mdash; the myth that explains why the world is as it is and what can be done about it.
+        </p>
+        <p>
+          In the Valentinian account, Sophia is the youngest and most outward of the thirty Aeons of the Pleroma. Being at the periphery of the divine realm, she is the most exposed to the &ldquo;outside&rdquo; &mdash; to the absence of the Father, to the longing for the unknown transcendence that lies beyond even the Pleroma. This longing becomes a crisis: Sophia is seized by an overwhelming desire to know the Father directly, without the mediation of her consort or the harmonious consensus of the Pleromatic community. She attempts to rush forward in this desire, and her unilateral act produces what the texts call her <em>enthymesis</em> &mdash; her &ldquo;intent&rdquo; or passionate thought &mdash; which, existing outside the proper Pleromatic order, takes on a formless, chaotic character.
+        </p>
+        <p>
+          The Aeon <strong class="text-indigo-200">Horos</strong> (Limit or Cross) acts as the great stabiliser: he separates Sophia&rsquo;s fallen passion from the Pleroma, and Sophia herself is restored to her proper place. But her <em>enthymesis</em> &mdash; her passion-product &mdash; is cast outside the Pleroma. The Christ Aeon, sent from the highest level of the Pleroma, gives this formless passion a basic form, but it remains fundamentally deficient &mdash; it lacks the ability to attain gnosis. This is the being that becomes Sophia&rsquo;s lower counterpart, the <strong class="text-indigo-200">Lower Sophia</strong> or <strong class="text-indigo-200">Achamoth</strong> (from the Hebrew <em>Chokmah</em>), who weeps in the void below the Pleroma, producing the material elements from her emotions: water from her tears, darkness from her grief, fire from her terror.
+        </p>
+        <p>
+          From Achamoth&rsquo;s passions and with her residual divine light, the Demiurge is formed. When the Demiurge creates the material world, he places within humanity the seed of Sophia&rsquo;s light &mdash; the divine spark &mdash; without knowing he has done so. It is this seed that makes human beings capable of gnosis, and it is for the sake of gathering these scattered seeds of light that the Saviour descends into the world. When the last seed has been gathered and returned to the Pleroma, Sophia&rsquo;s restoration will be complete: Achamoth herself will enter the Pleroma, and the material world &mdash; having served its purpose &mdash; will dissolve.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION 3: SOPHIA IN DIFFERENT GNOSTIC SCHOOLS -->
+    <section class="space-y-6">
+      <h2 class="font-cinzel text-2xl text-indigo-300 text-center tracking-wide">Sophia in Different Gnostic Schools</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+
+        <div class="myth-card space-y-3">
+          <h3 class="font-cinzel text-xs text-amber-300 tracking-wider">Upper &amp; Lower Sophia in Valentinianism</h3>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">
+            Valentinian theology distinguishes between <strong class="text-indigo-200">Upper Sophia</strong> (the restored Aeon within the Pleroma) and <strong class="text-indigo-200">Lower Sophia / Achamoth</strong> (the passion-product cast outside). This doubling allows Valentinian theology to assert simultaneously that the Pleroma is perfect and harmonious (Upper Sophia is restored) while accounting for the continued existence of the material world (Lower Sophia / Achamoth remains outside, generating the material realm from her passions until her own restoration at the end of the cosmic process).
+          </p>
+        </div>
+
+        <div class="myth-card space-y-3">
+          <h3 class="font-cinzel text-xs text-amber-300 tracking-wider">Sophia Zoe in Sethian Texts</h3>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">
+            In several Sethian texts, particularly the <em>Hypostasis of the Archons</em> and <em>On the Origin of the World</em>, Sophia appears as <strong class="text-indigo-200">Sophia Zoe</strong> (&ldquo;Wisdom Life&rdquo;) &mdash; a more active, interventionist figure who countermands the Demiurge&rsquo;s attempts to keep humanity ignorant. When the Archons create an earthly human body but cannot animate it, it is Sophia Zoe who breathes divine life into the human being. When the Archons attempt to rape the spiritual Eve, she escapes into the tree and leaves only her shadow for them to defile. Sophia Zoe is an active resistor of Demiurgic oppression, a divine mother who smuggles the divine spark past the Archons&rsquo; defences.
+          </p>
+        </div>
+
+        <div class="myth-card space-y-3">
+          <h3 class="font-cinzel text-xs text-amber-300 tracking-wider">Sophia in the Apocryphon of John</h3>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">
+            The <em>Apocryphon of John</em>, one of the most important Sethian texts found at Nag Hammadi, presents a Sophia whose fall is characterised by a single fateful moment of independent will: she wished to bring forth an image of herself without the consent of the Father and without her partner. The result was Yaldabaoth. But the text is also careful to emphasise Sophia&rsquo;s repentance: she cries out to the highest God for forgiveness, and throughout the narrative, voices from the transcendent Light intervene to aid the trapped divine sparks &mdash; voices that are Sophia&rsquo;s repentant prayers made effective by the grace of the highest divine realm.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 4: SOPHIA AND THE WORLD SOUL -->
+    <section class="rounded-2xl p-8 space-y-5" style="background: linear-gradient(135deg, rgba(99,102,241,0.09), rgba(55,48,163,0.05));">
+      <h2 class="font-cinzel text-2xl text-indigo-300 text-center tracking-wide">Sophia and the World Soul</h2>
+      <div class="text-sm text-indigo-100/80 leading-relaxed space-y-4 max-w-4xl mx-auto">
+        <p>
+          The connections between the Gnostic Sophia and Plato&rsquo;s <strong class="text-indigo-200">World Soul</strong> (the <em>psyche tou kosmou</em> of the <em>Timaeus</em>) were recognised in antiquity and have continued to fascinate scholars. Both figures occupy the same structural position: they are the <em>mediating</em> principle between the transcendent divine intellect and the material world. Both participate in the divine realm above while also descending into (or generating) the material realm below. Both are characterised by a certain pathos or suffering that arises from this intermediate position &mdash; the World Soul&rsquo;s agitated motion between the intelligible and sensible, Sophia&rsquo;s passionate overreaching and subsequent grief.
+        </p>
+        <p>
+          In Neoplatonic philosophy, particularly in Plotinus, the third hypostasis &mdash; Soul &mdash; exercises its &ldquo;lower&rdquo; functions in the direction of matter, producing the material world through its outward-looking aspect while retaining its higher aspect in contemplation of Intellect. This lower aspect of Soul has sometimes been identified with the <strong class="text-indigo-200">anima mundi</strong> (World Soul), and the structural parallel with Sophia is evident: in both cases, a divine being&rsquo;s &ldquo;lower face&rdquo; or outward-looking aspect produces and sustains the material world, while its &ldquo;higher face&rdquo; remains in contemplative union with the transcendent source.
+        </p>
+        <p>
+          The <em>anima mundi</em> as a concept &mdash; the soul of the world as a single, unified psychic force pervading and animating the material cosmos &mdash; carries Sophia&rsquo;s qualities into a more strictly cosmological key: the world has a soul, the world is alive, and that soul is an expression of divine Wisdom&rsquo;s creative presence in the material realm. For the esotericist, this means that engagement with the natural world is not mere materialism but a form of encounter with the divine Wisdom that sustains it.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION 5: SOPHIA IN CHRISTIAN MYSTICISM AND THEOSOPHY -->
+    <section class="space-y-6">
+      <h2 class="font-cinzel text-2xl text-indigo-300 text-center tracking-wide">Sophia in Christian Mysticism &amp; Theosophy</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+        <div class="text-card space-y-3">
+          <h3 class="font-cinzel text-xs text-amber-300 tracking-wider">Hagia Sophia &mdash; Holy Wisdom in Orthodoxy</h3>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">
+            The great church of <strong class="text-indigo-200">Hagia Sophia</strong> (Holy Wisdom) in Constantinople, dedicated in 537 CE by Emperor Justinian, gives visible expression to the central role of Sophia in Eastern Orthodox Christianity. In Orthodox theology, Sophia as Holy Wisdom is identified with Christ as the divine Logos, or with the divine nature itself considered as wisdom, or &mdash; in a more controversial tradition &mdash; as a distinct divine hypostasis mediating between God and creation. The Russian Orthodox tradition in particular developed a rich Sophiology, culminating in the works of the &ldquo;Silver Age&rdquo; philosophers.
+          </p>
+        </div>
+
+        <div class="text-card space-y-3">
+          <h3 class="font-cinzel text-xs text-amber-300 tracking-wider">Jacob B&ouml;hme and German Mysticism</h3>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">
+            The German Lutheran mystic <strong class="text-indigo-200">Jacob B&ouml;hme</strong> (1575&ndash;1624) developed a striking Sophia theology in his visionary writings. For B&ouml;hme, Sophia (divine Wisdom) is the mirror in which God beholds himself &mdash; not a creature but the divine self-image, the Virgin of Wisdom who was present before the fall of Lucifer and before the creation of the material world. Sophia is the soul&rsquo;s true bride, and the mystic&rsquo;s path is understood as a return to union with the divine Sophia &mdash; the recovery of the paradisical state before the fall into matter and egotism. B&ouml;hme&rsquo;s Sophia theology influenced the entire tradition of German mysticism and theosophy.
+          </p>
+        </div>
+
+        <div class="text-card space-y-3">
+          <h3 class="font-cinzel text-xs text-amber-300 tracking-wider">Russian Sophiology: Solovyov and Bulgakov</h3>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">
+            The Russian philosopher <strong class="text-indigo-200">Vladimir Solovyov</strong> (1853&ndash;1900) experienced a series of visionary encounters with a divine feminine being he called &ldquo;the Eternal Feminine&rdquo; or Sophia, and devoted much of his philosophical work to articulating a Sophiology &mdash; a systematic theology of divine Wisdom as the mediating principle between God and creation, and as the cosmic goal of human civilisation. His successor <strong class="text-indigo-200">Sergei Bulgakov</strong> (1871&ndash;1944) developed the most systematic Orthodox Sophiology, in which Sophia is the divine nature or essence insofar as it is the ground of creation &mdash; a position that generated considerable controversy but also profound theological fruit.
+          </p>
+        </div>
+
+        <div class="text-card space-y-3">
+          <h3 class="font-cinzel text-xs text-amber-300 tracking-wider">Theosophical Sophia</h3>
+          <p class="text-indigo-100/70 text-sm leading-relaxed">
+            Helena Petrovna Blavatsky&rsquo;s Theosophy placed wisdom &mdash; both human and divine &mdash; at its very heart: the word &ldquo;Theosophy&rdquo; itself means &ldquo;divine wisdom&rdquo; (from Greek <em>theos</em>, God, and <em>sophia</em>, wisdom). The Theosophical tradition associated Sophia with the <strong class="text-indigo-200">Akasha</strong> &mdash; the primordial substance or ether in which all cosmic impressions are recorded &mdash; and with the ideal of the <em>theosophos</em>, the divine wisdom-holder who has transcended ordinary human limitations. Annie Besant and Charles Leadbeater further developed the Theosophical Sophia in connection with their elaborate cosmological system of planes, sub-planes, and cosmic intelligences.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 6: SOPHIA'S REDEMPTION -->
+    <section class="rounded-2xl p-8 space-y-5" style="background: linear-gradient(135deg, rgba(99,102,241,0.09), rgba(55,48,163,0.05));">
+      <h2 class="font-cinzel text-2xl text-indigo-300 text-center tracking-wide">Sophia&rsquo;s Redemption &amp; Modern Significance</h2>
+      <div class="text-sm text-indigo-100/80 leading-relaxed space-y-4 max-w-4xl mx-auto">
+        <p>
+          The trajectory of Sophia&rsquo;s story &mdash; from divine fullness through passionate overreaching, through the suffering of exile in matter, to ultimate restoration &mdash; has enduring resonance because it maps a fundamental human experience. The soul that has forgotten its divine origin, wandering in the material world in grief and confusion, yet carrying within it an indelible seed of divine light that no material circumstance can extinguish &mdash; this is the Sophia myth as spiritual autobiography.
+        </p>
+        <p>
+          The modern significance of Sophia traditions lies partly in their <strong class="text-indigo-200">retrieval of the feminine divine</strong> within traditions that have tended towards exclusively masculine images of God. Sophia represents a theological counter-tradition in which divinity is not simply power, law, and transcendence but also wisdom, relationality, creative yearning, and compassionate presence in the world&rsquo;s suffering. Her story is not a story of omnipotent control but of passionate engagement, costly self-giving, and the slow, painful work of restoration.
+        </p>
+        <p>
+          Feminist theologians and spiritual practitioners have found in Sophia traditions powerful resources for reimagining divinity in ways that include and honour the feminine. <strong class="text-indigo-200">Susan Cady</strong>, <strong class="text-indigo-200">Elisabeth Sch&uuml;ssler Fiorenza</strong>, and <strong class="text-indigo-200">Caitl&iacute;n Matthews</strong>, among others, have developed Sophia spirituality as a living tradition that draws on the ancient sources while speaking to contemporary concerns about gender, ecology, and the recovery of the sacred feminine. The image of Sophia as the divine wisdom immanent in the natural world &mdash; as <em>anima mundi</em> &mdash; connects Sophia spirituality to deep ecology and to the contemporary recovery of reverence for the Earth.
+        </p>
+      </div>
+    </section>
+
+    <div class="text-center mt-4">
+      <a href="/mythologies-cosmologies" class="text-indigo-400/60 hover:text-indigo-300 text-sm transition-colors">&larr; Mythologies &amp; Cosmologies</a>
+    </div>
+
+  </div><!-- end content wrapper -->
+
+  <footer class="relative z-10 text-center py-8 text-indigo-400/40 text-xs mt-8">
+    <p class="italic">&ldquo;She is a breath of the power of God, and a pure emanation of the glory of the Almighty.&rdquo; &mdash; Wisdom of Solomon 7:25</p>
+    <p class="mt-2">Esoteric Wisdom &middot; Built with &#10024; in Rust</p>
+    <p class="mt-2"><a href="/home" class="hover:text-indigo-300 transition-colors">&larr; Back to Portal</a></p>
+  </footer>
+
+  <script>
+    const sf = document.getElementById('starfield');
+    for (let i = 0; i < 120; i++) {
+      const s = document.createElement('div');
+      s.className = 'star';
+      s.style.cssText = `left:${Math.random()*100}%;top:${Math.random()*100}%;width:${Math.random()*2+1}px;height:${Math.random()*2+1}px;--dur:${Math.random()*4+2}s;--delay:${Math.random()*4}s`;
+      sf.appendChild(s);
+    }
+  </script>
+
+</body>
+</html>
