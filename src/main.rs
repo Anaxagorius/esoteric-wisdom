@@ -16,6 +16,7 @@ mod alchemy;
 mod gateway_process;
 mod remote_viewing;
 mod khasarov_mirror;
+mod ce5;
 mod western_esotericism;
 mod eastern_esotericism;
 mod indigenous_esotericism;
@@ -64,6 +65,7 @@ async fn main() -> anyhow::Result<()> {
         .nest("/gateway-process", gateway_process::routes())
         .nest("/remote-viewing", remote_viewing::routes())
         .nest("/khasarov-mirror", khasarov_mirror::routes())
+        .nest("/ce5", ce5::routes())
         .nest("/western-esotericism", western_esotericism::routes())
         .nest("/eastern-esotericism", eastern_esotericism::routes())
         .nest("/indigenous-esotericism", indigenous_esotericism::routes())

@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CE-5 — Esoteric Wisdom</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta property="og:title" content="CE-5: Close Encounters of the Fifth Kind — Esoteric Wisdom" />
+    <meta property="og:description" content="CE-5 — human-initiated contact through consciousness: the classification system, core concepts, typical protocol, reported experiences, and scientific perspective." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://esoteric-wisdom.onrender.com/ce5/" />
+    <meta property="og:image" content="https://esoteric-wisdom.onrender.com/og-image.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+    <style>
+      body {
+        background: radial-gradient(ellipse at top, #011a0f 0%, #012a18 25%, #010d08 60%, #000000 100%);
+        font-family: 'Raleway', sans-serif;
+      }
+      .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+      @keyframes twinkle { 0%,100% { opacity: 0.2; } 50% { opacity: 1; } }
+      .star { position: absolute; border-radius: 50%; background: white; animation: twinkle var(--dur,3s) ease-in-out infinite; animation-delay: var(--delay,0s); }
+      @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+      .floating { animation: float 5s ease-in-out infinite; }
+      @keyframes shimmer {
+        0% { background-position: -200% center; }
+        100% { background-position: 200% center; }
+      }
+      @keyframes ce5-pulse {
+        0%, 100% { box-shadow: 0 0 20px rgba(52,211,153,0.25), 0 0 40px rgba(52,211,153,0.1); }
+        50% { box-shadow: 0 0 40px rgba(16,185,129,0.5), 0 0 80px rgba(52,211,153,0.25); }
+      }
+      .aurora-text {
+        background: linear-gradient(90deg, #34d399, #6ee7b7, #a7f3d0, #10b981, #34d399);
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        animation: shimmer 5s linear infinite;
+      }
+      .ce5-card {
+        transition: all 0.35s ease;
+        cursor: default;
+      }
+      .ce5-card:hover {
+        transform: translateY(-7px) scale(1.01);
+        box-shadow: 0 24px 64px rgba(52,211,153,0.2);
+        border-color: rgba(52,211,153,0.6) !important;
+      }
+      .glow-card { animation: ce5-pulse 4s ease-in-out infinite; }
+      .nav-link { position: relative; transition: all 0.3s; }
+      .nav-link::after {
+        content: ''; position: absolute; bottom: -2px; left: 0;
+        width: 0; height: 2px;
+        background: linear-gradient(90deg, #f59e0b, #a78bfa);
+        transition: width 0.3s;
+      }
+      .nav-link:hover::after { width: 100%; }
+    </style>
+  </head>
+  <body class="min-h-screen text-white px-4 py-8">
+    <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 flex items-center justify-between px-6 py-3 bg-black/40 backdrop-blur-md border-b border-emerald-500/20 flex-wrap gap-y-2">
+      <a href="/home" class="font-cinzel text-amber-300 text-sm tracking-widest shrink-0">✦ Esoteric Wisdom ✦</a>
+      <div class="flex items-center gap-x-3 gap-y-1 text-xs text-violet-200 flex-wrap justify-end">
+        <a href="/astrology" class="nav-link hover:text-amber-300 transition-colors">Astrology</a>
+        <a href="/meditation" class="nav-link hover:text-amber-300 transition-colors">Meditation</a>
+        <a href="/tarot/select" class="nav-link hover:text-amber-300 transition-colors">Tarot</a>
+        <a href="/numerology" class="nav-link hover:text-amber-300 transition-colors">Numerology</a>
+        <a href="/crystals" class="nav-link hover:text-amber-300 transition-colors">Crystals</a>
+        <a href="/runes" class="nav-link hover:text-amber-300 transition-colors">Runes</a>
+        <a href="/shamanism" class="nav-link hover:text-amber-300 transition-colors">Shamanism</a>
+        <a href="/druidism" class="nav-link hover:text-amber-300 transition-colors">Druidism</a>
+        <a href="/akashic-records" class="nav-link hover:text-amber-300 transition-colors">Akashic Records</a>
+        <a href="/wicca" class="nav-link hover:text-amber-300 transition-colors">Wicca</a>
+        <a href="/alchemy" class="nav-link hover:text-amber-300 transition-colors">Alchemy</a>
+        <a href="/gateway-process" class="nav-link hover:text-amber-300 transition-colors">Gateway Process</a>
+        <a href="/remote-viewing" class="nav-link hover:text-amber-300 transition-colors">Remote Viewing</a>
+        <a href="/khasarov-mirror" class="nav-link hover:text-amber-300 transition-colors">Khasarov Mirror</a>
+        <a href="/ce5" class="nav-link text-amber-300 font-semibold">CE-5</a>
+        <a href="/western-esotericism" class="nav-link hover:text-amber-300 transition-colors">Western Esotericism</a>
+        <a href="/eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Eastern Esotericism</a>
+        <a href="/indigenous-esotericism" class="nav-link hover:text-amber-300 transition-colors">Indigenous Esotericism</a>
+        <a href="/middle-eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Middle Eastern Mysteries</a>
+        <a href="/esoteric-practices" class="nav-link hover:text-amber-300 transition-colors">Esoteric Practices</a>
+        <a href="/esoteric-corpora" class="nav-link hover:text-amber-300 transition-colors">Sacred Texts</a>
+        <a href="/esoteric-figures" class="nav-link hover:text-amber-300 transition-colors">Esoteric Figures</a>
+        <a href="/orders-societies" class="nav-link hover:text-amber-300 transition-colors">Orders &amp; Societies</a>
+        <a href="/mythologies-cosmologies" class="nav-link hover:text-amber-300 transition-colors">Mythologies &amp; Cosmologies</a>
+        <a href="/journal/reflections" class="nav-link text-emerald-300 hover:text-emerald-200 transition-colors">✨ Reflections</a>
+        <a href="https://ko-fi.com/esotericwisdom" target="_blank" rel="noopener noreferrer"
+           class="px-3 py-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-white font-semibold hover:scale-105 transition-transform shrink-0">☕ Support</a>
+      </div>
+    </nav>
+
+    <div class="relative z-10 max-w-6xl mx-auto space-y-10 pt-6">
+
+      <!-- Hero -->
+      <header class="text-center py-6">
+        <div class="floating text-7xl mb-4">🛸</div>
+        <h1 class="font-cinzel text-4xl md:text-5xl font-bold mb-3">
+          <span class="aurora-text">CE-5</span>
+        </h1>
+        <p class="text-emerald-100/80 text-lg max-w-2xl mx-auto leading-relaxed">
+          Close Encounters of the Fifth Kind — a modern esoteric practice combining meditation, group intention, and symbolic signalling, based on the belief that consciousness can initiate peaceful contact with non-human intelligence.
+        </p>
+      </header>
+
+      <!-- Section 1: Disclaimer -->
+      <section class="bg-gradient-to-br from-amber-950/50 to-red-950/40 border border-amber-700/50 rounded-3xl p-8 backdrop-blur-md shadow-2xl">
+        <h2 class="font-cinzel text-2xl font-semibold mb-5 text-amber-300">✦ Important Notice</h2>
+        <div class="bg-black/40 rounded-2xl p-6 border border-amber-600/40">
+          <div class="flex items-start gap-4 mb-4">
+            <span class="text-3xl flex-shrink-0">⚠️</span>
+            <div>
+              <h3 class="font-cinzel text-base font-semibold text-amber-200 mb-2">For Educational &amp; Informational Purposes Only</h3>
+              <p class="text-amber-100/85 text-sm leading-relaxed mb-3">
+                The information on this page is provided solely for educational and informational purposes. CE-5 protocols are <strong class="text-amber-300">claimed practices, not scientifically verified procedures</strong>. There is no peer-reviewed evidence that these techniques initiate extraterrestrial contact. All experiences reported by participants are subjective and may reflect altered states of consciousness, group dynamics, or ordinary perceptual phenomena misinterpreted in context.
+              </p>
+            </div>
+          </div>
+          <div class="grid md:grid-cols-2 gap-5">
+            <div class="bg-black/30 rounded-xl p-4 border border-amber-800/30">
+              <h4 class="text-amber-300 font-semibold text-sm mb-2">⛔ Do Not Use CE-5 as a Substitute For:</h4>
+              <ul class="text-amber-100/80 text-xs leading-relaxed space-y-1 list-disc list-inside">
+                <li>Professional mental health care or therapy</li>
+                <li>Medical advice or treatment</li>
+                <li>Evidence-based psychological support</li>
+                <li>Grounded, factual inquiry into aerial phenomena</li>
+                <li>Critical thinking or scientific evaluation</li>
+              </ul>
+            </div>
+            <div class="bg-black/30 rounded-xl p-4 border border-amber-800/30">
+              <h4 class="text-amber-300 font-semibold text-sm mb-2">🔒 Safety Precautions</h4>
+              <ul class="text-amber-100/80 text-xs leading-relaxed space-y-1 list-disc list-inside">
+                <li>Never point lasers at aircraft — this is illegal and dangerous</li>
+                <li>Maintain grounding in everyday reality throughout</li>
+                <li>Treat all experiences as personal meaning, not absolute proof</li>
+                <li>Avoid isolated locations; practise with trusted companions</li>
+                <li>If you struggle to distinguish inner imagery from external reality, seek professional support immediately</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2: What CE-5 Means -->
+      <section class="bg-gradient-to-br from-emerald-950/40 to-teal-900/20 border border-emerald-700/40 rounded-3xl p-8 backdrop-blur-md shadow-2xl">
+        <h2 class="font-cinzel text-2xl font-semibold mb-5 text-emerald-300">✦ What CE-5 Means</h2>
+        <p class="text-emerald-100/90 text-sm leading-relaxed mb-6">
+          The "CE" classification system — Close Encounters of the First through Fifth Kinds — originated with astronomer and UFO researcher J. Allen Hynek (1910–1986), who devised the first three categories in his 1972 book <em>The UFO Experience</em>. Later researchers extended the framework to include further categories. CE-5 is the most recent addition, associated primarily with the work of Steven Greer and the CE-5 Contact Team methodology developed in the 1990s.
+        </p>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm border-collapse">
+            <thead>
+              <tr class="border-b border-emerald-700/40">
+                <th class="text-left py-3 px-4 font-cinzel text-emerald-300 text-xs">Category</th>
+                <th class="text-left py-3 px-4 font-cinzel text-emerald-300 text-xs">Type of Encounter</th>
+                <th class="text-left py-3 px-4 font-cinzel text-emerald-300 text-xs">Description</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-emerald-900/40">
+              <tr class="hover:bg-emerald-900/10 transition-colors">
+                <td class="py-3 px-4 font-bold text-emerald-300 whitespace-nowrap">CE-1</td>
+                <td class="py-3 px-4 text-white/80 whitespace-nowrap">Visual Sighting</td>
+                <td class="py-3 px-4 text-white/70">A UFO observed at close range with no physical interaction between witness and object.</td>
+              </tr>
+              <tr class="hover:bg-emerald-900/10 transition-colors">
+                <td class="py-3 px-4 font-bold text-emerald-300 whitespace-nowrap">CE-2</td>
+                <td class="py-3 px-4 text-white/80 whitespace-nowrap">Physical Effects</td>
+                <td class="py-3 px-4 text-white/70">A UFO encounter that leaves measurable traces — radar returns, landing marks, physiological effects, or electromagnetic interference.</td>
+              </tr>
+              <tr class="hover:bg-emerald-900/10 transition-colors">
+                <td class="py-3 px-4 font-bold text-emerald-300 whitespace-nowrap">CE-3</td>
+                <td class="py-3 px-4 text-white/80 whitespace-nowrap">Entity Encounter</td>
+                <td class="py-3 px-4 text-white/70">An alleged encounter with beings associated with a UFO — typically described as an unexpected or passive observation.</td>
+              </tr>
+              <tr class="hover:bg-emerald-900/10 transition-colors">
+                <td class="py-3 px-4 font-bold text-emerald-300 whitespace-nowrap">CE-4</td>
+                <td class="py-3 px-4 text-white/80 whitespace-nowrap">Abduction Narrative</td>
+                <td class="py-3 px-4 text-white/70">Alleged involuntary transport of a human by non-human intelligences — the classic "abduction" scenario of popular UFOlogy.</td>
+              </tr>
+              <tr class="hover:bg-emerald-900/10 transition-colors bg-emerald-900/15">
+                <td class="py-3 px-4 font-bold text-emerald-200 whitespace-nowrap">CE-5 ✦</td>
+                <td class="py-3 px-4 text-white/90 font-semibold whitespace-nowrap">Human-Initiated Contact</td>
+                <td class="py-3 px-4 text-white/80">A <em>voluntary, intentional</em> attempt by humans to make contact using consciousness — meditation, visualisation, group coherence, and symbolic signalling — rather than awaiting a chance encounter.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-emerald-100/70 text-sm leading-relaxed mt-6">
+          CE-5 differs fundamentally from all earlier categories by placing human consciousness at the centre of the contact event. Rather than being a passive observer or unwilling participant, the practitioner actively <em>invites</em> an encounter through directed intention. This conceptual shift — from witness to initiator — reflects CE-5's deep roots in New Age consciousness philosophy and the contactee tradition.
+        </p>
+      </section>
+
+      <!-- Section 3: Core Concepts -->
+      <section class="bg-gradient-to-br from-teal-950/40 to-cyan-900/20 border border-teal-700/40 rounded-3xl p-8 backdrop-blur-md shadow-2xl">
+        <h2 class="font-cinzel text-2xl font-semibold mb-5 text-teal-300">✦ Core Concepts According to Proponents</h2>
+        <p class="text-teal-100/80 text-sm leading-relaxed mb-6">
+          CE-5 practice rests on a set of underlying philosophical assumptions about the nature of consciousness and non-human intelligence. These are the beliefs of proponents and are not established by scientific evidence.
+        </p>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div class="bg-black/30 rounded-2xl p-5 border border-teal-800/40 ce5-card">
+            <div class="text-3xl mb-3">🌌</div>
+            <h3 class="font-cinzel text-sm font-semibold text-teal-300 mb-2">Non-Local Consciousness</h3>
+            <p class="text-teal-100/75 text-xs leading-relaxed">Consciousness is understood to be non-local — not confined to the individual brain or body — and therefore capable of reaching across physical space to make contact with other forms of awareness. This draws on concepts from parapsychology and certain interpretations of quantum physics.</p>
+          </div>
+          <div class="bg-black/30 rounded-2xl p-5 border border-teal-800/40 ce5-card">
+            <div class="text-3xl mb-3">💭</div>
+            <h3 class="font-cinzel text-sm font-semibold text-teal-300 mb-2">Telepathic &amp; Symbolic Communication</h3>
+            <p class="text-teal-100/75 text-xs leading-relaxed">Proponents assert that advanced non-human intelligences communicate primarily through thought, intuition, inner imagery, or symbolism rather than spoken language — making altered states of consciousness the appropriate mode of reception.</p>
+          </div>
+          <div class="bg-black/30 rounded-2xl p-5 border border-teal-800/40 ce5-card">
+            <div class="text-3xl mb-3">🤝</div>
+            <h3 class="font-cinzel text-sm font-semibold text-teal-300 mb-2">Group Coherence</h3>
+            <p class="text-teal-100/75 text-xs leading-relaxed">Group intention is believed to amplify the coherence and "signal strength" of the contact attempt. A synchronised group practising heart-centred meditation is considered more likely to attract a response than a solitary individual.</p>
+          </div>
+          <div class="bg-black/30 rounded-2xl p-5 border border-teal-800/40 ce5-card">
+            <div class="text-3xl mb-3">☮️</div>
+            <h3 class="font-cinzel text-sm font-semibold text-teal-300 mb-2">Peaceful, Cooperative Intent</h3>
+            <p class="text-teal-100/75 text-xs leading-relaxed">Contact is framed as inherently peaceful and cooperative. Fear-based or hostile intentions are understood to repel contact, while openness, gratitude, and universal goodwill are said to attract it. Ethical intent is considered essential.</p>
+          </div>
+          <div class="bg-black/30 rounded-2xl p-5 border border-teal-800/40 ce5-card">
+            <div class="text-3xl mb-3">❤️</div>
+            <h3 class="font-cinzel text-sm font-semibold text-teal-300 mb-2">Emotional Regulation</h3>
+            <p class="text-teal-100/75 text-xs leading-relaxed">Heart-centred emotional regulation — specifically the cultivation of coherent, positive emotional states — is emphasised both as a precondition for contact and as a safeguard against confusing emotionally distorted perception with genuine response.</p>
+          </div>
+          <div class="bg-black/30 rounded-2xl p-5 border border-teal-800/40 ce5-card">
+            <div class="text-3xl mb-3">🌐</div>
+            <h3 class="font-cinzel text-sm font-semibold text-teal-300 mb-2">Confluent Traditions</h3>
+            <p class="text-teal-100/75 text-xs leading-relaxed">CE-5 synthesises elements from meditation and mindfulness practice, New Age consciousness models, Eastern non-duality, remote viewing and psychic research, and the broader UFOlogy and contactee tradition — creating a distinctly modern esoteric form.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4: Protocol -->
+      <section class="bg-gradient-to-br from-cyan-950/40 to-sky-900/20 border border-cyan-700/40 rounded-3xl p-8 backdrop-blur-md shadow-2xl">
+        <h2 class="font-cinzel text-2xl font-semibold mb-2 text-cyan-300">✦ Typical CE-5 Protocol Structure</h2>
+        <p class="text-cyan-100/60 text-xs mb-6 italic">⚠️ These are claimed practices described for educational purposes — not scientifically verified procedures.</p>
+        <div class="space-y-5">
+
+          <div class="bg-black/30 rounded-2xl p-5 border border-cyan-800/40">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="text-2xl">1️⃣</span>
+              <h3 class="font-cinzel text-base font-semibold text-cyan-300">Preparation</h3>
+            </div>
+            <ul class="text-cyan-100/80 text-sm leading-relaxed space-y-2 list-disc list-inside">
+              <li>A quiet, low-light outdoor setting — most commonly at night with clear skies</li>
+              <li>Mobile phones silenced or switched off to minimise distraction</li>
+              <li>Group discussion of shared intent and expectations</li>
+              <li>Emphasis on calm, focused emotional state; participants are encouraged to release anxiety or scepticism before beginning</li>
+            </ul>
+          </div>
+
+          <div class="bg-black/30 rounded-2xl p-5 border border-cyan-800/40">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="text-2xl">2️⃣</span>
+              <h3 class="font-cinzel text-base font-semibold text-cyan-300">Coherence Meditation</h3>
+            </div>
+            <ul class="text-cyan-100/80 text-sm leading-relaxed space-y-2 list-disc list-inside">
+              <li>Deep, synchronised breathing to establish group coherence</li>
+              <li>Heart-focused meditation — bringing awareness to the centre of the chest and cultivating feelings of love or universal compassion</li>
+              <li>Visualising peace, openness, and a welcoming inner attitude</li>
+              <li>Some groups use recorded guided meditations designed specifically for CE-5 preparation</li>
+            </ul>
+          </div>
+
+          <div class="bg-black/30 rounded-2xl p-5 border border-cyan-800/40">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="text-2xl">3️⃣</span>
+              <h3 class="font-cinzel text-base font-semibold text-cyan-300">Intent Statement</h3>
+            </div>
+            <ul class="text-cyan-100/80 text-sm leading-relaxed space-y-2 list-disc list-inside">
+              <li>Silently or verbally affirming peaceful, voluntary contact — typically framed as an open invitation rather than a demand</li>
+              <li>Explicit emphasis on free will, mutual consent, and the absence of fear</li>
+              <li>Some groups project a mental image of the Earth or a universal symbol to serve as a "homing signal"</li>
+            </ul>
+          </div>
+
+          <div class="bg-black/30 rounded-2xl p-5 border border-cyan-800/40">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="text-2xl">4️⃣</span>
+              <h3 class="font-cinzel text-base font-semibold text-cyan-300">Signalling</h3>
+            </div>
+            <p class="text-cyan-100/80 text-sm leading-relaxed mb-2">Proponents may use physical signals to announce their presence:</p>
+            <ul class="text-cyan-100/80 text-sm leading-relaxed space-y-2 list-disc list-inside">
+              <li>Flashlights — brief, patterned pulses directed skyward</li>
+              <li>Lasers pointed at the ground or distant horizon — <strong class="text-amber-300">never at aircraft, as this is illegal and dangerous</strong></li>
+              <li>Light patterns intended to demonstrate an organised human presence</li>
+            </ul>
+          </div>
+
+          <div class="bg-black/30 rounded-2xl p-5 border border-cyan-800/40">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="text-2xl">5️⃣</span>
+              <h3 class="font-cinzel text-base font-semibold text-cyan-300">Observation Period</h3>
+            </div>
+            <ul class="text-cyan-100/80 text-sm leading-relaxed space-y-2 list-disc list-inside">
+              <li>A sustained period of silent sky-watching — often thirty minutes to several hours</li>
+              <li>Noting lights, unusual movements, flashes, or anomalous formations</li>
+              <li>Participants are encouraged to register inner impressions — feelings, images, or intuitions — alongside external observations</li>
+              <li>Journalling experiences in real time or immediately afterwards</li>
+            </ul>
+          </div>
+
+          <div class="bg-black/30 rounded-2xl p-5 border border-cyan-800/40">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="text-2xl">6️⃣</span>
+              <h3 class="font-cinzel text-base font-semibold text-cyan-300">Closure &amp; Grounding</h3>
+            </div>
+            <ul class="text-cyan-100/80 text-sm leading-relaxed space-y-2 list-disc list-inside">
+              <li>Formally closing the session with a brief expression of thanks or gratitude</li>
+              <li>Group sharing and discussion of individual experiences</li>
+              <li>Deliberate re-centring of attention on the physical environment — grounding exercises, movement, conversation — to ease the transition out of the meditative state</li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Section 5: Reported Experiences -->
+      <section class="bg-gradient-to-br from-violet-950/40 to-purple-900/20 border border-violet-700/40 rounded-3xl p-8 backdrop-blur-md shadow-2xl">
+        <h2 class="font-cinzel text-2xl font-semibold mb-5 text-violet-300">✦ Experiences Reported by Participants</h2>
+        <p class="text-violet-100/70 text-xs italic mb-5">⚠️ All experiences listed below are subjective, self-reported, and vary greatly between individuals and sessions.</p>
+        <div class="grid md:grid-cols-2 gap-5">
+          <div>
+            <h3 class="font-cinzel text-sm font-semibold text-violet-300 mb-3">External Observations</h3>
+            <ul class="text-violet-100/80 text-sm leading-relaxed space-y-2 list-disc list-inside">
+              <li>Lights or flashes in the sky at unexpected times</li>
+              <li>Objects appearing to change direction or respond to light signals</li>
+              <li>Stars or points of light seeming to brighten in sequence</li>
+              <li>Unusual aerial phenomena not easily explained by known aircraft or satellite trajectories</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-cinzel text-sm font-semibold text-violet-300 mb-3">Inner Experiences</h3>
+            <ul class="text-violet-100/80 text-sm leading-relaxed space-y-2 list-disc list-inside">
+              <li>Emotional impressions — sudden feelings of overwhelming peace, love, or unity</li>
+              <li>Intuitive impressions interpreted as communication</li>
+              <li>Vivid inner imagery, geometric forms, or symbolic visions</li>
+              <li>Unusually detailed or meaningful dreams in the nights following a session</li>
+              <li>A sense of being observed or accompanied by a non-physical presence</li>
+            </ul>
+          </div>
+        </div>
+        <div class="bg-black/30 rounded-2xl p-5 border border-violet-800/30 mt-5">
+          <p class="text-violet-100/70 text-sm leading-relaxed">
+            From a psychological perspective, many of these experiences are consistent with the well-documented effects of group meditation, prolonged nocturnal sky-gazing, and heightened expectation. The brain's tendency towards <strong class="text-violet-200">apophenia</strong> — finding patterns and meaning in random stimuli — combined with the power of shared belief and group suggestion, offers a compelling alternative explanation that does not require positing extraterrestrial involvement.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 6: Scientific & Skeptical Perspective -->
+      <section class="bg-gradient-to-br from-slate-900/50 to-zinc-900/30 border border-slate-600/40 rounded-3xl p-8 backdrop-blur-md shadow-2xl">
+        <h2 class="font-cinzel text-2xl font-semibold mb-5 text-slate-300">✦ Scientific &amp; Sceptical Perspective</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <h3 class="font-cinzel text-sm font-semibold text-slate-300 mb-3">What the Scientific Consensus Says</h3>
+            <ul class="text-slate-100/80 text-sm leading-relaxed space-y-2 list-disc list-inside">
+              <li>There is no verified, peer-reviewed evidence that CE-5 protocols initiate extraterrestrial contact</li>
+              <li>Many sightings reported during CE-5 sessions can be explained by satellites (including Starlink constellations), aircraft, atmospheric phenomena, or optical effects</li>
+              <li>Group dynamics — shared expectation, social reinforcement, and authority effects — are well-known influencers of perception</li>
+              <li>Meditation reliably produces altered states of consciousness characterised by feelings of unity, meaning, and vivid inner imagery; these do not require supernatural explanation</li>
+              <li>Pattern recognition under low-information conditions (night sky, dim light) is systematically biased towards finding order that may not be present</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-cinzel text-sm font-semibold text-slate-300 mb-3">How Mainstream Science Classifies CE-5</h3>
+            <div class="space-y-3">
+              <div class="bg-black/30 rounded-xl p-3 border border-slate-700/30">
+                <p class="text-slate-100/70 text-xs leading-relaxed">CE-5 is treated by mainstream science as a <strong class="text-slate-200">belief-based practice</strong>, not an established protocol — comparable in structure and epistemological status to other consciousness-exploration or spiritual rituals.</p>
+              </div>
+              <div class="bg-black/30 rounded-xl p-3 border border-slate-700/30">
+                <p class="text-slate-100/70 text-xs leading-relaxed">No controlled study has demonstrated that CE-5 sessions produce anomalous aerial phenomena at rates above chance, nor that inner experiences during sessions correspond to verifiable external events.</p>
+              </div>
+              <div class="bg-black/30 rounded-xl p-3 border border-slate-700/30">
+                <p class="text-slate-100/70 text-xs leading-relaxed">The broader UAP (Unidentified Aerial Phenomena) field is subject to legitimate government and scientific inquiry; CE-5 as a contact <em>methodology</em> is distinct from and not endorsed by mainstream UAP research.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 7: Cultural Classification -->
+      <section class="bg-gradient-to-br from-indigo-950/40 to-blue-900/20 border border-indigo-700/40 rounded-3xl p-8 backdrop-blur-md shadow-2xl">
+        <h2 class="font-cinzel text-2xl font-semibold mb-5 text-indigo-300">✦ How CE-5 Is Commonly Classified</h2>
+        <p class="text-indigo-100/80 text-sm leading-relaxed mb-5">
+          Depending on the analytical lens applied, CE-5 is understood quite differently by different communities:
+        </p>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div class="bg-black/30 rounded-2xl p-4 border border-indigo-800/30">
+            <h3 class="font-cinzel text-xs font-semibold text-indigo-300 mb-2">🌟 New Age Spirituality</h3>
+            <p class="text-indigo-100/70 text-xs leading-relaxed">As a contemporary expression of the New Age movement, CE-5 reflects its core tenets: non-local consciousness, universal love, spiritual evolution, and the imminent shift to a higher plane of existence facilitated by benevolent star beings.</p>
+          </div>
+          <div class="bg-black/30 rounded-2xl p-4 border border-indigo-800/30">
+            <h3 class="font-cinzel text-xs font-semibold text-indigo-300 mb-2">👽 Modern Contactee Tradition</h3>
+            <p class="text-indigo-100/70 text-xs leading-relaxed">CE-5 continues the 20th-century contactee tradition (George Adamski, George Van Tassel, Truman Bethurum) in which individuals claimed ongoing peaceful communication with benevolent extraterrestrials — updating it with structured group methodology and consciousness-science language.</p>
+          </div>
+          <div class="bg-black/30 rounded-2xl p-4 border border-indigo-800/30">
+            <h3 class="font-cinzel text-xs font-semibold text-indigo-300 mb-2">✨ Esoteric Consciousness Ritual</h3>
+            <p class="text-indigo-100/70 text-xs leading-relaxed">From a comparative religion and Western esotericism perspective, CE-5 closely resembles ceremonial invocation — a structured group ritual designed to establish contact with non-human intelligence through altered states, symbolic acts, and sustained intention.</p>
+          </div>
+          <div class="bg-black/30 rounded-2xl p-4 border border-indigo-800/30">
+            <h3 class="font-cinzel text-xs font-semibold text-indigo-300 mb-2">🧘 Human Potential Practice</h3>
+            <p class="text-indigo-100/70 text-xs leading-relaxed">Stripped of its UFO framework, CE-5 functions as a group meditation practice oriented towards feelings of peace, unity, and expanded awareness — values it shares with numerous secular mindfulness and contemplative traditions.</p>
+          </div>
+          <div class="bg-black/30 rounded-2xl p-4 border border-indigo-800/30">
+            <h3 class="font-cinzel text-xs font-semibold text-indigo-300 mb-2">🔬 Parapsychology-Adjacent</h3>
+            <p class="text-indigo-100/70 text-xs leading-relaxed">CE-5 borrows conceptual frameworks from remote viewing, psychic research, and non-local consciousness models — placing it within the parapsychology-adjacent cluster of belief systems that seek scientific legitimacy while remaining outside mainstream scientific acceptance.</p>
+          </div>
+          <div class="bg-black/30 rounded-2xl p-4 border border-indigo-800/30">
+            <h3 class="font-cinzel text-xs font-semibold text-indigo-300 mb-2">🌍 Shamanic Parallel</h3>
+            <p class="text-indigo-100/70 text-xs leading-relaxed">Scholars of religion have noted CE-5's structural resemblance to shamanic practices in which the practitioner enters altered consciousness to communicate with non-human spirits or beings — suggesting it occupies a role in contemporary Western culture analogous to traditional shamanism.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 8: Safety & Grounding -->
+      <section class="bg-gradient-to-br from-green-950/40 to-emerald-900/20 border border-green-700/40 rounded-3xl p-8 backdrop-blur-md shadow-2xl glow-card">
+        <h2 class="font-cinzel text-2xl font-semibold mb-5 text-green-300">✦ Safety &amp; Grounding Guidance</h2>
+        <p class="text-green-100/80 text-sm leading-relaxed mb-5">
+          Responsible discussions of CE-5 — including those within the CE-5 community itself — typically include the following cautions. These are worth taking seriously regardless of one's position on the practice's claims.
+        </p>
+        <div class="grid md:grid-cols-2 gap-5">
+          <div class="space-y-3">
+            <div class="flex items-start gap-3">
+              <span class="text-green-400 text-lg flex-shrink-0">✓</span>
+              <p class="text-green-100/80 text-sm leading-relaxed"><strong class="text-green-300">Maintain contact with everyday reality.</strong> The meditative and social atmosphere of CE-5 sessions can be immersive; regularly grounding attention in physical sensation and ordinary conversation is strongly advisable.</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="text-green-400 text-lg flex-shrink-0">✓</span>
+              <p class="text-green-100/80 text-sm leading-relaxed"><strong class="text-green-300">Treat experiences as personal meaning, not absolute proof.</strong> An inner impression, a vivid emotional response, or a light in the sky is meaningful as a personal experience; it does not constitute verifiable evidence of contact.</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="text-green-400 text-lg flex-shrink-0">✓</span>
+              <p class="text-green-100/80 text-sm leading-relaxed"><strong class="text-green-300">Avoid fear-based interpretations.</strong> CE-5 proponents themselves emphasise that fear is counter-productive; cultivating equanimity rather than anxious anticipation is both safer and more consistent with the practice's own values.</p>
+            </div>
+          </div>
+          <div class="space-y-3">
+            <div class="flex items-start gap-3">
+              <span class="text-green-400 text-lg flex-shrink-0">✓</span>
+              <p class="text-green-100/80 text-sm leading-relaxed"><strong class="text-green-300">Do not replace professional care with CE-5.</strong> If you are processing grief, trauma, existential distress, or mental health challenges, please work with a qualified professional — CE-5 is not a therapeutic intervention.</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="text-amber-400 text-lg flex-shrink-0">⚠️</span>
+              <p class="text-green-100/80 text-sm leading-relaxed"><strong class="text-amber-300">Never use lasers near aircraft.</strong> Shining laser pointers at aircraft is illegal in most jurisdictions and potentially life-threatening to pilots. Any light signalling must be directed exclusively at the ground or distant horizon.</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="text-green-400 text-lg flex-shrink-0">✓</span>
+              <p class="text-green-100/80 text-sm leading-relaxed"><strong class="text-green-300">Choose your setting and companions carefully.</strong> Isolated locations at night carry ordinary safety risks independent of any contact claims. Practise with trusted individuals and in areas you know well.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Neutral Summary -->
+      <section class="text-center py-6">
+        <div class="bg-black/40 rounded-3xl p-8 border border-emerald-700/20 backdrop-blur-md max-w-3xl mx-auto">
+          <h2 class="font-cinzel text-xl font-semibold mb-4 text-emerald-300">Neutral Summary</h2>
+          <p class="text-emerald-100/80 text-sm leading-relaxed">
+            CE-5 protocols are a modern esoteric practice combining meditation, group intention, and symbolic signalling, based on the belief that consciousness can initiate peaceful contact with non-human intelligence. The practice is meaningful and experientially significant for many participants but remains unverified by science. Whether understood as a spiritual ritual, a consciousness exploration practice, or a cultural expression of our collective fascination with the non-human, CE-5 reflects a genuinely human impulse: the desire to reach beyond the known and extend a hand into the unknown.
+          </p>
+        </div>
+      </section>
+
+    </div>
+
+    <footer class="relative z-10 text-center py-8 mt-10 border-t border-emerald-900/30 text-emerald-300/50 text-xs">
+      <p class="italic">"The cosmos is within us. We are made of star-stuff." — Carl Sagan</p>
+      <p class="mt-2">Esoteric Wisdom · Built with ✨ in Rust</p>
+      <p class="mt-2"><a href="/home" class="hover:text-emerald-300 transition-colors">← Return Home</a></p>
+    </footer>
+
+    <script>
+      const sf = document.getElementById('starfield');
+      for (let i = 0; i < 200; i++) {
+        const s = document.createElement('div');
+        s.className = 'star';
+        const size = Math.random() * 2.5 + 0.5;
+        s.style.cssText = `width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--dur:${2+Math.random()*4}s;--delay:${Math.random()*5}s;opacity:${0.2+Math.random()*0.8};`;
+        sf.appendChild(s);
+      }
+    </script>
+  </body>
+</html>
