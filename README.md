@@ -7,7 +7,7 @@
 [![Rust](https://img.shields.io/badge/Rust-2021_Edition-000000?style=for-the-badge&logo=rust&logoColor=white)](https://www.rust-lang.org/)
 [![Axum](https://img.shields.io/badge/Axum-0.7-7c3aed?style=for-the-badge)](https://github.com/tokio-rs/axum)
 [![Tokio](https://img.shields.io/badge/Tokio-Async-06b6d4?style=for-the-badge)](https://tokio.rs/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-f59e0b?style=for-the-badge)](LICENSE)
+[![License: Proprietary](https://img.shields.io/badge/License-Proprietary-dc2626?style=for-the-badge)](LICENSE)
 [![Live Site](https://img.shields.io/badge/Live_Site-esoteric--wisdom.onrender.com-10b981?style=for-the-badge&logo=firefox&logoColor=white)](https://esoteric-wisdom.onrender.com)
 
 ---

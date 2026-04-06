@@ -5,7 +5,7 @@ edition = "2021"
 
 description = "Esoteric Wisdom - A spiritual portal with astrology, meditation, tarot, and journaling built in Rust with Axum."
 authors = ["You <you@example.com>"]
-license = "MIT"
+license = "LicenseRef-Proprietary"
 
 [dependencies]
 axum = { version = "0.7", features = ["macros"] }
