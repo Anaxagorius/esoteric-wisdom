@@ -27,6 +27,7 @@ mod esoteric_corpora;
 mod templates;
 mod mythologies_cosmologies;
 mod esoteric_figures;
+mod esoteric_concepts;
 
 use axum::{Router, routing::get, extract::State, response::IntoResponse, http::{StatusCode, header}};
 use tower_cookies::{CookieManagerLayer, Cookies};
@@ -75,6 +76,7 @@ async fn main() -> anyhow::Result<()> {
         .nest("/orders-societies", orders_societies::routes())
         .nest("/mythologies-cosmologies", mythologies_cosmologies::routes())
         .nest("/esoteric-figures", esoteric_figures::routes())
+        .nest("/esoteric-concepts", esoteric_concepts::routes())
         .layer(CookieManagerLayer::new())
         .with_state(state);
 
