@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Esoteric Concepts &amp; Themes — Esoteric Wisdom</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <meta property="og:title" content="Esoteric Concepts &amp; Themes — Esoteric Wisdom" />
+  <meta property="og:description" content="Explore the conceptual foundations of the esoteric traditions — from Gnosis and Initiation to Spiritual Alchemy and Ascension." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://esoteric-wisdom.onrender.com/esoteric-concepts" />
+  <meta property="og:image" content="https://esoteric-wisdom.onrender.com/og-image.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <style>
+    body { font-family: 'Raleway', sans-serif; }
+    .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+    @keyframes twinkle { 0%,100% { opacity: 0.2; } 50% { opacity: 1; } }
+    .star { position: absolute; width: 2px; height: 2px; border-radius: 50%; background: white; animation: twinkle var(--dur,3s) ease-in-out infinite; animation-delay: var(--delay,0s); }
+    @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+    .floating { animation: float 5s ease-in-out infinite; }
+    @keyframes shimmer { 0% { background-position: -200% center; } 100% { background-position: 200% center; } }
+    .nav-link { position: relative; transition: all 0.3s; }
+    .nav-link::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: linear-gradient(90deg, #f59e0b, #a78bfa); transition: width 0.3s; }
+    .nav-link:hover::after { width: 100%; }
+    .aurora-text { background: linear-gradient(90deg, #f59e0b, #818cf8, #a78bfa, #fbbf24, #6366f1, #f59e0b); background-size: 200% auto; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; animation: shimmer 4s linear infinite; }
+    .concept-card { background: linear-gradient(135deg, rgba(109,40,217,0.12), rgba(76,29,149,0.08)); border: 1px solid rgba(139,92,246,0.25); border-radius: 1rem; padding: 1.5rem; transition: all 0.3s; }
+    .concept-card:hover { transform: translateY(-4px); box-shadow: 0 0 24px rgba(139,92,246,0.22); border-color: rgba(139,92,246,0.5); }
+    .esoteric-card { background: linear-gradient(135deg, rgba(79,70,229,0.07), rgba(49,46,129,0.04)); border: 1px solid rgba(99,102,241,0.2); border-radius: 1rem; padding: 1.5rem; transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; }
+    .esoteric-card:hover { transform: translateY(-6px) scale(1.01); box-shadow: 0 0 28px 5px rgba(99,102,241,0.3); border-color: rgba(99,102,241,0.5); }
+    .practice-card { background: linear-gradient(135deg, rgba(79,70,229,0.06), rgba(49,46,129,0.04)); border: 1px solid rgba(99,102,241,0.15); border-radius: 0.75rem; padding: 1.25rem; transition: border-color 0.3s, background 0.3s; }
+    .practice-card:hover { border-color: rgba(99,102,241,0.4); background: linear-gradient(135deg, rgba(79,70,229,0.1), rgba(49,46,129,0.06)); }
+  </style>
+</head>
+<body class="min-h-screen text-indigo-100 overflow-x-hidden" style="background: radial-gradient(ellipse at top, #0c0a1e 0%, #1a1040 25%, #060412 60%, #000000 100%);">
+  <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+
+  <nav class="sticky top-0 z-50 flex items-center justify-between px-6 py-3 bg-black/40 backdrop-blur-md border-b border-violet-500/20 flex-wrap gap-y-2">
+    <a href="/home" class="font-cinzel text-amber-300 text-sm tracking-widest shrink-0">✦ Esoteric Wisdom ✦</a>
+    <div class="flex items-center gap-x-3 gap-y-1 text-xs text-violet-200 flex-wrap justify-end">
+      <a href="/astrology" class="nav-link hover:text-amber-300 transition-colors">Astrology</a>
+      <a href="/meditation" class="nav-link hover:text-amber-300 transition-colors">Meditation</a>
+      <a href="/tarot/select" class="nav-link hover:text-amber-300 transition-colors">Tarot</a>
+      <a href="/numerology" class="nav-link hover:text-amber-300 transition-colors">Numerology</a>
+      <a href="/crystals" class="nav-link hover:text-amber-300 transition-colors">Crystals</a>
+      <a href="/runes" class="nav-link hover:text-amber-300 transition-colors">Runes</a>
+      <a href="/shamanism" class="nav-link hover:text-amber-300 transition-colors">Shamanism</a>
+      <a href="/druidism" class="nav-link hover:text-amber-300 transition-colors">Druidism</a>
+      <a href="/akashic-records" class="nav-link hover:text-amber-300 transition-colors">Akashic Records</a>
+      <a href="/wicca" class="nav-link hover:text-amber-300 transition-colors">Wicca</a>
+      <a href="/alchemy" class="nav-link hover:text-amber-300 transition-colors">Alchemy</a>
+      <a href="/gateway-process" class="nav-link hover:text-amber-300 transition-colors">Gateway Process</a>
+      <a href="/remote-viewing" class="nav-link hover:text-amber-300 transition-colors">Remote Viewing</a>
+      <a href="/khasarov-mirror" class="nav-link hover:text-amber-300 transition-colors">Khasarov Mirror</a>
+      <a href="/ce5" class="nav-link hover:text-amber-300 transition-colors">CE-5</a>
+      <a href="/western-esotericism" class="nav-link hover:text-amber-300 transition-colors">Western Esotericism</a>
+      <a href="/eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Eastern Esotericism</a>
+      <a href="/indigenous-esotericism" class="nav-link hover:text-amber-300 transition-colors">Indigenous Esotericism</a>
+      <a href="/middle-eastern-esotericism" class="nav-link hover:text-amber-300 transition-colors">Middle Eastern Mysteries</a>
+      <a href="/esoteric-practices" class="nav-link hover:text-amber-300 transition-colors">Esoteric Practices</a>
+      <a href="/esoteric-corpora" class="nav-link hover:text-amber-300 transition-colors">Sacred Texts</a>
+      <a href="/esoteric-figures" class="nav-link hover:text-amber-300 transition-colors">Esoteric Figures</a>
+      <a href="/orders-societies" class="nav-link hover:text-amber-300 transition-colors">Orders &amp; Societies</a>
+      <a href="/mythologies-cosmologies" class="nav-link hover:text-amber-300 transition-colors">Mythologies &amp; Cosmologies</a>
+      <a href="/esoteric-concepts" class="nav-link text-amber-300 font-semibold">Esoteric Concepts</a>
+      <a href="/journal/reflections" class="nav-link text-emerald-300 hover:text-emerald-200 transition-colors">✨ Reflections</a>
+      <a href="https://ko-fi.com/esotericwisdom" target="_blank" rel="noopener noreferrer"
+         class="px-3 py-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-white font-semibold hover:scale-105 transition-transform shrink-0">☕ Support</a>
+    </div>
+  </nav>
+
+  <main class="relative z-10 max-w-6xl mx-auto px-6 py-12">
+
+    <div class="mb-6">
+      <a href="/home" class="text-xs text-indigo-300/60 hover:text-indigo-300 transition-colors">← Back to Portal</a>
+    </div>
+
+    <!-- Hero -->
+    <section class="text-center mb-16">
+      <div class="text-6xl mb-6 floating">🔮</div>
+      <h1 class="font-cinzel text-3xl md:text-5xl aurora-text mb-6">Esoteric Concepts &amp; Themes</h1>
+      <p class="text-indigo-300 text-lg max-w-3xl mx-auto leading-relaxed">
+        The conceptual architecture of the esoteric traditions — the recurring ideas, principles, and themes that recur across cultures, centuries, and schools of inner knowledge, forming the invisible skeleton of the perennial wisdom.
+      </p>
+    </section>
+
+    <!-- What Are Esoteric Concepts -->
+    <section class="mb-16 rounded-2xl p-8 md:p-10" style="background: linear-gradient(135deg, rgba(109,40,217,0.12), rgba(76,29,149,0.08)); border: 1px solid rgba(139,92,246,0.2);">
+      <h2 class="font-cinzel text-2xl text-amber-300 mb-8 text-center">What Are Esoteric Concepts?</h2>
+      <div class="grid md:grid-cols-2 gap-8 text-indigo-200 leading-relaxed text-sm">
+        <div class="space-y-5">
+          <p>The esoteric traditions of humanity — however diverse in their cultural garb, historical circumstances, and doctrinal formulations — share a remarkable set of underlying conceptual commitments. These are not merely shared metaphors or borrowed imagery but structural principles that recur with such consistency across independent traditions that they compel the serious scholar to ask whether they reflect something genuine about the nature of consciousness, cosmos, and the human condition. It is this body of recurring, foundational ideas that we designate "esoteric concepts": the conceptual skeleton that gives coherence and direction to the bewildering diversity of the world's inner traditions.</p>
+          <p>The term "esotericism" itself — from the Greek <em>esōterikos</em>, meaning "belonging to an inner circle" — points immediately to one of the most fundamental conceptual commitments: the distinction between outer and inner, exoteric and esoteric, surface and depth. This polarity runs through virtually every tradition that has been identified as esoteric, and it generates several of the most important subordinate concepts: the idea that certain knowledge is deliberately concealed (sacred secrecy), that its full disclosure requires proper preparation (initiation), and that its deepest truths cannot be communicated through ordinary language but only through symbol, allegory, and direct experiential transmission. Understanding this basic structural commitment is essential to understanding what esotericism is and why it takes the forms it does across such different cultural contexts.</p>
+          <p>The scholar Antoine Faivre, who is widely credited with establishing the academic study of Western esotericism as a distinct discipline, identified six characteristics that recur across the traditions he studied. Four of these he considered intrinsic to esoteric thought: the idea of correspondences between all levels of reality (as above, so below), the conviction that nature is a living, animated whole saturated with hidden meanings (living nature), the belief in a primordial tradition of hidden wisdom preserved through the ages (prisca theologia), and the central role of the imagination as a genuine cognitive faculty that mediates between the spiritual and the material. Two further characteristics he considered relative rather than universal: the practice of transmission through initiation, and the experience of concordance between different traditions. Faivre's schema has been both influential and contested, but it remains an indispensable starting point for understanding what unifies the diverse phenomena that fall under the esoteric umbrella.</p>
+          <p>What the present collection of conceptual essays attempts is something both more focused and more experientially grounded than a purely academic taxonomy. Each concept addressed here has been selected not merely because it appears frequently in the historical literature but because it corresponds to a genuine structural element of the inner life — an aspect of the contemplative and transformative journey that sincere practitioners across traditions have recognised and named, even when their names and frameworks have differed radically. The concepts are thus simultaneously historical categories and living realities: they describe not only what the traditions have taught but what the genuine practitioner of inner work is likely, sooner or later, to encounter.</p>
+        </div>
+        <div class="space-y-5">
+          <p>Among the most fundamental of all esoteric concepts is that of <em>gnosis</em> — the direct, experiential knowledge of divine reality that transcends both faith and intellectual understanding. Unlike the propositional knowledge of philosophy or the revelatory assent of orthodox religion, gnosis is a mode of knowing in which the knower and the known are transformed simultaneously: to know the divine is, in this sense, to become divine, or at least to recognise one's latent participation in divinity. This concept — variously expressed as gnosis, jnana, ma'rifa, satori, or direct seeing — appears in some form in virtually every tradition that has been called esoteric, making it perhaps the single most important key to understanding what esotericism fundamentally is: not a set of doctrines to be believed but a quality of awareness to be achieved.</p>
+          <p>Closely related to gnosis is the concept of <em>inner revelation</em>: the conviction that ultimate truth does not arrive from without, through external authority or written prescription, but arises from within, through a direct encounter with the divine reality that is always already present in the depths of awareness. This principle has radical implications for the role of tradition, scripture, and teacher in the esoteric life. Rather than being terminal authorities, these external supports serve as scaffolding: indispensable in the early stages of the journey, but ultimately to be dissolved in the living encounter with what they point toward. The great esoteric teachers of every tradition — from Plotinus to Rumi, from Meister Eckhart to Ramana Maharshi — have insisted on this point with remarkable unanimity, even as they have differed on almost every doctrinal particular.</p>
+          <p>The esoteric traditions are also united by their characteristic hermeneutic: a systematic preference for the symbolic over the literal, the inner over the outer, the spiritual meaning over the surface reading. Whether interpreting scripture, myth, ritual, or the natural world, the esotericist reads in depth rather than at the surface, seeking the hidden correspondence between visible form and invisible reality. This principle — symbolism over literalism — is not merely a literary preference but reflects the fundamental esoteric conviction that all visible reality is a system of symbols pointing toward an invisible ground, and that the practised eye can learn to read this cosmic symbolic language with the same confidence that the ordinary mind reads a written text. The traditions differ in their accounts of what the symbols ultimately point toward, but they agree that the pointing is real.</p>
+          <p>Finally, the esoteric traditions are united by their account of the human telos — the ultimate purpose and destiny of the human being. Across the remarkable diversity of their cosmologies, anthropologies, and soteriologies, the esoteric traditions converge on the conviction that the human being is not merely a biological organism navigating a material world, but a divine spark temporarily housed in matter, whose deepest nature is identical with the divine source from which all reality flows. The various concepts of transmutation of consciousness, ascension, illumination, and spiritual alchemy all articulate, in their distinctive idioms, the same fundamental conviction: that the human being is capable of a radical transformation that takes it beyond the ordinary condition of ignorance and limitation into a mode of being that is genuinely divine. This is the great promise that animates the entire esoteric enterprise, and it is what makes these ancient teachings not merely historically interesting but urgently relevant to any sincere seeker in any age.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Concept Cards Grid -->
+    <section class="mb-16">
+      <h2 class="font-cinzel text-2xl text-amber-300 mb-8 text-center">Twelve Core Concepts</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <a href="/esoteric-concepts/gnosis" class="concept-card block">
+          <div class="text-3xl mb-3">🌟</div>
+          <h3 class="font-cinzel text-base text-amber-200 mb-2">Gnosis</h3>
+          <p class="text-xs text-indigo-300 leading-relaxed">The direct, experiential knowing of divine reality that transcends intellectual understanding. In Gnostic traditions, gnosis is the salvific illumination that liberates the pneumatic soul from the material world, transforming the knower and the known in a single moment of recognition.</p>
+        </a>
+
+        <a href="/esoteric-concepts/initiation" class="concept-card block">
+          <div class="text-3xl mb-3">🔥</div>
+          <h3 class="font-cinzel text-base text-amber-200 mb-2">Initiation</h3>
+          <p class="text-xs text-indigo-300 leading-relaxed">The transformative threshold between ordinary existence and sacred knowledge. Across all esoteric traditions, initiation operates as a structured rite of death and rebirth through which the candidate is permanently changed — not merely instructed but ontologically transformed.</p>
+        </a>
+
+        <a href="/esoteric-concepts/hidden-wisdom" class="concept-card block">
+          <div class="text-3xl mb-3">📜</div>
+          <h3 class="font-cinzel text-base text-amber-200 mb-2">Hidden Wisdom</h3>
+          <p class="text-xs text-indigo-300 leading-relaxed">The principle that ultimate knowledge is deliberately veiled from the uninitiated and revealed only to those who have undergone proper preparation. This concealment is not arbitrary exclusion but a structural necessity: the mysteries work only upon prepared minds.</p>
+        </a>
+
+        <a href="/esoteric-concepts/inner-revelation" class="concept-card block">
+          <div class="text-3xl mb-3">💫</div>
+          <h3 class="font-cinzel text-base text-amber-200 mb-2">Inner Revelation</h3>
+          <p class="text-xs text-indigo-300 leading-relaxed">The esoteric conviction that the deepest truths are not communicated from without but discovered within. The teacher, the text, and the tradition serve as catalysts for an inner awakening that must, by its nature, arise from the student's own depths.</p>
+        </a>
+
+        <a href="/esoteric-concepts/sacred-secrecy" class="concept-card block">
+          <div class="text-3xl mb-3">🤫</div>
+          <h3 class="font-cinzel text-base text-amber-200 mb-2">Sacred Secrecy</h3>
+          <p class="text-xs text-indigo-300 leading-relaxed">The doctrine that certain knowledge must be protected from profanation and reserved for the initiated. Sacred secrecy is not merely social convention but a metaphysical principle: that which is freely shared without proper context loses its transformative potency.</p>
+        </a>
+
+        <a href="/esoteric-concepts/symbolism-over-literalism" class="concept-card block">
+          <div class="text-3xl mb-3">🔣</div>
+          <h3 class="font-cinzel text-base text-amber-200 mb-2">Symbolism over Literalism</h3>
+          <p class="text-xs text-indigo-300 leading-relaxed">The hermeneutical principle that sacred texts, myths, and rites carry their deepest meaning not in their literal surface but in their symbolic depth. The esotericist reads the cosmos itself as a vast symbolic language in which every visible form points toward an invisible reality.</p>
+        </a>
+
+        <a href="/esoteric-concepts/microcosm-macrocosm" class="concept-card block">
+          <div class="text-3xl mb-3">🌍</div>
+          <h3 class="font-cinzel text-base text-amber-200 mb-2">The Microcosm/Macrocosm</h3>
+          <p class="text-xs text-indigo-300 leading-relaxed">The ancient principle that the human being is a miniature universe, and the universe a magnified human being. Every structure found in the cosmos is replicated in the individual, and vice versa, making the study of either a key to understanding both.</p>
+        </a>
+
+        <a href="/esoteric-concepts/as-above-so-below" class="concept-card block">
+          <div class="text-3xl mb-3">✨</div>
+          <h3 class="font-cinzel text-base text-amber-200 mb-2">As Above, So Below</h3>
+          <p class="text-xs text-indigo-300 leading-relaxed">The Hermetic axiom from the Emerald Tablet asserting the correspondence between celestial and terrestrial realities. What occurs in the spiritual realms is reflected in the physical, and manipulation of symbolic correspondence can effect real change in both domains.</p>
+        </a>
+
+        <a href="/esoteric-concepts/inner-christ-buddha-nature" class="concept-card block">
+          <div class="text-3xl mb-3">☀️</div>
+          <h3 class="font-cinzel text-base text-amber-200 mb-2">Inner Christ / Buddha-nature</h3>
+          <p class="text-xs text-indigo-300 leading-relaxed">The esoteric teaching that the divine principle — whether understood as the Christ, the Buddha-nature, the Atman, or the pneuma — is not an external saviour but a latent capacity within every human being, awaiting activation through spiritual practice.</p>
+        </a>
+
+        <a href="/esoteric-concepts/transmutation-of-consciousness" class="concept-card block">
+          <div class="text-3xl mb-3">⚗️</div>
+          <h3 class="font-cinzel text-base text-amber-200 mb-2">Transmutation of Consciousness</h3>
+          <p class="text-xs text-indigo-300 leading-relaxed">The central operative aim of most esoteric traditions: the systematic transformation of ordinary awareness into a higher mode of being. Drawing on alchemical, yogic, and Hermetic metaphors, this transmutation is understood as both the goal and the method of inner work.</p>
+        </a>
+
+        <a href="/esoteric-concepts/ascension-illumination" class="concept-card block">
+          <div class="text-3xl mb-3">🌅</div>
+          <h3 class="font-cinzel text-base text-amber-200 mb-2">Ascension / Illumination</h3>
+          <p class="text-xs text-indigo-300 leading-relaxed">The final stage of the esoteric path: the elevation of consciousness beyond the ordinary human condition to a state of divine awareness. Whether called illumination, enlightenment, union, deification, or ascension, this culminating experience is the telos of all genuine esoteric work.</p>
+        </a>
+
+        <a href="/esoteric-concepts/spiritual-alchemy" class="concept-card block">
+          <div class="text-3xl mb-3">⚗️</div>
+          <h3 class="font-cinzel text-base text-amber-200 mb-2">Spiritual Alchemy</h3>
+          <p class="text-xs text-indigo-300 leading-relaxed">The inner dimension of alchemical practice: the use of alchemical symbolism — nigredo, albedo, citrinitas, rubedo — as a precise map of psychological and spiritual transformation. The laboratory becomes the human soul, and the Great Work is the perfection of the inner self.</p>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- Scholars -->
+    <section class="mb-16">
+      <h2 class="font-cinzel text-2xl text-amber-300 mb-8 text-center">Key Scholars</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+        <div class="practice-card">
+          <h3 class="text-amber-200 font-semibold text-sm mb-1">Gilles Quispel (1916–2006)</h3>
+          <p class="text-xs text-indigo-300 leading-relaxed">Dutch scholar of Gnosticism and co-discoverer of the Gospel of Thomas. Quispel's philological rigour and broad humanistic vision helped establish Gnostic studies as a reputable academic discipline and opened new avenues of inquiry into the relationship between Gnosis and Jungian psychology.</p>
+        </div>
+
+        <div class="practice-card">
+          <h3 class="text-amber-200 font-semibold text-sm mb-1">Antoine Faivre (b. 1934)</h3>
+          <p class="text-xs text-indigo-300 leading-relaxed">Pioneer of academic esotericism studies, widely credited with defining the field. His six characteristics of Western esotericism — correspondences, living nature, imagination, transmutation, concordance, and transmission — remain the foundational taxonomy of the discipline.</p>
+        </div>
+
+        <div class="practice-card">
+          <h3 class="text-amber-200 font-semibold text-sm mb-1">Wouter Hanegraaff (b. 1961)</h3>
+          <p class="text-xs text-indigo-300 leading-relaxed">Professor of Hermetic Philosophy at the University of Amsterdam. His <em>Esotericism and the Academy</em> (2012) offers the most comprehensive historical account of why esotericism was excluded from mainstream academic discourse and how it is being rehabilitated.</p>
+        </div>
+
+        <div class="practice-card">
+          <h3 class="text-amber-200 font-semibold text-sm mb-1">Kocku von Stuckrad (b. 1966)</h3>
+          <p class="text-xs text-indigo-300 leading-relaxed">Scholar of Western esotericism and the history of astrology. Von Stuckrad's discursive approach to esotericism — treating it as a pattern of claiming higher knowledge — has opened productive new methodological avenues beyond Faivre's typological framework.</p>
+        </div>
+
+        <div class="practice-card">
+          <h3 class="text-amber-200 font-semibold text-sm mb-1">Ioan Couliano (1950–1991)</h3>
+          <p class="text-xs text-indigo-300 leading-relaxed">Romanian-American historian of religion and student of Mircea Eliade. His <em>The Tree of Gnosis</em> (1992) offers a structuralist analysis of Gnostic dualism as a persistent morphology of religious thought, demonstrating its recurrence across widely separated traditions and epochs.</p>
+        </div>
+
+        <div class="practice-card">
+          <h3 class="text-amber-200 font-semibold text-sm mb-1">Arthur Versluis (b. 1959)</h3>
+          <p class="text-xs text-indigo-300 leading-relaxed">American scholar of Western esotericism and founder of the journal <em>Esoterica</em>. His <em>Magic and Mysticism: An Introduction to Western Esotericism</em> (2007) provides an accessible yet rigorous survey of the field, with particular attention to the contemplative and experiential dimensions of esoteric practice.</p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="relative z-10 text-center py-8 text-indigo-400/40 text-xs mt-8">
+    <p class="italic">"Philosophy is the art of dying." — Plato, <em>Phaedo</em></p>
+    <p class="mt-2">Esoteric Wisdom · Built with ✨ in Rust</p>
+    <p class="mt-2"><a href="/home" class="hover:text-indigo-300 transition-colors">← Back to Portal</a></p>
+  </footer>
+
+  <script>
+  const sf = document.getElementById('starfield');
+  for (let i = 0; i < 200; i++) {
+    const s = document.createElement('div');
+    s.className = 'star';
+    s.style.left = Math.random() * 100 + '%';
+    s.style.top = Math.random() * 100 + '%';
+    s.style.animationDelay = Math.random() * 3 + 's';
+    s.style.animationDuration = (2 + Math.random() * 3) + 's';
+    sf.appendChild(s);
+  }
+  </script>
+</body>
+</html>

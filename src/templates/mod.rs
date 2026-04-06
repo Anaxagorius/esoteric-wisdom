@@ -582,3 +582,55 @@ pub struct EliphasLeviTemplate;
 #[derive(Template)]
 #[template(path = "papus.html")]
 pub struct PapusTemplate;
+
+#[derive(Template)]
+#[template(path = "esoteric_concepts_themes.html")]
+pub struct EsotericConceptsThemesTemplate;
+
+#[derive(Template)]
+#[template(path = "gnosis.html")]
+pub struct GnosisTemplate;
+
+#[derive(Template)]
+#[template(path = "initiation_concept.html")]
+pub struct InitiationConceptTemplate;
+
+#[derive(Template)]
+#[template(path = "hidden_wisdom.html")]
+pub struct HiddenWisdomTemplate;
+
+#[derive(Template)]
+#[template(path = "inner_revelation.html")]
+pub struct InnerRevelationTemplate;
+
+#[derive(Template)]
+#[template(path = "sacred_secrecy.html")]
+pub struct SacredSecrecyTemplate;
+
+#[derive(Template)]
+#[template(path = "symbolism_over_literalism.html")]
+pub struct SymbolismLiteralismTemplate;
+
+#[derive(Template)]
+#[template(path = "microcosm_macrocosm.html")]
+pub struct MicrocosmMacrocosmTemplate;
+
+#[derive(Template)]
+#[template(path = "as_above_so_below.html")]
+pub struct AsAboveSoBelowTemplate;
+
+#[derive(Template)]
+#[template(path = "inner_christ_buddha_nature.html")]
+pub struct InnerChristBuddhaNatureTemplate;
+
+#[derive(Template)]
+#[template(path = "transmutation_consciousness.html")]
+pub struct TransmutationConsciousnessTemplate;
+
+#[derive(Template)]
+#[template(path = "ascension_illumination.html")]
+pub struct AscensionIlluminationTemplate;
+
+#[derive(Template)]
+#[template(path = "spiritual_alchemy.html")]
+pub struct SpiritualAlchemyTemplate;
