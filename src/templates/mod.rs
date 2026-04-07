@@ -634,3 +634,7 @@ pub struct AscensionIlluminationTemplate;
 #[derive(Template)]
 #[template(path = "spiritual_alchemy.html")]
 pub struct SpiritualAlchemyTemplate;
+
+#[derive(Template)]
+#[template(path = "yoga.html")]
+pub struct YogaTemplate;
