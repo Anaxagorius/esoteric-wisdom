@@ -10,7 +10,7 @@ use tower_cookies::{Cookie, Cookies};
 use argon2::{Argon2, PasswordHasher, PasswordVerifier};
 use argon2::password_hash::{SaltString, PasswordHash};
 use jsonwebtoken::{encode, decode, Header, Validation, EncodingKey, DecodingKey};
-use crate::state::{AppState, ADMIN_USERNAME};
+use crate::state::{AppState, ADMIN_USERNAME, AdminData, save_admin_data};
 use crate::auth::HtmlTemplate;
 use crate::templates::{AdminLoginTemplate, AdminChangePasswordTemplate};
 
@@ -129,8 +129,9 @@ pub async fn admin_change_password_post(
         }
     };
 
-    *state.admin_password_hash.write().await = new_hash;
+    *state.admin_password_hash.write().await = new_hash.clone();
     *state.admin_must_change_password.write().await = false;
+    save_admin_data(&AdminData { password_hash: new_hash, must_change_password: false }).await;
 
     let token = make_admin_token(&state, false);
     cookies.add(

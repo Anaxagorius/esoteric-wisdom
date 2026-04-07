@@ -5,7 +5,7 @@ use argon2::{Argon2, PasswordHasher, PasswordVerifier};
 use argon2::password_hash::{SaltString, PasswordHash};
 use jsonwebtoken::{encode, decode, Header, Validation, EncodingKey, DecodingKey};
 use serde::{Serialize, Deserialize as SerdeDeserialize};
-use crate::state::{AppState, User};
+use crate::state::{AppState, User, save_users};
 use crate::templates::{LoginTemplate, SignupTemplate};
 
 #[derive(Debug, Deserialize)]
@@ -68,6 +68,9 @@ pub async fn signup_post(State(state): State<AppState>, Form(form): Form<AuthFor
 
     let user = User::new(form.email.clone(), password_hash);
     users.push(user);
+    let snapshot = users.clone();
+    drop(users);
+    save_users(&snapshot).await;
 
     let tpl = LoginTemplate { error: Some("Account created. Please log in.".into()) };
     HtmlTemplate(tpl).into_response()
