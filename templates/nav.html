@@ -1,0 +1,159 @@
+<nav class="sticky top-0 z-50 bg-black/40 backdrop-blur-md border-b border-violet-500/20">
+  <div class="flex items-center justify-between px-6 py-3">
+    <a href="/home" class="font-cinzel text-amber-300 text-sm tracking-widest shrink-0">✦ Esoteric Wisdom ✦</a>
+
+    <!-- Hamburger (mobile) -->
+    <button onclick="(function(btn){var m=document.getElementById('mobile-nav');m.classList.toggle('hidden');btn.querySelector('.icon-open').classList.toggle('hidden');btn.querySelector('.icon-close').classList.toggle('hidden');})(this)"
+            class="md:hidden text-violet-300 hover:text-amber-300 p-1 transition-colors" aria-label="Toggle navigation">
+      <svg class="icon-open w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      <svg class="icon-close hidden w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+    </button>
+
+    <!-- Desktop nav -->
+    <div class="hidden md:flex items-center gap-x-0.5 text-xs text-violet-200">
+
+      <!-- 🔮 Divination -->
+      <div class="relative group">
+        <button class="flex items-center gap-0.5 px-2 py-1.5 rounded hover:bg-violet-900/30 hover:text-amber-300 transition-colors whitespace-nowrap">
+          🔮 Divination
+          <svg class="w-3 h-3 ml-0.5 opacity-60" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+        </button>
+        <div class="hidden group-hover:block absolute top-full left-0 mt-1 bg-black/90 border border-violet-500/30 rounded-xl py-2 min-w-[170px] backdrop-blur-md shadow-xl z-50">
+          <a href="/astrology"   class="block px-4 py-1.5 hover:text-amber-300 hover:bg-violet-900/40 transition-colors">Astrology</a>
+          <a href="/tarot/select" class="block px-4 py-1.5 hover:text-amber-300 hover:bg-violet-900/40 transition-colors">Tarot</a>
+          <a href="/numerology"  class="block px-4 py-1.5 hover:text-amber-300 hover:bg-violet-900/40 transition-colors">Numerology</a>
+          <a href="/runes"       class="block px-4 py-1.5 hover:text-amber-300 hover:bg-violet-900/40 transition-colors">Runes</a>
+        </div>
+      </div>
+
+      <!-- 🧘 Practice -->
+      <div class="relative group">
+        <button class="flex items-center gap-0.5 px-2 py-1.5 rounded hover:bg-violet-900/30 hover:text-amber-300 transition-colors whitespace-nowrap">
+          🧘 Practice
+          <svg class="w-3 h-3 ml-0.5 opacity-60" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+        </button>
+        <div class="hidden group-hover:block absolute top-full left-0 mt-1 bg-black/90 border border-violet-500/30 rounded-xl py-2 min-w-[170px] backdrop-blur-md shadow-xl z-50">
+          <a href="/meditation"  class="block px-4 py-1.5 hover:text-amber-300 hover:bg-violet-900/40 transition-colors">Meditation</a>
+          <a href="/yoga"        class="block px-4 py-1.5 hover:text-amber-300 hover:bg-violet-900/40 transition-colors">Yoga</a>
+          <a href="/alchemy"     class="block px-4 py-1.5 hover:text-amber-300 hover:bg-violet-900/40 transition-colors">Alchemy</a>
+          <a href="/crystals"    class="block px-4 py-1.5 hover:text-amber-300 hover:bg-violet-900/40 transition-colors">Crystals</a>
+          <a href="/esoteric-practices/breathwork" class="block px-4 py-1.5 hover:text-amber-300 hover:bg-violet-900/40 transition-colors">Breathwork</a>
+        </div>
+      </div>
+
+      <!-- 🌍 Traditions -->
+      <div class="relative group">
+        <button class="flex items-center gap-0.5 px-2 py-1.5 rounded hover:bg-violet-900/30 hover:text-amber-300 transition-colors whitespace-nowrap">
+          🌍 Traditions
+          <svg class="w-3 h-3 ml-0.5 opacity-60" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+        </button>
+        <div class="hidden group-hover:block absolute top-full left-0 mt-1 bg-black/90 border border-violet-500/30 rounded-xl py-2 min-w-[220px] backdrop-blur-md shadow-xl z-50">
+          <a href="/shamanism"                class="block px-4 py-1.5 hover:text-amber-300 hover:bg-violet-900/40 transition-colors">Shamanism</a>
+          <a href="/druidism"                 class="block px-4 py-1.5 hover:text-amber-300 hover:bg-violet-900/40 transition-colors">Druidism</a>
+          <a href="/wicca"                    class="block px-4 py-1.5 hover:text-amber-300 hover:bg-violet-900/40 transition-colors">Wicca</a>
+          <a href="/western-esotericism"      class="block px-4 py-1.5 hover:text-amber-300 hover:bg-violet-900/40 transition-colors">Western Esotericism</a>
+          <a href="/eastern-esotericism"      class="block px-4 py-1.5 hover:text-amber-300 hover:bg-violet-900/40 transition-colors">Eastern Esotericism</a>
+          <a href="/indigenous-esotericism"   class="block px-4 py-1.5 hover:text-amber-300 hover:bg-violet-900/40 transition-colors">Indigenous Esotericism</a>
+          <a href="/middle-eastern-esotericism" class="block px-4 py-1.5 hover:text-amber-300 hover:bg-violet-900/40 transition-colors">Middle Eastern Mysteries</a>
+        </div>
+      </div>
+
+      <!-- 📚 Study -->
+      <div class="relative group">
+        <button class="flex items-center gap-0.5 px-2 py-1.5 rounded hover:bg-violet-900/30 hover:text-amber-300 transition-colors whitespace-nowrap">
+          📚 Study
+          <svg class="w-3 h-3 ml-0.5 opacity-60" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+        </button>
+        <div class="hidden group-hover:block absolute top-full left-0 mt-1 bg-black/90 border border-violet-500/30 rounded-xl py-2 min-w-[230px] backdrop-blur-md shadow-xl z-50">
+          <a href="/esoteric-practices"     class="block px-4 py-1.5 hover:text-amber-300 hover:bg-violet-900/40 transition-colors">Esoteric Practices</a>
+          <a href="/esoteric-corpora"       class="block px-4 py-1.5 hover:text-amber-300 hover:bg-violet-900/40 transition-colors">Sacred Texts</a>
+          <a href="/esoteric-figures"       class="block px-4 py-1.5 hover:text-amber-300 hover:bg-violet-900/40 transition-colors">Esoteric Figures</a>
+          <a href="/orders-societies"       class="block px-4 py-1.5 hover:text-amber-300 hover:bg-violet-900/40 transition-colors">Orders &amp; Societies</a>
+          <a href="/mythologies-cosmologies" class="block px-4 py-1.5 hover:text-amber-300 hover:bg-violet-900/40 transition-colors">Mythologies &amp; Cosmologies</a>
+          <a href="/esoteric-concepts"      class="block px-4 py-1.5 hover:text-amber-300 hover:bg-violet-900/40 transition-colors">Esoteric Concepts</a>
+        </div>
+      </div>
+
+      <!-- 🌀 Beyond the Veil -->
+      <div class="relative group">
+        <button class="flex items-center gap-0.5 px-2 py-1.5 rounded hover:bg-violet-900/30 hover:text-amber-300 transition-colors whitespace-nowrap">
+          🌀 Beyond the Veil
+          <svg class="w-3 h-3 ml-0.5 opacity-60" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+        </button>
+        <div class="hidden group-hover:block absolute top-full right-0 mt-1 bg-black/90 border border-violet-500/30 rounded-xl py-2 min-w-[190px] backdrop-blur-md shadow-xl z-50">
+          <a href="/akashic-records"  class="block px-4 py-1.5 hover:text-amber-300 hover:bg-violet-900/40 transition-colors">Akashic Records</a>
+          <a href="/gateway-process"  class="block px-4 py-1.5 hover:text-amber-300 hover:bg-violet-900/40 transition-colors">Gateway Process</a>
+          <a href="/remote-viewing"   class="block px-4 py-1.5 hover:text-amber-300 hover:bg-violet-900/40 transition-colors">Remote Viewing</a>
+          <a href="/khasarov-mirror"  class="block px-4 py-1.5 hover:text-amber-300 hover:bg-violet-900/40 transition-colors">Khasarov Mirror</a>
+          <a href="/ce5"              class="block px-4 py-1.5 hover:text-amber-300 hover:bg-violet-900/40 transition-colors">CE-5</a>
+        </div>
+      </div>
+
+      <!-- Standalone links -->
+      <a href="/journal/reflections" class="px-2 py-1.5 text-emerald-300 hover:text-emerald-200 transition-colors whitespace-nowrap">✨ Reflections</a>
+      <a href="https://ko-fi.com/anjiannelei" target="_blank" rel="noopener noreferrer"
+         class="px-3 py-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-white font-semibold hover:scale-105 transition-transform shrink-0 whitespace-nowrap">☕ Support</a>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobile-nav" class="hidden md:hidden border-t border-violet-500/20 px-6 py-4 space-y-4 text-xs text-violet-200">
+    <div>
+      <p class="text-violet-400 font-semibold uppercase tracking-widest text-[10px] mb-2">🔮 Divination</p>
+      <div class="grid grid-cols-2 gap-x-6 gap-y-1.5 pl-2">
+        <a href="/astrology"    class="hover:text-amber-300 transition-colors">Astrology</a>
+        <a href="/tarot/select" class="hover:text-amber-300 transition-colors">Tarot</a>
+        <a href="/numerology"   class="hover:text-amber-300 transition-colors">Numerology</a>
+        <a href="/runes"        class="hover:text-amber-300 transition-colors">Runes</a>
+      </div>
+    </div>
+    <div>
+      <p class="text-violet-400 font-semibold uppercase tracking-widest text-[10px] mb-2">🧘 Practice</p>
+      <div class="grid grid-cols-2 gap-x-6 gap-y-1.5 pl-2">
+        <a href="/meditation"  class="hover:text-amber-300 transition-colors">Meditation</a>
+        <a href="/yoga"        class="hover:text-amber-300 transition-colors">Yoga</a>
+        <a href="/alchemy"     class="hover:text-amber-300 transition-colors">Alchemy</a>
+        <a href="/crystals"    class="hover:text-amber-300 transition-colors">Crystals</a>
+        <a href="/esoteric-practices/breathwork" class="hover:text-amber-300 transition-colors">Breathwork</a>
+      </div>
+    </div>
+    <div>
+      <p class="text-violet-400 font-semibold uppercase tracking-widest text-[10px] mb-2">🌍 Traditions</p>
+      <div class="grid grid-cols-2 gap-x-6 gap-y-1.5 pl-2">
+        <a href="/shamanism"                  class="hover:text-amber-300 transition-colors">Shamanism</a>
+        <a href="/druidism"                   class="hover:text-amber-300 transition-colors">Druidism</a>
+        <a href="/wicca"                      class="hover:text-amber-300 transition-colors">Wicca</a>
+        <a href="/western-esotericism"        class="hover:text-amber-300 transition-colors">Western Esotericism</a>
+        <a href="/eastern-esotericism"        class="hover:text-amber-300 transition-colors">Eastern Esotericism</a>
+        <a href="/indigenous-esotericism"     class="hover:text-amber-300 transition-colors">Indigenous Esotericism</a>
+        <a href="/middle-eastern-esotericism" class="hover:text-amber-300 transition-colors">Middle Eastern Mysteries</a>
+      </div>
+    </div>
+    <div>
+      <p class="text-violet-400 font-semibold uppercase tracking-widest text-[10px] mb-2">📚 Study</p>
+      <div class="grid grid-cols-2 gap-x-6 gap-y-1.5 pl-2">
+        <a href="/esoteric-practices"      class="hover:text-amber-300 transition-colors">Esoteric Practices</a>
+        <a href="/esoteric-corpora"        class="hover:text-amber-300 transition-colors">Sacred Texts</a>
+        <a href="/esoteric-figures"        class="hover:text-amber-300 transition-colors">Esoteric Figures</a>
+        <a href="/orders-societies"        class="hover:text-amber-300 transition-colors">Orders &amp; Societies</a>
+        <a href="/mythologies-cosmologies" class="hover:text-amber-300 transition-colors">Mythologies &amp; Cosmologies</a>
+        <a href="/esoteric-concepts"       class="hover:text-amber-300 transition-colors">Esoteric Concepts</a>
+      </div>
+    </div>
+    <div>
+      <p class="text-violet-400 font-semibold uppercase tracking-widest text-[10px] mb-2">🌀 Beyond the Veil</p>
+      <div class="grid grid-cols-2 gap-x-6 gap-y-1.5 pl-2">
+        <a href="/akashic-records" class="hover:text-amber-300 transition-colors">Akashic Records</a>
+        <a href="/gateway-process" class="hover:text-amber-300 transition-colors">Gateway Process</a>
+        <a href="/remote-viewing"  class="hover:text-amber-300 transition-colors">Remote Viewing</a>
+        <a href="/khasarov-mirror" class="hover:text-amber-300 transition-colors">Khasarov Mirror</a>
+        <a href="/ce5"             class="hover:text-amber-300 transition-colors">CE-5</a>
+      </div>
+    </div>
+    <div class="flex flex-wrap items-center gap-x-4 gap-y-2 pt-2 border-t border-violet-500/20">
+      <a href="/journal/reflections" class="text-emerald-300 hover:text-emerald-200 transition-colors">✨ Reflections</a>
+      <a href="https://ko-fi.com/anjiannelei" target="_blank" rel="noopener noreferrer"
+         class="px-3 py-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-white font-semibold hover:scale-105 transition-transform">☕ Support</a>
+    </div>
+  </div>
+</nav>

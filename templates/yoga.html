@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Yoga — Esoteric Wisdom</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta property="og:title" content="Yoga — Esoteric Wisdom" />
+    <meta property="og:description" content="Explore Yoga in its most exhaustive form — from the Vedic roots and the eight limbs of Patañjali to Kundalini, Tantra, Bhakti, Jnana, Karma, Hatha, Raja, and the subtle body sciences." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://esoteric-wisdom.onrender.com/yoga" />
+    <meta property="og:image" content="https://esoteric-wisdom.onrender.com/og-image.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+    <style>
+      body {
+        background: radial-gradient(ellipse at top, #1a1a2e 0%, #16213e 25%, #0f3460 50%, #020617 80%, #000000 100%);
+        font-family: 'Raleway', sans-serif;
+      }
+      .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+      @keyframes twinkle { 0%,100% { opacity: 0.2; } 50% { opacity: 1; } }
+      .star { position: absolute; border-radius: 50%; background: white; animation: twinkle var(--dur,3s) ease-in-out infinite; animation-delay: var(--delay,0s); }
+      @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+      .floating { animation: float 5s ease-in-out infinite; }
+      @keyframes shimmer {
+        0% { background-position: -200% center; }
+        100% { background-position: 200% center; }
+      }
+      .aurora-text {
+        background: linear-gradient(90deg, #f59e0b, #ec4899, #a78bfa, #34d399, #f59e0b);
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        animation: shimmer 5s linear infinite;
+      }
+      .yoga-text {
+        background: linear-gradient(90deg, #fbbf24, #f97316, #a78bfa, #60a5fa, #fbbf24);
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        animation: shimmer 6s linear infinite;
+      }
+      @keyframes chakra-spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      .chakra-ring {
+        animation: chakra-spin 12s linear infinite;
+      }
+      .yoga-card {
+        background: linear-gradient(135deg, rgba(255,180,50,0.08), rgba(167,139,250,0.05));
+        border: 1px solid rgba(251,191,36,0.2);
+        border-radius: 1rem;
+        padding: 1.5rem;
+        transition: all 0.3s ease;
+      }
+      .yoga-card:hover {
+        border-color: rgba(251,191,36,0.5);
+        transform: translateY(-4px);
+        box-shadow: 0 16px 48px rgba(251,191,36,0.1);
+      }
+      .section-divider {
+        height: 1px;
+        background: linear-gradient(90deg, transparent, rgba(251,191,36,0.3), rgba(167,139,250,0.3), transparent);
+        margin: 0.5rem 0;
+      }
+      .chakra-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        padding: 0.25rem 0.75rem;
+        border-radius: 9999px;
+        font-size: 0.7rem;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+      .nav-link { position: relative; transition: all 0.3s; }
+      .nav-link::after {
+        content: ''; position: absolute; bottom: -2px; left: 0;
+        width: 0; height: 2px;
+        background: linear-gradient(90deg, #f59e0b, #a78bfa);
+        transition: width 0.3s;
+      }
+      .nav-link:hover::after { width: 100%; }
+    </style>
+  </head>
+  <body class="min-h-screen text-white px-4 py-8">
+    <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+
+    <!-- Navigation -->
+    {% include "nav.html" %}
+
+    <div class="relative z-10 max-w-6xl mx-auto space-y-14 pt-8 pb-16 px-4">
+
+      <!-- Hero -->
+      <section class="text-center py-12 space-y-6">
+        <div class="floating text-8xl mb-2">🪷</div>
+        <h1 class="font-cinzel text-4xl md:text-6xl font-bold leading-tight">
+          <span class="yoga-text">Yoga</span>
+        </h1>
+        <p class="max-w-3xl mx-auto text-amber-100/80 text-lg leading-relaxed">
+          Yoga is not merely a system of postures. It is one of the most ancient and exhaustive sciences of consciousness ever conceived — a complete technology of liberation designed to still the fluctuations of the mind and unite the individual soul (<em>jīva</em>) with the universal Self (<em>Brahman</em>). What the West has received as "yoga" is but a single thread of an incomprehensibly vast tapestry.
+        </p>
+        <p class="max-w-2xl mx-auto text-amber-200/60 text-sm leading-relaxed italic">
+          "Yogaś citta-vṛtti-nirodhaḥ" — Yoga is the cessation of the fluctuations of the mind. — Patañjali, <em>Yoga Sūtras</em> I.2
+        </p>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- Origins & Etymology -->
+      <section class="space-y-6">
+        <h2 class="font-cinzel text-2xl md:text-3xl text-amber-300 text-center tracking-wide">Origins &amp; Etymology</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-amber-100/80 leading-relaxed">
+          <div class="space-y-4">
+            <p>
+              The word <strong class="text-amber-200">yoga</strong> derives from the Sanskrit root <em>yuj</em>, meaning to yoke, unite, or harness — cognate with the Latin <em>iugum</em> and the English "yoke." Its earliest occurrence is in the <strong class="text-amber-200">Ṛg Veda</strong> (c. 1500–1200 BCE), where it refers to the yoking of horses to a chariot — a metaphor that would become foundational for the later philosophical tradition: the yoking of the senses and mind to the chariot of the body, guided by the charioteer of the intellect, as elaborated in the <em>Kaṭha Upaniṣad</em> and the <em>Bhagavad Gītā</em>.
+            </p>
+            <p>
+              The systematic elaboration of yoga as a philosophical-soteriological system begins in earnest with the <strong class="text-amber-200">Upaniṣads</strong> (c. 800–200 BCE), particularly the <em>Kaṭha</em>, <em>Śvetāśvatara</em>, <em>Maitrī</em>, and <em>Chāndogya</em> Upaniṣads, which develop the concepts of breath control (<em>prāṇāyāma</em>), withdrawal of the senses (<em>pratyāhāra</em>), and meditative absorption (<em>dhyāna</em>). The <strong class="text-amber-200">Mahābhārata</strong> and the <em>Bhagavad Gītā</em> embedded within it codified yoga as a multi-pathed path of liberation accessible to all, regardless of social station.
+            </p>
+            <p>
+              The authoritative systematisation of classical yoga comes with the <strong class="text-amber-200">Yoga Sūtras of Patañjali</strong> (c. 400 CE), which synthesised existing yogic traditions into the eight-limbed (<em>aṣṭāṅga</em>) path of Rāja Yoga. Patañjali's genius lay not in originating yoga but in providing it with a rigorous philosophical scaffolding within the dualist <strong class="text-amber-200">Sāṃkhya</strong> framework, distinguishing between pure consciousness (<em>puruṣa</em>) and the manifest world (<em>prakṛti</em>).
+            </p>
+          </div>
+          <div class="space-y-4">
+            <p>
+              Even older traces of proto-yogic practice appear in the <strong class="text-amber-200">Indus Valley Civilisation</strong> (c. 3000–1700 BCE): the famous "Proto-Śiva" seal depicting a figure seated in a cross-legged posture that resembles <em>mūlabandha āsana</em> suggests meditative or ritual practice predating the Vedic tradition. Whether this constitutes proto-yoga is debated, but it indicates a very ancient continuity of inward-directed contemplative practice in the Indian subcontinent.
+            </p>
+            <p>
+              The <strong class="text-amber-200">Tantric traditions</strong> (emerging c. 500–1200 CE) transformed the yoga landscape profoundly, introducing a positive attitude toward the body as a vehicle for liberation rather than an obstacle to it. Tantric yoga — including Haṭha Yoga, Kuṇḍalinī Yoga, and Śākta practices — holds that the embodied human form is not a prison but a consecrated instrument, the very locus where liberation can be achieved in this life and this body (<em>jīvanmukti</em>).
+            </p>
+            <p>
+              The <strong class="text-amber-200">Nātha Tradition</strong> (c. 9th–12th century), through its great siddhas — Matsyendranātha, Gorakṣanātha, and others — developed the body-centred practices that became the basis of modern Haṭha Yoga. The <em>Haṭha Yoga Pradīpikā</em> (c. 15th century) and the <em>Gheraṇḍa Saṃhitā</em> (c. 17th century) are the primary texts of this tradition.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- The Classical Schools / Paths -->
+      <section class="space-y-8">
+        <h2 class="font-cinzel text-2xl md:text-3xl text-amber-300 text-center tracking-wide">The Classical Paths of Yoga</h2>
+        <p class="text-center text-amber-100/70 text-sm max-w-2xl mx-auto">
+          Yoga is not one path but a vast network of complementary routes to the same summit. The classical tradition recognises four primary margas (paths), with numerous schools branching from each.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+          <!-- Rāja Yoga -->
+          <div class="yoga-card">
+            <div class="flex items-start gap-3 mb-3">
+              <span class="text-3xl">👑</span>
+              <div>
+                <h3 class="font-cinzel text-lg text-amber-300">Rāja Yoga — The Royal Path</h3>
+                <p class="text-xs text-amber-200/60 italic">The Path of Meditation &amp; Mental Mastery</p>
+              </div>
+            </div>
+            <p class="text-sm text-amber-100/80 leading-relaxed">
+              Rāja Yoga, the "royal yoga," is the path of mental discipline systematised by Patañjali. Its central teaching is that the suffering of ordinary human experience arises from <em>avidyā</em> (ignorance) and the ceaseless fluctuations of the mind (<em>citta-vṛtti</em>). Through disciplined practice, the mind can be stilled and the yogi's true nature — pure, unchanging consciousness (<em>puruṣa</em>) — revealed. The practitioner progresses through Patañjali's eight limbs: ethical restraints (<em>yama</em>), personal observances (<em>niyama</em>), posture (<em>āsana</em>), breath control (<em>prāṇāyāma</em>), withdrawal of senses (<em>pratyāhāra</em>), concentration (<em>dhāraṇā</em>), meditation (<em>dhyāna</em>), and the superconscious state of <em>samādhi</em>. Rāja Yoga is both a path and a science — its results are verifiable through direct experience.
+            </p>
+          </div>
+
+          <!-- Jñāna Yoga -->
+          <div class="yoga-card">
+            <div class="flex items-start gap-3 mb-3">
+              <span class="text-3xl">📖</span>
+              <div>
+                <h3 class="font-cinzel text-lg text-amber-300">Jñāna Yoga — The Path of Wisdom</h3>
+                <p class="text-xs text-amber-200/60 italic">The Path of Knowledge &amp; Discernment</p>
+              </div>
+            </div>
+            <p class="text-sm text-amber-100/80 leading-relaxed">
+              Jñāna Yoga is the path of non-dual wisdom, rooted in the Upaniṣads and brought to its highest expression in the Advaita Vedānta of <strong class="text-amber-200">Ādi Śaṅkarācārya</strong> (8th century CE). It holds that the ultimate nature of reality is non-dual (<em>advaita</em>): there is only Brahman, pure undivided consciousness, and the sense of a separate self (<em>jīva</em>) is an illusion (<em>māyā</em>). Liberation (<em>mokṣa</em>) is not achieved by doing anything but by recognising what has always been true: <em>Tat tvam asi</em> — "Thou art That." The tools of Jñāna Yoga include <em>śravaṇa</em> (hearing the scriptures), <em>manana</em> (reflection upon them), and <em>nididhyāsana</em> (continuous contemplation of the Self). The Vedantic inquiry "<em>Neti, neti</em>" — "not this, not this" — strips away all false identifications. This is the path recommended in the <em>Vivekacūḍāmaṇi</em> and is central to the teaching of <strong class="text-amber-200">Ramana Maharṣi</strong>'s self-inquiry (<em>ātma-vicāra</em>).
+            </p>
+          </div>
+
+          <!-- Bhakti Yoga -->
+          <div class="yoga-card">
+            <div class="flex items-start gap-3 mb-3">
+              <span class="text-3xl">💛</span>
+              <div>
+                <h3 class="font-cinzel text-lg text-amber-300">Bhakti Yoga — The Path of Devotion</h3>
+                <p class="text-xs text-amber-200/60 italic">The Path of Love &amp; Surrender</p>
+              </div>
+            </div>
+            <p class="text-sm text-amber-100/80 leading-relaxed">
+              Bhakti Yoga is the path of devotional love directed toward a personal conception of the Divine — whether as Viṣṇu, Śiva, Devī, or any of the myriad divine forms of the Hindu pantheon, or indeed as a formless Absolute. The <em>Bhāgavata Purāṇa</em> describes nine forms of devotional practice (<em>navadha bhakti</em>): listening to divine glories (<em>śravaṇa</em>), chanting (<em>kīrtana</em>), remembrance (<em>smaraṇa</em>), service to the divine feet (<em>pāda-sevana</em>), worship (<em>arcana</em>), prostration (<em>vandana</em>), servitude (<em>dāsya</em>), friendship (<em>sakhya</em>), and self-surrender (<em>ātma-nivedana</em>). The great saint-poets of the <strong class="text-amber-200">Bhakti Movement</strong> — Mīrābāī, Kabīr, Tukārāma, Rāmadāsa, Nammālvār — transmitted bhakti as a total dissolution of ego into love. In the Vaiṣṇava tradition of <strong class="text-amber-200">Rūpa Gosvāmī</strong>, the highest stage of bhakti is <em>prema</em> — a pure, unconditional love for Kṛṣṇa that transcends all desire for personal liberation.
+            </p>
+          </div>
+
+          <!-- Karma Yoga -->
+          <div class="yoga-card">
+            <div class="flex items-start gap-3 mb-3">
+              <span class="text-3xl">⚙️</span>
+              <div>
+                <h3 class="font-cinzel text-lg text-amber-300">Karma Yoga — The Path of Action</h3>
+                <p class="text-xs text-amber-200/60 italic">The Path of Selfless Service</p>
+              </div>
+            </div>
+            <p class="text-sm text-amber-100/80 leading-relaxed">
+              Karma Yoga is the path of action performed without attachment to results — the central teaching of the <em>Bhagavad Gītā</em> delivered by Kṛṣṇa to the warrior Arjuna. The liberating insight is not to cease action but to act without ego-identification: "Let right deeds be thy motive, not the fruit which comes from them" (Gītā II.47). Karma Yoga dissolves the karmic accumulation that binds the soul to the cycle of rebirth (<em>saṃsāra</em>) not by renouncing the world but by acting in it as an instrument of the Divine. <em>Niṣkāma karma</em> — desireless action — transforms every deed into an act of worship. This path is central to the social reform movements of <strong class="text-amber-200">Swami Vivekananda</strong>, who taught it as the foundation of a spiritual socialism, and to the life of <strong class="text-amber-200">Mahatma Gandhi</strong>, who enacted it as non-violent political action (<em>ahiṃsā</em>).
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- Haṭha Yoga — Body as Temple -->
+      <section class="space-y-6">
+        <h2 class="font-cinzel text-2xl md:text-3xl text-amber-300 text-center tracking-wide">Haṭha Yoga — The Body as Temple</h2>
+        <p class="text-center text-amber-100/70 text-sm max-w-2xl mx-auto">
+          Haṭha Yoga — from <em>ha</em> (sun) and <em>ṭha</em> (moon) — is the yoga of the union of solar and lunar energies within the body. It is the root of all modern postural yoga.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="yoga-card">
+            <h3 class="font-cinzel text-base text-amber-300 mb-2">Āsana — Posture</h3>
+            <p class="text-xs text-amber-100/80 leading-relaxed">In the classical texts, āsana was primarily a <em>sitting posture</em> for meditation — Patañjali describes it simply as "a steady, comfortable seat" (<em>sthira-sukha-āsanam</em>). The Haṭha tradition expanded this into a comprehensive system of physical postures designed to purify the energy channels (<em>nāḍīs</em>), build <em>tapas</em> (inner heat), and prepare the body to receive the awakening of Kuṇḍalinī Śakti. The <em>Haṭha Yoga Pradīpikā</em> describes 84 classical āsanas; traditional lore holds that Śiva himself taught 8,400,000.</p>
+          </div>
+          <div class="yoga-card">
+            <h3 class="font-cinzel text-base text-amber-300 mb-2">Prāṇāyāma — Breath Science</h3>
+            <p class="text-xs text-amber-100/80 leading-relaxed">Prāṇāyāma is not merely breathing exercise — it is the science of <em>prāṇa</em>, the vital life force that pervades all living beings. Through regulated breathing, the yogi controls and directs prāṇa within the subtle body. Key practices include <em>nāḍī śodhana</em> (alternate nostril breathing to purify the energy channels), <em>kumbhaka</em> (breath retention), <em>kapālabhāti</em> (skull-shining breath), <em>bhastrikā</em> (bellows breath), <em>ujjāyī</em> (victorious breath), <em>śītalī</em>, <em>sītkārī</em>, <em>bhrāmarī</em> (humming bee breath), and <em>mūrcchā</em>. The Haṭha masters taught that controlling the breath controls the mind, and controlling the mind achieves liberation.</p>
+          </div>
+          <div class="yoga-card">
+            <h3 class="font-cinzel text-base text-amber-300 mb-2">Mudrā &amp; Bandha — Seals &amp; Locks</h3>
+            <p class="text-xs text-amber-100/80 leading-relaxed">Mudrās are gestures — of the hands (<em>hasta mudrā</em>), body (<em>kāya mudrā</em>), and entire being — that channel and direct prāṇic energy. The <em>Haṭha Yoga Pradīpikā</em> describes ten great mudrās: <em>mahāmudrā</em>, <em>mahābandha</em>, <em>mahāvedha</em>, <em>khecarī</em>, <em>jālandhara bandha</em>, <em>mūla bandha</em>, <em>uḍḍīyāna bandha</em>, <em>viparīta karaṇī</em>, <em>vajrolī</em>, and <em>śakticālana</em>. The three primary bandhas — root lock (<em>mūla bandha</em>), abdominal lock (<em>uḍḍīyāna bandha</em>), and throat lock (<em>jālandhara bandha</em>) — when combined as <em>mahābandha</em>, seal the prāṇa within the central channel (<em>suṣumṇā nāḍī</em>) and direct it toward the crown.</p>
+          </div>
+          <div class="yoga-card">
+            <h3 class="font-cinzel text-base text-amber-300 mb-2">Ṣaṭkarma — The Six Cleansings</h3>
+            <p class="text-xs text-amber-100/80 leading-relaxed">The Haṭha tradition prescribes six purificatory practices for those with excess kapha (phlegm) doṣa: <em>neti</em> (nasal cleansing with saline water or thread), <em>dhautī</em> (digestive tract cleansing), <em>basti</em> (yogic enema), <em>nauli</em> (abdominal churning), <em>kapālabhāti</em> (here as a cleansing practice), and <em>trāṭaka</em> (steady gazing, particularly at a flame, for mental purification). These practices purify the physical and subtle bodies, making them fit instruments for the higher stages of practice.</p>
+          </div>
+          <div class="yoga-card">
+            <h3 class="font-cinzel text-base text-amber-300 mb-2">The Nāḍī System</h3>
+            <p class="text-xs text-amber-100/80 leading-relaxed">The subtle body (<em>sūkṣma śarīra</em>) contains a network of 72,000 energy channels (<em>nāḍīs</em>) through which prāṇa flows. The three principal nāḍīs are <em>iḍā</em> (lunar, left, feminine, associated with the parasympathetic nervous system), <em>piṅgalā</em> (solar, right, masculine, sympathetic), and <em>suṣumṇā</em> (the central channel running through the spinal column, the path of Kuṇḍalinī's ascent). All Haṭha practice ultimately aims to purify the nāḍīs so that prāṇa flows freely and can be directed into the suṣumṇā.</p>
+          </div>
+          <div class="yoga-card">
+            <h3 class="font-cinzel text-base text-amber-300 mb-2">Samādhi in the Haṭha Tradition</h3>
+            <p class="text-xs text-amber-100/80 leading-relaxed">The <em>Haṭha Yoga Pradīpikā</em> culminates in its fourth chapter on <em>samādhi</em>, describing it as <em>rāja yoga</em>, <em>unmanī</em> (the "no-mind" state), <em>manonmanī</em>, and <em>laya</em> (dissolution). It lists states such as <em>śambhavī mudrā</em> and <em>khecarī mudrā</em> as means to reach it. The text concludes: "Until the prāṇa enters the suṣumṇā and bindu (semen/vital essence) rises to the head — until the mind remains in the heart in a state of samādhi — all talk of knowledge is mere bragging."</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- Patañjali's Eight Limbs -->
+      <section class="space-y-6">
+        <h2 class="font-cinzel text-2xl md:text-3xl text-amber-300 text-center tracking-wide">The Eight Limbs of Patañjali — Aṣṭāṅga Yoga</h2>
+        <p class="text-center text-amber-100/70 text-sm max-w-2xl mx-auto">The architecture of classical yoga as a complete technology of human transformation.</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div class="yoga-card text-center">
+            <div class="text-2xl mb-2">⚖️</div>
+            <h3 class="font-cinzel text-sm text-amber-300 mb-1">1. Yama</h3>
+            <p class="text-xs text-amber-200/60 mb-2 italic">Ethical Restraints</p>
+            <p class="text-xs text-amber-100/70 leading-relaxed">Non-violence (<em>ahiṃsā</em>), truthfulness (<em>satya</em>), non-stealing (<em>asteya</em>), sexual continence (<em>brahmacarya</em>), non-possessiveness (<em>aparigraha</em>). The social ethics of yoga — how the yogi relates to the world.</p>
+          </div>
+          <div class="yoga-card text-center">
+            <div class="text-2xl mb-2">🌱</div>
+            <h3 class="font-cinzel text-sm text-amber-300 mb-1">2. Niyama</h3>
+            <p class="text-xs text-amber-200/60 mb-2 italic">Personal Observances</p>
+            <p class="text-xs text-amber-100/70 leading-relaxed">Purity (<em>śauca</em>), contentment (<em>santoṣa</em>), austerity (<em>tapas</em>), self-study (<em>svādhyāya</em>), surrender to the Divine (<em>Īśvara-praṇidhāna</em>). The inner disciplines — how the yogi relates to themselves.</p>
+          </div>
+          <div class="yoga-card text-center">
+            <div class="text-2xl mb-2">🪷</div>
+            <h3 class="font-cinzel text-sm text-amber-300 mb-1">3. Āsana</h3>
+            <p class="text-xs text-amber-200/60 mb-2 italic">Steady, Comfortable Posture</p>
+            <p class="text-xs text-amber-100/70 leading-relaxed">The cultivation of a stable, effortless seat that can be held for extended meditation. The Yoga Sūtras say little more: posture becomes perfect when effort ceases and the mind becomes identified with the Infinite.</p>
+          </div>
+          <div class="yoga-card text-center">
+            <div class="text-2xl mb-2">🌬️</div>
+            <h3 class="font-cinzel text-sm text-amber-300 mb-1">4. Prāṇāyāma</h3>
+            <p class="text-xs text-amber-200/60 mb-2 italic">Breath Regulation</p>
+            <p class="text-xs text-amber-100/70 leading-relaxed">Control of inhalation (<em>pūraka</em>), retention (<em>kumbhaka</em>), and exhalation (<em>recaka</em>). Patañjali notes it thins the veil obscuring the light of wisdom.</p>
+          </div>
+          <div class="yoga-card text-center">
+            <div class="text-2xl mb-2">🐢</div>
+            <h3 class="font-cinzel text-sm text-amber-300 mb-1">5. Pratyāhāra</h3>
+            <p class="text-xs text-amber-200/60 mb-2 italic">Withdrawal of the Senses</p>
+            <p class="text-xs text-amber-100/70 leading-relaxed">As the tortoise withdraws its limbs, so the yogi withdraws the senses from their objects, turning awareness inward. This is the hinge between the external and internal limbs of yoga.</p>
+          </div>
+          <div class="yoga-card text-center">
+            <div class="text-2xl mb-2">🎯</div>
+            <h3 class="font-cinzel text-sm text-amber-300 mb-1">6. Dhāraṇā</h3>
+            <p class="text-xs text-amber-200/60 mb-2 italic">Concentration</p>
+            <p class="text-xs text-amber-100/70 leading-relaxed">The binding of consciousness to a single point (<em>deśa-bandhaś cittasya dhāraṇā</em>) — a chakra, a mantra, a deity form, the breath, or any chosen focus. The preliminary stage of meditation.</p>
+          </div>
+          <div class="yoga-card text-center">
+            <div class="text-2xl mb-2">🌊</div>
+            <h3 class="font-cinzel text-sm text-amber-300 mb-1">7. Dhyāna</h3>
+            <p class="text-xs text-amber-200/60 mb-2 italic">Meditation</p>
+            <p class="text-xs text-amber-100/70 leading-relaxed">When concentration deepens into an unbroken flow of awareness toward the object of meditation, dhāraṇā becomes dhyāna. The meditator, the act of meditating, and the object of meditation remain distinct — but are continuous.</p>
+          </div>
+          <div class="yoga-card text-center">
+            <div class="text-2xl mb-2">☀️</div>
+            <h3 class="font-cinzel text-sm text-amber-300 mb-1">8. Samādhi</h3>
+            <p class="text-xs text-amber-200/60 mb-2 italic">Superconscious Absorption</p>
+            <p class="text-xs text-amber-100/70 leading-relaxed">When the object alone shines forth as if devoid of the form of the meditator, samādhi is attained (<em>Yoga Sūtras</em> III.3). At its culmination — <em>nirvikalpa samādhi</em> / <em>asamprajñāta samādhi</em> — all mental modifications cease and only pure consciousness remains.</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- Kuṇḍalinī Yoga -->
+      <section class="space-y-6">
+        <h2 class="font-cinzel text-2xl md:text-3xl text-amber-300 text-center tracking-wide">Kuṇḍalinī Yoga — The Serpent Power</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-amber-100/80 leading-relaxed">
+          <div class="space-y-4">
+            <p>
+              Kuṇḍalinī — from <em>kuṇḍala</em>, meaning "coiled" — is the primordial cosmic energy (<em>śakti</em>) that lies dormant, coiled three and a half times around the <em>svayambhū liṅga</em> at the <em>mūlādhāra</em> chakra at the base of the spine, "like a sleeping serpent" according to the <em>Ṣaṭ-cakra-nirūpaṇa</em> (16th century). She is identical with <strong class="text-amber-200">Mahāśakti</strong> — the universal creative power of consciousness — in her immanent, embodied form.
+            </p>
+            <p>
+              The goal of Kuṇḍalinī Yoga is her awakening and ascent through the six (or seven) chakras along the suṣumṇā nāḍī from the mūlādhāra to the sahasrāra at the crown — there to unite with <strong class="text-amber-200">Śiva</strong>, pure consciousness. This union constitutes <em>mokṣa</em> — liberation. The tradition maps this as a journey through six stations: mūlādhāra (earth), svādhiṣṭhāna (water), maṇipūra (fire), anāhata (air), viśuddha (ether/sound), ājñā (light/mind), and the transcendent sahasrāra (pure consciousness).
+            </p>
+            <p>
+              Kuṇḍalinī awakening — which may occur through sustained Haṭha and Prāṇāyāma practice, through Śaktipāta (transmission of energy from a realised teacher), through intense devotion, through mantra, or spontaneously through grace — is described in the texts as accompanied by heat, light, trembling, visions, and profound alterations of consciousness. It must be guided by an experienced teacher, as the force is immense and the nervous system must be adequately prepared.
+            </p>
+          </div>
+          <div class="space-y-4">
+            <p>
+              The seven chakras (<em>energy wheels</em>) are the primary psycho-spiritual centres of the subtle body, each governing specific dimensions of human experience:
+            </p>
+            <div class="space-y-2">
+              <div class="flex items-center gap-3">
+                <span class="chakra-badge text-red-200" style="background:rgba(239,68,68,0.2);border:1px solid rgba(239,68,68,0.4);">🔴 Mūlādhāra</span>
+                <span class="text-xs text-amber-100/70">Base chakra — Earth, survival, primal instinct, foundation</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="chakra-badge text-orange-200" style="background:rgba(249,115,22,0.2);border:1px solid rgba(249,115,22,0.4);">🟠 Svādhiṣṭhāna</span>
+                <span class="text-xs text-amber-100/70">Sacral — Water, creativity, sexuality, emotional fluidity</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="chakra-badge text-yellow-200" style="background:rgba(234,179,8,0.2);border:1px solid rgba(234,179,8,0.4);">🟡 Maṇipūra</span>
+                <span class="text-xs text-amber-100/70">Solar plexus — Fire, will, personal power, digestion of experience</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="chakra-badge text-green-200" style="background:rgba(34,197,94,0.2);border:1px solid rgba(34,197,94,0.4);">💚 Anāhata</span>
+                <span class="text-xs text-amber-100/70">Heart — Air, love, compassion, the unstruck sound</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="chakra-badge text-blue-200" style="background:rgba(59,130,246,0.2);border:1px solid rgba(59,130,246,0.4);">💙 Viśuddha</span>
+                <span class="text-xs text-amber-100/70">Throat — Ether, authentic expression, purification</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="chakra-badge text-indigo-200" style="background:rgba(99,102,241,0.2);border:1px solid rgba(99,102,241,0.4);">🔵 Ājñā</span>
+                <span class="text-xs text-amber-100/70">Third eye — Light, insight, intuition, command</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="chakra-badge text-violet-200" style="background:rgba(139,92,246,0.2);border:1px solid rgba(139,92,246,0.4);">💜 Sahasrāra</span>
+                <span class="text-xs text-amber-100/70">Crown — Pure consciousness, unity, transcendence</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- Tantra Yoga -->
+      <section class="space-y-6">
+        <h2 class="font-cinzel text-2xl md:text-3xl text-amber-300 text-center tracking-wide">Tantric Yoga — Embracing the Sacred Body</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-amber-100/80 leading-relaxed">
+          <div class="space-y-4">
+            <p>
+              Tantric Yoga represents a radical reorientation of the spiritual path. Where classical Vedānta and Sāṃkhya-Yoga may tend toward world-negation, Tantra embraces the manifest world as the very body of the Goddess (<em>Devī</em>). The fundamental Tantric axiom is that the body, the cosmos, and consciousness are one — that liberation is not an escape from manifestation but its fullest realisation. The Tantric practitioner (<em>sādhaka</em>) does not transcend the world of the senses but penetrates through it to its divine ground.
+            </p>
+            <p>
+              <strong class="text-amber-200">Kashmir Śaivism</strong> — particularly the Trika and Pratyabhijñā schools of <strong class="text-amber-200">Abhinavagupta</strong> (c. 950–1016 CE) — represents the philosophical apex of Tantric thought. Its central teaching is <em>pratyabhijñā</em> (recognition): the universe is nothing but the free self-expression of Śiva-consciousness, and liberation is simply the recognition (<em>pratyabhijñā</em>) of one's identity with that consciousness. Abhinavagupta's <em>Tantrāloka</em> is perhaps the most comprehensive text on Tantric practice ever written.
+            </p>
+            <p>
+              The <strong class="text-amber-200">Śrī Vidyā</strong> tradition worships the Goddess in her supreme form as <em>Tripurasundarī</em> (the Beautiful Lady of the Three Cities) or <em>Lalitā Mahātripurasundarī</em>. Its central yantra, the <strong class="text-amber-200">Śrī Yantra</strong> (or <em>Śrī Cakra</em>), is a geometric diagram encoding the entire process of cosmic manifestation and dissolution. Meditation upon the Śrī Yantra is itself considered a complete yogic path.
+            </p>
+          </div>
+          <div class="space-y-4">
+            <p>
+              The <strong class="text-amber-200">Left-Hand path</strong> (<em>vāmācāra</em>) employs the "five Ms" (<em>pañca-makāra</em>) as ritual substances: <em>madya</em> (wine), <em>māṃsa</em> (meat), <em>matsya</em> (fish), <em>mudrā</em> (grain or gesture), and <em>maithuna</em> (ritual intercourse). These are substances that transgress conventional purity norms, and their ritual use is intended to dissolve the ego's conditioned boundaries through the direct confrontation of taboo. In the <strong class="text-amber-200">Right-Hand path</strong> (<em>dakṣiṇācāra</em>) and inner (<em>kulācāra</em>) schools, these five Ms are internalised as states of consciousness or replaced with symbolic equivalents.
+            </p>
+            <p>
+              <strong class="text-amber-200">Mantra</strong> is central to Tantric Yoga — the universe is understood to be sound (<em>nāda</em>), and specific mantras are the seed-sounds (<em>bīja</em>) of divine forces. The supreme mantra of Śrī Vidyā is the <em>Pañcadaśī</em> (fifteen-syllable mantra) and the <em>Ṣoḍaśī</em> (sixteen-syllable). Mantra is not merely prayer — in Tantra, the mantra IS the deity. Through sustained repetition (<em>japa</em>) with understanding of the mantra's meaning and energy (<em>artha</em> and <em>bhāva</em>), the practitioner's own consciousness is gradually transmuted into that of the deity (<em>devī-bhāva</em>).
+            </p>
+            <p>
+              <strong class="text-amber-200">Yantra</strong> — sacred geometric diagrams — are the dwelling-places of the deity in two-dimensional form. Meditating upon a yantra with the mind absorbed in its meaning is a complete Tantric yogic practice in itself.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- Further Yogic Schools -->
+      <section class="space-y-6">
+        <h2 class="font-cinzel text-2xl md:text-3xl text-amber-300 text-center tracking-wide">Further Yogic Schools &amp; Traditions</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+          <div class="yoga-card">
+            <h3 class="font-cinzel text-sm text-amber-300 mb-1 flex items-center gap-2">🔥 Kriyā Yoga</h3>
+            <p class="text-xs text-amber-100/80 leading-relaxed">Systematised by <strong class="text-amber-200">Mahāvatār Bābājī</strong> and transmitted through Lahirī Mahasaya, Sriyukteswar, and <strong class="text-amber-200">Paramahansa Yogananda</strong> (<em>Autobiography of a Yogi</em>), Kriyā Yoga is a precise prāṇāyāma technique that accelerates the spiritual evolution of the practitioner by withdrawing prāṇa from the sensory channels and directing it through the spinal centres. It is described as an "airline route" to God-realisation compared with the "bullock cart" of ordinary practice.</p>
+          </div>
+
+          <div class="yoga-card">
+            <h3 class="font-cinzel text-sm text-amber-300 mb-1 flex items-center gap-2">🌀 Laya Yoga</h3>
+            <p class="text-xs text-amber-100/80 leading-relaxed">Laya — "dissolution" — Yoga dissolves the mind into its source through meditation upon the inner sounds (<em>nāda</em>), lights, and chakras until all psychic content is absorbed back into pure consciousness. The <em>Haṭha Yoga Pradīpikā</em> devotes its fourth chapter to it. The practice of <em>nāda yoga</em> — meditation upon the inner sound, from gross external sounds progressively to the <em>anāhata nāda</em> (unstruck sound, the primal OM) — is a specific Laya technique.</p>
+          </div>
+
+          <div class="yoga-card">
+            <h3 class="font-cinzel text-sm text-amber-300 mb-1 flex items-center gap-2">🙏 Mantra Yoga</h3>
+            <p class="text-xs text-amber-100/80 leading-relaxed">One of the four classical yogas of the <em>Mālinīvijayottara Tantra</em>. Mantra Yoga proceeds through the repetition of a sacred syllable or formula until it becomes self-luminous — until the japa continues spontaneously without effort (<em>ajapā-japa</em>: the mantra "HaṁSa" — the sound of breathing — is repeated 21,600 times daily without conscious effort). The tradition recognises seven grades of mantra repetition, from loud recitation to mental/silent recitation to pure awareness of the mantra's ground.</p>
+          </div>
+
+          <div class="yoga-card">
+            <h3 class="font-cinzel text-sm text-amber-300 mb-1 flex items-center gap-2">💡 Jyoti Yoga</h3>
+            <p class="text-xs text-amber-100/80 leading-relaxed">Meditation upon inner light — a practice found in the <em>Śvetāśvatara Upaniṣad</em>, the Tantric texts, and the Śaiva Siddhānta. The <em>trāṭaka</em> practice (steady gazing at a flame) is its exoteric form. The esoteric form involves perception of the <em>bindu</em> — the luminous point of concentrated consciousness — and its expansion into the light-body (<em>jyotir-liṅga</em>). In the Nātha tradition this is the "inner sun" realised as self-luminous consciousness.</p>
+          </div>
+
+          <div class="yoga-card">
+            <h3 class="font-cinzel text-sm text-amber-300 mb-1 flex items-center gap-2">🧬 Svara Yoga</h3>
+            <p class="text-xs text-amber-100/80 leading-relaxed">The yoga of the breath rhythms — an ancient science of the <em>Śiva Svarodaya</em> text — relating the alternation of breath between the left (lunar/iḍā) and right (solar/piṅgalā) nostrils to time, health, auspicious activity, and spiritual practice. Mastery of svara (breath rhythm) allows the yogi to predict events, choose optimal times for action, and ultimately to transmute the prāṇic currents through sustained practice.</p>
+          </div>
+
+          <div class="yoga-card">
+            <h3 class="font-cinzel text-sm text-amber-300 mb-1 flex items-center gap-2">☀️ Sūrya Yoga / Sauric Practice</h3>
+            <p class="text-xs text-amber-100/80 leading-relaxed">Solar yoga — the drawing of prāṇic energy from the sun through specific practices. In its physical dimension this includes <em>sūrya namaskāra</em> (sun salutation), performed as a meditation and devotional offering. In its esoteric form, the practitioner meditates upon the inner sun (<em>ādityamaṇḍala</em>) in the solar plexus or the heart, uniting individual prāṇa with the cosmic solar force. Traditions from the Egyptian Aten to the Vedic Gāyatrī Mantra share this solar-consciousness orientation.</p>
+          </div>
+
+          <div class="yoga-card">
+            <h3 class="font-cinzel text-sm text-amber-300 mb-1 flex items-center gap-2">🌙 Chandra Yoga</h3>
+            <p class="text-xs text-amber-100/80 leading-relaxed">The lunar counterpart of sūrya yoga — cultivation of the cooling, inward, reflective qualities associated with the moon and the iḍā nāḍī. Lunar practices are associated with mental peace, emotional healing, psychic sensitivity, and the feminine creative principle (<em>śakti</em>). <em>Viparīta karaṇī</em> — the inverted action — is a classical Haṭha practice for preserving the lunar nectar (<em>bindu amṛta</em>) that drips from the moon at the sahasrāra and is normally consumed by the solar fire in the navel.</p>
+          </div>
+
+          <div class="yoga-card">
+            <h3 class="font-cinzel text-sm text-amber-300 mb-1 flex items-center gap-2">🌿 Ayurveda &amp; Yoga</h3>
+            <p class="text-xs text-amber-100/80 leading-relaxed">Yoga and Āyurveda (the "science of life") are the two "sister sciences" of the Vedic tradition, inseparable in classical practice. Āyurveda provides the dietary, herbal, and lifestyle science that prepares the body and nervous system for yogic practice. Understanding one's <em>prakṛti</em> (constitution) — Vāta, Pitta, or Kapha — determines which āsanas, prāṇāyāmas, and dietary practices are appropriate. The great sage <strong class="text-amber-200">Vāgbhaṭa</strong> and the <em>Aṣṭāṅga Hṛdayam</em> encode the integration of these traditions.</p>
+          </div>
+
+          <div class="yoga-card">
+            <h3 class="font-cinzel text-sm text-amber-300 mb-1 flex items-center gap-2">🎵 Nāda Yoga</h3>
+            <p class="text-xs text-amber-100/80 leading-relaxed">The yoga of sacred sound (<em>nāda</em>) holds that the universe is the resonance of a primordial vibration — the unstruck sound (<em>anāhata nāda</em>). Indian classical music (<em>sangīta</em>) is itself a yogic science: the <em>rāgas</em> are not merely melodies but modal structures that embody specific states of consciousness, seasons, times of day, and emotional-spiritual tones (<em>rasa</em>). The practitioner of Nāda Yoga meditates on progressively subtle layers of inner sound, from the gross (<em>vaikharī</em>) through the subtle (<em>madhyamā</em>) and the cosmic (<em>paśyantī</em>) to the transcendent (<em>parā</em>) — the primordial vibration before manifestation.</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- Samādhi — States of Absorption -->
+      <section class="space-y-6">
+        <h2 class="font-cinzel text-2xl md:text-3xl text-amber-300 text-center tracking-wide">Samādhi — The Landscape of Absorption</h2>
+        <p class="text-center text-amber-100/70 text-sm max-w-2xl mx-auto">The culmination of all yogic paths — mapped with extraordinary precision in the classical texts.</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-amber-100/80 leading-relaxed">
+          <div class="space-y-3">
+            <h3 class="font-cinzel text-base text-amber-300">Samprajñāta Samādhi</h3>
+            <p>The first tier of samādhi, in which the object of meditation is still present but experienced with extraordinary clarity and directness. It has four grades: <em>vitarka</em> (with gross object + reasoning), <em>vicāra</em> (with subtle object + reflection), <em>ānanda</em> (blissful, with sattva predominating), and <em>asmitā</em> (a sense of pure "I-am-ness" without object). These correspond to an increasingly refined dissolution of the distinction between subject and object.</p>
+            <h3 class="font-cinzel text-base text-amber-300 mt-4">Asamprajñāta Samādhi</h3>
+            <p>The threshold of liberation — a state of consciousness beyond all mental modifications (<em>vṛtti</em>), beyond even the subtlest sense of "I." In this state the mind's residual impressions (<em>saṃskāras</em>) are burned without creating new ones. This is the "cloud of virtue samādhi" (<em>dharma-megha samādhi</em>) described by Patañjali, from which liberation flows naturally.</p>
+          </div>
+          <div class="space-y-3">
+            <h3 class="font-cinzel text-base text-amber-300">Savikalpa &amp; Nirvikalpa Samādhi</h3>
+            <p>In Vedāntic usage: <em>savikalpa samādhi</em> retains the subtle distinction of meditator-meditation-meditated; <em>nirvikalpa samādhi</em> ("without distinctions") is the direct experience of non-dual awareness — <em>Brahman</em> without any distinction of subject or object. Ramana Maharṣi described this as the natural state (<em>sahaja sthiti</em>) of the self-realised being, not a temporary state to be entered and exited but one's own uninterrupted reality.</p>
+            <h3 class="font-cinzel text-base text-amber-300 mt-4">Sahaja Samādhi</h3>
+            <p>The "natural" or "spontaneous" samādhi of the fully liberated being — who moves through ordinary life in a permanent state of non-dual awareness, with all activities (eating, speaking, walking) arising spontaneously from the undivided ground of pure consciousness. This is the <em>jīvanmukti</em> — liberation while living — described in the <em>Jīvanmukti Viveka</em> of Vidyāraṇya. The liberated sage appears outwardly normal but inwardly abides in unbroken silence.</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- Key Texts -->
+      <section class="space-y-6">
+        <h2 class="font-cinzel text-2xl md:text-3xl text-amber-300 text-center tracking-wide">Essential Texts of Yoga</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div class="yoga-card">
+            <h3 class="font-cinzel text-sm text-amber-300 mb-1">Yoga Sūtras of Patañjali</h3>
+            <p class="text-xs text-amber-100/70">c. 400 CE. 196 aphorisms in four chapters (<em>pādas</em>) — the canonical text of classical Rāja Yoga and the most studied yoga text in the world.</p>
+          </div>
+          <div class="yoga-card">
+            <h3 class="font-cinzel text-sm text-amber-300 mb-1">Bhagavad Gītā</h3>
+            <p class="text-xs text-amber-100/70">c. 200 BCE–200 CE. 700 verses embedded in the Mahābhārata — the supreme synthesis of Karma, Bhakti, and Jñāna Yoga, and the most beloved scripture in the Hindu world.</p>
+          </div>
+          <div class="yoga-card">
+            <h3 class="font-cinzel text-sm text-amber-300 mb-1">Haṭha Yoga Pradīpikā</h3>
+            <p class="text-xs text-amber-100/70">Svātmārāma, c. 15th century. The foundational text of Haṭha Yoga — āsana, prāṇāyāma, mudrā, and samādhi.</p>
+          </div>
+          <div class="yoga-card">
+            <h3 class="font-cinzel text-sm text-amber-300 mb-1">Gheraṇḍa Saṃhitā</h3>
+            <p class="text-xs text-amber-100/70">c. 17th century. A comprehensive manual of Haṭha Yoga describing 32 āsanas, six cleansings, 25 mudrās, and the highest states of samādhi.</p>
+          </div>
+          <div class="yoga-card">
+            <h3 class="font-cinzel text-sm text-amber-300 mb-1">Śiva Saṃhitā</h3>
+            <p class="text-xs text-amber-100/70">c. 17th century. Narrated by Śiva to his consort Pārvatī — covering the theory of the subtle body, the four levels of spiritual aspirants, and advanced Haṭha and Tantric practices.</p>
+          </div>
+          <div class="yoga-card">
+            <h3 class="font-cinzel text-sm text-amber-300 mb-1">Vijñāna Bhairava Tantra</h3>
+            <p class="text-xs text-amber-100/70">Kashmir Śaivism. 112 dhāraṇas (concentration techniques) for realising the nature of Bhairava-consciousness in everyday life — one of the most practical texts on direct experience of the Absolute.</p>
+          </div>
+          <div class="yoga-card">
+            <h3 class="font-cinzel text-sm text-amber-300 mb-1">Ṣaṭ-cakra-nirūpaṇa</h3>
+            <p class="text-xs text-amber-100/70">Pūrṇānanda, c. 16th century. The definitive text on the six chakras and the Kuṇḍalinī — the basis for all modern chakra teaching in the West, translated by Arthur Avalon (John Woodroffe) in <em>The Serpent Power</em> (1919).</p>
+          </div>
+          <div class="yoga-card">
+            <h3 class="font-cinzel text-sm text-amber-300 mb-1">Tantrāloka</h3>
+            <p class="text-xs text-amber-100/70">Abhinavagupta, c. 1000 CE. The encyclopaedic masterwork of Kashmir Śaivism — 37 chapters covering philosophy, practice, ritual, and liberation. The most comprehensive text on Tantric yoga ever written.</p>
+          </div>
+          <div class="yoga-card">
+            <h3 class="font-cinzel text-sm text-amber-300 mb-1">Yoga Vasiṣṭha</h3>
+            <p class="text-xs text-amber-100/70">c. 10th–14th century. A vast philosophical epic in which the sage Vasiṣṭha instructs the young prince Rāma in Advaita Vedānta — one of the most profound and original works on the nature of consciousness, consciousness-only cosmology, and liberation through self-knowledge.</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- Yoga in the Modern World -->
+      <section class="space-y-6">
+        <h2 class="font-cinzel text-2xl md:text-3xl text-amber-300 text-center tracking-wide">Yoga in the Modern World</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-amber-100/80 leading-relaxed">
+          <div class="space-y-4">
+            <p>
+              The transmission of yoga to the West began in earnest with <strong class="text-amber-200">Swami Vivekananda</strong>'s address to the Parliament of the World's Religions in Chicago in 1893, in which he introduced the concept of Rāja Yoga and Vedāntic non-dualism to a Western audience. His book <em>Rāja Yoga</em> (1896) remains a foundational Western introduction. The early 20th century saw the arrival in the West of teachers such as <strong class="text-amber-200">Paramahansa Yogananda</strong> (<em>Autobiography of a Yogi</em>, 1946), whose book converted millions to the yogic path.
+            </p>
+            <p>
+              The postural yoga movement accelerated through figures such as <strong class="text-amber-200">Tirumalai Krishnamacharya</strong> (1888–1989) — the "father of modern yoga" — whose students <strong class="text-amber-200">B.K.S. Iyengar</strong>, <strong class="text-amber-200">K. Pattabhi Jois</strong>, and <strong class="text-amber-200">T.K.V. Desikachar</strong> each developed distinct lineages that would become globally influential. Iyengar's alignment-based method, Pattabhi Jois's Ashtanga Vinyasa system, and Desikachar's individualised Viniyoga each derive from Krishnamacharya's synthesis of classical sources with physical culture.
+            </p>
+          </div>
+          <div class="space-y-4">
+            <p>
+              <strong class="text-amber-200">Swami Sivananda</strong> of Rishikesh (1887–1963) and the <strong class="text-amber-200">Divine Life Society</strong> promoted an integrated approach — Karma, Bhakti, Rāja, and Jñāna Yoga as four equal paths, suited to different temperaments. His disciples Swami Vishnudevananda (founder of the Sivananda Yoga Vedanta Centres), Swami Satyananda (Bihar School of Yoga), and Swami Satchidananda all became globally significant teachers.
+            </p>
+            <p>
+              Modern scholarship — particularly the work of <strong class="text-amber-200">Mark Singleton</strong> (<em>Yoga Body</em>, 2010) and <strong class="text-amber-200">David Gordon White</strong> — has complicated the received narrative of postural yoga's antiquity, showing that modern <em>āsana</em>-centred yoga is in many respects a 20th-century innovation shaped as much by European gymnastics and physical culture as by medieval Haṭha texts. This does not diminish the authentic transformation it facilitates — but it places contemporary yoga within a living, evolving tradition rather than a frozen ancient canon.
+            </p>
+            <p>
+              The esoteric dimension of yoga — Kuṇḍalinī awakening, subtle body practices, initiation, the guru-disciple relationship, samādhi — remains largely intact within lineage-based traditions worldwide, even as the public face of yoga has become primarily postural and wellness-oriented. The full science of yoga is available to those who seek it beyond the studio floor.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer quote -->
+      <div class="text-center py-8">
+        <p class="text-amber-300/50 italic text-sm max-w-2xl mx-auto">
+          "When the mind has been trained to remain fixed on a certain internal or external location, there comes to it the power of flowing in an unbroken current, as it were, towards that point. This is called dhyāna. When one has so intensified the power of dhyāna as to be able to reject the external part of perception and remain meditating only on the internal part, the meaning, that state is called samādhi."
+          <br/><span class="text-amber-300/30 not-italic mt-2 block">— Swami Vivekananda, <em>Rāja Yoga</em></span>
+        </p>
+      </div>
+
+    </div>
+
+    <script>
+      const sf = document.getElementById('starfield');
+      if (sf) {
+        for (let i = 0; i < 160; i++) {
+          const s = document.createElement('div');
+          s.className = 'star';
+          const size = Math.random() * 2 + 0.5;
+          s.style.cssText = `width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--dur:${2+Math.random()*4}s;--delay:${Math.random()*6}s;opacity:${0.15+Math.random()*0.7};`;
+          sf.appendChild(s);
+        }
+      }
+    </script>
+  </body>
+</html>
