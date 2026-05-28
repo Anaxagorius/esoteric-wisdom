@@ -1,14 +1,14 @@
-use std::sync::Arc;
+use argon2::password_hash::SaltString;
+use argon2::{Argon2, PasswordHasher};
+use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
+use std::sync::Arc;
 use tokio::sync::RwLock;
 use tracing::info;
 use uuid::Uuid;
-use serde::{Serialize, Deserialize};
-use argon2::{Argon2, PasswordHasher};
-use argon2::password_hash::SaltString;
 
-use crate::tarot::{TarotCard, DeckType, load_deck};
 use crate::journal::JournalEntry;
+use crate::tarot::{load_deck, DeckType, TarotCard};
 
 pub fn journal_data_path() -> String {
     std::env::var("JOURNAL_DATA_FILE").unwrap_or_else(|_| "data/journal_entries.json".to_string())
@@ -58,6 +58,14 @@ async fn load_users() -> Vec<User> {
     load_from_file::<Vec<User>>(&users_data_path()).await
 }
 
+fn load_organizations() -> Vec<Organization> {
+    serde_json::from_str(include_str!("../content/organizations.json")).unwrap_or_default()
+}
+
+fn load_timeline() -> Vec<TimelineEvent> {
+    serde_json::from_str(include_str!("../content/timeline.json")).unwrap_or_default()
+}
+
 #[derive(Clone, Debug, Serialize, Deserialize)]
 pub struct AdminData {
     pub password_hash: String,
@@ -85,11 +93,34 @@ pub const ADMIN_USERNAME: &str = "AngieMaidment#1";
 // Initial credential — admin is prompted to set a new password on first login
 const ADMIN_INITIAL_PASSWORD: &str = "Loveadored69$";
 
+#[derive(Clone, Debug, Serialize, Deserialize)]
+pub struct Organization {
+    pub name: String,
+    pub category: String,
+    pub description: String,
+    pub website: Option<String>,
+    pub founded: Option<String>,
+    pub notes: Option<String>,
+}
+
+#[derive(Clone, Debug, Serialize, Deserialize)]
+pub struct TimelineEvent {
+    pub date: String,
+    pub title: String,
+    pub description: String,
+    pub category: String,
+    pub sources: Vec<String>,
+    pub link: Option<String>,
+    pub article_slug: Option<String>,
+}
+
 #[derive(Clone)]
 pub struct AppState {
     pub users: Arc<RwLock<Vec<User>>>,
     pub tarot_decks: Arc<RwLock<HashMap<String, Vec<TarotCard>>>>,
     pub journal_entries: Arc<RwLock<Vec<JournalEntry>>>,
+    pub organizations: Arc<Vec<Organization>>,
+    pub timeline: Arc<Vec<TimelineEvent>>,
     pub jwt_secret: Arc<String>,
     pub admin_password_hash: Arc<RwLock<String>>,
     pub admin_must_change_password: Arc<RwLock<bool>>,
@@ -134,6 +165,12 @@ impl AppState {
         let users = load_users().await;
         let user_count = users.len();
 
+        let organizations = load_organizations();
+        let organization_count = organizations.len();
+
+        let timeline = load_timeline();
+        let timeline_count = timeline.len();
+
         // Load persisted admin data; generate initial hash only when no saved data exists
         let admin_data = {
             let saved: AdminData = load_from_file(&admin_data_path()).await;
@@ -144,7 +181,10 @@ impl AppState {
                     .hash_password(ADMIN_INITIAL_PASSWORD.as_bytes(), &salt)
                     .map_err(|e| anyhow::anyhow!("Failed to hash admin password: {e}"))?
                     .to_string();
-                AdminData { password_hash: hash, must_change_password: true }
+                AdminData {
+                    password_hash: hash,
+                    must_change_password: true,
+                }
             } else {
                 saved
             }
@@ -159,14 +199,16 @@ impl AppState {
             users: Arc::new(RwLock::new(users)),
             tarot_decks: Arc::new(RwLock::new(decks)),
             journal_entries: Arc::new(RwLock::new(journal_entries)),
+            organizations: Arc::new(organizations),
+            timeline: Arc::new(timeline),
             jwt_secret: Arc::new(jwt_secret),
             admin_password_hash: Arc::new(RwLock::new(admin_data.password_hash)),
             admin_must_change_password: Arc::new(RwLock::new(admin_data.must_change_password)),
         };
 
         info!(
-            "AppState initialized with {} tarot decks, {} journal entries, {} users",
-            deck_count, journal_count, user_count
+            "AppState initialized with {} tarot decks, {} journal entries, {} users, {} organizations, {} timeline events",
+            deck_count, journal_count, user_count, organization_count, timeline_count
         );
         Ok(state)
     }
@@ -174,6 +216,10 @@ impl AppState {
 
 impl User {
     pub fn new(email: String, password_hash: String) -> Self {
-        User { id: Uuid::new_v4(), email, password_hash }
+        User {
+            id: Uuid::new_v4(),
+            email,
+            password_hash,
+        }
     }
 }
