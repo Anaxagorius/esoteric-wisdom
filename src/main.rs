@@ -1,41 +1,55 @@
-mod state;
-mod auth;
 mod admin;
+mod akashic_records;
+mod alchemy;
+mod altered_states;
 mod astrology;
-mod meditation;
-mod tarot;
-mod journal;
-mod numerology;
+mod auth;
+mod ce5;
+mod conspiracy;
+mod cryptozoology;
 mod crystals;
+mod druidism;
+mod eastern_esotericism;
+mod esoteric_concepts;
+mod esoteric_corpora;
+mod esoteric_figures;
+mod esoteric_practices;
+mod gateway_process;
+mod indigenous_esotericism;
+mod journal;
+mod khasarov_mirror;
+mod meditation;
+mod middle_eastern_esotericism;
+mod mythologies_cosmologies;
+mod nhi;
+mod numerology;
+mod orders_societies;
+mod paranormal;
+mod parapsychology;
+mod remote_viewing;
 mod runes;
 mod shamanism;
-mod druidism;
-mod akashic_records;
-mod wicca;
-mod alchemy;
-mod gateway_process;
-mod remote_viewing;
-mod khasarov_mirror;
-mod ce5;
-mod western_esotericism;
-mod eastern_esotericism;
-mod indigenous_esotericism;
-mod middle_eastern_esotericism;
-mod esoteric_practices;
-mod orders_societies;
-mod esoteric_corpora;
+mod state;
+mod survival;
+mod tarot;
 mod templates;
-mod mythologies_cosmologies;
-mod esoteric_figures;
-mod esoteric_concepts;
+mod uap;
+mod western_esotericism;
+mod wicca;
 mod yoga;
 
-use axum::{Router, routing::get, extract::State, response::IntoResponse, http::{StatusCode, header}};
+use auth::HtmlTemplate;
+use axum::{
+    extract::State,
+    http::{header, StatusCode},
+    response::IntoResponse,
+    routing::get,
+    Router,
+};
+use state::AppState;
+use templates::{AppLandingTemplate, LandingTemplate, OrganizationsTemplate, TimelineTemplate};
 use tower_cookies::{CookieManagerLayer, Cookies};
 use tracing_subscriber::EnvFilter;
-use state::AppState;
-use auth::HtmlTemplate;
-use templates::{LandingTemplate, AppLandingTemplate};
 
 #[tokio::main]
 async fn main() -> anyhow::Result<()> {
@@ -71,14 +85,30 @@ async fn main() -> anyhow::Result<()> {
         .nest("/western-esotericism", western_esotericism::routes())
         .nest("/eastern-esotericism", eastern_esotericism::routes())
         .nest("/indigenous-esotericism", indigenous_esotericism::routes())
-        .nest("/middle-eastern-esotericism", middle_eastern_esotericism::routes())
+        .nest(
+            "/middle-eastern-esotericism",
+            middle_eastern_esotericism::routes(),
+        )
         .nest("/esoteric-practices", esoteric_practices::routes())
         .nest("/esoteric-corpora", esoteric_corpora::routes())
         .nest("/orders-societies", orders_societies::routes())
-        .nest("/mythologies-cosmologies", mythologies_cosmologies::routes())
+        .nest(
+            "/mythologies-cosmologies",
+            mythologies_cosmologies::routes(),
+        )
         .nest("/esoteric-figures", esoteric_figures::routes())
         .nest("/esoteric-concepts", esoteric_concepts::routes())
         .nest("/yoga", yoga::routes())
+        .nest("/uap", uap::routes())
+        .nest("/parapsychology", parapsychology::routes())
+        .nest("/altered-states", altered_states::routes())
+        .nest("/survival", survival::routes())
+        .nest("/nhi", nhi::routes())
+        .nest("/cryptozoology", cryptozoology::routes())
+        .nest("/paranormal", paranormal::routes())
+        .nest("/conspiracy", conspiracy::routes())
+        .route("/timeline", get(timeline))
+        .route("/organizations", get(organizations))
         .layer(CookieManagerLayer::new())
         .with_state(state);
 
@@ -124,20 +154,32 @@ async fn landing() -> HtmlTemplate<LandingTemplate> {
     HtmlTemplate(LandingTemplate)
 }
 
-async fn app_landing(
-    State(state): State<AppState>,
-    cookies: Cookies,
-) -> impl IntoResponse {
+async fn timeline(State(state): State<AppState>) -> impl IntoResponse {
+    let events = state.timeline.as_ref().clone();
+    HtmlTemplate(TimelineTemplate { events })
+}
+
+async fn organizations(State(state): State<AppState>) -> impl IntoResponse {
+    let organizations = state.organizations.as_ref().clone();
+    HtmlTemplate(OrganizationsTemplate { organizations })
+}
+
+async fn app_landing(State(state): State<AppState>, cookies: Cookies) -> impl IntoResponse {
     let admin_claims = admin::get_admin_claims(&state, &cookies);
     if let Some(ref claims) = admin_claims {
         if claims.must_change_password {
-            return (StatusCode::FOUND, [(header::LOCATION, "/admin/change-password")]).into_response();
+            return (
+                StatusCode::FOUND,
+                [(header::LOCATION, "/admin/change-password")],
+            )
+                .into_response();
         }
     }
     let is_admin = admin_claims.is_some();
-    let is_user = !is_admin && cookies
-        .get("esoteric_session")
-        .and_then(|c| auth::decode_token(&state, c.value()))
-        .is_some();
+    let is_user = !is_admin
+        && cookies
+            .get("esoteric_session")
+            .and_then(|c| auth::decode_token(&state, c.value()))
+            .is_some();
     HtmlTemplate(AppLandingTemplate { is_admin, is_user }).into_response()
 }
