@@ -1,0 +1,689 @@
+<style>
+  #ew-sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 260px;
+    z-index: 45;
+    background: rgba(3, 2, 20, 0.94);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-right: 1px solid rgba(139, 92, 246, 0.22);
+    transform: translateX(0);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 4px 0 24px rgba(0, 0, 0, 0.5);
+  }
+  #ew-sidebar.ew-sidebar-collapsed {
+    transform: translateX(-260px);
+  }
+  #ew-sidebar-toggle {
+    position: absolute;
+    right: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 68px;
+    background: rgba(3, 2, 20, 0.9);
+    border: 1px solid rgba(139, 92, 246, 0.28);
+    border-left: none;
+    border-radius: 0 10px 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #a78bfa;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: color 0.2s, background 0.2s;
+    box-shadow: 3px 0 12px rgba(0, 0, 0, 0.4);
+  }
+  #ew-sidebar-toggle:hover {
+    color: #fbbf24;
+    background: rgba(76, 29, 149, 0.75);
+  }
+  #ew-sidebar-chevron {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    flex-shrink: 0;
+  }
+  #ew-sidebar.ew-sidebar-collapsed #ew-sidebar-chevron {
+    transform: rotate(180deg);
+  }
+  #ew-sidebar-inner {
+    overflow-y: auto;
+    flex: 1;
+    padding-top: 56px; /* space for top nav bar */
+    padding-bottom: 1.5rem;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(139, 92, 246, 0.35) transparent;
+  }
+  #ew-sidebar-inner::-webkit-scrollbar {
+    width: 4px;
+  }
+  #ew-sidebar-inner::-webkit-scrollbar-thumb {
+    background: rgba(139, 92, 246, 0.35);
+    border-radius: 2px;
+  }
+  #ew-sidebar-inner::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .ew-sb-section > summary {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.45rem 1rem;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #7c3aed;
+    cursor: pointer;
+    user-select: none;
+    transition: color 0.15s;
+  }
+  .ew-sb-section > summary::-webkit-details-marker { display: none; }
+  .ew-sb-section > summary:hover { color: #fbbf24; }
+  .ew-sb-section > summary .ew-sb-arrow {
+    transition: transform 0.25s ease;
+    opacity: 0.6;
+    flex-shrink: 0;
+  }
+  .ew-sb-section[open] > summary .ew-sb-arrow {
+    transform: rotate(180deg);
+  }
+  .ew-sb-links {
+    padding: 0 0.5rem 0.4rem 0.5rem;
+  }
+  .ew-sb-link {
+    display: block;
+    padding: 0.3rem 0.75rem;
+    font-size: 11.5px;
+    color: #c4b5fd;
+    border-radius: 6px;
+    transition: color 0.15s, background 0.15s;
+    text-decoration: none;
+    line-height: 1.4;
+  }
+  .ew-sb-link:hover {
+    color: #fbbf24;
+    background: rgba(76, 29, 149, 0.28);
+  }
+  .ew-sb-divider {
+    height: 1px;
+    background: rgba(139, 92, 246, 0.15);
+    margin: 0.3rem 0.75rem;
+  }
+  /* Nested sub-section inside a section */
+  .ew-sb-sub > summary {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.3rem 0.75rem;
+    font-size: 10.5px;
+    font-weight: 600;
+    color: #8b5cf6;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 5px;
+    transition: color 0.15s, background 0.15s;
+  }
+  .ew-sb-sub > summary::-webkit-details-marker { display: none; }
+  .ew-sb-sub > summary:hover { color: #fbbf24; background: rgba(76, 29, 149, 0.2); }
+  .ew-sb-sub > summary .ew-sb-arrow {
+    transition: transform 0.25s ease;
+    opacity: 0.55;
+    flex-shrink: 0;
+  }
+  .ew-sb-sub[open] > summary .ew-sb-arrow {
+    transform: rotate(180deg);
+  }
+  .ew-sb-sub-links {
+    padding: 0 0.25rem 0.25rem 1.25rem;
+  }
+</style>
+
+<div id="ew-sidebar" aria-label="Site navigation sidebar">
+  <button id="ew-sidebar-toggle" onclick="ewSidebarToggle()" aria-label="Toggle sidebar navigation" title="Toggle navigation">
+    <svg id="ew-sidebar-chevron" width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
+      <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"/>
+    </svg>
+  </button>
+
+  <div id="ew-sidebar-inner">
+
+    <!-- Home -->
+    <div style="padding: 0 0.5rem 0.25rem;">
+      <a href="/home" class="ew-sb-link" style="font-weight:600; color:#e0d7ff;">🏠 Home</a>
+    </div>
+
+    <div class="ew-sb-divider"></div>
+
+    <!-- 🔮 Divination -->
+    <details class="ew-sb-section" open>
+      <summary>
+        <span>🔮 Divination</span>
+        <svg class="ew-sb-arrow" width="12" height="12" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+      </summary>
+      <div class="ew-sb-links">
+        <a href="/astrology"    class="ew-sb-link">Astrology</a>
+        <a href="/tarot/select" class="ew-sb-link">Tarot</a>
+        <a href="/numerology"   class="ew-sb-link">Numerology</a>
+        <a href="/runes"        class="ew-sb-link">Runes</a>
+      </div>
+    </details>
+
+    <!-- 🧘 Practice -->
+    <details class="ew-sb-section" open>
+      <summary>
+        <span>🧘 Practice</span>
+        <svg class="ew-sb-arrow" width="12" height="12" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+      </summary>
+      <div class="ew-sb-links">
+        <a href="/meditation"  class="ew-sb-link">Meditation</a>
+        <a href="/yoga"        class="ew-sb-link">Yoga</a>
+        <a href="/alchemy"     class="ew-sb-link">Alchemy</a>
+        <a href="/crystals"    class="ew-sb-link">Crystals</a>
+        <a href="/esoteric-practices/breathwork" class="ew-sb-link">Breathwork</a>
+      </div>
+    </details>
+
+    <!-- 🌍 Religion & Traditions -->
+    <details class="ew-sb-section">
+      <summary>
+        <span>🌍 Traditions</span>
+        <svg class="ew-sb-arrow" width="12" height="12" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+      </summary>
+      <div class="ew-sb-links">
+        <a href="/shamanism"                  class="ew-sb-link">Shamanism</a>
+        <a href="/druidism"                   class="ew-sb-link">Druidism</a>
+        <a href="/wicca"                      class="ew-sb-link">Wicca</a>
+        <a href="/hinduism"                   class="ew-sb-link">Hinduism</a>
+        <a href="/islam"                      class="ew-sb-link">Islam</a>
+        <a href="/judaism"                    class="ew-sb-link">Judaism</a>
+        <a href="/christianity"              class="ew-sb-link">Christianity</a>
+        <a href="/mormonism"                  class="ew-sb-link">Mormonism</a>
+        <a href="/japanese-religion"          class="ew-sb-link">Japanese Religion</a>
+        <a href="/indigenous-esotericism"     class="ew-sb-link">Indigenous Esotericism</a>
+        <a href="/middle-eastern-esotericism" class="ew-sb-link">Middle Eastern Mysteries</a>
+        <a href="/western-esotericism"        class="ew-sb-link">Western Esotericism</a>
+        <a href="/eastern-esotericism"        class="ew-sb-link">Eastern Esotericism</a>
+      </div>
+    </details>
+
+    <!-- 📚 Study -->
+    <details class="ew-sb-section">
+      <summary>
+        <span>📚 Study</span>
+        <svg class="ew-sb-arrow" width="12" height="12" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+      </summary>
+      <div class="ew-sb-links">
+        <a href="/esoteric-practices"      class="ew-sb-link">Esoteric Practices</a>
+        <a href="/esoteric-corpora"        class="ew-sb-link">Sacred Texts</a>
+        <a href="/esoteric-figures"        class="ew-sb-link">Esoteric Figures</a>
+        <a href="/orders-societies"        class="ew-sb-link">Orders &amp; Societies</a>
+        <a href="/mythologies-cosmologies" class="ew-sb-link">Mythologies &amp; Cosmologies</a>
+        <a href="/esoteric-concepts"       class="ew-sb-link">Esoteric Concepts</a>
+
+        <details class="ew-sb-sub" style="margin-top:0.25rem;">
+          <summary>
+            <span>📖 Esoteric Practices ↓</span>
+            <svg class="ew-sb-arrow" width="10" height="10" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+          </summary>
+          <div class="ew-sb-sub-links">
+            <a href="/esoteric-practices/initiation-rites"       class="ew-sb-link">Initiation Rites</a>
+            <a href="/esoteric-practices/theurgy"                class="ew-sb-link">Theurgy</a>
+            <a href="/esoteric-practices/hermetic-prayer"        class="ew-sb-link">Hermetic Prayer</a>
+            <a href="/esoteric-practices/invocation-evocation"   class="ew-sb-link">Invocation &amp; Evocation</a>
+            <a href="/esoteric-practices/sacred-geometry"        class="ew-sb-link">Sacred Geometry</a>
+            <a href="/esoteric-practices/mantra-vibration"       class="ew-sb-link">Mantra &amp; Vibration</a>
+            <a href="/esoteric-practices/astral-travel"          class="ew-sb-link">Astral Travel</a>
+            <a href="/esoteric-practices/dream-incubation"       class="ew-sb-link">Dream Incubation</a>
+            <a href="/esoteric-practices/vision-quests"          class="ew-sb-link">Vision Quests</a>
+            <a href="/esoteric-practices/meditation"             class="ew-sb-link">Esoteric Meditation</a>
+            <a href="/esoteric-practices/i-ching"                class="ew-sb-link">I Ching</a>
+            <a href="/esoteric-practices/geomancy"               class="ew-sb-link">Geomancy</a>
+            <a href="/esoteric-practices/scrying"                class="ew-sb-link">Scrying</a>
+            <a href="/esoteric-practices/palmistry"              class="ew-sb-link">Palmistry</a>
+            <a href="/esoteric-practices/astrology"              class="ew-sb-link">Esoteric Astrology</a>
+            <a href="/esoteric-practices/tarot"                  class="ew-sb-link">Esoteric Tarot</a>
+            <a href="/esoteric-practices/runes"                  class="ew-sb-link">Esoteric Runes</a>
+            <a href="/esoteric-practices/numerology"             class="ew-sb-link">Esoteric Numerology</a>
+          </div>
+        </details>
+
+        <details class="ew-sb-sub" style="margin-top:0.25rem;">
+          <summary>
+            <span>📜 Sacred Texts ↓</span>
+            <svg class="ew-sb-arrow" width="10" height="10" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+          </summary>
+          <div class="ew-sb-sub-links">
+            <a href="/esoteric-corpora/corpus-hermeticum" class="ew-sb-link">Corpus Hermeticum</a>
+            <a href="/esoteric-corpora/nag-hammadi"       class="ew-sb-link">Nag Hammadi</a>
+            <a href="/esoteric-corpora/zohar"             class="ew-sb-link">Zohar</a>
+            <a href="/esoteric-corpora/sefer-yetzirah"    class="ew-sb-link">Sefer Yetzirah</a>
+            <a href="/esoteric-corpora/sefer-bahir"       class="ew-sb-link">Sefer Bahir</a>
+            <a href="/esoteric-corpora/emerald-tablet"    class="ew-sb-link">Emerald Tablet</a>
+            <a href="/esoteric-corpora/upanishads"        class="ew-sb-link">Upanishads</a>
+            <a href="/esoteric-corpora/tantras"           class="ew-sb-link">Tantras</a>
+            <a href="/esoteric-corpora/tibetan-book-dead" class="ew-sb-link">Tibetan Book of the Dead</a>
+            <a href="/esoteric-corpora/book-of-the-law"  class="ew-sb-link">Book of the Law</a>
+            <a href="/esoteric-corpora/picatrix"          class="ew-sb-link">Picatrix</a>
+            <a href="/esoteric-corpora/chaldean-oracles"  class="ew-sb-link">Chaldean Oracles</a>
+            <a href="/esoteric-corpora/orphic-hymns"      class="ew-sb-link">Orphic Hymns</a>
+          </div>
+        </details>
+
+        <details class="ew-sb-sub" style="margin-top:0.25rem;">
+          <summary>
+            <span>🧙 Figures ↓</span>
+            <svg class="ew-sb-arrow" width="10" height="10" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+          </summary>
+          <div class="ew-sb-sub-links">
+            <a href="/esoteric-figures/hermes-trismegistus" class="ew-sb-link">Hermes Trismegistus</a>
+            <a href="/esoteric-figures/thoth"               class="ew-sb-link">Thoth</a>
+            <a href="/esoteric-figures/enoch-metatron"      class="ew-sb-link">Enoch &amp; Metatron</a>
+            <a href="/esoteric-figures/orpheus"             class="ew-sb-link">Orpheus</a>
+            <a href="/esoteric-figures/melchizedek"         class="ew-sb-link">Melchizedek</a>
+            <a href="/esoteric-figures/zoroaster"           class="ew-sb-link">Zoroaster</a>
+            <a href="/esoteric-figures/pythagoras"          class="ew-sb-link">Pythagoras</a>
+            <a href="/esoteric-figures/plotinus"            class="ew-sb-link">Plotinus</a>
+            <a href="/esoteric-figures/iamblichus"          class="ew-sb-link">Iamblichus</a>
+            <a href="/esoteric-figures/paracelsus"          class="ew-sb-link">Paracelsus</a>
+            <a href="/esoteric-figures/marsilio-ficino"     class="ew-sb-link">Marsilio Ficino</a>
+            <a href="/esoteric-figures/jacob-boehme"        class="ew-sb-link">Jacob Boehme</a>
+            <a href="/esoteric-figures/emanuel-swedenborg"  class="ew-sb-link">Emanuel Swedenborg</a>
+            <a href="/esoteric-figures/helena-blavatsky"    class="ew-sb-link">Helena Blavatsky</a>
+            <a href="/esoteric-figures/rudolf-steiner"      class="ew-sb-link">Rudolf Steiner</a>
+            <a href="/esoteric-figures/dion-fortune"        class="ew-sb-link">Dion Fortune</a>
+            <a href="/esoteric-figures/eliphas-levi"        class="ew-sb-link">Eliphas Lévi</a>
+            <a href="/esoteric-figures/papus"               class="ew-sb-link">Papus</a>
+          </div>
+        </details>
+
+        <details class="ew-sb-sub" style="margin-top:0.25rem;">
+          <summary>
+            <span>🏛️ Orders ↓</span>
+            <svg class="ew-sb-arrow" width="10" height="10" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+          </summary>
+          <div class="ew-sb-sub-links">
+            <a href="/orders-societies/essenes"               class="ew-sb-link">Essenes</a>
+            <a href="/orders-societies/pythagorean-brotherhood" class="ew-sb-link">Pythagorean Brotherhood</a>
+            <a href="/orders-societies/eleusinian-mysteries"  class="ew-sb-link">Eleusinian Mysteries</a>
+            <a href="/orders-societies/orphic-mysteries"      class="ew-sb-link">Orphic Mysteries</a>
+            <a href="/orders-societies/mithraic-mysteries"    class="ew-sb-link">Mithraic Mysteries</a>
+            <a href="/orders-societies/dionysian-mysteries"   class="ew-sb-link">Dionysian Mysteries</a>
+            <a href="/orders-societies/egyptian-mystery-schools" class="ew-sb-link">Egyptian Mystery Schools</a>
+            <a href="/orders-societies/knights-templar"       class="ew-sb-link">Knights Templar</a>
+            <a href="/orders-societies/rosicrucian-orders"    class="ew-sb-link">Rosicrucian Orders</a>
+            <a href="/orders-societies/freemasonry"           class="ew-sb-link">Freemasonry</a>
+            <a href="/orders-societies/martinism"             class="ew-sb-link">Martinism</a>
+            <a href="/orders-societies/illuminism"            class="ew-sb-link">Illuminism</a>
+            <a href="/orders-societies/sufi-orders"           class="ew-sb-link">Sufi Orders</a>
+            <a href="/orders-societies/modern-contemporary"   class="ew-sb-link">Modern Orders</a>
+          </div>
+        </details>
+
+        <details class="ew-sb-sub" style="margin-top:0.25rem;">
+          <summary>
+            <span>🌌 Western Esotericism ↓</span>
+            <svg class="ew-sb-arrow" width="10" height="10" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+          </summary>
+          <div class="ew-sb-sub-links">
+            <a href="/western-esotericism/hermeticism"        class="ew-sb-link">Hermeticism</a>
+            <a href="/western-esotericism/gnosticism"         class="ew-sb-link">Gnosticism</a>
+            <a href="/western-esotericism/neoplatonism"       class="ew-sb-link">Neoplatonism</a>
+            <a href="/western-esotericism/rosicrucianism"     class="ew-sb-link">Rosicrucianism</a>
+            <a href="/western-esotericism/christian-mysticism" class="ew-sb-link">Christian Mysticism</a>
+            <a href="/western-esotericism/theosophy"          class="ew-sb-link">Theosophy</a>
+            <a href="/western-esotericism/anthroposophy"      class="ew-sb-link">Anthroposophy</a>
+            <a href="/western-esotericism/kabbalah"           class="ew-sb-link">Kabbalah</a>
+            <a href="/western-esotericism/christian-kabbalah" class="ew-sb-link">Christian Kabbalah</a>
+            <a href="/western-esotericism/occultism"          class="ew-sb-link">Occultism</a>
+          </div>
+        </details>
+      </div>
+    </details>
+
+    <!-- 🌀 Beyond the Veil -->
+    <details class="ew-sb-section" open>
+      <summary>
+        <span>🌀 Beyond the Veil</span>
+        <svg class="ew-sb-arrow" width="12" height="12" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+      </summary>
+      <div class="ew-sb-links">
+        <a href="/akashic-records"  class="ew-sb-link">Akashic Records</a>
+        <a href="/gateway-process"  class="ew-sb-link">Gateway Process</a>
+        <a href="/remote-viewing"   class="ew-sb-link">Remote Viewing</a>
+        <a href="/khasarov-mirror"  class="ew-sb-link">Khasarov Mirror</a>
+        <a href="/ce5"              class="ew-sb-link">CE-5</a>
+      </div>
+    </details>
+
+    <!-- 🛸 UAP -->
+    <details class="ew-sb-section">
+      <summary>
+        <span>🛸 UAP</span>
+        <svg class="ew-sb-arrow" width="12" height="12" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+      </summary>
+      <div class="ew-sb-links">
+        <a href="/uap"                          class="ew-sb-link">UAP Hub</a>
+        <a href="/uap/nimitz"                   class="ew-sb-link">Nimitz Encounter</a>
+        <a href="/uap/roswell"                  class="ew-sb-link">Roswell</a>
+        <a href="/uap/phoenix-lights"           class="ew-sb-link">Phoenix Lights</a>
+        <a href="/uap/rendlesham"               class="ew-sb-link">Rendlesham Forest</a>
+        <a href="/uap/belgian-wave"             class="ew-sb-link">Belgian Wave</a>
+        <a href="/uap/military-encounters"      class="ew-sb-link">Military Encounters</a>
+        <a href="/uap/ce-archive"               class="ew-sb-link">CE Archive</a>
+        <a href="/uap/soviet-chinese-military"  class="ew-sb-link">Soviet &amp; Chinese Cases</a>
+      </div>
+    </details>
+
+    <!-- 👽 NHI -->
+    <details class="ew-sb-section">
+      <summary>
+        <span>👽 NHI</span>
+        <svg class="ew-sb-arrow" width="12" height="12" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+      </summary>
+      <div class="ew-sb-links">
+        <a href="/nhi"                    class="ew-sb-link">NHI Hub</a>
+        <a href="/nhi/extraterrestrial"   class="ew-sb-link">Extraterrestrial</a>
+        <a href="/nhi/ultra-terrestrial"  class="ew-sb-link">Ultra-Terrestrial</a>
+        <a href="/nhi/interdimensional"   class="ew-sb-link">Interdimensional</a>
+        <a href="/nhi/plasma"             class="ew-sb-link">Plasma Entities</a>
+        <a href="/nhi/orbs"               class="ew-sb-link">Orbs</a>
+        <a href="/nhi/artificial"         class="ew-sb-link">Artificial NHI</a>
+        <a href="/nhi/ancient"            class="ew-sb-link">Ancient NHI</a>
+        <a href="/nhi/consciousness"      class="ew-sb-link">Consciousness-Based</a>
+        <a href="/nhi/trickster"          class="ew-sb-link">Trickster Beings</a>
+        <a href="/nhi/other"              class="ew-sb-link">Other</a>
+        <a href="/nhi/documentation"      class="ew-sb-link">Documentation</a>
+
+        <details class="ew-sb-sub" style="margin-top:0.25rem;">
+          <summary>
+            <span>🧬 Hybrids ↓</span>
+            <svg class="ew-sb-arrow" width="10" height="10" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+          </summary>
+          <div class="ew-sb-sub-links">
+            <a href="/nhi/hybrid"                      class="ew-sb-link">Hybrids Overview</a>
+            <a href="/nhi/hybrid/human-grey"           class="ew-sb-link">Human-Grey</a>
+            <a href="/nhi/hybrid/grey-reptilian"       class="ew-sb-link">Grey-Reptilian</a>
+            <a href="/nhi/hybrid/adamic-evadamic"      class="ew-sb-link">Adamic/Evadamic</a>
+            <a href="/nhi/hybrid/els-el"               class="ew-sb-link">Els/El</a>
+            <a href="/nhi/hybrid/zeta-humans"          class="ew-sb-link">Zeta-Humans</a>
+            <a href="/nhi/hybrid/hu-brids"             class="ew-sb-link">Hu-Brids</a>
+            <a href="/nhi/hybrid/sassani"              class="ew-sb-link">Sassani</a>
+          </div>
+        </details>
+
+        <details class="ew-sb-sub" style="margin-top:0.25rem;">
+          <summary>
+            <span>🌊 Aquatic ↓</span>
+            <svg class="ew-sb-arrow" width="10" height="10" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+          </summary>
+          <div class="ew-sb-sub-links">
+            <a href="/nhi/aquatic"            class="ew-sb-link">Aquatic Overview</a>
+            <a href="/nhi/aquatic/nommo"      class="ew-sb-link">Nommo</a>
+            <a href="/nhi/aquatic/amphibians" class="ew-sb-link">Amphibians</a>
+            <a href="/nhi/aquatic/cetaceans"  class="ew-sb-link">Cetaceans</a>
+            <a href="/nhi/aquatic/hydra"      class="ew-sb-link">Hydra</a>
+          </div>
+        </details>
+
+        <details class="ew-sb-sub" style="margin-top:0.25rem;">
+          <summary>
+            <span>🦗 Insectoids ↓</span>
+            <svg class="ew-sb-arrow" width="10" height="10" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+          </summary>
+          <div class="ew-sb-sub-links">
+            <a href="/nhi/insectoids"              class="ew-sb-link">Insectoids Overview</a>
+            <a href="/nhi/insectoids/mantids"      class="ew-sb-link">Mantids</a>
+            <a href="/nhi/insectoids/insectoids"   class="ew-sb-link">Insectoids</a>
+            <a href="/nhi/insectoids/mantoids"     class="ew-sb-link">Mantoids</a>
+            <a href="/nhi/insectoids/itipurians"   class="ew-sb-link">Itipurians</a>
+            <a href="/nhi/insectoids/klermers"     class="ew-sb-link">Klermers</a>
+          </div>
+        </details>
+
+        <details class="ew-sb-sub" style="margin-top:0.25rem;">
+          <summary>
+            <span>⚡ Energy Beings ↓</span>
+            <svg class="ew-sb-arrow" width="10" height="10" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+          </summary>
+          <div class="ew-sb-sub-links">
+            <a href="/nhi/energy"                    class="ew-sb-link">Energy Beings Overview</a>
+            <a href="/nhi/energy/energyzoa"          class="ew-sb-link">Energyzoa</a>
+            <a href="/nhi/energy/light-beings"       class="ew-sb-link">Light Beings</a>
+            <a href="/nhi/energy/plasma-entities"    class="ew-sb-link">Plasma Entities</a>
+            <a href="/nhi/energy/orbs"               class="ew-sb-link">Energy Orbs</a>
+            <a href="/nhi/energy/shadow-beings"      class="ew-sb-link">Shadow Beings</a>
+            <a href="/nhi/energy/astral-entities"    class="ew-sb-link">Astral Entities</a>
+          </div>
+        </details>
+
+        <details class="ew-sb-sub" style="margin-top:0.25rem;">
+          <summary>
+            <span>🌟 Races ↓</span>
+            <svg class="ew-sb-arrow" width="10" height="10" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+          </summary>
+          <div class="ew-sb-sub-links">
+            <a href="/nhi/races"                          class="ew-sb-link">Races Overview</a>
+            <a href="/nhi/races/greys"                    class="ew-sb-link">Greys</a>
+            <a href="/nhi/races/tall-whites"              class="ew-sb-link">Tall Whites</a>
+            <a href="/nhi/races/nordics"                  class="ew-sb-link">Nordics</a>
+            <a href="/nhi/races/pleiadians"               class="ew-sb-link">Pleiadians</a>
+            <a href="/nhi/races/reptilians"               class="ew-sb-link">Reptilians</a>
+            <a href="/nhi/races/mantids"                  class="ew-sb-link">Mantids</a>
+            <a href="/nhi/races/avians"                   class="ew-sb-link">Avians</a>
+            <a href="/nhi/races/maitre"                   class="ew-sb-link">Maître</a>
+            <a href="/nhi/races/sirians"                  class="ew-sb-link">Sirians</a>
+            <a href="/nhi/races/arcturians"               class="ew-sb-link">Arcturians</a>
+            <a href="/nhi/races/andromedans"              class="ew-sb-link">Andromedans</a>
+            <a href="/nhi/races/pleiadians"               class="ew-sb-link">Pleiadians</a>
+            <a href="/nhi/races/lyrans"                   class="ew-sb-link">Lyrans</a>
+            <a href="/nhi/races/vegans"                   class="ew-sb-link">Vegans</a>
+            <a href="/nhi/races/tau-cetians"              class="ew-sb-link">Tau Cetians</a>
+            <a href="/nhi/races/orion-group"              class="ew-sb-link">Orion Group</a>
+            <a href="/nhi/races/alpha-centaurians"        class="ew-sb-link">Alpha Centaurians</a>
+            <a href="/nhi/races/ebens"                    class="ew-sb-link">Ebens</a>
+            <a href="/nhi/races/ummites"                  class="ew-sb-link">Ummites</a>
+            <a href="/nhi/races/shadow-beings"            class="ew-sb-link">Shadow Beings</a>
+            <a href="/nhi/races/anunnaki"                 class="ew-sb-link">Anunnaki</a>
+            <a href="/nhi/races/egarot"                   class="ew-sb-link">Egarot</a>
+            <a href="/nhi/races/solipsi-rai"              class="ew-sb-link">Solipsi Rai</a>
+            <a href="/nhi/races/procyons"                 class="ew-sb-link">Procyons</a>
+            <a href="/nhi/races/altairians"               class="ew-sb-link">Altairians</a>
+          </div>
+        </details>
+      </div>
+    </details>
+
+    <!-- 👁️ Parapsychology -->
+    <details class="ew-sb-section">
+      <summary>
+        <span>👁️ Parapsychology</span>
+        <svg class="ew-sb-arrow" width="12" height="12" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+      </summary>
+      <div class="ew-sb-links">
+        <a href="/parapsychology"              class="ew-sb-link">Parapsychology Hub</a>
+        <a href="/parapsychology/esp"          class="ew-sb-link">ESP</a>
+        <a href="/parapsychology/ganzfeld"     class="ew-sb-link">Ganzfeld</a>
+        <a href="/parapsychology/precognition" class="ew-sb-link">Precognition</a>
+        <a href="/parapsychology/psychokinesis" class="ew-sb-link">Psychokinesis</a>
+        <a href="/parapsychology/pear-lab"     class="ew-sb-link">PEAR Lab</a>
+        <a href="/parapsychology/remote-viewing" class="ew-sb-link">Remote Viewing</a>
+        <a href="/parapsychology/mediumship"   class="ew-sb-link">Mediumship</a>
+        <a href="/parapsychology/reincarnation" class="ew-sb-link">Reincarnation</a>
+        <a href="/parapsychology/terminal-lucidity" class="ew-sb-link">Terminal Lucidity</a>
+        <a href="/parapsychology/kozyrev-mirror" class="ew-sb-link">Kozyrev Mirror</a>
+        <a href="/parapsychology/gateway-process" class="ew-sb-link">Gateway Process</a>
+        <a href="/parapsychology/dream-telepathy" class="ew-sb-link">Dream Telepathy</a>
+        <a href="/parapsychology/enhanced-senses" class="ew-sb-link">Enhanced Senses</a>
+        <a href="/parapsychology/mind-brain"   class="ew-sb-link">Mind &amp; Brain</a>
+      </div>
+    </details>
+
+    <!-- 🌀 Altered States -->
+    <details class="ew-sb-section">
+      <summary>
+        <span>🌀 Altered States</span>
+        <svg class="ew-sb-arrow" width="12" height="12" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+      </summary>
+      <div class="ew-sb-links">
+        <a href="/altered-states"                      class="ew-sb-link">Altered States Hub</a>
+        <a href="/altered-states/hypnagogic"           class="ew-sb-link">Hypnagogic States</a>
+        <a href="/altered-states/lucid-dreaming"       class="ew-sb-link">Lucid Dreaming</a>
+        <a href="/altered-states/dream-telepathy"      class="ew-sb-link">Dream Telepathy</a>
+        <a href="/altered-states/visionary"            class="ew-sb-link">Visionary States</a>
+        <a href="/altered-states/dissociation"         class="ew-sb-link">Dissociation</a>
+        <a href="/altered-states/kundalini"            class="ew-sb-link">Kundalini</a>
+        <a href="/altered-states/breathwork"           class="ew-sb-link">Breathwork</a>
+        <a href="/altered-states/trance"               class="ew-sb-link">Trance</a>
+        <a href="/altered-states/possession"           class="ew-sb-link">Possession</a>
+        <a href="/altered-states/meditation"           class="ew-sb-link">Meditation States</a>
+        <a href="/altered-states/obe"                  class="ew-sb-link">OBE</a>
+        <a href="/altered-states/altered-time"         class="ew-sb-link">Altered Time</a>
+        <a href="/altered-states/enhanced-senses"      class="ew-sb-link">Enhanced Senses</a>
+        <a href="/altered-states/gnosis"               class="ew-sb-link">Gnosis</a>
+        <a href="/altered-states/high-affect"          class="ew-sb-link">High Affect</a>
+        <a href="/altered-states/group-consciousness"  class="ew-sb-link">Group Consciousness</a>
+        <a href="/altered-states/psychosis-adjacent"   class="ew-sb-link">Psychosis-Adjacent</a>
+        <a href="/altered-states/trauma"               class="ew-sb-link">Trauma &amp; Dissociation</a>
+      </div>
+    </details>
+
+    <!-- 👻 Paranormal -->
+    <details class="ew-sb-section">
+      <summary>
+        <span>👻 Paranormal</span>
+        <svg class="ew-sb-arrow" width="12" height="12" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+      </summary>
+      <div class="ew-sb-links">
+        <a href="/paranormal"             class="ew-sb-link">Paranormal Hub</a>
+        <a href="/paranormal/ghosts"      class="ew-sb-link">Ghosts</a>
+        <a href="/paranormal/vampires"    class="ew-sb-link">Vampires</a>
+        <a href="/paranormal/werewolves"  class="ew-sb-link">Werewolves</a>
+        <a href="/paranormal/zombies"     class="ew-sb-link">Zombies</a>
+        <a href="/paranormal/demons"      class="ew-sb-link">Demons</a>
+        <a href="/paranormal/witchcraft"  class="ew-sb-link">Witchcraft</a>
+        <a href="/paranormal/haunted"     class="ew-sb-link">Haunted Places</a>
+        <a href="/paranormal/exorcism"    class="ew-sb-link">Exorcism</a>
+      </div>
+    </details>
+
+    <!-- 🐉 Cryptozoology -->
+    <details class="ew-sb-section">
+      <summary>
+        <span>🐉 Cryptozoology</span>
+        <svg class="ew-sb-arrow" width="12" height="12" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+      </summary>
+      <div class="ew-sb-links">
+        <a href="/cryptozoology"                   class="ew-sb-link">Cryptozoology Hub</a>
+        <a href="/cryptozoology/hominid"           class="ew-sb-link">Hominids</a>
+        <a href="/cryptozoology/canid"             class="ew-sb-link">Canids</a>
+        <a href="/cryptozoology/feline"            class="ew-sb-link">Felines</a>
+        <a href="/cryptozoology/reptilian"         class="ew-sb-link">Reptilians</a>
+        <a href="/cryptozoology/aquatic"           class="ew-sb-link">Aquatic</a>
+        <a href="/cryptozoology/avian"             class="ew-sb-link">Avian</a>
+        <a href="/cryptozoology/insectoid"         class="ew-sb-link">Insectoid</a>
+        <a href="/cryptozoology/hybrid"            class="ew-sb-link">Hybrid</a>
+        <a href="/cryptozoology/fossil-survivor"   class="ew-sb-link">Fossil Survivors</a>
+        <a href="/cryptozoology/regional"          class="ew-sb-link">Regional Cryptids</a>
+        <a href="/cryptozoology/aerial"            class="ew-sb-link">Aerial</a>
+        <a href="/cryptozoology/unknown"           class="ew-sb-link">Unknown</a>
+      </div>
+    </details>
+
+    <!-- 🔍 Conspiracy -->
+    <details class="ew-sb-section">
+      <summary>
+        <span>🔍 Conspiracy</span>
+        <svg class="ew-sb-arrow" width="12" height="12" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+      </summary>
+      <div class="ew-sb-links">
+        <a href="/conspiracy"              class="ew-sb-link">Conspiracy Hub</a>
+        <a href="/conspiracy/phenomenon"   class="ew-sb-link">Phenomenon</a>
+        <a href="/conspiracy/political"    class="ew-sb-link">Political</a>
+        <a href="/conspiracy/war"          class="ew-sb-link">War &amp; Military</a>
+        <a href="/conspiracy/religious"    class="ew-sb-link">Religious</a>
+        <a href="/conspiracy/cultural"     class="ew-sb-link">Cultural</a>
+        <a href="/conspiracy/technological" class="ew-sb-link">Technological</a>
+        <a href="/conspiracy/economic"     class="ew-sb-link">Economic</a>
+        <a href="/conspiracy/health"       class="ew-sb-link">Health</a>
+      </div>
+    </details>
+
+    <!-- 💫 Consciousness & Survival -->
+    <details class="ew-sb-section">
+      <summary>
+        <span>💫 Survival</span>
+        <svg class="ew-sb-arrow" width="12" height="12" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+      </summary>
+      <div class="ew-sb-links">
+        <a href="/survival"          class="ew-sb-link">Survival Hub</a>
+        <a href="/survival/nde"      class="ew-sb-link">Near-Death Experiences</a>
+        <a href="/survival/sde"      class="ew-sb-link">Shared Death Experience</a>
+        <a href="/survival/mind-brain" class="ew-sb-link">Mind &amp; Brain</a>
+      </div>
+    </details>
+
+    <div class="ew-sb-divider"></div>
+
+    <!-- 📋 Reference -->
+    <details class="ew-sb-section">
+      <summary>
+        <span>📋 Reference</span>
+        <svg class="ew-sb-arrow" width="12" height="12" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+      </summary>
+      <div class="ew-sb-links">
+        <a href="/timeline"      class="ew-sb-link">Timeline</a>
+        <a href="/organizations" class="ew-sb-link">Organizations</a>
+      </div>
+    </details>
+
+    <!-- ✨ Journal -->
+    <div style="padding: 0.25rem 0.5rem 0.5rem;">
+      <a href="/journal/reflections" class="ew-sb-link" style="color:#6ee7b7; font-weight:600;">✨ Reflections</a>
+    </div>
+
+  </div><!-- /#ew-sidebar-inner -->
+</div><!-- /#ew-sidebar -->
+
+<script>
+  (function () {
+    var STORE_KEY = 'ewSidebarCollapsed';
+
+    function applyState(collapsed) {
+      var sidebar = document.getElementById('ew-sidebar');
+      if (!sidebar) return;
+      if (collapsed) {
+        sidebar.classList.add('ew-sidebar-collapsed');
+      } else {
+        sidebar.classList.remove('ew-sidebar-collapsed');
+      }
+    }
+
+    function ewSidebarToggle() {
+      var sidebar = document.getElementById('ew-sidebar');
+      if (!sidebar) return;
+      var collapsed = sidebar.classList.toggle('ew-sidebar-collapsed');
+      try { localStorage.setItem(STORE_KEY, collapsed ? '1' : '0'); } catch (e) {}
+    }
+
+    // Restore persisted state immediately (before DOMContentLoaded to avoid flash)
+    (function restoreState() {
+      try {
+        var stored = localStorage.getItem(STORE_KEY);
+        // Default open (not collapsed) on first visit
+        applyState(stored === '1');
+      } catch (e) {
+        applyState(false);
+      }
+    })();
+
+    window.ewSidebarToggle = ewSidebarToggle;
+  })();
+</script>
