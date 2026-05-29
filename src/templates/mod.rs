@@ -545,6 +545,18 @@ pub struct ChakricSystemsTemplate;
 pub struct SephirothicHierarchiesTemplate;
 
 #[derive(Template)]
+#[template(path = "greek_pantheon.html")]
+pub struct GreekPantheonTemplate<'a> {
+    pub deities: &'a [crate::mythologies_cosmologies::GreekDeity],
+}
+
+#[derive(Template)]
+#[template(path = "greek_deity.html")]
+pub struct GreekDeityTemplate<'a> {
+    pub deity: &'a crate::mythologies_cosmologies::GreekDeity,
+}
+
+#[derive(Template)]
 #[template(path = "esoteric_figures.html")]
 pub struct EsotericFiguresTemplate;
 
