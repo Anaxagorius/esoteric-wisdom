@@ -46,7 +46,7 @@ mod yoga;
 
 use auth::HtmlTemplate;
 use axum::{
-    extract::State,
+    extract::{Path, State},
     http::{header, StatusCode},
     response::IntoResponse,
     routing::get,
@@ -70,6 +70,7 @@ async fn main() -> anyhow::Result<()> {
         .route("/home", get(app_landing))
         .route("/favicon.svg", get(favicon))
         .route("/og-image.png", get(og_image))
+        .route("/Alien/:filename", get(alien_image))
         .nest("/admin", admin::routes())
         .nest("/auth", auth::routes())
         .nest("/astrology", astrology::routes())
@@ -160,6 +161,38 @@ async fn og_image() -> impl IntoResponse {
         [(header::CONTENT_TYPE, "image/png")],
         include_bytes!("../static/og-image.png").as_ref(),
     )
+}
+
+async fn alien_image(Path(filename): Path<String>) -> impl IntoResponse {
+    let (content_type, bytes) = match filename.as_str() {
+        "arcturian_hybrid.jpg" => (
+            "image/jpeg",
+            include_bytes!("../Alien/arcturian_hybrid.jpg").as_ref(),
+        ),
+        "grey_hybrid.jpg" => ("image/jpeg", include_bytes!("../Alien/grey_hybrid.jpg").as_ref()),
+        "grey_hybrid2.jpg" => (
+            "image/jpeg",
+            include_bytes!("../Alien/grey_hybrid2.jpg").as_ref(),
+        ),
+        "insectoid_hybrid.jpg" => (
+            "image/jpeg",
+            include_bytes!("../Alien/insectoid_hybrid.jpg").as_ref(),
+        ),
+        "pleidien_hybrid.jpg" => (
+            "image/jpeg",
+            include_bytes!("../Alien/pleidien_hybrid.jpg").as_ref(),
+        ),
+        "pleidien_hybrid2.jpg" => (
+            "image/jpeg",
+            include_bytes!("../Alien/pleidien_hybrid2.jpg").as_ref(),
+        ),
+        "tallWhite_hybrid.jpg" => (
+            "image/jpeg",
+            include_bytes!("../Alien/tallWhite_hybrid.jpg").as_ref(),
+        ),
+        _ => return StatusCode::NOT_FOUND.into_response(),
+    };
+    ([(header::CONTENT_TYPE, content_type)], bytes).into_response()
 }
 
 async fn landing() -> HtmlTemplate<LandingTemplate> {
