@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chinese Religion — Esoteric Wisdom</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <meta property="og:title" content="Chinese Religion — Esoteric Wisdom" />
+  <meta property="og:description" content="The complete landscape of Chinese spiritual traditions — from folk religion and Daoism to Buddhism, Confucianism, and the rich diversity of ethnic minority faiths." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://esoteric-wisdom.onrender.com/eastern-esotericism/chinese-religion" />
+  <meta property="og:image" content="https://esoteric-wisdom.onrender.com/og-image.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <style>
+    body { font-family: 'Raleway', sans-serif; }
+    .font-cinzel { font-family: 'Cinzel Decorative', cursive; }
+    @keyframes twinkle { 0%,100%{opacity:0.2;transform:scale(1);} 50%{opacity:1;transform:scale(1.4);} }
+    @keyframes float { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-12px);} }
+    @keyframes shimmer { 0%{background-position:0% 50%;} 100%{background-position:200% 50%;} }
+    .star { position:absolute; width:2px; height:2px; background:white; border-radius:50%; animation:twinkle 3s infinite; }
+    .aurora-text {
+      background: linear-gradient(90deg, #34d399, #10b981, #6ee7b7, #059669, #34d399);
+      background-size: 300% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 6s linear infinite;
+    }
+    .floating { animation: float 4s ease-in-out infinite; }
+    .nav-link { position:relative; transition:all 0.3s; }
+    .nav-link::after { content:''; position:absolute; bottom:-2px; left:0; width:0; height:1px; background:#f59e0b; transition:width 0.3s; }
+    .nav-link:hover::after { width:100%; }
+    .cr-card {
+      background: linear-gradient(135deg, rgba(16,185,129,0.15), rgba(5,150,105,0.07));
+      border: 1px solid rgba(52,211,153,0.28);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      transition: all 0.3s;
+    }
+    .cr-card:hover { transform: translateY(-4px); box-shadow: 0 0 28px rgba(52,211,153,0.18); border-color: rgba(52,211,153,0.55); }
+    .section-block {
+      background: linear-gradient(135deg, rgba(16,185,129,0.10), rgba(0,30,15,0.40));
+      border: 1px solid rgba(52,211,153,0.15);
+      border-radius: 1.25rem;
+      padding: 2rem;
+    }
+    .subsection-block {
+      background: rgba(5,150,105,0.08);
+      border-left: 3px solid rgba(52,211,153,0.45);
+      border-radius: 0 0.75rem 0.75rem 0;
+      padding: 1rem 1.25rem;
+    }
+    .tag-pill {
+      display: inline-block;
+      background: rgba(52,211,153,0.12);
+      border: 1px solid rgba(52,211,153,0.30);
+      border-radius: 9999px;
+      padding: 0.15rem 0.75rem;
+      font-size: 0.75rem;
+      color: #6ee7b7;
+      margin: 0.2rem 0.2rem 0.2rem 0;
+    }
+  </style>
+</head>
+<body class="min-h-screen text-emerald-100 overflow-x-hidden" style="background: radial-gradient(ellipse at top, #001a0e 0%, #002d17 25%, #000e08 60%, #000000 100%);">
+
+  <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+
+  <!-- NAV -->
+  {% include "nav.html" %}
+
+  <!-- CONTENT WRAPPER -->
+  <div class="relative z-10 max-w-6xl mx-auto space-y-10 pt-6 px-4 pb-16">
+
+    <!-- BREADCRUMB -->
+    <div class="text-sm text-emerald-400/60">
+      <a href="/eastern-esotericism" class="hover:text-emerald-300 transition-colors">← Eastern Esoteric Traditions</a>
+    </div>
+
+    <!-- HERO -->
+    <section class="text-center py-16 space-y-6">
+      <div class="text-7xl floating">🏮</div>
+      <h1 class="font-cinzel text-4xl md:text-6xl font-bold aurora-text leading-tight">Chinese Religion</h1>
+      <p class="max-w-3xl mx-auto text-emerald-200/80 text-lg leading-relaxed">
+        One of humanity's oldest and most complex spiritual landscapes — a living tapestry of folk religion, philosophical Daoism, sinicised Buddhism, Confucian ethics, syncretic practice, esoteric arts, and the rich spiritual heritages of China's many ethnic peoples.
+      </p>
+    </section>
+
+    <!-- INTRODUCTION -->
+    <section class="section-block space-y-5">
+      <h2 class="font-cinzel text-2xl text-emerald-300 text-center tracking-wide">Overview</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm text-emerald-100/80 leading-relaxed">
+        <div class="space-y-4">
+          <p>
+            Chinese religion does not map neatly onto Western categories. There is no single "Chinese religion" in the way there is a single Christianity or Islam. Instead, China has historically cultivated a fluid, layered spiritual culture in which multiple traditions coexist, interpenetrate, and are simultaneously drawn upon by the same individual. A Chinese person might burn incense at a Buddhist temple in the morning, consult a Daoist practitioner in the afternoon, and honour their ancestors at a family altar in the evening — without perceiving any contradiction.
+          </p>
+          <p>
+            The classical formulation is the <strong class="text-emerald-200">Sanjiao</strong> — the "Three Teachings" of Confucianism, Daoism, and Buddhism — which have been the dominant framework of Chinese spiritual life since the Tang dynasty (618–907 CE). But beneath and alongside these organised traditions lies a vast substratum of Chinese folk religion (<em>Shenism</em>), with its cults of local gods, ancestor veneration, spirit mediumship, and calendrical festivals that forms the lived religious practice of the majority.
+          </p>
+          <p>
+            To this must be added the rich spiritual heritage of China's many ethnic minority peoples, who contribute traditions of shamanism, animism, and cosmological practice that predate the classical schools by millennia.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <p>
+            Chinese religion is also remarkable for its capacity to generate <strong class="text-emerald-200">new syncretisms</strong>. Throughout history, new religious movements have arisen that blend elements of all three teachings with folk practice, salvationist eschatology, and moral cultivation into novel syntheses — from the White Lotus tradition of the Song dynasty to the Yiguandao movement of the modern era and the qigong-based spirituality of the twentieth century.
+          </p>
+          <p>
+            The practical and esoteric arts — <em>feng shui</em>, the I Ching, Chinese astrology, qigong, and the rich traditions of spirit mediumship and divination — constitute a distinct layer of Chinese religious life that cuts across the formal boundaries of the named traditions and represents, for many practitioners, the living heart of Chinese spirituality.
+          </p>
+          <p>
+            What follows is a structured overview of the principal streams of Chinese religious life, from their ancient indigenous foundations to their modern and contemporary expressions.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 1: CHINESE FOLK RELIGION -->
+    <section class="section-block space-y-6">
+      <div class="flex items-center gap-3 mb-2">
+        <span class="text-4xl">🌿</span>
+        <h2 class="font-cinzel text-2xl text-emerald-300 tracking-wide">1. Chinese Folk Religion <span class="text-emerald-400/70 text-lg font-normal">(Shenism)</span></h2>
+      </div>
+      <p class="text-sm text-emerald-100/75 leading-relaxed max-w-4xl">
+        The foundation of Chinese spirituality — the vast, largely uncodified religious substratum that underlies all the formal traditions. Practised by hundreds of millions of people across China, Taiwan, and the Chinese diaspora, folk religion centres on the veneration of gods, ancestors, and spirits embedded in a rich cosmological framework.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div class="subsection-block space-y-2">
+          <h3 class="font-cinzel text-base text-emerald-200">Core Elements</h3>
+          <ul class="text-sm text-emerald-100/75 space-y-1 leading-relaxed list-none">
+            <li>🪔 <strong class="text-emerald-200">Ancestor worship</strong> — maintaining relationships with deceased family members through offerings, ancestral tablets, and ritual</li>
+            <li>🏙️ <strong class="text-emerald-200">Local gods</strong> — city gods (<em>chenghuang</em>), earth gods (<em>tudi gong</em>), and patron deities specific to communities, trades, and places</li>
+            <li>🌲 <strong class="text-emerald-200">Nature spirits</strong> — veneration of mountains, rivers, trees, and natural phenomena as inhabited by spiritual presences</li>
+            <li>🏠 <strong class="text-emerald-200">Household deities</strong> — the Kitchen God (<em>Zao Jun</em>), door gods (<em>menshen</em>), and other protective spirits of the domestic sphere</li>
+          </ul>
+        </div>
+        <div class="subsection-block space-y-2">
+          <h3 class="font-cinzel text-base text-emerald-200">Common Practices</h3>
+          <ul class="text-sm text-emerald-100/75 space-y-1 leading-relaxed list-none">
+            <li>🕯️ Offerings, incense burning, and votive paper (joss paper)</li>
+            <li>🎉 Seasonal festivals — Qingming, Ghost Festival, Dragon Boat Festival, Mid-Autumn</li>
+            <li>🧭 <em>Feng shui</em> — geomantic alignment of homes, graves, and buildings with environmental energies</li>
+            <li>🔮 Divination — temple oracles (<em>qian</em> sticks), I Ching, spirit boards</li>
+            <li>🗣️ Spirit mediumship — consultation with gods and ancestors through possessed intermediaries</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: DAOISM -->
+    <section class="section-block space-y-6">
+      <div class="flex items-center gap-3 mb-2">
+        <span class="text-4xl">☯️</span>
+        <h2 class="font-cinzel text-2xl text-emerald-300 tracking-wide">2. Daoism <span class="text-emerald-400/70 text-lg font-normal">(Taoism)</span></h2>
+      </div>
+      <p class="text-sm text-emerald-100/75 leading-relaxed max-w-4xl">
+        One of China's two great indigenous philosophical-religious systems. Daoism encompasses both a philosophical tradition — arguably the most influential in East Asia — and a rich organised religion with temples, clergy, liturgical traditions, and a vast scriptural canon. The unifying concept is the <em>Dao</em> (Way): the ineffable ground of all being, the spontaneous creative principle of the cosmos, and the source and goal of spiritual practice.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div class="cr-card space-y-3">
+          <div class="text-3xl">🌀</div>
+          <h3 class="font-cinzel text-base text-emerald-200">Philosophical Daoism</h3>
+          <p class="text-sm text-emerald-100/70 leading-relaxed">
+            The classical philosophical tradition rooted in the texts of Laozi and Zhuangzi. Emphasises harmony with the Dao through <em>wu wei</em> (non-interference), naturalness (<em>ziran</em>), simplicity, and spontaneity. The <em>Tao Te Ching</em> is one of the most translated texts in world literature — a compressed cosmological and ethical vision in 81 brief chapters. The <em>Zhuangzi</em> expands this vision into a playful, paradoxical philosophy that dissolves the boundaries between self and world, dream and waking, life and death.
+          </p>
+          <div>
+            <span class="tag-pill">Tao Te Ching (Laozi)</span>
+            <span class="tag-pill">Zhuangzi</span>
+            <span class="tag-pill">Wu Wei</span>
+            <span class="tag-pill">Ziran</span>
+          </div>
+        </div>
+
+        <div class="cr-card space-y-3">
+          <div class="text-3xl">🔮</div>
+          <h3 class="font-cinzel text-base text-emerald-200">Religious Daoism</h3>
+          <p class="text-sm text-emerald-100/70 leading-relaxed">
+            An organised religion with temples, a hereditary and monastic clergy, a vast scriptural canon (<em>Daozang</em>), and elaborate liturgical and ritual traditions. Emerged as an organised institution from the 2nd century CE. Two major schools survive into the present:
+          </p>
+          <ul class="text-sm text-emerald-100/70 space-y-1 leading-relaxed list-none">
+            <li>⚡ <strong class="text-emerald-200">Zhengyi (Orthodox Unity)</strong> — hereditary ritual priests; specialises in talismanic magic, exorcism, funeral and communal rites, and the mediation between human communities and the spirit world</li>
+            <li>🧘 <strong class="text-emerald-200">Quanzhen (Complete Perfection)</strong> — monastic school; emphasises internal cultivation, meditation, and the integration of the Three Teachings; founded by Wang Chongyang (1113–1170 CE)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: CHINESE BUDDHISM -->
+    <section class="section-block space-y-6">
+      <div class="flex items-center gap-3 mb-2">
+        <span class="text-4xl">🧘</span>
+        <h2 class="font-cinzel text-2xl text-emerald-300 tracking-wide">3. Chinese Buddhism</h2>
+      </div>
+      <p class="text-sm text-emerald-100/75 leading-relaxed max-w-4xl">
+        Buddhism arrived in China from India along the Silk Road during the Han dynasty (c. 1st century CE) and underwent a profound transformation over subsequent centuries, becoming one of the most significant religious traditions in East Asia. Chinese Buddhism is not a single monolithic tradition but a family of distinct schools, each with its own textual, doctrinal, and practical emphases.
+      </p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div class="cr-card space-y-2">
+          <div class="text-3xl">🧠</div>
+          <h3 class="font-cinzel text-base text-emerald-200">Chan Buddhism</h3>
+          <p class="text-sm text-emerald-100/70 leading-relaxed">
+            The meditation school, traditionally traced to the Indian monk Bodhidharma (5th–6th century CE). Chan emphasises direct experience over textual study, the use of <em>koans</em> (paradoxical questions) to break conceptual thinking, and the sudden recognition of Buddha-nature. Later transmitted to Japan as Zen, Korea as Seon, and Vietnam as Thiền — one of the most globally influential religious schools in history.
+          </p>
+        </div>
+
+        <div class="cr-card space-y-2">
+          <div class="text-3xl">🌸</div>
+          <h3 class="font-cinzel text-base text-emerald-200">Pure Land Buddhism</h3>
+          <p class="text-sm text-emerald-100/70 leading-relaxed">
+            The most widely practised school among Chinese lay Buddhists. Centres on devotion to Amitabha Buddha and the aspiration to be reborn in his Pure Land of Sukhāvatī — a realm of spiritual perfection where enlightenment can be swiftly attained. The primary practice is the recitation of Amitabha's name (<em>nianfo</em>). Accessible to all regardless of intellectual capacity or leisure for extended practice.
+          </p>
+        </div>
+
+        <div class="cr-card space-y-2">
+          <div class="text-3xl">📖</div>
+          <h3 class="font-cinzel text-base text-emerald-200">Tiantai</h3>
+          <p class="text-sm text-emerald-100/70 leading-relaxed">
+            Founded by Zhiyi (538–597 CE) on Mount Tiantai, this school constructed the most comprehensive doctrinal synthesis in Chinese Buddhist history, centred on the <em>Lotus Sutra</em> and the doctrine of "three thousand worlds in a single moment of thought." Developed sophisticated meditation systems integrating concentration (<em>samatha</em>) and insight (<em>vipaśyanā</em>) and greatly influenced later East Asian Buddhist philosophy.
+          </p>
+        </div>
+
+        <div class="cr-card space-y-2">
+          <div class="text-3xl">🌼</div>
+          <h3 class="font-cinzel text-base text-emerald-200">Huayan</h3>
+          <p class="text-sm text-emerald-100/70 leading-relaxed">
+            The Flower Garland school, based on the <em>Avatamsaka Sutra</em>. Presents a vision of total cosmic interpenetration — all phenomena mutually contain and reflect one another, like jewels in Indra's net. The universe is understood as a single unobstructed field of interdependence. Profoundly influenced East Asian philosophy and art, and has resonances with modern systems theory and holistic science.
+          </p>
+        </div>
+
+        <div class="cr-card space-y-2">
+          <div class="text-3xl">🔮</div>
+          <h3 class="font-cinzel text-base text-emerald-200">Esoteric / Tantric Buddhism</h3>
+          <p class="text-sm text-emerald-100/70 leading-relaxed">
+            Chinese Vajrayāna influences, transmitted from India and Central Asia from the 7th century CE. Incorporates rituals, mantras, mandalas, and deity visualisation. Though less dominant in China than in Tibet, it shaped the Tang dynasty court and contributed to Chinese esoteric practice. The Shingon school carries Chinese esoteric Buddhism to Japan through Kūkai.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: CONFUCIANISM -->
+    <section class="section-block space-y-6">
+      <div class="flex items-center gap-3 mb-2">
+        <span class="text-4xl">📚</span>
+        <h2 class="font-cinzel text-2xl text-emerald-300 tracking-wide">4. Confucianism</h2>
+      </div>
+      <p class="text-sm text-emerald-100/75 leading-relaxed max-w-4xl">
+        The ethical and social philosophy founded by Confucius (551–479 BCE) that became the dominant framework of Chinese governance, education, and family life for over two millennia. More than a religion in the Western sense, Confucianism is a comprehensive system for ordering society, cultivating the self, and relating properly to Heaven, family, and fellow human beings.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div class="cr-card space-y-2">
+          <div class="text-3xl">🎓</div>
+          <h3 class="font-cinzel text-base text-emerald-200">Classical Confucianism</h3>
+          <p class="text-sm text-emerald-100/70 leading-relaxed">
+            The original ethical and social philosophy of Confucius and Mencius. Core concepts: <em>ren</em> (benevolence), <em>yi</em> (righteousness), <em>li</em> (ritual propriety), <em>zhi</em> (wisdom), and <em>xin</em> (faithfulness). Family duty (<em>xiao</em>, filial piety) is the foundation of all social relations. The ruler governs by moral example; the family is the school of virtue; the cultivation of the gentleman (<em>junzi</em>) is the central ethical ideal.
+          </p>
+        </div>
+
+        <div class="cr-card space-y-2">
+          <div class="text-3xl">🧠</div>
+          <h3 class="font-cinzel text-base text-emerald-200">Neo-Confucianism</h3>
+          <p class="text-sm text-emerald-100/70 leading-relaxed">
+            The great intellectual synthesis of the Song and Ming dynasties (10th–17th centuries CE). Neo-Confucianism enriched classical ethics with a systematic metaphysics, drawing on Buddhist and Daoist categories while insisting on their distinctly Confucian expression. Key figures: Zhou Dunyi, Zhang Zai, the Cheng brothers, Zhu Xi, Wang Yangming. Developed a complete cosmology from the Supreme Ultimate (<em>Taiji</em>) to the nature of the human mind and heart.
+          </p>
+        </div>
+
+        <div class="cr-card space-y-2">
+          <div class="text-3xl">🌱</div>
+          <h3 class="font-cinzel text-base text-emerald-200">New Confucianism</h3>
+          <p class="text-sm text-emerald-100/70 leading-relaxed">
+            A modern revival movement (from the early 20th century) adapting Confucian thought to contemporary conditions — democratic governance, human rights, science, and global ethics. Key figures include Liang Shuming, Mou Zongsan, and Tu Weiming. Engages with Western philosophy while affirming the continuing relevance of Confucian moral cultivation, relational ethics, and the concept of <em>tianxia</em> (all-under-heaven) for global society.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: SYNCRETIC CHINESE RELIGION -->
+    <section class="section-block space-y-5">
+      <div class="flex items-center gap-3 mb-2">
+        <span class="text-4xl">🔀</span>
+        <h2 class="font-cinzel text-2xl text-emerald-300 tracking-wide">5. Syncretic Chinese Religion</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-emerald-100/80 leading-relaxed">
+        <div class="space-y-4">
+          <p>
+            The most accurate description of traditional Chinese religious life is not adherence to a single named tradition but the fluid, pragmatic synthesis known as the <strong class="text-emerald-200">Sanjiao</strong> — the "Three Teachings." Confucianism, Daoism, and Buddhism have coexisted and interpenetrated in China since at least the Tang dynasty, and most traditional Chinese religious practice draws simultaneously on all three.
+          </p>
+          <p>
+            The synthesis is not merely intellectual but practical: a Chinese funeral incorporates Buddhist sutras for the merit of the deceased, Daoist ritual for the navigation of the spirit world, and Confucian propriety in the mourning rites of the living. A Chinese temple may house Buddhist, Daoist, and folk deities within the same building. The same practitioner may consult a Daoist oracle, recite Buddhist <em>nianfo</em>, and observe Confucian family rites as complementary rather than competing spiritual resources.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <p>
+            The Sanjiao synthesis reflects a characteristically Chinese understanding of religious truth as <em>complementary and pluralistic</em> rather than exclusive and doctrinal. No single teaching encompasses all of reality; the Three Teachings each illuminate a different dimension — Confucianism the social, Daoism the natural, Buddhism the transcendent — and a fully cultivated person draws on all three.
+          </p>
+          <p>
+            This syncretic impulse has also generated many explicitly synthesising religious movements throughout Chinese history — from the "Three Teachings in One" (<em>Sanjiao Heyi</em>) schools of the Ming dynasty to the salvationist traditions described in section 7. In practice, the distinction between organised Daoism, organised Buddhism, and Chinese folk religion is permeable at every level — and most ordinary Chinese people have never felt bound by it.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: ESOTERIC AND PRACTICE-BASED SYSTEMS -->
+    <section class="section-block space-y-6">
+      <div class="flex items-center gap-3 mb-2">
+        <span class="text-4xl">🔮</span>
+        <h2 class="font-cinzel text-2xl text-emerald-300 tracking-wide">6. Esoteric &amp; Practice-Based Systems</h2>
+      </div>
+      <p class="text-sm text-emerald-100/75 leading-relaxed max-w-4xl">
+        Cutting across the boundaries of the formal religious traditions, a rich ecology of esoteric arts and practices forms the living connective tissue of Chinese spirituality — available to practitioners regardless of their formal religious affiliation.
+      </p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div class="cr-card space-y-2">
+          <div class="text-3xl">🌌</div>
+          <h3 class="font-cinzel text-base text-emerald-200">Feng Shui</h3>
+          <p class="text-sm text-emerald-100/70 leading-relaxed">
+            Geomancy — the art of aligning built environments, burial grounds, and human activity with the flows of <em>qi</em> (vital energy) in the landscape. Draws on Daoist cosmology, the five phases, the I Ching, and Chinese astrology. Still widely consulted in Chinese-speaking cultures worldwide for the siting of homes, businesses, and graves.
+          </p>
+        </div>
+
+        <div class="cr-card space-y-2">
+          <div class="text-3xl">🧿</div>
+          <h3 class="font-cinzel text-base text-emerald-200">Divination Systems</h3>
+          <p class="text-sm text-emerald-100/70 leading-relaxed">
+            A rich ensemble of divinatory arts: the <strong class="text-emerald-200">I Ching (Yijing)</strong> — casting hexagrams to discern the pattern of change in a situation; <strong class="text-emerald-200">Chinese astrology</strong> — the twelve-year zodiac cycle, four pillars of destiny (<em>bazi</em>), and celestial stem-branch systems; and a variety of fortune-telling traditions employing physiognomy, palmistry, and oracular verse.
+          </p>
+        </div>
+
+        <div class="cr-card space-y-2">
+          <div class="text-3xl">⚡</div>
+          <h3 class="font-cinzel text-base text-emerald-200">Qigong &amp; Energy Cultivation</h3>
+          <p class="text-sm text-emerald-100/70 leading-relaxed">
+            Systems of breath regulation, movement, and meditative awareness designed to cultivate, refine, and direct <em>qi</em> within the body. Rooted in Daoist inner alchemy and traditional Chinese medicine. Ranges from health-oriented practices (<em>yangsheng</em>) to advanced spiritual cultivation aimed at transformation of the subtle body and the realisation of the immortal <em>shen</em>.
+          </p>
+        </div>
+
+        <div class="cr-card space-y-2">
+          <div class="text-3xl">🌓</div>
+          <h3 class="font-cinzel text-base text-emerald-200">Spirit Mediumship</h3>
+          <p class="text-sm text-emerald-100/70 leading-relaxed">
+            One of the oldest continuously practised elements of Chinese religion — the direct communication with gods, ancestors, and spirits through an entranced human intermediary (<em>tang-ki</em> in Hokkien; <em>jitong</em> in Mandarin). Mediums convey divine messages, heal illness, resolve disputes, and manage relations between human communities and the spirit world. Particularly vital in Taiwanese and Southeast Asian Chinese religious life.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: SALVATIONIST & SECTARIAN RELIGIONS -->
+    <section class="section-block space-y-5">
+      <div class="flex items-center gap-3 mb-2">
+        <span class="text-4xl">🌟</span>
+        <h2 class="font-cinzel text-2xl text-emerald-300 tracking-wide">7. Chinese Salvationist &amp; Sectarian Religions</h2>
+      </div>
+      <p class="text-sm text-emerald-100/75 leading-relaxed max-w-4xl">
+        Throughout Chinese history, popular religious movements have repeatedly emerged that blend folk beliefs, Daoist cosmology, Buddhist eschatology, and morality teachings into new organised religions with strong salvationist and communal identities. These movements have often been viewed with suspicion by the imperial and modern state, but they represent a genuinely creative current in Chinese religious life.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div class="cr-card space-y-2">
+          <div class="text-3xl">☀️</div>
+          <h3 class="font-cinzel text-base text-emerald-200">Yiguandao (Unity Sect)</h3>
+          <p class="text-sm text-emerald-100/70 leading-relaxed">
+            The largest salvationist religion in Taiwan and a significant presence in Southeast Asia. Synthesises Confucian ethics, Daoist cosmology, Buddhist devotion, and Islamic and Christian elements into a universalist framework centred on the Eternal Mother (<em>Wusheng Laomu</em>) and the mission of returning all souls to their divine source before the coming cosmic catastrophe. Emphasises vegetarianism, moral cultivation, and the spreading of the Way.
+          </p>
+        </div>
+
+        <div class="cr-card space-y-2">
+          <div class="text-3xl">🌙</div>
+          <h3 class="font-cinzel text-base text-emerald-200">White Lotus Traditions</h3>
+          <p class="text-sm text-emerald-100/70 leading-relaxed">
+            A historically influential cluster of lay Buddhist and syncretic sectarian movements, active from the Song through Qing dynasties. Characterised by belief in the imminent advent of Maitreya (the future Buddha), devotion to the Eternal Mother, apocalyptic eschatology, and millenarian expectation. The White Lotus Rebellion (1796–1804) was one of the most significant popular uprisings in Chinese history. The term covers a broad spectrum from peaceful vegetarian sects to revolutionary movements.
+          </p>
+        </div>
+
+        <div class="cr-card space-y-2">
+          <div class="text-3xl">🌐</div>
+          <h3 class="font-cinzel text-base text-emerald-200">Tiandiism &amp; Heaven-Earth Societies</h3>
+          <p class="text-sm text-emerald-100/70 leading-relaxed">
+            Secret fraternal societies (<em>Tiandihui</em>) blending folk religion, ritual initiation, moral teaching, and mutual aid. Their cosmological framework — Heaven (the father), Earth (the mother), and humanity (the child) — drew on the Sanjiao synthesis. Historically associated with anti-Manchu resistance; their descendants include Triad organisations in the Chinese diaspora, though the religious dimension has largely been eclipsed by other functions.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 8: NEW RELIGIOUS MOVEMENTS -->
+    <section class="section-block space-y-5">
+      <div class="flex items-center gap-3 mb-2">
+        <span class="text-4xl">🌸</span>
+        <h2 class="font-cinzel text-2xl text-emerald-300 tracking-wide">8. New Religious Movements</h2>
+      </div>
+      <p class="text-sm text-emerald-100/75 leading-relaxed max-w-4xl">
+        The twentieth and twenty-first centuries have seen the emergence of new religious movements rooted in Chinese spiritual heritage, ranging from the qigong movements of the People's Republic to temple-based reform traditions and new syncretic groups in Taiwan and the diaspora.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5 text-sm text-emerald-100/75 leading-relaxed">
+        <div class="subsection-block space-y-2">
+          <h3 class="font-cinzel text-base text-emerald-200">Falun Gong (Falun Dafa)</h3>
+          <p>
+            Founded by Li Hongzhi in 1992 in Changchun. A spiritual practice combining qigong exercises with moral teaching based on <em>zhen</em> (truthfulness), <em>shan</em> (compassion), and <em>ren</em> (forbearance). Draws on Buddhist and Daoist cosmological frameworks. Grew rapidly during the 1990s to an estimated 70–100 million practitioners in China before being banned by the Chinese state in 1999, leading to sustained persecution and a large diaspora community.
+          </p>
+        </div>
+
+        <div class="subsection-block space-y-2">
+          <h3 class="font-cinzel text-base text-emerald-200">Temple-Based Reform Movements</h3>
+          <p>
+            In Taiwan, Hong Kong, and the Chinese diaspora, a wide range of reform and revival movements within Buddhism, Daoism, and folk religion have sought to rationalise practice, engage with social welfare, and adapt traditional teachings to modern conditions. Notable examples include Humanistic Buddhism (<em>Renjian Fojiao</em>), associated with figures such as Master Hsing Yun (Fo Guang Shan) and Master Cheng Yen (Tzu Chi), which has become a globally influential form of socially engaged Buddhism.
+          </p>
+        </div>
+
+        <div class="subsection-block space-y-2">
+          <h3 class="font-cinzel text-base text-emerald-200">Syncretic Salvationist Groups</h3>
+          <p>
+            Continuing the historical tradition of salvationist religion, numerous groups in contemporary Taiwan, Southeast Asia, and the diaspora synthesise the Three Teachings with devotional, moral, and eschatological elements. Groups such as Zhenfonjiao (True Buddha School), De Jiao (Virtue Teaching), and various new Yiguandao sub-lineages represent the ongoing creative vitality of this syncretic impulse.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 9: ETHNIC MINORITY RELIGIONS -->
+    <section class="section-block space-y-6">
+      <div class="flex items-center gap-3 mb-2">
+        <span class="text-4xl">🧺</span>
+        <h2 class="font-cinzel text-2xl text-emerald-300 tracking-wide">9. Ethnic Minority Religions</h2>
+      </div>
+      <p class="text-sm text-emerald-100/75 leading-relaxed max-w-4xl">
+        The People's Republic of China officially recognises 56 ethnic groups, and the Han Chinese majority coexists with 55 officially designated ethnic minorities whose combined population exceeds 100 million people. Many of these peoples maintain living spiritual traditions that predate the classical Chinese religions by millennia, representing some of the oldest continuously practised forms of religious life on earth.
+      </p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-5">
+
+        <div class="cr-card space-y-3">
+          <div class="text-3xl">🏔️</div>
+          <h3 class="font-cinzel text-base text-emerald-200">Tibetan Religion (Bön)</h3>
+          <p class="text-sm text-emerald-100/70 leading-relaxed">
+            Bön is Tibet's oldest spiritual tradition, predating the arrival of Buddhism in Tibet by millennia. In its classical form it is a rich shamanic and animist tradition involving cosmological narrative, ritual, and the mediation of spirits of the landscape. In its later developed form — shaped partly through contact and competition with Tibetan Buddhism — Bön became a sophisticated contemplative tradition with its own canon, monasteries, and lineages, including the Dzogchen teaching known as <em>Zhang Zhung Nyengyud</em>. Bön and Tibetan Buddhism share much common ground and today coexist as recognised traditions within Tibetan culture.
+          </p>
+          <div>
+            <span class="tag-pill">Dzogchen</span>
+            <span class="tag-pill">Shamanism</span>
+            <span class="tag-pill">Tibetan Plateau</span>
+          </div>
+        </div>
+
+        <div class="cr-card space-y-3">
+          <div class="text-3xl">🌿</div>
+          <h3 class="font-cinzel text-base text-emerald-200">Dongba Religion <span class="text-emerald-400/70 font-normal">(Naxi People)</span></h3>
+          <p class="text-sm text-emerald-100/70 leading-relaxed">
+            The indigenous religion of the Naxi people of Yunnan province, centred on the <em>dongba</em> — ritual specialists who function as priests, healers, and performers of elaborate ceremonial cycles. The Dongba tradition preserves one of the world's only still-practised pictographic scripts, used to record thousands of ritual texts. Its cosmological vision encompasses a detailed spirit world, creation mythology, and a rich tradition of ritual art. Listed by UNESCO as an Intangible Cultural Heritage of Humanity.
+          </p>
+          <div>
+            <span class="tag-pill">Pictographic Script</span>
+            <span class="tag-pill">Yunnan</span>
+            <span class="tag-pill">UNESCO Heritage</span>
+          </div>
+        </div>
+
+        <div class="cr-card space-y-3">
+          <div class="text-3xl">🌄</div>
+          <h3 class="font-cinzel text-base text-emerald-200">Miao &amp; Yao Folk Religions</h3>
+          <p class="text-sm text-emerald-100/70 leading-relaxed">
+            The Miao (Hmong) and Yao peoples of South China, Yunnan, Guizhou, and mainland Southeast Asia maintain rich traditions of animism, ancestor veneration, shamanism, and cosmological mythology. Miao shamans (<em>wu ba</em>) mediate between the living and the dead and between the human and spirit worlds. The Yao preserve elaborate ritual traditions — including the Daoist-influenced <em>Panlhu</em> origin mythology and the Three Pure Ones rites — that represent a unique synthesis of indigenous practice and classical Chinese religion.
+          </p>
+          <div>
+            <span class="tag-pill">Animism</span>
+            <span class="tag-pill">Shamanism</span>
+            <span class="tag-pill">Guizhou &amp; Yunnan</span>
+          </div>
+        </div>
+
+        <div class="cr-card space-y-3">
+          <div class="text-3xl">🐎</div>
+          <h3 class="font-cinzel text-base text-emerald-200">Mongolian Shamanism</h3>
+          <p class="text-sm text-emerald-100/70 leading-relaxed">
+            The indigenous spiritual tradition of the Mongol peoples of Inner Mongolia (and across the wider Mongolian steppe), rooted in a worldview in which every aspect of the natural world — sky, earth, mountains, rivers, animals, ancestors — is inhabited by spirits with which human beings must maintain respectful and reciprocal relations. The <em>böö</em> (shaman) is the specialist intermediary: through drumming, trance, and ritual flight, the böö communicates with the spirit world to heal the sick, ensure the welfare of herds, and manage the relationship between living and dead. Although Tibetan Buddhism has been the dominant formal religion of the Mongols since the 16th century, shamanic practice has persisted alongside it and has experienced a significant revival in both Inner Mongolia and the Republic of Mongolia since the post-Soviet era.
+          </p>
+          <div>
+            <span class="tag-pill">Tengrism</span>
+            <span class="tag-pill">Spirit Mediation</span>
+            <span class="tag-pill">Inner Mongolia</span>
+            <span class="tag-pill">Trance &amp; Drumming</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CLOSING NOTE -->
+    <section class="text-center py-8 space-y-4 text-emerald-100/60 text-sm max-w-3xl mx-auto">
+      <p>
+        The traditions surveyed here are not museum exhibits but living realities. Hundreds of millions of people today burn incense at folk religion altars, practise qigong at dawn, consult the I Ching, follow Daoist or Buddhist teachers, and maintain the ancestral rites that link them to their forebears. In the Chinese world, the sacred is never far from the everyday.
+      </p>
+      <a href="/eastern-esotericism" class="inline-block mt-4 text-emerald-400 hover:text-emerald-300 transition-colors text-xs font-semibold tracking-widest uppercase">← Return to Eastern Esoteric Traditions</a>
+    </section>
+
+  </div>
+
+  <script>
+    const sf = document.getElementById('starfield');
+    for (let i = 0; i < 120; i++) {
+      const s = document.createElement('div');
+      s.className = 'star';
+      s.style.cssText = `left:${Math.random()*100}%;top:${Math.random()*100}%;animation-delay:${Math.random()*4}s;animation-duration:${2+Math.random()*4}s;opacity:${0.1+Math.random()*0.5}`;
+      sf.appendChild(s);
+    }
+  </script>
+
+</body>
+</html>
