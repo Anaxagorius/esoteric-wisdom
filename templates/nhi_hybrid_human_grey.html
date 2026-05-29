@@ -4,16 +4,30 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>Human-Grey Hybrids — Hybrid &amp; Engineered Beings</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta property="og:title" content="Human-Grey Hybrids — Hybrid &amp; Engineered Beings" />
+    <meta property="og:description" content="Human-Grey hybrids constitute the most extensively documented category in the hybridisation research literature. Derived from the accounts of hundreds of r..." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://esoteric-wisdom.onrender.com/og-image.png" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>body { background: radial-gradient(circle at top, #0c2430 0, #020617 50%, #000000 100%); }</style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+    <style>
+      body {
+        background: radial-gradient(circle at top, #0c2430 0%, #020617 50%, #000000 100%);
+        font-family: 'Raleway', sans-serif;
+      }
+      @keyframes twinkle { 0%, 100% { opacity: 0.2; } 50% { opacity: 1; } }
+      .star { position: absolute; border-radius: 50%; background: white; animation: twinkle var(--dur,3s) ease-in-out infinite; animation-delay: var(--delay,0s); }
+      @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+      .floating { animation: float 5s ease-in-out infinite; }
+      .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+    </style>
   </head>
   <body class="min-h-screen text-white px-4 py-8">
-    <div class="max-w-3xl mx-auto space-y-6">
-      <nav class="flex gap-4 text-sm">
-        <a href="/nhi/hybrid" class="text-teal-300 hover:underline">← Hybrid &amp; Engineered Beings</a>
-        <a href="/nhi" class="text-teal-300 hover:underline">NHI</a>
-        <a href="/home" class="text-teal-300 hover:underline">Home</a>
-      </nav>
+    <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+    {% include "nav.html" %}
+    <div class="relative z-10 max-w-3xl mx-auto space-y-6 pt-6">
 
       <h1 class="text-3xl font-bold">🧬 Human-Grey Hybrids</h1>
       <p class="text-teal-100/70 leading-relaxed">Human-Grey hybrids constitute the most extensively documented category in the hybridisation research literature. Derived from the accounts of hundreds of regression subjects across multiple independent research archives, the Human-Grey hybrid narrative describes a systematic, multigenerational programme in which beings of the Grey type — most frequently the small, large-headed, almond-eyed beings classified as Zeta Reticulans or related sub-types — have been engaged in the extraction and manipulation of human reproductive material over an extended period, producing beings of blended biological heritage across an alleged generational sequence. The implied endpoint of this programme, as described by researcher David Jacobs and others, is a stable hybrid population capable of functioning in both the NHI and human social environments — beings that are physically human enough to operate in human contexts while retaining cognitive and perceptual capacities derived from the non-human parent lineage.</p>
@@ -85,5 +99,15 @@
         <p class="text-xs text-teal-100/50 italic">This page presents documented research findings, regression-derived testimony, and cross-cultural parallels. Hypnotic regression accounts are subject to well-established methodological limitations and are presented as phenomenological data rather than literal records. No claims about the reality, mechanism, or intent of described phenomena are made by this archive.</p>
       </div>
     </div>
+    <script>
+      const sf = document.getElementById('starfield');
+      for (let i = 0; i < 160; i++) {
+        const s = document.createElement('div');
+        s.className = 'star';
+        const size = Math.random() * 2 + 0.5;
+        s.style.cssText = `width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--dur:${2+Math.random()*4}s;--delay:${Math.random()*5}s;opacity:${0.2+Math.random()*0.8};`;
+        sf.appendChild(s);
+      }
+    </script>
   </body>
 </html>

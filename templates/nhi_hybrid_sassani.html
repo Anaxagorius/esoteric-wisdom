@@ -4,16 +4,30 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>Sassani — Hybrid &amp; Engineered Beings</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta property="og:title" content="Sassani — Hybrid &amp; Engineered Beings" />
+    <meta property="og:description" content="The Sassani are a hybrid civilisation of Grey-Human origin described extensively through the Bashar channelling tradition — presented as a settled, cultura..." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://esoteric-wisdom.onrender.com/og-image.png" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>body { background: radial-gradient(circle at top, #0c2430 0, #020617 50%, #000000 100%); }</style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+    <style>
+      body {
+        background: radial-gradient(circle at top, #0c2430 0%, #020617 50%, #000000 100%);
+        font-family: 'Raleway', sans-serif;
+      }
+      @keyframes twinkle { 0%, 100% { opacity: 0.2; } 50% { opacity: 1; } }
+      .star { position: absolute; border-radius: 50%; background: white; animation: twinkle var(--dur,3s) ease-in-out infinite; animation-delay: var(--delay,0s); }
+      @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+      .floating { animation: float 5s ease-in-out infinite; }
+      .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+    </style>
   </head>
   <body class="min-h-screen text-white px-4 py-8">
-    <div class="max-w-3xl mx-auto space-y-6">
-      <nav class="flex gap-4 text-sm">
-        <a href="/nhi/hybrid" class="text-teal-300 hover:underline">← Hybrid &amp; Engineered Beings</a>
-        <a href="/nhi" class="text-teal-300 hover:underline">NHI</a>
-        <a href="/home" class="text-teal-300 hover:underline">Home</a>
-      </nav>
+    <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+    {% include "nav.html" %}
+    <div class="relative z-10 max-w-3xl mx-auto space-y-6 pt-6">
 
       <h1 class="text-3xl font-bold">✨ Sassani</h1>
       <p class="text-teal-100/70 leading-relaxed">The Sassani are a hybrid civilisation of Grey-Human origin described extensively through the Bashar channelling tradition — presented as a settled, culturally rich species living approximately 300 years in the future in a parallel probability track adjacent to but distinct from the Earth human timeline. Unlike the other hybrid categories documented in this section — which describe beings in the process of being engineered, deploying within human society, or representing lineages of ancient intervention — the Sassani are presented as a completed, stable civilisation that has already traversed the developmental challenges of their hybrid origin and arrived at a flourishing cultural and civilizational reality. The name "Sassani" translates, within the context of the channelling through which it was transmitted, as something approximating "those who live in the now" — a name that reflects a core quality of their cultural and philosophical orientation.</p>
@@ -70,5 +84,15 @@
         <p class="text-xs text-teal-100/50 italic">This page presents material derived from the Bashar channelling tradition associated with Darryl Anka. Channelled material is presented as documented testimony and phenomenological data. Questions about the literal NHI origin of this material, its philosophical merits, and its relationship to other accounts of the hybridisation programme are genuinely open and are presented as such. No claims about validity or mechanism are made by this archive.</p>
       </div>
     </div>
+    <script>
+      const sf = document.getElementById('starfield');
+      for (let i = 0; i < 160; i++) {
+        const s = document.createElement('div');
+        s.className = 'star';
+        const size = Math.random() * 2 + 0.5;
+        s.style.cssText = `width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--dur:${2+Math.random()*4}s;--delay:${Math.random()*5}s;opacity:${0.2+Math.random()*0.8};`;
+        sf.appendChild(s);
+      }
+    </script>
   </body>
 </html>

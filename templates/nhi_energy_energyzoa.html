@@ -4,16 +4,30 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>Energyzoa — Energy / Non-Corporeal Entities</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta property="og:title" content="Energyzoa — Energy / Non-Corporeal Entities" />
+    <meta property="og:description" content="Energyzoa — a term coined within the anomalous phenomena research community for hypothetical energy-based life forms — represents the most speculative and ..." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://esoteric-wisdom.onrender.com/og-image.png" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>body { background: radial-gradient(circle at top, #0c2430 0, #020617 50%, #000000 100%); }</style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+    <style>
+      body {
+        background: radial-gradient(circle at top, #0c2430 0%, #020617 50%, #000000 100%);
+        font-family: 'Raleway', sans-serif;
+      }
+      @keyframes twinkle { 0%, 100% { opacity: 0.2; } 50% { opacity: 1; } }
+      .star { position: absolute; border-radius: 50%; background: white; animation: twinkle var(--dur,3s) ease-in-out infinite; animation-delay: var(--delay,0s); }
+      @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+      .floating { animation: float 5s ease-in-out infinite; }
+      .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+    </style>
   </head>
   <body class="min-h-screen text-white px-4 py-8">
-    <div class="max-w-3xl mx-auto space-y-6">
-      <nav class="flex gap-4 text-sm">
-        <a href="/nhi/energy" class="text-teal-300 hover:underline">← Energy / Non-Corporeal</a>
-        <a href="/nhi" class="text-teal-300 hover:underline">NHI</a>
-        <a href="/home" class="text-teal-300 hover:underline">Home</a>
-      </nav>
+    <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+    {% include "nav.html" %}
+    <div class="relative z-10 max-w-3xl mx-auto space-y-6 pt-6">
 
       <h1 class="text-3xl font-bold">🌱 Energyzoa</h1>
       <p class="text-teal-100/70 leading-relaxed">Energyzoa — a term coined within the anomalous phenomena research community for hypothetical energy-based life forms — represents the most speculative and theoretically demanding sub-type within the non-corporeal entity category. The central proposition is that life, intelligence, and self-organisation are substrate-independent: that under appropriate energy-density and field-configuration conditions, structures analogous to biological organisms could arise and persist in plasma, electromagnetic fields, or other energetic substrates rather than in carbon-based chemistry. Unlike the more phenomenologically rich categories of Light Beings or Shadow Beings, the Energyzoa concept is primarily theoretical and is constructed bottom-up from anomalous physical observations and from edge-case extensions of existing plasma physics and complexity science.</p>
@@ -72,5 +86,15 @@
         <p class="text-xs text-teal-100/50 italic">This page presents theoretical frameworks and documented anomalous observations in the context of the Energyzoa hypothesis. No claims about the existence of plasma life forms are made by this archive. All physical research cited is real and can be independently verified; the extrapolation to living energy organisms remains speculative.</p>
       </div>
     </div>
+    <script>
+      const sf = document.getElementById('starfield');
+      for (let i = 0; i < 160; i++) {
+        const s = document.createElement('div');
+        s.className = 'star';
+        const size = Math.random() * 2 + 0.5;
+        s.style.cssText = `width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--dur:${2+Math.random()*4}s;--delay:${Math.random()*5}s;opacity:${0.2+Math.random()*0.8};`;
+        sf.appendChild(s);
+      }
+    </script>
   </body>
 </html>
