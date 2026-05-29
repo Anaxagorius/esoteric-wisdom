@@ -5,6 +5,7 @@ mod altered_states;
 mod astrology;
 mod auth;
 mod ce5;
+mod christianity;
 mod conspiracy;
 mod cryptozoology;
 mod crystals;
@@ -85,6 +86,7 @@ async fn main() -> anyhow::Result<()> {
         .nest("/hinduism", hinduism::routes())
         .nest("/islam", islam::routes())
         .nest("/judaism", judaism::routes())
+        .nest("/christianity", christianity::routes())
         .nest("/remote-viewing", remote_viewing::routes())
         .nest("/khasarov-mirror", khasarov_mirror::routes())
         .nest("/ce5", ce5::routes())
