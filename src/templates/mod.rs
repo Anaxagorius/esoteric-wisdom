@@ -1287,3 +1287,7 @@ pub struct OrganizationsTemplate {
 #[derive(Template)]
 #[template(path = "admin_dashboard.html")]
 pub struct AdminDashboardTemplate;
+
+#[derive(Template)]
+#[template(path = "japanese_religion.html")]
+pub struct JapaneseReligionTemplate;

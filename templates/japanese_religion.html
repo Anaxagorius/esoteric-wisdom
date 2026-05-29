@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Japanese Religion — Esoteric Wisdom</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <meta property="og:title" content="Japanese Religion — Esoteric Wisdom" />
+  <meta property="og:description" content="Shinto, Japanese Buddhism, Onmyōdō, Shinbutsu-shūgō, and New Religious Movements — the full landscape of Japan's sacred traditions." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://esoteric-wisdom.onrender.com/japanese-religion" />
+  <meta property="og:image" content="https://esoteric-wisdom.onrender.com/og-image.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Raleway', sans-serif; background: radial-gradient(ellipse at top, #3b0000 0%, #1a0000 30%, #0a0000 65%, #000 100%); }
+    .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+    @keyframes twinkle { 0%,100%{opacity:0.2;transform:scale(1);} 50%{opacity:1;transform:scale(1.4);} }
+    @keyframes float { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-10px);} }
+    @keyframes shimmer { 0%{background-position:0% 50%;} 100%{background-position:200% 50%;} }
+    .star { position:absolute; width:2px; height:2px; background:white; border-radius:50%; animation:twinkle 3s infinite; }
+    .aurora-text { background: linear-gradient(90deg, #ef4444, #f87171, #fca5a5, #f87171, #ef4444); background-size:300% auto; -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; animation:shimmer 6s linear infinite; }
+    .floating { animation: float 4s ease-in-out infinite; }
+    .jr-card { background: linear-gradient(135deg, rgba(185,28,28,0.18), rgba(120,0,0,0.10)); border: 1px solid rgba(248,113,113,0.28); border-radius: 1rem; padding: 1.5rem; transition: all 0.3s; }
+    .jr-card:hover { transform: translateY(-4px); box-shadow: 0 0 24px rgba(248,113,113,0.2); border-color: rgba(248,113,113,0.55); }
+    .panel { background: linear-gradient(135deg, rgba(185,28,28,0.15), rgba(80,0,0,0.10)); border: 1px solid rgba(248,113,113,0.22); border-radius: 1rem; padding: 1.5rem; }
+  </style>
+</head>
+<body class="min-h-screen text-red-100 overflow-x-hidden">
+
+  <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+
+  {% include "nav.html" %}
+
+  <div class="relative z-10 max-w-6xl mx-auto space-y-10 pt-6 px-4 pb-14">
+
+    <!-- HERO -->
+    <section class="text-center py-14 space-y-6">
+      <div class="text-7xl floating">⛩️</div>
+      <h1 class="font-cinzel text-4xl md:text-6xl font-bold aurora-text leading-tight">Japanese Religion</h1>
+      <p class="max-w-3xl mx-auto text-red-200/80 text-lg leading-relaxed">
+        From the indigenous kami-worship of Shinto and the many schools of Japanese Buddhism to the syncretic fusion of Shinbutsu-shūgō, the esoteric divination of Onmyōdō, and vibrant new religious movements — the sacred landscape of Japan in full.
+      </p>
+    </section>
+
+    <!-- 1. SHINTO -->
+    <section class="panel space-y-5">
+      <h2 class="font-cinzel text-2xl text-red-300 flex items-center gap-3">🏯 Native Japanese Religion: Shinto</h2>
+      <p class="text-red-100/80 leading-relaxed">
+        Shinto (<em>kami no michi</em>, "Way of the Kami") is Japan's indigenous religion. It centres on <strong class="text-red-200">kami</strong> — spirits, forces, and presences inhabiting nature, ancestors, and sacred sites. Shinto is not a creed or theology but a living matrix of ritual, seasonal festivals, shrine practice, and cultural identity.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-red-100/80">
+        <div class="jr-card space-y-2">
+          <h3 class="font-semibold text-red-200">⛩️ Jinja Shinto (Shrine Shinto)</h3>
+          <p>The most common and normative form — centred on shrine (<em>jinja</em>) veneration, matsuri (festivals), and priestly lineages. Overseen by the Association of Shinto Shrines (Jinja Honchō) since 1946.</p>
+        </div>
+        <div class="jr-card space-y-2">
+          <h3 class="font-semibold text-red-200">🏛️ State Shinto (Kokka Shinto)</h3>
+          <p>The nationalised state religion of imperial Japan from the Meiji Restoration (1868) to the end of World War II (1945). Emperor veneration, nationalist myth, and shrine patronage were institutionalised by the state before Allied-era disestablishment.</p>
+        </div>
+        <div class="jr-card space-y-2">
+          <h3 class="font-semibold text-red-200">🏘️ Sect Shinto (Kyōha Shinto)</h3>
+          <p>Thirteen officially recognised sects that emerged in the 19th century with distinct founders, doctrines, or practices — including Tenrikyō (before independence), Kurozumikyō, and Konkokyō.</p>
+        </div>
+        <div class="jr-card space-y-2">
+          <h3 class="font-semibold text-red-200">🌾 Folk Shinto (Minkan Shinto)</h3>
+          <p>Local and village religious practices not attached to any organised institution — household kami-dana altars, roadside stone deities, agricultural rites, and communal festivals woven into daily rural life.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. BUDDHISM IN JAPAN -->
+    <section class="panel space-y-6">
+      <h2 class="font-cinzel text-2xl text-red-300">🧘 Buddhism in Japan</h2>
+      <p class="text-red-100/80 leading-relaxed">Buddhism arrived in Japan via Korea and China in the 6th century CE and developed into a remarkable array of distinct schools across successive historical periods, each adapting the Dharma to Japanese culture, aristocratic patronage, and popular needs.</p>
+
+      <!-- Nara Schools -->
+      <div class="space-y-3">
+        <h3 class="font-cinzel text-lg text-red-200">📜 Nara Schools (Early Buddhism, 710–794 CE)</h3>
+        <p class="text-sm text-red-100/75">Historically foundational schools patronised by the imperial court; today less active as independent communities but important for intellectual heritage.</p>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-3 text-sm text-red-100/80">
+          <div class="jr-card"><strong>Kegon</strong> — Based on the Avatamsaka Sutra; Tōdai-ji temple in Nara is its centre.</div>
+          <div class="jr-card"><strong>Ritsu</strong> — Emphasis on monastic discipline and Vinaya precepts.</div>
+          <div class="jr-card"><strong>Hossō</strong> — Yogācāra school; mind-only philosophy; Kōfuku-ji temple.</div>
+          <div class="jr-card"><strong>Sanron</strong> — Mādhyamaka emptiness philosophy brought from China.</div>
+          <div class="jr-card"><strong>Jōjitsu</strong> — Early Abhidharma analysis of dharmas; absorbed into Sanron.</div>
+          <div class="jr-card"><strong>Kusha</strong> — Abhidharma scholasticism; absorbed into Hossō.</div>
+        </div>
+      </div>
+
+      <!-- Heian Schools -->
+      <div class="space-y-3">
+        <h3 class="font-cinzel text-lg text-red-200">🏔️ Heian Period Schools (794–1185 CE)</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-red-100/80">
+          <div class="jr-card space-y-2">
+            <h4 class="font-semibold text-red-200">Tendai (Tiantai)</h4>
+            <p>Founded by Saichō (Dengyō Daishi) on Mount Hiei near Kyoto. A comprehensive school teaching the Lotus Sutra, esoteric practices, and meditation. Served as a crucible from which many later Japanese Buddhist movements arose.</p>
+          </div>
+          <div class="jr-card space-y-2">
+            <h4 class="font-semibold text-red-200">Shingon (True Word)</h4>
+            <p>Japanese Esoteric Buddhism founded by Kūkai (Kōbō Daishi) at Mount Kōya. Practices the Three Mysteries of body (mudra), speech (mantra), and mind (mandala visualisation) to attain Buddhahood in this very body (<em>sokushin jōbutsu</em>).</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pure Land -->
+      <div class="space-y-3">
+        <h3 class="font-cinzel text-lg text-red-200">🌅 Pure Land Buddhism</h3>
+        <p class="text-sm text-red-100/75">Among the most widely practised forms of Buddhism in Japan, centred on faith in Amida Buddha and rebirth in the Western Pure Land.</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-red-100/80">
+          <div class="jr-card space-y-2">
+            <h4 class="font-semibold text-red-200">Jōdo-shū (Pure Land School)</h4>
+            <p>Founded by Hōnen (1133–1212). Salvation through single-minded recitation of the nembutsu: <em>Namu Amida Butsu</em>.</p>
+          </div>
+          <div class="jr-card space-y-2">
+            <h4 class="font-semibold text-red-200">Jōdo Shinshū (True Pure Land)</h4>
+            <p>Founded by Shinran (1173–1263), a disciple of Hōnen. The largest Buddhist denomination in Japan. Emphasises absolute reliance on Amida's <em>tariki</em> (other-power) rather than self-power practice.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Zen -->
+      <div class="space-y-3">
+        <h3 class="font-cinzel text-lg text-red-200">🪷 Zen Buddhism</h3>
+        <p class="text-sm text-red-100/75">Transmission of awakening through direct experience, meditation, teacher-student dialogue, and koān practice rather than doctrinal study alone.</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-red-100/80">
+          <div class="jr-card space-y-2">
+            <h4 class="font-semibold text-red-200">Rinzai Zen</h4>
+            <p>Brought to Japan by Eisai (1141–1215). Intensive koān practice, sudden awakening (<em>satori</em>), and strong ties to samurai culture and the arts.</p>
+          </div>
+          <div class="jr-card space-y-2">
+            <h4 class="font-semibold text-red-200">Sōtō Zen</h4>
+            <p>Introduced by Dōgen (1200–1253). Emphasises <em>shikantaza</em> — "just sitting" — and the identity of practice and enlightenment. Largest Zen school in Japan.</p>
+          </div>
+          <div class="jr-card space-y-2">
+            <h4 class="font-semibold text-red-200">Ōbaku Zen</h4>
+            <p>Introduced in the 17th century by the Chinese master Yinyuan Longqi. Blends Zen meditation with nembutsu recitation and Ming-dynasty Chinese ritual aesthetics.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Nichiren -->
+      <div class="space-y-3">
+        <h3 class="font-cinzel text-lg text-red-200">📖 Nichiren Buddhism</h3>
+        <p class="text-sm text-red-100/75">Founded by the monk Nichiren (1222–1282), who taught that the Lotus Sutra is the supreme teaching of the Buddha and that its chanting — <em>Nam-myōhō-renge-kyō</em> — is the universal path to enlightenment.</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-red-100/80">
+          <div class="jr-card"><strong>Nichiren-shū</strong> — The original mainstream Nichiren denomination centred at Mount Minobu.</div>
+          <div class="jr-card"><strong>Nichiren Shōshū</strong> — A stricter branch based at Taiseki-ji, Mt Fuji; formerly the lay-organisation base for Soka Gakkai.</div>
+          <div class="jr-card"><strong>Soka Gakkai</strong> — A major modern lay movement derived from Nichiren Shōshū; now independent, globally active, and politically engaged through its party Kōmeitō.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. SYNCRETIC TRADITION -->
+    <section class="panel space-y-4">
+      <h2 class="font-cinzel text-2xl text-red-300">🌓 Syncretic Tradition: Shinbutsu-shūgō</h2>
+      <p class="text-red-100/80 leading-relaxed">
+        <strong class="text-red-200">Shinbutsu-shūgō</strong> (神仏習合, "blending of kami and Buddhas") describes the centuries-long fusion of Shinto and Buddhism that dominated Japanese religious life from the Nara period until the Meiji-era forced separation (<em>shinbutsu bunri</em>) of 1868. Within this synthesis, kami were interpreted as local manifestations of Buddhas and Bodhisattvas (<em>honji suijaku</em>), and Buddhist temples and Shinto shrines shared precincts and priests. Despite official separation, syncretic practices persist in everyday Japanese religious life today.
+      </p>
+      <div class="jr-card text-sm text-red-100/80 space-y-2">
+        <h3 class="font-semibold text-red-200">Shugendō</h3>
+        <p>A powerful manifestation of Shinbutsu-shūgō — mountain asceticism combining Shinto animism, esoteric Shingon and Tendai Buddhism, and Taoist elements. Practitioners (<em>yamabushi</em>) undergo rigorous mountain retreats on sacred peaks such as Kinpusen, Haguro, and Ōmine.</p>
+      </div>
+    </section>
+
+    <!-- 4. FOLK RELIGION -->
+    <section class="panel space-y-4">
+      <h2 class="font-cinzel text-2xl text-red-300">🌿 Folk Religion</h2>
+      <p class="text-red-100/80 leading-relaxed">
+        Japanese folk religion (<em>minkan shinkō</em>) operates beneath and alongside institutional Shinto and Buddhism, expressing itself in everyday domestic and communal ritual.
+      </p>
+      <ul class="list-disc pl-6 space-y-1 text-sm text-red-100/80">
+        <li><strong>Ancestor worship (<em>sosen sūhai</em>):</strong> Regular offerings and memorial rites at the household <em>butsudan</em> (Buddhist altar) keep the living in relationship with the spirits of the dead.</li>
+        <li><strong>Kami-dana:</strong> The household Shinto shelf holding talismans, sacred ropes (<em>shimenawa</em>), and offerings to house and tutelary kami.</li>
+        <li><strong>Yōkai and spirit beliefs:</strong> A rich taxonomy of supernatural beings — ghosts (<em>yūrei</em>), mischievous spirits (<em>yōkai</em>), and fox spirits (<em>kitsune</em>) — embedded in folklore and protective ritual.</li>
+        <li><strong>Seasonal festivals (<em>matsuri</em>):</strong> Community celebrations tied to agricultural cycles, shrine calendars, and propitiation of local deities.</li>
+        <li><strong>O-mamori and pilgrimage:</strong> Amulets from shrines and temples, and pilgrimage circuits such as the 88-temple Shikoku circuit (<em>o-henro</em>), remain central to lay practice.</li>
+      </ul>
+    </section>
+
+    <!-- 5 & 6. PHILOSOPHICAL INFLUENCES -->
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="panel space-y-3">
+        <h2 class="font-cinzel text-xl text-red-300">🌏 Confucianism</h2>
+        <p class="text-sm text-red-100/80 leading-relaxed">
+          Confucianism entered Japan via China and Korea and, though not a religion in the Western sense, profoundly shaped Japanese ethics, social hierarchy, family structure, loyalty (<em>chū</em>), filial piety (<em>kō</em>), and bureaucratic governance. Neo-Confucianism was highly influential in Edo-period intellectual life.
+        </p>
+      </div>
+      <div class="panel space-y-3">
+        <h2 class="font-cinzel text-xl text-red-300">🧠 Taoism (Daoism)</h2>
+        <p class="text-sm text-red-100/80 leading-relaxed">
+          Taoist cosmology and practices influenced Japanese religion through cosmology, astrology, calendrical reckoning, and especially the yin-yang (<em>onmyō</em>) system. Taoist elements were absorbed into the Onmyōdō practice, Shinto ritual purity concepts, and esoteric Buddhism.
+        </p>
+      </div>
+    </section>
+
+    <!-- 7. ONMYŌDŌ -->
+    <section class="panel space-y-4">
+      <h2 class="font-cinzel text-2xl text-red-300">🔮 Onmyōdō — The Way of Yin and Yang</h2>
+      <p class="text-red-100/80 leading-relaxed">
+        <strong class="text-red-200">Onmyōdō</strong> (陰陽道) is a distinctly Japanese esoteric system that synthesises Taoist cosmology, Buddhist metaphysics, and Shinto ritual into a unified practice of divination, geomancy, exorcism, and ritual protection. It flourished as an official court discipline from the Nara through Heian periods under the Onmyōryō bureau, with the Abe and Kamo clans holding hereditary expertise.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-red-100/80">
+        <div class="jr-card space-y-2">
+          <h3 class="font-semibold text-red-200">Foundations</h3>
+          <ul class="list-disc pl-4 space-y-1">
+            <li>Yin-yang (<em>onmyō</em>) cosmology</li>
+            <li>Five phases / Wu Xing (earth, water, fire, metal, wood)</li>
+            <li>Heavenly stems and earthly branches (calendar system)</li>
+          </ul>
+        </div>
+        <div class="jr-card space-y-2">
+          <h3 class="font-semibold text-red-200">Practices</h3>
+          <ul class="list-disc pl-4 space-y-1">
+            <li>Divination (<em>uranai</em>) for auspicious timing</li>
+            <li>Exorcism and spirit appeasement (<em>chinkon</em>)</li>
+            <li>Astrology and star-deity worship</li>
+            <li>Direction taboos (<em>katatagae</em>)</li>
+          </ul>
+        </div>
+        <div class="jr-card space-y-2">
+          <h3 class="font-semibold text-red-200">Key Figures</h3>
+          <ul class="list-disc pl-4 space-y-1">
+            <li><strong>Abe no Seimei</strong> (921–1005) — the most celebrated Onmyōji, celebrated in legend and popular culture</li>
+            <li>The Abe and Kamo hereditary lineages</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. NEW RELIGIOUS MOVEMENTS -->
+    <section class="panel space-y-5">
+      <h2 class="font-cinzel text-2xl text-red-300">🌟 New Religious Movements (Shinshūkyō)</h2>
+      <p class="text-red-100/80 leading-relaxed">
+        Japan produced an extraordinary wave of new religions from the 19th century onwards, often drawing on Shinto, Buddhist, Confucian, or shamanic elements while introducing new revelation, healing practices, or millenarian expectation.
+      </p>
+
+      <div class="space-y-3">
+        <h3 class="font-cinzel text-lg text-red-200">Early New Religions (19th century)</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-red-100/80">
+          <div class="jr-card space-y-2">
+            <h4 class="font-semibold text-red-200">Tenrikyō</h4>
+            <p>Founded 1838 by Nakayama Miki after a series of divine possessions. Centres on <em>Jiba</em> (the sacred site in Tenri City) and the joyous life (<em>yōkigurashi</em>) through ritual practice and charity.</p>
+          </div>
+          <div class="jr-card space-y-2">
+            <h4 class="font-semibold text-red-200">Konkokyō</h4>
+            <p>Founded 1859 by Kawate Bunjirō. A mediating religion seeking harmony between humans and <em>Tenchi Kane no Kami</em> (Parent God of Universe), emphasising prayer and spiritual mediation.</p>
+          </div>
+          <div class="jr-card space-y-2">
+            <h4 class="font-semibold text-red-200">Kurozumikyō</h4>
+            <p>Founded 1814 by Kurozumi Munetada, making it among the earliest. Worships Amaterasu as the one great deity and teaches unity with the divine through joyful faith.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="space-y-3">
+        <h3 class="font-cinzel text-lg text-red-200">Buddhist-Derived Movements</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-red-100/80">
+          <div class="jr-card space-y-2">
+            <h4 class="font-semibold text-red-200">Soka Gakkai</h4>
+            <p>Founded 1930 by Makiguchi Tsunesaburō as an educational lay movement aligned with Nichiren Shōshū. Now independent and globally active with millions of members; politically engaged through the Kōmeitō party.</p>
+          </div>
+          <div class="jr-card space-y-2">
+            <h4 class="font-semibold text-red-200">Risshō Kōsei Kai</h4>
+            <p>Founded 1938 by Niwano Nikkyō and Naganuma Myōkō. A lay Nichiren Buddhist movement emphasising the Lotus Sutra, mutual counselling (<em>hōza</em>), and interfaith engagement.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="space-y-3">
+        <h3 class="font-cinzel text-lg text-red-200">Other New Religions</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-red-100/80">
+          <div class="jr-card space-y-2">
+            <h4 class="font-semibold text-red-200">Seicho-no-Ie</h4>
+            <p>Founded 1930 by Taniguchi Masaharu. Teaches that reality is fundamentally spiritual and harmonious; draws on Shinto, Buddhist, Christian, and metaphysical healing traditions.</p>
+          </div>
+          <div class="jr-card space-y-2">
+            <h4 class="font-semibold text-red-200">Perfect Liberty Kyodan (PL Kyodan)</h4>
+            <p>Founded 1946 by Miki Tokuharu and Miki Tokuchika. Centres on the principle that "life is art" — all human activity is self-expression and a form of worship.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. CONTROVERSIAL / SMALLER NEW RELIGIONS -->
+    <section class="panel space-y-4">
+      <h2 class="font-cinzel text-2xl text-red-300">⚠️ Smaller and Controversial New Religions</h2>
+      <p class="text-red-100/80 leading-relaxed text-sm">
+        Japan's religious landscape also includes movements that attracted significant controversy, state scrutiny, or public alarm, particularly those that combined apocalyptic doctrine with unorthodox or harmful practices.
+      </p>
+      <div class="jr-card space-y-2 text-sm text-red-100/80">
+        <h3 class="font-semibold text-red-200">Aum Shinrikyō (now Aleph)</h3>
+        <p>Founded 1984 by Asahara Shōkō. Drew eclectically on Hindu tantra, Tibetan Buddhism, and Christian apocalypticism. Perpetrated the 1995 Tokyo subway sarin attack, killing 13 and injuring thousands. Classified as a dangerous organisation in Japan and internationally. Continues under the name Aleph and splinter group Hikari no Wa, both under ongoing state surveillance.</p>
+      </div>
+      <p class="text-sm text-red-100/70 italic">Numerous smaller sects, charismatic movements, and modern spiritual groups — drawing variously on New Age currents, UFO religion, and folk healing — continue to emerge within Japan's highly pluralistic religious environment.</p>
+    </section>
+
+    <!-- BACK LINK -->
+    <div class="text-center pt-4">
+      <a href="/home" class="inline-flex items-center gap-2 text-sm text-red-300/70 hover:text-red-200 transition-colors">
+        ← Back to Esoteric Wisdom
+      </a>
+    </div>
+
+  </div>
+
+  <script>
+    const sf = document.getElementById('starfield');
+    for (let i = 0; i < 120; i++) {
+      const s = document.createElement('div');
+      s.className = 'star';
+      s.style.left = Math.random() * 100 + '%';
+      s.style.top = Math.random() * 100 + '%';
+      s.style.animationDelay = Math.random() * 3 + 's';
+      s.style.animationDuration = (2 + Math.random() * 3) + 's';
+      sf.appendChild(s);
+    }
+  </script>
+
+</body>
+</html>

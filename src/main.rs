@@ -19,6 +19,7 @@ mod gateway_process;
 mod hinduism;
 mod indigenous_esotericism;
 mod islam;
+mod japanese_religion;
 mod journal;
 mod judaism;
 mod khasarov_mirror;
@@ -86,6 +87,7 @@ async fn main() -> anyhow::Result<()> {
         .nest("/gateway-process", gateway_process::routes())
         .nest("/hinduism", hinduism::routes())
         .nest("/islam", islam::routes())
+        .nest("/japanese-religion", japanese_religion::routes())
         .nest("/judaism", judaism::routes())
         .nest("/christianity", christianity::routes())
         .nest("/mormonism", mormonism::routes())
