@@ -15,8 +15,10 @@ mod esoteric_corpora;
 mod esoteric_figures;
 mod esoteric_practices;
 mod gateway_process;
+mod hinduism;
 mod indigenous_esotericism;
 mod journal;
+mod judaism;
 mod khasarov_mirror;
 mod meditation;
 mod middle_eastern_esotericism;
@@ -79,6 +81,8 @@ async fn main() -> anyhow::Result<()> {
         .nest("/wicca", wicca::routes())
         .nest("/alchemy", alchemy::routes())
         .nest("/gateway-process", gateway_process::routes())
+        .nest("/hinduism", hinduism::routes())
+        .nest("/judaism", judaism::routes())
         .nest("/remote-viewing", remote_viewing::routes())
         .nest("/khasarov-mirror", khasarov_mirror::routes())
         .nest("/ce5", ce5::routes())
