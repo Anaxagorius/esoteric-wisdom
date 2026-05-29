@@ -113,6 +113,14 @@ pub struct WiccaTemplate;
 pub struct GatewayProcessTemplate;
 
 #[derive(Template)]
+#[template(path = "hinduism.html")]
+pub struct HinduismTemplate;
+
+#[derive(Template)]
+#[template(path = "judaism.html")]
+pub struct JudaismTemplate;
+
+#[derive(Template)]
 #[template(path = "remote_viewing.html")]
 pub struct RemoteViewingTemplate;
 
