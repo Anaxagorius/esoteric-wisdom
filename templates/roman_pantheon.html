@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roman Pantheon — Esoteric Wisdom</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Raleway', sans-serif; }
+    .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+  </style>
+</head>
+<body class="min-h-screen text-indigo-100" style="background: radial-gradient(ellipse at top, #050714 0%, #080d2b 25%, #020410 60%, #000000 100%);">
+  {% include "nav.html" %}
+
+  <main class="max-w-7xl mx-auto px-4 py-10 space-y-8">
+    <a href="/mythologies-cosmologies" class="text-xs text-indigo-300/70 hover:text-indigo-200">&larr; Back to Mythologies &amp; Cosmologies</a>
+
+    <section class="text-center space-y-4">
+      <h1 class="font-cinzel text-4xl md:text-5xl text-indigo-200">Roman Pantheon</h1>
+      <p class="max-w-4xl mx-auto text-indigo-100/80">
+        A complete map of Roman divine powers — from primordial forces and ancient Italic gods through the Capitoline Triad and major Olympians to household spirits, nature deities, and chthonic powers.
+        Select any deity for a full profile including lineage, symbols, myths, cult context, themes, and Greek counterpart.
+      </p>
+    </section>
+
+    <section class="rounded-2xl border border-indigo-400/30 p-6 bg-indigo-900/20">
+      <h2 class="font-cinzel text-xl text-indigo-200 mb-3">Divine Structure</h2>
+      <pre class="text-sm text-indigo-100/80 whitespace-pre-wrap">Early forces (Terra, Caelus, Janus)
+        ↓
+Italic gods (Saturn, Faunus, Quirinus...)
+        ↓
+Greek-influenced Olympians (Jupiter, Mars, Venus...)
+        ↓
+Household spirits (Lares, Penates, Genius)
+      </pre>
+    </section>
+
+    <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      {% for deity in deities %}
+      <a href="/mythologies-cosmologies/roman-pantheon/{{ deity.slug }}" class="block rounded-xl border border-indigo-400/25 hover:border-indigo-300/60 bg-indigo-900/20 p-5 transition">
+        <p class="text-xs uppercase tracking-widest text-amber-300/90">{{ deity.category }}</p>
+        <h3 class="font-cinzel text-xl text-indigo-100 mt-1">{{ deity.name }}</h3>
+        <p class="text-indigo-200/80 text-sm mt-1">{{ deity.title }}</p>
+        <p class="text-indigo-100/70 text-sm mt-3">{{ deity.domains }}</p>
+      </a>
+      {% endfor %}
+    </section>
+  </main>
+</body>
+</html>

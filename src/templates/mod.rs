@@ -557,6 +557,18 @@ pub struct GreekDeityTemplate<'a> {
 }
 
 #[derive(Template)]
+#[template(path = "roman_pantheon.html")]
+pub struct RomanPantheonTemplate<'a> {
+    pub deities: &'a [crate::mythologies_cosmologies::RomanDeity],
+}
+
+#[derive(Template)]
+#[template(path = "roman_deity.html")]
+pub struct RomanDeityTemplate<'a> {
+    pub deity: &'a crate::mythologies_cosmologies::RomanDeity,
+}
+
+#[derive(Template)]
 #[template(path = "esoteric_figures.html")]
 pub struct EsotericFiguresTemplate;
 
