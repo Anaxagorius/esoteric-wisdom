@@ -24,6 +24,7 @@ mod judaism;
 mod khasarov_mirror;
 mod meditation;
 mod middle_eastern_esotericism;
+mod mormonism;
 mod mythologies_cosmologies;
 mod nhi;
 mod numerology;
@@ -87,6 +88,7 @@ async fn main() -> anyhow::Result<()> {
         .nest("/islam", islam::routes())
         .nest("/judaism", judaism::routes())
         .nest("/christianity", christianity::routes())
+        .nest("/mormonism", mormonism::routes())
         .nest("/remote-viewing", remote_viewing::routes())
         .nest("/khasarov-mirror", khasarov_mirror::routes())
         .nest("/ce5", ce5::routes())
