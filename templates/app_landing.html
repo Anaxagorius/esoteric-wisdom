@@ -92,13 +92,14 @@
     </div>
     {% endif %}
 
-    <section class="relative z-10 flex justify-center px-6 pt-8">
+    <section class="relative z-10 flex justify-center px-6 pt-8" data-visitor-root>
       <div class="visitor-chip rounded-full px-4 py-2 backdrop-blur-md">
         <img
-          src="https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fesoteric-wisdom.onrender.com%2Fhome&label=Cosmic%20Visitors&labelColor=%234c1d95&countColor=%23f59e0b&style=flat"
-          alt="Cosmic Visitors counter for the home page"
-          class="h-5"
+          src="https://api.visitorbadge.io/api/visitors?path=esoteric-wisdom-home&label=Cosmic%20Visitors&labelColor=%234c1d95&countColor=%23f59e0b&style=flat"
+          alt="Cosmic Visitors counter"
+          class="h-5 visitor-counter-badge"
           loading="lazy"
+          referrerpolicy="no-referrer"
         />
       </div>
     </section>
@@ -395,6 +396,17 @@
         s.style.cssText = `width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--dur:${2+Math.random()*4}s;--delay:${Math.random()*5}s;opacity:${0.2+Math.random()*0.8};`;
         sf.appendChild(s);
       }
+
+      document.querySelectorAll('.visitor-counter-badge').forEach((badge) => {
+        badge.addEventListener('error', () => {
+          const root = badge.closest('[data-visitor-root]');
+          if (root) {
+            root.remove();
+          } else {
+            badge.remove();
+          }
+        });
+      });
     </script>
   </body>
 </html>
