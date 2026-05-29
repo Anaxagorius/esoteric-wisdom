@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Norse Pantheon — Esoteric Wisdom</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Raleway', sans-serif; }
+    .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+  </style>
+</head>
+<body class="min-h-screen text-indigo-100" style="background: radial-gradient(ellipse at top, #050714 0%, #080d2b 25%, #020410 60%, #000000 100%);">
+  {% include "nav.html" %}
+
+  <main class="max-w-7xl mx-auto px-4 py-10 space-y-8">
+    <a href="/mythologies-cosmologies" class="text-xs text-indigo-300/70 hover:text-indigo-200">&larr; Back to Mythologies &amp; Cosmologies</a>
+
+    <section class="text-center space-y-4">
+      <h1 class="font-cinzel text-4xl md:text-5xl text-indigo-200">Norse Pantheon</h1>
+      <p class="max-w-4xl mx-auto text-indigo-100/80">
+        From the primordial void of Ginnungagap to the cataclysm of Ragnarök — the Norse pantheon is a fatalistic and heroic system of gods, giants, and creatures locked in an inevitable cosmic cycle of conflict, destruction, and rebirth. Select any deity or being for a full profile.
+      </p>
+    </section>
+
+    <section class="rounded-2xl border border-indigo-400/30 p-6 bg-indigo-900/20 space-y-4">
+      <h2 class="font-cinzel text-xl text-indigo-200 mb-3">Overview of the Norse Pantheon</h2>
+      <p class="text-indigo-100/80 text-sm leading-relaxed">The Norse pantheon comes from Scandinavian mythology and centres on a cosmic struggle between order and chaos, with gods who are powerful but mortal — they can and will die. The cosmos is organised around the world tree Yggdrasil, which connects the Nine Realms. Unlike many pantheons, the Norse gods know their fate and face it with courage.</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
+        <div class="rounded-xl border border-indigo-400/20 bg-indigo-900/20 p-4 space-y-2">
+          <h3 class="font-cinzel text-sm text-amber-300">&#9876; Æsir — War &amp; Power Gods</h3>
+          <p class="text-indigo-100/70 text-sm">The primary ruling gods of Asgard, associated with order, leadership, and conflict. Led by Odin.</p>
+        </div>
+        <div class="rounded-xl border border-indigo-400/20 bg-indigo-900/20 p-4 space-y-2">
+          <h3 class="font-cinzel text-sm text-amber-300">&#127807; Vanir — Nature &amp; Fertility Gods</h3>
+          <p class="text-indigo-100/70 text-sm">Associated with fertility, wealth, and nature. Originally a separate tribe from Vanaheim; merged with the Æsir after their great war ended in a truce.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="rounded-2xl border border-indigo-400/30 p-6 bg-indigo-900/20">
+      <h2 class="font-cinzel text-xl text-indigo-200 mb-3">The Nine Realms &amp; Yggdrasil</h2>
+      <pre class="text-sm text-indigo-100/80 whitespace-pre-wrap">                     Asgard (Æsir gods)
+                         |
+           Vanaheim ─── Yggdrasil ─── Jotunheim
+                         |
+             Midgard (humans) ─── Alfheim
+                         |
+             Niflheim ─── Helheim (ruled by Hel) ─── Muspelheim</pre>
+      <p class="text-indigo-100/70 text-xs mt-3">All existence is connected by the world tree Yggdrasil. The Norse universe is interconnected and constantly at risk of collapse.</p>
+    </section>
+
+    <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      {% for deity in deities %}
+      <a href="/mythologies-cosmologies/norse-pantheon/{{ deity.slug }}" class="block rounded-xl border border-indigo-400/25 hover:border-indigo-300/60 bg-indigo-900/20 p-5 transition">
+        <p class="text-xs uppercase tracking-widest text-amber-300/90">{{ deity.category }}</p>
+        <h3 class="font-cinzel text-xl text-indigo-100 mt-1">{{ deity.name }}</h3>
+        <p class="text-indigo-200/80 text-sm mt-1">{{ deity.title }}</p>
+        <p class="text-indigo-100/70 text-sm mt-3">{{ deity.domains }}</p>
+      </a>
+      {% endfor %}
+    </section>
+
+    <section class="rounded-2xl border border-indigo-400/30 p-6 bg-indigo-900/20 space-y-4">
+      <h2 class="font-cinzel text-xl text-indigo-200">&#9760; Ragnarök — The End of the Gods</h2>
+      <p class="text-indigo-100/80 text-sm leading-relaxed">The defining feature of Norse mythology is that even the gods will die. Ragnarök is not a moral punishment but an unavoidable cosmic reckoning. Loki and his children break free; giants attack Asgard; massive battles unfold. Odin is swallowed by Fenrir. Thor kills Jörmungandr but dies from its venom. Loki and Heimdall slay each other. Yet the world is destroyed only to be reborn — some gods survive, and humanity begins again.</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="rounded-xl border border-indigo-400/20 bg-indigo-900/20 p-4">
+          <h3 class="font-cinzel text-sm text-indigo-300 mb-2">Key Themes</h3>
+          <ul class="space-y-1 text-indigo-100/75 text-sm">
+            <li>&#9670; Fate is unavoidable — even gods cannot escape destiny</li>
+            <li>&#9670; Honour and courage matter most in the face of inevitable death</li>
+            <li>&#9670; Constant tension between order and chaos, gods and giants</li>
+            <li>&#9670; Cyclical destruction and renewal — the world ends but begins again</li>
+          </ul>
+        </div>
+        <div class="rounded-xl border border-indigo-400/20 bg-indigo-900/20 p-4">
+          <h3 class="font-cinzel text-sm text-indigo-300 mb-2">In One Sentence</h3>
+          <p class="text-indigo-100/80 text-sm italic leading-relaxed">"The Norse pantheon is a fatalistic and heroic system of gods and beings locked in an inevitable cosmic cycle of conflict, destruction, and rebirth."</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
