@@ -9,11 +9,11 @@ use axum::{
 use crate::auth::HtmlTemplate;
 use crate::state::AppState;
 use crate::templates::{
-    AstralPlanesTemplate, ChakricSystemsTemplate, DemiurgeMythTemplate, EmanationTheoriesTemplate,
-    EsotericMythologiesCosmologiesTemplate, GnosticAeonsTemplate, GreekDeityTemplate,
-    GreekPantheonTemplate, NorseDeityTemplate, NorsePantheonTemplate, PlatonicWorldSoulTemplate,
-    RomanDeityTemplate, RomanPantheonTemplate, SephirothicHierarchiesTemplate,
-    SophiaTraditionsTemplate, TreeOfLifeCosmologyTemplate,
+    AstralPlanesTemplate, AztecReligionTemplate, ChakricSystemsTemplate, DemiurgeMythTemplate,
+    EmanationTheoriesTemplate, EsotericMythologiesCosmologiesTemplate, GnosticAeonsTemplate,
+    GreekDeityTemplate, GreekPantheonTemplate, NorseDeityTemplate, NorsePantheonTemplate,
+    PlatonicWorldSoulTemplate, RomanDeityTemplate, RomanPantheonTemplate,
+    SephirothicHierarchiesTemplate, SophiaTraditionsTemplate, TreeOfLifeCosmologyTemplate,
 };
 
 #[derive(Clone, Copy)]
@@ -93,6 +93,7 @@ pub fn routes() -> Router<AppState> {
         .route("/greek-pantheon/:slug", get(greek_deity))
         .route("/roman-pantheon", get(roman_pantheon))
         .route("/roman-pantheon/:slug", get(roman_deity))
+        .route("/aztec-religion", get(aztec_religion))
         .route("/norse-pantheon", get(norse_pantheon))
         .route("/norse-pantheon/:slug", get(norse_deity))
 }
@@ -161,6 +162,10 @@ async fn roman_deity(Path(slug): Path<String>) -> impl IntoResponse {
         Some(deity) => (StatusCode::OK, HtmlTemplate(RomanDeityTemplate { deity })).into_response(),
         None => (StatusCode::NOT_FOUND, "Roman deity page not found").into_response(),
     }
+}
+
+async fn aztec_religion() -> impl IntoResponse {
+    HtmlTemplate(AztecReligionTemplate)
 }
 
 async fn norse_pantheon() -> impl IntoResponse {

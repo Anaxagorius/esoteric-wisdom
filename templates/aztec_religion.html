@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aztec Religion — Esoteric Wisdom</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Raleway', sans-serif; }
+    .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+    @keyframes twinkle { 0%,100% { opacity: 0.2; } 50% { opacity: 1; } }
+    .star { position: absolute; border-radius: 50%; background: white; animation: twinkle var(--dur,3s) ease-in-out infinite; animation-delay: var(--delay,0s); }
+    @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+    .floating { animation: float 5s ease-in-out infinite; }
+    @keyframes shimmer { 0% { background-position: -200% center; } 100% { background-position: 200% center; } }
+    .aurora-text {
+      background: linear-gradient(90deg, #fb923c, #f59e0b, #fbbf24, #f97316, #fb923c);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 4s linear infinite;
+    }
+    .section-card {
+      background: linear-gradient(135deg, rgba(180,83,9,0.10), rgba(120,53,15,0.06));
+      border: 1px solid rgba(251,146,60,0.20);
+      border-radius: 1rem;
+      padding: 1.75rem;
+    }
+    .deity-card {
+      background: linear-gradient(135deg, rgba(180,83,9,0.12), rgba(120,53,15,0.07));
+      border: 1px solid rgba(251,146,60,0.25);
+      border-radius: 0.875rem;
+      padding: 1.25rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+    .deity-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 0 24px 4px rgba(251,146,60,0.18);
+      border-color: rgba(251,146,60,0.45);
+    }
+    .theme-card {
+      background: linear-gradient(135deg, rgba(180,83,9,0.09), rgba(120,53,15,0.05));
+      border: 1px solid rgba(251,146,60,0.15);
+      border-radius: 0.75rem;
+      padding: 1.25rem;
+    }
+    .sun-badge {
+      display: inline-block;
+      background: rgba(251,146,60,0.15);
+      border: 1px solid rgba(251,146,60,0.30);
+      border-radius: 9999px;
+      padding: 0.25rem 0.75rem;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #fbbf24;
+    }
+  </style>
+</head>
+<body class="min-h-screen text-amber-50 overflow-x-hidden" style="background: radial-gradient(ellipse at top, #1a0800 0%, #2d1200 20%, #0f0500 60%, #000000 100%);">
+
+  <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+
+  {% include "nav.html" %}
+
+  <div class="relative z-10 max-w-6xl mx-auto space-y-10 pt-6 px-4 pb-12">
+
+    <!-- BREADCRUMB -->
+    <div>
+      <a href="/mythologies-cosmologies" class="text-xs text-orange-300/60 hover:text-orange-300 transition-colors">&larr; Back to Mythologies &amp; Cosmologies</a>
+    </div>
+
+    <!-- HERO -->
+    <section class="text-center py-14 space-y-6">
+      <div class="text-7xl floating">&#9728;&#65039;</div>
+      <h1 class="font-cinzel text-4xl md:text-6xl font-bold aurora-text leading-tight">
+        Aztec Religion
+      </h1>
+      <p class="max-w-3xl mx-auto text-orange-100/80 text-lg leading-relaxed">
+        A ritual-centred, cyclical belief system in which gods and humans are bound in mutual obligation to sustain the cosmos through sacrifice and balance &mdash; where the survival of the universe depends on human action.
+      </p>
+    </section>
+
+    <!-- OVERVIEW -->
+    <section class="section-card space-y-5">
+      <h2 class="font-cinzel text-2xl text-amber-300 tracking-wide">&#9728;&#65039; Overview</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-orange-100/80 leading-relaxed">
+        <div class="space-y-3">
+          <p>
+            Aztec religion was a complex, <strong class="text-amber-200">polytheistic system</strong> that stood at the absolute centre of Aztec society, politics, and daily life. Unlike the more philosophical or mystical orientations of traditions such as Greek Neoplatonism or Indian Vedanta, Aztec religion was fundamentally <strong class="text-amber-200">practical and urgent</strong>: the cosmos was understood to be fragile, perpetually on the verge of collapse, and dependent on continuous human action — principally sacrifice — to continue functioning.
+          </p>
+          <p>
+            At the heart of Aztec belief was the conviction that the gods had sacrificed themselves to create the current world and to set the sun in motion. This act of divine self-giving created an irreversible debt that humanity was obligated to repay through offerings of blood, life, and ritual devotion. Sacrifice was therefore not cruelty for its own sake but a <strong class="text-amber-200">cosmic necessity</strong> — the mechanism by which the universe was kept alive.
+          </p>
+          <p>
+            The Aztec people, known to themselves as the <em>Mexica</em>, rose to dominance in central Mexico in the fourteenth and fifteenth centuries, establishing the Triple Alliance that formed the Aztec Empire. Their capital, Tenochtitlan (on the site of modern Mexico City), was one of the largest cities in the world at the time of European contact. The Great Temple (Templo Mayor) at its centre was dedicated to the two patron deities of the empire: Huitzilopochtli, god of the sun and war, and Tlaloc, god of rain and agriculture.
+          </p>
+        </div>
+        <div class="space-y-3">
+          <p>
+            Aztec religion operated across every level of life. The <strong class="text-amber-200">priestly class</strong> constituted a powerful, educated elite who maintained the sacred calendar, supervised ritual performance, ran schools, and served as astronomers, historians, and physicians. Temples were not passive meeting places but active sites of daily religious activity — feeding the gods, maintaining sacred fires, performing music and dance, and observing the precise ceremonial calendar.
+          </p>
+          <p>
+            The gods themselves were understood as dynamic, demanding forces rather than abstract principles. They required <strong class="text-amber-200">nourishment</strong> — specifically the precious fluid of blood (called <em>chalchiuatl</em>, &ldquo;jade water&rdquo;) — to sustain their power and continue the work of keeping the world running. Without this nourishment, the sun would fail to rise, the rains would not come, crops would wither, and the cosmos would collapse back into the darkness from which it had been painfully assembled.
+          </p>
+          <p>
+            Central themes of Aztec religion include: <strong class="text-amber-200">cosmic fragility and the active maintenance of order</strong>; <strong class="text-amber-200">sacrifice as duty and reciprocity</strong>; <strong class="text-amber-200">cyclical time</strong> in which creation and destruction endlessly repeat; and <strong class="text-amber-200">duality</strong>, the balance of opposing forces that underlies all of reality.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CREATION & THE FIVE SUNS -->
+    <section class="section-card space-y-6">
+      <h2 class="font-cinzel text-2xl text-amber-300 tracking-wide">&#127756; Creation &amp; the Five Suns</h2>
+      <p class="text-orange-100/80 text-sm leading-relaxed">
+        The Aztec creation narrative is one of the most dramatic and philosophically rich cosmogonies of the ancient world. Rather than positing a single, permanent creation, the Aztecs understood the universe as having been <strong class="text-amber-200">created and destroyed multiple times</strong>, with each age — called a <em>Sun</em> (<em>Tonatiuh</em>) — characterised by different divine custodians, different races of beings, and a different catastrophic ending. We currently live in the Fifth and final Sun, which is itself destined to end.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+
+        <div class="deity-card space-y-2">
+          <div class="sun-badge">First Sun</div>
+          <h3 class="font-cinzel text-base text-amber-200 mt-2">Nahui Ocelotl &mdash; Four Jaguar</h3>
+          <p class="text-orange-100/70 text-sm leading-relaxed">
+            Presided over by <strong class="text-amber-200">Tezcatlipoca</strong>, god of night and sorcery, the First Sun was populated by a race of giants who ate acorns. It lasted 676 years before Tezcatlipoca was knocked from the sky by Quetzalcoatl, causing the sun to fall and the world to be consumed by <strong class="text-amber-200">jaguars</strong>. This age represents the dominance of brute, untamed power without order.
+          </p>
+        </div>
+
+        <div class="deity-card space-y-2">
+          <div class="sun-badge">Second Sun</div>
+          <h3 class="font-cinzel text-base text-amber-200 mt-2">Nahui Ehecatl &mdash; Four Wind</h3>
+          <p class="text-orange-100/70 text-sm leading-relaxed">
+            Presided over by <strong class="text-amber-200">Quetzalcoatl</strong>, the Second Sun was inhabited by beings who ate the seeds of the mesquite tree. It ended when Tezcatlipoca, in revenge for his earlier defeat, transformed the people into <strong class="text-amber-200">monkeys</strong> and swept the world away with devastating <strong class="text-amber-200">hurricanes</strong>. This age represents the instability of even the most enlightened civilisation without firm foundation.
+          </p>
+        </div>
+
+        <div class="deity-card space-y-2">
+          <div class="sun-badge">Third Sun</div>
+          <h3 class="font-cinzel text-base text-amber-200 mt-2">Nahui Quiahuitl &mdash; Four Rain</h3>
+          <p class="text-orange-100/70 text-sm leading-relaxed">
+            Presided over by <strong class="text-amber-200">Tlaloc</strong>, the rain god, the Third Sun saw people subsisting on a water-maize plant. It was destroyed when Quetzalcoatl, angered by Tlaloc&rsquo;s romantic distraction, caused <strong class="text-amber-200">fiery rain</strong> to fall from the sky, incinerating the world. The survivors were transformed into birds. This age reflects the vulnerability of life to divine conflict.
+          </p>
+        </div>
+
+        <div class="deity-card space-y-2">
+          <div class="sun-badge">Fourth Sun</div>
+          <h3 class="font-cinzel text-base text-amber-200 mt-2">Nahui Atl &mdash; Four Water</h3>
+          <p class="text-orange-100/70 text-sm leading-relaxed">
+            Presided over by <strong class="text-amber-200">Chalchiuhtlicue</strong>, goddess of water, this sun was populated by people who ate a wild maize precursor. It ended in catastrophic <strong class="text-amber-200">floods</strong> when Tezcatlipoca accused Chalchiuhtlicue of false benevolence, causing her to weep tears of blood for fifty-two years until the world drowned. Survivors became fish. This age speaks to the tragedy of even life-giving forces turned destructive.
+          </p>
+        </div>
+
+        <div class="deity-card space-y-2 md:col-span-2 lg:col-span-2" style="background: linear-gradient(135deg, rgba(220,38,38,0.13), rgba(180,83,9,0.09)); border-color: rgba(252,165,165,0.30);">
+          <div class="sun-badge" style="background: rgba(220,38,38,0.2); border-color: rgba(252,165,165,0.4); color: #fca5a5;">Fifth Sun &mdash; Current Age</div>
+          <h3 class="font-cinzel text-base text-red-200 mt-2">Nahui Ollin &mdash; Four Movement</h3>
+          <p class="text-orange-100/70 text-sm leading-relaxed">
+            The Fifth Sun was created at the sacred city of <strong class="text-amber-200">Teotihuacan</strong> (&ldquo;Where the Gods Were Made&rdquo;) after the previous world had been destroyed. Two humble gods &mdash; <strong class="text-amber-200">Tecuciztecatl</strong> (vain and wealthy) and <strong class="text-amber-200">Nanahuatzin</strong> (poor and diseased) &mdash; were called upon to sacrifice themselves by leaping into a great bonfire to become the sun and moon. Tecuciztecatl flinched four times before jumping; Nanahuatzin leapt first without hesitation. Because of this, Nanahuatzin became the more glorious sun while Tecuciztecatl became the dimmer moon.
+          </p>
+          <p class="text-orange-100/70 text-sm leading-relaxed mt-2">
+            But the newly created sun would not move. The other gods realised that sacrifice alone had set the sun in place — only further sacrifice would keep it moving. And so the gods themselves were sacrificed by Quetzalcoatl, their blood feeding the sun&rsquo;s motion. This primordial act of divine self-giving established the template for all future sacrifice: <strong class="text-red-200">humans must continue what the gods began</strong>. The Fifth Sun is destined to end in devastating earthquakes (<em>ollin</em> means &ldquo;movement&rdquo; or &ldquo;earthquake&rdquo;), making the urgency of ritual maintenance all the more acute.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="rounded-xl border border-amber-400/20 bg-amber-900/10 p-4 text-sm text-orange-100/75 leading-relaxed">
+        <strong class="text-amber-300">Cosmological Significance:</strong> The doctrine of the Five Suns is not merely mythology — it is a theological argument for the necessity of sacrifice. Each previous sun failed because the gods and humans of that age did not sustain the covenant of reciprocal nourishment. The Fifth Sun survives only because humans now perform that sustaining function. This makes every act of sacrifice an act of cosmic maintenance rather than mere religious ritual.
+      </div>
+    </section>
+
+    <!-- MAJOR GODS -->
+    <section class="space-y-6">
+      <h2 class="font-cinzel text-2xl text-amber-300 text-center tracking-wide">&#9889; The Major Gods</h2>
+      <p class="text-center text-orange-100/70 text-sm max-w-3xl mx-auto">
+        The Aztec pantheon was vast, with hundreds of named deities representing every aspect of the natural and social world. The major gods below were the most central to state religion, ritual, and cosmological thought.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+        <div class="deity-card space-y-3">
+          <div class="text-3xl">&#9728;&#65039;</div>
+          <div class="sun-badge">God of Sun &amp; War</div>
+          <h3 class="font-cinzel text-lg text-amber-200 mt-1">Huitzilopochtli</h3>
+          <p class="text-orange-100/70 text-sm leading-relaxed">
+            The supreme patron deity of the Aztec people and the principal god of the Templo Mayor, Huitzilopochtli was the god of the sun and of warfare. His name means &ldquo;Hummingbird of the South&rdquo; or &ldquo;Left-Handed Hummingbird,&rdquo; reflecting his association with the south (left in Aztec orientation) and with the swift, fierce motion of the hummingbird — which was believed to be the reincarnated soul of a fallen warrior.
+          </p>
+          <p class="text-orange-100/70 text-sm leading-relaxed">
+            Huitzilopochtli was born fully armed from his mother Coatlicue (&ldquo;Serpent Skirt&rdquo;) after she was magically impregnated by a ball of feathers. His sister Coyolxauhqui and his four hundred brothers (the Centzon Huitznahua, the stars of the southern sky) attempted to kill their mother out of shame, but Huitzilopochtli was born fully armed and immediately defeated them, dismembering Coyolxauhqui and hurling her body to the base of the sacred mountain. This myth was re-enacted daily: every sunrise was Huitzilopochtli&rsquo;s victory over the moon and stars; every sunset was their temporary triumph. Human sacrifice — especially the sacrifice of warriors captured in battle — provided the solar deity with the blood-nourishment he needed to win the daily battle and ensure the sun would rise again.
+          </p>
+          <div class="flex flex-wrap gap-1 pt-1">
+            <span class="px-2 py-0.5 text-xs rounded-full border border-amber-400/30 text-amber-200/80">Solar power</span>
+            <span class="px-2 py-0.5 text-xs rounded-full border border-amber-400/30 text-amber-200/80">Warfare</span>
+            <span class="px-2 py-0.5 text-xs rounded-full border border-amber-400/30 text-amber-200/80">Human sacrifice</span>
+            <span class="px-2 py-0.5 text-xs rounded-full border border-amber-400/30 text-amber-200/80">State religion</span>
+          </div>
+        </div>
+
+        <div class="deity-card space-y-3">
+          <div class="text-3xl">&#127783;&#65039;</div>
+          <div class="sun-badge">God of Rain &amp; Fertility</div>
+          <h3 class="font-cinzel text-lg text-amber-200 mt-1">Tlaloc</h3>
+          <p class="text-orange-100/70 text-sm leading-relaxed">
+            One of the most ancient and universally revered gods in Mesoamerica, Tlaloc was the deity of rain, water, lightning, and agricultural fertility. His worship predates the Aztecs by millennia — versions of the goggle-eyed rain deity appear across Teotihuacan, Olmec, and earlier Mesoamerican cultures. He shared the Templo Mayor with Huitzilopochtli, their co-presence reflecting the two fundamental sources of Aztec power: military conquest and agricultural abundance.
+          </p>
+          <p class="text-orange-100/70 text-sm leading-relaxed">
+            Tlaloc was served by the <em>Tlaloque</em>, smaller rain deities who inhabited the mountains and controlled the distribution of different types of rain — beneficial and destructive. He ruled over Tlalocan, a paradise of abundance inhabited by those who died from water-related causes (drowning, lightning, disease associated with water). The sacrifices offered to Tlaloc were particularly poignant: children were often sacrificed to him, as their tears were believed to echo and encourage the rain. Priests carefully noted whether the children cried during the sacrifice — more tears were considered more auspicious.
+          </p>
+          <div class="flex flex-wrap gap-1 pt-1">
+            <span class="px-2 py-0.5 text-xs rounded-full border border-amber-400/30 text-amber-200/80">Rain</span>
+            <span class="px-2 py-0.5 text-xs rounded-full border border-amber-400/30 text-amber-200/80">Agriculture</span>
+            <span class="px-2 py-0.5 text-xs rounded-full border border-amber-400/30 text-amber-200/80">Lightning</span>
+            <span class="px-2 py-0.5 text-xs rounded-full border border-amber-400/30 text-amber-200/80">Tlalocan paradise</span>
+          </div>
+        </div>
+
+        <div class="deity-card space-y-3">
+          <div class="text-3xl">&#127822;</div>
+          <div class="sun-badge">Feathered Serpent</div>
+          <h3 class="font-cinzel text-lg text-amber-200 mt-1">Quetzalcoatl</h3>
+          <p class="text-orange-100/70 text-sm leading-relaxed">
+            Perhaps the most philosophically complex figure in the Aztec pantheon, Quetzalcoatl (&ldquo;Feathered Serpent&rdquo; or &ldquo;Precious Serpent&rdquo;) represented the synthesis of earth and sky — the quetzal bird (celestial, associated with the sky and beauty) and the serpent (terrestrial, associated with the earth and the underworld). This union expressed the ideal of civilisation: the bringing together of heaven and earth, spirit and matter.
+          </p>
+          <p class="text-orange-100/70 text-sm leading-relaxed">
+            Quetzalcoatl was the god of knowledge, wind (<em>Ehecatl</em>), the morning star, priests, and craftsmanship. He was credited with giving humanity the gift of maize, calendar knowledge, and writing. As a culture hero, he was associated with the legendary ruler of Tula, Ce Acatl Topiltzin Quetzalcoatl, who was said to have rejected human sacrifice in favour of offering butterflies and flowers. This historical-mythological ruler was driven from Tula by Tezcatlipoca&rsquo;s trickery and sailed east on a raft of serpents, promising to return — a prophecy that complicated Aztec responses to the arrival of Hernán Cortés in 1519.
+          </p>
+          <div class="flex flex-wrap gap-1 pt-1">
+            <span class="px-2 py-0.5 text-xs rounded-full border border-amber-400/30 text-amber-200/80">Knowledge</span>
+            <span class="px-2 py-0.5 text-xs rounded-full border border-amber-400/30 text-amber-200/80">Wind</span>
+            <span class="px-2 py-0.5 text-xs rounded-full border border-amber-400/30 text-amber-200/80">Creation</span>
+            <span class="px-2 py-0.5 text-xs rounded-full border border-amber-400/30 text-amber-200/80">Priestly wisdom</span>
+          </div>
+        </div>
+
+        <div class="deity-card space-y-3">
+          <div class="text-3xl">&#128316;</div>
+          <div class="sun-badge">God of Night &amp; Fate</div>
+          <h3 class="font-cinzel text-lg text-amber-200 mt-1">Tezcatlipoca</h3>
+          <p class="text-orange-100/70 text-sm leading-relaxed">
+            The dark cosmic counterpart to Quetzalcoatl, Tezcatlipoca (&ldquo;Smoking Mirror&rdquo;) was the god of night, the north, the night sky, the earth, fate, discord, sorcery, and temptation. His name refers to his iconic obsidian mirror — a tool of divination and a window into truth — in which he could see the deeds of all mortals and even of the gods. He was among the most feared and powerful of all the Aztec deities, associated with jaguars, darkness, and the inexorable working of destiny.
+          </p>
+          <p class="text-orange-100/70 text-sm leading-relaxed">
+            Where Quetzalcoatl represented order, knowledge, and civilised virtue, Tezcatlipoca represented chaos, cunning, and the disruptive force that tested and ultimately strengthened the world. The two gods were eternal rivals whose conflict drove the succession of the Five Suns. Tezcatlipoca lost a foot to the earth monster Cipactli in the act of creation — a sacrifice freely given, reflecting the principle that the gods themselves were not exempt from the demands of cosmic maintenance. He is also identified as one of the two supreme creator gods (alongside Quetzalcoatl) in the most elevated theological accounts, making him simultaneously a destroyer and a cosmic architect.
+          </p>
+          <div class="flex flex-wrap gap-1 pt-1">
+            <span class="px-2 py-0.5 text-xs rounded-full border border-amber-400/30 text-amber-200/80">Night</span>
+            <span class="px-2 py-0.5 text-xs rounded-full border border-amber-400/30 text-amber-200/80">Sorcery</span>
+            <span class="px-2 py-0.5 text-xs rounded-full border border-amber-400/30 text-amber-200/80">Fate</span>
+            <span class="px-2 py-0.5 text-xs rounded-full border border-amber-400/30 text-amber-200/80">Smoking Mirror</span>
+          </div>
+        </div>
+
+        <div class="deity-card space-y-3">
+          <div class="text-3xl">&#127807;</div>
+          <div class="sun-badge">God of Maize</div>
+          <h3 class="font-cinzel text-lg text-amber-200 mt-1">Centeotl &amp; Chicomec&oacute;atl</h3>
+          <p class="text-orange-100/70 text-sm leading-relaxed">
+            Maize was not merely the staple food of Mesoamerica — it was the sacred substance from which humanity itself had been created. In the Aztec creation narrative, Quetzalcoatl descended to the underworld (Mictlan) to retrieve the bones of previous races, which were then ground up and mixed with the gods&rsquo; blood to create the current human beings. The resulting creatures were, in a very real sense, made of maize and divine sacrifice.
+          </p>
+          <p class="text-orange-100/70 text-sm leading-relaxed">
+            <strong class="text-amber-200">Centeotl</strong> (sometimes depicted as male, sometimes female or androgynous) was the deity of the maize plant itself, governing its growth from seed to harvest. <strong class="text-amber-200">Chicomec&oacute;atl</strong> (&ldquo;Seven Serpent&rdquo;) was the goddess of maize in its stored, harvested, and nourishing form — the sustaining mother whose abundance kept the people alive. Together these deities embodied the complete cycle of agricultural life that made civilisation possible.
+          </p>
+          <div class="flex flex-wrap gap-1 pt-1">
+            <span class="px-2 py-0.5 text-xs rounded-full border border-amber-400/30 text-amber-200/80">Maize</span>
+            <span class="px-2 py-0.5 text-xs rounded-full border border-amber-400/30 text-amber-200/80">Agriculture</span>
+            <span class="px-2 py-0.5 text-xs rounded-full border border-amber-400/30 text-amber-200/80">Sustenance</span>
+            <span class="px-2 py-0.5 text-xs rounded-full border border-amber-400/30 text-amber-200/80">Sacred food</span>
+          </div>
+        </div>
+
+        <div class="deity-card space-y-3">
+          <div class="text-3xl">&#127769;</div>
+          <div class="sun-badge">Moon Goddess</div>
+          <h3 class="font-cinzel text-lg text-amber-200 mt-1">Coyolxauhqui</h3>
+          <p class="text-orange-100/70 text-sm leading-relaxed">
+            The moon goddess Coyolxauhqui (&ldquo;Golden Bells&rdquo;, from the golden bells adorning her face) is one of the most dramatically mythologised figures in the Aztec pantheon. As described above, she led her brothers in an assault on their mother Coatlicue but was defeated and dismembered by Huitzilopochtli at birth. Her scattered body became the moon — the fragmented, incomplete light that can never match the sun&rsquo;s blazing wholeness.
+          </p>
+          <p class="text-orange-100/70 text-sm leading-relaxed">
+            The discovery of the massive <strong class="text-amber-200">Coyolxauhqui Stone</strong> during excavations of the Templo Mayor in 1978 was one of the greatest archaeological finds of the twentieth century. The circular basalt disc, over three metres in diameter, depicts her dismembered body and was placed at the base of the staircase leading to Huitzilopochtli&rsquo;s shrine — mirroring the myth in which her body fell to the base of the sacred mountain. Human sacrifice victims were sometimes thrown down these steps, re-enacting her defeat.
+          </p>
+          <div class="flex flex-wrap gap-1 pt-1">
+            <span class="px-2 py-0.5 text-xs rounded-full border border-amber-400/30 text-amber-200/80">Moon</span>
+            <span class="px-2 py-0.5 text-xs rounded-full border border-amber-400/30 text-amber-200/80">Dismemberment</span>
+            <span class="px-2 py-0.5 text-xs rounded-full border border-amber-400/30 text-amber-200/80">Cosmic defeat</span>
+            <span class="px-2 py-0.5 text-xs rounded-full border border-amber-400/30 text-amber-200/80">Templo Mayor</span>
+          </div>
+        </div>
+
+        <div class="deity-card space-y-3">
+          <div class="text-3xl">&#128128;</div>
+          <div class="sun-badge">Lord of the Dead</div>
+          <h3 class="font-cinzel text-lg text-amber-200 mt-1">Mictlantecuhtli</h3>
+          <p class="text-orange-100/70 text-sm leading-relaxed">
+            The fearsome lord of Mictlan (the underworld), Mictlantecuhtli (&ldquo;Lord of the Land of the Dead&rdquo;) governed the lowest and most remote of the nine underworld levels. He was depicted as a skeletal figure with a skull face, wearing severed hands, eyeballs on his collar, and stars on his body — an image that conveys not horror for its own sake but the absolute reality of death as a cosmic power equal in importance to the forces of life.
+          </p>
+          <p class="text-orange-100/70 text-sm leading-relaxed">
+            The dead were not, in Aztec belief, received automatically into a pleasant afterlife. The journey through Mictlan took four years and involved passage through nine treacherous levels filled with dangers — icy winds, obsidian winds, a field of biting winds, a place of complete darkness. The dead required food, water, and equipment buried with them to make this journey. Only those who died from specific causes — warriors, sacrificial victims, women who died in childbirth, victims of drowning or lightning — went to the paradises of Tonatiuh (solar heaven) or Tlalocan rather than undertaking the arduous Mictlan passage.
+          </p>
+          <div class="flex flex-wrap gap-1 pt-1">
+            <span class="px-2 py-0.5 text-xs rounded-full border border-amber-400/30 text-amber-200/80">Underworld</span>
+            <span class="px-2 py-0.5 text-xs rounded-full border border-amber-400/30 text-amber-200/80">Death</span>
+            <span class="px-2 py-0.5 text-xs rounded-full border border-amber-400/30 text-amber-200/80">Mictlan</span>
+            <span class="px-2 py-0.5 text-xs rounded-full border border-amber-400/30 text-amber-200/80">Afterlife</span>
+          </div>
+        </div>
+
+        <div class="deity-card space-y-3">
+          <div class="text-3xl">&#9762;&#65039;</div>
+          <div class="sun-badge">Earth &amp; Death Goddess</div>
+          <h3 class="font-cinzel text-lg text-amber-200 mt-1">Coatlicue</h3>
+          <p class="text-orange-100/70 text-sm leading-relaxed">
+            The great earth mother Coatlicue (&ldquo;Serpent Skirt&rdquo;) is one of the most magnificent and terrifying figures in world religious art. The colossal basalt statue of Coatlicue discovered in Mexico City in 1790 — standing over 2.5 metres tall, crowned with a skull, wearing a skirt of writhing serpents, and adorned with a necklace of human hands, hearts, and a skull pendant — represents the earth as simultaneously the source of all life and the devourer of all death.
+          </p>
+          <p class="text-orange-100/70 text-sm leading-relaxed">
+            Coatlicue embodies the Aztec understanding that life and death are not opposites but aspects of a single reality. The earth gives birth to crops, animals, and humans, and the earth also receives their bodies at death, recycling them into future life. She is the mother of Huitzilopochtli, Coyolxauhqui, and the Centzon Huitznahua — in her body, the entire drama of solar victory and stellar defeat is contained. She represents the terrible fecundity of nature: creative and destructive simultaneously, impossible to separate.
+          </p>
+          <div class="flex flex-wrap gap-1 pt-1">
+            <span class="px-2 py-0.5 text-xs rounded-full border border-amber-400/30 text-amber-200/80">Earth</span>
+            <span class="px-2 py-0.5 text-xs rounded-full border border-amber-400/30 text-amber-200/80">Life and death</span>
+            <span class="px-2 py-0.5 text-xs rounded-full border border-amber-400/30 text-amber-200/80">Mother goddess</span>
+            <span class="px-2 py-0.5 text-xs rounded-full border border-amber-400/30 text-amber-200/80">Duality</span>
+          </div>
+        </div>
+
+        <div class="deity-card space-y-3">
+          <div class="text-3xl">&#9651;</div>
+          <div class="sun-badge">Dual Creator</div>
+          <h3 class="font-cinzel text-lg text-amber-200 mt-1">Ometeotl</h3>
+          <p class="text-orange-100/70 text-sm leading-relaxed">
+            At the apex of the Aztec theological hierarchy was <strong class="text-amber-200">Ometeotl</strong> (&ldquo;Two-God&rdquo; or &ldquo;Lord of Duality&rdquo;), a supreme dual deity who transcended the active Aztec pantheon and dwelt in <em>Omeyocan</em>, the thirteenth and highest heaven. Ometeotl embodied the primordial duality — male and female, light and dark, positive and negative — from which all other divine beings and all existence ultimately proceeded.
+          </p>
+          <p class="text-orange-100/70 text-sm leading-relaxed">
+            Ometeotl was expressed as a divine pair: <strong class="text-amber-200">Ometecuhtli</strong> (Two-Lord) and <strong class="text-amber-200">Omecihuatl</strong> (Two-Lady), also called <em>Tonacatecuhtli</em> and <em>Tonacacihuatl</em> (&ldquo;Lord and Lady of Our Sustenance&rdquo;). From this primordial union came the four directional creator gods — including Tezcatlipoca and Quetzalcoatl — who then shaped the successive worlds. Ometeotl remained largely beyond cult worship — too transcendent for direct ritual engagement — but was theologically important as the source and ground of all being, a concept with striking parallels to the Kabbalistic Ein Sof or the Neoplatonic One.
+          </p>
+          <div class="flex flex-wrap gap-1 pt-1">
+            <span class="px-2 py-0.5 text-xs rounded-full border border-amber-400/30 text-amber-200/80">Supreme duality</span>
+            <span class="px-2 py-0.5 text-xs rounded-full border border-amber-400/30 text-amber-200/80">Male &amp; female</span>
+            <span class="px-2 py-0.5 text-xs rounded-full border border-amber-400/30 text-amber-200/80">Cosmic source</span>
+            <span class="px-2 py-0.5 text-xs rounded-full border border-amber-400/30 text-amber-200/80">Omeyocan</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- DUALITY & BALANCE -->
+    <section class="section-card space-y-5">
+      <h2 class="font-cinzel text-2xl text-amber-300 tracking-wide">&#9775; Duality &amp; Balance in the Divine</h2>
+      <p class="text-orange-100/80 text-sm leading-relaxed">
+        Perhaps the most philosophically sophisticated aspect of Aztec theology was its systematic understanding of <strong class="text-amber-200">duality as the fundamental structure of reality</strong>. The universe was not a battleground between good and evil (as in Zoroastrian or Gnostic dualisms) but a dynamic equilibrium between complementary opposites, each of which required the other to exist and to function.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5 text-sm text-orange-100/75 leading-relaxed">
+        <div class="space-y-3">
+          <p>The major dual pairs woven through Aztec theology included:</p>
+          <ul class="space-y-2">
+            <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">&#8596;</span><span><strong class="text-amber-200">Life &amp; Death:</strong> Every creator god was simultaneously a destroyer. Tlaloc brought life-giving rain and death-dealing storms. Coatlicue embodied both the birth of being and its return to earth. Death was not an ending but a transformation into a different mode of cosmic participation.</span></li>
+            <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">&#8596;</span><span><strong class="text-amber-200">Creation &amp; Destruction:</strong> Each sun (age) was created and destroyed. The same gods who built the current world had destroyed the previous ones. Constructive and destructive action were not opposites but phases of a single, cyclical process.</span></li>
+            <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">&#8596;</span><span><strong class="text-amber-200">Light &amp; Darkness:</strong> The daily solar cycle was the theatre of conflict between Huitzilopochtli (sun/day) and Tezcatlipoca along with the stars (night). Neither could exist without the other; their alternation was the engine of time itself.</span></li>
+            <li class="flex items-start gap-2"><span class="text-amber-400 mt-0.5">&#8596;</span><span><strong class="text-amber-200">Masculine &amp; Feminine:</strong> At the highest theological level, the supreme creative principle was dual. Ometeotl&rsquo;s male and female aspects were not separate deities but aspects of a single, generative source. This duality descended through the entire pantheon.</span></li>
+          </ul>
+        </div>
+        <div class="space-y-3">
+          <p>
+            Aztec ritual was specifically designed to <strong class="text-amber-200">maintain balance between these opposing forces</strong>. Excess in any direction — too much sun, too much rain, too much war, too much abundance — was as dangerous as deficiency. The great festivals of the ceremonial calendar were timed precisely to manage these balances: to call the rains at the right moment, to strengthen the sun at the solstice, to propitiate the earth at the harvest.
+          </p>
+          <p>
+            The concept of <em>nepantla</em> (&ldquo;in the middle,&rdquo; or &ldquo;in between&rdquo;) was important to Aztec thought — the liminal space between opposites was a place of creative potential and sacred danger. Thresholds, transitional times (dawn, dusk, the new year), and in-between states were all regarded with particular ritual attention. This sensitivity to the space between opposites reflects a sophisticated understanding of how dynamic equilibrium, rather than static stability, is the true nature of a living cosmos.
+          </p>
+          <p>
+            The philosophical implications were significant: in a universe structured by duality and balance, neither absolute good nor absolute evil could exist in permanent form. What mattered was not moral purity but <strong class="text-amber-200">cosmic participation</strong> — the active, responsible engagement with the forces of creation and destruction that kept the world alive.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- STRUCTURE OF THE COSMOS -->
+    <section class="section-card space-y-5">
+      <h2 class="font-cinzel text-2xl text-amber-300 tracking-wide">&#127758; The Structure of the Cosmos</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+
+        <div class="theme-card space-y-3">
+          <div class="text-2xl">&#127775;</div>
+          <h3 class="font-cinzel text-base text-amber-200">The Thirteen Heavens</h3>
+          <p class="text-orange-100/70 text-sm leading-relaxed">
+            Above the earth rose thirteen layered heavens (<em>Ilhuicatl</em>), each inhabited by different divine forces. The lower heavens housed the moon, stars, and planets. Higher heavens were home to specific deities: the Fourth Heaven was the realm of the sun; the Ninth was the wind; the Twelfth and Thirteenth were the dwellings of the supreme creator pair, Ometeotl. These heavens were not metaphorical — they were understood as real, distinct zones of divine activity whose influences descended into the world below.
+          </p>
+        </div>
+
+        <div class="theme-card space-y-3">
+          <div class="text-2xl">&#127758;</div>
+          <h3 class="font-cinzel text-base text-amber-200">The Middle World &mdash; Tlaltipac</h3>
+          <p class="text-orange-100/70 text-sm leading-relaxed">
+            The earth itself (<em>Tlaltipac</em>, &ldquo;On the Earth&rdquo;) was conceived as a flat disc floating on water, surrounded by the great encircling ocean (<em>Ilhuicaatl</em>). The earth&rsquo;s surface was divided into four directional quadrants, each associated with a colour, a tree, a bird, a deity, and a set of ritual associations: East (red, Quetzalcoatl), North (black, Tezcatlipoca), West (white), South (blue, Huitzilopochtli). At the centre stood the axis mundi — the sacred cosmic tree or the Templo Mayor itself — connecting all planes of existence.
+          </p>
+        </div>
+
+        <div class="theme-card space-y-3">
+          <div class="text-2xl">&#9760;&#65039;</div>
+          <h3 class="font-cinzel text-base text-amber-200">The Nine Underworlds &mdash; Mictlan</h3>
+          <p class="text-orange-100/70 text-sm leading-relaxed">
+            Beneath the earth descended nine levels of the underworld, collectively called <em>Mictlan</em> (though technically only the deepest level bore this name). Each level presented different trials to the soul of the dead: passage through icy winds, across a wide river (requiring assistance from a dog buried with the dead), through obsidian-wind deserts, across fields of wild beasts. After four years of this journey, the soul reached the ninth level, Mictlan proper, ruled by Mictlantecuhtli and Mictecacihuatl, and was finally at rest.
+          </p>
+        </div>
+
+      </div>
+      <div class="rounded-xl border border-amber-400/20 bg-amber-900/10 p-4 text-sm text-orange-100/75 leading-relaxed">
+        <strong class="text-amber-300">The World Tree:</strong> Connecting all these levels was the cosmic ceiba tree (<em>Yaxche</em> in Maya tradition; similar concepts existed in Aztec cosmology). Its roots reached into Mictlan, its trunk occupied the earth, and its branches extended into the heavens. This vertical axis represented the channel through which divine forces moved between planes and through which ritual specialists — particularly priests and shamans — could travel in altered states to access higher or lower levels of reality.
+      </div>
+    </section>
+
+    <!-- SACRIFICE & RITUAL -->
+    <section class="section-card space-y-5" style="background: linear-gradient(135deg, rgba(220,38,38,0.10), rgba(180,83,9,0.07)); border-color: rgba(252,165,165,0.20);">
+      <h2 class="font-cinzel text-2xl text-red-300 tracking-wide">&#128308; Sacrifice &amp; Ritual</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-orange-100/80 leading-relaxed">
+        <div class="space-y-4">
+          <p>
+            Sacrifice was the <strong class="text-red-200">theological and practical heart</strong> of Aztec religion. The principle was straightforward but profound: the gods sacrificed themselves to create and maintain the world; humans were obligated to sustain the gods in return. This was not a metaphor — it was understood as a literal cosmic mechanism. Without blood, the sun would not rise. Without the hearts of sacrificial victims, the earth would stop being fertile. Without the correct rituals at the correct times, the entire structure of the cosmos would fail.
+          </p>
+          <p>
+            <strong class="text-amber-200">Human sacrifice</strong> in the Aztec tradition was primarily performed on captive warriors taken in battle. Death by sacrifice was considered an honourable and indeed privileged end — the sacrificial victim was identified with the god to whom he was offered, was ritually adorned and cared for in the final days before the ceremony, and was believed to go directly to one of the celestial paradises (Tonatiuh&rsquo;s solar heaven for warriors) rather than enduring the long journey through Mictlan. Women who died in childbirth shared this privileged afterlife — they were the female equivalent of warriors, their labour and death understood as a form of sacrifice.
+          </p>
+          <p>
+            The most common form of sacrifice was <strong class="text-amber-200">heart extraction</strong> (<em>nextlahualtzin</em>): the victim was held stretched across a sacrificial stone while a priest using an obsidian or flint knife opened the chest and removed the still-beating heart, which was then offered to the appropriate deity. The body was often rolled down the temple steps in imitation of Coyolxauhqui&rsquo;s mythological fate.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <p>
+            <strong class="text-amber-200">Bloodletting and self-sacrifice</strong> were practised by priests, nobles, and even common people during important festivals. Priests drew blood from their tongues, earlobes, or legs using cactus spines or obsidian blades. This self-offering was considered particularly powerful — the sacrificer&rsquo;s own blood, given voluntarily, had special efficacy in nourishing the gods and ensuring divine favour. Rulers performed elaborate auto-sacrifice rituals on major occasions, offering their own blood as evidence of their fitness to govern.
+          </p>
+          <p>
+            Beyond blood sacrifice, the Aztecs offered <strong class="text-amber-200">elaborate material gifts</strong> to the gods: incense (copal resin was burned constantly in temples), food, flowers, rubber, paper, textiles, jade, gold, and quetzal feathers. Music, dance, and dramatic performance were also forms of offering. The entire aesthetic life of Aztec civilisation — its extraordinary art, architecture, poetry, and music — was in a real sense a form of continuous sacrifice, a gift of beauty and skill to sustaining cosmic forces.
+          </p>
+          <p>
+            The scale of sacrifice varied greatly. Daily temple ritual involved modest offerings. Major festivals, such as the New Fire Ceremony (<em>Toxiuhmolpilia</em>) that marked the completion of a 52-year calendar round, involved large-scale sacrifice accompanied by the extinguishing of all fires across the empire and the anxious waiting — in darkness — for dawn to confirm that the new cycle had safely begun.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WAR & SOCIETY -->
+    <section class="section-card space-y-5">
+      <h2 class="font-cinzel text-2xl text-amber-300 tracking-wide">&#9876;&#65039; War, Society &amp; the Sacred</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-orange-100/80 leading-relaxed">
+        <div class="space-y-3">
+          <p>
+            Aztec warfare was inseparable from religion. The primary military objective was not to annihilate enemies but to <strong class="text-amber-200">capture them alive</strong> for sacrifice. This gave rise to the distinctive institution of <em>Xochiyaoyotl</em> — the &ldquo;Flower War&rdquo; — in which the Aztecs and neighbouring powers fought scheduled battles specifically to take prisoners. All combatants understood the purpose of these engagements, and being taken prisoner in battle was considered an honour rather than a disgrace, since the prisoner would serve as divine nourishment.
+          </p>
+          <p>
+            Warriors occupied one of the highest positions in Aztec society. Military achievement was the primary path to social advancement — even for commoners. Distinguished warriors could join elite military orders, the most famous being the <strong class="text-amber-200">Eagle Warriors</strong> (associated with the sun, Huitzilopochtli, and daytime) and the <strong class="text-amber-200">Jaguar Warriors</strong> (associated with Tezcatlipoca, the night, and the earth). Both orders had their own temples, rituals, and priestly functions. Warfare was thus not separate from religious life but one of its most important expressions.
+          </p>
+        </div>
+        <div class="space-y-3">
+          <p>
+            The <strong class="text-amber-200">priestly class</strong> (<em>tlamacazque</em>) was a distinct educated elite responsible for maintaining the sacred calendar, supervising sacrifice, running schools (<em>calmecac</em>), and transmitting knowledge. Priests lived under strict regimes of discipline — fasting, celibacy during ritual periods, nightly vigils, and their own frequent bloodletting. They were simultaneously astronomers, historians, physicians, and teachers, embodying the Aztec understanding that sacred knowledge and practical knowledge were inseparable.
+          </p>
+          <p>
+            The <em>calmecac</em> schools, attached to temples and run by priests, educated the children of nobles and some commoners in reading, writing (the Aztec pictographic system), astronomy, divination, history, ritual, music, and rhetoric. Parallel schools called <em>telpochcalli</em> (&ldquo;young men&rsquo;s houses&rdquo;) trained commoners primarily in warfare and civic duties. This dual educational system reflected the layered nature of Aztec society, in which sacred and martial roles were each honoured but clearly differentiated.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TIME & CALENDARS -->
+    <section class="section-card space-y-5">
+      <h2 class="font-cinzel text-2xl text-amber-300 tracking-wide">&#128336; Time, Calendars &amp; the Cosmic Clock</h2>
+      <p class="text-orange-100/80 text-sm leading-relaxed">
+        Time in Aztec religion was not a neutral medium through which events occurred but a <strong class="text-amber-200">living, sacred force</strong> with its own qualities, powers, and dangers. Different days, months, and years carried different divine influences that needed to be carefully managed through appropriate ritual. The Aztec calendar system was extraordinarily sophisticated — a precision instrument for cosmic management.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+        <div class="theme-card space-y-3">
+          <h3 class="font-cinzel text-base text-amber-200">Tonalpohualli &mdash; 260-Day Sacred Calendar</h3>
+          <p class="text-orange-100/70 text-sm leading-relaxed">
+            The <em>Tonalpohualli</em> (&ldquo;Count of Days&rdquo;) was the primary ritual calendar, consisting of 260 days formed by the combination of 20 day-signs (each with its own name and deity patron) with 13 numbers, cycling through all 260 unique combinations before repeating. Its origins remain debated — the period of 260 days corresponds roughly to human gestation and to certain agricultural cycles in Mesoamerica.
+          </p>
+          <p class="text-orange-100/70 text-sm leading-relaxed">
+            Every day in the Tonalpohualli had a specific character, quality, and set of associations. Specialist priests called <em>tonalpouhque</em> (&ldquo;day-counters&rdquo;) read the calendar to determine the auspiciousness of days for births, marriages, warfare, planting, and any major activity. A child born on the day 1-Crocodile would have very different prospects from one born on 1-Reed. The day-count was also the basis for the personal names carried by deities and historical figures.
+          </p>
+        </div>
+
+        <div class="theme-card space-y-3">
+          <h3 class="font-cinzel text-base text-amber-200">Xiuhpohualli &mdash; 365-Day Solar Calendar</h3>
+          <p class="text-orange-100/70 text-sm leading-relaxed">
+            The <em>Xiuhpohualli</em> (&ldquo;Count of Years&rdquo;) was the solar-agricultural calendar, consisting of 18 named months of 20 days each, plus a 5-day &ldquo;empty&rdquo; or nameless period (<em>nemontemi</em>) considered deeply unlucky — a dangerous interstitial time when normal order was suspended.
+          </p>
+          <p class="text-orange-100/70 text-sm leading-relaxed">
+            Each of the 18 months had its own major festival associated with specific deities, agricultural activities, and forms of sacrifice. The month Tlacaxipehualiztli (&ldquo;Flaying of Men&rdquo;) honoured Xipe Totec, god of renewal, through the sacrifice and ceremonial flaying of prisoners; priests wore the skins to represent renewal of the earth&rsquo;s surface. Ochpaniztli (&ldquo;Sweeping of the Road&rdquo;) honoured earth and agricultural deities at the harvest.
+          </p>
+        </div>
+
+      </div>
+      <div class="rounded-xl border border-amber-400/20 bg-amber-900/10 p-4 text-sm text-orange-100/75 leading-relaxed">
+        <strong class="text-amber-300">The Calendar Round &amp; New Fire Ceremony:</strong> When both calendars were used together, they meshed like two interlocking gears, creating a 52-year cycle called the <em>Calendar Round</em> (or <em>Xiuhmolpilli</em>, &ldquo;Bundle of Years&rdquo;) — the point at which both calendars returned to their starting positions simultaneously. At the end of each 52-year cycle, the Aztecs faced the terrifying possibility that the Fifth Sun might not continue. All fires were extinguished, households destroyed their pots and hearthstones, and the people climbed to hilltops to watch the skies in anxious darkness. Priests ascended the Hill of the Star and performed the New Fire ritual on the chest of a sacrificial victim. If the fire caught, the sun would continue; new fire was distributed throughout the empire, and the people celebrated with enormous relief. This ceremony represents one of the most vivid expressions in world religion of the belief that cosmic continuation depends on human ritual action.
+      </div>
+    </section>
+
+    <!-- KEY THEMES -->
+    <section class="space-y-5">
+      <h2 class="font-cinzel text-2xl text-amber-300 text-center tracking-wide">&#9878; Key Themes of Aztec Religion</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
+
+        <div class="theme-card space-y-2">
+          <h3 class="font-cinzel text-sm text-amber-300 tracking-wider">Cosmic Fragility &amp; Active Maintenance</h3>
+          <p class="text-orange-100/70 text-sm leading-relaxed">
+            The universe is not stable and self-sustaining — it is a fragile achievement that requires constant, skilled, and costly effort to preserve. Four previous worlds have already failed. The human role is not passive devotion but active cosmic labour. This gives every ritual act a weight and urgency found in few other religious traditions.
+          </p>
+        </div>
+
+        <div class="theme-card space-y-2">
+          <h3 class="font-cinzel text-sm text-amber-300 tracking-wider">Sacrifice as Reciprocity</h3>
+          <p class="text-orange-100/70 text-sm leading-relaxed">
+            The gods gave their lives and blood to create and sustain the world. Humans are in their debt. Sacrifice is therefore not violence but the highest form of gift-giving: returning to the divine the life that was given to create human existence. The Aztec word for sacrifice, <em>nextlahualtzin</em>, means &ldquo;payment of the debt&rdquo; — a precise economic metaphor for a theological obligation.
+          </p>
+        </div>
+
+        <div class="theme-card space-y-2">
+          <h3 class="font-cinzel text-sm text-amber-300 tracking-wider">Cyclical Time</h3>
+          <p class="text-orange-100/70 text-sm leading-relaxed">
+            Creation and destruction are not one-time events but recurring processes. The universe moves in cycles nested within cycles: the daily cycle of solar battle, the annual cycle of agricultural seasons, the 52-year Calendar Round, the vast cycle of the Five Suns. History is not linear progress toward a final state but a spiral of recurring patterns that must be ritually managed at each critical transition.
+          </p>
+        </div>
+
+        <div class="theme-card space-y-2">
+          <h3 class="font-cinzel text-sm text-amber-300 tracking-wider">Duality as Foundation</h3>
+          <p class="text-orange-100/70 text-sm leading-relaxed">
+            Reality is structured by pairs of opposing forces that require each other to exist. The supreme deity itself is dual. Destruction enables creation; darkness makes light meaningful; death feeds life. The goal is not to eliminate one pole of any duality but to maintain the dynamic tension between them — the productive balance from which all existence flows.
+          </p>
+        </div>
+
+        <div class="theme-card space-y-2">
+          <h3 class="font-cinzel text-sm text-amber-300 tracking-wider">The Warrior as Sacred Figure</h3>
+          <p class="text-orange-100/70 text-sm leading-relaxed">
+            The warrior — whether as sacrificer or as sacrificed — occupied a sacred role in Aztec cosmology. Fallen warriors accompanied the sun across the sky; sacrificial victims nourished the gods. Martial virtue was simultaneously civic and religious virtue. This integration of sacred and martial functions gave Aztec society its characteristic combination of extraordinary cultural achievement and ferocious military capacity.
+          </p>
+        </div>
+
+        <div class="theme-card space-y-2">
+          <h3 class="font-cinzel text-sm text-amber-300 tracking-wider">The Cosmos as Living Organism</h3>
+          <p class="text-orange-100/70 text-sm leading-relaxed">
+            The Aztec universe was not a mechanism operating according to fixed laws but a <em>living being</em> with needs, desires, moods, and vulnerabilities. The gods were not distant transcendent principles but real presences whose well-being was genuinely at stake. This fundamentally animist sensibility gave Aztec religion its urgency — when you are in relationship with a living cosmos, neglect has consequences.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SUMMARY -->
+    <section class="rounded-2xl border border-amber-400/30 bg-gradient-to-r from-amber-900/20 to-orange-900/15 p-8 text-center space-y-4">
+      <h2 class="font-cinzel text-xl text-amber-300">In Summary</h2>
+      <p class="text-orange-100/85 text-base leading-relaxed max-w-4xl mx-auto italic">
+        Aztec religion is a ritual-centred, cyclical belief system in which gods and humans are bound in mutual obligation to sustain the cosmos through sacrifice and balance — a theology of urgent participation, in which the survival of the universe itself depends on human devotion, discipline, and the willingness to give back the life that was so dearly given.
+      </p>
+      <p class="text-orange-100/65 text-sm max-w-3xl mx-auto">
+        Far from being a religion of mere cruelty or darkness, Aztec religion embodied a sophisticated cosmological vision: a universe that is alive, fragile, cyclical, and shot through with the light of divine reciprocity. Its practices, however alien they may appear, arose from one of the most coherent and seriously maintained theologies of cosmic responsibility in human history.
+      </p>
+    </section>
+
+    <div class="text-center mt-4">
+      <a href="/mythologies-cosmologies" class="text-orange-400/60 hover:text-orange-300 text-sm transition-colors">&larr; Back to Mythologies &amp; Cosmologies</a>
+    </div>
+
+  </div>
+
+  <footer class="relative z-10 text-center py-8 text-orange-400/40 text-xs mt-8">
+    <p class="italic">&ldquo;The sun needs the blood of sacrifice to rise; humans need the sun to live — this is the covenant that holds the world.&rdquo; &mdash; Aztec theological principle</p>
+    <p class="mt-2">Esoteric Wisdom &middot; Built with &#10024; in Rust</p>
+    <p class="mt-2"><a href="/home" class="hover:text-orange-300 transition-colors">&larr; Back to Portal</a></p>
+  </footer>
+
+  <script>
+    const sf = document.getElementById('starfield');
+    for (let i = 0; i < 100; i++) {
+      const s = document.createElement('div');
+      s.className = 'star';
+      s.style.cssText = `left:${Math.random()*100}%;top:${Math.random()*100}%;width:${Math.random()*2+1}px;height:${Math.random()*2+1}px;--dur:${Math.random()*4+2}s;--delay:${Math.random()*4}s`;
+      sf.appendChild(s);
+    }
+  </script>
+
+</body>
+</html>
