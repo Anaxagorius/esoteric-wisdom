@@ -8,6 +8,7 @@ use crate::templates::{
     MahamudraTemplate,
     TaoistInnerAlchemyTemplate,
     EsotericConfucianismTemplate,
+    ChineseReligionTemplate,
     ShugendoTemplate,
     ShingonTemplate,
     KashmirShaivismTemplate,
@@ -24,6 +25,7 @@ pub fn routes() -> Router<AppState> {
         .route("/mahamudra", get(mahamudra))
         .route("/taoist-inner-alchemy", get(taoist_inner_alchemy))
         .route("/esoteric-confucianism", get(esoteric_confucianism))
+        .route("/chinese-religion", get(chinese_religion))
         .route("/shugendo", get(shugendo))
         .route("/shingon", get(shingon))
         .route("/kashmir-shaivism", get(kashmir_shaivism))
@@ -56,6 +58,10 @@ async fn taoist_inner_alchemy() -> impl IntoResponse {
 
 async fn esoteric_confucianism() -> impl IntoResponse {
     HtmlTemplate(EsotericConfucianismTemplate)
+}
+
+async fn chinese_religion() -> impl IntoResponse {
+    HtmlTemplate(ChineseReligionTemplate)
 }
 
 async fn shugendo() -> impl IntoResponse {

@@ -233,6 +233,10 @@ pub struct TaoistInnerAlchemyTemplate;
 pub struct EsotericConfucianismTemplate;
 
 #[derive(Template)]
+#[template(path = "chinese_religion.html")]
+pub struct ChineseReligionTemplate;
+
+#[derive(Template)]
 #[template(path = "shugendo.html")]
 pub struct ShugendoTemplate;
 
