@@ -4,11 +4,23 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>Admin Dashboard — Anomalous Inquiry</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>body { background: radial-gradient(circle at top, #0c2430 0, #020617 50%, #000000 100%); }</style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+    <style>
+      body {
+        background: radial-gradient(circle at top, #0c2430 0%, #020617 50%, #000000 100%);
+        font-family: 'Raleway', sans-serif;
+      }
+      @keyframes twinkle { 0%, 100% { opacity: 0.2; } 50% { opacity: 1; } }
+      .star { position: absolute; border-radius: 50%; background: white; animation: twinkle var(--dur,3s) ease-in-out infinite; animation-delay: var(--delay,0s); }
+      .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+    </style>
   </head>
   <body class="min-h-screen text-white px-4 py-8">
-    <div class="max-w-4xl mx-auto space-y-8">
+    <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+    <div class="relative z-10 max-w-4xl mx-auto space-y-8">
       <header class="flex items-center justify-between">
         <h1 class="text-3xl font-bold">🔒 Admin Dashboard</h1>
         <nav class="flex gap-4 text-sm">
@@ -25,5 +37,15 @@
         </div>
       </section>
     </div>
+    <script>
+      const sf = document.getElementById('starfield');
+      for (let i = 0; i < 160; i++) {
+        const s = document.createElement('div');
+        s.className = 'star';
+        const size = Math.random() * 2 + 0.5;
+        s.style.cssText = `width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--dur:${2+Math.random()*4}s;--delay:${Math.random()*5}s;opacity:${0.2+Math.random()*0.8};`;
+        sf.appendChild(s);
+      }
+    </script>
   </body>
 </html>

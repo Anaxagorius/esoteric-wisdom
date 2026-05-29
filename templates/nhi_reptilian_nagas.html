@@ -4,17 +4,30 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>Nagas — NHI Species Profile</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta property="og:title" content="Nagas — NHI Species Profile" />
+    <meta property="og:description" content="The Nagas represent one of the most extensively documented intelligent non-human serpentine beings in the world's religious and mythological literature — a..." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://esoteric-wisdom.onrender.com/og-image.png" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>body { background: radial-gradient(circle at top, #0c2430 0, #020617 50%, #000000 100%); }</style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+    <style>
+      body {
+        background: radial-gradient(circle at top, #0c2430 0%, #020617 50%, #000000 100%);
+        font-family: 'Raleway', sans-serif;
+      }
+      @keyframes twinkle { 0%, 100% { opacity: 0.2; } 50% { opacity: 1; } }
+      .star { position: absolute; border-radius: 50%; background: white; animation: twinkle var(--dur,3s) ease-in-out infinite; animation-delay: var(--delay,0s); }
+      @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+      .floating { animation: float 5s ease-in-out infinite; }
+      .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+    </style>
   </head>
   <body class="min-h-screen text-white px-4 py-8">
-    <div class="max-w-3xl mx-auto space-y-6">
-      <nav class="flex gap-4 text-sm">
-        <a href="/nhi/races/reptilians" class="text-teal-300 hover:underline">← Reptilian Groups</a>
-        <a href="/nhi/races" class="text-teal-300 hover:underline">Race Index</a>
-        <a href="/nhi" class="text-teal-300 hover:underline">NHI</a>
-        <a href="/home" class="text-teal-300 hover:underline">Home</a>
-      </nav>
+    <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+    {% include "nav.html" %}
+    <div class="relative z-10 max-w-3xl mx-auto space-y-6 pt-6">
 
       <h1 class="text-3xl font-bold">🪬 Nagas</h1>
       <p class="text-teal-100/70 leading-relaxed">The Nagas represent one of the most extensively documented intelligent non-human serpentine beings in the world's religious and mythological literature — appearing with extraordinary consistency across Hindu, Buddhist, Jain, Southeast Asian, and Central Asian traditions spanning over three millennia of written record and substantially longer oral traditions. The Naga tradition describes a race or class of semi-divine serpent beings of immense intelligence, magical power, and social complexity: rulers of subterranean and underwater kingdoms, shapeshifters capable of appearing human, keepers of hidden knowledge, and a civilization that interacted regularly with human kings, sages, and deities. In the context of modern NHI research, the Naga tradition represents one of the best-documented and most internally consistent historical contact archives on Earth.</p>
@@ -102,5 +115,15 @@
         <p class="text-xs text-teal-100/50 italic">This profile documents the Naga tradition as recorded across Hindu, Buddhist, and Southeast Asian sources, and notes parallels with modern NHI contact literature. The mythological record is presented as authentic historical documentation; no conclusions about the literal nature of the described beings are made herein.</p>
       </div>
     </div>
+    <script>
+      const sf = document.getElementById('starfield');
+      for (let i = 0; i < 160; i++) {
+        const s = document.createElement('div');
+        s.className = 'star';
+        const size = Math.random() * 2 + 0.5;
+        s.style.cssText = `width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--dur:${2+Math.random()*4}s;--delay:${Math.random()*5}s;opacity:${0.2+Math.random()*0.8};`;
+        sf.appendChild(s);
+      }
+    </script>
   </body>
 </html>

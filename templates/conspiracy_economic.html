@@ -4,15 +4,31 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>Economic &amp; Financial Conspiracies — Conspiracy Theories — Anomalous Inquiry</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta property="og:title" content="Economic &amp; Financial Conspiracies — Conspiracy Theories — Anomalous Inquiry" />
+    <meta property="og:description" content="An archive of alleged and documented conspiracies surrounding financial systems, banking institutions, wealth concentration, and economic crises. Financial..." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://esoteric-wisdom.onrender.com/og-image.png" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>body { background: radial-gradient(circle at top, #0c2430 0, #020617 50%, #000000 100%); }</style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+    <style>
+      body {
+        background: radial-gradient(circle at top, #0c2430 0%, #020617 50%, #000000 100%);
+        font-family: 'Raleway', sans-serif;
+      }
+      @keyframes twinkle { 0%, 100% { opacity: 0.2; } 50% { opacity: 1; } }
+      .star { position: absolute; border-radius: 50%; background: white; animation: twinkle var(--dur,3s) ease-in-out infinite; animation-delay: var(--delay,0s); }
+      @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+      .floating { animation: float 5s ease-in-out infinite; }
+      .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+    </style>
   </head>
   <body class="min-h-screen text-white px-4 py-8">
-    <div class="max-w-5xl mx-auto space-y-8">
-      <header class="flex items-center justify-between">
-        <h1 class="text-3xl font-bold">💰 Economic &amp; Financial Conspiracies</h1>
-        <a href="/conspiracy" class="text-teal-300 hover:underline text-sm">← Conspiracy Theories</a>
-      </header>
+    <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+    {% include "nav.html" %}
+    <div class="relative z-10 max-w-5xl mx-auto space-y-8 pt-6">
+      <h1 class="text-3xl font-bold">💰 Economic &amp; Financial Conspiracies</h1>
       <p class="text-teal-100/70 max-w-3xl">An archive of alleged and documented conspiracies surrounding financial systems, banking institutions, wealth concentration, and economic crises. Financial systems are among the most opaque and consequential areas of modern governance; documented cases of market manipulation, cartel behavior, regulatory capture, and coordinated corporate fraud provide historical grounding for examining broader theories of financial conspiracy. This section examines both confirmed cases and theories that extend beyond available evidence.</p>
 
       <div class="space-y-6">
@@ -79,5 +95,15 @@
         <p class="text-xs text-teal-100/50 italic">Financial conspiracy theories exist on a spectrum from documented corporate crime (cartels, market manipulation, fraud) to structural analysis of elite network formation to unfounded theories of deliberate global economic control. This section maintains that spectrum rather than collapsing the distinction between documented and unverified. The historical record of financial fraud makes blanket dismissal of financial conspiracy claims epistemically unjustified.</p>
       </div>
     </div>
+    <script>
+      const sf = document.getElementById('starfield');
+      for (let i = 0; i < 160; i++) {
+        const s = document.createElement('div');
+        s.className = 'star';
+        const size = Math.random() * 2 + 0.5;
+        s.style.cssText = `width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--dur:${2+Math.random()*4}s;--delay:${Math.random()*5}s;opacity:${0.2+Math.random()*0.8};`;
+        sf.appendChild(s);
+      }
+    </script>
   </body>
 </html>
