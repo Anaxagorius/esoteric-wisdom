@@ -9,6 +9,7 @@ use crate::templates::{
     HawaiianHunaTemplate,
     InuitAngakkuqTemplate,
     MayaReligionTemplate,
+    OlmecReligionTemplate,
 };
 use crate::state::AppState;
 
@@ -22,6 +23,7 @@ pub fn routes() -> Router<AppState> {
         .route("/hawaiian-huna", get(hawaiian_huna))
         .route("/inuit-angakkuq", get(inuit_angakkuq))
         .route("/maya-religion", get(maya_religion))
+        .route("/olmec-religion", get(olmec_religion))
 }
 
 async fn hub() -> impl IntoResponse {
@@ -54,4 +56,8 @@ async fn inuit_angakkuq() -> impl IntoResponse {
 
 async fn maya_religion() -> impl IntoResponse {
     HtmlTemplate(MayaReligionTemplate)
+}
+
+async fn olmec_religion() -> impl IntoResponse {
+    HtmlTemplate(OlmecReligionTemplate)
 }
