@@ -121,6 +121,22 @@ pub struct HinduismTemplate;
 pub struct JudaismTemplate;
 
 #[derive(Template)]
+#[template(path = "christianity.html")]
+pub struct ChristianityTemplate;
+
+#[derive(Template)]
+#[template(path = "old_testament.html")]
+pub struct OldTestamentTemplate;
+
+#[derive(Template)]
+#[template(path = "new_testament.html")]
+pub struct NewTestamentTemplate;
+
+#[derive(Template)]
+#[template(path = "king_james_version.html")]
+pub struct KingJamesVersionTemplate;
+
+#[derive(Template)]
 #[template(path = "remote_viewing.html")]
 pub struct RemoteViewingTemplate;
 
