@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Islam — Esoteric Wisdom</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <meta property="og:title" content="Islam — Esoteric Wisdom" />
+  <meta property="og:description" content="The major branches and movements of Islam — Sunni, Shia, Ibadi, Sufism, Salafism, and the diverse expressions of the world's second-largest religion." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://esoteric-wisdom.onrender.com/islam" />
+  <meta property="og:image" content="https://esoteric-wisdom.onrender.com/og-image.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <style>
+    body { font-family: 'Raleway', sans-serif; }
+    .font-cinzel { font-family: 'Cinzel Decorative', cursive; }
+    @keyframes twinkle { 0%,100%{opacity:0.2;transform:scale(1);} 50%{opacity:1;transform:scale(1.4);} }
+    @keyframes float { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-12px);} }
+    @keyframes shimmer { 0%{background-position:0% 50%;} 100%{background-position:200% 50%;} }
+    .star { position:absolute; width:2px; height:2px; background:white; border-radius:50%; animation:twinkle 3s infinite; }
+    .aurora-text {
+      background: linear-gradient(90deg, #6ee7b7, #34d399, #10b981, #a7f3d0, #6ee7b7);
+      background-size: 300% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 6s linear infinite;
+    }
+    .floating { animation: float 4s ease-in-out infinite; }
+    .nav-link { position:relative; transition:all 0.3s; }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: #34d399;
+      transition: width 0.3s;
+    }
+    .nav-link:hover::after { width: 100%; }
+    .islam-card {
+      background: linear-gradient(135deg, rgba(0,60,40,0.18), rgba(0,40,25,0.10));
+      border: 1px solid rgba(52,211,153,0.25);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      transition: all 0.3s;
+    }
+    .islam-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 0 24px rgba(52,211,153,0.20);
+      border-color: rgba(52,211,153,0.5);
+    }
+  </style>
+</head>
+<body class="min-h-screen text-emerald-100 overflow-x-hidden"
+      style="background: radial-gradient(ellipse at top, #001a0f 0%, #002b1a 25%, #000f08 60%, #000000 100%);">
+
+  <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+
+  {% include "nav.html" %}
+
+  <div class="relative z-10 max-w-6xl mx-auto space-y-10 pt-6 px-4 pb-12">
+
+    <!-- HERO -->
+    <section class="text-center py-16 space-y-6">
+      <div class="text-7xl floating">☪️</div>
+      <h1 class="font-cinzel text-4xl md:text-6xl font-bold aurora-text leading-tight">
+        Islam
+      </h1>
+      <p class="max-w-3xl mx-auto text-emerald-200/80 text-lg leading-relaxed">
+        The world's second-largest religion, arising from the revelations received by the Prophet Muhammad
+        in seventh-century Arabia — a tradition of radical monotheism, revealed law, prophetic example,
+        and a rich diversity of branches, schools, and mystical currents that spans fourteen centuries.
+      </p>
+    </section>
+
+    <!-- SECTION 1: FOUNDATIONS -->
+    <section class="rounded-2xl p-8 space-y-6"
+             style="background: linear-gradient(135deg, rgba(0,60,40,0.12), rgba(0,40,25,0.07));">
+      <h2 class="font-cinzel text-2xl text-emerald-300 text-center tracking-wide">
+        Foundations of the Faith
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm text-emerald-100/80 leading-relaxed">
+        <div class="space-y-4">
+          <p>
+            Islam is rooted in the conviction that there is one God — <strong class="text-emerald-300">Allah</strong>
+            — and that the Prophet <strong class="text-emerald-300">Muhammad</strong> (c. 570–632 CE) is the
+            final messenger in a long line of prophets including Abraham, Moses, and Jesus. The faith rests
+            upon two primary sources: the <strong class="text-emerald-300">Qur'an</strong>, understood as
+            the direct word of God revealed to Muhammad, and the <strong class="text-emerald-300">Sunnah</strong>,
+            the body of prophetic practice and saying recorded in the Hadith literature.
+          </p>
+          <p>
+            The Five Pillars — the declaration of faith (<em>Shahada</em>), ritual prayer (<em>Salah</em>),
+            obligatory almsgiving (<em>Zakat</em>), fasting during Ramadan (<em>Sawm</em>), and pilgrimage
+            to Mecca (<em>Hajj</em>) — provide the structural framework of Muslim practice across all
+            branches and traditions. These shared obligations create a profound unity across an otherwise
+            extraordinarily diverse global community of roughly 1.8 billion people.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <p>
+            The early Muslim community rapidly expanded beyond Arabia into Persia, North Africa, Central
+            Asia, and the Iberian Peninsula, absorbing and transforming an enormous diversity of cultural
+            and intellectual traditions in the process. From this encounter emerged the great flowering of
+            Islamic philosophy, science, jurisprudence, and mysticism that preserved and advanced classical
+            knowledge through the European Dark Ages, producing figures of the stature of Avicenna, Averroes,
+            and Al-Ghazali.
+          </p>
+          <p>
+            The question of legitimate leadership after the Prophet's death in 632 CE became the central
+            fault line from which the major branches of Islam emerged — a division that was simultaneously
+            political, theological, and profoundly spiritual, and whose reverberations continue to shape
+            the Muslim world today.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: MAIN BRANCHES -->
+    <section class="space-y-6">
+      <h2 class="font-cinzel text-2xl text-emerald-300 text-center tracking-wide">Main Branches</h2>
+      <p class="text-center text-emerald-200/60 text-sm max-w-2xl mx-auto">
+        Three principal streams emerged from the early Muslim community, each with its own theology,
+        jurisprudence, and spiritual lineage.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+
+        <div class="islam-card space-y-3">
+          <div class="text-4xl mb-2">🕌</div>
+          <h3 class="font-cinzel text-lg text-emerald-300">Sunni Islam</h3>
+          <p class="text-emerald-300/70 text-xs tracking-wide">≈ 85–90% of Muslims worldwide</p>
+          <p class="text-emerald-100/70 text-sm leading-relaxed">
+            The largest branch, Sunni Islam holds that the Prophet's successors should be chosen by
+            community consensus. Its defining emphasis is on the <strong class="text-emerald-300">Sunnah</strong>
+            — the recorded example and practice of the Prophet — as the binding guide for Muslim life.
+          </p>
+          <p class="text-emerald-100/70 text-sm leading-relaxed">
+            Sunni jurisprudence is organised into four major schools of law (<em>madhhabs</em>), which differ
+            in their legal methodology and interpretation whilst sharing the same core theological convictions:
+          </p>
+          <ul class="text-emerald-100/65 text-sm space-y-1 ml-3 list-disc list-inside">
+            <li><strong class="text-emerald-300">Hanafi</strong> — founded by Abu Hanifa (c. 699–767); predominant in South Asia, Turkey, and Central Asia</li>
+            <li><strong class="text-emerald-300">Maliki</strong> — founded by Malik ibn Anas (711–795); predominant in North and West Africa</li>
+            <li><strong class="text-emerald-300">Shafi'i</strong> — founded by al-Shafi'i (767–820); widespread in East Africa, Southeast Asia, and the Levant</li>
+            <li><strong class="text-emerald-300">Hanbali</strong> — founded by Ahmad ibn Hanbal (780–855); predominant in Arabia</li>
+          </ul>
+        </div>
+
+        <div class="islam-card space-y-3">
+          <div class="text-4xl mb-2">🌙</div>
+          <h3 class="font-cinzel text-lg text-emerald-300">Shia Islam</h3>
+          <p class="text-emerald-300/70 text-xs tracking-wide">≈ 10–15% of Muslims worldwide</p>
+          <p class="text-emerald-100/70 text-sm leading-relaxed">
+            Shia Islam holds that legitimate leadership of the Muslim community should have passed through
+            the Prophet's family, beginning with his cousin and son-in-law <strong class="text-emerald-300">Ali ibn Abi Talib</strong>.
+            Shia theology places great weight on the role of the <em>Imam</em> — a divinely guided figure
+            whose authority is both spiritual and political.
+          </p>
+          <p class="text-emerald-100/70 text-sm leading-relaxed">The principal Shia branches are:</p>
+          <ul class="text-emerald-100/65 text-sm space-y-1 ml-3 list-disc list-inside">
+            <li><strong class="text-emerald-300">Twelvers (Ithnā 'Ashariyyah)</strong> — the largest Shia group, recognising twelve Imams; predominant in Iran and Iraq</li>
+            <li><strong class="text-emerald-300">Ismailis</strong> — follow a different line of Imams, with a rich tradition of esoteric Qur'anic interpretation (<em>ta'wil</em>)</li>
+            <li><strong class="text-emerald-300">Zaidis</strong> — the closest in theology to Sunni Islam; found mainly in Yemen</li>
+          </ul>
+        </div>
+
+        <div class="islam-card space-y-3">
+          <div class="text-4xl mb-2">🕯️</div>
+          <h3 class="font-cinzel text-lg text-emerald-300">Ibadi Islam</h3>
+          <p class="text-emerald-300/70 text-xs tracking-wide">Kharijite lineage · Found mainly in Oman</p>
+          <p class="text-emerald-100/70 text-sm leading-relaxed">
+            Ibadi Islam descends from the early <strong class="text-emerald-300">Kharijite</strong> movement —
+            one of the first divisions in Islamic history, which held that any Muslim of sufficient piety
+            could lead the community, regardless of tribal or family descent. The Kharijites became
+            notorious for extremism, but the Ibadis represent a distinct and far more moderate surviving
+            branch of this lineage.
+          </p>
+          <p class="text-emerald-100/70 text-sm leading-relaxed">
+            Ibadi theology is characterised by its emphasis on communal accountability, its rejection
+            of both Sunni and Shia claims to exclusive legitimacy, and its independent legal and theological
+            tradition. Today Ibadism is found primarily in Oman, where it has shaped a distinctive form
+            of Islamic governance and scholarship for over a millennium.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 3: MOVEMENTS & TRADITIONS -->
+    <section class="rounded-2xl p-8 space-y-6"
+             style="background: linear-gradient(135deg, rgba(0,60,40,0.12), rgba(0,40,25,0.07));">
+      <h2 class="font-cinzel text-2xl text-emerald-300 text-center tracking-wide">
+        Movements &amp; Traditions
+      </h2>
+      <p class="text-center text-emerald-200/60 text-sm max-w-2xl mx-auto">
+        Beyond the primary branches, several influential movements and interpretive traditions have shaped
+        Islamic thought and practice across the centuries.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+        <div class="islam-card space-y-3">
+          <div class="text-3xl mb-2">🌹</div>
+          <h3 class="font-cinzel text-base text-emerald-300">Sufism (Tasawwuf)</h3>
+          <p class="text-emerald-100/70 text-sm leading-relaxed">
+            The mystical and contemplative dimension of Islam, Sufism (<em>Tasawwuf</em>) exists as a
+            living stream within both Sunni and Shia communities rather than as a separate sect. Its
+            central concern is <em>ihsan</em> — worshipping God as though you see Him — and the inner
+            purification of the self as the path to direct knowledge of the Divine.
+          </p>
+          <p class="text-emerald-100/70 text-sm leading-relaxed">
+            Through its <em>tariqas</em> (orders) — Qadiriyya, Naqshbandiyya, Shadhiliyya, Mevlevi,
+            and many others — Sufism developed a rich tradition of poetry, music, sacred dance, and
+            contemplative practice, producing masters of the stature of Rumi, Ibn Arabi, Rabia al-Adawiyya,
+            and Al-Hallaj.
+          </p>
+          <a href="/middle-eastern-esotericism/sufism" class="text-emerald-400 text-xs font-semibold tracking-wider hover:text-emerald-300 transition-colors">Explore Sufism →</a>
+        </div>
+
+        <div class="islam-card space-y-3">
+          <div class="text-3xl mb-2">📖</div>
+          <h3 class="font-cinzel text-base text-emerald-300">Salafism</h3>
+          <p class="text-emerald-100/70 text-sm leading-relaxed">
+            A reform movement within Sunni Islam advocating a return to the practices and beliefs of the
+            <em>Salaf</em> — the earliest generations of Muslims. Salafism holds that centuries of
+            jurisprudential elaboration, folk practice, and mystical innovation have obscured the original
+            simplicity and purity of the Prophet's community.
+          </p>
+          <p class="text-emerald-100/70 text-sm leading-relaxed">
+            Salafism encompasses a wide spectrum of positions — from quietist scholars who avoid political
+            involvement, to activist reformers, to more militant tendencies. It has been particularly
+            influential in the Arabian Peninsula, and its relationship with Wahhabism (the dominant
+            interpretation in Saudi Arabia) is a matter of scholarly debate.
+          </p>
+        </div>
+
+        <div class="islam-card space-y-3">
+          <div class="text-3xl mb-2">⭐</div>
+          <h3 class="font-cinzel text-base text-emerald-300">Ahmadiyya</h3>
+          <p class="text-emerald-100/70 text-sm leading-relaxed">
+            Founded in 1889 by <strong class="text-emerald-300">Mirza Ghulam Ahmad</strong> in the Punjab
+            region of British India, the Ahmadiyya movement holds distinctive beliefs about prophethood —
+            specifically, that Ahmad was a promised reformer and, in some sense, a prophet. Ahmadis
+            consider themselves Muslim and follow Islamic practice; however, most Sunni and Shia scholars
+            regard them as outside the bounds of mainstream Islam, a position enshrined in law in several
+            Muslim-majority countries.
+          </p>
+          <p class="text-emerald-100/70 text-sm leading-relaxed">
+            Despite facing significant persecution, the Ahmadiyya community has grown to tens of millions
+            worldwide, with a notable emphasis on peaceful propagation, interfaith dialogue, and community
+            service.
+          </p>
+        </div>
+
+        <div class="islam-card space-y-3">
+          <div class="text-3xl mb-2">📜</div>
+          <h3 class="font-cinzel text-base text-emerald-300">Quranism</h3>
+          <p class="text-emerald-100/70 text-sm leading-relaxed">
+            Quranists hold that the Qur'an alone is the sufficient and authoritative source of Islamic
+            guidance, rejecting or significantly minimising the authority of the Hadith — the recorded
+            sayings and actions of the Prophet Muhammad. This position entails a radical rethinking of
+            many traditional Islamic practices and legal rulings, since much of Islamic law (<em>fiqh</em>)
+            is derived from Hadith literature rather than the Qur'an directly.
+          </p>
+          <p class="text-emerald-100/70 text-sm leading-relaxed">
+            Quranism is a minority position and exists as a diverse intellectual movement rather than a
+            unified denomination. Its practitioners range from rationalist modernisers to mystically
+            inclined interpreters who find in the Qur'an alone an inexhaustible depth of spiritual meaning.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 4: CONNECTIONS & THEMES -->
+    <section class="rounded-2xl p-8 space-y-5"
+             style="background: linear-gradient(135deg, rgba(0,60,40,0.12), rgba(0,40,25,0.07));">
+      <h2 class="font-cinzel text-2xl text-emerald-300 text-center tracking-wide">Unity Within Diversity</h2>
+      <div class="max-w-4xl mx-auto space-y-5 text-sm text-emerald-100/80 leading-relaxed">
+        <p>
+          <strong class="text-emerald-300">Tawhid — the absolute unity of God</strong> — is the theological
+          bedrock upon which every branch of Islam stands, however different their expressions of that unity
+          may be. For Sunni jurists, tawhid is expressed through rigorous adherence to divine law; for Shia
+          theologians, through the spiritual authority of the Imam who interprets that law for each age; for
+          Sufi mystics, through the direct experiential annihilation of the self in God; for Salafi reformers,
+          through the purification of all additions that obscure the pristine divine command. The differences
+          are real and historically significant, but they orbit a common gravitational centre.
+        </p>
+        <p>
+          <strong class="text-emerald-300">The Arabic language and the Qur'an</strong> function as extraordinary
+          forces for unity across this diversity. Unlike most scriptures, the Qur'an has never been
+          liturgically translated — prayers across the Muslim world are performed in the same Arabic text,
+          the same words in the same order that have bound Muslim communities together across fourteen
+          centuries of political upheaval, geographical dispersion, and theological controversy. The
+          experience of millions of voices reciting the same words simultaneously during the five daily
+          prayers, or during Ramadan's nightly <em>tarawih</em>, is one of the most remarkable expressions
+          of collective spiritual practice in human history.
+        </p>
+        <p>
+          <strong class="text-emerald-300">The Hajj and sacred geography</strong> maintain a physical and
+          symbolic centre that no other world religion possesses to quite the same degree. Mecca — and
+          within it the <em>Ka'ba</em>, understood as the earthly counterpart of the divine throne — draws
+          nearly three million pilgrims annually from every nation, language, and social class, all dressed
+          in identical white garments. The pilgrimage dissolves ordinary social distinctions and enacts,
+          in the body, the theological conviction that all human beings stand equally before God.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION 5: FURTHER EXPLORATION -->
+    <section class="space-y-6">
+      <h2 class="font-cinzel text-2xl text-emerald-300 text-center tracking-wide">Further Exploration</h2>
+      <p class="text-center text-emerald-200/60 text-sm max-w-2xl mx-auto">
+        Scholars whose work illuminates the breadth and depth of the Islamic tradition with rigour,
+        sensitivity, and genuine scholarly brilliance.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+        <div class="islam-card">
+          <h3 class="font-cinzel text-base text-emerald-300 mb-1">Seyyed Hossein Nasr</h3>
+          <p class="text-emerald-300/70 text-xs mb-2 tracking-wide">1933– · Philosopher &amp; Scholar of Islamic Thought</p>
+          <p class="text-emerald-100/70 text-sm leading-relaxed">
+            Iranian-American philosopher and one of the foremost scholars of Islamic intellectual history,
+            Sufism, and the perennial philosophy. Nasr spent decades at Harvard and George Washington
+            University, producing works that explain Islamic spirituality to Western audiences without
+            reducing it. His <em>Ideals and Realities of Islam</em> (1966) remains one of the clearest
+            introductions to the tradition in English. His multivolume <em>The Study Quran</em> (2015)
+            is the most comprehensive traditional commentary on the Qur'an available in English.
+          </p>
+        </div>
+
+        <div class="islam-card">
+          <h3 class="font-cinzel text-base text-emerald-300 mb-1">Marshall Hodgson</h3>
+          <p class="text-emerald-300/70 text-xs mb-2 tracking-wide">1922–1968 · Historian of World Islam</p>
+          <p class="text-emerald-100/70 text-sm leading-relaxed">
+            American historian at the University of Chicago whose posthumously published
+            <em>The Venture of Islam</em> (3 vols., 1974) remains the most ambitious and intellectually
+            rigorous history of Islamic civilisation ever written in English. Hodgson coined the term
+            "Islamicate" to describe the broader cultural world shaped by Islamic civilisation beyond its
+            strictly religious sphere, and his structural analysis of Islamic history across its full
+            fourteen-century arc set the standard for all subsequent scholarship.
+          </p>
+        </div>
+
+        <div class="islam-card">
+          <h3 class="font-cinzel text-base text-emerald-300 mb-1">William Chittick</h3>
+          <p class="text-emerald-300/70 text-xs mb-2 tracking-wide">1943– · Scholar of Islamic Mysticism</p>
+          <p class="text-emerald-100/70 text-sm leading-relaxed">
+            American scholar and the foremost English-language authority on Ibn Arabi and the metaphysical
+            tradition of Islamic mysticism. Chittick's translations and studies — including
+            <em>The Sufi Path of Knowledge</em> (1989) and <em>The Self-Disclosure of God</em> (1998)
+            — have made the dense speculative metaphysics of the greatest Sufi thinker accessible to
+            a general scholarly audience. His <em>Sufism: A Beginner's Guide</em> (2000) offers a
+            superb entry point for the newcomer.
+          </p>
+        </div>
+
+        <div class="islam-card">
+          <h3 class="font-cinzel text-base text-emerald-300 mb-1">Fazlur Rahman</h3>
+          <p class="text-emerald-300/70 text-xs mb-2 tracking-wide">1919–1988 · Islamic Philosopher &amp; Reformer</p>
+          <p class="text-emerald-100/70 text-sm leading-relaxed">
+            Pakistani-American scholar at the University of Chicago and one of the most rigorous and
+            controversial Muslim reformist thinkers of the twentieth century. Rahman's
+            <em>Islam</em> (1966) and <em>Major Themes of the Qur'an</em> (1980) argued for a historically
+            contextualised reading of Islamic sources that could address the challenges of modernity
+            without abandoning the tradition's core spiritual and ethical commitments. His work remains
+            a touchstone for progressive Islamic scholarship.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+
+  <script>
+    const sf = document.getElementById('starfield');
+    for (let i = 0; i < 120; i++) {
+      const s = document.createElement('div');
+      s.className = 'star';
+      s.style.cssText = `left:${Math.random()*100}%;top:${Math.random()*100}%;animation-delay:${Math.random()*4}s;animation-duration:${2+Math.random()*3}s;opacity:${0.2+Math.random()*0.8}`;
+      sf.appendChild(s);
+    }
+  </script>
+</body>
+</html>

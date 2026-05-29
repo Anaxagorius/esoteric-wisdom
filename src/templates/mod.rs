@@ -121,6 +121,10 @@ pub struct HinduismTemplate;
 pub struct JudaismTemplate;
 
 #[derive(Template)]
+#[template(path = "islam.html")]
+pub struct IslamTemplate;
+
+#[derive(Template)]
 #[template(path = "christianity.html")]
 pub struct ChristianityTemplate;
 
