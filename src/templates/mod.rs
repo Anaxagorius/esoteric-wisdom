@@ -281,6 +281,10 @@ pub struct HawaiianHunaTemplate;
 pub struct InuitAngakkuqTemplate;
 
 #[derive(Template)]
+#[template(path = "maya_religion.html")]
+pub struct MayaReligionTemplate;
+
+#[derive(Template)]
 #[template(path = "middle_eastern_esotericism.html")]
 pub struct MiddleEasternEsotericismTemplate;
 
@@ -570,6 +574,18 @@ pub struct RomanPantheonTemplate<'a> {
 #[template(path = "roman_deity.html")]
 pub struct RomanDeityTemplate<'a> {
     pub deity: &'a crate::mythologies_cosmologies::RomanDeity,
+}
+
+#[derive(Template)]
+#[template(path = "norse_pantheon.html")]
+pub struct NorsePantheonTemplate<'a> {
+    pub deities: &'a [crate::mythologies_cosmologies::NorseDeity],
+}
+
+#[derive(Template)]
+#[template(path = "norse_deity.html")]
+pub struct NorseDeityTemplate<'a> {
+    pub deity: &'a crate::mythologies_cosmologies::NorseDeity,
 }
 
 #[derive(Template)]
