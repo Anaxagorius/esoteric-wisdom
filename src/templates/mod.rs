@@ -285,6 +285,10 @@ pub struct InuitAngakkuqTemplate;
 pub struct MayaReligionTemplate;
 
 #[derive(Template)]
+#[template(path = "olmec_religion.html")]
+pub struct OlmecReligionTemplate;
+
+#[derive(Template)]
 #[template(path = "middle_eastern_esotericism.html")]
 pub struct MiddleEasternEsotericismTemplate;
 
