@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>John Keel — UFO Personalities — Anomalous Inquiry</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta property="og:title" content="John Keel — UFO Personalities" />
+    <meta property="og:description" content="Author of The Mothman Prophecies and originator of the ultraterrestrial hypothesis — UAP as native Earth intelligence." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://esoteric-wisdom.onrender.com/og-image.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+    <style>
+      body { background: radial-gradient(circle at top, #1a0a00 0%, #020617 50%, #000000 100%); font-family: 'Raleway', sans-serif; }
+      @keyframes twinkle { 0%, 100% { opacity: 0.2; } 50% { opacity: 1; } }
+      .star { position: absolute; border-radius: 50%; background: white; animation: twinkle var(--dur,3s) ease-in-out infinite; animation-delay: var(--delay,0s); }
+      .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+    </style>
+  </head>
+  <body class="min-h-screen text-white px-4 py-8">
+    <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+    {% include "nav.html" %}
+    <div class="relative z-10 max-w-3xl mx-auto space-y-6 pt-6">
+      <a href="/uap/personalities" class="text-orange-400/70 hover:text-orange-300 text-sm">← Back to UFO Personalities</a>
+      <div class="text-center py-4">
+        <div class="text-6xl mb-2">🦅</div>
+        <h1 class="text-3xl font-bold font-cinzel text-orange-300">John Keel</h1>
+        <p class="text-orange-200/60 mt-1 italic">"The Ultraterrestrial Theorist" · 1930–2009</p>
+      </div>
+      <div class="bg-white/5 border border-orange-500/40 rounded-2xl p-6 backdrop-blur-md space-y-4 text-teal-100/85 leading-relaxed">
+        <h2 class="text-xl font-semibold text-orange-300">Brief Biography</h2>
+        <p>John Alva Keel (born Alva John Kiehle) was born on <strong class="text-orange-200">25 March 1930</strong> in Hornell, New York. He pursued a career as a stage magician, journalist, and writer before his investigation of Fortean phenomena turned into a lifelong obsession. He served in the U.S. Army in the early 1950s, spending time in Egypt, where he encountered folk traditions about mysterious aerial phenomena that his subsequent research suggested had deep historical roots. He wrote prolifically for pulp magazines, later moving into serious non-fiction investigation.</p>
+        <p>Keel is best known for his on-the-ground investigation of the <strong class="text-orange-200">Mothman phenomenon</strong> in Point Pleasant, West Virginia (1966–1967) — documented in <em>The Mothman Prophecies</em> (1975, adapted into a 2002 film) — and for his theorising in books including <em>UFOs: Operation Trojan Horse</em> (1970) and <em>The Eighth Tower</em> (1975), which advanced the most radical hypothesis in the UFO literature. He died on <strong class="text-orange-200">3 July 2009</strong> in New York City.</p>
+      </div>
+      <div class="bg-white/5 border border-orange-500/30 rounded-2xl p-6 backdrop-blur-md space-y-4 text-teal-100/85 leading-relaxed">
+        <h2 class="text-xl font-semibold text-orange-300">The Ultraterrestrial Hypothesis</h2>
+        <p>Keel's central theoretical contribution was the <strong class="text-orange-200">ultraterrestrial hypothesis</strong>: the proposal that UAP are not visitors from other planets but are manifestations of an intelligence that has shared the Earth with humanity throughout history — possibly a non-biological entity that exists in a frequency band of the electromagnetic spectrum largely invisible to human senses, and which has the ability to manipulate human perception, assume temporary physical form, and orchestrate elaborate staged encounters that serve unknown purposes.</p>
+        <p>This hypothesis — anticipating what Jacques Vallée would call the "control system" hypothesis — proposed that the phenomenon is neither benign nor malevolent in any simple sense, but follows an agenda that is alien in a far more radical sense than interplanetary travel: an agenda that has shaped human religion, mythology, culture, and history throughout recorded time, manifesting as angels, demons, fairy folk, and now "extraterrestrials" in successive cultural eras.</p>
+        <p>Keel's <em>The Eighth Tower</em> is his most ambitious work — a synthesis of quantum physics, consciousness research, and his investigation data — arguing that the universe is permeated by a "superspectrum" of energies that constitute a vast, intelligent system of which human consciousness is a part, and that the entities manifesting as UAP are part of this system rather than physical visitors from elsewhere in conventional space.</p>
+        <h2 class="text-orange-300 text-xl font-semibold mt-4">The Mothman and the Limits of Investigation</h2>
+        <p>Keel's Mothman investigation is a masterclass in field investigation of high-strangeness phenomena — combining UAP sightings, entity encounters, phone anomalies, Men in Black reports, and the eventual Silver Bridge disaster (December 1967) into a coherent narrative that suggests a purposive pattern behind what seemed to be disconnected events. His willingness to take all anomalous reports seriously — without the filtering that both sceptics and believers apply — and his recognition that the phenomenon's apparent intelligence extends to manipulating and deceiving investigators make his methodology uniquely valuable and uniquely unsettling.</p>
+        <p>Keel acknowledged that his own investigations involved phone manipulation, prophetic "Indrid Cold" contact reports, and what he described as deliberate staging of encounters for his benefit — suggesting an entity that was aware of and responding to his investigation. This meta-level awareness of the investigator by the investigated is one of the most troubling and theoretically significant aspects of the phenomenon that subsequent researchers including Vallée and Jeffrey Kripal have grappled with.</p>
+      </div>
+      <div class="mt-4"><a href="/uap/personalities" class="text-orange-400/70 hover:text-orange-300 text-sm">← Back to UFO Personalities</a></div>
+    </div>
+    <script>
+      const sf = document.getElementById('starfield');
+      for (let i = 0; i < 160; i++) { const s = document.createElement('div'); s.className = 'star'; const size = Math.random() * 2 + 0.5; s.style.cssText = `width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--dur:${2+Math.random()*4}s;--delay:${Math.random()*5}s;opacity:${0.2+Math.random()*0.8};`; sf.appendChild(s); }
+    </script>
+  </body>
+</html>

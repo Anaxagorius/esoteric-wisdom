@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Bob Lazar — UFO Personalities — Anomalous Inquiry</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta property="og:title" content="Bob Lazar — UFO Personalities" />
+    <meta property="og:description" content="Self-described physicist who claims to have reverse-engineered alien craft propulsion at a facility called S-4, near Area 51." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://esoteric-wisdom.onrender.com/og-image.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+    <style>
+      body { background: radial-gradient(circle at top, #0a1a0a 0%, #020617 50%, #000000 100%); font-family: 'Raleway', sans-serif; }
+      @keyframes twinkle { 0%, 100% { opacity: 0.2; } 50% { opacity: 1; } }
+      .star { position: absolute; border-radius: 50%; background: white; animation: twinkle var(--dur,3s) ease-in-out infinite; animation-delay: var(--delay,0s); }
+      .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+    </style>
+  </head>
+  <body class="min-h-screen text-white px-4 py-8">
+    <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+    {% include "nav.html" %}
+    <div class="relative z-10 max-w-3xl mx-auto space-y-6 pt-6">
+      <a href="/uap/personalities" class="text-green-400/70 hover:text-green-300 text-sm">← Back to UFO Personalities</a>
+      <div class="text-center py-4">
+        <div class="text-6xl mb-2">⚗️</div>
+        <h1 class="text-3xl font-bold font-cinzel text-green-300">Bob Lazar</h1>
+        <p class="text-green-200/60 mt-1 italic">"The S-4 Physicist" · b. 1959</p>
+      </div>
+      <div class="bg-white/5 border border-green-500/40 rounded-2xl p-6 backdrop-blur-md space-y-4 text-teal-100/85 leading-relaxed">
+        <h2 class="text-xl font-semibold text-green-300">Brief Biography</h2>
+        <p>Robert Scott Lazar was born on <strong class="text-green-200">26 January 1959</strong> in Coral Gables, Florida. He has claimed academic credentials at MIT and Caltech — claims that have never been verified from those institutions, though he has attributed this to deliberate erasure of his records. He worked at Fairchild Industries in their laser laboratory, and can be found in a Los Alamos National Laboratory phone directory from the period when he claims to have worked there. He later founded and operates <strong class="text-green-200">United Nuclear Scientific Equipment and Supplies</strong> in Laingsburg, Michigan, a legitimate scientific supply company.</p>
+        <p>In 1989, Lazar told journalist George Knapp that he had been recruited from Los Alamos to work at a classified facility he called <strong class="text-green-200">S-4</strong> — approximately 15 miles south of the main Area 51 (Groom Lake) complex, at Papoose Lake — where his assignment was to study the propulsion system of one of nine alien spacecraft stored in hangars built into the base of a mountain. His account, broadcast initially with his identity concealed, later in full, created the Area 51 phenomenon and is still the most specific and technically detailed claim of ongoing reverse-engineering activity ever made by a named individual on record.</p>
+      </div>
+      <div class="bg-white/5 border border-green-500/30 rounded-2xl p-6 backdrop-blur-md space-y-4 text-teal-100/85 leading-relaxed">
+        <h2 class="text-xl font-semibold text-green-300">The S-4 Account</h2>
+        <p>Lazar's account of S-4 is detailed and technically specific. He described nine disc-shaped craft of varying designs stored in hangars. He was assigned to study one — which he called the "Sport Model" — with a propulsion system based on <strong class="text-green-200">element 115</strong> (moscovium, which did not officially exist in 1989 and was not synthesised until 2003). He described the reactor as a gravity wave amplifier using element 115 as a fuel, operating on a principle he associated with Feynman diagrams and strong-force manipulation at an exotic level.</p>
+        <p>He described being given briefing documents about the craft's history — including materials describing the beings as originating from the Zeta Reticuli binary star system — and being shown one of the craft performing low-altitude test flights that he subsequently brought friends to witness (one of whom, Gene Huff, has corroborated parts of the account). He also described reading a document asserting that the beings had been "genetically involved" in the history of the human species.</p>
+        <p>The subsequent synthesis of element 115 in 2003, and its confirmation on the periodic table as moscovium, is the most widely cited scientific corroboration of Lazar's technical claims — though critics note that its properties as synthesised do not match his description of it as a room-temperature stable, gravity-wave-emitting substance.</p>
+        <h2 class="text-green-300 text-xl font-semibold mt-4">Assessment</h2>
+        <p>Lazar is perhaps the most contested figure in UFO history. His supporters argue that his technical claims are too specific and too prescient to be fabricated, that his partial corroboration from Los Alamos is significant, and that the intensity of his desire for privacy (in stark contrast with typical UFO hoaxers) is consistent with genuine fear. Critics argue that his academic credentials are unverifiable, that his physics claims contain errors, and that his account has the hallmarks of a well-constructed narrative rather than a genuine witness report.</p>
+        <p>George Knapp's decades of investigation have not resolved the fundamental question of Lazar's credibility. What is certain is that no other figure in UFO history has produced such a specific, technically detailed, and potentially falsifiable account of ongoing reverse engineering — and that the account's resilience across 35 years, without the retraction or elaboration typical of hoaxers, is itself a significant data point.</p>
+      </div>
+      <div class="mt-4"><a href="/uap/personalities" class="text-green-400/70 hover:text-green-300 text-sm">← Back to UFO Personalities</a></div>
+    </div>
+    <script>
+      const sf = document.getElementById('starfield');
+      for (let i = 0; i < 160; i++) { const s = document.createElement('div'); s.className = 'star'; const size = Math.random() * 2 + 0.5; s.style.cssText = `width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--dur:${2+Math.random()*4}s;--delay:${Math.random()*5}s;opacity:${0.2+Math.random()*0.8};`; sf.appendChild(s); }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Jeremy Corbell — UFO Personalities — Anomalous Inquiry</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta property="og:title" content="Jeremy Corbell — UFO Personalities" />
+    <meta property="og:description" content="Filmmaker who leaked Pentagon UAP footage and co-hosts the Weaponized podcast with journalist George Knapp." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://esoteric-wisdom.onrender.com/og-image.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+    <style>
+      body { background: radial-gradient(circle at top, #1a0808 0%, #020617 50%, #000000 100%); font-family: 'Raleway', sans-serif; }
+      @keyframes twinkle { 0%, 100% { opacity: 0.2; } 50% { opacity: 1; } }
+      .star { position: absolute; border-radius: 50%; background: white; animation: twinkle var(--dur,3s) ease-in-out infinite; animation-delay: var(--delay,0s); }
+      .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+    </style>
+  </head>
+  <body class="min-h-screen text-white px-4 py-8">
+    <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+    {% include "nav.html" %}
+    <div class="relative z-10 max-w-3xl mx-auto space-y-6 pt-6">
+      <a href="/uap/personalities" class="text-red-400/70 hover:text-red-300 text-sm">← Back to UFO Personalities</a>
+      <div class="text-center py-4">
+        <div class="text-6xl mb-2">🎥</div>
+        <h1 class="text-3xl font-bold font-cinzel text-red-300">Jeremy Corbell</h1>
+        <p class="text-red-200/60 mt-1 italic">"Extraordinary Beliefs Filmmaker" · b. 1977</p>
+      </div>
+      <div class="bg-white/5 border border-red-500/40 rounded-2xl p-6 backdrop-blur-md space-y-4 text-teal-100/85 leading-relaxed">
+        <h2 class="text-xl font-semibold text-red-300">Brief Biography</h2>
+        <p>Jeremy Kenyon Lockyer Corbell is an American <strong class="text-red-200">documentary filmmaker</strong>, artist, and UAP investigator based in Los Angeles. He came to UAP through documentary filmmaking — his work spans portraits of extreme individuals and subcultures — and his 2018 documentary <strong class="text-red-200"><em>Bob Lazar: Area 51 and Flying Saucers</em></strong> introduced the Lazar story to a new generation and triggered a significant revival of public interest in the Area 51 reverse-engineering narrative. He subsequently produced documentaries on subjects including coroner investigator/conspiracy theorist Frank Olson and UAP experiencer Bob Gimlin.</p>
+        <p>Corbell became one of the most prominent figures in the current UAP disclosure wave through his leaking of classified or sensitive Pentagon UAP footage — including the USS Omaha UAP video showing a spherical object entering the water — to mainstream media outlets, which he undertook in collaboration with George Knapp. He co-hosts the <strong class="text-red-200"><em>Weaponized</em></strong> podcast with Knapp.</p>
+      </div>
+      <div class="bg-white/5 border border-red-500/30 rounded-2xl p-6 backdrop-blur-md space-y-4 text-teal-100/85 leading-relaxed">
+        <h2 class="text-xl font-semibold text-red-300">Leaked Footage and Pentagon Confirmations</h2>
+        <p>Corbell's most significant contribution to the UAP disclosure process has been obtaining and publishing military UAP footage that was subsequently confirmed as authentic by the <strong class="text-red-200">Pentagon</strong>. These include the USS Omaha UAP video (showing a transmedium object operating in the Pacific), the Pyramid UAP footage (triangular objects observed over the USS Russell at night), and several other clips that initially circulated through Corbell before being officially acknowledged. The Pentagon's pattern of confirming Corbell's leaks has given him unusual institutional credibility despite his non-institutional status.</p>
+        <p>His methods — working sources within the military and intelligence community, obtaining footage through unofficial channels, and publishing to maximise public impact — have attracted both admiration and criticism. Supporters argue that without leakers like Corbell, significant evidence would never have reached the public. Critics argue that his approach risks compromising sources, may select for dramatic rather than scientifically significant material, and at times outpaces verification standards.</p>
+        <h2 class="text-xl font-semibold text-red-300 mt-4">Bob Lazar Documentary</h2>
+        <p>Corbell's <em>Bob Lazar</em> documentary is widely regarded as his most significant artistic and investigative achievement. By gaining Lazar's trust and spending extended time documenting both his story and his current life as a scientific equipment dealer, Corbell produced the most thorough cinematic treatment of one of UAP history's most disputed figures. The film prompted renewed investigation into Lazar's credentials — including the discovery of a partially redacted Los Alamos National Laboratory phone directory listing that appeared to confirm at least one element of Lazar's disputed employment claims.</p>
+      </div>
+      <div class="mt-4"><a href="/uap/personalities" class="text-red-400/70 hover:text-red-300 text-sm">← Back to UFO Personalities</a></div>
+    </div>
+    <script>
+      const sf = document.getElementById('starfield');
+      for (let i = 0; i < 160; i++) { const s = document.createElement('div'); s.className = 'star'; const size = Math.random() * 2 + 0.5; s.style.cssText = `width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--dur:${2+Math.random()*4}s;--delay:${Math.random()*5}s;opacity:${0.2+Math.random()*0.8};`; sf.appendChild(s); }
+    </script>
+  </body>
+</html>

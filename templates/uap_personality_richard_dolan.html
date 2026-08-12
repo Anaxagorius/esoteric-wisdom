@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Richard Dolan — UFO Personalities — Anomalous Inquiry</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta property="og:title" content="Richard Dolan — UFO Personalities" />
+    <meta property="og:description" content="Historian and author of the seminal UFOs and the National Security State series, advocate of a breakaway civilisation thesis." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://esoteric-wisdom.onrender.com/og-image.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+    <style>
+      body { background: radial-gradient(circle at top, #0d0d28 0%, #020617 50%, #000000 100%); font-family: 'Raleway', sans-serif; }
+      @keyframes twinkle { 0%, 100% { opacity: 0.2; } 50% { opacity: 1; } }
+      .star { position: absolute; border-radius: 50%; background: white; animation: twinkle var(--dur,3s) ease-in-out infinite; animation-delay: var(--delay,0s); }
+      .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+    </style>
+  </head>
+  <body class="min-h-screen text-white px-4 py-8">
+    <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+    {% include "nav.html" %}
+    <div class="relative z-10 max-w-3xl mx-auto space-y-6 pt-6">
+      <a href="/uap/personalities" class="text-indigo-400/70 hover:text-indigo-300 text-sm">← Back to UFO Personalities</a>
+      <div class="text-center py-4">
+        <div class="text-6xl mb-2">📚</div>
+        <h1 class="text-3xl font-bold font-cinzel text-indigo-300">Richard Dolan</h1>
+        <p class="text-indigo-200/60 mt-1 italic">"Historian of the Secret State" · b. 1962</p>
+      </div>
+      <div class="bg-white/5 border border-indigo-500/40 rounded-2xl p-6 backdrop-blur-md space-y-4 text-teal-100/85 leading-relaxed">
+        <h2 class="text-xl font-semibold text-indigo-300">Brief Biography</h2>
+        <p>Richard Dolan holds a BA from Alfred University and an MA in History from the University of Rochester, where he studied Cold War national security policy under Alfred Young. He was accepted into Oxford University's doctoral programme and was ABD (all but dissertation) when he turned his full attention to UAP research. His background in professional historiography — archival research, primary source analysis, and the history of government classification — distinguishes his work from most other UAP researchers and gives his arguments a methodological rigour that has earned respect even from sceptics.</p>
+        <p>His two-volume study <strong class="text-indigo-200"><em>UFOs and the National Security State</em></strong> (2000, 2009) is widely regarded as the most comprehensive historical treatment of UAP and American government policy ever written. He runs Richard Dolan Media and co-hosts various podcasts and programmes covering UAP, history, and related subjects.</p>
+      </div>
+      <div class="bg-white/5 border border-indigo-500/30 rounded-2xl p-6 backdrop-blur-md space-y-4 text-teal-100/85 leading-relaxed">
+        <h2 class="text-xl font-semibold text-indigo-300">UFOs and the National Security State</h2>
+        <p>Dolan's two-volume history is the result of over a decade of primary-source research — FOIA-released documents, congressional records, declassified intelligence files, and systematic analysis of military incident reports from 1941 to 1991. Volume 1 covers the period 1941–1973, tracing the evolution of Air Force policy from genuine interest and investigation (Projects Sign, Grudge, Blue Book) to deliberate debunking and public dismissal while internal records show continued serious concern. Volume 2 covers 1973–1991, documenting the emergence of the "black world" programmes and the increasingly parallel structure between official denial and private continuation of serious UAP investigation.</p>
+        <p>What distinguishes Dolan's work is his use of the national security framework as an organising lens: he treats UAP policy not as an irrational anomaly but as a coherent, comprehensible product of the same institutional forces that shaped all Cold War national security decision-making — secrecy, compartmentalisation, bureaucratic inertia, fear of public panic, and the practical impossibility of disclosing something once the decision to conceal it has been made.</p>
+        <h2 class="text-xl font-semibold text-indigo-300 mt-4">The Breakaway Civilisation Thesis</h2>
+        <p>Dolan is the originator and primary advocate of the <strong class="text-indigo-200">"breakaway civilisation"</strong> concept — the hypothesis that the group of individuals who have managed the UAP secret over decades has, through access to reverse-engineered non-human technology, achieved such a radical technological advantage over mainstream civilisation that they now effectively constitute a separate, clandestine culture with its own agenda, resources, and trajectory. This is among the most provocative ideas in contemporary UAP theory and has been both widely adopted and widely criticised.</p>
+        <p>Dolan holds that the evidence for the breakaway civilisation is circumstantial but accumulating: the documented reality of extreme levels of government secrecy, the credentialled witness testimony about reverse-engineering programmes, the anomalous pace of certain technological developments (particularly in computing and materials science) relative to their ostensible civilian origins, and the financial architecture of the black budget world, which appears to involve trillions of dollars of unaccountable spending over decades.</p>
+      </div>
+      <div class="mt-4"><a href="/uap/personalities" class="text-indigo-400/70 hover:text-indigo-300 text-sm">← Back to UFO Personalities</a></div>
+    </div>
+    <script>
+      const sf = document.getElementById('starfield');
+      for (let i = 0; i < 160; i++) { const s = document.createElement('div'); s.className = 'star'; const size = Math.random() * 2 + 0.5; s.style.cssText = `width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--dur:${2+Math.random()*4}s;--delay:${Math.random()*5}s;opacity:${0.2+Math.random()*0.8};`; sf.appendChild(s); }
+    </script>
+  </body>
+</html>
