@@ -1,4 +1,4 @@
-use crate::auth::HtmlTemplate;
+use crate::templates::HtmlTemplate;
 use crate::state::AppState;
 use crate::templates::{
     AlteredStatesTemplate, AlteredTimeTemplate, AnomalousGnosisTemplate, BreathworkTemplate,

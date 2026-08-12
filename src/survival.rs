@@ -1,4 +1,4 @@
-use crate::auth::HtmlTemplate;
+use crate::templates::HtmlTemplate;
 use crate::state::AppState;
 use crate::templates::{MindBrainTemplate, NdeTemplate, SdeTemplate, SurvivalTemplate};
 use axum::{response::IntoResponse, routing::get, Router};

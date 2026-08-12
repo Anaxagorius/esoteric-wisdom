@@ -3,21 +3,12 @@ use std::collections::HashMap;
 use std::sync::Arc;
 use tokio::sync::RwLock;
 use tracing::info;
-use uuid::Uuid;
 
 use crate::journal::JournalEntry;
 use crate::tarot::{load_deck, DeckType, TarotCard};
 
 pub fn journal_data_path() -> String {
     std::env::var("JOURNAL_DATA_FILE").unwrap_or_else(|_| "data/journal_entries.json".to_string())
-}
-
-pub fn users_data_path() -> String {
-    std::env::var("USERS_DATA_FILE").unwrap_or_else(|_| "data/users.json".to_string())
-}
-
-fn required_env(name: &str) -> anyhow::Result<String> {
-    std::env::var(name).map_err(|_| anyhow::anyhow!("Missing required environment variable: {name}"))
 }
 
 async fn load_from_file<T: serde::de::DeserializeOwned + Default>(path: &str) -> T {
@@ -34,26 +25,8 @@ async fn load_from_file<T: serde::de::DeserializeOwned + Default>(path: &str) ->
     }
 }
 
-async fn save_to_file<T: serde::Serialize + ?Sized>(path: &str, value: &T) {
-    match serde_json::to_string(value) {
-        Ok(json) => {
-            if let Some(parent) = std::path::Path::new(path).parent() {
-                let _ = tokio::fs::create_dir_all(parent).await;
-            }
-            if let Err(e) = tokio::fs::write(path, json).await {
-                tracing::warn!("Failed to save data to {path}: {e}");
-            }
-        }
-        Err(e) => tracing::warn!("Failed to serialize data for {path}: {e}"),
-    }
-}
-
 async fn load_journal_entries() -> Vec<JournalEntry> {
     load_from_file::<Vec<JournalEntry>>(&journal_data_path()).await
-}
-
-async fn load_users() -> Vec<User> {
-    load_from_file::<Vec<User>>(&users_data_path()).await
 }
 
 fn load_organizations() -> Vec<Organization> {
@@ -85,25 +58,12 @@ pub struct TimelineEvent {
     pub article_slug: Option<String>,
 }
 
-pub async fn save_users(users: &[User]) {
-    save_to_file(&users_data_path(), users).await;
-}
-
 #[derive(Clone)]
 pub struct AppState {
-    pub users: Arc<RwLock<Vec<User>>>,
     pub tarot_decks: Arc<RwLock<HashMap<String, Vec<TarotCard>>>>,
     pub journal_entries: Arc<RwLock<Vec<JournalEntry>>>,
     pub organizations: Arc<Vec<Organization>>,
     pub timeline: Arc<Vec<TimelineEvent>>,
-    pub jwt_secret: Arc<String>,
-}
-
-#[derive(Clone, Debug, Serialize, Deserialize)]
-pub struct User {
-    pub id: Uuid,
-    pub email: String,
-    pub password_hash: String,
 }
 
 impl AppState {
@@ -135,40 +95,23 @@ impl AppState {
         let journal_entries = load_journal_entries().await;
         let journal_count = journal_entries.len();
 
-        let users = load_users().await;
-        let user_count = users.len();
-
         let organizations = load_organizations();
         let organization_count = organizations.len();
 
         let timeline = load_timeline();
         let timeline_count = timeline.len();
 
-        let jwt_secret = required_env("JWT_SECRET")?;
-
         let state = AppState {
-            users: Arc::new(RwLock::new(users)),
             tarot_decks: Arc::new(RwLock::new(decks)),
             journal_entries: Arc::new(RwLock::new(journal_entries)),
             organizations: Arc::new(organizations),
             timeline: Arc::new(timeline),
-            jwt_secret: Arc::new(jwt_secret),
         };
 
         info!(
-            "AppState initialized with {} tarot decks, {} journal entries, {} users, {} organizations, {} timeline events",
-            deck_count, journal_count, user_count, organization_count, timeline_count
+            "AppState initialized with {} tarot decks, {} journal entries, {} organizations, {} timeline events",
+            deck_count, journal_count, organization_count, timeline_count
         );
         Ok(state)
-    }
-}
-
-impl User {
-    pub fn new(email: String, password_hash: String) -> Self {
-        User {
-            id: Uuid::new_v4(),
-            email,
-            password_hash,
-        }
     }
 }

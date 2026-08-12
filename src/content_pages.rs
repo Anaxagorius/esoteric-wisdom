@@ -2,7 +2,7 @@ use askama::Template;
 use axum::{http::StatusCode, response::IntoResponse};
 use pulldown_cmark::{Options, Parser, html};
 
-use crate::auth::HtmlTemplate;
+use crate::templates::HtmlTemplate;
 
 #[derive(Template)]
 #[template(path = "content_page.html")]

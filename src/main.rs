@@ -3,7 +3,6 @@ mod akashic_records;
 mod alchemy;
 mod altered_states;
 mod astrology;
-mod auth;
 mod ce5;
 mod christianity;
 mod conspiracy;
@@ -45,7 +44,7 @@ mod western_esotericism;
 mod wicca;
 mod yoga;
 
-use auth::HtmlTemplate;
+use crate::templates::HtmlTemplate;
 use axum::{
     extract::{Path, State},
     http::{header, StatusCode},
@@ -55,7 +54,6 @@ use axum::{
 };
 use state::AppState;
 use templates::{AppLandingTemplate, LandingTemplate, OrganizationsTemplate, TimelineTemplate};
-use tower_cookies::CookieManagerLayer;
 use tracing_subscriber::EnvFilter;
 
 #[tokio::main]
@@ -72,7 +70,6 @@ async fn main() -> anyhow::Result<()> {
         .route("/favicon.svg", get(favicon))
         .route("/og-image.png", get(og_image))
         .route("/Alien/:filename", get(alien_image))
-        .nest("/auth", auth::routes())
         .nest("/astrology", astrology::routes())
         .nest("/meditation", meditation::routes())
         .nest("/tarot", tarot::routes())
@@ -122,7 +119,6 @@ async fn main() -> anyhow::Result<()> {
         .nest("/conspiracy", conspiracy::routes())
         .route("/timeline", get(timeline))
         .route("/organizations", get(organizations))
-        .layer(CookieManagerLayer::new())
         .with_state(state);
 
     let port_env = std::env::var("PORT");

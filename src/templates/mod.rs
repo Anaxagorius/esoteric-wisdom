@@ -1,6 +1,24 @@
 use crate::journal::JournalEntry;
 use crate::state::{Organization, TimelineEvent};
 use askama::Template;
+use axum::{
+    http::{header, StatusCode},
+    response::{IntoResponse, Response},
+};
+
+pub struct HtmlTemplate<T>(pub T);
+
+impl<T> IntoResponse for HtmlTemplate<T>
+where
+    T: askama::Template,
+{
+    fn into_response(self) -> Response {
+        match self.0.render() {
+            Ok(html) => (StatusCode::OK, [(header::CONTENT_TYPE, "text/html; charset=utf-8")], html).into_response(),
+            Err(_) => StatusCode::INTERNAL_SERVER_ERROR.into_response(),
+        }
+    }
+}
 
 #[derive(Template)]
 #[template(path = "landing.html")]
@@ -9,18 +27,6 @@ pub struct LandingTemplate;
 #[derive(Template)]
 #[template(path = "app_landing.html")]
 pub struct AppLandingTemplate;
-
-#[derive(Template)]
-#[template(path = "auth_login.html")]
-pub struct LoginTemplate {
-    pub error: Option<String>,
-}
-
-#[derive(Template)]
-#[template(path = "auth_signup.html")]
-pub struct SignupTemplate {
-    pub error: Option<String>,
-}
 
 #[derive(Template)]
 #[template(path = "astrology.html")]
