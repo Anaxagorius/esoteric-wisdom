@@ -728,6 +728,39 @@ pub struct YogaTemplate;
 #[template(path = "uap.html")]
 pub struct UapTemplate;
 
+#[derive(Clone, Copy)]
+pub struct EncounterSummary {
+    pub slug: &'static str,
+    pub title: &'static str,
+    pub date_label: &'static str,
+    pub teaser: &'static str,
+}
+
+#[derive(Clone, Copy)]
+pub struct EncounterPage {
+    pub slug: &'static str,
+    pub title: &'static str,
+    pub date_label: &'static str,
+    pub location: &'static str,
+    pub overview: &'static [&'static str],
+    pub key_points: &'static [&'static str],
+    pub investigation: &'static [&'static str],
+    pub interpretations: &'static [&'static str],
+    pub legacy: &'static [&'static str],
+}
+
+#[derive(Template)]
+#[template(path = "uap_encounters.html")]
+pub struct UapEncountersTemplate {
+    pub entries: Vec<EncounterSummary>,
+}
+
+#[derive(Template)]
+#[template(path = "uap_encounter_detail.html")]
+pub struct UapEncounterDetailTemplate {
+    pub entry: EncounterPage,
+}
+
 #[derive(Template)]
 #[template(path = "nimitz.html")]
 pub struct NimitzTemplate;
