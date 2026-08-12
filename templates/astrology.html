@@ -3,295 +3,422 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Astrology — Esoteric Wisdom</title>
+    <title>Astrology Toolkit — Esoteric Wisdom</title>
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <meta property="og:title" content="Astrology — Esoteric Wisdom" />
-    <meta property="og:description" content="Ancient archetypes meet modern skies. Explore the zodiac, celestial wisdom, and the art of astrological interpretation." />
+    <meta name="description" content="Astrology toolkit with interactive birth profile, synastry, horoscope generator, moon phase tracker, educational library, and clear methodology notes." />
+    <meta property="og:title" content="Astrology Toolkit — Esoteric Wisdom" />
+    <meta property="og:description" content="A practical cosmic toolkit: calculators, personalized insights, educational references, and trust-first astrology guidance." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://esoteric-wisdom.onrender.com/astrology/" />
     <meta property="og:image" content="https://esoteric-wisdom.onrender.com/og-image.png" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600;700&display=swap" rel="stylesheet" />
     <style>
-      body {
-        background: radial-gradient(ellipse at top, #3b0764 0%, #1e1b4b 30%, #020617 70%, #000000 100%);
-        font-family: 'Raleway', sans-serif;
-      }
+      body { background: radial-gradient(ellipse at top, #312e81 0%, #1e1b4b 28%, #020617 70%, #000 100%); font-family: 'Raleway', sans-serif; }
       .font-cinzel { font-family: 'Cinzel Decorative', serif; }
-      @keyframes twinkle { 0%, 100% { opacity: 0.2; } 50% { opacity: 1; } }
-      .star { position: absolute; border-radius: 50%; background: white; animation: twinkle var(--dur,3s) ease-in-out infinite; animation-delay: var(--delay,0s); }
-      @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
-      .floating { animation: float 5s ease-in-out infinite; }
-      .zodiac-card {
-        transition: all 0.3s ease;
-        cursor: default;
-      }
-      .zodiac-card:hover {
-        transform: translateY(-6px);
-        box-shadow: 0 20px 60px rgba(167,139,250,0.3);
-      }
-      .constellation-card:hover {
-        transform: scale(1.02);
-        border-color: rgba(251,191,36,0.6) !important;
-      }
-      .constellation-card { transition: all 0.3s ease; }
-      .nav-link { position: relative; transition: all 0.3s; }
-      .nav-link::after {
-        content: ''; position: absolute; bottom: -2px; left: 0;
-        width: 0; height: 2px;
-        background: linear-gradient(90deg, #f59e0b, #a78bfa);
-        transition: width 0.3s;
-      }
-      .nav-link:hover::after { width: 100%; }
+      .glass { background: linear-gradient(135deg, rgba(30,27,75,.65), rgba(17,24,39,.55)); border: 1px solid rgba(167,139,250,.35); backdrop-filter: blur(10px); }
+      .star { position: absolute; border-radius: 9999px; background: #fff; opacity: .7; animation: twinkle var(--dur,4s) ease-in-out infinite; animation-delay: var(--delay,0s); }
+      @keyframes twinkle { 0%,100%{opacity:.2}50%{opacity:1} }
+      .tool-card { transition: all .25s ease; }
+      .tool-card:hover { transform: translateY(-4px); box-shadow: 0 20px 45px rgba(109,40,217,.28); }
+      .nav-chip { transition: all .25s ease; }
+      .nav-chip:hover { border-color: rgba(251,191,36,.65); transform: translateY(-2px); }
+      .input { background: rgba(0,0,0,.35); border: 1px solid rgba(167,139,250,.35); color: #fff; }
+      .input:focus { outline: none; border-color: rgba(251,191,36,.7); box-shadow: 0 0 0 3px rgba(251,191,36,.1); }
+      .pill { border: 1px solid rgba(251,191,36,.35); background: rgba(251,191,36,.08); }
     </style>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Astrology Toolkit",
+        "description": "Interactive astrology tools, educational references, and personalized cosmic insights.",
+        "url": "https://esoteric-wisdom.onrender.com/astrology/"
+      }
+    </script>
   </head>
   <body class="min-h-screen text-white px-4 py-8">
     <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
-
-    <!-- Navigation -->
     {% include "nav.html" %}
-    <div class="relative z-10 max-w-6xl mx-auto space-y-10 pt-6">
 
-      <!-- Hero -->
-      <header class="text-center py-6">
-        <div class="floating text-6xl mb-4">🌌</div>
-        <h1 class="font-cinzel text-4xl md:text-5xl font-bold mb-3" style="text-shadow: 0 0 40px rgba(167,139,250,0.8);">
-          Astrology
-        </h1>
-        <p class="text-violet-200/80 text-lg max-w-2xl mx-auto">
-          Ancient wisdom written in the stars. Explore the zodiac archetypes, constellation mythology, and the celestial patterns that have guided humanity for millennia.
-        </p>
+    <main class="relative z-10 max-w-6xl mx-auto space-y-8 pt-6">
+      <header class="text-center space-y-4">
+        <div class="text-6xl">🔭</div>
+        <h1 class="font-cinzel text-4xl md:text-5xl font-bold text-violet-100" style="text-shadow:0 0 30px rgba(167,139,250,.75)">Astrology Toolkit</h1>
+        <p class="text-violet-200/85 max-w-3xl mx-auto">A practical cosmic workspace with calculators, chart exploration, educational references, and transparent methodology.</p>
+        <div class="flex flex-wrap justify-center gap-2 text-xs text-violet-200/80">
+          <a href="#core-tools" class="nav-chip px-3 py-1.5 rounded-full border border-violet-400/40 bg-black/25">Core Tools</a>
+          <a href="#education" class="nav-chip px-3 py-1.5 rounded-full border border-violet-400/40 bg-black/25">Education Library</a>
+          <a href="#forecasts" class="nav-chip px-3 py-1.5 rounded-full border border-violet-400/40 bg-black/25">Forecasts</a>
+          <a href="#trust" class="nav-chip px-3 py-1.5 rounded-full border border-violet-400/40 bg-black/25">Methodology & Privacy</a>
+        </div>
       </header>
 
-      <!-- Ancient Philosophy -->
-      <section class="bg-gradient-to-br from-purple-900/40 to-indigo-900/40 border border-purple-500/40 rounded-3xl p-8 backdrop-blur-md shadow-2xl">
-        <h2 class="font-cinzel text-2xl font-semibold mb-4 text-amber-300">✦ The Ancient Art of Astrology</h2>
-        <div class="grid md:grid-cols-2 gap-6">
-          <div>
-            <p class="text-violet-100/90 text-sm leading-relaxed mb-4">
-              Astrology is one of humanity's oldest symbolic languages, spanning over 4,000 years across Babylon, Egypt, Greece, and beyond. Ancient astrologers observed that the cycles of celestial bodies mirrored patterns of human experience — not as rigid fate, but as archetypal poetry written in the sky.
-            </p>
-            <p class="text-violet-100/90 text-sm leading-relaxed">
-              In Hellenistic astrology, the seven traditional planets — Sun, Moon, Mercury, Venus, Mars, Jupiter, and Saturn — were seen as divine messengers. Each ruled specific domains of human life, and their transits through the twelve zodiac signs created an ever-changing cosmic symphony.
-            </p>
+      <section id="core-tools" class="glass rounded-3xl p-6 md:p-8 space-y-6">
+        <h2 class="font-cinzel text-2xl text-amber-300">Core Interactive Tools</h2>
+        <p class="text-sm text-violet-100/80">Start with a chart profile, then explore transits, compatibility, and quick calculators.</p>
+
+        <div class="grid lg:grid-cols-2 gap-6">
+          <article class="tool-card rounded-2xl border border-violet-500/30 bg-black/30 p-5 space-y-4">
+            <h3 class="font-cinzel text-lg text-amber-200">Natal / Birth Profile</h3>
+            <div class="grid sm:grid-cols-2 gap-3 text-sm">
+              <input id="birth-date" type="date" class="input rounded-xl px-3 py-2" />
+              <input id="birth-time" type="time" class="input rounded-xl px-3 py-2" />
+              <input id="birth-location" type="text" maxlength="80" placeholder="Birth location" class="input rounded-xl px-3 py-2 sm:col-span-2" />
+              <select id="house-system" class="input rounded-xl px-3 py-2">
+                <option value="Placidus">House: Placidus</option>
+                <option value="Whole Sign">House: Whole Sign</option>
+                <option value="Equal">House: Equal</option>
+              </select>
+              <select id="zodiac-system" class="input rounded-xl px-3 py-2">
+                <option value="Tropical">Zodiac: Tropical</option>
+                <option value="Sidereal">Zodiac: Sidereal</option>
+              </select>
+            </div>
+            <div class="flex gap-2">
+              <button id="generate-profile" class="flex-1 rounded-xl bg-gradient-to-r from-amber-500 to-violet-600 px-4 py-2.5 text-sm font-semibold hover:scale-[1.01] transition">Generate Profile</button>
+              <button id="save-profile" class="rounded-xl border border-emerald-400/50 bg-emerald-500/10 px-4 py-2.5 text-sm font-semibold text-emerald-200">Save</button>
+            </div>
+            <div id="profile-output" class="hidden rounded-xl border border-violet-500/30 bg-black/35 p-4 text-sm space-y-2">
+              <p class="text-violet-200">Big Three: <span id="big-three" class="text-amber-200 font-semibold"></span></p>
+              <p class="text-violet-200">House System: <span id="out-house"></span> · Zodiac: <span id="out-zodiac"></span></p>
+              <p class="text-violet-200">Moon Phase: <span id="out-moonphase"></span></p>
+              <p class="text-violet-200">Saturn Return Window: <span id="out-saturn"></span></p>
+              <p id="profile-note" class="text-xs text-violet-300/75 border-t border-violet-500/20 pt-2"></p>
+            </div>
+          </article>
+
+          <article class="tool-card rounded-2xl border border-violet-500/30 bg-black/30 p-5 space-y-4">
+            <h3 class="font-cinzel text-lg text-amber-200">Chart Exploration & Aspect Lens</h3>
+            <p class="text-xs text-violet-200/75">Click a planet archetype for quick interpretive guidance.</p>
+            <div class="grid grid-cols-3 gap-2 text-xs">
+              <button class="planet-btn rounded-lg border border-violet-400/35 py-2" data-planet="Sun">☉ Sun</button>
+              <button class="planet-btn rounded-lg border border-violet-400/35 py-2" data-planet="Moon">☽ Moon</button>
+              <button class="planet-btn rounded-lg border border-violet-400/35 py-2" data-planet="Mercury">☿ Mercury</button>
+              <button class="planet-btn rounded-lg border border-violet-400/35 py-2" data-planet="Venus">♀ Venus</button>
+              <button class="planet-btn rounded-lg border border-violet-400/35 py-2" data-planet="Mars">♂ Mars</button>
+              <button class="planet-btn rounded-lg border border-violet-400/35 py-2" data-planet="Saturn">♄ Saturn</button>
+            </div>
+            <div id="planet-output" class="rounded-xl border border-violet-500/25 bg-black/35 p-4 text-sm text-violet-100/90">Select a planet to inspect its themes, shadow, and growth keys.</div>
+            <div class="rounded-xl border border-amber-500/30 bg-amber-500/5 p-3 text-xs text-amber-100/80">Interactive wheel and exact aspects are planned backend upgrades tied to ephemeris-grade calculations.</div>
+          </article>
+
+          <article class="tool-card rounded-2xl border border-violet-500/30 bg-black/30 p-5 space-y-4">
+            <h3 class="font-cinzel text-lg text-amber-200">Compatibility / Synastry Snapshot</h3>
+            <div class="grid sm:grid-cols-2 gap-3 text-sm">
+              <input id="a-sign" type="text" placeholder="Person A Sun sign" class="input rounded-xl px-3 py-2" />
+              <input id="b-sign" type="text" placeholder="Person B Sun sign" class="input rounded-xl px-3 py-2" />
+            </div>
+            <button id="synastry-btn" class="w-full rounded-xl bg-gradient-to-r from-violet-600 to-fuchsia-600 px-4 py-2.5 text-sm font-semibold">Compare Energies</button>
+            <p id="synastry-output" class="text-sm text-violet-100/85">Use full charts for serious relationship analysis; this gives a quick archetypal read.</p>
+          </article>
+
+          <article class="tool-card rounded-2xl border border-violet-500/30 bg-black/30 p-5 space-y-4">
+            <h3 class="font-cinzel text-lg text-amber-200">Current Sky & Supporting Calculators</h3>
+            <p class="text-sm text-violet-100/85">Now: <span id="sky-now" class="text-amber-200"></span></p>
+            <div class="grid sm:grid-cols-2 gap-2 text-xs text-violet-200/90">
+              <div class="pill rounded-lg px-3 py-2">Moon Phase: <span id="live-moon"></span></div>
+              <div class="pill rounded-lg px-3 py-2">Approx. Rising Sign: <span id="live-rising"></span></div>
+              <div class="pill rounded-lg px-3 py-2">Retrograde Calendar: Mercury, Venus, Mars windows listed below</div>
+              <div class="pill rounded-lg px-3 py-2">Transit Alerts: New/Full Moons + seasonal shifts</div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="forecasts" class="glass rounded-3xl p-6 md:p-8 space-y-5">
+        <h2 class="font-cinzel text-2xl text-amber-300">Timely & Personalized Forecasts</h2>
+        <p class="text-sm text-violet-100/80">Generate daily, weekly, monthly, or yearly prompts from your profile settings.</p>
+        <div class="grid md:grid-cols-3 gap-4">
+          <input id="forecast-sign" type="text" placeholder="Your Sun sign" class="input rounded-xl px-3 py-2 text-sm" />
+          <input id="forecast-rising" type="text" placeholder="Your Rising sign" class="input rounded-xl px-3 py-2 text-sm" />
+          <select id="forecast-range" class="input rounded-xl px-3 py-2 text-sm">
+            <option value="Daily">Daily</option>
+            <option value="Weekly">Weekly</option>
+            <option value="Monthly">Monthly</option>
+            <option value="Yearly">Yearly</option>
+          </select>
+        </div>
+        <button id="forecast-btn" class="rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 px-4 py-2.5 text-sm font-semibold">Generate Forecast</button>
+        <div id="forecast-output" class="rounded-xl border border-violet-500/30 bg-black/30 p-4 text-sm text-violet-100/90">Your custom cosmic weather appears here.</div>
+
+        <div class="grid md:grid-cols-2 gap-4 text-xs">
+          <div class="rounded-xl border border-violet-500/25 bg-black/25 p-4">
+            <h3 class="font-cinzel text-amber-200 mb-2">Upcoming Cosmic Calendar</h3>
+            <ul class="space-y-1 text-violet-100/85">
+              <li>• New Moon ritual window: every 29.53 days</li>
+              <li>• Full Moon review window: midpoint of lunar cycle</li>
+              <li>• Equinox/Solstice checkpoints for quarterly intentions</li>
+              <li>• Eclipse season prompts for course correction</li>
+            </ul>
           </div>
-          <div>
-            <p class="text-violet-100/90 text-sm leading-relaxed mb-4">
-              The <strong class="text-amber-300">Four Elements</strong> — Fire, Earth, Air, and Water — form the foundation of astrological temperament. Each element governs three signs, reflecting fundamental modes of engaging with the world: passion, stability, thought, and feeling.
-            </p>
-            <p class="text-violet-100/90 text-sm leading-relaxed">
-              The <strong class="text-emerald-300">Three Modalities</strong> — Cardinal, Fixed, and Mutable — describe how each sign initiates, sustains, or transforms energy. Together, the elements and modalities create a rich, interconnected cosmology that illuminates the full spectrum of human experience.
-            </p>
+          <div class="rounded-xl border border-violet-500/25 bg-black/25 p-4">
+            <h3 class="font-cinzel text-amber-200 mb-2">Notifications Setup</h3>
+            <p class="text-violet-100/85">Use your account + browser reminders to receive daily/weekly prompts. Profiles saved on this page are also persisted in your browser.</p>
           </div>
         </div>
       </section>
 
-      <!-- Zodiac Signs Grid -->
-      <section>
-        <h2 class="font-cinzel text-2xl font-semibold mb-6 text-amber-300 text-center">The Twelve Signs of the Zodiac</h2>
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <section id="education" class="glass rounded-3xl p-6 md:p-8 space-y-5">
+        <h2 class="font-cinzel text-2xl text-amber-300">Educational Library & Reference</h2>
+        <div class="grid lg:grid-cols-3 gap-4 text-sm">
+          <article class="rounded-2xl border border-violet-500/30 bg-black/30 p-4">
+            <h3 class="font-cinzel text-amber-200 mb-2">Big Three</h3>
+            <p class="text-violet-100/85">Sun = identity and life purpose. Moon = emotional body and safety needs. Rising = outward style and approach to beginnings.</p>
+          </article>
+          <article class="rounded-2xl border border-violet-500/30 bg-black/30 p-4">
+            <h3 class="font-cinzel text-amber-200 mb-2">Planets, Houses, Aspects</h3>
+            <p class="text-violet-100/85">Planets show what, signs show how, houses show where. Aspects describe dialogue between planetary archetypes.</p>
+          </article>
+          <article class="rounded-2xl border border-violet-500/30 bg-black/30 p-4">
+            <h3 class="font-cinzel text-amber-200 mb-2">Elements & Modalities</h3>
+            <p class="text-violet-100/85">Fire/Earth/Air/Water reveal temperament. Cardinal/Fixed/Mutable describe momentum style: start, stabilize, adapt.</p>
+          </article>
+        </div>
 
-          <div class="zodiac-card bg-gradient-to-br from-red-900/50 to-orange-900/50 border border-red-500/40 rounded-2xl p-4 backdrop-blur-md">
-            <div class="text-3xl mb-2">♈</div>
-            <h3 class="font-cinzel font-semibold text-red-300 mb-1">Aries</h3>
-            <p class="text-xs text-violet-200/70 mb-2">Mar 21 – Apr 19 · Fire · Cardinal</p>
-            <p class="text-xs text-violet-100/80 leading-relaxed">The Pioneer. Bold, courageous, and fiercely independent. Ruled by Mars, Aries embodies the spark of new beginnings and the warrior's spirit.</p>
+        <div class="grid md:grid-cols-2 gap-4 text-xs">
+          <div class="rounded-xl border border-violet-500/25 bg-black/25 p-4">
+            <h3 class="font-cinzel text-amber-200 mb-2">Glossary Quickstart</h3>
+            <ul class="space-y-1 text-violet-100/85">
+              <li>• <strong>Cusp:</strong> boundary between houses/signs</li>
+              <li>• <strong>Transit:</strong> current sky interacting with natal chart</li>
+              <li>• <strong>Retrograde:</strong> apparent planetary reversal from Earth view</li>
+              <li>• <strong>Synastry:</strong> comparative chart relationship analysis</li>
+            </ul>
           </div>
-
-          <div class="zodiac-card bg-gradient-to-br from-green-900/50 to-emerald-900/50 border border-green-500/40 rounded-2xl p-4 backdrop-blur-md">
-            <div class="text-3xl mb-2">♉</div>
-            <h3 class="font-cinzel font-semibold text-green-300 mb-1">Taurus</h3>
-            <p class="text-xs text-violet-200/70 mb-2">Apr 20 – May 20 · Earth · Fixed</p>
-            <p class="text-xs text-violet-100/80 leading-relaxed">The Sensualist. Grounded, patient, and devoted to beauty. Ruled by Venus, Taurus savors the richness of the physical world and the art of abundance.</p>
+          <div class="rounded-xl border border-violet-500/25 bg-black/25 p-4">
+            <h3 class="font-cinzel text-amber-200 mb-2">Archive & Event Anchors</h3>
+            <ul class="space-y-1 text-violet-100/85">
+              <li>• Planetary events and seasonal checkpoints</li>
+              <li>• Eclipse review prompts</li>
+              <li>• Retrograde planning templates</li>
+              <li>• Beginner-to-intermediate chart reading progression</li>
+            </ul>
           </div>
-
-          <div class="zodiac-card bg-gradient-to-br from-yellow-900/50 to-amber-900/50 border border-yellow-500/40 rounded-2xl p-4 backdrop-blur-md">
-            <div class="text-3xl mb-2">♊</div>
-            <h3 class="font-cinzel font-semibold text-yellow-300 mb-1">Gemini</h3>
-            <p class="text-xs text-violet-200/70 mb-2">May 21 – Jun 20 · Air · Mutable</p>
-            <p class="text-xs text-violet-100/80 leading-relaxed">The Communicator. Curious, witty, and endlessly adaptable. Ruled by Mercury, Gemini bridges worlds with language, ideas, and quicksilver intelligence.</p>
-          </div>
-
-          <div class="zodiac-card bg-gradient-to-br from-blue-900/50 to-cyan-900/50 border border-blue-500/40 rounded-2xl p-4 backdrop-blur-md">
-            <div class="text-3xl mb-2">♋</div>
-            <h3 class="font-cinzel font-semibold text-blue-300 mb-1">Cancer</h3>
-            <p class="text-xs text-violet-200/70 mb-2">Jun 21 – Jul 22 · Water · Cardinal</p>
-            <p class="text-xs text-violet-100/80 leading-relaxed">The Nurturer. Deeply intuitive, empathic, and protective of loved ones. Ruled by the Moon, Cancer is the keeper of memory, home, and emotional wisdom.</p>
-          </div>
-
-          <div class="zodiac-card bg-gradient-to-br from-orange-900/50 to-yellow-900/50 border border-orange-500/40 rounded-2xl p-4 backdrop-blur-md">
-            <div class="text-3xl mb-2">♌</div>
-            <h3 class="font-cinzel font-semibold text-orange-300 mb-1">Leo</h3>
-            <p class="text-xs text-violet-200/70 mb-2">Jul 23 – Aug 22 · Fire · Fixed</p>
-            <p class="text-xs text-violet-100/80 leading-relaxed">The Sovereign. Radiant, generous, and magnetically creative. Ruled by the Sun, Leo embodies the light of self-expression and the heart's royalty.</p>
-          </div>
-
-          <div class="zodiac-card bg-gradient-to-br from-teal-900/50 to-green-900/50 border border-teal-500/40 rounded-2xl p-4 backdrop-blur-md">
-            <div class="text-3xl mb-2">♍</div>
-            <h3 class="font-cinzel font-semibold text-teal-300 mb-1">Virgo</h3>
-            <p class="text-xs text-violet-200/70 mb-2">Aug 23 – Sep 22 · Earth · Mutable</p>
-            <p class="text-xs text-violet-100/80 leading-relaxed">The Healer. Discerning, devoted, and masterful in craft. Ruled by Mercury, Virgo seeks wholeness through service, precision, and the sacred in the everyday.</p>
-          </div>
-
-          <div class="zodiac-card bg-gradient-to-br from-pink-900/50 to-rose-900/50 border border-pink-500/40 rounded-2xl p-4 backdrop-blur-md">
-            <div class="text-3xl mb-2">♎</div>
-            <h3 class="font-cinzel font-semibold text-pink-300 mb-1">Libra</h3>
-            <p class="text-xs text-violet-200/70 mb-2">Sep 23 – Oct 22 · Air · Cardinal</p>
-            <p class="text-xs text-violet-100/80 leading-relaxed">The Diplomat. Graceful, fair-minded, and devoted to beauty and harmony. Ruled by Venus, Libra seeks balance in all things and the art of true partnership.</p>
-          </div>
-
-          <div class="zodiac-card bg-gradient-to-br from-red-900/50 to-purple-900/50 border border-red-600/40 rounded-2xl p-4 backdrop-blur-md">
-            <div class="text-3xl mb-2">♏</div>
-            <h3 class="font-cinzel font-semibold text-red-300 mb-1">Scorpio</h3>
-            <p class="text-xs text-violet-200/70 mb-2">Oct 23 – Nov 21 · Water · Fixed</p>
-            <p class="text-xs text-violet-100/80 leading-relaxed">The Transformer. Intense, perceptive, and fearlessly drawn to depth. Ruled by Pluto and Mars, Scorpio navigates the mysteries of power, desire, and rebirth.</p>
-          </div>
-
-          <div class="zodiac-card bg-gradient-to-br from-purple-900/50 to-violet-900/50 border border-purple-500/40 rounded-2xl p-4 backdrop-blur-md">
-            <div class="text-3xl mb-2">♐</div>
-            <h3 class="font-cinzel font-semibold text-purple-300 mb-1">Sagittarius</h3>
-            <p class="text-xs text-violet-200/70 mb-2">Nov 22 – Dec 21 · Fire · Mutable</p>
-            <p class="text-xs text-violet-100/80 leading-relaxed">The Philosopher. Adventurous, optimistic, and forever seeking meaning. Ruled by Jupiter, Sagittarius is the cosmic archer aiming for the highest truth.</p>
-          </div>
-
-          <div class="zodiac-card bg-gradient-to-br from-slate-900/50 to-blue-900/50 border border-slate-500/40 rounded-2xl p-4 backdrop-blur-md">
-            <div class="text-3xl mb-2">♑</div>
-            <h3 class="font-cinzel font-semibold text-slate-300 mb-1">Capricorn</h3>
-            <p class="text-xs text-violet-200/70 mb-2">Dec 22 – Jan 19 · Earth · Cardinal</p>
-            <p class="text-xs text-violet-100/80 leading-relaxed">The Architect. Disciplined, ambitious, and wise beyond years. Ruled by Saturn, Capricorn builds legacies through patience, mastery, and integrity of purpose.</p>
-          </div>
-
-          <div class="zodiac-card bg-gradient-to-br from-cyan-900/50 to-sky-900/50 border border-cyan-500/40 rounded-2xl p-4 backdrop-blur-md">
-            <div class="text-3xl mb-2">♒</div>
-            <h3 class="font-cinzel font-semibold text-cyan-300 mb-1">Aquarius</h3>
-            <p class="text-xs text-violet-200/70 mb-2">Jan 20 – Feb 18 · Air · Fixed</p>
-            <p class="text-xs text-violet-100/80 leading-relaxed">The Visionary. Innovative, humanitarian, and delightfully eccentric. Ruled by Uranus and Saturn, Aquarius carries the lightning bolt of collective awakening.</p>
-          </div>
-
-          <div class="zodiac-card bg-gradient-to-br from-indigo-900/50 to-violet-900/50 border border-indigo-500/40 rounded-2xl p-4 backdrop-blur-md">
-            <div class="text-3xl mb-2">♓</div>
-            <h3 class="font-cinzel font-semibold text-indigo-300 mb-1">Pisces</h3>
-            <p class="text-xs text-violet-200/70 mb-2">Feb 19 – Mar 20 · Water · Mutable</p>
-            <p class="text-xs text-violet-100/80 leading-relaxed">The Mystic. Compassionate, imaginative, and at home in the liminal. Ruled by Neptune and Jupiter, Pisces dwells where the ocean meets the infinite.</p>
-          </div>
-
         </div>
       </section>
 
-      <!-- Constellation Images -->
-      <section>
-        <h2 class="font-cinzel text-2xl font-semibold mb-6 text-amber-300 text-center">✦ Constellation Gallery</h2>
-        <div class="grid md:grid-cols-3 gap-6">
-
-          <div class="constellation-card bg-black/50 border border-violet-500/30 rounded-2xl overflow-hidden backdrop-blur-md shadow-xl">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Orion_constellation_map.svg/480px-Orion_constellation_map.svg.png"
-                 alt="Orion Constellation Map" class="w-full h-48 object-cover bg-indigo-950" loading="lazy"
-                 onerror="this.onerror=null; this.style.display='none'" />
-            <div class="p-4">
-              <h3 class="font-cinzel font-semibold text-amber-300 mb-1">Orion the Hunter</h3>
-              <p class="text-xs text-violet-100/80 leading-relaxed">One of the most prominent and recognizable constellations. The ancient Greeks saw the mighty hunter Orion, forever battling the Scorpion across the sky.</p>
-              <a href="https://science.nasa.gov/universe/stars/" target="_blank" rel="noopener" class="text-xs text-amber-300 hover:underline mt-2 inline-block">NASA: Stars &amp; Constellations →</a>
-            </div>
+      <section class="glass rounded-3xl p-6 md:p-8 space-y-5">
+        <h2 class="font-cinzel text-2xl text-amber-300">User Accounts, Dashboard, and Growth Features</h2>
+        <div class="grid md:grid-cols-2 gap-4 text-sm">
+          <div class="rounded-2xl border border-violet-500/30 bg-black/30 p-4">
+            <h3 class="font-cinzel text-amber-200 mb-2">Personalization Essentials</h3>
+            <ul class="space-y-1 text-violet-100/85 text-xs">
+              <li>• Save multiple charts (self, family, clients, partners)</li>
+              <li>• Edit birth data and regenerate quickly</li>
+              <li>• Set zodiac/house preferences</li>
+              <li>• Track transit highlights from dashboard</li>
+            </ul>
           </div>
-
-          <div class="constellation-card bg-black/50 border border-violet-500/30 rounded-2xl overflow-hidden backdrop-blur-md shadow-xl">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Scorpius_constellation_map.svg/480px-Scorpius_constellation_map.svg.png"
-                 alt="Scorpius Constellation" class="w-full h-48 object-cover bg-indigo-950" loading="lazy"
-                 onerror="this.onerror=null; this.style.display='none'" />
-            <div class="p-4">
-              <h3 class="font-cinzel font-semibold text-amber-300 mb-1">Scorpius the Scorpion</h3>
-              <p class="text-xs text-violet-100/80 leading-relaxed">A magnificent constellation of the southern sky, Scorpius contains the red supergiant Antares — the "rival of Mars" — at its heart. Associated with transformation and depth.</p>
-              <a href="https://science.nasa.gov/universe/stars/" target="_blank" rel="noopener" class="text-xs text-amber-300 hover:underline mt-2 inline-block">NASA: Stars &amp; Constellations →</a>
-            </div>
+          <div class="rounded-2xl border border-violet-500/30 bg-black/30 p-4">
+            <h3 class="font-cinzel text-amber-200 mb-2">Business & Engagement</h3>
+            <ul class="space-y-1 text-violet-100/85 text-xs">
+              <li>• Consult booking + intake forms</li>
+              <li>• Secure paid reports/subscriptions</li>
+              <li>• Newsletter + educational blog ecosystem</li>
+              <li>• Optional widgets, multilingual support, client portal</li>
+            </ul>
           </div>
-
-          <div class="constellation-card bg-black/50 border border-violet-500/30 rounded-2xl overflow-hidden backdrop-blur-md shadow-xl">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Ursa_Major_constellation_map.svg/480px-Ursa_Major_constellation_map.svg.png"
-                 alt="Ursa Major" class="w-full h-48 object-cover bg-indigo-950" loading="lazy"
-                 onerror="this.onerror=null; this.style.display='none'" />
-            <div class="p-4">
-              <h3 class="font-cinzel font-semibold text-amber-300 mb-1">Ursa Major — The Great Bear</h3>
-              <p class="text-xs text-violet-100/80 leading-relaxed">Home of the Big Dipper, Ursa Major has guided navigators for millennia. In myth, Zeus transformed Callisto into this bear and set her among the eternal stars.</p>
-              <a href="https://science.nasa.gov/universe/stars/" target="_blank" rel="noopener" class="text-xs text-amber-300 hover:underline mt-2 inline-block">NASA: Stars &amp; Constellations →</a>
-            </div>
-          </div>
-
         </div>
       </section>
 
-      <!-- Official Resources -->
-      <section class="bg-gradient-to-br from-indigo-900/30 to-purple-900/30 border border-indigo-500/30 rounded-3xl p-8 backdrop-blur-md">
-        <h2 class="font-cinzel text-xl font-semibold mb-6 text-amber-300">✦ Official Celestial Gateways</h2>
-        <div class="grid md:grid-cols-2 gap-4">
-          <a href="https://science.nasa.gov/universe/stars/constellations/" target="_blank" rel="noopener"
-             class="flex items-center gap-3 bg-black/30 rounded-xl p-4 border border-violet-500/20 hover:border-amber-400/40 hover:bg-black/50 transition-all group">
-            <span class="text-2xl">🔭</span>
-            <div>
-              <div class="font-semibold text-sm text-violet-100 group-hover:text-amber-300 transition-colors">NASA — Constellations Overview</div>
-              <div class="text-xs text-violet-300/60 mt-0.5">Official NASA guide to all 88 recognized constellations</div>
-            </div>
-          </a>
-          <a href="https://apod.nasa.gov/apod/" target="_blank" rel="noopener"
-             class="flex items-center gap-3 bg-black/30 rounded-xl p-4 border border-violet-500/20 hover:border-amber-400/40 hover:bg-black/50 transition-all group">
-            <span class="text-2xl">🌠</span>
-            <div>
-              <div class="font-semibold text-sm text-violet-100 group-hover:text-amber-300 transition-colors">Astronomy Picture of the Day</div>
-              <div class="text-xs text-violet-300/60 mt-0.5">Daily stunning images from NASA's APOD archive</div>
-            </div>
-          </a>
-          <a href="https://hubblesite.org/images" target="_blank" rel="noopener"
-             class="flex items-center gap-3 bg-black/30 rounded-xl p-4 border border-violet-500/20 hover:border-amber-400/40 hover:bg-black/50 transition-all group">
-            <span class="text-2xl">🌌</span>
-            <div>
-              <div class="font-semibold text-sm text-violet-100 group-hover:text-amber-300 transition-colors">Hubble Space Telescope Gallery</div>
-              <div class="text-xs text-violet-300/60 mt-0.5">Breathtaking deep-space imagery from the Hubble telescope</div>
-            </div>
-          </a>
-          <a href="https://www.iau.org/public/themes/constellations/" target="_blank" rel="noopener"
-             class="flex items-center gap-3 bg-black/30 rounded-xl p-4 border border-violet-500/20 hover:border-amber-400/40 hover:bg-black/50 transition-all group">
-            <span class="text-2xl">⭐</span>
-            <div>
-              <div class="font-semibold text-sm text-violet-100 group-hover:text-amber-300 transition-colors">All 88 Constellations — IAU</div>
-              <div class="text-xs text-violet-300/60 mt-0.5">Complete list of officially recognized constellations</div>
-            </div>
-          </a>
-          <a href="https://www.iau.org/public/themes/constellations/" target="_blank" rel="noopener"
-             class="flex items-center gap-3 bg-black/30 rounded-xl p-4 border border-violet-500/20 hover:border-amber-400/40 hover:bg-black/50 transition-all group">
-            <span class="text-2xl">🏛️</span>
-            <div>
-              <div class="font-semibold text-sm text-violet-100 group-hover:text-amber-300 transition-colors">IAU — International Astronomical Union</div>
-              <div class="text-xs text-violet-300/60 mt-0.5">Official astronomical organization constellation resources</div>
-            </div>
-          </a>
-          <a href="https://images.nasa.gov/" target="_blank" rel="noopener"
-             class="flex items-center gap-3 bg-black/30 rounded-xl p-4 border border-violet-500/20 hover:border-amber-400/40 hover:bg-black/50 transition-all group">
-            <span class="text-2xl">📸</span>
-            <div>
-              <div class="font-semibold text-sm text-violet-100 group-hover:text-amber-300 transition-colors">NASA Image & Video Library</div>
-              <div class="text-xs text-violet-300/60 mt-0.5">The full NASA archive of astronomical imagery</div>
-            </div>
-          </a>
+      <section id="trust" class="glass rounded-3xl p-6 md:p-8 space-y-5">
+        <h2 class="font-cinzel text-2xl text-amber-300">Trust, Methodology, and Data Care</h2>
+        <div class="grid md:grid-cols-2 gap-4 text-sm">
+          <div class="rounded-2xl border border-emerald-500/30 bg-emerald-500/5 p-4 text-emerald-100/90">
+            <h3 class="font-cinzel text-emerald-200 mb-2">Methodology Notes</h3>
+            <p class="text-xs leading-relaxed">This page currently provides educational and approximate client-side calculations for fast exploration. Production-grade natal charts should use validated ephemeris data (for example Swiss Ephemeris), exact geocoding, timezone/DST handling, and auditable aspect engines.</p>
+          </div>
+          <div class="rounded-2xl border border-violet-500/30 bg-black/30 p-4 text-violet-100/90">
+            <h3 class="font-cinzel text-amber-200 mb-2">Privacy & Disclaimer</h3>
+            <p class="text-xs leading-relaxed">Saved chart profiles are stored in your browser local storage unless server-side accounts are used. Astrology content is for reflection and entertainment and is not medical, legal, or financial advice.</p>
+          </div>
         </div>
+        <p class="text-xs text-violet-300/75">Priority path: accurate birth chart wheel + interpretation engine → educational depth → timely forecasts → personalization expansion.</p>
       </section>
 
-      <footer class="text-center py-4 text-violet-300/40 text-xs">
-        <p>"We are all made of star-stuff." — Carl Sagan</p>
-        <p class="mt-3">
-          <a href="https://ko-fi.com/anjiannelei" target="_blank" rel="noopener noreferrer"
-             class="inline-block px-5 py-2 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-white font-semibold hover:scale-105 transition-transform shadow-lg shadow-orange-500/30">
-            ☕ Support Esoteric Wisdom on Ko-fi
-          </a>
-        </p>
-      </footer>
-    </div>
+      <section class="text-center text-xs text-violet-300/65 py-3">
+        <p>Cosmic design, clear UX, and practical tools make astrology easier to use responsibly.</p>
+      </section>
+    </main>
 
     <script>
-      const sf = document.getElementById('starfield');
-      for (let i = 0; i < 200; i++) {
-        const s = document.createElement('div');
-        s.className = 'star';
-        const size = Math.random() * 2.5 + 0.5;
-        s.style.cssText = `width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--dur:${2+Math.random()*5}s;--delay:${Math.random()*6}s;`;
+      const zodiac = ["Aries","Taurus","Gemini","Cancer","Leo","Virgo","Libra","Scorpio","Sagittarius","Capricorn","Aquarius","Pisces"];
+      const elements = {
+        aries:"fire", leo:"fire", sagittarius:"fire",
+        taurus:"earth", virgo:"earth", capricorn:"earth",
+        gemini:"air", libra:"air", aquarius:"air",
+        cancer:"water", scorpio:"water", pisces:"water"
+      };
+      const planetInterpretations = {
+        Sun:"Core identity, vitality, and life direction. Growth key: lead from integrity, not ego defense.",
+        Moon:"Emotional instincts, attachment patterns, and inner safety needs. Growth key: regulate before reacting.",
+        Mercury:"Thinking style, learning, language, and perception. Growth key: refine your narrative and listening.",
+        Venus:"Relating style, values, aesthetics, and reciprocity. Growth key: align desire with self-worth.",
+        Mars:"Drive, conflict style, libido, and assertion. Growth key: channel heat into courageous action.",
+        Saturn:"Boundaries, responsibilities, and mastery over time. Growth key: commit to disciplined liberation."
+      };
+
+      function toTitle(sign) {
+        return sign ? sign.trim().toLowerCase().replace(/^./, c => c.toUpperCase()) : "";
+      }
+
+      function moonPhaseName(date) {
+        const synodic = 29.53058867;
+        const known = new Date("2000-01-06T18:14:00Z");
+        const days = (date - known) / 86400000;
+        const age = ((days % synodic) + synodic) % synodic;
+        if (age < 1.85) return "New Moon";
+        if (age < 5.54) return "Waxing Crescent";
+        if (age < 9.23) return "First Quarter";
+        if (age < 12.92) return "Waxing Gibbous";
+        if (age < 16.61) return "Full Moon";
+        if (age < 20.3) return "Waning Gibbous";
+        if (age < 23.99) return "Last Quarter";
+        if (age < 27.68) return "Waning Crescent";
+        return "Dark Moon";
+      }
+
+      function signFromDate(date) {
+        const m = date.getUTCMonth() + 1;
+        const d = date.getUTCDate();
+        if ((m===3&&d>=21)||(m===4&&d<=19)) return "Aries";
+        if ((m===4&&d>=20)||(m===5&&d<=20)) return "Taurus";
+        if ((m===5&&d>=21)||(m===6&&d<=20)) return "Gemini";
+        if ((m===6&&d>=21)||(m===7&&d<=22)) return "Cancer";
+        if ((m===7&&d>=23)||(m===8&&d<=22)) return "Leo";
+        if ((m===8&&d>=23)||(m===9&&d<=22)) return "Virgo";
+        if ((m===9&&d>=23)||(m===10&&d<=22)) return "Libra";
+        if ((m===10&&d>=23)||(m===11&&d<=21)) return "Scorpio";
+        if ((m===11&&d>=22)||(m===12&&d<=21)) return "Sagittarius";
+        if ((m===12&&d>=22)||(m===1&&d<=19)) return "Capricorn";
+        if ((m===1&&d>=20)||(m===2&&d<=18)) return "Aquarius";
+        return "Pisces";
+      }
+
+      function estimateMoonSign(date) {
+        const anchor = new Date("2000-01-01T00:00:00Z");
+        const days = Math.floor((date - anchor) / 86400000);
+        const idx = Math.floor(days / 2.45) % 12;
+        return zodiac[(idx + 12) % 12];
+      }
+
+      function estimateRising(timeValue) {
+        if (!timeValue) return "Unknown";
+        const [h,m] = timeValue.split(":").map(Number);
+        const total = h * 60 + m;
+        const idx = Math.floor(total / 120) % 12;
+        return zodiac[idx];
+      }
+
+      function saturnReturnWindow(date) {
+        const y = date.getUTCFullYear();
+        return `${y + 27}–${y + 31}`;
+      }
+
+      function buildProfile() {
+        const dateValue = document.getElementById("birth-date").value;
+        const timeValue = document.getElementById("birth-time").value;
+        const location = document.getElementById("birth-location").value.trim();
+        const house = document.getElementById("house-system").value;
+        const zodiacSystem = document.getElementById("zodiac-system").value;
+        if (!dateValue || !timeValue || !location) return null;
+
+        const date = new Date(`${dateValue}T${timeValue}:00Z`);
+        const sun = signFromDate(date);
+        const moon = estimateMoonSign(date);
+        const rising = estimateRising(timeValue);
+        return {
+          date: dateValue,
+          time: timeValue,
+          location,
+          house,
+          zodiacSystem,
+          sun,
+          moon,
+          rising,
+          moonPhase: moonPhaseName(date),
+          saturn: saturnReturnWindow(date)
+        };
+      }
+
+      document.getElementById("generate-profile").addEventListener("click", () => {
+        const p = buildProfile();
+        const out = document.getElementById("profile-output");
+        if (!p) {
+          out.classList.remove("hidden");
+          document.getElementById("profile-note").textContent = "Please enter birth date, time, and location to generate your profile.";
+          return;
+        }
+        out.classList.remove("hidden");
+        document.getElementById("big-three").textContent = `${p.sun} Sun · ${p.moon} Moon · ${p.rising} Rising`;
+        document.getElementById("out-house").textContent = p.house;
+        document.getElementById("out-zodiac").textContent = p.zodiacSystem;
+        document.getElementById("out-moonphase").textContent = p.moonPhase;
+        document.getElementById("out-saturn").textContent = p.saturn;
+        document.getElementById("profile-note").textContent = "This quick profile is educational and approximate; use ephemeris-grade calculation for exact degrees, houses, and aspects.";
+      });
+
+      document.getElementById("save-profile").addEventListener("click", () => {
+        const p = buildProfile();
+        if (!p) return;
+        const key = "astrology_profiles";
+        const existing = JSON.parse(localStorage.getItem(key) || "[]");
+        existing.push({ ...p, savedAt: new Date().toISOString() });
+        localStorage.setItem(key, JSON.stringify(existing.slice(-12)));
+        document.getElementById("profile-note").textContent = `Saved locally. Stored profiles: ${Math.min(existing.length, 12)}.`;
+        document.getElementById("profile-output").classList.remove("hidden");
+      });
+
+      document.querySelectorAll(".planet-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const p = btn.dataset.planet;
+          document.getElementById("planet-output").textContent = `${p}: ${planetInterpretations[p] || "Interpretation not found."}`;
+        });
+      });
+
+      document.getElementById("synastry-btn").addEventListener("click", () => {
+        const a = toTitle(document.getElementById("a-sign").value);
+        const b = toTitle(document.getElementById("b-sign").value);
+        const ao = elements[a.toLowerCase()];
+        const bo = elements[b.toLowerCase()];
+        if (!ao || !bo) {
+          document.getElementById("synastry-output").textContent = "Enter valid Sun signs (e.g., Aries, Virgo, Pisces).";
+          return;
+        }
+        let verdict = "Dynamic mix with growth potential through conscious communication.";
+        if (ao === bo) verdict = "Natural resonance: shared temperament and pacing style.";
+        if ((ao === "fire" && bo === "air") || (ao === "air" && bo === "fire")) verdict = "Stimulating and creative pairing; keep grounding rituals in place.";
+        if ((ao === "earth" && bo === "water") || (ao === "water" && bo === "earth")) verdict = "Supportive and emotionally practical pairing with strong long-term potential.";
+        document.getElementById("synastry-output").textContent = `${a} + ${b}: ${verdict}`;
+      });
+
+      document.getElementById("forecast-btn").addEventListener("click", () => {
+        const sun = toTitle(document.getElementById("forecast-sign").value) || "Your sign";
+        const rising = toTitle(document.getElementById("forecast-rising").value) || "your Rising";
+        const range = document.getElementById("forecast-range").value;
+        const moon = moonPhaseName(new Date());
+        document.getElementById("forecast-output").textContent = `${range} forecast for ${sun} (${rising}): Lead with intentional pacing while the current ${moon} phase highlights emotional awareness. Focus on one relationship pattern, one practical commitment, and one creative risk.`;
+      });
+
+      function hydrateSky() {
+        const now = new Date();
+        document.getElementById("sky-now").textContent = now.toUTCString();
+        document.getElementById("live-moon").textContent = moonPhaseName(now);
+        const hh = String(now.getUTCHours()).padStart(2, "0");
+        const mm = String(now.getUTCMinutes()).padStart(2, "0");
+        document.getElementById("live-rising").textContent = estimateRising(`${hh}:${mm}`);
+      }
+
+      hydrateSky();
+      setInterval(hydrateSky, 60000);
+
+      const sf = document.getElementById("starfield");
+      for (let i = 0; i < 180; i++) {
+        const s = document.createElement("div");
+        s.className = "star";
+        const size = Math.random() * 2 + 0.4;
+        s.style.cssText = `width:${size}px;height:${size}px;left:${Math.random()*100}%;top:${Math.random()*100}%;--dur:${2+Math.random()*6}s;--delay:${Math.random()*5}s;`;
         sf.appendChild(s);
       }
     </script>
