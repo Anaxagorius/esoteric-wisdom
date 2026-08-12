@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>John E. Mack — UFO Personalities — Anomalous Inquiry</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta property="og:title" content="John E. Mack — UFO Personalities" />
+    <meta property="og:description" content="Pulitzer Prize–winning Harvard psychiatrist who validated abductee experiences as psychologically real and transformative." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://esoteric-wisdom.onrender.com/og-image.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+    <style>
+      body { background: radial-gradient(circle at top, #1a0a18 0%, #020617 50%, #000000 100%); font-family: 'Raleway', sans-serif; }
+      @keyframes twinkle { 0%, 100% { opacity: 0.2; } 50% { opacity: 1; } }
+      .star { position: absolute; border-radius: 50%; background: white; animation: twinkle var(--dur,3s) ease-in-out infinite; animation-delay: var(--delay,0s); }
+      .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+    </style>
+  </head>
+  <body class="min-h-screen text-white px-4 py-8">
+    <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+    {% include "nav.html" %}
+    <div class="relative z-10 max-w-3xl mx-auto space-y-6 pt-6">
+      <a href="/uap/personalities" class="text-rose-400/70 hover:text-rose-300 text-sm">← Back to UFO Personalities</a>
+      <div class="text-center py-4">
+        <div class="text-6xl mb-2">🧠</div>
+        <h1 class="text-3xl font-bold font-cinzel text-rose-300">John E. Mack</h1>
+        <p class="text-rose-200/60 mt-1 italic">"The Harvard Psychiatrist of Contact" · 1929–2004</p>
+      </div>
+      <div class="bg-white/5 border border-rose-500/40 rounded-2xl p-6 backdrop-blur-md space-y-4 text-teal-100/85 leading-relaxed">
+        <h2 class="text-xl font-semibold text-rose-300">Brief Biography</h2>
+        <p>John Edward Mack was born on <strong class="text-rose-200">4 October 1929</strong> in New York City. He was educated at Harvard Medical School (MD, 1955) and became one of the world's leading psychiatrists — a full professor at Harvard Medical School, founder of the Department of Psychiatry at Cambridge Hospital, and a <strong class="text-rose-200">Pulitzer Prize winner</strong> in 1977 for his biography of T.E. Lawrence, <em>A Prince of Our Disorder</em>. He was a psychoanalyst and expert in trauma, dissociation, and the psychiatric dimension of geopolitical conflict — particularly nuclear weapons anxiety and its psychological effects on children.</p>
+        <p>Mack became involved in abduction research after an introduction to Budd Hopkins in 1990. He approached the subject with the rigour and scepticism appropriate to his clinical training and ultimately concluded — after interviewing over 200 experiencers — that the accounts were psychologically genuine and that no conventional psychiatric explanation (psychosis, fantasy, sleep disorders) could account for their specific character, their cross-cultural consistency, or their transformative psychological effects. He documented his findings in <em>Abduction: Human Encounters with Aliens</em> (1994) and <em>Passport to the Cosmos</em> (1999). He died on <strong class="text-rose-200">27 September 2004</strong>, struck by a car in London.</p>
+      </div>
+      <div class="bg-white/5 border border-rose-500/30 rounded-2xl p-6 backdrop-blur-md space-y-4 text-teal-100/85 leading-relaxed">
+        <h2 class="text-xl font-semibold text-rose-300">The Harvard Inquiry and Clinical Analysis</h2>
+        <p>Mack's clinical conclusion was that the abduction experience is <strong class="text-rose-200">ontologically real</strong> — meaning that whatever is happening to experiencers is not simply a product of their psychology, but involves an encounter with something genuinely external. He was careful to distinguish this from the claim that the experience is literally physical in the conventional sense, arguing instead that the encounter challenges Western culture's rigid distinction between internal and external reality, subjective and objective experience.</p>
+        <p>His clinical observations included: experiencers showing no pre-existing psychopathology; the presence of anomalous physical marks (scoop marks, unexplained scars) on many subjects; the consistent presence of a small set of specific narrative elements across subjects with no prior exposure to abduction literature; the profound and lasting positive psychological transformation many subjects reported following their encounters; and the cross-cultural universality of structural elements that appeared in his global research.</p>
+        <p>Mack's 1994 book prompted Harvard Medical School to conduct a formal 14-month inquiry into his clinical practices — an extraordinary and unprecedented institutional response to a professor publishing research that the mainstream found uncomfortable. The committee ultimately concluded that his work, while controversial, did not violate scientific or clinical norms and that he was free to continue it. The inquiry itself attracted significant media coverage and was widely interpreted as an attempt to intimidate Mack into abandoning his research.</p>
+        <h2 class="text-rose-300 text-xl font-semibold mt-4">Legacy</h2>
+        <p>Mack's significance in UAP and consciousness research is profound. He brought psychiatric credibility, methodological rigour, and Pulitzer-level intellectual standing to a field that had previously lacked all three. His insistence that the phenomenon challenges Western ontology — that it points toward a reality in which mind, matter, and meaning interpenetrate in ways that conventional science cannot accommodate — opened a genuinely philosophical dimension to the abduction debate that researchers like Whitley Strieber and Jeffrey Kripal have continued to develop.</p>
+      </div>
+      <blockquote class="border-l-4 border-rose-400 pl-4 italic text-rose-200/70 text-sm leading-relaxed">
+        "The abductees I have worked with are not mentally ill. They are not seeking attention. Something is happening to them. What that something is, I cannot say with certainty — but it is real, and it is transforming them."
+        <footer class="mt-1 text-rose-300/50 not-italic">— John E. Mack, <em>Abduction</em></footer>
+      </blockquote>
+      <div class="mt-4"><a href="/uap/personalities" class="text-rose-400/70 hover:text-rose-300 text-sm">← Back to UFO Personalities</a></div>
+    </div>
+    <script>
+      const sf = document.getElementById('starfield');
+      for (let i = 0; i < 160; i++) { const s = document.createElement('div'); s.className = 'star'; const size = Math.random() * 2 + 0.5; s.style.cssText = `width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--dur:${2+Math.random()*4}s;--delay:${Math.random()*5}s;opacity:${0.2+Math.random()*0.8};`; sf.appendChild(s); }
+    </script>
+  </body>
+</html>

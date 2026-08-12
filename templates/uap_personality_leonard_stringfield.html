@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Leonard Stringfield — UFO Personalities — Anomalous Inquiry</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta property="og:title" content="Leonard Stringfield — UFO Personalities" />
+    <meta property="og:description" content="Pioneering UFO researcher who spent four decades systematically documenting crash retrieval claims from first-hand witnesses." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://esoteric-wisdom.onrender.com/og-image.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+    <style>
+      body { background: radial-gradient(circle at top, #1a1000 0%, #020617 50%, #000000 100%); font-family: 'Raleway', sans-serif; }
+      @keyframes twinkle { 0%, 100% { opacity: 0.2; } 50% { opacity: 1; } }
+      .star { position: absolute; border-radius: 50%; background: white; animation: twinkle var(--dur,3s) ease-in-out infinite; animation-delay: var(--delay,0s); }
+      .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+    </style>
+  </head>
+  <body class="min-h-screen text-white px-4 py-8">
+    <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+    {% include "nav.html" %}
+    <div class="relative z-10 max-w-3xl mx-auto space-y-6 pt-6">
+      <a href="/uap/personalities" class="text-amber-400/70 hover:text-amber-300 text-sm">← Back to UFO Personalities</a>
+      <div class="text-center py-4">
+        <div class="text-6xl mb-2">📦</div>
+        <h1 class="text-3xl font-bold font-cinzel text-amber-300">Leonard Stringfield</h1>
+        <p class="text-amber-200/60 mt-1 italic">"The Crash Retrieval Archivist" · 1920–1994</p>
+      </div>
+      <div class="bg-white/5 border border-amber-500/40 rounded-2xl p-6 backdrop-blur-md space-y-4 text-teal-100/85 leading-relaxed">
+        <h2 class="text-xl font-semibold text-amber-300">Brief Biography</h2>
+        <p>Leonard Harry Stringfield was born on <strong class="text-amber-200">1 February 1920</strong> in Norwood, Ohio. He served as a U.S. Army Air Forces intelligence officer in World War II, and while returning from Japan in a transport aircraft in 1945, he and the crew reportedly observed three bright objects that caused one of the plane's engines to fail before the objects departed. This early personal experience shaped his subsequent decades of investigation. He founded <strong class="text-amber-200">Civilian Research, Interplanetary Flying Objects (CRIFO)</strong> in 1954 and published the newsletter <em>ORBIT</em>, which became one of the most widely read UFO publications in America during the 1950s. He served briefly as an Air Force Ground Observer Corps intelligence liaison. He died on <strong class="text-amber-200">18 December 1994</strong>.</p>
+        <p>His major life's work — the systematic collection and documentation of what he termed <strong class="text-amber-200">"UFO crash/retrieval" cases</strong> — produced seven monographs published between 1978 and 1994, constituting the most comprehensive archive of first-hand witness accounts of alleged crashed craft and non-human bodies assembled before the Internet age.</p>
+      </div>
+      <div class="bg-white/5 border border-amber-500/30 rounded-2xl p-6 backdrop-blur-md space-y-4 text-teal-100/85 leading-relaxed">
+        <h2 class="text-xl font-semibold text-amber-300">The Crash Retrieval Monographs</h2>
+        <p>Stringfield's seven crash-retrieval monographs (1978–1994) catalogued accounts from military personnel, physicians, mortuary workers, and others who claimed direct or indirect involvement in the recovery of crashed non-human craft and bodies. His methodology was careful and sober: he interviewed witnesses personally, cross-referenced accounts, withheld identifying information for those who required anonymity, and consistently presented the material as testimony requiring evaluation rather than confirmed fact.</p>
+        <p>The witness accounts he documented described recurring physical characteristics: bodies in the 3.5–4 foot height range, large heads, oversized dark eyes, minimal mouth and ears, four or five fingers, grey or brown skin — descriptions strikingly consistent across witnesses who had no documented contact with each other and in some cases pre-dated the widespread publication of the "grey" morphology. He also documented medical and physiological details provided by physicians and pathologists who claimed to have conducted autopsies on non-human remains.</p>
+        <h2 class="text-amber-300 text-xl font-semibold mt-4">Methodological Legacy</h2>
+        <p>Stringfield's work was largely ignored by mainstream science and media but became the foundation for subsequent crash-retrieval research, directly influencing researchers including Stanton Friedman (Roswell investigation), Timothy Good, and eventually the military whistleblowers who came forward in the 2020s. The specific, anatomically detailed witness accounts he documented — from sources including military physicians who were willing to risk court martial to share them — represent an evidentiary archive whose significance has only grown with the passage of time and the emergence of corroborating testimony from current insiders.</p>
+      </div>
+      <div class="mt-4"><a href="/uap/personalities" class="text-amber-400/70 hover:text-amber-300 text-sm">← Back to UFO Personalities</a></div>
+    </div>
+    <script>
+      const sf = document.getElementById('starfield');
+      for (let i = 0; i < 160; i++) { const s = document.createElement('div'); s.className = 'star'; const size = Math.random() * 2 + 0.5; s.style.cssText = `width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--dur:${2+Math.random()*4}s;--delay:${Math.random()*5}s;opacity:${0.2+Math.random()*0.8};`; sf.appendChild(s); }
+    </script>
+  </body>
+</html>

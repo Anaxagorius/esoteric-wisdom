@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Philip J. Corso — UFO Personalities — Anomalous Inquiry</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta property="og:title" content="Philip J. Corso — UFO Personalities" />
+    <meta property="og:description" content="Army Colonel and NSC staffer who claimed to have seeded alien technology into US industry via The Day After Roswell." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://esoteric-wisdom.onrender.com/og-image.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+    <style>
+      body { background: radial-gradient(circle at top, #1a1000 0%, #020617 50%, #000000 100%); font-family: 'Raleway', sans-serif; }
+      @keyframes twinkle { 0%, 100% { opacity: 0.2; } 50% { opacity: 1; } }
+      .star { position: absolute; border-radius: 50%; background: white; animation: twinkle var(--dur,3s) ease-in-out infinite; animation-delay: var(--delay,0s); }
+      .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+    </style>
+  </head>
+  <body class="min-h-screen text-white px-4 py-8">
+    <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+    {% include "nav.html" %}
+    <div class="relative z-10 max-w-3xl mx-auto space-y-6 pt-6">
+      <a href="/uap/personalities" class="text-amber-400/70 hover:text-amber-300 text-sm">← Back to UFO Personalities</a>
+      <div class="text-center py-4">
+        <div class="text-6xl mb-2">⭐</div>
+        <h1 class="text-3xl font-bold font-cinzel text-amber-300">Philip J. Corso</h1>
+        <p class="text-amber-200/60 mt-1 italic">"The Day After Roswell" · 1915–1998</p>
+      </div>
+      <div class="bg-white/5 border border-amber-500/40 rounded-2xl p-6 backdrop-blur-md space-y-4 text-teal-100/85 leading-relaxed">
+        <h2 class="text-xl font-semibold text-amber-300">Brief Biography</h2>
+        <p>Philip James Corso was born on <strong class="text-amber-200">22 May 1915</strong> in Pennsylvania. He had a distinguished military career spanning World War II (serving in Italy), Korea (chief of the counterintelligence branch), and peacetime staff positions including a posting to President Eisenhower's <strong class="text-amber-200">National Security Council staff</strong>. He retired as a Lieutenant Colonel (promoted to Colonel in retirement) and later worked for Senator Strom Thurmond, becoming chief of staff of the U.S. Senate Republican Policy Committee. He was by any measure a credentialled, establishment figure with access to classified information at the highest levels.</p>
+        <p>In 1997, at age 82, Corso published <strong class="text-amber-200"><em>The Day After Roswell</em></strong> (co-written with journalist William Birnes), which became a bestseller and one of the most controversial books in UFO history. He died of a heart attack on <strong class="text-amber-200">16 July 1998</strong>, less than two months after testifying before Senator Thurmond at a book signing.</p>
+      </div>
+      <div class="bg-white/5 border border-amber-500/30 rounded-2xl p-6 backdrop-blur-md space-y-4 text-teal-100/85 leading-relaxed">
+        <h2 class="text-xl font-semibold text-amber-300">The Day After Roswell — Claims and Controversy</h2>
+        <p>Corso's central claim was that during his 1961–1962 posting to the Army Research and Development office under General Arthur Trudeau, he was tasked with managing a file cabinet containing <strong class="text-amber-200">artefacts recovered from the Roswell crash of 1947</strong>. These artefacts included integrated circuit fragments, fibre optic strands, night vision technologies, and materials of unknown composition. Corso claimed he was directed to covertly seed these technologies into American industry by providing samples to defence contractors who were then allowed to "reverse-engineer" and develop them without being told their origin. He argued that transistors, integrated circuits, fibre optics, night vision, and Kevlar all derived at least partly from extraterrestrial technology retrieved at Roswell.</p>
+        <p>The book caused a sensation but also attracted intense criticism. Historians and military researchers identified factual errors in Corso's account of his own biography — dates that didn't match, positions that didn't exist as described, and descriptions of technologies that predate the timeline he implies. Senator Thurmond, who wrote a foreword to the book, later issued a statement saying he had been misled about its contents and did not endorse its claims.</p>
+        <h2 class="text-xl font-semibold text-amber-300 mt-4">Assessment</h2>
+        <p>Corso remains one of the most disputed figures in UAP history. His supporters argue that his credentials were genuine, that his account was corroborated in general (if not always specific) terms by other insiders, and that the technologies he described — particularly integrated circuits emerging in unusual ways from obscure contractors in the early 1960s — merit serious investigation. His critics argue that the book is primarily a work of Cold War mythology dressed as memoir, that its specific claims are verifiably false in several instances, and that the convenience of publishing near death (and dying shortly after) is too perfect.</p>
+        <p>What is not disputed: Corso had real access to classified information at the highest levels of the Cold War national security state. Whether that access included anything related to non-human technology remains, as with so much in this field, unresolved.</p>
+      </div>
+      <blockquote class="border-l-4 border-amber-400 pl-4 italic text-amber-200/70 text-sm leading-relaxed">
+        "The Cold War was the cover story. The real war — the one that mattered — was the war to understand what landed in the New Mexico desert."
+        <footer class="mt-1 text-amber-300/50 not-italic">— Philip J. Corso, <em>The Day After Roswell</em></footer>
+      </blockquote>
+      <div class="mt-4"><a href="/uap/personalities" class="text-amber-400/70 hover:text-amber-300 text-sm">← Back to UFO Personalities</a></div>
+    </div>
+    <script>
+      const sf = document.getElementById('starfield');
+      for (let i = 0; i < 160; i++) { const s = document.createElement('div'); s.className = 'star'; const size = Math.random() * 2 + 0.5; s.style.cssText = `width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--dur:${2+Math.random()*4}s;--delay:${Math.random()*5}s;opacity:${0.2+Math.random()*0.8};`; sf.appendChild(s); }
+    </script>
+  </body>
+</html>

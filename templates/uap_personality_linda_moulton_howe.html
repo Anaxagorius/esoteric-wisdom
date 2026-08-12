@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Linda Moulton Howe — UFO Personalities — Anomalous Inquiry</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta property="og:title" content="Linda Moulton Howe — UFO Personalities" />
+    <meta property="og:description" content="Emmy-winning TV producer turned investigative journalist, renowned for animal mutilation research and government document leaks." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://esoteric-wisdom.onrender.com/og-image.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+    <style>
+      body { background: radial-gradient(circle at top, #1a1000 0%, #020617 50%, #000000 100%); font-family: 'Raleway', sans-serif; }
+      @keyframes twinkle { 0%, 100% { opacity: 0.2; } 50% { opacity: 1; } }
+      .star { position: absolute; border-radius: 50%; background: white; animation: twinkle var(--dur,3s) ease-in-out infinite; animation-delay: var(--delay,0s); }
+      .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+    </style>
+  </head>
+  <body class="min-h-screen text-white px-4 py-8">
+    <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+    {% include "nav.html" %}
+    <div class="relative z-10 max-w-3xl mx-auto space-y-6 pt-6">
+      <a href="/uap/personalities" class="text-yellow-400/70 hover:text-yellow-300 text-sm">← Back to UFO Personalities</a>
+      <div class="text-center py-4">
+        <div class="text-6xl mb-2">🐄</div>
+        <h1 class="text-3xl font-bold font-cinzel text-yellow-300">Linda Moulton Howe</h1>
+        <p class="text-yellow-200/60 mt-1 italic">"The Mutilation Investigator" · b. 1942</p>
+      </div>
+      <div class="bg-white/5 border border-yellow-500/40 rounded-2xl p-6 backdrop-blur-md space-y-4 text-teal-100/85 leading-relaxed">
+        <h2 class="text-xl font-semibold text-yellow-300">Brief Biography</h2>
+        <p>Linda Moulton Howe was born in 1942 in Boise, Idaho. She holds a Masters degree in Communication from Stanford University and began her career as a television documentary producer and director in Denver, Colorado. She won an <strong class="text-yellow-200">Emmy Award</strong> for her 1980 HBO documentary <em>A Strange Harvest</em> — an investigation of the cattle mutilation phenomenon that first brought her to public attention as a serious investigative journalist willing to pursue anomalous subjects with professional rigour.</p>
+        <p>That documentary, in which she documented dozens of cases of cattle (and other livestock) found with surgical precision wounds, bloodless tissue removal, and evidence suggesting advanced cutting technology — without conventional forensic explanation — launched a career-long investigation that has expanded to encompass UAP encounters, crop circles, government whistleblowers, underwater anomalies, and consciousness research. She operates the <strong class="text-yellow-200">Earthfiles.com</strong> website and podcast, which has published thousands of investigative reports over three decades.</p>
+      </div>
+      <div class="bg-white/5 border border-yellow-500/30 rounded-2xl p-6 backdrop-blur-md space-y-4 text-teal-100/85 leading-relaxed">
+        <h2 class="text-xl font-semibold text-yellow-300">Animal Mutilations: The Definitive Investigation</h2>
+        <p>The cattle mutilation phenomenon — in which livestock are found dead with precise, bloodless removal of specific organs (eyes, tongues, rectums, reproductive organs, lips), without conventional forensic explanation and often without tracks of predators or human perpetrators — has been documented in the American West since at least the 1960s. Howe's investigations documented cases in over 30 U.S. states and multiple countries, involving thousands of animals. Laboratory analysis of tissue samples from cases she investigated showed evidence of cauterisation at molecular levels inconsistent with any known cutting instrument.</p>
+        <p>In 1983, during the course of her investigation, Howe was approached by an Air Force agent at <strong class="text-yellow-200">Kirtland Air Force Base</strong> who showed her briefing papers alleging that mutilations are conducted by extraterrestrial entities conducting biological monitoring of Earth's ecosystem, and that the U.S. government has been aware of this since the early 1950s. The official subsequently withdrew the documents before she could publish them, and denied the encounter had occurred. Howe's documented account of this episode is one of the most significant firsthand whistleblower reports in UAP history from the pre-internet era.</p>
+        <h2 class="text-yellow-300 text-xl font-semibold mt-4">Scope of Investigations</h2>
+        <p>Over four decades, Howe has conducted original reporting on UAP crash retrievals (with sources she has carefully documented), the Rendlesham Forest incident (including her extensive work with USAF Airman John Burroughs), crop circle formation research (including filming of circles forming in real time), and underwater anomalies. She has cultivated a network of military and intelligence source contacts whose identities she protects but whose information she has published in sufficient detail to allow cross-referencing.</p>
+        <p>Howe is not without critics — her methodological rigour has been questioned in specific instances, and her willingness to report claims from anonymous sources has attracted criticism from researchers who prefer only on-record testimony. Her supporters argue that decades of consistent, original reporting from protected sources has produced a body of evidence that cannot be easily dismissed, and that her Emmy-winning journalistic credentials give her work a professional foundation rare in the field.</p>
+      </div>
+      <div class="mt-4"><a href="/uap/personalities" class="text-yellow-400/70 hover:text-yellow-300 text-sm">← Back to UFO Personalities</a></div>
+    </div>
+    <script>
+      const sf = document.getElementById('starfield');
+      for (let i = 0; i < 160; i++) { const s = document.createElement('div'); s.className = 'star'; const size = Math.random() * 2 + 0.5; s.style.cssText = `width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--dur:${2+Math.random()*4}s;--delay:${Math.random()*5}s;opacity:${0.2+Math.random()*0.8};`; sf.appendChild(s); }
+    </script>
+  </body>
+</html>

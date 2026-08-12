@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>George Knapp — UFO Personalities — Anomalous Inquiry</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta property="og:title" content="George Knapp — UFO Personalities" />
+    <meta property="og:description" content="Peabody Award–winning Las Vegas journalist who first broke the Bob Lazar story and has covered UAP for four decades." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://esoteric-wisdom.onrender.com/og-image.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+    <style>
+      body { background: radial-gradient(circle at top, #0c1a2e 0%, #020617 50%, #000000 100%); font-family: 'Raleway', sans-serif; }
+      @keyframes twinkle { 0%, 100% { opacity: 0.2; } 50% { opacity: 1; } }
+      .star { position: absolute; border-radius: 50%; background: white; animation: twinkle var(--dur,3s) ease-in-out infinite; animation-delay: var(--delay,0s); }
+      .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+    </style>
+  </head>
+  <body class="min-h-screen text-white px-4 py-8">
+    <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+    {% include "nav.html" %}
+    <div class="relative z-10 max-w-3xl mx-auto space-y-6 pt-6">
+      <a href="/uap/personalities" class="text-teal-400/70 hover:text-teal-300 text-sm">← Back to UFO Personalities</a>
+      <div class="text-center py-4">
+        <div class="text-6xl mb-2">📡</div>
+        <h1 class="text-3xl font-bold font-cinzel text-teal-300">George Knapp</h1>
+        <p class="text-teal-200/60 mt-1 italic">"The Desert Journalist" · b. 1952</p>
+      </div>
+      <div class="bg-white/5 border border-teal-500/40 rounded-2xl p-6 backdrop-blur-md space-y-4 text-teal-100/85 leading-relaxed">
+        <h2 class="text-xl font-semibold text-teal-300">Brief Biography</h2>
+        <p>George Knapp is a <strong class="text-teal-200">Peabody Award–winning</strong> investigative television journalist who has worked for KLAS-TV in Las Vegas for over four decades and is widely regarded as the most credentialled and persistent UAP journalist in America. He holds a Masters degree in journalism and has won multiple Emmy Awards in addition to his Peabody. His investigative career has ranged from organised crime to government corruption to the full spectrum of UAP-related topics. He co-hosts the <strong class="text-teal-200"><em>Weaponized</em></strong> podcast with filmmaker Jeremy Corbell.</p>
+        <p>Knapp's location — Las Vegas, Nevada, in immediate proximity to the Nevada Test and Training Range, Nellis Air Force Base, and the classified test facilities generically known as <strong class="text-teal-200">Area 51</strong> — gave him both professional proximity to aerospace and defence communities and a natural beat that made UAP investigation a logical extension of legitimate local journalism. His relationship with Robert Bigelow has been central to much of his most significant work.</p>
+      </div>
+      <div class="bg-white/5 border border-teal-500/30 rounded-2xl p-6 backdrop-blur-md space-y-4 text-teal-100/85 leading-relaxed">
+        <h2 class="text-xl font-semibold text-teal-300">Breaking Bob Lazar</h2>
+        <p>Knapp's most historically significant journalistic achievement was his 1989 interview of <strong class="text-teal-200">Bob Lazar</strong>, who appeared initially anonymously (as "Dennis" in a segment about Area 51 and reverse engineering) and subsequently on record with Knapp. The interview introduced the S-4 reverse-engineering narrative to the public and created the cultural phenomenon of Area 51 that persists to the present day. Knapp has remained closely involved with Lazar over three decades, defending the plausibility of his account while acknowledging its unverifiability, and working with Jeremy Corbell to produce the 2018 documentary that revived public interest.</p>
+        <p>Knapp's investigation of Lazar extended to corroborating specific elements: he obtained partial records from Los Alamos National Laboratory confirming Lazar's presence there, documented the existence of a facility at the location Lazar described, and interviewed other sources who corroborated peripheral elements of Lazar's account. While Lazar's central claims remain unverifiable, Knapp's investigative work established that Lazar is not simply fabricating a story from nothing.</p>
+        <h2 class="text-teal-300 text-xl font-semibold mt-4">Skinwalker Ranch and NIDS</h2>
+        <p>Knapp was Robert Bigelow's primary journalistic partner in the NIDS investigation of Skinwalker Ranch, and co-authored <em>Hunt for the Skinwalker</em> (2005) with NIDS scientist Colm Kelleher. His access to the full NIDS investigation and his long relationship with Bigelow have made him the primary public chronicler of that programme and the subsequent BAASS/AATIP contracting relationship. He has maintained deep source relationships with current and former intelligence and DoD personnel throughout his career, and his continued journalism in partnership with Corbell has kept him at the centre of the disclosure story into the 2020s.</p>
+      </div>
+      <div class="mt-4"><a href="/uap/personalities" class="text-teal-400/70 hover:text-teal-300 text-sm">← Back to UFO Personalities</a></div>
+    </div>
+    <script>
+      const sf = document.getElementById('starfield');
+      for (let i = 0; i < 160; i++) { const s = document.createElement('div'); s.className = 'star'; const size = Math.random() * 2 + 0.5; s.style.cssText = `width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--dur:${2+Math.random()*4}s;--delay:${Math.random()*5}s;opacity:${0.2+Math.random()*0.8};`; sf.appendChild(s); }
+    </script>
+  </body>
+</html>

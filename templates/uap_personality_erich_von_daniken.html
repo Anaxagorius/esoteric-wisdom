@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Erich von Däniken — UFO Personalities — Anomalous Inquiry</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta property="og:title" content="Erich von Däniken — UFO Personalities" />
+    <meta property="og:description" content="Swiss author of Chariots of the Gods whose ancient astronaut hypothesis reshaped popular thinking about human prehistory." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://esoteric-wisdom.onrender.com/og-image.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+    <style>
+      body { background: radial-gradient(circle at top, #1a1200 0%, #020617 50%, #000000 100%); font-family: 'Raleway', sans-serif; }
+      @keyframes twinkle { 0%, 100% { opacity: 0.2; } 50% { opacity: 1; } }
+      .star { position: absolute; border-radius: 50%; background: white; animation: twinkle var(--dur,3s) ease-in-out infinite; animation-delay: var(--delay,0s); }
+      .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+    </style>
+  </head>
+  <body class="min-h-screen text-white px-4 py-8">
+    <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+    {% include "nav.html" %}
+    <div class="relative z-10 max-w-3xl mx-auto space-y-6 pt-6">
+      <a href="/uap/personalities" class="text-yellow-400/70 hover:text-yellow-300 text-sm">← Back to UFO Personalities</a>
+      <div class="text-center py-4">
+        <div class="text-6xl mb-2">🏛️</div>
+        <h1 class="text-3xl font-bold font-cinzel text-yellow-300">Erich von Däniken</h1>
+        <p class="text-yellow-200/60 mt-1 italic">"The Father of Ancient Astronauts" · b. 1935</p>
+      </div>
+      <div class="bg-white/5 border border-yellow-500/40 rounded-2xl p-6 backdrop-blur-md space-y-4 text-teal-100/85 leading-relaxed">
+        <h2 class="text-xl font-semibold text-yellow-300">Brief Biography</h2>
+        <p>Erich Anton Paul von Däniken was born on <strong class="text-yellow-200">14 April 1935</strong> in Zofingen, Switzerland. He attended a Jesuit boarding school and later worked as a hotel manager and restaurateur, with no formal academic credentials in archaeology or history. His first book, <em><strong class="text-yellow-200">Erinnerungen an die Zukunft</strong></em> (1968, published in English as <em>Chariots of the Gods?</em> in 1969), synthesised theories about ancient astronauts that had been circulating in fringe literature since the 1950s into a single, compulsively readable, globally distributed argument that fundamentally reshaped popular discourse about human origins and prehistory. The book was an international sensation, selling over 65 million copies in 32 languages — one of the best-selling non-fiction books of the 20th century.</p>
+        <p>He has since authored over 40 books, established the <strong class="text-yellow-200">Mystery Park</strong> (now Jungfrau Park) in Interlaken, Switzerland — a theme park dedicated to unexplained ancient mysteries — and inspired multiple television series, most notably the long-running History Channel series <em>Ancient Aliens</em>. He founded the A.A.S. R.A. (Archaeology, Astronautics and SETI Research Association) to support ongoing ancient astronaut research.</p>
+      </div>
+      <div class="bg-white/5 border border-yellow-500/30 rounded-2xl p-6 backdrop-blur-md space-y-4 text-teal-100/85 leading-relaxed">
+        <h2 class="text-xl font-semibold text-yellow-300">The Ancient Astronaut Thesis</h2>
+        <p>Von Däniken's core argument — developed across decades of research — is that extraterrestrial beings visited Earth in antiquity, interacted with early human civilisations, and were interpreted as gods by those civilisations. He marshals archaeological evidence from multiple cultures: the precision stonework of the Egyptian pyramids and the logistics of their construction; the Nazca Lines of Peru, which von Däniken famously described as possible landing strips visible from the air; the Palenque sarcophagus lid, which he interpreted as depicting a figure operating spaceship controls; the biblical Ezekiel's vision, which he analysed as a spacecraft description; and numerous other examples of ancient monumental architecture, sacred art, and myth that he argues preserve memories of direct encounters with non-human intelligences.</p>
+        <p>Mainstream archaeology systematically rejects these interpretations, providing alternative explanations rooted in human ingenuity, symbolic art, religious cosmology, and the physical capacities of ancient peoples. The debate has been ongoing since 1969 and shows no signs of resolution — partly because the evidence is genuinely ambiguous at points and partly because the question strikes at fundamental assumptions about human capability and cosmic solitude.</p>
+        <h2 class="text-yellow-300 text-xl font-semibold mt-4">Cultural Legacy</h2>
+        <p>Von Däniken's lasting contribution is cultural rather than archaeological: he introduced the possibility of ancient extraterrestrial contact to hundreds of millions of people worldwide and created the conceptual vocabulary (ancient astronauts, star gods, Vimanas) that has shaped popular thinking about UAP, human prehistory, and non-human intelligence for six decades. Whether or not his specific interpretations are correct, the questions he asks — where did human civilisation come from? were we visited? what do our most ancient myths actually record? — are not trivial ones, and the fact that mainstream scholarship has responded with condescension rather than rigorous engagement reflects poorly on the academy as much as it does on von Däniken's methodology.</p>
+      </div>
+      <div class="mt-4"><a href="/uap/personalities" class="text-yellow-400/70 hover:text-yellow-300 text-sm">← Back to UFO Personalities</a></div>
+    </div>
+    <script>
+      const sf = document.getElementById('starfield');
+      for (let i = 0; i < 160; i++) { const s = document.createElement('div'); s.className = 'star'; const size = Math.random() * 2 + 0.5; s.style.cssText = `width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--dur:${2+Math.random()*4}s;--delay:${Math.random()*5}s;opacity:${0.2+Math.random()*0.8};`; sf.appendChild(s); }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Robert Salas — UFO Personalities — Anomalous Inquiry</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta property="og:title" content="Robert Salas — UFO Personalities" />
+    <meta property="og:description" content="USAF Minuteman missile launch officer who reported Malmstrom AFB nukes going offline during a 1967 UAP overflight." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://esoteric-wisdom.onrender.com/og-image.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+    <style>
+      body { background: radial-gradient(circle at top, #1a0808 0%, #020617 50%, #000000 100%); font-family: 'Raleway', sans-serif; }
+      @keyframes twinkle { 0%, 100% { opacity: 0.2; } 50% { opacity: 1; } }
+      .star { position: absolute; border-radius: 50%; background: white; animation: twinkle var(--dur,3s) ease-in-out infinite; animation-delay: var(--delay,0s); }
+      .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+    </style>
+  </head>
+  <body class="min-h-screen text-white px-4 py-8">
+    <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+    {% include "nav.html" %}
+    <div class="relative z-10 max-w-3xl mx-auto space-y-6 pt-6">
+      <a href="/uap/personalities" class="text-red-400/70 hover:text-red-300 text-sm">← Back to UFO Personalities</a>
+      <div class="text-center py-4">
+        <div class="text-6xl mb-2">🚀</div>
+        <h1 class="text-3xl font-bold font-cinzel text-red-300">Robert Salas</h1>
+        <p class="text-red-200/60 mt-1 italic">"The Malmstrom Witness" · b. 1940</p>
+      </div>
+      <div class="bg-white/5 border border-red-500/40 rounded-2xl p-6 backdrop-blur-md space-y-4 text-teal-100/85 leading-relaxed">
+        <h2 class="text-xl font-semibold text-red-300">Brief Biography</h2>
+        <p>Robert L. Salas is a retired USAF Captain who served as a <strong class="text-red-200">Minuteman ICBM Launch Control Officer</strong> at Malmstrom Air Force Base, Montana. He holds a BS in aeronautical engineering and a MS in aerospace engineering (both from the Air Force Institute of Technology), worked as a civilian aeronautical engineer for the FAA following his Air Force career, and became one of the most important witnesses to UAP interference with U.S. nuclear weapons systems after going public with his account in the 1990s.</p>
+        <p>Salas co-authored <em>Faded Giant</em> (2005) with researcher James Klotz, documenting his experience and conducting systematic research into other corroborating nuclear facility UAP incidents. He has testified before Congress, appeared at Steven Greer's 2001 Disclosure Project briefing, and has been one of the most persistent and methodologically careful witnesses on the nuclear-UAP interface.</p>
+      </div>
+      <div class="bg-white/5 border border-red-500/30 rounded-2xl p-6 backdrop-blur-md space-y-4 text-teal-100/85 leading-relaxed">
+        <h2 class="text-xl font-semibold text-red-300">The Malmstrom Incident — March 1967</h2>
+        <p>In the early hours of <strong class="text-red-200">24–25 March 1967</strong>, Salas was on duty as the Deputy Missile Combat Crew Commander (DMCCC) at <strong class="text-red-200">Oscar Flight</strong>, one of Malmstrom AFB's launch control facilities. At approximately 3:00 am, his topside security guard called to report a glowing red oval object hovering over the front gate of the facility. Minutes later, all <strong class="text-red-200">ten Minuteman ICBMs</strong> under Oscar Flight's control went off alert status — the "No-Go" condition indicating that the missiles had been placed in a state where they could not be launched — virtually simultaneously. Each missile shutdown occurred within seconds of the others, which engineers later confirmed was technically inexplicable: the missiles operate on separate, hardened circuits with no common failure mode that could produce simultaneous shutdown.</p>
+        <p>A similar event had occurred days earlier at Echo Flight (commanded by Captain Eric Carlson and Lieutenant Walt Figel), where all ten Echo missiles had also gone offline during a UAP overflight — an incident that was classified and actively suppressed by the Air Force for decades. Salas was ordered not to discuss the Oscar Flight incident. He did not go public until decades after his retirement.</p>
+        <h2 class="text-red-300 text-xl font-semibold mt-4">The Nuclear-UAP Pattern</h2>
+        <p>Salas's account is part of a documented pattern of UAP activity near nuclear weapons facilities that extends from the late 1940s to the present day, encompassing both U.S. and Soviet/Russian incidents. The consistent targeting of nuclear assets — not commercial airports, not civilian airspace, but specifically missile silos, nuclear bomber bases, and submarine facilities — suggests to researchers including Robert Hastings (whose book <em>UFOs and Nukes</em> documented over 100 such incidents) that the phenomenon has a specific and active interest in humanity's nuclear weapons capability.</p>
+        <p>Salas's particular contribution is the specificity and verifiability of his account: multiple witnesses, documents confirming the shutdown, corroborating testimony from other crew members, and the inherent credibility of an aeronautical engineer and military officer who spent years in classified nuclear operations. His willingness to testify under oath before Congress makes him one of the most consequential government UAP witnesses in the field's history.</p>
+      </div>
+      <blockquote class="border-l-4 border-red-400 pl-4 italic text-red-200/70 text-sm leading-relaxed">
+        "Whatever flew over that base that morning shut down our missiles. That is not a theory. That is a fact. It happened. And the Air Force knows it happened."
+        <footer class="mt-1 text-red-300/50 not-italic">— Robert Salas</footer>
+      </blockquote>
+      <div class="mt-4"><a href="/uap/personalities" class="text-red-400/70 hover:text-red-300 text-sm">← Back to UFO Personalities</a></div>
+    </div>
+    <script>
+      const sf = document.getElementById('starfield');
+      for (let i = 0; i < 160; i++) { const s = document.createElement('div'); s.className = 'star'; const size = Math.random() * 2 + 0.5; s.style.cssText = `width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--dur:${2+Math.random()*4}s;--delay:${Math.random()*5}s;opacity:${0.2+Math.random()*0.8};`; sf.appendChild(s); }
+    </script>
+  </body>
+</html>

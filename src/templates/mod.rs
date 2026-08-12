@@ -1343,3 +1343,223 @@ pub struct AdminDashboardTemplate;
 #[derive(Template)]
 #[template(path = "japanese_religion.html")]
 pub struct JapaneseReligionTemplate;
+
+#[derive(Template)]
+#[template(path = "uap_personalities.html")]
+pub struct UapPersonalitiesTemplate;
+
+#[derive(Template)]
+#[template(path = "uap_personality_george_adamski.html")]
+pub struct UapPersonalityGeorgeAdamskiTemplate;
+
+#[derive(Template)]
+#[template(path = "uap_personality_orfeo_angelucci.html")]
+pub struct UapPersonalityOrfeoAngelucciTemplate;
+
+#[derive(Template)]
+#[template(path = "uap_personality_kenneth_arnold.html")]
+pub struct UapPersonalityKennethArnoldTemplate;
+
+#[derive(Template)]
+#[template(path = "uap_personality_stephen_bassett.html")]
+pub struct UapPersonalityStephenBassettTemplate;
+
+#[derive(Template)]
+#[template(path = "uap_personality_art_bell.html")]
+pub struct UapPersonalityArtBellTemplate;
+
+#[derive(Template)]
+#[template(path = "uap_personality_robert_bigelow.html")]
+pub struct UapPersonalityRobertBigelowTemplate;
+
+#[derive(Template)]
+#[template(path = "uap_personality_chris_bledsoe.html")]
+pub struct UapPersonalityChrisBledsoeTemplate;
+
+#[derive(Template)]
+#[template(path = "uap_personality_dylan_borland.html")]
+pub struct UapPersonalityDylanBorlandTemplate;
+
+#[derive(Template)]
+#[template(path = "uap_personality_matthew_brown.html")]
+pub struct UapPersonalityMatthewBrownTemplate;
+
+#[derive(Template)]
+#[template(path = "uap_personality_jim_coral_lorenzen.html")]
+pub struct UapPersonalityJimCoralLorenzensTemplate;
+
+#[derive(Template)]
+#[template(path = "uap_personality_philip_corso.html")]
+pub struct UapPersonalityPhilipCorsoTemplate;
+
+#[derive(Template)]
+#[template(path = "uap_personality_ross_coulthart.html")]
+pub struct UapPersonalityRossCoulthartTemplate;
+
+#[derive(Template)]
+#[template(path = "uap_personality_jeremy_corbell.html")]
+pub struct UapPersonalityJeremyCorbellTemplate;
+
+#[derive(Template)]
+#[template(path = "uap_personality_eric_davis.html")]
+pub struct UapPersonalityEricDavisTemplate;
+
+#[derive(Template)]
+#[template(path = "uap_personality_tom_delonge.html")]
+pub struct UapPersonalityTomDelongeTemplate;
+
+#[derive(Template)]
+#[template(path = "uap_personality_richard_dolan.html")]
+pub struct UapPersonalityRichardDolanTemplate;
+
+#[derive(Template)]
+#[template(path = "uap_personality_luis_elizondo.html")]
+pub struct UapPersonalityLuisElizondoTemplate;
+
+#[derive(Template)]
+#[template(path = "uap_personality_david_fravor.html")]
+pub struct UapPersonalityDavidFravorTemplate;
+
+#[derive(Template)]
+#[template(path = "uap_personality_raymond_fowler.html")]
+pub struct UapPersonalityRaymondFowlerTemplate;
+
+#[derive(Template)]
+#[template(path = "uap_personality_stanton_friedman.html")]
+pub struct UapPersonalityStantonFriedmanTemplate;
+
+#[derive(Template)]
+#[template(path = "uap_personality_tim_gallaudet.html")]
+pub struct UapPersonalityTimGallaudetTemplate;
+
+#[derive(Template)]
+#[template(path = "uap_personality_steven_greer.html")]
+pub struct UapPersonalityStevenGreerTemplate;
+
+#[derive(Template)]
+#[template(path = "uap_personality_david_grusch.html")]
+pub struct UapPersonalityDavidGruschTemplate;
+
+#[derive(Template)]
+#[template(path = "uap_personality_ryan_graves.html")]
+pub struct UapPersonalityRyanGravesTemplate;
+
+#[derive(Template)]
+#[template(path = "uap_personality_charles_halt.html")]
+pub struct UapPersonalityCharlesHaltTemplate;
+
+#[derive(Template)]
+#[template(path = "uap_personality_betty_hill.html")]
+pub struct UapPersonalityBettyHillTemplate;
+
+#[derive(Template)]
+#[template(path = "uap_personality_barney_hill.html")]
+pub struct UapPersonalityBarneyHillTemplate;
+
+#[derive(Template)]
+#[template(path = "uap_personality_budd_hopkins.html")]
+pub struct UapPersonalityBuddHopkinsTemplate;
+
+#[derive(Template)]
+#[template(path = "uap_personality_linda_moulton_howe.html")]
+pub struct UapPersonalityLindaMoultonHoweTemplate;
+
+#[derive(Template)]
+#[template(path = "uap_personality_j_allen_hynek.html")]
+pub struct UapPersonalityJAllenHynekTemplate;
+
+#[derive(Template)]
+#[template(path = "uap_personality_david_jacobs.html")]
+pub struct UapPersonalityDavidJacobsTemplate;
+
+#[derive(Template)]
+#[template(path = "uap_personality_leslie_kean.html")]
+pub struct UapPersonalityLeslieKeanTemplate;
+
+#[derive(Template)]
+#[template(path = "uap_personality_john_keel.html")]
+pub struct UapPersonalityJohnKeelTemplate;
+
+#[derive(Template)]
+#[template(path = "uap_personality_donald_keyhoe.html")]
+pub struct UapPersonalityDonaldKeyhoeTemplate;
+
+#[derive(Template)]
+#[template(path = "uap_personality_george_knapp.html")]
+pub struct UapPersonalityGeorgeKnappTemplate;
+
+#[derive(Template)]
+#[template(path = "uap_personality_bob_lazar.html")]
+pub struct UapPersonalityBobLazarTemplate;
+
+#[derive(Template)]
+#[template(path = "uap_personality_avi_loeb.html")]
+pub struct UapPersonalityAviLoebTemplate;
+
+#[derive(Template)]
+#[template(path = "uap_personality_john_mack.html")]
+pub struct UapPersonalityJohnMackTemplate;
+
+#[derive(Template)]
+#[template(path = "uap_personality_james_mcdonald.html")]
+pub struct UapPersonalityJamesMcdonaldTemplate;
+
+#[derive(Template)]
+#[template(path = "uap_personality_billy_meier.html")]
+pub struct UapPersonalityBillyMeierTemplate;
+
+#[derive(Template)]
+#[template(path = "uap_personality_christopher_mellon.html")]
+pub struct UapPersonalityChristopherMellonTemplate;
+
+#[derive(Template)]
+#[template(path = "uap_personality_edgar_mitchell.html")]
+pub struct UapPersonalityEdgarMitchellTemplate;
+
+#[derive(Template)]
+#[template(path = "uap_personality_garry_nolan.html")]
+pub struct UapPersonalityGarryNolanTemplate;
+
+#[derive(Template)]
+#[template(path = "uap_personality_nick_pope.html")]
+pub struct UapPersonalityNickPopeTemplate;
+
+#[derive(Template)]
+#[template(path = "uap_personality_hal_puthoff.html")]
+pub struct UapPersonalityHalPuthoffTemplate;
+
+#[derive(Template)]
+#[template(path = "uap_personality_edward_ruppelt.html")]
+pub struct UapPersonalityEdwardRuppeltTemplate;
+
+#[derive(Template)]
+#[template(path = "uap_personality_robert_salas.html")]
+pub struct UapPersonalityRobertSalasTemplate;
+
+#[derive(Template)]
+#[template(path = "uap_personality_jim_semivan.html")]
+pub struct UapPersonalityJimSemivanTemplate;
+
+#[derive(Template)]
+#[template(path = "uap_personality_whitley_strieber.html")]
+pub struct UapPersonalityWhitleyStrieberTemplate;
+
+#[derive(Template)]
+#[template(path = "uap_personality_leonard_stringfield.html")]
+pub struct UapPersonalityLeonardStringfieldTemplate;
+
+#[derive(Template)]
+#[template(path = "uap_personality_giorgio_tsoukalos.html")]
+pub struct UapPersonalityGiorgioTsoukalosTemplate;
+
+#[derive(Template)]
+#[template(path = "uap_personality_jacques_vallee.html")]
+pub struct UapPersonalityJacquesValleeTemplate;
+
+#[derive(Template)]
+#[template(path = "uap_personality_travis_walton.html")]
+pub struct UapPersonalityTravisWaltonTemplate;
+
+#[derive(Template)]
+#[template(path = "uap_personality_erich_von_daniken.html")]
+pub struct UapPersonalityErichVonDanikenTemplate;

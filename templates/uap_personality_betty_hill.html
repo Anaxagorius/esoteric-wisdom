@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Betty Hill — UFO Personalities — Anomalous Inquiry</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta property="og:title" content="Betty Hill — UFO Personalities" />
+    <meta property="og:description" content="New Hampshire social worker and civil rights activist abducted in the first widely-publicised UFO abduction case (1961)." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://esoteric-wisdom.onrender.com/og-image.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+    <style>
+      body { background: radial-gradient(circle at top, #0d0d28 0%, #020617 50%, #000000 100%); font-family: 'Raleway', sans-serif; }
+      @keyframes twinkle { 0%, 100% { opacity: 0.2; } 50% { opacity: 1; } }
+      .star { position: absolute; border-radius: 50%; background: white; animation: twinkle var(--dur,3s) ease-in-out infinite; animation-delay: var(--delay,0s); }
+      .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+    </style>
+  </head>
+  <body class="min-h-screen text-white px-4 py-8">
+    <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+    {% include "nav.html" %}
+    <div class="relative z-10 max-w-3xl mx-auto space-y-6 pt-6">
+      <a href="/uap/personalities" class="text-indigo-400/70 hover:text-indigo-300 text-sm">← Back to UFO Personalities</a>
+      <div class="text-center py-4">
+        <div class="text-6xl mb-2">🌙</div>
+        <h1 class="text-3xl font-bold font-cinzel text-indigo-300">Betty Hill</h1>
+        <p class="text-indigo-200/60 mt-1 italic">"The Pioneer Abductee" · 1919–2004</p>
+      </div>
+      <div class="bg-white/5 border border-indigo-500/40 rounded-2xl p-6 backdrop-blur-md space-y-4 text-teal-100/85 leading-relaxed">
+        <h2 class="text-xl font-semibold text-indigo-300">Brief Biography</h2>
+        <p>Eunice Elizabeth Barrett Hill was born on <strong class="text-indigo-200">28 June 1919</strong> in Kingston, New Hampshire. She was a social worker employed by the State of New Hampshire's Division of Child Welfare, a NAACP official, and a dedicated civil rights activist — active in movements for racial equality in a state where such work was socially costly. She married Barney Hill in 1960; theirs was an interracial marriage in a period of intense racial tension, and both were deeply involved in progressive civic activism. She held a Masters degree in social work and taught at the University of New Hampshire. Betty Hill died on <strong class="text-indigo-200">17 October 2004</strong>.</p>
+        <p>Betty and her husband Barney had their abduction experience on the night of <strong class="text-indigo-200">19–20 September 1961</strong> while returning from a vacation in Niagara Falls and Montreal along U.S. Route 3 through New Hampshire's White Mountains. The subsequent investigation of their account — which involved Air Force personnel, a Harvard psychiatrist, and a naval astronomer — produced what became the first fully documented alien abduction case in modern history.</p>
+      </div>
+      <div class="bg-white/5 border border-indigo-500/30 rounded-2xl p-6 backdrop-blur-md space-y-4 text-teal-100/85 leading-relaxed">
+        <h2 class="text-xl font-semibold text-indigo-300">The Abduction Experience</h2>
+        <p>The Hills noticed a large star or light behaving anomalously as they drove through the mountains, which Barney at one point observed through binoculars at close range from his car window, seeing a large disc-shaped craft with multiple figures visible through its windows. Both subsequently experienced <strong class="text-indigo-200">missing time</strong> — arriving home approximately two hours later than their journey should have taken — and found their clothing torn and Barney's shoes scraped, with compass anomalies, without being able to explain any of these observations.</p>
+        <p>In the weeks that followed, Betty experienced vivid, recurring nightmares that she described in detail in letters to Major Donald Keyhoe (then director of NICAP), who forwarded them to his colleague Walter Webb for investigation. Webb interviewed the Hills and produced a detailed report. The couple subsequently underwent regressive hypnosis conducted by Boston psychiatrist <strong class="text-indigo-200">Dr. Benjamin Simon</strong> — a highly respected professional whose career had nothing to do with UFOs — and under hypnosis provided independently consistent accounts of being taken aboard a craft, examined, and then returned.</p>
+        <p>Betty's hypnotic sessions produced a celebrated detail: she described being shown a <strong class="text-indigo-200">star map</strong> by one of the beings, indicating the locations from which trading and exploratory missions originated. In 1966, schoolteacher Marjorie Fish constructed a three-dimensional model of nearby stars and found a close match between Betty's recalled map and a pattern centred on the binary star system <strong class="text-indigo-200">Zeta Reticuli</strong> — a finding that attracted serious attention from astronomers including J. Allen Hynek and generated a major article in <em>Astronomy</em> magazine.</p>
+        <h2 class="text-indigo-300 text-xl font-semibold mt-4">Legacy</h2>
+        <p>Betty Hill's importance in UAP history is architectural: the Hills' case, popularised by John Fuller's book <em>The Interrupted Journey</em> (1966) and a 1975 NBC television film, created the cultural template for the alien abduction narrative that all subsequent cases have been measured against. The grey, large-headed, almond-eyed beings, the metallic examination table, the star map, the physical examination — these elements appeared first in Betty Hill's testimony and became the canonical elements of the abduction experience worldwide. Whether that canonisation reflects a genuine shared phenomenon or a culturally transmitted expectation remains one of the central unresolved questions of the field.</p>
+      </div>
+      <div class="mt-4"><a href="/uap/personalities" class="text-indigo-400/70 hover:text-indigo-300 text-sm">← Back to UFO Personalities</a></div>
+    </div>
+    <script>
+      const sf = document.getElementById('starfield');
+      for (let i = 0; i < 160; i++) { const s = document.createElement('div'); s.className = 'star'; const size = Math.random() * 2 + 0.5; s.style.cssText = `width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--dur:${2+Math.random()*4}s;--delay:${Math.random()*5}s;opacity:${0.2+Math.random()*0.8};`; sf.appendChild(s); }
+    </script>
+  </body>
+</html>

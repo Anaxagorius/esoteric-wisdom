@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>David Fravor — UFO Personalities — Anomalous Inquiry</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta property="og:title" content="David Fravor — UFO Personalities" />
+    <meta property="og:description" content="USS Nimitz pilot who had the primary visual intercept of the Tic-Tac UAP in November 2004 and testified before Congress." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://esoteric-wisdom.onrender.com/og-image.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+    <style>
+      body { background: radial-gradient(circle at top, #0c2430 0%, #020617 50%, #000000 100%); font-family: 'Raleway', sans-serif; }
+      @keyframes twinkle { 0%, 100% { opacity: 0.2; } 50% { opacity: 1; } }
+      .star { position: absolute; border-radius: 50%; background: white; animation: twinkle var(--dur,3s) ease-in-out infinite; animation-delay: var(--delay,0s); }
+      .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+    </style>
+  </head>
+  <body class="min-h-screen text-white px-4 py-8">
+    <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+    {% include "nav.html" %}
+    <div class="relative z-10 max-w-3xl mx-auto space-y-6 pt-6">
+      <a href="/uap/personalities" class="text-teal-400/70 hover:text-teal-300 text-sm">← Back to UFO Personalities</a>
+      <div class="text-center py-4">
+        <div class="text-6xl mb-2">⚓</div>
+        <h1 class="text-3xl font-bold font-cinzel text-teal-300">David Fravor</h1>
+        <p class="text-teal-200/60 mt-1 italic">"The Tic-Tac Pilot" · b. 1964</p>
+      </div>
+      <div class="bg-white/5 border border-teal-500/40 rounded-2xl p-6 backdrop-blur-md space-y-4 text-teal-100/85 leading-relaxed">
+        <h2 class="text-xl font-semibold text-teal-300">Brief Biography</h2>
+        <p>Commander David Fravor (USN, Ret.) is a career naval aviator with over <strong class="text-teal-200">3,000 flight hours</strong> in the F/A-18 and extensive combat experience including operations over Iraq during Operations Desert Storm and Iraqi Freedom. He served as Commanding Officer of the VFA-41 "Black Aces" squadron aboard USS Nimitz, one of the most coveted leadership positions in carrier aviation. He is by every professional measure an exceptional and experienced aviator — exactly the kind of witness whose credibility is highest in evaluating unusual aerial phenomena.</p>
+        <p>On <strong class="text-teal-200">14 November 2004</strong>, Fravor had the primary visual intercept of the "Tic-Tac" UAP — the object that produced the FLIR1 infrared video later officially released by the DoD. He remained largely private about his experience until the 2017 <em>New York Times</em> story, after which he gave dozens of interviews and testified before Congress. He runs a private aviation company and has been outspoken in insisting that what he encountered was beyond any known human technology.</p>
+      </div>
+      <div class="bg-white/5 border border-teal-500/30 rounded-2xl p-6 backdrop-blur-md space-y-4 text-teal-100/85 leading-relaxed">
+        <h2 class="text-xl font-semibold text-teal-300">The Tic-Tac Encounter</h2>
+        <p>Fravor's encounter is documented in detail on this site's <a href="/uap/nimitz" class="text-teal-300 underline hover:text-teal-200">Nimitz Encounter page</a>. The key elements: descent from 20,000 feet to observe a churning disturbance on the ocean surface; visual acquisition of a white, elongated, oblong object — "like a Tic-Tac breath mint" — approximately 40 feet long with no visible wings, control surfaces, or propulsion system; an apparent awareness response from the object; a mirror-manoeuvre that suggested intelligent, reactive behaviour; and an instantaneous departure that rendered pursuit impossible.</p>
+        <p>What makes Fravor's testimony particularly significant in the current disclosure context is not merely the sighting itself but his <strong class="text-teal-200">categorical assessment</strong> of it. He has consistently and publicly stated: "I can tell you I think it was not from this world" and "I'm not crazy, haven't drunk the Kool-Aid... what I saw, with my own eyes, was not from this Earth." This assessment, from an active-duty career military officer of the highest professional standing, speaking on record in the <em>New York Times</em> and subsequently under congressional oath, represented a qualitative shift in the public discourse around UAP.</p>
+        <h2 class="text-xl font-semibold text-teal-300 mt-4">Congressional Testimony</h2>
+        <p>Fravor testified publicly before the House Armed Services Committee and the House Intelligence Committee, providing a calm, technically precise account of his encounter and fielding questions from members of Congress with the same no-nonsense directness he brings to all public appearances. His testimony is available in the congressional record and stands as one of the most credible first-hand accounts of a UAP encounter ever given in an official government setting.</p>
+        <p>Fravor has been consistent in his view that the phenomenon warrants serious government investigation and that the institutional resistance to taking it seriously represents a failure of national security policy. He has also been notably sceptical of speculative claims — the alien abduction narrative, contactee accounts — and focuses strictly on what he personally observed and what the sensor data shows, which he regards as sufficient in itself to demand explanation.</p>
+      </div>
+      <blockquote class="border-l-4 border-teal-400 pl-4 italic text-teal-200/70 text-sm leading-relaxed">
+        "I want to fly. I want to go find that thing. And what I found was something that I could not explain."
+        <footer class="mt-1 text-teal-300/50 not-italic">— Commander David Fravor (USN, Ret.)</footer>
+      </blockquote>
+      <div class="mt-4"><a href="/uap/personalities" class="text-teal-400/70 hover:text-teal-300 text-sm">← Back to UFO Personalities</a></div>
+    </div>
+    <script>
+      const sf = document.getElementById('starfield');
+      for (let i = 0; i < 160; i++) { const s = document.createElement('div'); s.className = 'star'; const size = Math.random() * 2 + 0.5; s.style.cssText = `width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--dur:${2+Math.random()*4}s;--delay:${Math.random()*5}s;opacity:${0.2+Math.random()*0.8};`; sf.appendChild(s); }
+    </script>
+  </body>
+</html>

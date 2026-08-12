@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Ross Coulthart — UFO Personalities — Anomalous Inquiry</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta property="og:title" content="Ross Coulthart — UFO Personalities" />
+    <meta property="og:description" content="Australian investigative journalist whose In Plain Sight and NewsNation reports advanced the 2023 congressional disclosure hearings." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://esoteric-wisdom.onrender.com/og-image.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+    <style>
+      body { background: radial-gradient(circle at top, #0a1828 0%, #020617 50%, #000000 100%); font-family: 'Raleway', sans-serif; }
+      @keyframes twinkle { 0%, 100% { opacity: 0.2; } 50% { opacity: 1; } }
+      .star { position: absolute; border-radius: 50%; background: white; animation: twinkle var(--dur,3s) ease-in-out infinite; animation-delay: var(--delay,0s); }
+      .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+    </style>
+  </head>
+  <body class="min-h-screen text-white px-4 py-8">
+    <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+    {% include "nav.html" %}
+    <div class="relative z-10 max-w-3xl mx-auto space-y-6 pt-6">
+      <a href="/uap/personalities" class="text-sky-400/70 hover:text-sky-300 text-sm">← Back to UFO Personalities</a>
+      <div class="text-center py-4">
+        <div class="text-6xl mb-2">🎬</div>
+        <h1 class="text-3xl font-bold font-cinzel text-sky-300">Ross Coulthart</h1>
+        <p class="text-sky-200/60 mt-1 italic">"The Investigative Journalist of Disclosure" · b. 1960</p>
+      </div>
+      <div class="bg-white/5 border border-sky-500/40 rounded-2xl p-6 backdrop-blur-md space-y-4 text-teal-100/85 leading-relaxed">
+        <h2 class="text-xl font-semibold text-sky-300">Brief Biography</h2>
+        <p>Ross Coulthart is an <strong class="text-sky-200">Australian investigative journalist</strong> with a 35-year career spanning print, television, and digital media. He has won multiple Walkley Awards — Australia's highest journalism honour — for investigations into organised crime, drug trafficking, the Catholic Church abuse scandal, and political corruption. He came to UAP relatively late in his career, initially sceptical, but found the evidentiary case compelling enough to pursue seriously.</p>
+        <p>His book <strong class="text-sky-200"><em>In Plain Sight</em></strong> (2021) was the product of nearly three years of interviews with intelligence officials, military witnesses, scientists, and government insiders, and became one of the most rigorous journalistic treatments of the UAP subject in any language. He subsequently joined <strong class="text-sky-200">NewsNation</strong> in the United States, where his reporting directly informed the conditions that led to David Grusch's 2023 congressional testimony.</p>
+      </div>
+      <div class="bg-white/5 border border-sky-500/30 rounded-2xl p-6 backdrop-blur-md space-y-4 text-teal-100/85 leading-relaxed">
+        <h2 class="text-xl font-semibold text-sky-300">In Plain Sight and the Grusch Pipeline</h2>
+        <p>Coulthart's reporting has been distinguished by his access to high-level sources within the US and allied intelligence communities — a consequence of his pre-existing relationships from decades of national security journalism. He was among the first journalists to report on David Grusch's whistleblower complaint before it became public, and his NewsNation interview with Grusch in June 2023 was the first major broadcast interview in which Grusch made his claims about non-human intelligence and crash recovery programmes on-record.</p>
+        <p>That interview — watched by millions and widely credited with ensuring Grusch's subsequent congressional testimony could not be ignored — represents Coulthart's most consequential contribution to the UAP disclosure process to date. Unlike some UAP journalists who operate within a community of true believers, Coulthart approaches the subject with the discipline of hard-news investigation: demanding sources go on record, distinguishing between what can and cannot be verified, and applying standard journalistic burden-of-proof standards to extraordinary claims.</p>
+        <h2 class="text-xl font-semibold text-sky-300 mt-4">Journalistic Standards and UAP Coverage</h2>
+        <p>Coulthart has been outspoken about what he sees as the mainstream media's failure to apply normal journalistic standards to UAP — a subject that features credentialled, on-record sources making specific, falsifiable claims that have never been adequately investigated or reported. He draws explicit comparisons to other whistleblower-based national security stories (NSA surveillance, CIA torture, Pentagon Papers) where the instinct of mainstream newsrooms was initially to ignore or dismiss before ultimately being compelled to cover.</p>
+        <p>His co-hosted podcast <em>Need to Know</em> (with Bryce Zabel) continues to provide some of the most careful and well-sourced UAP reporting available in any format.</p>
+      </div>
+      <div class="mt-4"><a href="/uap/personalities" class="text-sky-400/70 hover:text-sky-300 text-sm">← Back to UFO Personalities</a></div>
+    </div>
+    <script>
+      const sf = document.getElementById('starfield');
+      for (let i = 0; i < 160; i++) { const s = document.createElement('div'); s.className = 'star'; const size = Math.random() * 2 + 0.5; s.style.cssText = `width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--dur:${2+Math.random()*4}s;--delay:${Math.random()*5}s;opacity:${0.2+Math.random()*0.8};`; sf.appendChild(s); }
+    </script>
+  </body>
+</html>

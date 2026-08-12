@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Garry Nolan — UFO Personalities — Anomalous Inquiry</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta property="og:title" content="Garry Nolan — UFO Personalities" />
+    <meta property="og:description" content="Stanford immunologist who analysed UAP-injured personnel and publicly advocates for open scientific inquiry into the phenomenon." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://esoteric-wisdom.onrender.com/og-image.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+    <style>
+      body { background: radial-gradient(circle at top, #1a0818 0%, #020617 50%, #000000 100%); font-family: 'Raleway', sans-serif; }
+      @keyframes twinkle { 0%, 100% { opacity: 0.2; } 50% { opacity: 1; } }
+      .star { position: absolute; border-radius: 50%; background: white; animation: twinkle var(--dur,3s) ease-in-out infinite; animation-delay: var(--delay,0s); }
+      .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+    </style>
+  </head>
+  <body class="min-h-screen text-white px-4 py-8">
+    <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+    {% include "nav.html" %}
+    <div class="relative z-10 max-w-3xl mx-auto space-y-6 pt-6">
+      <a href="/uap/personalities" class="text-rose-400/70 hover:text-rose-300 text-sm">← Back to UFO Personalities</a>
+      <div class="text-center py-4">
+        <div class="text-6xl mb-2">🧬</div>
+        <h1 class="text-3xl font-bold font-cinzel text-rose-300">Garry Nolan</h1>
+        <p class="text-rose-200/60 mt-1 italic">"Stanford's UAP Immunologist" · b. 1961</p>
+      </div>
+      <div class="bg-white/5 border border-rose-500/40 rounded-2xl p-6 backdrop-blur-md space-y-4 text-teal-100/85 leading-relaxed">
+        <h2 class="text-xl font-semibold text-rose-300">Brief Biography</h2>
+        <p>Garry P. Nolan is a Professor of Pathology at <strong class="text-rose-200">Stanford University School of Medicine</strong> and one of the world's leading immunologists. He holds a PhD in genetics from Cornell and has published over 300 peer-reviewed papers. He invented Palladium-based mass cytometry (CyTOF), an advanced analytical technology for characterising complex biological samples at the single-cell level, which is now widely used in cancer research, immunology, and clinical diagnostics. He has been ranked among the most influential scientists in the world in the fields of immunology and cell biology by Thomson Reuters.</p>
+        <p>Nolan began engaging with UAP-related materials around 2011 when he was contacted by the intelligence community — he has stated that he was approached and asked to use his analytical capabilities to examine <strong class="text-rose-200">individuals who had been harmed by proximity to UAP</strong>. Over the following decade, he analysed medical imaging data from dozens of such individuals and developed a research programme on the neurological and physiological effects of UAP encounters.</p>
+      </div>
+      <div class="bg-white/5 border border-rose-500/30 rounded-2xl p-6 backdrop-blur-md space-y-4 text-teal-100/85 leading-relaxed">
+        <h2 class="text-xl font-semibold text-rose-300">Neurological Research and UAP Witness Analysis</h2>
+        <p>Nolan's most publicly discussed research involves analysis of the <strong class="text-rose-200">basal ganglia</strong> of individuals with UAP contact or proximity experiences. Using his mass cytometry and medical imaging capabilities, he examined brain scans of multiple experiencers — including intelligence and military personnel who had been harmed or significantly affected by UAP encounters — and found anomalous patterns: unusual density in the basal ganglia region associated with pattern recognition and unconscious processing. He has argued that these individuals appear to have a neurological profile that distinguishes them from controls — a profile he has tentatively associated with heightened sensitivity to anomalous stimuli.</p>
+        <p>He has also been involved in analysis of physical materials alleged to be associated with UAP — applying his analytical techniques to samples whose provenance he declines to detail publicly. His statements about these analyses have been carefully bounded by his security obligations, but he has confirmed that some materials he examined showed properties he could not account for using conventional materials science.</p>
+        <h2 class="text-rose-300 text-xl font-semibold mt-4">Ata and Broader Anomalous Biology</h2>
+        <p>Nolan led the scientific analysis of "Ata" — a small, unusual skeletal specimen from the Atacama Desert of Chile, which had circulated in UFO circles as a possible alien body. His genomic analysis, published in <em>Genome Research</em> (2018), established that Ata was a human being — a premature infant with multiple rare mutations causing severe skeletal abnormalities — definitively closing the alien hypothesis for that specific specimen. His willingness to apply rigorous science to a sensationalist claim, following the evidence wherever it led, is characteristic of his broader methodological approach.</p>
+        <p>Nolan is among the most important figures in the contemporary UAP scientific landscape precisely because of his institutional credibility — Stanford professorship, 300+ peer-reviewed papers, commercially successful technology inventor — combined with his willingness to publicly engage with the phenomenon on scientific terms. His approach represents what serious UAP science could look like.</p>
+      </div>
+      <div class="mt-4"><a href="/uap/personalities" class="text-rose-400/70 hover:text-rose-300 text-sm">← Back to UFO Personalities</a></div>
+    </div>
+    <script>
+      const sf = document.getElementById('starfield');
+      for (let i = 0; i < 160; i++) { const s = document.createElement('div'); s.className = 'star'; const size = Math.random() * 2 + 0.5; s.style.cssText = `width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--dur:${2+Math.random()*4}s;--delay:${Math.random()*5}s;opacity:${0.2+Math.random()*0.8};`; sf.appendChild(s); }
+    </script>
+  </body>
+</html>

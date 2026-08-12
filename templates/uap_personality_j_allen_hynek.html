@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>J. Allen Hynek — UFO Personalities — Anomalous Inquiry</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta property="og:title" content="J. Allen Hynek — UFO Personalities" />
+    <meta property="og:description" content="Astrophysicist, Project Blue Book consultant, creator of the Close Encounter classification system, and founder of CUFOS." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://esoteric-wisdom.onrender.com/og-image.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+    <style>
+      body { background: radial-gradient(circle at top, #0c2430 0%, #020617 50%, #000000 100%); font-family: 'Raleway', sans-serif; }
+      @keyframes twinkle { 0%, 100% { opacity: 0.2; } 50% { opacity: 1; } }
+      .star { position: absolute; border-radius: 50%; background: white; animation: twinkle var(--dur,3s) ease-in-out infinite; animation-delay: var(--delay,0s); }
+      .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+    </style>
+  </head>
+  <body class="min-h-screen text-white px-4 py-8">
+    <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+    {% include "nav.html" %}
+    <div class="relative z-10 max-w-3xl mx-auto space-y-6 pt-6">
+      <a href="/uap/personalities" class="text-teal-400/70 hover:text-teal-300 text-sm">← Back to UFO Personalities</a>
+      <div class="text-center py-4">
+        <div class="text-6xl mb-2">🔭</div>
+        <h1 class="text-3xl font-bold font-cinzel text-teal-300">J. Allen Hynek</h1>
+        <p class="text-teal-200/60 mt-1 italic">"The Scientific Father of UFOlogy" · 1910–1986</p>
+      </div>
+      <div class="bg-white/5 border border-teal-500/40 rounded-2xl p-6 backdrop-blur-md space-y-4 text-teal-100/85 leading-relaxed">
+        <h2 class="text-xl font-semibold text-teal-300">Brief Biography</h2>
+        <p>Josef Allen Hynek was born on <strong class="text-teal-200">1 May 1910</strong> in Chicago, Illinois. He earned his PhD in astrophysics from the University of Chicago in 1935 and became one of the foremost American astronomers of the mid-twentieth century, serving as chairman of the astronomy department at Northwestern University and director of Northwestern's Dearborn Observatory. He contributed to Project Vanguard (the U.S. satellite programme) and was a scientific consultant to the U.S. Air Force's series of UFO investigation programmes — Sign, Grudge, and Blue Book — from 1948 until Blue Book's closure in 1969.</p>
+        <p>Hynek began his Air Force consultancy as a committed sceptic, charged with providing conventional explanations for UFO reports. Over twenty years of reviewing thousands of cases, his scepticism transformed into conviction that a genuine anomalous phenomenon existed that could not be explained by misidentifications, hoaxes, or atmospheric effects. He went public with this revised assessment in a 1972 book, <strong class="text-teal-200"><em>The UFO Experience</em></strong>, and in 1973 founded the <strong class="text-teal-200">Center for UFO Studies (CUFOS)</strong>. He died on <strong class="text-teal-200">27 April 1986</strong> in Scottsdale, Arizona.</p>
+      </div>
+      <div class="bg-white/5 border border-teal-500/30 rounded-2xl p-6 backdrop-blur-md space-y-4 text-teal-100/85 leading-relaxed">
+        <h2 class="text-xl font-semibold text-teal-300">The Close Encounter Classification System</h2>
+        <p>Hynek's most enduring contribution to UAP research is his classification system, introduced in <em>The UFO Experience</em> and universally adopted. He divided sightings into <strong class="text-teal-200">Nocturnal Lights, Daylight Discs, and Radar-Visual</strong> sightings, and further divided close-range encounters into three categories — Close Encounters of the First, Second, and Third Kind (CE1, CE2, CE3) — based on the degree of physical interaction and entity presence. A fourth category (CE4, abduction) was later added by other researchers. This taxonomy provided the first systematic scientific framework for categorising UAP reports by evidence quality and phenomenological character, and remains in universal use.</p>
+        <p>Hynek's analysis of Blue Book data identified what he called the <strong class="text-teal-200">"residuum"</strong> — the 15–20% of cases that resisted every conventional explanation offered by the Air Force's own investigators and could not be attributed to misidentification, hoax, or natural phenomena. He argued that this residuum was too large and too consistent to be dismissed, and that it pointed to a genuine unknown requiring scientific investigation.</p>
+        <h2 class="text-teal-300 text-xl font-semibold mt-4">The Blue Book Insider</h2>
+        <p>Hynek's long tenure as Blue Book consultant gave him access to the full classified case file and the behind-the-scenes attitudes of Air Force personnel — and left him profoundly disillusioned with the official investigation. He described Blue Book in his later years as a "public relations operation" rather than a genuine scientific programme, designed to debunk rather than investigate, and staffed primarily by personnel with careers invested in maintaining the official policy of dismissal. His insider knowledge of what Blue Book found but suppressed — combined with his scientific standing — made his public break with the official line in 1972 one of the most significant moments in UAP history.</p>
+        <p>The fictional Dr. Lacombe in Steven Spielberg's <em>Close Encounters of the Third Kind</em> (1977) is based on Hynek; Hynek himself appears in the film's final airport scene. Spielberg acknowledged Hynek as a formative influence on his treatment of the subject.</p>
+      </div>
+      <blockquote class="border-l-4 border-teal-400 pl-4 italic text-teal-200/70 text-sm leading-relaxed">
+        "The question is no longer whether UFOs are real. The question is what they are."
+        <footer class="mt-1 text-teal-300/50 not-italic">— J. Allen Hynek</footer>
+      </blockquote>
+      <div class="mt-4"><a href="/uap/personalities" class="text-teal-400/70 hover:text-teal-300 text-sm">← Back to UFO Personalities</a></div>
+    </div>
+    <script>
+      const sf = document.getElementById('starfield');
+      for (let i = 0; i < 160; i++) { const s = document.createElement('div'); s.className = 'star'; const size = Math.random() * 2 + 0.5; s.style.cssText = `width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--dur:${2+Math.random()*4}s;--delay:${Math.random()*5}s;opacity:${0.2+Math.random()*0.8};`; sf.appendChild(s); }
+    </script>
+  </body>
+</html>

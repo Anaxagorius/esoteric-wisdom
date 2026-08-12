@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Travis Walton — UFO Personalities — Anomalous Inquiry</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta property="og:title" content="Travis Walton — UFO Personalities" />
+    <meta property="og:description" content="Arizona logger who disappeared for five days in 1975 after an apparent abduction by a UAP, one of the best-documented cases." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://esoteric-wisdom.onrender.com/og-image.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+    <style>
+      body { background: radial-gradient(circle at top, #061a0c 0%, #020617 50%, #000000 100%); font-family: 'Raleway', sans-serif; }
+      @keyframes twinkle { 0%, 100% { opacity: 0.2; } 50% { opacity: 1; } }
+      .star { position: absolute; border-radius: 50%; background: white; animation: twinkle var(--dur,3s) ease-in-out infinite; animation-delay: var(--delay,0s); }
+      .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+    </style>
+  </head>
+  <body class="min-h-screen text-white px-4 py-8">
+    <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+    {% include "nav.html" %}
+    <div class="relative z-10 max-w-3xl mx-auto space-y-6 pt-6">
+      <a href="/uap/personalities" class="text-green-400/70 hover:text-green-300 text-sm">← Back to UFO Personalities</a>
+      <div class="text-center py-4">
+        <div class="text-6xl mb-2">🌲</div>
+        <h1 class="text-3xl font-bold font-cinzel text-green-300">Travis Walton</h1>
+        <p class="text-green-200/60 mt-1 italic">"The Arizona Abductee" · b. 1953</p>
+      </div>
+      <div class="bg-white/5 border border-green-500/40 rounded-2xl p-6 backdrop-blur-md space-y-4 text-teal-100/85 leading-relaxed">
+        <h2 class="text-xl font-semibold text-green-300">Brief Biography</h2>
+        <p>Travis Walton was born on <strong class="text-green-200">10 February 1953</strong> in Snowflake, Arizona. He was working as a logger for a six-man crew in the Apache-Sitgreaves National Forest when, on the evening of <strong class="text-green-200">5 November 1975</strong>, he was apparently struck by a beam of light from a hovering luminous disc and disappeared for five days while his crewmates — who fled the scene in terror — were held as murder suspects. He reappeared on <strong class="text-green-200">10 November 1975</strong> near Heber, Arizona, disoriented and physiologically depleted, with no conscious recollection of the intervening period beyond fragmentary images of non-human and human figures aboard a craft.</p>
+        <p>His account was documented in the book <em>The Walton Experience</em> (1978), later republished as <em>Fire in the Sky</em>, and adapted into the 1993 film of the same name. All six members of his logging crew passed polygraph examinations about their experience of seeing him struck by the beam and taken. Travis himself failed an early polygraph (administered while still in shock) but passed subsequent testing. He has maintained his account unchanged for over five decades.</p>
+      </div>
+      <div class="bg-white/5 border border-green-500/30 rounded-2xl p-6 backdrop-blur-md space-y-4 text-teal-100/85 leading-relaxed">
+        <h2 class="text-xl font-semibold text-green-300">The Event of November 1975</h2>
+        <p>The Walton case is distinguished from most abduction accounts by two factors: the presence of <strong class="text-green-200">six independent witnesses</strong> to the initial encounter (all of whom saw the craft and saw Walton struck by the beam), and the <strong class="text-green-200">five-day physical absence</strong> — not merely an unexplained period during an otherwise continuous night, but a genuine disappearance that triggered a law enforcement search and murder investigation. This multi-witness dimension and the real-world consequences (missing persons case, police investigation, polygraph testing of six separate individuals) give the Walton case an evidentiary weight substantially greater than typical single-experiencer abduction reports.</p>
+        <p>Walton's own account of his time aboard the craft describes two phases: an initial scene in which he was examined by small, grey-skinned beings before losing consciousness again; and a subsequent encounter with taller, human-looking individuals who took him through corridors of what appeared to be a craft before he regained consciousness on a highway. The human-looking figures did not communicate with him. He was deposited in a state of shock and severe physical depletion.</p>
+        <h2 class="text-green-300 text-xl font-semibold mt-4">Legacy and Ongoing Advocacy</h2>
+        <p>Walton has continued to speak publicly about his experience for over five decades, refusing substantial financial offers that would have required him to recant or soften his account. He has submitted to multiple polygraph examinations over the years with consistently positive results. His case remains one of the most discussed in the UAP literature precisely because the evidentiary context — multiple witnesses, physical absence, law enforcement involvement, corroborating polygraphs — makes simple dismissal unusually difficult. He collaborated with the <em>Fire in the Sky</em> film production but expressed dissatisfaction with the Hollywood embellishments added to the abduction sequence, which diverged significantly from his actual account.</p>
+      </div>
+      <div class="mt-4"><a href="/uap/personalities" class="text-green-400/70 hover:text-green-300 text-sm">← Back to UFO Personalities</a></div>
+    </div>
+    <script>
+      const sf = document.getElementById('starfield');
+      for (let i = 0; i < 160; i++) { const s = document.createElement('div'); s.className = 'star'; const size = Math.random() * 2 + 0.5; s.style.cssText = `width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--dur:${2+Math.random()*4}s;--delay:${Math.random()*5}s;opacity:${0.2+Math.random()*0.8};`; sf.appendChild(s); }
+    </script>
+  </body>
+</html>

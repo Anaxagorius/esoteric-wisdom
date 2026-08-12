@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Donald Keyhoe — UFO Personalities — Anomalous Inquiry</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta property="og:title" content="Donald Keyhoe — UFO Personalities" />
+    <meta property="og:description" content="Marine aviator and NICAP director who argued in the 1950s that the Air Force was suppressing proof of interplanetary craft." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://esoteric-wisdom.onrender.com/og-image.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+    <style>
+      body { background: radial-gradient(circle at top, #0c1428 0%, #020617 50%, #000000 100%); font-family: 'Raleway', sans-serif; }
+      @keyframes twinkle { 0%, 100% { opacity: 0.2; } 50% { opacity: 1; } }
+      .star { position: absolute; border-radius: 50%; background: white; animation: twinkle var(--dur,3s) ease-in-out infinite; animation-delay: var(--delay,0s); }
+      .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+    </style>
+  </head>
+  <body class="min-h-screen text-white px-4 py-8">
+    <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+    {% include "nav.html" %}
+    <div class="relative z-10 max-w-3xl mx-auto space-y-6 pt-6">
+      <a href="/uap/personalities" class="text-blue-400/70 hover:text-blue-300 text-sm">← Back to UFO Personalities</a>
+      <div class="text-center py-4">
+        <div class="text-6xl mb-2">🎖️</div>
+        <h1 class="text-3xl font-bold font-cinzel text-blue-300">Donald Keyhoe</h1>
+        <p class="text-blue-200/60 mt-1 italic">"The Marine Who Fought the Cover-Up" · 1897–1988</p>
+      </div>
+      <div class="bg-white/5 border border-blue-500/40 rounded-2xl p-6 backdrop-blur-md space-y-4 text-teal-100/85 leading-relaxed">
+        <h2 class="text-xl font-semibold text-blue-300">Brief Biography</h2>
+        <p>Donald Edward Keyhoe was born on <strong class="text-blue-200">20 June 1897</strong> in Ottumwa, Iowa. He graduated from the United States Naval Academy in 1919, served as a Marine Corps aviator, and was a personal aide to Charles Lindbergh during the 1927 "goodwill tour" following the historic transatlantic flight. He later pursued a career as a writer — covering aviation, military affairs, and adventure — before his pivotal 1949 article for <em>True</em> magazine launched his UFO career.</p>
+        <p>His article, "The Flying Saucers Are Real," and the subsequent book of the same name (1950) sold millions of copies and made him the most prominent public advocate for the ET hypothesis in the early 1950s. He served as director of the <strong class="text-blue-200">National Investigations Committee on Aerial Phenomena (NICAP)</strong> from 1957 to 1969 — the most powerful and scientifically credentialled civilian UFO organisation in American history. He died on <strong class="text-blue-200">29 November 1988</strong>.</p>
+      </div>
+      <div class="bg-white/5 border border-blue-500/30 rounded-2xl p-6 backdrop-blur-md space-y-4 text-teal-100/85 leading-relaxed">
+        <h2 class="text-xl font-semibold text-blue-300">NICAP and the Cover-Up Campaign</h2>
+        <p>Keyhoe's argument — developed across five books published between 1950 and 1974 — was simple, consistent, and in retrospect prescient: the U.S. Air Force knew that flying saucers were real interplanetary craft and was actively suppressing this information from the public. His evidence was primarily circumstantial — the pattern of official denial combined with the growing weight of credible sightings — but his military background and his contacts within the Air Force gave his claims an authority that pure civilian researchers could not match.</p>
+        <p>Under his direction, <strong class="text-blue-200">NICAP</strong> became the most effective civilian pressure organisation in UFO history, maintaining a board of directors that included military officers, scientists, and former intelligence personnel, collecting and analysing case data, publishing the <em>UFO Investigator</em>, and consistently pressuring Congress to hold hearings on the Air Force's UFO investigation programme. NICAP's methodological standards — rigorous case documentation, scepticism about claims lacking physical evidence, and insistence on military and scientific credibility — set a standard that influenced all subsequent organisations.</p>
+        <p>Keyhoe's most consequential moment came in 1958 when he appeared on CBS television and was literally cut off mid-sentence — his audio feed killed by network censors — when he began to deviate from his prepared script to say he had "proof" that UFOs were interplanetary. The censorship was itself reported as news and became one of the most celebrated demonstrations of the suppression he had been alleging.</p>
+        <h2 class="text-blue-300 text-xl font-semibold mt-4">Historical Assessment</h2>
+        <p>Keyhoe is one of the most consequential and underappreciated figures in UAP history. He was the first major public figure to argue for an active government cover-up of UFO evidence — a position now held by many credentialled insiders and supported by substantial documentary evidence — and he did so with professional discipline and institutional credibility over a quarter century. His work at NICAP established the infrastructure that made possible the subsequent civilian investigation tradition. Contemporary researchers from Richard Dolan to Leslie Kean cite him as a foundational predecessor.</p>
+      </div>
+      <div class="mt-4"><a href="/uap/personalities" class="text-blue-400/70 hover:text-blue-300 text-sm">← Back to UFO Personalities</a></div>
+    </div>
+    <script>
+      const sf = document.getElementById('starfield');
+      for (let i = 0; i < 160; i++) { const s = document.createElement('div'); s.className = 'star'; const size = Math.random() * 2 + 0.5; s.style.cssText = `width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--dur:${2+Math.random()*4}s;--delay:${Math.random()*5}s;opacity:${0.2+Math.random()*0.8};`; sf.appendChild(s); }
+    </script>
+  </body>
+</html>
