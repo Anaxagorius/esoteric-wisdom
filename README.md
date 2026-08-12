@@ -171,22 +171,22 @@ cargo build --release
 
 All configuration is done via environment variables:
 
+```bash
+cp env.example .env
+# then replace placeholder secrets before running
+```
+
 | Variable | Default | Description |
 |---|---|---|
 | `PORT` | `3000` | Port to listen on |
-| `JWT_SECRET` | `change_me_super_secret` | Secret key for signing JWT tokens — **change this in production!** |
+| `JWT_SECRET` | *(required)* | Secret key for signing JWT tokens |
+| `ADMIN_USERNAME` | *(required)* | Admin login username |
+| `ADMIN_INITIAL_PASSWORD` | *(required on first run)* | Initial admin password used only if `data/admin.json` does not exist yet |
 | `JOURNAL_DATA_FILE` | `data/journal_entries.json` | Path to journal persistence file |
+| `USERS_DATA_FILE` | `data/users.json` | Path to user persistence file |
+| `ADMIN_DATA_FILE` | `data/admin.json` | Path to admin credential metadata file |
 
-> ⚠️ **Security Note:** Always set a strong, unique `JWT_SECRET` before deploying to production.
-
-### Initial Admin Credentials
-
-| Field | Value |
-|---|---|
-| Username | `AngieMaidment#1` |
-| Password | `Loveadored69$` |
-
-> The admin panel enforces a password change on first login.
+> ⚠️ **Security Note:** Never commit real secrets. Set environment variables via your deployment platform or secrets manager.
 
 ---
 
@@ -246,6 +246,7 @@ esoteric-wisdom/
 ## 📖 Architecture Notes
 
 - **Compile-time templates** — Askama compiles all 164 HTML templates at build time; zero runtime template parsing.
+- **Incremental content migration** — static pages can now be served from `content/pages/**/*.md` via a generic renderer, enabling phased reduction of one-template-per-page overhead.
 - **Async throughout** — Tokio powers all I/O; the in-memory state uses `Arc<RwLock<>>` for safe concurrent access.
 - **Modular routing** — Each esoteric domain lives in its own Rust module exposing a `routes()` function, cleanly composed in `main.rs`.
 - **Stateless auth** — JWT tokens are stored in HTTP-only, secure cookies; no server-side session store required.
@@ -266,7 +267,7 @@ Contributions are warmly welcomed — whether that's new content pages, addition
 
 ## 📜 Licence
 
-This project is licensed under the **MIT Licence**. See the [LICENSE](LICENSE) file for details.
+This project is licensed under a **Proprietary Software License**. See the [LICENSE](LICENSE) file for details.
 
 ---
 

@@ -22,6 +22,10 @@ pub fn admin_data_path() -> String {
     std::env::var("ADMIN_DATA_FILE").unwrap_or_else(|_| "data/admin.json".to_string())
 }
 
+fn required_env(name: &str) -> anyhow::Result<String> {
+    std::env::var(name).map_err(|_| anyhow::anyhow!("Missing required environment variable: {name}"))
+}
+
 async fn load_from_file<T: serde::de::DeserializeOwned + Default>(path: &str) -> T {
     match tokio::fs::read_to_string(path).await {
         Ok(contents) => serde_json::from_str(&contents).unwrap_or_else(|e| {
@@ -89,10 +93,6 @@ pub async fn save_admin_data(data: &AdminData) {
     save_to_file(&admin_data_path(), data).await;
 }
 
-pub const ADMIN_USERNAME: &str = "AngieMaidment#1";
-// Initial credential — admin is prompted to set a new password on first login
-const ADMIN_INITIAL_PASSWORD: &str = "Loveadored69$";
-
 #[derive(Clone, Debug, Serialize, Deserialize)]
 pub struct Organization {
     pub name: String,
@@ -122,6 +122,7 @@ pub struct AppState {
     pub organizations: Arc<Vec<Organization>>,
     pub timeline: Arc<Vec<TimelineEvent>>,
     pub jwt_secret: Arc<String>,
+    pub admin_username: Arc<String>,
     pub admin_password_hash: Arc<RwLock<String>>,
     pub admin_must_change_password: Arc<RwLock<bool>>,
 }
@@ -171,14 +172,18 @@ impl AppState {
         let timeline = load_timeline();
         let timeline_count = timeline.len();
 
+        let admin_username = required_env("ADMIN_USERNAME")?;
+        let jwt_secret = required_env("JWT_SECRET")?;
+
         // Load persisted admin data; generate initial hash only when no saved data exists
         let admin_data = {
             let saved: AdminData = load_from_file(&admin_data_path()).await;
             if saved.password_hash.is_empty() {
+                let initial_password = required_env("ADMIN_INITIAL_PASSWORD")?;
                 let salt = SaltString::generate(&mut rand::thread_rng());
                 let argon2 = Argon2::default();
                 let hash = argon2
-                    .hash_password(ADMIN_INITIAL_PASSWORD.as_bytes(), &salt)
+                    .hash_password(initial_password.as_bytes(), &salt)
                     .map_err(|e| anyhow::anyhow!("Failed to hash admin password: {e}"))?
                     .to_string();
                 AdminData {
@@ -190,11 +195,6 @@ impl AppState {
             }
         };
 
-        let jwt_secret = std::env::var("JWT_SECRET").unwrap_or_else(|_| {
-            tracing::warn!("JWT_SECRET env var not set — using insecure default. Set JWT_SECRET in production!");
-            "change_me_super_secret".to_string()
-        });
-
         let state = AppState {
             users: Arc::new(RwLock::new(users)),
             tarot_decks: Arc::new(RwLock::new(decks)),
@@ -202,6 +202,7 @@ impl AppState {
             organizations: Arc::new(organizations),
             timeline: Arc::new(timeline),
             jwt_secret: Arc::new(jwt_secret),
+            admin_username: Arc::new(admin_username),
             admin_password_hash: Arc::new(RwLock::new(admin_data.password_hash)),
             admin_must_change_password: Arc::new(RwLock::new(admin_data.must_change_password)),
         };

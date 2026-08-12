@@ -7,6 +7,7 @@ mod auth;
 mod ce5;
 mod christianity;
 mod conspiracy;
+mod content_pages;
 mod cryptozoology;
 mod crystals;
 mod druidism;

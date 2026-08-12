@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ page_title }}</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <meta name="description" content="{{ meta_description }}" />
+  <meta property="og:title" content="{{ page_title }}" />
+  <meta property="og:description" content="{{ meta_description }}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://esoteric-wisdom.onrender.com/og-image.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  {% include "visual_baseline.html" %}
+  <style>
+    body { background: radial-gradient(ellipse at top, #1a0a3d 0%, #0d0a2e 30%, #050318 65%, #000000 100%); }
+    .content-shell {
+      background: linear-gradient(135deg, rgba(76, 29, 149, 0.2), rgba(17, 24, 39, 0.28));
+      border: 1px solid rgba(167, 139, 250, 0.2);
+      border-radius: 1.5rem;
+      backdrop-filter: blur(10px);
+    }
+    .prose h2, .prose h3 { font-family: 'Cinzel Decorative', serif; color: rgb(221 214 254); margin-top: 1.5rem; }
+    .prose p, .prose li { color: rgba(245, 243, 255, 0.9); line-height: 1.7; }
+    .prose a { color: rgb(251 191 36); text-decoration: underline; }
+  </style>
+</head>
+<body class="min-h-screen text-violet-100 overflow-x-hidden">
+  <div id="starfield" class="fixed inset-0 pointer-events-none z-0"></div>
+  {% include "nav.html" %}
+
+  <main class="relative z-10 max-w-5xl mx-auto px-6 py-10">
+    <section class="content-shell p-8 md:p-10">
+      <header class="text-center mb-8">
+        <h1 class="font-cinzel text-4xl md:text-5xl aurora-text">{{ heading }}</h1>
+        <p class="text-violet-200/85 mt-4">{{ lead }}</p>
+      </header>
+      <article class="prose max-w-none">{{ body_html|safe }}</article>
+    </section>
+  </main>
+
+  <script>
+    const sf = document.getElementById('starfield');
+    for (let i = 0; i < 180; i++) {
+      const s = document.createElement('div');
+      s.className = 'star';
+      const size = Math.random() * 2.5 + 0.5;
+      s.style.cssText = `width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--dur:${2+Math.random()*4}s;--delay:${Math.random()*5}s;opacity:${0.2+Math.random()*0.8};`;
+      sf.appendChild(s);
+    }
+  </script>
+</body>
+</html>

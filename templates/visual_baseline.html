@@ -1,0 +1,33 @@
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600;700&display=swap" rel="stylesheet" />
+<style>
+  body { font-family: 'Raleway', sans-serif; }
+  .font-cinzel { font-family: 'Cinzel Decorative', serif; }
+  @keyframes twinkle { 0%, 100% { opacity: 0.2; transform: scale(1); } 50% { opacity: 1; transform: scale(1.4); } }
+  @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-12px); } }
+  @keyframes shimmer { 0% { background-position: -200% center; } 100% { background-position: 200% center; } }
+  .star {
+    position: absolute;
+    border-radius: 50%;
+    background: white;
+    animation: twinkle var(--dur, 3s) ease-in-out infinite;
+    animation-delay: var(--delay, 0s);
+  }
+  .floating { animation: float 4.5s ease-in-out infinite; }
+  .aurora-text {
+    background: linear-gradient(90deg, #f59e0b, #ec4899, #a78bfa, #34d399, #f59e0b);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shimmer 4s linear infinite;
+  }
+  .ew-section-card {
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  }
+  .ew-section-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(251, 191, 36, 0.45);
+    box-shadow: 0 0 22px rgba(167, 139, 250, 0.16);
+  }
+</style>

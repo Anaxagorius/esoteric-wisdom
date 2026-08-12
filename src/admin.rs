@@ -10,7 +10,7 @@ use tower_cookies::{Cookie, Cookies};
 use argon2::{Argon2, PasswordHasher, PasswordVerifier};
 use argon2::password_hash::{SaltString, PasswordHash};
 use jsonwebtoken::{encode, decode, Header, Validation, EncodingKey, DecodingKey};
-use crate::state::{AppState, ADMIN_USERNAME, AdminData, save_admin_data};
+use crate::state::{AppState, AdminData, save_admin_data};
 use crate::auth::HtmlTemplate;
 use crate::templates::{AdminLoginTemplate, AdminChangePasswordTemplate};
 
@@ -51,7 +51,7 @@ pub async fn admin_login_post(
     cookies: Cookies,
     Form(form): Form<AdminLoginForm>,
 ) -> impl IntoResponse {
-    if form.username != ADMIN_USERNAME {
+    if form.username != state.admin_username.as_str() {
         return HtmlTemplate(AdminLoginTemplate { error: Some("Invalid credentials".into()) }).into_response();
     }
 

@@ -11,44 +11,16 @@
     <meta property="og:url" content="https://esoteric-wisdom.onrender.com/home" />
     <meta property="og:image" content="https://esoteric-wisdom.onrender.com/og-image.png" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+    {% include "visual_baseline.html" %}
     <style>
       body {
         background: radial-gradient(ellipse at top, #4c1d95 0%, #1e1b4b 30%, #020617 70%, #000000 100%);
-        font-family: 'Raleway', sans-serif;
-      }
-      .font-cinzel { font-family: 'Cinzel Decorative', serif; }
-      @keyframes twinkle {
-        0%, 100% { opacity: 0.2; transform: scale(1); }
-        50% { opacity: 1; transform: scale(1.4); }
-      }
-      @keyframes float {
-        0%, 100% { transform: translateY(0px); }
-        50% { transform: translateY(-12px); }
-      }
-      @keyframes shimmer {
-        0% { background-position: -200% center; }
-        100% { background-position: 200% center; }
       }
       @keyframes pulse-glow {
         0%, 100% { box-shadow: 0 0 20px rgba(167,139,250,0.4), 0 0 40px rgba(167,139,250,0.2); }
         50% { box-shadow: 0 0 40px rgba(251,191,36,0.6), 0 0 80px rgba(251,191,36,0.3); }
       }
-      .star {
-        position: absolute; border-radius: 50%; background: white;
-        animation: twinkle var(--dur, 3s) ease-in-out infinite;
-        animation-delay: var(--delay, 0s);
-      }
-      .aurora-text {
-        background: linear-gradient(90deg, #f59e0b, #ec4899, #a78bfa, #34d399, #f59e0b);
-        background-size: 200% auto;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        animation: shimmer 4s linear infinite;
-      }
-      .floating { animation: float 4s ease-in-out infinite; }
+      .floating { animation-duration: 4s; }
       .nav-link { position: relative; transition: all 0.3s; }
       .nav-link::after {
         content: ''; position: absolute; bottom: -2px; left: 0;
@@ -61,6 +33,19 @@
       .section-card:hover {
         transform: translateY(-8px) scale(1.02);
         border-color: rgba(251,191,36,0.6);
+      }
+      .home-disclosure {
+        background: linear-gradient(135deg, rgba(76, 29, 149, 0.16), rgba(17, 24, 39, 0.2));
+        border: 1px solid rgba(167, 139, 250, 0.16);
+        border-radius: 1.25rem;
+      }
+      .home-disclosure > summary {
+        list-style: none;
+        cursor: pointer;
+      }
+      .home-disclosure > summary::-webkit-details-marker { display: none; }
+      .home-disclosure[open] {
+        border-color: rgba(167, 139, 250, 0.24);
       }
       .hero-glow {
         text-shadow: 0 0 60px rgba(167,139,250,0.8), 0 0 120px rgba(167,139,250,0.4);
@@ -237,12 +222,13 @@
         </div>
       </section>
 
-      <section class="space-y-6 text-left">
-        <div class="text-center">
+      <details class="home-disclosure space-y-6 text-left p-5 md:p-6" open>
+        <summary class="text-center">
           <p class="text-sm uppercase tracking-[0.35em] text-emerald-300/70 mb-3">Browse traditions</p>
           <h2 class="font-cinzel text-3xl md:text-4xl text-emerald-100 mb-3">Traditions, religions, and schools</h2>
           <p class="text-violet-200/75 max-w-3xl mx-auto">These hubs gather related subpages so you can stay inside one lineage before branching into adjacent material.</p>
-        </div>
+          <p class="text-xs text-violet-300/65 mt-3">Click to collapse/expand</p>
+        </summary>
         <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5">
           <a href="/western-esotericism" class="section-card bg-gradient-to-br from-violet-900/60 to-purple-950/60 border border-violet-500/50 rounded-2xl p-6 backdrop-blur-md shadow-xl shadow-violet-500/20 w-full text-left">
             <div class="text-4xl mb-3">🌿</div><h3 class="font-cinzel text-base font-semibold mb-2 text-violet-300">Western Esotericism</h3><p class="text-xs text-violet-100/80 leading-relaxed">Hermeticism, Kabbalah, Rosicrucianism, Christian mysticism, occultism, and linked currents.</p>
@@ -269,14 +255,15 @@
             <div class="text-4xl mb-3">✝️</div><h3 class="font-cinzel text-base font-semibold mb-2 text-sky-300">Christianity &amp; scriptural roots</h3><p class="text-xs text-violet-100/80 leading-relaxed">Move from biblical foundations into mystical and esoteric Christian currents.</p>
           </a>
         </div>
-      </section>
+      </details>
 
-      <section class="space-y-6 text-left">
-        <div class="text-center">
+      <details class="home-disclosure space-y-6 text-left p-5 md:p-6">
+        <summary class="text-center">
           <p class="text-sm uppercase tracking-[0.35em] text-sky-300/70 mb-3">Study and reference</p>
           <h2 class="font-cinzel text-3xl md:text-4xl text-sky-100 mb-3">Use the hub pages as guided indexes</h2>
           <p class="text-violet-200/75 max-w-3xl mx-auto">Instead of scanning long menus, jump into the collections built to organise texts, people, concepts, and ritual disciplines.</p>
-        </div>
+          <p class="text-xs text-violet-300/65 mt-3">Expand to browse</p>
+        </summary>
         <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5">
           <a href="/esoteric-practices" class="section-card bg-gradient-to-br from-indigo-900/60 to-violet-950/60 border border-indigo-500/50 rounded-2xl p-6 backdrop-blur-md shadow-xl shadow-indigo-800/20 w-full text-left"><div class="text-4xl mb-3">🕯️</div><h3 class="font-cinzel text-base font-semibold mb-2 text-indigo-300">Esoteric Practices</h3><p class="text-xs text-violet-100/80 leading-relaxed">Rites, theurgy, geometry, breathwork, dreamwork, divination, and contemplative methods.</p></a>
           <a href="/esoteric-corpora" class="section-card bg-gradient-to-br from-teal-900/60 to-cyan-950/60 border border-teal-600/50 rounded-2xl p-6 backdrop-blur-md shadow-xl shadow-teal-800/20 w-full text-left"><div class="text-4xl mb-3">📜</div><h3 class="font-cinzel text-base font-semibold mb-2 text-teal-300">Esoteric Corpora</h3><p class="text-xs text-violet-100/80 leading-relaxed">Scriptures and source texts, from the Corpus Hermeticum and Zohar to Tantras and Picatrix.</p></a>
@@ -287,14 +274,15 @@
           <a href="/timeline" class="section-card bg-gradient-to-br from-slate-800/60 to-indigo-950/60 border border-slate-400/40 rounded-2xl p-6 backdrop-blur-md shadow-xl shadow-slate-500/10 w-full text-left"><div class="text-4xl mb-3">📅</div><h3 class="font-cinzel text-base font-semibold mb-2 text-slate-200">Timeline</h3><p class="text-xs text-violet-100/80 leading-relaxed">Trace historical development across mystical, esoteric, and anomalous topics.</p></a>
           <a href="/organizations" class="section-card bg-gradient-to-br from-purple-900/60 to-fuchsia-950/60 border border-purple-400/40 rounded-2xl p-6 backdrop-blur-md shadow-xl shadow-purple-500/10 w-full text-left"><div class="text-4xl mb-3">🏛️</div><h3 class="font-cinzel text-base font-semibold mb-2 text-purple-200">Organizations</h3><p class="text-xs text-violet-100/80 leading-relaxed">A reference map of institutions, groups, and projects connected to the archive.</p></a>
         </div>
-      </section>
+      </details>
 
-      <section class="space-y-6 text-left">
-        <div class="text-center">
+      <details class="home-disclosure space-y-6 text-left p-5 md:p-6">
+        <summary class="text-center">
           <p class="text-sm uppercase tracking-[0.35em] text-emerald-300/70 mb-3">Personal practice</p>
           <h2 class="font-cinzel text-3xl md:text-4xl text-emerald-100 mb-3">Reflection, journaling, and return paths</h2>
           <p class="text-violet-200/75 max-w-3xl mx-auto">Keep your private work close to the public archive so practice, reading, and reflection stay connected.</p>
-        </div>
+          <p class="text-xs text-violet-300/65 mt-3">Expand to browse</p>
+        </summary>
         <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5">
           <a href="/journal/reflections" class="section-card bg-gradient-to-br from-emerald-900/60 to-teal-900/60 border border-emerald-500/50 rounded-2xl p-6 backdrop-blur-md shadow-xl shadow-emerald-500/20 w-full text-left"><div class="text-4xl mb-3">🌿</div><h3 class="font-cinzel text-base font-semibold mb-2 text-emerald-300">Esoteric Reflections</h3><p class="text-xs text-violet-100/80 leading-relaxed">Read curated reflections and return to the archive through contemplative writing.</p></a>
           {% if is_user %}
@@ -307,15 +295,16 @@
             <div class="text-4xl mb-3">⌕</div><h3 class="font-cinzel text-base font-semibold mb-2 text-violet-200">Jump anywhere</h3><p class="text-xs text-violet-100/80 leading-relaxed">Open the new sidebar search to jump straight to specific pages, personalities, texts, and subtopics.</p>
           </button>
         </div>
-      </section>
+      </details>
     </main>
 
-    <section class="relative z-10 max-w-6xl mx-auto px-6 pb-16">
-      <div class="mb-8 text-center">
+    <details class="relative z-10 max-w-6xl mx-auto px-6 pb-16 home-disclosure p-5 md:p-6">
+      <summary class="mb-8 text-center">
         <p class="text-sm uppercase tracking-[0.35em] text-fuchsia-300/70 mb-3">Anomalous Inquiry</p>
         <h2 class="font-cinzel text-3xl md:text-4xl text-fuchsia-100 mb-3">Explore the anomalous frontier</h2>
         <p class="text-violet-200/75 max-w-3xl mx-auto">Investigate UAP cases, parapsychology, survival research, altered states, non-human intelligences, cryptids, hauntings, conspiracies, and key timelines and organizations.</p>
-      </div>
+        <p class="text-xs text-violet-300/65 mt-3">Expand to browse</p>
+      </summary>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5">
         <a href="/uap" class="section-card bg-gradient-to-br from-sky-900/60 to-indigo-950/60 border border-sky-400/40 rounded-2xl p-5 backdrop-blur-md shadow-xl shadow-sky-500/10 w-full"><div class="text-3xl mb-3">🛸</div><h3 class="font-cinzel text-base text-sky-200 mb-2">UAP</h3><p class="text-xs text-violet-100/80 leading-relaxed">Landmark sightings, military encounters, and investigative archives.</p></a>
         <a href="/parapsychology" class="section-card bg-gradient-to-br from-fuchsia-900/60 to-violet-950/60 border border-fuchsia-400/40 rounded-2xl p-5 backdrop-blur-md shadow-xl shadow-fuchsia-500/10 w-full"><div class="text-3xl mb-3">🧠</div><h3 class="font-cinzel text-base text-fuchsia-200 mb-2">Parapsychology</h3><p class="text-xs text-violet-100/80 leading-relaxed">ESP, ganzfeld, precognition, psychokinesis, and consciousness research.</p></a>
@@ -328,7 +317,7 @@
         <a href="/timeline" class="section-card bg-gradient-to-br from-indigo-900/60 to-blue-950/60 border border-indigo-400/40 rounded-2xl p-5 backdrop-blur-md shadow-xl shadow-indigo-500/10 w-full"><div class="text-3xl mb-3">📅</div><h3 class="font-cinzel text-base text-indigo-200 mb-2">Timeline</h3><p class="text-xs text-violet-100/80 leading-relaxed">Trace major events, cases, and historical developments across anomalous inquiry.</p></a>
         <a href="/organizations" class="section-card bg-gradient-to-br from-purple-900/60 to-fuchsia-950/60 border border-purple-400/40 rounded-2xl p-5 backdrop-blur-md shadow-xl shadow-purple-500/10 w-full"><div class="text-3xl mb-3">🏛️</div><h3 class="font-cinzel text-base text-purple-200 mb-2">Organizations</h3><p class="text-xs text-violet-100/80 leading-relaxed">Browse the institutions, projects, and groups shaping anomalous research.</p></a>
       </div>
-    </section>
+    </details>
 
     <footer class="relative z-10 text-center py-8 text-violet-300/50 text-xs">
       <p class="italic">"The cosmos is within us. We are made of star-stuff." — Carl Sagan</p>
