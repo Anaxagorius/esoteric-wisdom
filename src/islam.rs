@@ -1,4 +1,4 @@
-use crate::auth::HtmlTemplate;
+use crate::templates::HtmlTemplate;
 use crate::state::AppState;
 use crate::templates::IslamTemplate;
 use axum::{response::IntoResponse, routing::get, Router};

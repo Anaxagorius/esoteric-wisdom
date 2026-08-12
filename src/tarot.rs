@@ -124,7 +124,7 @@ pub async fn load_deck(deck_type: &DeckType) -> anyhow::Result<Vec<TarotCard>> {
 use axum::{routing::get, Router, extract::{State, Query}, response::IntoResponse, http::StatusCode};
 use rand::seq::SliceRandom;
 use crate::state::AppState;
-use crate::auth::HtmlTemplate;
+use crate::templates::HtmlTemplate;
 use crate::templates::{TarotDrawTemplate, TarotSelectTemplate};
 
 pub fn routes() -> Router<AppState> {

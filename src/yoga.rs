@@ -1,5 +1,5 @@
 use axum::{routing::get, Router, response::IntoResponse};
-use crate::auth::HtmlTemplate;
+use crate::templates::HtmlTemplate;
 use crate::templates::YogaTemplate;
 use crate::state::AppState;
 

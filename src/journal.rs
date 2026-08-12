@@ -8,7 +8,7 @@ use axum::{
 };
 use serde::{Serialize, Deserialize};
 use uuid::Uuid;
-use crate::auth::HtmlTemplate;
+use crate::templates::HtmlTemplate;
 use crate::templates::GuestJournalTemplate;
 use crate::state::{AppState, journal_data_path};
 
