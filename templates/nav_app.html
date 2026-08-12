@@ -143,15 +143,6 @@
 
       <!-- Standalone & conditional links -->
       <a href="/journal/reflections" class="px-2 py-1.5 text-emerald-300 hover:text-emerald-200 transition-colors whitespace-nowrap">✨ Reflections</a>
-      {% if is_user %}
-      <a href="/journal/my" class="px-2 py-1.5 text-emerald-300 hover:text-emerald-200 transition-colors whitespace-nowrap font-semibold">📔 My Journal</a>
-      <a href="/auth/logout" class="px-2 py-1.5 text-red-400/70 hover:text-red-300 transition-colors">Sign out</a>
-      {% endif %}
-      {% if is_admin %}
-      <a href="/journal" class="px-2 py-1.5 text-amber-300 hover:text-amber-200 transition-colors whitespace-nowrap font-semibold">📔 Journal</a>
-      <a href="/admin/change-password" class="px-2 py-1.5 text-violet-300 hover:text-violet-200 transition-colors">🔒 Change PW</a>
-      <a href="/admin/logout" class="px-2 py-1.5 text-red-400/70 hover:text-red-300 transition-colors">Sign out</a>
-      {% endif %}
       <a href="https://ko-fi.com/anjiannelei" target="_blank" rel="noopener noreferrer"
          class="px-3 py-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-white font-semibold hover:scale-105 transition-transform shrink-0 whitespace-nowrap">☕ Support</a>
     </div>
@@ -219,15 +210,6 @@
       <button type="button" onclick="ewFocusSearch && ewFocusSearch()"
               class="text-violet-200 hover:text-amber-300 transition-colors">⌕ Search</button>
       <a href="/journal/reflections" class="text-emerald-300 hover:text-emerald-200 transition-colors">✨ Reflections</a>
-      {% if is_user %}
-      <a href="/journal/my" class="text-emerald-300 hover:text-emerald-200 transition-colors font-semibold">📔 My Journal</a>
-      <a href="/auth/logout" class="text-red-400/70 hover:text-red-300 transition-colors">Sign out</a>
-      {% endif %}
-      {% if is_admin %}
-      <a href="/journal" class="text-amber-300 hover:text-amber-200 transition-colors font-semibold">📔 Journal</a>
-      <a href="/admin/change-password" class="text-violet-300 hover:text-violet-200 transition-colors">🔒 Change PW</a>
-      <a href="/admin/logout" class="text-red-400/70 hover:text-red-300 transition-colors">Sign out</a>
-      {% endif %}
       <a href="https://ko-fi.com/anjiannelei" target="_blank" rel="noopener noreferrer"
          class="px-3 py-1 rounded-full bg-gradient-to-r from-yellow-400 to-orange-400 text-white font-semibold hover:scale-105 transition-transform">☕ Support</a>
     </div>

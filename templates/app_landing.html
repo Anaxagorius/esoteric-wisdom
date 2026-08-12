@@ -107,13 +107,6 @@
     <!-- Navigation -->
     {% include "nav_app.html" %}
 
-    {% if is_admin %}
-    <!-- Admin welcome banner -->
-    <div class="relative z-10 bg-amber-900/30 border-b border-amber-500/30 px-6 py-2 text-center">
-      <span class="text-xs text-amber-300/80">🔑 Admin Mode — You have full access including Journal write &amp; management.</span>
-    </div>
-    {% endif %}
-
     <section class="relative z-10 flex justify-center px-6 pt-8" data-visitor-root>
       <div class="visitor-chip rounded-full px-4 py-2 backdrop-blur-md">
         <img
@@ -284,13 +277,7 @@
           <p class="text-xs text-violet-300/65 mt-3">Expand to browse</p>
         </summary>
         <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5">
-          <a href="/journal/reflections" class="section-card bg-gradient-to-br from-emerald-900/60 to-teal-900/60 border border-emerald-500/50 rounded-2xl p-6 backdrop-blur-md shadow-xl shadow-emerald-500/20 w-full text-left"><div class="text-4xl mb-3">🌿</div><h3 class="font-cinzel text-base font-semibold mb-2 text-emerald-300">Esoteric Reflections</h3><p class="text-xs text-violet-100/80 leading-relaxed">Read curated reflections and return to the archive through contemplative writing.</p></a>
-          {% if is_user %}
-          <a href="/journal/my" class="section-card bg-gradient-to-br from-emerald-900/60 to-teal-950/60 border border-emerald-500/50 rounded-2xl p-6 backdrop-blur-md shadow-xl shadow-emerald-500/20 w-full text-left"><div class="text-4xl mb-3">📔</div><h3 class="font-cinzel text-base font-semibold mb-2 text-emerald-300">My Journal</h3><p class="text-xs text-violet-100/80 leading-relaxed">Open your private journal to capture practice notes, dreams, and insights.</p></a>
-          {% endif %}
-          {% if is_admin %}
-          <a href="/journal" class="section-card bg-gradient-to-br from-amber-800/60 to-yellow-900/60 border border-amber-400/60 rounded-2xl p-6 backdrop-blur-md shadow-xl shadow-amber-500/20 w-full text-left"><div class="text-4xl mb-3">📔</div><h3 class="font-cinzel text-base font-semibold mb-2 text-amber-200">Admin Journal</h3><p class="text-xs text-amber-100/80 leading-relaxed">Write, manage, and publish journal entries for guests and returning readers.</p></a>
-          {% endif %}
+          <a href="/journal/reflections" class="section-card bg-gradient-to-br from-emerald-900/60 to-teal-900/60 border border-emerald-500/50 rounded-2xl p-6 backdrop-blur-md shadow-xl shadow-emerald-500/20 w-full text-left"><div class="text-4xl mb-3">🌿</div><h3 class="font-cinzel text-base font-semibold mb-2 text-emerald-300">Esoteric Reflections</h3><p class="text-xs text-violet-100/80 leading-relaxed">Read and share reflections. Open to all seekers on the path.</p></a>
           <button type="button" onclick="ewFocusSearch && ewFocusSearch()" class="section-card bg-gradient-to-br from-violet-900/60 to-fuchsia-950/60 border border-violet-400/40 rounded-2xl p-6 backdrop-blur-md shadow-xl shadow-violet-500/10 w-full text-left">
             <div class="text-4xl mb-3">⌕</div><h3 class="font-cinzel text-base font-semibold mb-2 text-violet-200">Jump anywhere</h3><p class="text-xs text-violet-100/80 leading-relaxed">Open the new sidebar search to jump straight to specific pages, personalities, texts, and subtopics.</p>
           </button>
