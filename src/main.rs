@@ -55,7 +55,7 @@ use axum::{
 };
 use state::AppState;
 use templates::{AppLandingTemplate, LandingTemplate, OrganizationsTemplate, TimelineTemplate};
-use tower_cookies::{CookieManagerLayer, Cookies};
+use tower_cookies::CookieManagerLayer;
 use tracing_subscriber::EnvFilter;
 
 #[tokio::main]
@@ -72,7 +72,6 @@ async fn main() -> anyhow::Result<()> {
         .route("/favicon.svg", get(favicon))
         .route("/og-image.png", get(og_image))
         .route("/Alien/:filename", get(alien_image))
-        .nest("/admin", admin::routes())
         .nest("/auth", auth::routes())
         .nest("/astrology", astrology::routes())
         .nest("/meditation", meditation::routes())
@@ -210,22 +209,6 @@ async fn organizations(State(state): State<AppState>) -> impl IntoResponse {
     HtmlTemplate(OrganizationsTemplate { organizations })
 }
 
-async fn app_landing(State(state): State<AppState>, cookies: Cookies) -> impl IntoResponse {
-    let admin_claims = admin::get_admin_claims(&state, &cookies);
-    if let Some(ref claims) = admin_claims {
-        if claims.must_change_password {
-            return (
-                StatusCode::FOUND,
-                [(header::LOCATION, "/admin/change-password")],
-            )
-                .into_response();
-        }
-    }
-    let is_admin = admin_claims.is_some();
-    let is_user = !is_admin
-        && cookies
-            .get("esoteric_session")
-            .and_then(|c| auth::decode_token(&state, c.value()))
-            .is_some();
-    HtmlTemplate(AppLandingTemplate { is_admin, is_user }).into_response()
+async fn app_landing() -> impl IntoResponse {
+    HtmlTemplate(AppLandingTemplate)
 }

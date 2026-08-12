@@ -1,5 +1,3 @@
-use argon2::password_hash::SaltString;
-use argon2::{Argon2, PasswordHasher};
 use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
 use std::sync::Arc;
@@ -16,10 +14,6 @@ pub fn journal_data_path() -> String {
 
 pub fn users_data_path() -> String {
     std::env::var("USERS_DATA_FILE").unwrap_or_else(|_| "data/users.json".to_string())
-}
-
-pub fn admin_data_path() -> String {
-    std::env::var("ADMIN_DATA_FILE").unwrap_or_else(|_| "data/admin.json".to_string())
 }
 
 fn required_env(name: &str) -> anyhow::Result<String> {
@@ -71,29 +65,6 @@ fn load_timeline() -> Vec<TimelineEvent> {
 }
 
 #[derive(Clone, Debug, Serialize, Deserialize)]
-pub struct AdminData {
-    pub password_hash: String,
-    pub must_change_password: bool,
-}
-
-impl Default for AdminData {
-    fn default() -> Self {
-        AdminData {
-            password_hash: String::new(),
-            must_change_password: true,
-        }
-    }
-}
-
-pub async fn save_users(users: &[User]) {
-    save_to_file(&users_data_path(), users).await;
-}
-
-pub async fn save_admin_data(data: &AdminData) {
-    save_to_file(&admin_data_path(), data).await;
-}
-
-#[derive(Clone, Debug, Serialize, Deserialize)]
 pub struct Organization {
     pub name: String,
     pub category: String,
@@ -114,6 +85,10 @@ pub struct TimelineEvent {
     pub article_slug: Option<String>,
 }
 
+pub async fn save_users(users: &[User]) {
+    save_to_file(&users_data_path(), users).await;
+}
+
 #[derive(Clone)]
 pub struct AppState {
     pub users: Arc<RwLock<Vec<User>>>,
@@ -122,9 +97,6 @@ pub struct AppState {
     pub organizations: Arc<Vec<Organization>>,
     pub timeline: Arc<Vec<TimelineEvent>>,
     pub jwt_secret: Arc<String>,
-    pub admin_username: Arc<String>,
-    pub admin_password_hash: Arc<RwLock<String>>,
-    pub admin_must_change_password: Arc<RwLock<bool>>,
 }
 
 #[derive(Clone, Debug, Serialize, Deserialize)]
@@ -172,28 +144,7 @@ impl AppState {
         let timeline = load_timeline();
         let timeline_count = timeline.len();
 
-        let admin_username = required_env("ADMIN_USERNAME")?;
         let jwt_secret = required_env("JWT_SECRET")?;
-
-        // Load persisted admin data; generate initial hash only when no saved data exists
-        let admin_data = {
-            let saved: AdminData = load_from_file(&admin_data_path()).await;
-            if saved.password_hash.is_empty() {
-                let initial_password = required_env("ADMIN_INITIAL_PASSWORD")?;
-                let salt = SaltString::generate(&mut rand::thread_rng());
-                let argon2 = Argon2::default();
-                let hash = argon2
-                    .hash_password(initial_password.as_bytes(), &salt)
-                    .map_err(|e| anyhow::anyhow!("Failed to hash admin password: {e}"))?
-                    .to_string();
-                AdminData {
-                    password_hash: hash,
-                    must_change_password: true,
-                }
-            } else {
-                saved
-            }
-        };
 
         let state = AppState {
             users: Arc::new(RwLock::new(users)),
@@ -202,9 +153,6 @@ impl AppState {
             organizations: Arc::new(organizations),
             timeline: Arc::new(timeline),
             jwt_secret: Arc::new(jwt_secret),
-            admin_username: Arc::new(admin_username),
-            admin_password_hash: Arc::new(RwLock::new(admin_data.password_hash)),
-            admin_must_change_password: Arc::new(RwLock::new(admin_data.must_change_password)),
         };
 
         info!(

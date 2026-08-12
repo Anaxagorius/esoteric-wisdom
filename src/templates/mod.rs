@@ -8,10 +8,7 @@ pub struct LandingTemplate;
 
 #[derive(Template)]
 #[template(path = "app_landing.html")]
-pub struct AppLandingTemplate {
-    pub is_admin: bool,
-    pub is_user: bool,
-}
+pub struct AppLandingTemplate;
 
 #[derive(Template)]
 #[template(path = "auth_login.html")]
@@ -23,19 +20,6 @@ pub struct LoginTemplate {
 #[template(path = "auth_signup.html")]
 pub struct SignupTemplate {
     pub error: Option<String>,
-}
-
-#[derive(Template)]
-#[template(path = "admin_login.html")]
-pub struct AdminLoginTemplate {
-    pub error: Option<String>,
-}
-
-#[derive(Template)]
-#[template(path = "admin_change_password.html")]
-pub struct AdminChangePasswordTemplate {
-    pub error: Option<String>,
-    pub forced: bool,
 }
 
 #[derive(Template)]
@@ -57,21 +41,6 @@ pub struct TarotDrawTemplate<'a> {
     pub reversed: bool,
     pub deck_name: &'a str,
     pub deck_key: &'a str,
-}
-
-#[derive(Template)]
-#[template(path = "journal_list.html")]
-pub struct JournalListTemplate {
-    pub is_authenticated: bool,
-    pub entries: Vec<JournalEntry>,
-    pub error: Option<String>,
-}
-
-#[derive(Template)]
-#[template(path = "journal_admin.html")]
-pub struct AdminJournalTemplate {
-    pub entries: Vec<JournalEntry>,
-    pub error: Option<String>,
 }
 
 #[derive(Template)]
@@ -1364,10 +1333,6 @@ pub struct TimelineTemplate {
 pub struct OrganizationsTemplate {
     pub organizations: Vec<Organization>,
 }
-
-#[derive(Template)]
-#[template(path = "admin_dashboard.html")]
-pub struct AdminDashboardTemplate;
 
 #[derive(Template)]
 #[template(path = "japanese_religion.html")]

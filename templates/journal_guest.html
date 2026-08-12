@@ -65,6 +65,48 @@
         </p>
       </div>
 
+      <!-- Submit a Reflection -->
+      <div class="bg-black/50 border border-emerald-500/40 rounded-3xl p-6 backdrop-blur-xl shadow-2xl">
+        <button onclick="toggleCompose()" class="flex items-center gap-2 text-emerald-300 hover:text-emerald-200 transition-colors mb-4 font-semibold">
+          <span id="compose-toggle-icon">✏️</span>
+          <span id="compose-toggle-label">Share a Reflection</span>
+        </button>
+        <div id="compose-area" class="hidden">
+          <form method="post" action="/journal/new" class="space-y-4">
+            <div>
+              <input type="text" name="title" placeholder="Title (optional)..."
+                class="w-full rounded-xl bg-black/60 border border-emerald-500/30 px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-emerald-400/50 transition-all text-sm"
+                maxlength="120" />
+            </div>
+            <div>
+              <textarea name="body" rows="5" required placeholder="Share your insight, dream, or contemplation..."
+                class="w-full rounded-xl bg-black/60 border border-emerald-500/30 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-400/50 transition-all text-sm resize-none leading-relaxed"
+                maxlength="5000"></textarea>
+            </div>
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <label class="flex items-center gap-2 text-xs text-violet-200/70 cursor-pointer">
+                  <input type="checkbox" name="mood_happy" class="accent-emerald-400" />
+                  😊 Grateful
+                </label>
+                <label class="flex items-center gap-2 text-xs text-violet-200/70 cursor-pointer">
+                  <input type="checkbox" name="mood_reflective" class="accent-indigo-400" />
+                  🌙 Reflective
+                </label>
+                <label class="flex items-center gap-2 text-xs text-violet-200/70 cursor-pointer">
+                  <input type="checkbox" name="mood_hopeful" class="accent-amber-400" />
+                  ✨ Hopeful
+                </label>
+              </div>
+              <button type="submit"
+                class="px-6 py-2 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 font-semibold text-sm hover:scale-105 hover:shadow-lg hover:shadow-emerald-500/30 transition-all">
+                Share 🌿
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
       <!-- Entries -->
       {% if entries.is_empty() %}
       <div class="text-center py-16 text-violet-200/50">
@@ -112,6 +154,24 @@
         const size = Math.random() * 2 + 0.5;
         s.style.cssText = `width:${size}px;height:${size}px;top:${Math.random()*100}%;left:${Math.random()*100}%;--dur:${2+Math.random()*5}s;--delay:${Math.random()*6}s;`;
         sf.appendChild(s);
+      }
+
+      function toggleCompose() {
+        const area = document.getElementById('compose-area');
+        const icon = document.getElementById('compose-toggle-icon');
+        const label = document.getElementById('compose-toggle-label');
+        const isHidden = area.classList.contains('hidden');
+        area.classList.toggle('hidden');
+        icon.textContent = isHidden ? '✖️' : '✏️';
+        label.textContent = isHidden ? 'Close' : 'Share a Reflection';
+      }
+
+      // Show notice if submission was blocked by the language filter
+      if (new URLSearchParams(window.location.search).get('blocked') === '1') {
+        const notice = document.createElement('div');
+        notice.className = 'relative z-10 max-w-4xl mx-auto mt-4 text-sm text-red-300 bg-red-900/30 border border-red-500/40 rounded-xl p-3 flex items-center gap-2';
+        notice.innerHTML = '<span>⚠️</span> Your reflection could not be posted — it contained language that is not permitted here.';
+        document.querySelector('.relative.z-10.max-w-4xl').prepend(notice);
       }
     </script>
   </body>
