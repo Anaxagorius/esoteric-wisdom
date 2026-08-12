@@ -70,6 +70,43 @@
         background: linear-gradient(135deg, rgba(76, 29, 149, 0.35), rgba(30, 27, 75, 0.45));
         box-shadow: 0 0 20px rgba(167, 139, 250, 0.2);
       }
+      .section-shell {
+        background: linear-gradient(135deg, rgba(76, 29, 149, 0.2), rgba(17, 24, 39, 0.28));
+        border: 1px solid rgba(167, 139, 250, 0.2);
+        border-radius: 1.5rem;
+        backdrop-filter: blur(10px);
+      }
+      .path-card {
+        background: linear-gradient(135deg, rgba(30, 41, 59, 0.55), rgba(76, 29, 149, 0.28));
+        border: 1px solid rgba(167, 139, 250, 0.22);
+        border-radius: 1.25rem;
+        padding: 1.25rem;
+        text-align: left;
+        transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+      }
+      .path-card:hover {
+        transform: translateY(-4px);
+        border-color: rgba(251, 191, 36, 0.45);
+        box-shadow: 0 0 22px rgba(167, 139, 250, 0.16);
+      }
+      .quick-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        padding: 0.35rem 0.7rem;
+        border-radius: 9999px;
+        font-size: 0.75rem;
+        line-height: 1rem;
+        color: rgb(224 231 255 / 0.9);
+        background: rgba(76, 29, 149, 0.35);
+        border: 1px solid rgba(167, 139, 250, 0.22);
+        transition: all 0.2s ease;
+      }
+      .quick-link:hover {
+        color: #fef3c7;
+        border-color: rgba(251, 191, 36, 0.45);
+        background: rgba(91, 33, 182, 0.45);
+      }
     </style>
   </head>
   <body class="min-h-screen text-white overflow-x-hidden">
@@ -105,254 +142,172 @@
     </section>
 
     <!-- Hero Section -->
-    <main class="relative z-10 flex flex-col items-center justify-center min-h-[80vh] px-6 text-center">
-      <div class="floating">
-        <div class="text-8xl mb-6 filter drop-shadow-2xl">🌙</div>
-      </div>
+    <main class="relative z-10 max-w-6xl mx-auto px-6 pt-4 pb-14 space-y-10 text-center">
+      <section class="section-shell px-6 py-14 md:px-10 md:py-16">
+        <div class="floating">
+          <div class="text-8xl mb-6 filter drop-shadow-2xl">🌙</div>
+        </div>
 
-      <h1 class="font-cinzel text-5xl md:text-7xl font-bold mb-4 hero-glow">
-        <span class="aurora-text">Esoteric Wisdom</span>
-      </h1>
+        <h1 class="font-cinzel text-5xl md:text-7xl font-bold mb-4 hero-glow">
+          <span class="aurora-text">Esoteric Wisdom</span>
+        </h1>
 
-      <p class="text-xl md:text-2xl text-violet-100/90 max-w-2xl mx-auto mb-3 font-light tracking-wide">
-        A luminous sanctuary for the soul's journey.
-      </p>
-      <p class="text-sm md:text-base text-violet-200/70 max-w-xl mx-auto mb-10">
-        Explore the ancient stars, still your mind, consult the cards, and write your inner truth.
-        A sacred space crafted with love — built in Rust, woven in starlight.
-      </p>
+        <p class="text-xl md:text-2xl text-violet-100/90 max-w-2xl mx-auto mb-3 font-light tracking-wide">
+          A luminous sanctuary for the soul's journey.
+        </p>
+        <p class="text-sm md:text-base text-violet-200/70 max-w-3xl mx-auto mb-8">
+          The library is now organised by intent: begin with a practice, browse a tradition, study the source material, or explore anomalous research. Use search for any specific page or subpage.
+        </p>
 
-      <!-- Feature Cards -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 max-w-6xl w-full justify-items-center">
+        <div class="flex flex-wrap justify-center gap-3">
+          <button type="button" onclick="ewFocusSearch && ewFocusSearch()"
+                  class="px-5 py-3 rounded-full bg-gradient-to-r from-amber-400 to-fuchsia-500 text-white font-semibold shadow-lg shadow-fuchsia-900/30 hover:scale-[1.02] transition-transform">
+            ⌕ Search every page
+          </button>
+          <a href="#browse-paths"
+             class="px-5 py-3 rounded-full border border-violet-400/30 text-violet-100 hover:text-amber-200 hover:border-amber-300/40 transition-colors">
+            Browse by section
+          </a>
+        </div>
+      </section>
 
-        <a href="/astrology" class="section-card bg-gradient-to-br from-purple-900/60 to-indigo-900/60 border border-purple-500/50 rounded-2xl p-6 backdrop-blur-md shadow-xl shadow-purple-500/20 w-full">
-          <div class="text-4xl mb-3">♈</div>
-          <h2 class="font-cinzel text-base font-semibold mb-2 text-amber-300">Astrology</h2>
-          <p class="text-xs text-violet-100/80 leading-relaxed">Ancient archetypes meet modern skies. Explore the zodiac and celestial wisdom.</p>
-          <div class="mt-4 text-xs text-violet-300/70">→ Explore the Stars</div>
-        </a>
+      <section id="browse-paths" class="space-y-6">
+        <div>
+          <p class="text-sm uppercase tracking-[0.35em] text-violet-300/70 mb-3">Start here</p>
+          <h2 class="font-cinzel text-3xl md:text-4xl text-violet-100 mb-3">Choose a clearer path into the archive</h2>
+          <p class="text-violet-200/75 max-w-3xl mx-auto">Each path gathers related pages together, while the new sidebar search helps you jump directly to deeper subpages when you already know what you want.</p>
+        </div>
 
-        <a href="/meditation" class="section-card bg-gradient-to-br from-indigo-900/60 to-teal-900/60 border border-indigo-500/50 rounded-2xl p-6 backdrop-blur-md shadow-xl shadow-indigo-500/20 w-full">
-          <div class="text-4xl mb-3">🧘</div>
-          <h2 class="font-cinzel text-base font-semibold mb-2 text-teal-300">Meditation</h2>
-          <p class="text-xs text-violet-100/80 leading-relaxed">Guided journeys with celestial soundscapes. Find your stillness.</p>
-          <div class="mt-4 text-xs text-teal-300/70">→ Begin Session</div>
-        </a>
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5 text-left">
+          <article class="path-card">
+            <div class="text-3xl mb-3">🔮</div>
+            <h3 class="font-cinzel text-lg text-amber-300 mb-2">Divination &amp; daily practice</h3>
+            <p class="text-sm text-violet-100/75 mb-4">Start with approachable practices and personal tools for reflection, interpretation, and ritual.</p>
+            <div class="flex flex-wrap gap-2">
+              <a class="quick-link" href="/astrology">Astrology</a>
+              <a class="quick-link" href="/tarot/select">Tarot</a>
+              <a class="quick-link" href="/meditation">Meditation</a>
+              <a class="quick-link" href="/numerology">Numerology</a>
+              <a class="quick-link" href="/runes">Runes</a>
+              <a class="quick-link" href="/crystals">Crystals</a>
+            </div>
+          </article>
 
-        <a href="/tarot/select" class="section-card bg-gradient-to-br from-pink-900/60 to-rose-900/60 border border-pink-500/50 rounded-2xl p-6 backdrop-blur-md shadow-xl shadow-pink-500/20 w-full">
-          <div class="text-4xl mb-3">🃏</div>
-          <h2 class="font-cinzel text-base font-semibold mb-2 text-pink-300">Tarot</h2>
-          <p class="text-xs text-violet-100/80 leading-relaxed">Choose from traditions — Rider-Waite-Smith, Marseille, Thoth and more. Trust the universe.</p>
-          <div class="mt-4 text-xs text-pink-300/70">→ Choose Your Deck</div>
-        </a>
+          <article class="path-card">
+            <div class="text-3xl mb-3">🌍</div>
+            <h3 class="font-cinzel text-lg text-emerald-300 mb-2">Traditions &amp; sacred paths</h3>
+            <p class="text-sm text-violet-100/75 mb-4">Follow teachings by lineage, region, and worldview instead of jumping between unrelated pages.</p>
+            <div class="flex flex-wrap gap-2">
+              <a class="quick-link" href="/western-esotericism">Western</a>
+              <a class="quick-link" href="/eastern-esotericism">Eastern</a>
+              <a class="quick-link" href="/indigenous-esotericism">Indigenous</a>
+              <a class="quick-link" href="/middle-eastern-esotericism">Middle Eastern</a>
+              <a class="quick-link" href="/hinduism">Hinduism</a>
+              <a class="quick-link" href="/christianity">Christianity</a>
+            </div>
+          </article>
 
-        <a href="/numerology" class="section-card bg-gradient-to-br from-amber-900/60 to-indigo-900/60 border border-amber-500/50 rounded-2xl p-6 backdrop-blur-md shadow-xl shadow-amber-500/20 w-full">
-          <div class="text-4xl mb-3">🔢</div>
-          <h2 class="font-cinzel text-base font-semibold mb-2 text-amber-300">Numerology</h2>
-          <p class="text-xs text-violet-100/80 leading-relaxed">Decode numbers hidden in your name and birth date — Life Path, Soul Urge &amp; more.</p>
-          <div class="mt-4 text-xs text-amber-300/70">→ Discover Your Numbers</div>
-        </a>
+          <article class="path-card">
+            <div class="text-3xl mb-3">📚</div>
+            <h3 class="font-cinzel text-lg text-sky-300 mb-2">Study the library</h3>
+            <p class="text-sm text-violet-100/75 mb-4">Use the hub pages as structured guides into texts, figures, concepts, orders, and cosmologies.</p>
+            <div class="flex flex-wrap gap-2">
+              <a class="quick-link" href="/esoteric-practices">Practices</a>
+              <a class="quick-link" href="/esoteric-corpora">Texts</a>
+              <a class="quick-link" href="/esoteric-figures">Figures</a>
+              <a class="quick-link" href="/orders-societies">Orders</a>
+              <a class="quick-link" href="/mythologies-cosmologies">Cosmologies</a>
+              <a class="quick-link" href="/esoteric-concepts">Concepts</a>
+            </div>
+          </article>
 
-        <a href="/crystals" class="section-card bg-gradient-to-br from-purple-900/60 to-pink-900/60 border border-purple-400/50 rounded-2xl p-6 backdrop-blur-md shadow-xl shadow-purple-500/20 w-full">
-          <div class="text-4xl mb-3">💎</div>
-          <h2 class="font-cinzel text-base font-semibold mb-2 text-purple-200">Crystals</h2>
-          <p class="text-xs text-violet-100/80 leading-relaxed">Sacred stones &amp; natural minerals — their history, powers, chakra resonance, and how to work with them.</p>
-          <div class="mt-4 text-xs text-purple-300/70">→ Explore Crystals</div>
-        </a>
+          <article class="path-card">
+            <div class="text-3xl mb-3">🌀</div>
+            <h3 class="font-cinzel text-lg text-fuchsia-300 mb-2">Consciousness &amp; contact</h3>
+            <p class="text-sm text-violet-100/75 mb-4">Move into records, remote perception, contact work, and altered-state exploration.</p>
+            <div class="flex flex-wrap gap-2">
+              <a class="quick-link" href="/akashic-records">Akashic Records</a>
+              <a class="quick-link" href="/gateway-process">Gateway</a>
+              <a class="quick-link" href="/remote-viewing">Remote Viewing</a>
+              <a class="quick-link" href="/khasarov-mirror">Khasarov Mirror</a>
+              <a class="quick-link" href="/ce5">CE-5</a>
+              <a class="quick-link" href="/altered-states">Altered States</a>
+            </div>
+          </article>
+        </div>
+      </section>
 
-        <a href="/runes" class="section-card bg-gradient-to-br from-amber-900/60 to-stone-900/60 border border-amber-500/50 rounded-2xl p-6 backdrop-blur-md shadow-xl shadow-amber-500/20 w-full">
-          <div class="text-4xl mb-3">ᚱ</div>
-          <h2 class="font-cinzel text-base font-semibold mb-2 text-amber-200">Runes</h2>
-          <p class="text-xs text-violet-100/80 leading-relaxed">Ancient Norse symbols of power and wisdom — their history, all 24 Elder Futhark runes, and how to cast and read them.</p>
-          <div class="mt-4 text-xs text-amber-300/70">→ Explore Runes</div>
-        </a>
+      <section class="space-y-6 text-left">
+        <div class="text-center">
+          <p class="text-sm uppercase tracking-[0.35em] text-emerald-300/70 mb-3">Browse traditions</p>
+          <h2 class="font-cinzel text-3xl md:text-4xl text-emerald-100 mb-3">Traditions, religions, and schools</h2>
+          <p class="text-violet-200/75 max-w-3xl mx-auto">These hubs gather related subpages so you can stay inside one lineage before branching into adjacent material.</p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5">
+          <a href="/western-esotericism" class="section-card bg-gradient-to-br from-violet-900/60 to-purple-950/60 border border-violet-500/50 rounded-2xl p-6 backdrop-blur-md shadow-xl shadow-violet-500/20 w-full text-left">
+            <div class="text-4xl mb-3">🌿</div><h3 class="font-cinzel text-base font-semibold mb-2 text-violet-300">Western Esotericism</h3><p class="text-xs text-violet-100/80 leading-relaxed">Hermeticism, Kabbalah, Rosicrucianism, Christian mysticism, occultism, and linked currents.</p>
+          </a>
+          <a href="/eastern-esotericism" class="section-card bg-gradient-to-br from-orange-900/60 to-red-950/60 border border-orange-600/50 rounded-2xl p-6 backdrop-blur-md shadow-xl shadow-orange-800/20 w-full text-left">
+            <div class="text-4xl mb-3">☸️</div><h3 class="font-cinzel text-base font-semibold mb-2 text-orange-300">Eastern Esotericism</h3><p class="text-xs text-violet-100/80 leading-relaxed">Tantra, Vajrayāna, Dzogchen, Taoist inner alchemy, Shingon, Shugendō, and more.</p>
+          </a>
+          <a href="/indigenous-esotericism" class="section-card bg-gradient-to-br from-green-900/60 to-emerald-950/60 border border-green-700/50 rounded-2xl p-6 backdrop-blur-md shadow-xl shadow-green-800/20 w-full text-left">
+            <div class="text-4xl mb-3">🌿</div><h3 class="font-cinzel text-base font-semibold mb-2 text-green-300">Indigenous Esotericism</h3><p class="text-xs text-violet-100/80 leading-relaxed">Andean, Native American, African, Aboriginal, Inuit, Hawaiian, Maya, and Olmec traditions.</p>
+          </a>
+          <a href="/middle-eastern-esotericism" class="section-card bg-gradient-to-br from-amber-900/60 to-yellow-950/60 border border-amber-600/50 rounded-2xl p-6 backdrop-blur-md shadow-xl shadow-amber-800/20 w-full text-left">
+            <div class="text-4xl mb-3">🌙</div><h3 class="font-cinzel text-base font-semibold mb-2 text-amber-300">Middle Eastern Mysteries</h3><p class="text-xs text-violet-100/80 leading-relaxed">Sufism, Zoroastrianism, Mandaeism, Kemetism, Mesopotamian mysteries, and Merkabah.</p>
+          </a>
+          <a href="/shamanism" class="section-card bg-gradient-to-br from-red-900/60 to-stone-900/60 border border-red-700/50 rounded-2xl p-6 backdrop-blur-md shadow-xl shadow-red-800/20 w-full text-left">
+            <div class="text-4xl mb-3">🥁</div><h3 class="font-cinzel text-base font-semibold mb-2 text-red-300">Shamanism</h3><p class="text-xs text-violet-100/80 leading-relaxed">Trance, spirit travel, power animals, and healing work across the oldest ritual lineages.</p>
+          </a>
+          <a href="/wicca" class="section-card bg-gradient-to-br from-purple-900/60 to-fuchsia-950/60 border border-purple-600/50 rounded-2xl p-6 backdrop-blur-md shadow-xl shadow-purple-800/20 w-full text-left">
+            <div class="text-4xl mb-3">🌙</div><h3 class="font-cinzel text-base font-semibold mb-2 text-purple-300">Wicca</h3><p class="text-xs text-violet-100/80 leading-relaxed">Modern pagan ritual life, the Wheel of the Year, sacred tools, and living coven traditions.</p>
+          </a>
+          <a href="/hinduism" class="section-card bg-gradient-to-br from-amber-900/60 to-orange-950/60 border border-amber-600/50 rounded-2xl p-6 backdrop-blur-md shadow-xl shadow-amber-700/20 w-full text-left">
+            <div class="text-4xl mb-3">🕉️</div><h3 class="font-cinzel text-base font-semibold mb-2 text-amber-300">Hinduism</h3><p class="text-xs text-violet-100/80 leading-relaxed">Veda, Upanishad, yoga, mantra, bhakti, tantra, and the wider sacred landscape of India.</p>
+          </a>
+          <a href="/christianity" class="section-card bg-gradient-to-br from-sky-900/60 to-blue-950/60 border border-sky-600/50 rounded-2xl p-6 backdrop-blur-md shadow-xl shadow-sky-700/20 w-full text-left">
+            <div class="text-4xl mb-3">✝️</div><h3 class="font-cinzel text-base font-semibold mb-2 text-sky-300">Christianity &amp; scriptural roots</h3><p class="text-xs text-violet-100/80 leading-relaxed">Move from biblical foundations into mystical and esoteric Christian currents.</p>
+          </a>
+        </div>
+      </section>
 
-        <a href="/shamanism" class="section-card bg-gradient-to-br from-red-900/60 to-stone-900/60 border border-red-700/50 rounded-2xl p-6 backdrop-blur-md shadow-xl shadow-red-800/20 w-full">
-          <div class="text-4xl mb-3">🥁</div>
-          <h2 class="font-cinzel text-base font-semibold mb-2 text-red-300">Shamanism</h2>
-          <p class="text-xs text-violet-100/80 leading-relaxed">Humanity's oldest spiritual technology — trance, spirit journeys, power animals, and the healing bridge between worlds.</p>
-          <div class="mt-4 text-xs text-red-400/70">→ Enter the Journey</div>
-        </a>
+      <section class="space-y-6 text-left">
+        <div class="text-center">
+          <p class="text-sm uppercase tracking-[0.35em] text-sky-300/70 mb-3">Study and reference</p>
+          <h2 class="font-cinzel text-3xl md:text-4xl text-sky-100 mb-3">Use the hub pages as guided indexes</h2>
+          <p class="text-violet-200/75 max-w-3xl mx-auto">Instead of scanning long menus, jump into the collections built to organise texts, people, concepts, and ritual disciplines.</p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5">
+          <a href="/esoteric-practices" class="section-card bg-gradient-to-br from-indigo-900/60 to-violet-950/60 border border-indigo-500/50 rounded-2xl p-6 backdrop-blur-md shadow-xl shadow-indigo-800/20 w-full text-left"><div class="text-4xl mb-3">🕯️</div><h3 class="font-cinzel text-base font-semibold mb-2 text-indigo-300">Esoteric Practices</h3><p class="text-xs text-violet-100/80 leading-relaxed">Rites, theurgy, geometry, breathwork, dreamwork, divination, and contemplative methods.</p></a>
+          <a href="/esoteric-corpora" class="section-card bg-gradient-to-br from-teal-900/60 to-cyan-950/60 border border-teal-600/50 rounded-2xl p-6 backdrop-blur-md shadow-xl shadow-teal-800/20 w-full text-left"><div class="text-4xl mb-3">📜</div><h3 class="font-cinzel text-base font-semibold mb-2 text-teal-300">Esoteric Corpora</h3><p class="text-xs text-violet-100/80 leading-relaxed">Scriptures and source texts, from the Corpus Hermeticum and Zohar to Tantras and Picatrix.</p></a>
+          <a href="/esoteric-figures" class="section-card bg-gradient-to-br from-fuchsia-900/60 to-violet-950/60 border border-fuchsia-500/50 rounded-2xl p-6 backdrop-blur-md shadow-xl shadow-fuchsia-800/20 w-full text-left"><div class="text-4xl mb-3">🧙</div><h3 class="font-cinzel text-base font-semibold mb-2 text-fuchsia-300">Esoteric Figures</h3><p class="text-xs text-violet-100/80 leading-relaxed">Teachers, mystics, magi, and philosophers who shaped the traditions.</p></a>
+          <a href="/orders-societies" class="section-card bg-gradient-to-br from-amber-900/60 to-stone-900/60 border border-amber-700/50 rounded-2xl p-6 backdrop-blur-md shadow-xl shadow-amber-800/20 w-full text-left"><div class="text-4xl mb-3">🏛️</div><h3 class="font-cinzel text-base font-semibold mb-2 text-amber-300">Orders &amp; Societies</h3><p class="text-xs text-violet-100/80 leading-relaxed">Initiatory schools, mystery traditions, brotherhoods, and modern esoteric organisations.</p></a>
+          <a href="/mythologies-cosmologies" class="section-card bg-gradient-to-br from-indigo-900/60 to-blue-950/60 border border-indigo-600/50 rounded-2xl p-6 backdrop-blur-md shadow-xl shadow-indigo-800/20 w-full text-left"><div class="text-4xl mb-3">🌌</div><h3 class="font-cinzel text-base font-semibold mb-2 text-indigo-300">Mythologies &amp; Cosmologies</h3><p class="text-xs text-violet-100/80 leading-relaxed">Aeons, Sophia, the demiurge, world-soul, chakras, pantheons, and sacred cosmographies.</p></a>
+          <a href="/esoteric-concepts" class="section-card bg-gradient-to-br from-violet-900/60 to-purple-950/60 border border-violet-600/50 rounded-2xl p-6 backdrop-blur-md shadow-xl shadow-violet-800/20 w-full text-left"><div class="text-4xl mb-3">🔮</div><h3 class="font-cinzel text-base font-semibold mb-2 text-violet-300">Esoteric Concepts</h3><p class="text-xs text-violet-100/80 leading-relaxed">Gnosis, initiation, secrecy, correspondence, transmutation, and foundational themes.</p></a>
+          <a href="/timeline" class="section-card bg-gradient-to-br from-slate-800/60 to-indigo-950/60 border border-slate-400/40 rounded-2xl p-6 backdrop-blur-md shadow-xl shadow-slate-500/10 w-full text-left"><div class="text-4xl mb-3">📅</div><h3 class="font-cinzel text-base font-semibold mb-2 text-slate-200">Timeline</h3><p class="text-xs text-violet-100/80 leading-relaxed">Trace historical development across mystical, esoteric, and anomalous topics.</p></a>
+          <a href="/organizations" class="section-card bg-gradient-to-br from-purple-900/60 to-fuchsia-950/60 border border-purple-400/40 rounded-2xl p-6 backdrop-blur-md shadow-xl shadow-purple-500/10 w-full text-left"><div class="text-4xl mb-3">🏛️</div><h3 class="font-cinzel text-base font-semibold mb-2 text-purple-200">Organizations</h3><p class="text-xs text-violet-100/80 leading-relaxed">A reference map of institutions, groups, and projects connected to the archive.</p></a>
+        </div>
+      </section>
 
-        <a href="/druidism" class="section-card bg-gradient-to-br from-green-900/60 to-emerald-950/60 border border-green-700/50 rounded-2xl p-6 backdrop-blur-md shadow-xl shadow-green-800/20 w-full">
-          <div class="text-4xl mb-3">🌳</div>
-          <h2 class="font-cinzel text-base font-semibold mb-2 text-green-300">Druidism</h2>
-          <p class="text-xs text-violet-100/80 leading-relaxed">Sacred groves, the Wheel of the Year, Ogham, and the philosophy of oak — the Druids' ancient and living wisdom tradition.</p>
-          <div class="mt-4 text-xs text-green-400/70">→ Enter the Grove</div>
-        </a>
-
-        <a href="/akashic-records" class="section-card bg-gradient-to-br from-blue-900/60 to-indigo-950/60 border border-blue-700/50 rounded-2xl p-6 backdrop-blur-md shadow-xl shadow-blue-800/20 w-full">
-          <div class="text-4xl mb-3">📖</div>
-          <h2 class="font-cinzel text-base font-semibold mb-2 text-blue-300">Akashic Records</h2>
-          <p class="text-xs text-violet-100/80 leading-relaxed">The cosmic library of all souls — history, myths, how to access the Records, and how to bring their wisdom into everyday life.</p>
-          <div class="mt-4 text-xs text-blue-400/70">→ Open the Records</div>
-        </a>
-
-        <a href="/wicca" class="section-card bg-gradient-to-br from-purple-900/60 to-fuchsia-950/60 border border-purple-600/50 rounded-2xl p-6 backdrop-blur-md shadow-xl shadow-purple-800/20 w-full">
-          <div class="text-4xl mb-3">🌙</div>
-          <h2 class="font-cinzel text-base font-semibold mb-2 text-purple-300">Wicca</h2>
-          <p class="text-xs text-violet-100/80 leading-relaxed">A modern pagan religion honouring the Goddess and the God — history, the Wheel of the Year, sacred tools, traditions, and where Wicca is practised today.</p>
-          <div class="mt-4 text-xs text-purple-400/70">→ Enter the Circle</div>
-        </a>
-
-        <a href="/alchemy" class="section-card bg-gradient-to-br from-amber-900/60 to-orange-950/60 border border-amber-600/50 rounded-2xl p-6 backdrop-blur-md shadow-xl shadow-amber-800/20 w-full">
-          <div class="text-4xl mb-3">⚗️</div>
-          <h2 class="font-cinzel text-base font-semibold mb-2 text-amber-300">Alchemy</h2>
-          <p class="text-xs text-violet-100/80 leading-relaxed">The ancient art of transformation — history, myths, legends, key figures, Rosicrucians, Hermetic societies, and how to incorporate alchemy safely into modern spiritual practice.</p>
-          <div class="mt-4 text-xs text-amber-400/70">→ Enter the Laboratory</div>
-        </a>
-
-        <a href="/gateway-process" class="section-card bg-gradient-to-br from-teal-900/60 to-cyan-900/60 border border-teal-500/50 rounded-2xl p-6 backdrop-blur-md shadow-xl shadow-teal-500/20 w-full">
-          <div class="text-4xl mb-3">🌀</div>
-          <h2 class="font-cinzel text-base font-semibold mb-2 text-teal-300">Gateway Process</h2>
-          <p class="text-xs text-violet-100/80 leading-relaxed">Monroe Institute's Hemi-Sync® programme for expanding consciousness — scientifically studied, CIA-documented, and used by thousands worldwide to explore layered states of awareness.</p>
-          <div class="mt-4 text-xs text-teal-300/70">→ Explore Gateway</div>
-        </a>
-
-        <a href="/remote-viewing" class="section-card bg-gradient-to-br from-blue-900/60 to-indigo-900/60 border border-blue-500/50 rounded-2xl p-6 backdrop-blur-md shadow-xl shadow-blue-500/20 w-full">
-          <div class="text-4xl mb-3">👁️</div>
-          <h2 class="font-cinzel text-base font-semibold mb-2 text-blue-300">Remote Viewing</h2>
-          <p class="text-xs text-violet-100/80 leading-relaxed">CIA and Stanford Research Institute's classified programme for perceiving distant locations through extrasensory means — history, protocols, and how to practise.</p>
-          <div class="mt-4 text-xs text-blue-300/70">→ View at a Distance</div>
-        </a>
-
-        <a href="/khasarov-mirror" class="section-card bg-gradient-to-br from-slate-800/60 to-gray-900/60 border border-slate-500/50 rounded-2xl p-6 backdrop-blur-md shadow-xl shadow-slate-500/20 w-full">
-          <div class="text-4xl mb-3">🪞</div>
-          <h2 class="font-cinzel text-base font-semibold mb-2 text-slate-300">Khasarov Mirror</h2>
-          <p class="text-xs text-violet-100/80 leading-relaxed">Russian consciousness research using reflective chambers based on Kozyrev's torsion field theory — history, the science, and how enthusiasts use it today.</p>
-          <div class="mt-4 text-xs text-slate-300/70">→ Enter the Mirror</div>
-        </a>
-
-        <a href="/ce5" class="section-card bg-gradient-to-br from-emerald-900/60 to-teal-950/60 border border-emerald-500/50 rounded-2xl p-6 backdrop-blur-md shadow-xl shadow-emerald-800/20 w-full">
-          <div class="text-4xl mb-3">🛸</div>
-          <h2 class="font-cinzel text-base font-semibold mb-2 text-emerald-300">CE-5</h2>
-          <p class="text-xs text-violet-100/80 leading-relaxed">Close Encounters of the Fifth Kind — human-initiated contact through consciousness: the classification system, meditation protocols, reported experiences, and scientific perspective.</p>
-          <div class="mt-4 text-xs text-emerald-300/70">→ Explore CE-5</div>
-        </a>
-
-        <a href="/western-esotericism" class="section-card bg-gradient-to-br from-violet-900/60 to-purple-950/60 border border-violet-500/50 rounded-2xl p-6 backdrop-blur-md shadow-xl shadow-violet-500/20 w-full">
-          <div class="text-4xl mb-3">🌿</div>
-          <h2 class="font-cinzel text-base font-semibold mb-2 text-violet-300">Western Esotericism</h2>
-          <p class="text-xs text-violet-100/80 leading-relaxed">Hermeticism, Kabbalah, Gnosticism, Theosophy, Anthroposophy, Rosicrucianism &amp; more — the interconnected traditions of Western hidden wisdom.</p>
-          <div class="mt-4 text-xs text-violet-300/70">→ Explore the Traditions</div>
-        </a>
-
-        <a href="/eastern-esotericism" class="section-card bg-gradient-to-br from-orange-900/60 to-red-950/60 border border-orange-600/50 rounded-2xl p-6 backdrop-blur-md shadow-xl shadow-orange-800/20 w-full">
-          <div class="text-4xl mb-3">☸️</div>
-          <h2 class="font-cinzel text-base font-semibold mb-2 text-orange-300">Eastern Esotericism</h2>
-          <p class="text-xs text-violet-100/80 leading-relaxed">Tantra, Vajrayāna, Dzogchen, Mahāmudrā, Taoist inner alchemy &amp; more — the esoteric traditions of South and East Asia.</p>
-          <div class="mt-4 text-xs text-orange-400/70">→ Explore the Traditions</div>
-        </a>
-
-        <a href="/hinduism" class="section-card bg-gradient-to-br from-amber-900/60 to-orange-950/60 border border-amber-600/50 rounded-2xl p-6 backdrop-blur-md shadow-xl shadow-amber-700/20 w-full">
-          <div class="text-4xl mb-3">🕉️</div>
-          <h2 class="font-cinzel text-base font-semibold mb-2 text-amber-300">Hinduism</h2>
-          <p class="text-xs text-violet-100/80 leading-relaxed">Vedic revelation, Upanishadic wisdom, yoga, bhakti, mantra, and tantra — one of the world's oldest living sacred traditions.</p>
-          <div class="mt-4 text-xs text-amber-300/70">→ Explore Hinduism</div>
-        </a>
-
-        <a href="/japanese-religion" class="section-card bg-gradient-to-br from-red-900/60 to-rose-950/60 border border-red-600/50 rounded-2xl p-6 backdrop-blur-md shadow-xl shadow-red-800/20 w-full">
-          <div class="text-4xl mb-3">⛩️</div>
-          <h2 class="font-cinzel text-base font-semibold mb-2 text-red-300">Japanese Religion</h2>
-          <p class="text-xs text-violet-100/80 leading-relaxed">Shinto, Japanese Buddhism, Onmyōdō, Shinbutsu-shūgō, and New Religious Movements — the full sacred landscape of Japan.</p>
-          <div class="mt-4 text-xs text-red-300/70">→ Explore Japanese Religion</div>
-        </a>
-
-        <a href="/judaism" class="section-card bg-gradient-to-br from-blue-900/60 to-indigo-950/60 border border-blue-600/50 rounded-2xl p-6 backdrop-blur-md shadow-xl shadow-blue-700/20 w-full">
-          <div class="text-4xl mb-3">✡️</div>
-          <h2 class="font-cinzel text-base font-semibold mb-2 text-blue-300">Judaism</h2>
-          <p class="text-xs text-violet-100/80 leading-relaxed">The original Jewish religion — Torah, prophetic tradition, temple memory, and mystical currents from Merkabah to Kabbalah.</p>
-          <div class="mt-4 text-xs text-blue-300/70">→ Explore Judaism</div>
-        </a>
-
-        <a href="/christianity" class="section-card bg-gradient-to-br from-sky-900/60 to-blue-950/60 border border-sky-600/50 rounded-2xl p-6 backdrop-blur-md shadow-xl shadow-sky-700/20 w-full">
-          <div class="text-4xl mb-3">✝️</div>
-          <h2 class="font-cinzel text-base font-semibold mb-2 text-sky-300">Christianity</h2>
-          <p class="text-xs text-violet-100/80 leading-relaxed">Old Testament, New Testament, and the King James Version — the scriptural foundations and living traditions of the Christian faith.</p>
-          <div class="mt-4 text-xs text-sky-300/70">→ Explore Christianity</div>
-        </a>
-
-        <a href="/mormonism" class="section-card bg-gradient-to-br from-lime-900/60 to-emerald-950/60 border border-lime-600/50 rounded-2xl p-6 backdrop-blur-md shadow-xl shadow-lime-700/20 w-full">
-          <div class="text-4xl mb-3">⛪</div>
-          <h2 class="font-cinzel text-base font-semibold mb-2 text-lime-300">Mormonism</h2>
-          <p class="text-xs text-violet-100/80 leading-relaxed">The Latter Day Saint movement — from the LDS Church to fundamentalist offshoots, Prairie Saints, and the full landscape of Mormon denominations.</p>
-          <div class="mt-4 text-xs text-lime-300/70">→ Explore Mormonism</div>
-        </a>
-
-        <a href="/indigenous-esotericism" class="section-card bg-gradient-to-br from-green-900/60 to-emerald-950/60 border border-green-700/50 rounded-2xl p-6 backdrop-blur-md shadow-xl shadow-green-800/20 w-full">
-          <div class="text-4xl mb-3">🌿</div>
-          <h2 class="font-cinzel text-base font-semibold mb-2 text-green-300">Indigenous Esotericism</h2>
-          <p class="text-xs text-violet-100/80 leading-relaxed">Shamanism, Andean cosmology, Native American vision traditions, African initiatory wisdom, Aboriginal Dreamtime &amp; more — the world's oldest esoteric lineages.</p>
-          <div class="mt-4 text-xs text-green-400/70">→ Explore the Traditions</div>
-        </a>
-
-        <a href="/middle-eastern-esotericism" class="section-card bg-gradient-to-br from-amber-900/60 to-yellow-950/60 border border-amber-600/50 rounded-2xl p-6 backdrop-blur-md shadow-xl shadow-amber-800/20 w-full">
-          <div class="text-4xl mb-3">🌙</div>
-          <h3 class="font-cinzel text-lg text-amber-300 mb-2">Middle Eastern &amp; Ancient Mysteries</h3>
-          <p class="text-violet-200/70 text-sm leading-relaxed">Sufism, Zoroastrianism, Mandaeism, Kemetism, Mesopotamian star-wisdom, and Merkabah mysticism — the luminous traditions of the ancient world's most transformative civilisations.</p>
-        </a>
-
-        <a href="/esoteric-practices" class="section-card bg-gradient-to-br from-indigo-900/60 to-violet-950/60 border border-indigo-500/50 rounded-2xl p-6 backdrop-blur-md shadow-xl shadow-indigo-800/20 w-full">
-          <div class="text-4xl mb-3">🕯️</div>
-          <h2 class="font-cinzel text-base font-semibold mb-2 text-indigo-300">Esoteric Practices &amp; Disciplines</h2>
-          <p class="text-xs text-violet-100/80 leading-relaxed">Initiation rites, theurgy, sacred geometry, breathwork, astral travel, dream incubation, I Ching, geomancy, scrying, palmistry &amp; more — the living arts of transformation.</p>
-          <div class="mt-4 text-xs text-indigo-300/70">→ Explore the Practices</div>
-        </a>
-
-        <a href="/esoteric-corpora" class="section-card bg-gradient-to-br from-teal-900/60 to-cyan-950/60 border border-teal-600/50 rounded-2xl p-6 backdrop-blur-md shadow-xl shadow-teal-800/20 w-full">
-          <div class="text-4xl mb-3">📜</div>
-          <h2 class="font-cinzel text-base font-semibold mb-2 text-teal-300">Esoteric Texts &amp; Corpora</h2>
-          <p class="text-xs text-violet-100/80 leading-relaxed">Corpus Hermeticum, Zohar, Nag Hammadi Library, Emerald Tablet, Tibetan Book of the Dead, Book of the Law &amp; more — the sacred scriptures of the esoteric traditions.</p>
-          <div class="mt-4 text-xs text-teal-300/70">→ Explore the Texts</div>
-        </a>
-
-        <a href="/orders-societies" class="section-card bg-gradient-to-br from-amber-900/60 to-stone-900/60 border border-amber-700/50 rounded-2xl p-6 backdrop-blur-md shadow-xl shadow-amber-800/20 w-full">
-          <div class="text-4xl mb-3">🏛️</div>
-          <h2 class="font-cinzel text-base font-semibold mb-2 text-amber-300">Orders &amp; Societies</h2>
-          <p class="text-xs text-violet-100/80 leading-relaxed">The initiatory brotherhoods and sisterhoods that preserved esoteric wisdom — from the Essenes and Pythagoreans to the Eleusinian and Osirian mysteries.</p>
-          <div class="mt-4 text-xs text-amber-400/70">→ Enter the Orders</div>
-        </a>
-
-        <a href="/mythologies-cosmologies" class="section-card bg-gradient-to-br from-indigo-900/60 to-blue-950/60 border border-indigo-600/50 rounded-2xl p-6 backdrop-blur-md shadow-xl shadow-indigo-800/20 w-full">
-          <div class="text-4xl mb-3">🌌</div>
-          <h2 class="font-cinzel text-base font-semibold mb-2 text-indigo-300">Mythologies &amp; Cosmologies</h2>
-          <p class="text-xs text-violet-100/80 leading-relaxed">Gnostic Aeons, the Demiurge, Sophia, the Kabbalistic Tree of Life, Platonic World Soul, astral planes, chakras, and Sephirothic hierarchies — the great cosmological maps of esoteric tradition.</p>
-          <div class="mt-4 text-xs text-indigo-300/70">→ Explore the Cosmos</div>
-        </a>
-
-        <a href="/esoteric-concepts" class="section-card bg-gradient-to-br from-violet-900/60 to-purple-950/60 border border-violet-600/50 rounded-2xl p-6 backdrop-blur-md shadow-xl shadow-violet-800/20 w-full">
-          <div class="text-4xl mb-3">🔮</div>
-          <h2 class="font-cinzel text-base font-semibold mb-2 text-violet-300">Esoteric Concepts &amp; Themes</h2>
-          <p class="text-xs text-violet-100/80 leading-relaxed">Gnosis, initiation, hidden wisdom, sacred secrecy, the microcosm/macrocosm, spiritual alchemy — the foundational ideas and universal themes woven through all esoteric traditions.</p>
-          <div class="mt-4 text-xs text-violet-300/70">→ Explore the Concepts</div>
-        </a>
-
-        <a href="/journal/reflections" class="section-card bg-gradient-to-br from-emerald-900/60 to-teal-900/60 border border-emerald-500/50 rounded-2xl p-6 backdrop-blur-md shadow-xl shadow-emerald-500/20 w-full">
-          <div class="text-4xl mb-3">🌿</div>
-          <h2 class="font-cinzel text-base font-semibold mb-2 text-emerald-300">Esoteric Reflections</h2>
-          <p class="text-xs text-violet-100/80 leading-relaxed">Read curated journal reflections shared from the inner sanctum. Wisdom made visible.</p>
-          <div class="mt-4 text-xs text-emerald-300/70">→ Read Reflections</div>
-        </a>
-
-        {% if is_user %}
-        <a href="/journal/my" class="section-card bg-gradient-to-br from-emerald-900/60 to-teal-950/60 border border-emerald-500/50 rounded-2xl p-6 backdrop-blur-md shadow-xl shadow-emerald-500/20 w-full">
-          <div class="text-4xl mb-3">📔</div>
-          <h2 class="font-cinzel text-base font-semibold mb-2 text-emerald-300">My Journal</h2>
-          <p class="text-xs text-violet-100/80 leading-relaxed">Your private sanctuary. Record your spiritual journey, reflections, and inner wisdom.</p>
-          <div class="mt-4 text-xs text-emerald-300/70">→ Open Journal</div>
-        </a>
-        {% endif %}
-
-        {% if is_admin %}
-        <a href="/journal" class="section-card bg-gradient-to-br from-amber-800/60 to-yellow-900/60 border border-amber-400/60 rounded-2xl p-6 backdrop-blur-md shadow-xl shadow-amber-500/20 w-full">
-          <div class="text-4xl mb-3">📔</div>
-          <h2 class="font-cinzel text-base font-semibold mb-2 text-amber-200">Admin Journal</h2>
-          <p class="text-xs text-amber-100/80 leading-relaxed">Write, manage and publish your private journal entries. Mark entries for guests to read.</p>
-          <div class="mt-4 text-xs text-amber-300/70">→ Open Journal</div>
-        </a>
-        {% endif %}
-
-      </div>
+      <section class="space-y-6 text-left">
+        <div class="text-center">
+          <p class="text-sm uppercase tracking-[0.35em] text-emerald-300/70 mb-3">Personal practice</p>
+          <h2 class="font-cinzel text-3xl md:text-4xl text-emerald-100 mb-3">Reflection, journaling, and return paths</h2>
+          <p class="text-violet-200/75 max-w-3xl mx-auto">Keep your private work close to the public archive so practice, reading, and reflection stay connected.</p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5">
+          <a href="/journal/reflections" class="section-card bg-gradient-to-br from-emerald-900/60 to-teal-900/60 border border-emerald-500/50 rounded-2xl p-6 backdrop-blur-md shadow-xl shadow-emerald-500/20 w-full text-left"><div class="text-4xl mb-3">🌿</div><h3 class="font-cinzel text-base font-semibold mb-2 text-emerald-300">Esoteric Reflections</h3><p class="text-xs text-violet-100/80 leading-relaxed">Read curated reflections and return to the archive through contemplative writing.</p></a>
+          {% if is_user %}
+          <a href="/journal/my" class="section-card bg-gradient-to-br from-emerald-900/60 to-teal-950/60 border border-emerald-500/50 rounded-2xl p-6 backdrop-blur-md shadow-xl shadow-emerald-500/20 w-full text-left"><div class="text-4xl mb-3">📔</div><h3 class="font-cinzel text-base font-semibold mb-2 text-emerald-300">My Journal</h3><p class="text-xs text-violet-100/80 leading-relaxed">Open your private journal to capture practice notes, dreams, and insights.</p></a>
+          {% endif %}
+          {% if is_admin %}
+          <a href="/journal" class="section-card bg-gradient-to-br from-amber-800/60 to-yellow-900/60 border border-amber-400/60 rounded-2xl p-6 backdrop-blur-md shadow-xl shadow-amber-500/20 w-full text-left"><div class="text-4xl mb-3">📔</div><h3 class="font-cinzel text-base font-semibold mb-2 text-amber-200">Admin Journal</h3><p class="text-xs text-amber-100/80 leading-relaxed">Write, manage, and publish journal entries for guests and returning readers.</p></a>
+          {% endif %}
+          <button type="button" onclick="ewFocusSearch && ewFocusSearch()" class="section-card bg-gradient-to-br from-violet-900/60 to-fuchsia-950/60 border border-violet-400/40 rounded-2xl p-6 backdrop-blur-md shadow-xl shadow-violet-500/10 w-full text-left">
+            <div class="text-4xl mb-3">⌕</div><h3 class="font-cinzel text-base font-semibold mb-2 text-violet-200">Jump anywhere</h3><p class="text-xs text-violet-100/80 leading-relaxed">Open the new sidebar search to jump straight to specific pages, personalities, texts, and subtopics.</p>
+          </button>
+        </div>
+      </section>
     </main>
 
     <section class="relative z-10 max-w-6xl mx-auto px-6 pb-16">
