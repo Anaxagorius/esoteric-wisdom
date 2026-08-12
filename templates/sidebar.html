@@ -144,6 +144,67 @@
   .ew-sb-sub-links {
     padding: 0 0.25rem 0.25rem 1.25rem;
   }
+  .ew-sb-search {
+    padding: 0.5rem;
+  }
+  .ew-sb-search-label {
+    display: block;
+    margin: 0 0 0.35rem 0.25rem;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #a78bfa;
+  }
+  .ew-sb-search-field {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    border: 1px solid rgba(139, 92, 246, 0.28);
+    background: rgba(17, 24, 39, 0.65);
+    border-radius: 0.85rem;
+    padding: 0.55rem 0.7rem;
+  }
+  .ew-sb-search-field:focus-within {
+    border-color: rgba(251, 191, 36, 0.55);
+    box-shadow: 0 0 0 1px rgba(251, 191, 36, 0.15);
+  }
+  .ew-sb-search-icon,
+  .ew-sb-search-clear {
+    flex-shrink: 0;
+    color: #a78bfa;
+  }
+  .ew-sb-search-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #f5f3ff;
+    font-size: 12px;
+  }
+  .ew-sb-search-input::placeholder {
+    color: rgba(196, 181, 253, 0.6);
+  }
+  .ew-sb-search-clear {
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1;
+  }
+  .ew-sb-search-clear:hover {
+    color: #fbbf24;
+  }
+  .ew-sb-search-meta {
+    margin: 0.45rem 0.25rem 0;
+    font-size: 10px;
+    color: rgba(196, 181, 253, 0.72);
+    line-height: 1.4;
+  }
+  .ew-sb-search-match {
+    color: #fbbf24;
+  }
 </style>
 
 <div id="ew-sidebar" aria-label="Site navigation sidebar">
@@ -158,6 +219,16 @@
     <!-- Home -->
     <div style="padding: 0 0.5rem 0.25rem;">
       <a href="/home" class="ew-sb-link" style="font-weight:600; color:#e0d7ff;">🏠 Home</a>
+    </div>
+
+    <div class="ew-sb-search">
+      <label class="ew-sb-search-label" for="ew-sidebar-search">Quick search</label>
+      <div class="ew-sb-search-field">
+        <span class="ew-sb-search-icon">⌕</span>
+        <input id="ew-sidebar-search" class="ew-sb-search-input" type="search" placeholder="Search pages and subpages" autocomplete="off" />
+        <button id="ew-sidebar-search-clear" class="ew-sb-search-clear" type="button" onclick="ewClearSidebarSearch()" hidden aria-label="Clear search">✕</button>
+      </div>
+      <p id="ew-sidebar-search-meta" class="ew-sb-search-meta">Search every page and subpage. Press <span class="ew-sb-search-match">/</span> or <span class="ew-sb-search-match">Ctrl/Cmd+K</span> to jump here.</p>
     </div>
 
     <div class="ew-sb-divider"></div>
@@ -654,6 +725,11 @@
 <script>
   (function () {
     var STORE_KEY = 'ewSidebarCollapsed';
+    var searchInput;
+    var searchMeta;
+    var searchClear;
+    var allLinks = [];
+    var allDetails = [];
 
     function applyState(collapsed) {
       var sidebar = document.getElementById('ew-sidebar');
@@ -672,6 +748,81 @@
       try { localStorage.setItem(STORE_KEY, collapsed ? '1' : '0'); } catch (e) {}
     }
 
+    function setDetailVisibility(detail, query) {
+      if (!detail) return false;
+      var summary = detail.querySelector(':scope > summary');
+      var summaryText = summary ? summary.textContent.toLowerCase() : '';
+      var descendants = detail.querySelectorAll('.ew-sb-link');
+      var hasVisible = false;
+
+      if (query && summaryText.indexOf(query) !== -1) {
+        descendants.forEach(function (link) { link.hidden = false; });
+      }
+
+      descendants.forEach(function (link) {
+        if (!link.hidden) hasVisible = true;
+      });
+
+      detail.hidden = !!query && !hasVisible;
+      detail.open = !!query ? hasVisible : detail.dataset.initialOpen === '1';
+      return hasVisible;
+    }
+
+    function updateSearch() {
+      if (!searchInput) return;
+      var query = searchInput.value.trim().toLowerCase();
+      var matches = 0;
+
+      allLinks.forEach(function (link) {
+        var haystack = (link.textContent + ' ' + link.getAttribute('href')).toLowerCase();
+        var matched = !query || haystack.indexOf(query) !== -1;
+        link.hidden = !matched;
+        if (matched) matches += 1;
+      });
+
+      allDetails.filter(function (detail) {
+        return detail.classList.contains('ew-sb-sub');
+      }).forEach(function (detail) {
+        setDetailVisibility(detail, query);
+      });
+
+      allDetails.filter(function (detail) {
+        return detail.classList.contains('ew-sb-section');
+      }).forEach(function (detail) {
+        setDetailVisibility(detail, query);
+      });
+
+      if (searchClear) searchClear.hidden = !query;
+      if (searchMeta) {
+        if (!query) {
+          searchMeta.innerHTML = 'Search every page and subpage. Press <span class="ew-sb-search-match">/</span> or <span class="ew-sb-search-match">Ctrl/Cmd+K</span> to jump here.';
+        } else if (matches === 0) {
+          searchMeta.textContent = 'No matches found. Try a broader keyword.';
+        } else {
+          searchMeta.textContent = matches + (matches === 1 ? ' result visible in the sidebar.' : ' results visible in the sidebar.');
+        }
+      }
+    }
+
+    function ewClearSidebarSearch() {
+      if (!searchInput) return;
+      searchInput.value = '';
+      updateSearch();
+      searchInput.focus();
+    }
+
+    function ewFocusSearch() {
+      var sidebar = document.getElementById('ew-sidebar');
+      if (sidebar) {
+        sidebar.classList.remove('ew-sidebar-collapsed');
+        try { localStorage.setItem(STORE_KEY, '0'); } catch (e) {}
+      }
+      if (searchInput) {
+        searchInput.focus();
+        searchInput.select();
+      }
+    }
+
     // Restore persisted state immediately (before DOMContentLoaded to avoid flash)
     (function restoreState() {
       try {
@@ -684,5 +835,40 @@
     })();
 
     window.ewSidebarToggle = ewSidebarToggle;
+    window.ewClearSidebarSearch = ewClearSidebarSearch;
+    window.ewFocusSearch = ewFocusSearch;
+
+    document.addEventListener('DOMContentLoaded', function () {
+      searchInput = document.getElementById('ew-sidebar-search');
+      searchMeta = document.getElementById('ew-sidebar-search-meta');
+      searchClear = document.getElementById('ew-sidebar-search-clear');
+      allLinks = Array.prototype.slice.call(document.querySelectorAll('#ew-sidebar .ew-sb-link'));
+      allDetails = Array.prototype.slice.call(document.querySelectorAll('#ew-sidebar details'));
+      allDetails.forEach(function (detail) {
+        detail.dataset.initialOpen = detail.open ? '1' : '0';
+      });
+
+      if (searchInput) {
+        searchInput.addEventListener('input', updateSearch);
+        searchInput.addEventListener('keydown', function (event) {
+          if (event.key === 'Escape' && searchInput.value) {
+            event.preventDefault();
+            ewClearSidebarSearch();
+          }
+        });
+      }
+
+      document.addEventListener('keydown', function (event) {
+        var target = event.target;
+        var tag = target && target.tagName ? target.tagName.toLowerCase() : '';
+        var isTyping = tag === 'input' || tag === 'textarea' || (target && target.isContentEditable);
+        if ((event.key === '/' && !isTyping) || ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === 'k')) {
+          event.preventDefault();
+          ewFocusSearch();
+        }
+      });
+
+      updateSearch();
+    });
   })();
 </script>
