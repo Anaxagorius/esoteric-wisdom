@@ -165,10 +165,6 @@ pub struct AlchemyTemplate;
 pub struct WesternEsotericismTemplate;
 
 #[derive(Template)]
-#[template(path = "hermeticism.html")]
-pub struct HermeticismTemplate;
-
-#[derive(Template)]
 #[template(path = "gnosticism.html")]
 pub struct GnosticismTemplate;
 

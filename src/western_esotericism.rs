@@ -1,8 +1,8 @@
 use axum::{routing::get, Router, response::IntoResponse};
 use crate::auth::HtmlTemplate;
+use crate::content_pages;
 use crate::templates::{
     WesternEsotericismTemplate,
-    HermeticismTemplate,
     GnosticismTemplate,
     NeoplatonismTemplate,
     RosicrucianismTemplate,
@@ -35,7 +35,7 @@ async fn hub() -> impl IntoResponse {
 }
 
 async fn hermeticism() -> impl IntoResponse {
-    HtmlTemplate(HermeticismTemplate)
+    content_pages::render_markdown_page("western-esotericism/hermeticism").await
 }
 
 async fn gnosticism() -> impl IntoResponse {

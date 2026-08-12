@@ -11,44 +11,16 @@
     <meta property="og:url" content="https://esoteric-wisdom.onrender.com/" />
     <meta property="og:image" content="https://esoteric-wisdom.onrender.com/og-image.png" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet" />
+    {% include "visual_baseline.html" %}
     <style>
       body {
         background: radial-gradient(ellipse at top, #4c1d95 0%, #1e1b4b 30%, #020617 70%, #000000 100%);
-        font-family: 'Raleway', sans-serif;
-      }
-      .font-cinzel { font-family: 'Cinzel Decorative', serif; }
-      @keyframes twinkle {
-        0%, 100% { opacity: 0.2; transform: scale(1); }
-        50% { opacity: 1; transform: scale(1.4); }
-      }
-      @keyframes float {
-        0%, 100% { transform: translateY(0px); }
-        50% { transform: translateY(-14px); }
-      }
-      @keyframes shimmer {
-        0% { background-position: -200% center; }
-        100% { background-position: 200% center; }
       }
       @keyframes pulse-glow {
         0%, 100% { box-shadow: 0 0 30px rgba(167,139,250,0.4), 0 0 60px rgba(167,139,250,0.15); }
         50% { box-shadow: 0 0 60px rgba(251,191,36,0.5), 0 0 100px rgba(251,191,36,0.25); }
       }
-      .star {
-        position: absolute; border-radius: 50%; background: white;
-        animation: twinkle var(--dur, 3s) ease-in-out infinite;
-        animation-delay: var(--delay, 0s);
-      }
-      .aurora-text {
-        background: linear-gradient(90deg, #f59e0b, #ec4899, #a78bfa, #34d399, #f59e0b);
-        background-size: 200% auto;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        animation: shimmer 4s linear infinite;
-      }
-      .floating { animation: float 5s ease-in-out infinite; }
+      .floating { animation-duration: 5s; }
       .portal-card {
         transition: all 0.35s ease;
         cursor: pointer;
